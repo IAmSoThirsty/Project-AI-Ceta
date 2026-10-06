@@ -1,0 +1,95 @@
+SECTION 068 — Firmware Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed engineering of low-level software that initializes, controls, updates, diagnoses, and protects hardware within declared timing, resource, safety, security, and lifecycle boundaries.
+
+REQUIRED OUTCOME
+
+A traceable firmware baseline with hardware contracts, boot, timing, interrupts, drivers, state, update, diagnostics, security, recovery, test, and evidence controls.
+
+WHY THIS MATTERS
+
+Firmware controls physical behavior and often survives longer than its tooling. A hidden reset, unsafe update, stale driver, or unbounded interrupt path can defeat higher-level safeguards.
+
+APPLICABILITY
+
+Applies to boot code, device firmware, microcontroller software, drivers, board support, bootloaders, update agents, diagnostics, and safety or security monitors.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no low-level code, hardware contract, boot, timing, update, diagnostic, security, safety, or lifecycle behavior changes.
+
+PREREQUISITES AND DEPENDENCIES
+
+Functional and computer architecture, hardware and register contracts, toolchain, memory and timing budgets, threat and hazard analysis, update authority, test hardware, and field-service plan.
+
+REQUIRED INPUTS
+
+Hardware revision, register map, interrupts, peripherals, timing, power, memory, boot trust, identity, update, fault, diagnostic, compiler, dependency, coding, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Human owners approve privileged behavior, safety and security boundaries, toolchains, release, signing, field update, recovery, exceptions, and acceptance. Operators retain authority to stop, isolate, reflash, or replace equipment.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect code, traces, specifications, and tests; draft implementations and reviews; and identify defects. It must preserve versions and assumptions and must not sign, release, bypass review, or claim hardware behavior without evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Implementer, Refactorer, Tester, Verifier, Security Auditor, Critic, Red Team, Planner, Coordinator, Observer, Governance Reviewer, Documentation Writer, Optimizer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+1. Define hardware boundary, lifecycle, privilege, timing, resource, and failure requirements. 2. Implement boot, drivers, state, interrupts, diagnostics, and update contracts. 3. Review concurrency, memory, reset, power, fault, security, and safety behavior. 4. Build reproducibly and control signing and release. 5. Test on representative hardware. 6. Baseline evidence and deviations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI-generated code and review remain proposals. Show source, toolchain, dependencies, hardware revision, test evidence, and uncertainty. Human review is required for privileged, safety, security, boot, signing, update, and release actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version firmware, source, toolchain, dependencies, configuration, hardware target, image, signing, update state, logs, diagnostics, and lifecycle. Preserve rollback, recovery, anti-rollback, identity, and offline service paths.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show device, firmware, boot, signing, update, health, fault, diagnostic, authority, evidence, and recovery state. Permit authorized pause, rollback, quarantine, reflash, restore, replace, and retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Source and build record; hardware contract; configuration; reproducible image; SBOM; signing and release record; test and static-analysis results; update and recovery runbook; evidence and decision register.
+
+EVIDENCE REQUIREMENTS
+
+Bind claims to source, commit, toolchain, dependencies, hardware, configuration, image hash, test, environment, result, reviewer, and limitations. Host tests and simulations do not prove field behavior alone.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify boot, reset, timing, interrupts, memory, drivers, power, faults, privilege, secure update, interrupted update, rollback, diagnostics, watchdog, recovery, and hardware variation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unsigned or untraceable image; unsafe boot default; hidden privilege; stale dependency; unbounded ISR; ignored brownout; update without rollback; disabled watchdog; and benchmark or unit-test-only acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Stop release, quarantine images or devices, preserve logs and hashes, identify safe image, and use approved rollback, recovery boot, reflash, replacement, or withdrawal. Reopen after hardware, toolchain, dependency, threat, or update change.
+
+COMPLETION CRITERIA
+
+Firmware identity, contracts, build, signing, update, diagnostics, tests, evidence, recovery, owner, and open gaps are explicit for the tested hardware and environment.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve source, toolchain, dependencies, images, keys or signing references, hardware, logs, tests, incidents, decisions, evidence, and next action. Hand off to Embedded Software, Computer, Security, Testing, Operations, Updates, and Retirement.
+
+RELATED CODEX SECTIONS
+
+063 Computer Engineering; 069 Embedded Software Engineering; 107 Software Engineering; 113 Operating Systems Engineering; 198 Embedded Security; 203 Cryptography; 232 Hardware Testing; 246 Security Testing; 264 Build Engineering; 379 Firmware Updates.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-067, and the roadmap. Hardware targets, toolchain, signing authority, update infrastructure, safety regime, field population, and owner acceptance remain unresolved until supplied and verified.

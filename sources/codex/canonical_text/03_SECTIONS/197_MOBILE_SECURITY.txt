@@ -1,0 +1,132 @@
+SECTION 197 — Mobile Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define security for mobile applications, devices, identities, data, permissions, networks, distribution channels, and lifecycle controls across managed and unmanaged contexts.
+
+REQUIRED OUTCOME
+
+A mobile-security architecture and operating model that identifies assets, users, trust boundaries, threats, permissions, data handling, update paths, telemetry, response authority, recovery, and disposal for the exact platforms, versions, populations, and environments in scope.
+
+WHY THIS MATTERS
+
+Mobile systems combine personal devices, variable networks, local storage, app stores, sensors, identity providers, third-party SDKs, and physical loss. Enrollment, store approval, a clean scan, or a passing test is only bounded evidence and does not establish security for every device, user, version, or operating mode.
+
+APPLICABILITY
+
+Apply when a mobile application, mobile device, mobile identity, mobile endpoint, app store, mobile API, device-management service, sensor, local cache, or mobile support workflow can access information, perform actions, or affect a person, organization, or connected system.
+
+NON-APPLICABILITY CONDITIONS
+
+Mobile Security may be minimal when the artifact has no mobile software, device, identity, data, network, distribution, or operational effect and an approved analysis documents that conclusion. A web page viewed on a phone, a test-only emulator, or an unmanaged device does not automatically remove mobile obligations when data or authority crosses the boundary.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use the applicable requirements, solution, application, identity, privacy, threat, data, network, platform, operations, incident, recovery, and disposal baselines. Identify supported platforms and versions, device ownership, management state, app distribution, backend services, SDKs, credentials, network paths, data stores, monitoring, support, and wipe or retirement authority.
+
+REQUIRED INPUTS
+
+- Mobile application and device inventory, versions, build provenance, signing identities, stores, SDKs, dependencies, and supported configurations.
+- User, administrator, service, and device identity models, permissions, enrollment, authentication, authorization, session, and revocation rules.
+- Data-flow, classification, local-storage, clipboard, backup, screenshot, notification, sensor, location, network, and synchronization behavior.
+- Threats involving loss, theft, rooting, jailbreaking, malicious apps, overlays, phishing, reverse engineering, tampering, supply chain, offline use, and hostile networks.
+- Mobile API contracts, telemetry, vulnerability results, update policy, support procedures, incident response, recovery, retention, and disposal obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable human owner approves supported platforms, acceptable risk, permissions, release, monitoring, data handling, device-management posture, exceptions, containment, wipe, user communication, and retirement. Security, privacy, legal, accessibility, platform, support, and operations owners must be assigned where their authority is affected. Humans decide whether a device or user may be blocked, whether data may be wiped, how appeals work, and when residual risk is accepted.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized mobile metadata, manifests, configurations, dependency records, threat models, telemetry, test results, and bounded logs; identify likely weaknesses; draft permission matrices, controls, tests, runbooks, and remediation options; and compare posture across declared versions.
+
+AI must preserve device, app, platform, build, user, environment, source, time, and evidence boundaries. It must separate observed behavior from inferred threat, recommendation, executed action, and verified result, and must surface blind spots caused by unavailable devices, offline operation, missing telemetry, or private data.
+
+AI must not infer permission from enrollment or device ownership, access or expose personal data, change production policy, release or withdraw an app, revoke a user, wipe a device, suppress an alert, or execute containment without explicit delegation, authorization, audit, and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Security Auditor, Researcher, Analyst, Observer, Implementer, Tester, Verifier, Governance Reviewer, Critic, Red Team, Documentation Writer, Memory Curator, Coordinator, and User Experience Reviewer. Select the smallest sufficient set and preserve the role contracts defined in Section 02.
+
+REQUIRED ACTIVITIES
+
+1. Establish supported platforms, versions, device ownership, management state, users, environments, data, actions, and lifecycle scope.
+2. Inventory app binaries, signing, stores, SDKs, dependencies, APIs, permissions, identities, local stores, backups, and telemetry.
+3. Map trust boundaries and threats for loss, theft, tampering, hostile networks, malicious apps, reverse engineering, phishing, supply chain, and offline use.
+4. Define least-privilege permissions, authentication, authorization, session, key, secret, certificate, update, and revocation controls.
+5. Specify protection for local and synchronized data, notifications, screenshots, clipboard, backups, logs, caches, sensors, and location.
+6. Validate backend, mobile API, store, device-management, support, incident, recovery, and disposal dependencies.
+7. Test release, update, rollback, offline, network change, rooted or jailbroken, lost-device, compromised-app, and account-recovery scenarios.
+8. Record findings, evidence, exceptions, remediation, residual risk, owner decisions, user impact, and reopening conditions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show the exact app, build, platform, device state, identity, data scope, authority, and time for each security conclusion.
+- Require human review for permission changes, device blocking, wipe, release, exception, user notification, and any action affecting access or personal data.
+- Keep manual support, accessible explanations, appeal, emergency contact, and recovery paths available when automated posture checks fail.
+- Treat AI-generated threat hypotheses and remediation as proposals until independently verified against the actual mobile configuration and threat scope.
+- Record prompts, tools, model or provider versions, retrieved evidence, human decisions, and executed actions for consequential assistance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate app, device, user, service, store, management, API, network, data, and support trust boundaries.
+- Bind permissions and policy to identity, app signature, version, device posture, purpose, and environment; do not use device enrollment as a substitute for authorization.
+- Minimize local data and define encryption, key protection, cache, backup, clipboard, notification, screenshot, logging, and deletion behavior.
+- Design for offline use, network transition, clock drift, provider failure, update interruption, revoked credentials, lost devices, and compromised clients.
+- Make telemetry privacy-preserving, tamper-aware, attributable, time-bound, and useful for response without assuming full visibility.
+- Treat third-party SDKs, stores, device-management services, mobile OS behavior, and backend APIs as versioned security dependencies.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show app and device identity, build and platform, management state, owner, user impact, policy status, evidence freshness, open findings, permissions, data scope, and dependency health. Provide authorized controls to restrict access, revoke sessions, quarantine, notify, replace, restore, wipe, appeal, and retire. Explain why an action is proposed, what it affects, what evidence supports it, and what recovery remains. Do not expose private device content merely to make posture visible.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Mobile asset, platform, build, identity, permission, data-flow, dependency, and trust-boundary inventories.
+- Threat model, security requirements, control mapping, secure-storage and update design, and privacy impact record where applicable.
+- Test plan and results for app, device, network, identity, offline, update, loss, compromise, recovery, and disposal scenarios.
+- Vulnerability, remediation, exception, incident, communication, recovery, acceptance, decision, evidence, and continuity records.
+- Owner cockpit definition, operational runbook, support and appeal procedures, and retirement or wipe plan.
+
+EVIDENCE REQUIREMENTS
+
+Every material claim identifies app and build, platform and version, device state, identity, environment, data scope, method, source, timestamp, result, limitation, and owner. Evidence may include reproducible tests, signed artifacts, configuration, dependency reports, telemetry, incident records, user reports, or controlled observations. Store approval, enrollment, a scan, or a single device test proves only its declared slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Verify least privilege, authentication, authorization, session expiry, revocation, signing, update, rollback, and dependency controls.
+- Test local storage, keys, logs, backups, notifications, clipboard, screenshots, sensors, location, and deletion for each supported platform.
+- Exercise offline use, hostile network, network change, clock change, rooted or jailbroken device, malicious app, overlay, reverse engineering, lost device, and account recovery.
+- Verify backend APIs reject client-side bypass, stale sessions, unsupported versions, replay, tampering, and unauthorized data access.
+- Reproduce findings and confirm evidence preservation, human authority, user notification, appeal, containment, restore, and wipe behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating device enrollment, store approval, certificate presence, or a clean scan as total security.
+- Relying on client-side checks for authorization or storing secrets and sensitive data without a bounded reason.
+- Ignoring unmanaged devices, offline operation, rooted devices, malicious apps, third-party SDKs, or platform drift.
+- Wiping personal or organizational data without scope, authority, warning, recovery, and appeal controls.
+- Collecting excessive location, sensor, telemetry, or device data and calling it security evidence without purpose or retention limits.
+- Publishing a security conclusion from one build, device, platform, or happy-path test.
+
+RECOVERY AND RECONSIDERATION
+
+On suspected compromise, lost device, invalid evidence, unsafe permission, provider failure, or material platform drift, preserve evidence, narrow access, revoke affected sessions, and notify the accountable owner. Use approved containment, replacement, restore, re-enrollment, rollback, or selective wipe paths. Reassess personal impact, data loss, legal duties, user appeal, residual risk, and supported scope before restoring access. Reopen the section when the app, platform, identity, data, population, provider, policy, or threat changes.
+
+COMPLETION CRITERIA
+
+The exact mobile scope, assets, users, platforms, threats, permissions, data controls, dependencies, owners, evidence, tests, response, recovery, disposal, limitations, and reopening conditions are recorded. The owner has reviewed material risk and authority. Status remains CONTENT-COMPLETE until source reconciliation, independent verification, and owner acceptance are separately completed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve inventory and baseline identity, supported versions, signing and release records, threat model, permissions, data flows, findings, exceptions, evidence, decisions, incident state, recovery steps, user communications, and open gaps. Hand off to Application, Identity, Privacy, Network, Platform, Security Operations, Incident Response, Testing, Support, Operations, and Disposal owners. State the next safe action and the exact condition that reopens this section.
+
+RELATED CODEX SECTIONS
+
+045-047 Security, Identity, and Privacy Architecture; 123 Mobile Engineering; 190 Application Security; 200-218 Identity, Security Operations, Threat, and Incident sections; 231-254 Testing; 301-330 Operations and Recovery; 398-400 Hardware Disposal and Secure Destruction.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance requirements, Sections 019-047, mobile engineering and application security context, and the section integration roadmap. Exact platforms, jurisdictions, device ownership, threat intelligence, provider contracts, privacy rules, telemetry limits, wipe authority, retention, accessibility, and owner acceptance evidence remain unresolved until supplied for the target system.

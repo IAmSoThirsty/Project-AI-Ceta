@@ -1,0 +1,95 @@
+SECTION 351 — Manufacturing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Transform approved materials, components, instructions, software, labor, and equipment into consistent, traceable, safe, and accepted products or outputs.
+
+REQUIRED OUTCOME
+
+A manufacturing model with process, inputs, equipment, people, quality, traceability, configuration, work instructions, safety, capacity, inspection, nonconformance, and release.
+
+WHY THIS MATTERS
+
+Manufacturing variation can turn a correct design into inconsistent, unsafe, counterfeit, or untraceable output. Schedule and yield cannot replace quality, safety, provenance, and worker protection.
+
+APPLICABILITY
+
+Apply when physical or repeatable production transforms materials, components, firmware, software, data, or assemblies into deliverables.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no production process, input, quality, traceability, safety, or output behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use product, hardware, embedded, supply chain, quality, safety, procurement, facility, workforce, testing, and logistics baselines.
+
+REQUIRED INPUTS
+
+Design, bill of materials, work instructions, inputs, equipment, process, operators, quality, safety, capacity, traceability, inspection, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Manufacturing and quality owners approve process, materials, substitutions, safety, release, nonconformance, and capacity. Workers can stop unsafe work and report defects.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized production data, identify variation, draft instructions and inspections, and propose scheduling. It must not change process, approve lot, infer worker performance, or control equipment without qualified human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Manufacturing Engineer, Quality Engineer, Hardware Engineer, Safety Reviewer, Supply Chain Manager, Planner, Tester, Verifier, Observer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define process and inputs; qualify equipment and operators; issue instructions; produce; inspect; trace; handle nonconformance; protect safety; measure yield and quality; release; and improve or retire process.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show product, lot, process, input, equipment, operator role, result, safety, evidence, and limitation. Require human review for substitution, quality release, safety, and worker-impact decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use revision-controlled instructions, lot traceability, equipment calibration, segregated nonconformance, quality gates, safety interlocks, secure provisioning, and recall path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show process, lot, input, equipment, quality, safety, capacity, evidence freshness, owner, and authorized hold, inspect, quarantine, release, rework, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Manufacturing charter; process and work instruction; input and lot; quality and safety; nonconformance and release; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify product, lot, input, process, equipment, revision, operator role, method, time, result, inspector, and limitation. Yield or inspection sample proves only its declared population and method.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify process, input, equipment, calibration, traceability, quality, safety, software or firmware, inspection, nonconformance, release, and recall. Test variation and equipment failure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unapproved substitution, traceability gap, unsafe work, calibration expired, sample theater, quality release by schedule, and defect or rework hidden.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or quarantine, preserve lot and process evidence, inspect or rework, notify owners, recall where needed, and reassess safety and downstream impact. Reopen on process, input, equipment, or design change.
+
+COMPLETION CRITERIA
+
+Process, inputs, equipment, people, safety, quality, traceability, release, evidence, owners, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve work instructions, revisions, lots, equipment, inspections, nonconformance, decisions, evidence, exceptions, and open gaps. Hand off to Production Planning, Assembly, Certification, Provisioning, Logistics, Quality, and Operations.
+
+RELATED CODEX SECTIONS
+
+058-060 Hardware, Embedded, and Firmware; 350 Supply Chain; 352-357 Production, Assembly, Certification, Provisioning, Logistics, and Distribution; 232 Hardware Testing; 252 Safety Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, hardware, supply, quality, safety, workforce, and logistics context, and the integration roadmap. Exact products, facilities, standards, process, workforce, lot, safety, and acceptance authority remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 306 — Security Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Execute day-to-day security monitoring, control operation, triage, investigation, containment, access review, vulnerability response, evidence, and security improvement.
+
+REQUIRED OUTCOME
+
+A security-operations execution model with assets, signals, detections, operators, cases, playbooks, authority, privacy, evidence, escalation, containment, recovery, and measures.
+
+WHY THIS MATTERS
+
+Security operations translate controls into action. Unowned alerts, missing telemetry, excessive automation, poor evidence, and delayed response can let harm continue or create new harm through containment.
+
+APPLICABILITY
+
+Apply when security controls, alerts, identities, vulnerabilities, incidents, evidence, or defensive actions are operated continuously.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no ongoing security operation, signal, protected asset, response, or evidence obligation exists and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use security architecture, IAM, threat, vulnerability, observability, incident, privacy, legal, records, continuity, and staffing baselines.
+
+REQUIRED INPUTS
+
+Assets, telemetry, detections, alerts, cases, threats, vulnerabilities, identities, playbooks, staffing, privacy, retention, incidents, and response authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Security owners set severity, coverage, response, containment, evidence, notification, staffing, exceptions, and closure. Humans decide attribution, external communication, and material access or service action.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate authorized signals, summarize cases, draft triage, and identify coverage or drift. It must not suppress, attribute, contain, revoke, delete evidence, access restricted data, or close cases without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Security Operations Analyst, Incident Responder, Threat Analyst, Vulnerability Analyst, Security Auditor, Observer, Analyst, Coordinator, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Collect and protect signals; triage; investigate; preserve evidence; review access; manage findings; contain; communicate; recover; tune; test playbooks; measure; and hand off incidents and lessons.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show signal, source, asset, identity, time, confidence, action, authority, privacy, evidence, and limitation. Require human control for containment, attribution, notification, evidence, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate collection, detection, case, evidence, response, identity, retention, and control. Design for adversarial input, missing logs, privacy, clock drift, provider loss, and safe manual fallback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show coverage, alert, case, severity, evidence freshness, operator, authority, dependency, and authorized acknowledge, escalate, contain, release, preserve, communicate, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Security-operations charter; coverage and detection; triage and playbooks; case and evidence; vulnerability and incident; decision, exception, recovery, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, signal, source, clock, detection, actor, method, time, result, confidence, coverage, and limitation. Absence of alert proves only observed visibility.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise signal, false positive, missed event, log loss, tampering, alert volume, privacy, containment, evidence, recovery, communication, and closure. Verify operator response.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Alert fatigue, unowned playbook, attribution by score, auto-containment without authority, evidence loss, privacy overcollection, and security dashboard as proof of safety.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve evidence, restore telemetry, narrow actions, contain safely, communicate, and reassess user and service impact. Reopen on threat, asset, signal, policy, staffing, or incident change.
+
+COMPLETION CRITERIA
+
+Assets, signals, detection, operators, authority, evidence, playbooks, response, recovery, privacy, measures, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve cases, detections, evidence, incidents, decisions, communications, exceptions, and open gaps. Hand off to Incident Response, Threat, Vulnerability, Blue Team, Privacy, Legal, Records, and Operations.
+
+RELATED CODEX SECTIONS
+
+206 Security Operations; 207-218 Threat, Vulnerability, Incident, Fraud, Abuse, Trust, and Privacy; 313-317 Observability; 323-330 Availability, Reliability, Continuity, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security, observability, incident, privacy, and operations context, and the integration roadmap. Exact assets, tooling, staffing, signals, authority, retention, and acceptance evidence remain unresolved.

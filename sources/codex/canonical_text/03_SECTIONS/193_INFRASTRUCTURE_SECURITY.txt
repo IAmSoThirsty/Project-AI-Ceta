@@ -1,0 +1,98 @@
+SECTION 193 — Infrastructure Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Protect physical and virtual infrastructure, hosts, storage, operating environments, provisioning paths, administrative planes, and supporting facilities throughout their lifecycle.
+
+REQUIRED OUTCOME
+
+Infrastructure assets, trust zones, owners, hardening baselines, privileged paths, patching, monitoring, isolation, backup, recovery, and evidence are explicit and tested.
+
+WHY THIS MATTERS
+
+Infrastructure is a common blast-radius boundary. Weak host, image, storage, firmware, or provisioning controls can defeat application security and erase recovery evidence.
+
+APPLICABILITY
+
+Applies to servers, hosts, hypervisors, storage, images, operating systems, facilities, provisioning, administrative tooling, and physical or virtual infrastructure.
+
+NON-APPLICABILITY CONDITIONS
+
+Only an approved baseline covering exact assets, versions, configurations, locations, privileges, and changes may justify non-applicability; labs remain limited-scope evidence.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 020, 032-040, 045, 051-052, 258-286, 301-330, and 398-400 provide system, platform, network, security, resilience, infrastructure, operations, and disposal context.
+
+REQUIRED INPUTS
+
+Asset inventory, ownership, topology, images, firmware, configurations, identities, access, data, dependencies, patch history, vulnerabilities, telemetry, backup, restore, and facility constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Infrastructure owners approve hardening, privileged access, maintenance, exceptions, outage risk, recovery, and retirement; qualified security and operations authorities must review material changes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory, compare configurations, detect drift, and propose tests. It cannot grant access, change hosts, suppress evidence, or claim security from configuration similarity or successful provisioning.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Infrastructure Engineer, Systems Administrator, Security Auditor, Network Engineer, Implementer, Tester, Verifier, Observer, Red Team, Governance Reviewer, Operations Engineer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+1. Inventory hosts, storage, images, firmware, control planes, facilities, and trust boundaries.
+2. Define secure baselines, least privilege, segmentation, patching, provenance, monitoring, and recovery controls.
+3. Review configuration and supply-chain drift; test isolation, tampering, denial, restore, and evidence capture.
+4. Record residual risk, exceptions, remediation, and lifecycle handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Separate observed state from AI analysis. Human approval is required for privileged changes, isolation, outage, recovery, and exceptions; manual status and recovery remain available when automation fails.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable or attestable images, controlled provisioning, segmented management planes, secure boot where applicable, least privilege, encrypted storage, tamper-evident logs, independent backups, and recovery not dependent on the failed host.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show asset, version, location, owner, hardening, privileged sessions, drift, findings, evidence freshness, outage impact, and authorized isolate, patch, restore, or retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Infrastructure inventory, threat model, hardening baseline, access matrix, patch and image records, configuration evidence, vulnerability findings, recovery tests, exceptions, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, version, configuration, environment, method, coverage, date, result, owner, and limits. A template, scan, or uptime signal proves only its bounded condition.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise unauthorized administration, image tampering, storage disclosure, host compromise, patch failure, management-plane loss, capacity exhaustion, restore, and evidence replay.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared administrators, unmanaged images, unpatched hosts, public management ports, unencrypted backups, single recovery paths, ignored physical access, and treating provisioning success as security.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate affected assets, revoke credentials, preserve evidence, restore known-good infrastructure, validate dependent workloads and data, and reopen when topology, firmware, provider, or threat assumptions change.
+
+COMPLETION CRITERIA
+
+Assets, boundaries, owners, controls, evidence, tests, recovery, exceptions, residual risk, and retirement are explicit; status remains CONTENT-COMPLETE pending qualified review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve asset identity, configuration, versions, incidents, decisions, evidence, dissent, and next action. Hand off to Platform, Cloud, Network, Security Operations, Incident Response, Reliability, Backup, Testing, and Disposal.
+
+RELATED CODEX SECTIONS
+
+035 Infrastructure Architecture; 045 Security Architecture; 051-052 Reliability and Resilience; 193-206 security sections; 258-286 environment and infrastructure operations; 328-330 recovery; 398-400 disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+The contract and neighboring architecture sections govern this draft. Hardware, operating system, facility, provider, regulatory, hardening, and recovery standards remain scope-specific gaps.

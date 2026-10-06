@@ -1,0 +1,95 @@
+SECTION 355 — Device Provisioning
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Initialize devices with identity, firmware, configuration, credentials, ownership, policy, data, connectivity, and support so they enter service in a known and recoverable state.
+
+REQUIRED OUTCOME
+
+A device-provisioning model with asset identity, hardware and firmware, keys, owner, configuration, enrollment, security, data, validation, handoff, update, wipe, and retirement.
+
+WHY THIS MATTERS
+
+Provisioning establishes device trust and ownership. Shared credentials, wrong configuration, incomplete enrollment, exposed keys, or untracked handoff can compromise an entire fleet.
+
+APPLICABILITY
+
+Apply when a device, embedded system, endpoint, gateway, or hardware unit is prepared, enrolled, assigned, re-provisioned, transferred, or recovered.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no device identity, configuration, ownership, credential, firmware, enrollment, or lifecycle behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use hardware, embedded security, IAM, keys, secrets, configuration, manufacturing, inventory, update, privacy, support, and disposal baselines.
+
+REQUIRED INPUTS
+
+Device, hardware, firmware, identity, keys, owner, configuration, policy, network, data, enrollment, validation, support, wipe, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Device owners approve identity, assignment, policy, data, key, enrollment, exception, transfer, wipe, recovery, and retirement. Humans verify chain of custody and safety.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized provisioning metadata and draft checklists or validation. It must not generate or expose keys, assign ownership, enroll, configure, wipe, or declare trust without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Device Provisioning Engineer, Embedded Engineer, IAM Engineer, Key Manager, Security Auditor, Manufacturing Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Verify asset; provision identity and keys; install firmware; configure; enroll; validate; record owner and chain; hand off; update; recover; transfer; wipe; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show device, hardware, firmware, identity reference, owner, configuration, action, evidence, and limitation without exposing secret material. Require human approval for key, assignment, wipe, and retirement.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use secure provisioning station, unique identity, protected keys, signed firmware, least privilege, inventory, policy, enrollment, audit, recovery, and secure handoff.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show device identity, owner, version, posture, configuration, enrollment, evidence freshness, and authorized assign, restrict, update, recover, transfer, wipe, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Provisioning charter; device and chain-of-custody; identity and key metadata; firmware and configuration; validation, handoff, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify device, hardware, firmware, identity reference, station, operator, owner, method, time, result, and limitation. Enrollment proves only the recorded action, not complete trust.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, keys, firmware, configuration, ownership, enrollment, network, security, privacy, support, update, recovery, transfer, wipe, and inventory.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared identity, key exposure, wrong owner, firmware mismatch, enrollment without validation, chain break, wipe without scope, and device status treated as security.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine, preserve evidence, revoke identity, rotate keys, restore known-good firmware, re-provision, notify owner, and reassess fleet or user impact. Reopen on hardware, firmware, owner, policy, or threat change.
+
+COMPLETION CRITERIA
+
+Device, owner, identity, firmware, keys, configuration, enrollment, validation, evidence, recovery, wipe, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve device metadata, provisioning, ownership, keys references, firmware, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Manufacturing, Embedded, Security, Mobile, Operations, Support, and Disposal.
+
+RELATED CODEX SECTIONS
+
+198-199 Embedded and Hardware Security; 204-205 Keys and Secrets; 258 Configuration; 294 Provisioning; 354 Certification; 356 Logistics; 399 Hardware Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, device, hardware, identity, security, manufacturing, and operations context, and the integration roadmap. Exact devices, owners, stations, keys, firmware, privacy, wipe, and acceptance authority remain unresolved.

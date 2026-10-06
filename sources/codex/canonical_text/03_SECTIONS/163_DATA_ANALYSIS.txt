@@ -1,0 +1,105 @@
+SECTION 163 — Data Analysis
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define a governed method for turning authorized data into bounded descriptive, diagnostic, exploratory, and decision-support findings. Data Analysis preserves the difference between observation, calculation, interpretation, recommendation, and decision.
+
+REQUIRED OUTCOME
+
+- A question, population, scope, time window, unit of analysis, and decision context.
+- Reproducible data preparation, measures, methods, assumptions, limitations, and findings.
+- Traceability from source data through transformations, calculations, visualizations, conclusions, and owner action.
+- Explicit uncertainty, quality, bias, privacy, security, accessibility, and non-applicability determinations.
+
+WHY THIS MATTERS
+
+Analysis can make incomplete or biased data appear authoritative. A clear analytical chain lets owners distinguish what the data shows from what an analyst infers and what a decision maker chooses.
+
+APPLICABILITY
+
+Applies when data is used to describe conditions, explain variation, compare groups, diagnose causes, monitor outcomes, support decisions, or assess a change. It applies more deeply when results affect rights, safety, finance, service, policy, models, or public claims.
+
+NON-APPLICABILITY CONDITIONS
+
+May be recorded as non-applicable for formatting, transcription, or reversible inspection with no analytical claim or material decision effect. The record must name scope, owner, evidence date, and reopening trigger; a chart or query is not automatically exempt.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires Sections 019, 030, 031, 155, and 156 for the question, information meaning, data lineage, governance, and quality context. Privacy, security, accessibility, records, and domain authorities must be identified or marked unresolved.
+
+REQUIRED INPUTS
+
+Authorized question; source and version; population and sampling frame; definitions; measures; time and geography; inclusion rules; transformations; quality results; lawful access; hypotheses; decision criteria; and known confounders and limitations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner approves the question, population, sensitive uses, interpretation, decision threshold, publication, and acceptance. Humans resolve ambiguous meaning, competing interests, residual risk, and action; analysts must not turn findings into policy without authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may profile, summarize, calculate, visualize, detect patterns, propose analyses, and identify gaps within authorized data. It must show provenance and uncertainty and must not invent observations, infer permission, hide adverse results, or present correlation as causation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Analyst, Researcher, Observer, Architect, Data Governance Reviewer, Security Auditor, Privacy Reviewer, Critic, Tester, Verifier, Documentation Writer, Memory Curator, and Decision Arbiter Advisory. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Frame the question, decision, scope, population, unit, and non-goals.
+2. Inspect source authority, lineage, quality, missingness, bias, and access.
+3. Define measures, transformations, comparison groups, and uncertainty.
+4. Run reproducible analysis and sensitivity checks.
+5. Separate results, interpretation, recommendation, and owner decision.
+6. Review privacy, security, accessibility, fairness, and misuse risks.
+7. Record limitations, dissent, failed analyses, and reopen conditions.
+8. Validate findings with domain owners and independently reproduce material results.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, method, filters, code or equivalent procedure, confidence limits, and data freshness. AI suggestions remain proposed until reviewed. Owners must correct definitions and assumptions without erasing prior findings, and non-AI evidence and appeal paths must remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Store versioned questions, datasets, transformations, notebooks or procedures, measures, outputs, provenance, permissions, decisions, and evidence. Separate raw, prepared, derived, cached, and published data. Preserve repeatability, access controls, deletion obligations, and invalidation when sources change.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show question, owner, dataset version, scope, freshness, quality, method, status, uncertainty, findings, dissent, and decision. Provide authorized controls to pause, restrict, rerun, correct, quarantine, withdraw, publish, or reopen. Do not equate a green chart with truth or accepted action.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Analysis charter; data and lineage record; preparation procedure; measure definitions; analysis artifact; visualizations; findings and limitations; privacy and bias review; decision record; reproducibility package; and continuity handoff.
+
+EVIDENCE REQUIREMENTS
+
+Each claim identifies source, version, population, period, method, transformation, analyst or tool, result, uncertainty, and limitation. Samples, dashboards, correlations, and model-generated summaries support only bounded claims. Missing or contradictory evidence is marked UNKNOWN or NOT VERIFIED.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce key results from the archived inputs and procedure; alter filters and definitions to test sensitivity; inject missing, duplicate, stale, and biased records; verify access and privacy controls; compare independent calculations; and confirm conclusions do not exceed evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Cherry-picked periods; p-hacking; silent filtering; denominator changes; proxy measures treated as outcomes; causal language from correlation; data leakage; hidden missingness; unauthorized disclosure; automated recommendations presented as decisions; and untraceable spreadsheet edits.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected outputs when lineage, quality, permission, or method fails. Preserve prior artifacts, identify safe uses, notify owners, correct or rerun from a governed source, and reassess decisions that relied on invalid findings. Reopen after population, definition, policy, or source change.
+
+COMPLETION CRITERIA
+
+The question, scope, source, method, transformations, results, uncertainty, limitations, controls, verification, owner decision, and reopening condition are recorded. Status remains CONTENT-COMPLETE until source reconciliation and owner acceptance are separately completed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve identifiers, inputs, code or procedure, environment, dependencies, decisions, dissent, evidence, and open gaps. Hand off to Statistics, Data Quality, Business Intelligence, Operations, Model Evaluation, Governance, and Records work with the next safe action and blocked actions stated.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 030 Information Architecture; 031 Data Architecture; 155 Data Governance; 156 Data Quality Engineering; 161 Analytics Engineering; 162 Business Intelligence; 180 Model Evaluation; 307 Data Operations; 313 Observability Engineering.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance requirements, Sections 030-032, and the Status and Evidence Lexicon. Domain-specific statistical standards, lawful purposes, population definitions, quality thresholds, accessibility needs, and decision authority remain unresolved until supplied and verified.

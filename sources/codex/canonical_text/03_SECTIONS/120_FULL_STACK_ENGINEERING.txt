@@ -1,0 +1,98 @@
+SECTION 120 — Full-Stack Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define coordinated engineering across user interface, client, service, integration, data, deployment, and operational boundaries for an end-to-end product or service.
+
+REQUIRED OUTCOME
+
+A traceable end-to-end baseline connecting journey, client, backend, data, dependencies, security, tests, release, runtime, recovery, and retirement.
+
+WHY THIS MATTERS
+
+Cross-layer failures often hide at boundaries: stale state, mismatched contracts, unauthorized calls, inaccessible recovery, or data changes that no single team sees.
+
+APPLICABILITY
+
+Applies when one work item or team owns material behavior across two or more application layers or when an end-to-end outcome crosses frontend, backend, data, or operations.
+
+NON-APPLICABILITY CONDITIONS
+
+A single-layer change with no cross-layer contract, data, access, behavior, or lifecycle effect may be exempt; record impact and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires end-to-end requirements, journeys, architecture, layer contracts, data, identity, environments, support, recovery, and acceptance authority.
+
+REQUIRED INPUTS
+
+User outcomes, client and server behavior, APIs, schemas, dependencies, configuration, tests, telemetry, accessibility, security, deployment, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own end-to-end outcome, user impact, risk, data, security, release, commitments, and retirement. Layer owners must coordinate rather than transfer unresolved responsibility.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft cross-layer changes and tests, but must show affected layers, contracts, data, authority, and evidence; it must not release or migrate across boundaries without approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Refactorer, Tester, Verifier, User Experience Reviewer, Security Auditor, Governance Reviewer, Coordinator, Critic, Documentation Writer, and Memory Curator. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish end-to-end scope and trace each outcome across layers.
+2. Align contracts, state, identity, data, errors, observability, and recovery.
+3. Implement and verify normal, boundary, denied, degraded, migration, and retirement paths.
+4. Release and operate with coordinated evidence and ownership.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show layer and actor boundaries, generated content, authority, data, and side effects. Human review is required for cross-layer permissions, migrations, external effects, and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent each layer separately with explicit contracts, shared identifiers, correlation, version compatibility, data ownership, migrations, tracing, compensation, and safe degradation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show end-to-end version, layer status, contract compatibility, user impact, data, incidents, evidence, and authorized controls to pause, narrow, rollback, restore, or retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+End-to-end architecture, contract matrix, source and configuration, test evidence, deployment, telemetry, support, incident, recovery, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Identify every layer, version, environment, request, state, data, actor, method, result, and limitation. A layer-local green test is not end-to-end evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise contract mismatch, stale client, partial request, duplicate submission, auth failure, data migration, dependency loss, offline recovery, accessibility, and release rollback.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Layer ownership gaps, incompatible releases, duplicated business rules, client trust, missing correlation, inconsistent transactions, and rollback that breaks another layer.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze affected boundary, preserve correlation and evidence, use compatible versions or manual path, restore or compensate, and reopen impacted architecture and contracts.
+
+COMPLETION CRITERIA
+
+The end-to-end outcome, layer contracts, ownership, evidence, release, support, recovery, and retirement are explicit and accepted for scope.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off layer contracts, dependencies, tests, telemetry, decisions, incidents, runbooks, recovery, and gaps to Frontend, Backend, API, Integration, Data, Security, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+117-119 Application through Backend Engineering; 019-053 Requirements through Architecture; 128-131 API through Distributed Systems; 231-270 Testing and Delivery; 301-406 Operations and Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Actual layer ownership, deployment topology, service levels, data authority, and recovery objectives remain unresolved.

@@ -1,0 +1,141 @@
+SECTION 036 — Cloud Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed use of cloud regions, accounts, subscriptions, tenants, managed services, control planes, data planes, identity, networking, elasticity, provider dependencies, and exit paths for approved workloads.
+
+REQUIRED OUTCOME
+
+- A cloud scope and landing model with owners, regions, tenants, accounts, environments, workloads, data, trust boundaries, service contracts, and lifecycle.
+- Explicit decisions for placement, residency, identity, tenancy, scaling, cost, availability, resilience, portability, provider risk, and recovery.
+- Evidence-bounded handoff to platform, infrastructure, network, security, operations, testing, continuity, and retirement.
+
+WHY THIS MATTERS
+
+Cloud control planes and managed services create powerful shared dependencies. Convenience can hide provider lock-in, region concentration, opaque failure behavior, cost exposure, data-residency issues, or administrative paths that bypass application authority.
+
+APPLICABILITY
+
+- Workloads use hosted compute, storage, identity, networking, managed data, AI, observability, delivery, or other provider services.
+- Cloud decisions affect jurisdiction, availability, security, privacy, cost, scalability, portability, resilience, or retirement.
+
+NON-APPLICABILITY CONDITIONS
+
+- No cloud service, provider, region, tenant, data-residency, identity, cost, or lifecycle condition is affected.
+- An approved cloud baseline covers exact workload, provider, environment, region, and change with no material impact.
+- The artifact is exploratory and explicitly not a deployment, compliance, resilience, or provider-capability claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-035 provide requirements, applications, software, platform, infrastructure, data, operations, security, and recovery context.
+- Provider terms, region availability, identity, network, billing, data residency, support, exit, and continuity authorities are known or open.
+
+REQUIRED INPUTS
+
+- Workloads, data classes, users, jurisdictions, environments, service objectives, criticality, recovery targets, and lifecycle.
+- Provider services, accounts, subscriptions, policies, quotas, topology, configuration, contracts, cost limits, telemetry, incidents, backup, restore, and exit requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Cloud owners approve provider, region, residency, account structure, identity, shared services, cost commitments, exceptions, resilience, support, and exit. Workload and data owners approve use and risk. Humans retain authority for provisioning, suspension, failover, restore, migration, and account closure.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare provider offerings, inspect authorized configuration, model cost or capacity, draft infrastructure-as-code, identify policy drift, and propose migration. It must label estimates and evidence, preserve account and region identity, and must not provision, grant access, transfer data, accept terms, or declare compliance or resilience without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Planner, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, Coordinator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Establish workload, provider, account, region, tenant, jurisdiction, data, owner, and lifecycle scope.
+2. Assess provider capability, shared responsibility, residency, identity, support, cost, lock-in, and exit.
+3. Model control plane, data plane, management plane, failure domains, quotas, and blast radius.
+4. Define landing zones, policy, network, access, secrets, logging, backup, restore, scaling, and cost controls.
+5. Define deployment, promotion, rollback, failover, region substitution, migration, portability, and account closure.
+6. Validate with workload, data, security, privacy, finance, operations, continuity, legal, and supplier authorities.
+7. Exercise provider, region, credential, quota, network, service, billing, data, and control-plane failures.
+8. Baseline decisions, evidence, assumptions, open gaps, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show provider, account, region, resource, data boundary, authority, actor, cost, and external consequence for consequential actions.
+- Require human review for provisioning, residency, access, cost commitment, data transfer, policy, security, and destructive actions.
+- Preserve provider-independent status, evidence, stop, fallback, and recovery paths where feasible.
+- Prevent chat, break-glass, or tenant-admin paths from bypassing policy and audit.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate provider control plane, workload data plane, management plane, customer configuration, and evidence.
+- Represent provider services, regions, contracts, quotas, policies, dependencies, costs, and exit mappings as versioned records.
+- Enforce identity, authorization, residency, encryption or equivalent protection, logging, backup, and deletion at cloud boundaries.
+- Design provider substitution, region failover, portability, migration, restore, and account closure before dependence becomes irreversible.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show provider, account, region, workload, data, owner, policy, cost, capacity, health, authority, evidence freshness, and lifecycle.
+- Expose shared-impact, data-transfer, cost-bearing, and destructive actions with approval and blast radius.
+- Permit authorized restrict, suspend, fail over, restore, migrate, revoke, rollback, and close actions.
+- Export cloud topology, policies, contracts, evidence, decisions, dissent, and continuity record.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Cloud context, account and landing model, region and residency decision, provider responsibility matrix, topology, service contracts, and cost model.
+- Identity, network, security, privacy, observability, backup, restore, failover, portability, migration, exit, and retirement designs.
+- Impact, risk, verification, evidence, acceptance, and operational handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify provider, account, region, resource, workload, data class, configuration, observation period, method, actor, and limitation.
+- Provider documentation, deployment success, cost estimate, policy scan, uptime, or failover drill proves only its declared scope and conditions.
+- Residency, security, availability, cost, portability, recovery, and support evidence identifies coverage and validity.
+- Stale, missing, failed, or provider-controlled evidence remains visible and constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace workload and data obligations through provider services, identity, regions, controls, operation, evidence, recovery, and exit.
+- Verify account isolation, least privilege, residency, policy, quotas, cost alerts, logging, backup, restore, and deletion.
+- Exercise region loss, provider-service loss, credential compromise, quota exhaustion, billing anomaly, network partition, stale policy, and account lockout.
+- Verify portability or explicitly record the accepted dependency and recovery limit.
+- Reproduce representative cloud claims from the exact configuration and evidence package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating managed-service availability, provider documentation, or deployment success as general resilience or compliance proof.
+- Hiding shared responsibility, provider concentration, region dependency, opaque managed state, data transfer, or cost exposure.
+- Granting broad cloud administration to simplify automation or allowing provider defaults to become policy without approval.
+- Designing no exit because migration is inconvenient.
+
+RECOVERY AND RECONSIDERATION
+
+- On provider, region, account, identity, policy, cost, residency, or evidence failure, restrict affected resources and preserve records.
+- Identify safe service, affected data, owner, authority, communication, evidence, and recovery window.
+- Use approved reduced service, region failover, restore, provider substitution, migration, export, or closure paths.
+- Reopen when provider terms, regions, data, workload, policy, cost, or lifecycle changes.
+
+COMPLETION CRITERIA
+
+- Provider, account, region, workload, data, authority, controls, cost, evidence, recovery, portability, and lifecycle are explicit.
+- Cloud failure, migration, exit, and retirement are addressed or justified.
+- Exact validity and unresolved gaps are recorded; CONTENT-COMPLETE does not imply deployed, compliant, or resilient.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve provider identities, accounts, regions, configurations, contracts, dependencies, costs, incidents, decisions, evidence, dissent, and gaps.
+- Hand off to Platform, Infrastructure, Network, Security, Identity, Data, Operations, Testing, Continuity, Migration, and Retirement sections.
+- Record changes requiring reopening Application, Software, Data, Reliability, Resilience, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-035 Requirements through Infrastructure Architecture; 037-044 Edge through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 255-300 delivery and cloud lifecycle; 301-406 operations and retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-035, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal provider, region, residency, pricing, service-level, portability, or compliance regime is supplied. Actual workloads, contracts, account controls, recovery objectives, and exit evidence remain unresolved.

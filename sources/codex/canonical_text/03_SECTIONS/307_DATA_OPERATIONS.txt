@@ -1,0 +1,95 @@
+SECTION 307 — Data Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate data pipelines, stores, quality, access, refresh, lineage, retention, deletion, recovery, and consumer services so data remains governed and useful.
+
+REQUIRED OUTCOME
+
+A data-operations model with sources, pipelines, stores, owners, schedules, quality, freshness, access, incidents, correction, backup, recovery, retention, and consumer communication.
+
+WHY THIS MATTERS
+
+Data operations failures propagate silently into reports, models, decisions, and obligations. A pipeline can be green while data is late, duplicated, unauthorized, or semantically wrong.
+
+APPLICABILITY
+
+Apply when data is ingested, transformed, stored, published, refreshed, accessed, corrected, archived, deleted, or recovered in ongoing operation.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no data source, pipeline, store, consumer, quality, access, lifecycle, or recovery behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data architecture, quality, privacy, security, warehouse, lake, database, storage, records, AI, observability, and recovery baselines.
+
+REQUIRED INPUTS
+
+Sources, contracts, schemas, schedules, lineage, stores, consumers, quality, access, freshness, incidents, retention, deletion, backup, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Data owners approve meaning, access, refresh, correction, quarantine, retention, deletion, recovery, and consumer notice. Humans decide whether data is fit for consequential use.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized metadata, quality, lineage, and bounded samples; summarize incidents; and draft runbooks or remediation. It must not expose raw data, alter authoritative data, widen access, delete, or declare fitness without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Data Operations Engineer, Data Engineer, Data Quality Analyst, Data Architect, Privacy Reviewer, Security Auditor, Analyst, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Operate ingestion and transformation; monitor quality and freshness; manage access; reconcile; quarantine and correct; notify consumers; back up and restore; retain and delete; respond; and improve.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, schema, grain, time, quality, access, consumer, action, authority, evidence, and limitation. Require human approval for correction, quarantine, access, deletion, recovery, and consequential use.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use contracts, lineage, quality gates, quarantine, versioned pipelines, access control, privacy, freshness, reconciliation, backup, deletion propagation, and consumer impact.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show pipeline, source, freshness, quality, lineage, access, consumer, incidents, evidence freshness, owner, and authorized pause, quarantine, correct, backfill, restore, restrict, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Data-operations charter; source and pipeline catalog; quality and freshness; access and lineage; incident, correction, backup, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, pipeline, schema, grain, population, window, method, result, actor, quality, and limitation. Pipeline success or row count proves only execution and declared slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify ingestion, schema, quality, freshness, lineage, access, privacy, reconciliation, correction, backfill, backup, restore, deletion, and consumer notification.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Green pipeline, stale data, hidden correction, unrestricted raw zone, consumer unaware, deletion not propagated, backup not restored, and quality score as truth.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine, preserve versions, notify consumers, correct or backfill, restore, reconcile, and reassess downstream decisions. Reopen on source, schema, quality, pipeline, consumer, or lifecycle change.
+
+COMPLETION CRITERIA
+
+Sources, pipelines, stores, owners, quality, access, freshness, lineage, recovery, retention, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve data state, pipeline versions, incidents, corrections, backups, decisions, evidence, exceptions, and open gaps. Hand off to Data Engineering, Quality, Privacy, Security, Analytics, AI, Records, and Operations.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 159-162 Data Platforms; 218 Privacy; 254 Data Testing; 285-286 Database and Storage; 308 AI Operations; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data, privacy, quality, and operations context, and the integration roadmap. Exact sources, schedules, quality, consumers, authority, retention, recovery, and acceptance evidence remain unresolved.

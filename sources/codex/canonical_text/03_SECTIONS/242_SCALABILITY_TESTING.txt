@@ -1,0 +1,95 @@
+SECTION 242 — Scalability Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Determine whether a system can grow across users, data, traffic, devices, tenants, geography, workload, or time while preserving protected outcomes and acceptable cost.
+
+REQUIRED OUTCOME
+
+A scalability model with growth dimensions, workload projection, architecture assumptions, scale mechanism, limits, service objectives, cost, data behavior, operational burden, and evidence.
+
+WHY THIS MATTERS
+
+A system may handle more traffic but fail with data growth, tenant count, geographic spread, coordination, cost, or operator load. Linear extrapolation from a small test can hide thresholds and discontinuities.
+
+APPLICABILITY
+
+Apply when expected or strategic growth can affect performance, reliability, cost, privacy, security, data lifecycle, operations, or user experience.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no growth dimension or scale-dependent outcome changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, workload, performance, load, stress, capacity, cost, data, tenancy, operations, reliability, and roadmap baselines. Define growth horizon, assumptions, and decision owner.
+
+REQUIRED INPUTS
+
+Growth dimensions, projections, workload, data volume, tenants, geography, dependencies, architecture, scaling mechanism, limits, service objectives, cost, staffing, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners set growth assumptions, service and cost tradeoffs, investment, risk, and acceptance. Architects and operators validate capacity and operational consequences; humans decide whether extrapolation is sufficient.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized measurements, model growth, identify bottlenecks, and propose experiments or architecture options. It must expose assumptions and uncertainty and must not promise scale, trigger capacity changes, or optimize cost at the expense of protected outcomes without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Scalability Engineer, Architect, Performance Engineer, Data Engineer, Analyst, Researcher, Tester, Verifier, Optimizer, Operations Engineer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define growth dimensions and horizon; model workloads and data; baseline current behavior; test scale steps; measure service, cost, resources, data, security, and operator load; identify thresholds; plan capacity; validate; and record limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show projection, assumption, measurement, environment, scale step, service objective, cost, uncertainty, and limitation. Require human approval for extrapolation, resource changes, customer commitments, and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support partitioning, sharding, caching, queues, autoscaling, data lifecycle, tenant isolation, rate limits, observability, migration, rollback, and operational staffing. Identify nonlinear thresholds and shared failure domains.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show growth dimension, current and projected load, threshold, resource, cost, service state, evidence freshness, owner, and authorized scale, throttle, defer, redesign, rollback, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Scalability charter; growth and workload model; scale-test plan; measurements and thresholds; capacity and cost analysis; architecture decisions; risk, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify growth dimension, version, workload, data, environment, scale step, metric, cost, method, result, uncertainty, and limitation. Extrapolation must state its assumptions and validation boundary.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify workload and growth model, scale mechanism, thresholds, service objectives, data integrity, tenant isolation, cost, operator load, failure, recovery, and repeatability. Test beyond expected and boundary scale safely.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Linear extrapolation, traffic-only scaling, data and operator load ignored, cost surprise, shared tenant failure, autoscaling without guardrails, and growth commitments without evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Throttle or isolate growth, preserve measurements, use approved capacity or fallback, protect users and data, and revisit architecture or assumptions. Reopen on growth, workload, data, provider, cost, or service-objective change.
+
+COMPLETION CRITERIA
+
+Growth, assumptions, workloads, mechanisms, limits, service, cost, owners, evidence, tests, recovery, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve projections, workloads, environments, measurements, thresholds, decisions, costs, evidence, exceptions, and open gaps. Hand off to Capacity, Performance, Load, Stress, Data, Reliability, Architecture, and Operations.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 029 Operational Architecture; 031 Data Architecture; 239-241 Performance, Load, and Stress Testing; 301-330 Capacity, Performance, Reliability, and Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, architecture, performance, and operations context, and the integration roadmap. Exact growth, workload, horizon, service objectives, cost, scale mechanism, and acceptance authority remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 400 — Secure Destruction
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Destroy data, media, hardware, credentials, records, or artifacts so recovery or unauthorized use is prevented to the declared assurance level, with lawful authority and evidence.
+
+REQUIRED OUTCOME
+
+A secure-destruction model with asset, data, authority, hold, method, assurance, custody, operator, vendor, environmental handling, certificate, and verification.
+
+WHY THIS MATTERS
+
+Deletion or disposal may leave recoverable remnants, keys, copies, metadata, or trust. Destruction can also be unlawful or irreversible if hold, retention, rights, or evidence was not checked.
+
+APPLICABILITY
+
+Apply when information or physical media must be made unrecoverable or unusable, including when cryptographic erasure is used as the destruction method.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no data, media, key, record, asset, or trust material requires destruction and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use records, retention, legal hold, privacy, keys, hardware, disposal, environmental, vendor, security, and evidence baselines.
+
+REQUIRED INPUTS
+
+Asset, data, key, owner, authority, hold, retention, method, assurance, custody, vendor, environmental, certificate, and verification.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners and qualified security, legal, privacy, records, and environmental authorities approve scope, method, hold, vendor, destruction, and certificate. Humans verify completion.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may check authorized metadata and prepare candidate lists or evidence. It must not destroy, release hold, choose assurance, expose data, or certify destruction without human-controlled procedure.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Security Auditor, Records Manager, Privacy Reviewer, Key Manager, Hardware Engineer, Environmental Reviewer, Legal Advisor, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Identify and secure; verify authority and hold; choose method and assurance; maintain custody; execute; inspect or verify; obtain certificate; handle environmental output; and close records.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show asset, scope, authority, hold, method, assurance, custody, evidence, and limitation without exposing content. Require human approval for every irreversible action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use cryptographic erasure or physical method as justified, key destruction, copy discovery, secure chain of custody, dual control, vendor evidence, audit, and environmental safeguards.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show candidate, scope, hold, method, assurance, custody, vendor, evidence freshness, owner, and authorized preserve, approve, destroy, verify, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Destruction charter; scope and authority; hold and custody; method and assurance; execution and verification; certificate, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, data or key class, authority, hold, method, operator, vendor, time, result, certificate, and limitation. A certificate proves only stated scope and method.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify scope, hold, method, assurance, custody, key treatment, copies, vendor, certificate, recovery impossibility to declared level, and environmental handling.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Destruction before hold check, method below assurance, custody gap, certificate without detail, key left active, backup ignored, and disposal called destruction.
+
+RECOVERY AND RECONSIDERATION
+
+Stop, preserve remaining material, apply hold, notify owners, investigate, and reassess. If destruction was unauthorized, treat exposure and evidence consequences as an incident.
+
+COMPLETION CRITERIA
+
+Scope, authority, hold, method, assurance, custody, evidence, certificate, owners, environmental handling, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve destruction records, certificates, custody, decisions, evidence, exceptions, and open gaps without retaining unnecessary content. Hand off to Records, Privacy, Legal, Security, Hardware, Environment, and System Retirement.
+
+RELATED CODEX SECTIONS
+
+225 Records; 391-395 Retention, Archive, Preservation, Disposal, and Deletion; 399 Hardware Disposal; 401 Environmental Disposal; 204 Key Management; 004 Evidence.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security, records, privacy, legal, hardware, environmental, and evidence context, and the integration roadmap. Exact assurance, methods, assets, holds, vendors, jurisdiction, certificates, and acceptance authority remain unresolved.

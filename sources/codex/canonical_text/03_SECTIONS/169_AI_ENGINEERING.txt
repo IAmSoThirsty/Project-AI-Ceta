@@ -1,0 +1,103 @@
+SECTION 169 — AI Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering of AI-enabled systems as socio-technical products: models, prompts, tools, data, policies, interfaces, people, controls, evaluation, operations, and lifecycle.
+
+REQUIRED OUTCOME
+
+- A complete AI system boundary and contract, including capability, authority, data, tools, users, providers, and failure behavior.
+- Reproducible implementation, evaluation, observability, security, privacy, safety, accessibility, and human-control evidence.
+- A governed path from prototype to operation and retirement.
+
+WHY THIS MATTERS
+
+AI behavior emerges from more than a model. Prompts, retrieval, tools, permissions, interfaces, operators, and fallback determine real consequences. Engineering the whole system prevents model-centric claims from hiding socio-technical failure.
+
+APPLICABILITY
+
+Applies to systems that use models, agents, classifiers, generators, recommenders, speech, vision, retrieval, or learned components to inform or act. Depth increases with autonomy, sensitive data, external effects, and long-running operation.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to ordinary deterministic software with no AI component or to clearly labeled exploration with no operational claim. Record scope, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires requirements, process, data, security, privacy, safety, accessibility, evaluation, governance, and operational contexts. Depends on Sections 167-170, 180-186, and 188.
+
+REQUIRED INPUTS
+
+Use case; users and affected parties; model and provider; prompts and policies; tools; data; identity; permissions; autonomy; interfaces; constraints; evaluation; monitoring; fallback; incident; and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans define purpose, prohibited use, authority, user notice, review, risk acceptance, deployment, external commitments, and retirement. Engineers cannot grant autonomy, access, or decision authority through wiring or prompt design.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft code, prompts, schemas, tests, evaluations, and architectures. It must preserve provenance and disclose uncertainty. It must not claim alignment, safety, authorization, or production readiness without evidence and human decision.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Researcher, Analyst, Prompt Engineer, Security Auditor, Privacy Reviewer, Safety Auditor, Governance Reviewer, Tester, Verifier, Critic, Red Team, Documentation Writer, Memory Curator, and Human-in-the-Loop Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define system purpose, boundary, users, affected parties, and prohibited use.
+2. Map model, prompt, policy, retrieval, tool, data, identity, provider, and human paths.
+3. Specify permissions, autonomy, approval, stop, appeal, fallback, and evidence contracts.
+4. Build and evaluate normal, adversarial, ambiguous, and failure behavior.
+5. Validate privacy, security, safety, accessibility, reliability, cost, and operational readiness.
+6. Instrument traces, decisions, tool calls, outputs, incidents, and human review.
+7. Baseline, hand off, and define change and retirement gates.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show actor, model, prompt, policy, tool, data, authority, output, confidence limits, review, and state. Humans must correct intent and stop consequences. No chat path may bypass identity, evaluation, audit, approval, or recovery.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version system, model, provider, prompt, policy, tools, data, retrieval index, configuration, interface, evaluation, and deployment. Enforce capability and authority at tool and state boundaries. Preserve traceability and compensation, not destructive reversal.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show system state, model and provider, active policy, authority, tools, data, traces, evaluations, incidents, costs, and evidence. Provide authorized pause, revoke, restrict, isolate, fallback, compensate, rollback configuration, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+AI system charter; threat and impact assessment; model, prompt, data, tool, policy, and provider registers; architecture; evaluation suite; trace schema; deployment record; runbook; incident and retirement plan; decision and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify system version, model, provider, prompt, policy, tools, data, environment, evaluator, scenario, result, uncertainty, and limitation. A response, demo, benchmark, or trace is bounded evidence, not general safety proof.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Trace every consequential path; test prompt injection, tool misuse, privilege, data leakage, hallucination, refusal, ambiguity, provider loss, model drift, authority revocation, human review, fallback, and compensation; reproduce accepted claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Model-only testing; hidden tools; implicit authority; prompt as security boundary; unlogged decisions; unsafe defaults; provider lock-in; reward or engagement gaming; human review theater; and rollback that destroys prior evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or narrow affected capability on unsafe output, policy conflict, breach, drift, trace loss, provider failure, or authority expiry. Preserve immutable decisions and evidence, use fallback or compensation, review affected outcomes, and requalify before resuming.
+
+COMPLETION CRITERIA
+
+Purpose, boundary, actors, models, prompts, data, tools, policies, controls, evaluation, operation, recovery, evidence, and authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve system IDs, versions, configurations, traces, decisions, evaluations, incidents, dissent, dependencies, and gaps. Hand off to Generative AI, Agents, MLOps, Model Operations, Safety, Governance, Security, and HITL Operations.
+
+RELATED CODEX SECTIONS
+
+056 AI Architecture; 167 Machine Learning Engineering; 170 Generative AI Engineering; 178 Agent Systems Engineering; 180 Model Evaluation; 182 AI Safety; 183 AI Governance; 184 MLOps; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 030-032, and the evidence lexicon. Actual use cases, impact classes, authority, provider terms, safety thresholds, user notices, and operational context remain unresolved until supplied.

@@ -1,0 +1,209 @@
+SECTION 030 — Information Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how information is named, organized, related, described, discovered, presented, exchanged, governed, and retired so that people and systems can understand and use it within authorized context.
+
+Information Architecture concerns meaning and access across journeys, processes, products, services, applications, records, interfaces, and operating environments. It establishes structures, vocabularies, labels, navigation, metadata, provenance, permissions, representations, and lifecycle states without confusing information with raw data, a storage technology, a user interface, or a claim of user comprehension.
+
+REQUIRED OUTCOME
+
+- A bounded information landscape with audiences, purposes, contexts, domains, owners, authorities, sensitivity, jurisdictions, and lifecycle.
+- Canonical terms, definitions, identifiers, taxonomies, ontologies, relationships, metadata, labels, and translation rules.
+- Information flows and views connecting users, operators, processes, functions, systems, data stores, interfaces, records, controls, and evidence.
+- Discoverability, navigation, search, filtering, accessibility, localization, presentation, and explanation structures appropriate to each audience.
+- Explicit ownership for meaning, quality, provenance, access, retention, correction, publication, and retirement.
+- Traceability from requirements, domain rules, processes, functions, data, applications, policies, controls, tests, evidence, and user outcomes.
+
+WHY THIS MATTERS
+
+People and systems cannot make reliable decisions from information that is ambiguous, stale, inaccessible, misclassified, or impossible to find. Poor information structure creates duplicate records, hidden authority, unsafe defaults, privacy leakage, inconsistent terminology, and user journeys that cannot be completed.
+
+Information Architecture makes meaning and context deliberate. It separates a term from its definition, a record from its presentation, a source from a derivative, and discoverability from permission. For AI systems, it also determines what context may be retrieved, what provenance is shown, how uncertainty is communicated, and how generated information is corrected or withdrawn.
+
+APPLICABILITY
+
+- People or systems must find, interpret, compare, exchange, update, publish, retain, or retire information.
+- Multiple domains, products, services, organizations, languages, jurisdictions, roles, or applications use related information.
+- Information affects decisions, rights, safety, privacy, security, accessibility, compliance, service, operations, or trust.
+- Search, navigation, recommendations, generated answers, dashboards, records, content, APIs, events, or knowledge systems are designed or changed.
+- Terms, schemas, metadata, provenance, access, retention, or presentation vary by context.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work has no material effect on meaning, labels, context, discoverability, access, representation, provenance, retention, user journey, or lifecycle.
+- An approved information architecture covers the exact domain, audience, version, environment, and change, with impact analysis showing no material effect.
+- The artifact is exploratory and makes no claim that its vocabulary, navigation, accessibility, permissions, or user interpretation is approved or effective.
+
+The record must identify scope, baseline, owner, evidence date, audience, assumptions, and reopening condition. A simple screen, document, or database table is not automatically exempt when it changes meaning or access.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 016, 019, and 020 provide domain meaning, requirements, system boundaries, information obligations, verification, validation, and lifecycle context.
+- Sections 021-029 provide enterprise, solution, systems, domain, business, capability, process, functional, and operational context.
+- Data ownership, privacy, security, records, accessibility, localization, and legal constraints are known or marked unresolved.
+- Human authorities for definitions, classification, access, publication, correction, retention, and acceptance are attributable.
+
+REQUIRED INPUTS
+
+- Objectives, audiences, affected parties, user and operator journeys, domains, contexts, languages, jurisdictions, environments, and lifecycle stages.
+- Domain terms, business rules, requirements, process and functional models, data inventories, records schedules, policies, contracts, and standards.
+- Current content, taxonomies, catalogs, schemas, metadata, search behavior, navigation, interfaces, logs, support records, user research, and accessibility evidence.
+- Source systems, owners, provenance, sensitivity, permissions, quality, freshness, retention, archival, deletion, and evidence obligations.
+- AI retrieval, generation, ranking, summarization, citation, context, prompt, tool, provider, evaluation, and human-review requirements where applicable.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable human owner retains authority over domain meaning, definitions, classification, audience obligations, rights, publication, access, privacy, retention, deletion, correction, exceptions, and acceptance.
+
+- Confirm information scope, audiences, purposes, contexts, boundaries, terminology, and non-goals.
+- Assign owners for meaning, source, quality, provenance, access, presentation, records, and lifecycle.
+- Resolve conflicting definitions, translations, classifications, accessibility needs, privacy interests, and stakeholder interpretations.
+- Approve canonical terms, taxonomies, access rules, publication claims, retention, deletion, and material generated-information behavior.
+- Ensure users, operators, domain experts, affected parties, privacy, security, legal, records, and accessibility specialists participate as consequence requires.
+- Retain the ability to correct, withdraw, quarantine, restrict, supersede, or retire information.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory information, compare vocabularies, propose taxonomies, identify duplicates, map concepts, analyze journeys, draft metadata, test findability, and recommend context or presentation within explicit authority.
+
+AI must preserve source identity, provenance, version, audience, context, uncertainty, and permission; distinguish source information from inference and generation; expose conflicts and missing definitions; and escalate material semantic or rights questions.
+
+AI must not invent canonical meaning, cite inaccessible or nonexistent sources, disclose restricted information, alter records, publish consequential claims, or treat retrieval, ranking, fluency, or user engagement as proof of accuracy or comprehension.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: defines information boundaries, relationships, ownership, flows, context, and lifecycle.
+- Researcher: gathers domain, user, content, records, legal, accessibility, and source evidence.
+- Analyst: compares meanings, structures, usage, findability, quality, and impacts.
+- Observer: records actual language, navigation, search behavior, and information use.
+- Documentation Writer: maintains definitions, taxonomies, metadata, content structures, and explanations.
+- User Experience Reviewer: evaluates comprehension, findability, accessibility, language, burden, and correction.
+- Governance Reviewer: checks authority, classification, access, records, provenance, privacy, and publication.
+- Security Auditor: examines disclosure, trust boundaries, access, integrity, and abuse paths.
+- Verifier: checks information claims, provenance, version, permission, and reproducibility.
+- Critic: challenges ambiguity, hidden assumptions, duplicate meaning, false precision, and exclusion.
+- Memory Curator: preserves canonical terms, supersession, decisions, sources, and continuity.
+- Implementer: realizes approved information structures and controls without changing meaning unilaterally.
+- Tester: validates navigation, search, labels, access, context, error, correction, and lifecycle behavior.
+
+Role selection remains proportional to consequence. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish audiences, purposes, contexts, domains, scope, jurisdictions, languages, environments, and lifecycle.
+2. Inventory information sources, products, records, views, interfaces, repositories, generated outputs, and existing structures.
+3. Capture canonical terms, definitions, synonyms, identifiers, relationships, translations, classification, and unresolved ambiguity.
+4. Model information journeys and flows through people, processes, functions, applications, data stores, interfaces, and evidence.
+5. Define information types, metadata, provenance, ownership, sensitivity, freshness, quality, retention, access, and lifecycle states.
+6. Design taxonomies, hierarchies, facets, labels, navigation, search, filtering, recommendations, and contextual views.
+7. Define representations for user, operator, machine, audit, accessibility, localization, offline, and degraded contexts.
+8. Allocate responsibility for meaning, source, creation, transformation, publication, correction, approval, access, retention, and retirement.
+9. Assess duplicate, conflicting, stale, inaccessible, misleading, overexposed, orphaned, and untraceable information.
+10. Define generated, summarized, ranked, translated, or inferred information behavior, provenance, review, correction, and withdrawal.
+11. Validate structures with users, operators, domain experts, owners, maintainers, support, privacy, security, records, legal, and accessibility specialists.
+12. Test normal, ambiguous, denied, stale, missing, conflicting, multilingual, inaccessible, offline, generated, and recovery journeys.
+13. Baseline the information architecture and hand off definitions, structures, flows, controls, tests, evidence, and open gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show whether information is source content, transformed content, inference, recommendation, generation, or verified record.
+- Expose source, timestamp, scope, provenance, confidence limits, permissions, freshness, and unresolved conflict where material.
+- Require human review for canonical definitions, rights-affecting classification, restricted disclosure, consequential publication, and irreversible deletion.
+- Let users correct labels, context, identity, interpretation, and generated content without erasing source history or dissent.
+- Preserve accessible, non-AI, status, citation, correction, appeal, and recovery paths when retrieval or generation fails.
+- Never let a fluent answer, ranking, engagement signal, or citation count substitute for source and meaning verification.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent terms, concepts, identifiers, taxonomies, relationships, metadata, provenance, permissions, views, translations, records, and lifecycle states as versioned attributable artifacts.
+- Separate information meaning from storage schema, interface presentation, query syntax, model embedding, and generated wording.
+- Preserve lineage across source, transformation, derivative, publication, retrieval, generation, correction, supersession, archival, and deletion.
+- Make context, audience, jurisdiction, language, accessibility, sensitivity, freshness, and permission part of information selection and presentation.
+- Ensure search, navigation, ranking, caching, replication, offline views, and generated context cannot bypass access, retention, or provenance controls.
+- Trigger impact analysis when terms, structures, classifications, schemas, source systems, policies, permissions, languages, or lifecycle rules change.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show information baseline, audience, context, vocabulary version, source, freshness, permission, and lifecycle state.
+- Let owners inspect definitions, lineage, dependencies, access, uses, representations, conflicts, evidence, and open decisions.
+- Show available, restricted, prohibited, generated, inferred, stale, conflicting, inaccessible, and correction actions.
+- Provide authorized controls to approve, correct, classify, restrict, publish, withdraw, supersede, archive, and retire.
+- Explain why information was shown, omitted, ranked, transformed, translated, generated, or blocked where action or trust depends on it.
+- Export the information structure, definitions, lineage, decisions, evidence, dissent, and continuity record.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Information Architecture charter, audience and context map, and scope record.
+- Canonical vocabulary, taxonomy, ontology references, identifiers, metadata, labels, translation, and classification rules.
+- Information-flow, journey, navigation, search, representation, accessibility, and content-structure models.
+- Ownership, provenance, lineage, quality, freshness, access, privacy, records, retention, and lifecycle registers.
+- Generated-information, retrieval, ranking, citation, correction, appeal, and withdrawal model where applicable.
+- Traceability to requirements, domains, processes, functions, data, applications, controls, tests, evidence, and acceptance.
+- Ambiguity, conflict, assumption, decision, dissent, exception, and reopening register.
+
+EVIDENCE REQUIREMENTS
+
+- Each information claim identifies source, owner, version, scope, audience, context, date, method, permission, and limitation.
+- A label, taxonomy, search result, citation, diagram, or user statement proves only its bounded claim and not universal comprehension or correctness.
+- Definitions and classifications require authoritative owner, rationale, effective date, applicability, review condition, and supersession path.
+- Findability, comprehension, accessibility, and usability evidence identifies population, context, method, coverage, tasks, limitations, and result.
+- Generated or transformed information records source material, transformation, model or tool, configuration, reviewer, output, and limitations proportionate to consequence.
+- Missing, stale, conflicting, inaccessible, restricted, or withdrawn evidence must remain visible and constrain status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace representative outcomes from domain and requirement through term, information type, source, transformation, view, user action, evidence, and lifecycle.
+- Search for an authorized item, an ambiguous term, a synonym, a translation, a restricted item, a stale item, and a superseded item and verify expected behavior.
+- Introduce duplicate definitions, conflicting sources, missing provenance, incorrect labels, broken links, unauthorized access, and stale cache and verify detection or safe handling.
+- Verify accessibility, localization, reading order, keyboard or alternative input, plain-language, and nonvisual information paths as applicable.
+- Disable a source, index, model, provider, network, citation service, or permission service and verify safe degradation and truthful status.
+- Correct, withdraw, supersede, archive, and delete information and verify lineage, permissions, caches, records, and user notification behavior.
+- Independently reproduce representative information claims from the baseline and evidence package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating discoverability, fluency, search rank, citation, or visual polish as proof of truth or comprehension.
+- Mixing source, interpretation, inference, recommendation, and generation without labels or provenance.
+- Creating a universal taxonomy that ignores domain, audience, language, jurisdiction, accessibility, or lifecycle context.
+- Letting navigation, cache, index, analytics, or generated context bypass permission, retention, or deletion controls.
+- Hiding ambiguity, contradictory sources, unavailable information, or affected-party language to create false simplicity.
+- Making correction, appeal, withdrawal, or non-AI access impossible.
+
+RECOVERY AND RECONSIDERATION
+
+- On semantic conflict, provenance loss, permission uncertainty, stale source, harmful disclosure, or inaccessible path, restrict affected use and preserve the prior record.
+- Name the blocker, safe uses that continue, owner, authority, evidence, review date, and affected audiences.
+- Use approved quarantine, source substitution, prior version, manual review, restricted presentation, rollback, withdrawal, or correction paths.
+- Reopen the architecture when domain meaning, audience, law, policy, source, classification, language, model, or lifecycle changes invalidate assumptions.
+
+COMPLETION CRITERIA
+
+- Scope, audiences, contexts, definitions, structures, sources, lineage, ownership, permissions, accessibility, lifecycle, and evidence are explicit.
+- Ambiguous, conflicting, generated, stale, restricted, denied, and recovery conditions are addressed or justified.
+- Users and owners can inspect, correct, restrict, withdraw, and recover information within authority.
+- Verification and acceptance state exact baselines, evidence, limits, open gaps, and validity.
+- The section remains CONTENT-COMPLETE until source reconciliation, hostile review, and owner acceptance are separately completed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve vocabulary, taxonomy, identifiers, contexts, audiences, lineage, permissions, sources, decisions, dissent, versions, and open gaps.
+- Hand off information contracts to Data, Application, API, Content, Knowledge, Search, AI, Privacy, Security, Records, Accessibility, Testing, and Operations work.
+- Record changes requiring reopening Domain, Process, Functional, Data, Application, Privacy, Governance, Content, Knowledge, or AI sections.
+- State next safe action, blocked actions, authority, evidence needed, and continuation point.
+
+RELATED CODEX SECTIONS
+
+- 016 Domain Analysis; 019 Requirements Engineering; 020 Systems Engineering.
+- 021-029 Enterprise through Operational Architecture.
+- 031-060 Data, Application, Software, Platform, Infrastructure, Cloud, Edge, Distributed, Network, Communications, Integration, API, Event-Driven, Runtime, Security, Identity, Privacy, Governance, Compliance, Safety, Reliability, Resilience, Accessibility, Content, Knowledge, AI, Machine Learning, Robotics, Embedded Systems, and Hardware Architecture.
+- 151-188 Data and AI engineering through Human-in-the-Loop Operations.
+- 225 Records Management; 247 Accessibility Testing; 250 Localization Testing; 391-395 Data Retention through Data Deletion.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- This draft uses the Canonical Section Contract, shared governance files, Sections 001-029, Owner Cockpit Requirements, Status and Evidence Lexicon, and the Remaining-Section Integration Roadmap.
+- No universal supplied vocabulary, taxonomy, information classification, records schedule, accessibility standard, retention rule, or sector-specific disclosure regime applies to every future system.
+- Actual domain authorities, source inventories, user populations, translations, legal obligations, permissions, and deletion requirements remain unresolved until supplied and verified.

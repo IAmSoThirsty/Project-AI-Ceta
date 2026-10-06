@@ -1,0 +1,361 @@
+SECTION 016 — Domain Analysis
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Establish a precise, shared, source-grounded model of the field in which a system or change must operate: its language, actors, responsibilities, authority, concepts, entities, values, events, states, rules, invariants, decisions, processes, exceptions, information, boundaries, dependencies, time, jurisdiction, and lifecycle.
+
+Domain analysis prevents software structure, database schemas, user-interface labels, model output, and existing organizational habit from being mistaken for the domain itself. It creates an explicit bridge between real-world meaning and later requirements, architecture, design, data, policy, AI, testing, operations, and retirement.
+
+REQUIRED OUTCOME
+
+- A bounded domain statement identifying purpose, scope, excluded domains, context, decision owner, authoritative experts, and intended downstream use.
+- A canonical terminology and definition set with synonyms, overloaded terms, prohibited ambiguity, source, owner, version, and jurisdiction or context.
+- An actor, responsibility, accountability, capability, permission, authority, and affected-party model that distinguishes human, organizational, system, agent, and external actors.
+- A concept model covering entities, value objects, classifications, relationships, identifiers, ownership, and lifecycle.
+- A behavior model covering commands or intents, events, states, transitions, decisions, business or domain rules, invariants, exceptions, escalation, recovery, and termination.
+- A domain-boundary and context map identifying internal subdomains, bounded contexts, integrations, external authorities, shared language, translations, and anti-corruption needs.
+- An information model covering source of truth, provenance, quality, timing, retention, privacy, security, jurisdiction, and evidence meaning.
+- Validated examples, counterexamples, edge cases, disputed interpretations, unresolved questions, and change triggers.
+- A handoff package that allows Requirements Engineering and Domain Architecture to proceed without inventing meaning or authority.
+
+WHY THIS MATTERS
+
+Many implementation defects are domain defects expressed in code. A term means one thing to operations and another to finance; a state transition omits a legal exception; a database record is treated as the real-world entity; an AI model recognizes a pattern but is granted authority to decide; a workflow encodes current habit as permanent policy.
+
+Domain analysis makes these distinctions visible before they become distributed across APIs, prompts, schemas, interfaces, policies, and tests. For human-AI systems, it is a constitutional boundary: capability, identity, permission, authority, recommendation, decision, action, evidence, and accountability must not collapse into one fluent interaction.
+
+APPLICABILITY
+
+- The system operates in a field with specialized terminology, rules, states, decisions, exceptions, obligations, or external authorities.
+- Stakeholders use conflicting or overloaded terms, or current systems encode inconsistent meanings.
+- Requirements, architecture, data models, APIs, events, workflows, policy, AI behavior, or tests require a shared domain model.
+- The work crosses organizational, jurisdictional, product, service, platform, physical, scientific, legal, financial, health, safety, or operational boundaries.
+- A migration, integration, modernization, automation, or AI system may preserve or alter domain behavior.
+- Errors in meaning, authority, state, evidence, or exception handling could create material harm.
+
+NON-APPLICABILITY CONDITIONS
+
+- A trivial, isolated implementation uses stable, authoritative, current domain definitions and changes no meaning, rule, state, authority, or interface.
+- The question is purely about a user's lived experience rather than domain structure; User Research controls that inquiry, though findings may inform the domain model.
+- The work is limited to market conditions rather than the operational field itself.
+- No authoritative sources or domain experts are available and the model would be speculative; the result must remain a research hypothesis, not a domain authority.
+- The requested model would expose protected knowledge, personal data, trade secrets, security details, or regulated information without authority.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Section 001 Research and relevant Mission Strategy, Business Analysis, Stakeholder Management, and User Research findings.
+- An authorized domain question, scope, decision owner, model owner, and intended downstream use.
+- Access to authoritative laws, policies, standards, contracts, procedures, records, systems, experts, users, operators, incidents, and current-state evidence.
+- A source hierarchy identifying who or what controls each type of domain meaning, rule, state, and decision.
+- Privacy, security, confidentiality, licensing, legal, records, and retention controls for domain information.
+- A method to version terminology, models, examples, disputes, approvals, and invalidation triggers.
+
+REQUIRED INPUTS
+
+- Mission, business, product, program, project, policy, operational, user, and stakeholder context.
+- Authoritative regulations, standards, contracts, policy, procedures, manuals, forms, records, datasets, schemas, APIs, events, workflows, and reports.
+- Domain-expert, user, owner, operator, auditor, regulator, support, incident, and exception evidence.
+- Current systems, data models, code, interfaces, automation, model behavior, integrations, and known mismatches with reality.
+- Known actors, objects, identifiers, classifications, transactions, events, states, decisions, approvals, rules, invariants, exceptions, and lifecycle stages.
+- Jurisdictions, effective dates, time zones, calendars, units, currencies, languages, local practices, and temporal conditions.
+- Known disputes, historical changes, legacy terminology, migration constraints, and evidence that would change the model.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Authoritative humans and institutions define legitimate domain meaning, policy, values, exceptions, and decision rights. A domain model is an accountable interpretation, not an autonomous source of truth.
+
+- Identify authoritative domain experts, owners, regulators, policy sources, data stewards, and decision authorities.
+- Confirm scope, context boundaries, canonical terminology, invariants, exceptions, and disputed interpretations.
+- Resolve value, policy, jurisdiction, risk, and accountability questions that evidence alone cannot settle.
+- Correct models that confuse documented procedure, current software behavior, informal workaround, and legitimate domain rule.
+- Authorize access to protected domain knowledge and decide what may be retained, shared, automated, or encoded.
+- Approve material changes to domain definitions, rules, state models, authority, and external contracts.
+- Decide when unresolved domain uncertainty blocks requirements or architecture and when a bounded experiment may proceed.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+The AI may extract, compare, structure, model, test, and explain domain evidence. It may not invent domain truth, policy, authority, exceptions, consensus, ontology, or legal meaning.
+
+- Preserve source identity, date, version, jurisdiction, owner, and applicability for every material domain statement.
+- Separate observation, stored fact, definition, rule, inference, prediction, instruction, disputed claim, simulation, and unknown.
+- Identify synonyms, homonyms, overloaded terms, deprecated terms, translation issues, and inconsistent definitions across sources.
+- Distinguish real-world concept from software class, table, field, API, event, prompt, or model representation.
+- Distinguish capability from permission, responsibility, accountability, and authority for human and AI actors.
+- Expose missing states, invalid transitions, exceptional cases, temporal conditions, jurisdiction changes, and lifecycle obligations.
+- Do not treat current system behavior, common practice, or a dominant stakeholder's description as authoritative without validation.
+- Generate candidate models and examples as proposals; require source-grounded review before downstream use.
+- Preserve material disagreement and model alternatives instead of forcing one elegant but unsupported ontology.
+- Avoid over-modeling concepts that do not affect decisions, behavior, evidence, interfaces, or lifecycle.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Primary roles:
+
+- Analyst — identifies relationships, differences, tradeoffs, causes, consequences, rules, uncertainty, and decision-relevant domain findings.
+- Researcher — establishes authoritative sources, terminology, conflicting evidence, jurisdictions, time sensitivity, and evidence gaps.
+- Architect — defines domain boundaries, responsibilities, interfaces, authority flows, trust boundaries, invariants, failure modes, and implementation implications without treating diagrams as implementation.
+
+Common supporting roles:
+
+- Observer — records actual domain events, states, transitions, decisions, measurements, exceptions, and gaps before interpretation.
+- Memory Curator — maintains canonical terminology, model versions, provenance, decisions, disputes, expiry, and retrievable continuity.
+- Governance Reviewer — checks that domain rules, authority, delegation, evidence, exceptions, and policy sources are legitimate and enforceable.
+- User Experience Reviewer — tests whether domain language and state are understandable and usable in complete human journeys.
+- Documentation Writer — produces durable glossaries, models, examples, decision tables, interface meaning, and change records.
+- Teacher — explains the domain at appropriate levels while identifying where simplification stops being reliable.
+
+Challenge and assurance roles where consequence warrants:
+
+- Critic — attacks framing, hidden assumptions, omitted alternatives, and unsupported confidence.
+- Verifier — checks artifact identity, evidence integrity, acceptance boundaries, and the exact status of claims.
+- Governance Reviewer — checks objective fidelity, authority, delegation, policy, evidence, and human decision boundaries.
+- Security Auditor — examines protected assets, identities, trust boundaries, abuse, information exposure, and rule-enforcement risks.
+- Tester — validates examples, state transitions, rules, invariants, boundaries, exception paths, and model-to-implementation traceability.
+- Red Team — attacks ambiguous terminology, authority confusion, impossible states, rule bypass, adversarial inputs, and harmful edge cases.
+- Decision Arbiter Advisory — structures disputed domain decisions under explicit human-authorized criteria.
+
+Role selection must use the smallest sufficient set, preserve chamber independence where review is required, and leave every source-defined role contract unchanged.
+
+REQUIRED ACTIVITIES
+
+1. Domain question and scope
+State why the domain is being analyzed, what decisions it must support, included and excluded areas, horizon, jurisdictions, model owner, and required confidence.
+
+2. Source and authority map
+Identify authoritative laws, policy, standards, contracts, experts, systems, records, data owners, and evidence. Record where authority differs by topic, context, time, or jurisdiction.
+
+3. Context and subdomain decomposition
+Identify core, supporting, and generic subdomains or equivalent functional areas. Define bounded contexts where terms, rules, models, and ownership are internally coherent.
+
+4. Terminology discipline
+Create a canonical glossary with definition, synonym, forbidden ambiguity, source, owner, example, counterexample, jurisdiction, effective date, and change process.
+
+5. Actor and authority model
+Map humans, organizations, roles, systems, devices, agents, services, and external authorities. Separate identity, capability, permission, delegation, responsibility, accountability, approval, decision, and execution.
+
+6. Concept and relationship model
+Identify concepts, entities with continuity, value objects, classifications, identifiers, ownership, composition, aggregation, relationships, cardinality, and lifecycle without copying a database schema by default.
+
+7. Intent, command, event, and outcome model
+Distinguish requested intent, authorized command, executed action, observed event, resulting state, evidence, and claimed outcome.
+
+8. State and lifecycle model
+Define valid states, entry and exit conditions, transitions, guards, actors, evidence, timeouts, cancellation, expiry, revocation, recovery, archival, deletion, and retirement.
+
+9. Rule and invariant analysis
+Record each domain or business rule with source, owner, condition, action, priority, exception, jurisdiction, effective date, enforcement boundary, evidence, and failure consequence. Identify invariants that must never be violated.
+
+10. Decision analysis
+Model decisions, inputs, criteria, authority, explainability, conflict, appeal, uncertainty, time, and evidence. Keep recommendation, approval, decision, execution, and verification distinct.
+
+11. Process and journey alignment
+Map domain processes and handoffs to user and owner journeys, including normal, alternate, exception, denial, failure, recovery, and termination paths.
+
+12. Information and evidence analysis
+Identify information objects, source of truth, provenance, quality, sensitivity, access, retention, timing, units, uncertainty, and what evidence establishes each domain state or claim.
+
+13. Boundary and integration analysis
+Define what crosses each context boundary, semantic translation, contract, version, authority, validation, idempotency, failure, compensation, and anti-corruption requirement.
+
+14. Temporal and jurisdictional analysis
+Model effective dates, expiry, calendars, time zones, ordering, late events, retrospective change, jurisdiction conflicts, and version coexistence.
+
+15. Human-AI domain analysis
+Where AI participates, define model or agent identity, capability, granted authority, allowed decisions, data, evidence, uncertainty, review, correction, appeal, fallback, revocation, and accountability.
+
+16. Examples, counterexamples, and edge cases
+Create concrete scenarios that prove or challenge definitions, rules, state transitions, boundaries, and exceptions. Include ambiguous and adversarial cases.
+
+17. Validation and model governance
+Review with authoritative experts and representative users; record agreement, dissent, unresolved questions, model version, approvals, and reopening triggers.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- The AI must label candidate definitions and models as proposals until validated by authoritative sources and humans.
+- Humans must be able to compare source language, current practice, model representation, and implementation behavior side by side.
+- Domain terminology used in conversation, UI, APIs, events, policy, documentation, and tests should resolve to the same versioned definition or an explicit translation.
+- When a term is ambiguous, the system must ask for context or present alternatives rather than silently choose the most common model meaning.
+- Human and AI actors must have visible identity, role, capability, permission, authority, assignment, constraints, and current state where consequence warrants.
+- A model-generated recommendation must not appear as a domain decision or executed state without the appropriate authority and evidence.
+- Users must be able to correct misunderstood domain intent before consequential action and inspect the rule, evidence, and authority behind a decision where appropriate.
+- Disputed domain meaning must remain visible and route to the authorized owner instead of being averaged into false consensus.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+The work must expose architectural obligations without treating a strategy, analysis, or plan as implemented architecture.
+
+- Separate domain models from storage, transport, UI, vendor, model-provider, and framework representations so implementation can change without silently changing meaning.
+- Use bounded contexts or equivalent explicit semantic boundaries with named owners, contracts, translations, and versioning.
+- Maintain stable identifiers and provenance for domain concepts, actors, commands, events, states, rules, decisions, evidence, and obligations.
+- Enforce critical invariants and authority at governed runtime boundaries, not only in prompts, UI, documentation, or client code.
+- Represent domain state machines with valid transitions, guards, idempotency, concurrency, compensation, timeout, revocation, and recovery where applicable.
+- Keep source-of-truth state authoritative and identify freshness, lineage, quality, jurisdiction, and environment for read models.
+- Design APIs and events as contracts carrying semantic version, actor, authority, scope, correlation, causation, time, result, evidence, and failure meaning appropriate to the domain.
+- Preserve privacy, security, safety, accessibility, audit, retention, deletion, and lifecycle obligations as domain concerns rather than infrastructure afterthoughts.
+- Where AI is involved, separate model capability and output from policy authorization, business decision, execution, and evidence; support human review, fallback, correction, and revocation.
+- Map domain definitions and rules to requirements, architecture decisions, code, schemas, policy, fixtures, tests, documentation, observability, migration, and retirement so disagreement becomes detectable.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner-facing operating surface or equivalent durable record should expose:
+
+- Domain scope, contexts, owners, authoritative sources, model version, jurisdictions, and review state.
+- Canonical terminology, synonyms, ambiguity, definitions, examples, counterexamples, and deprecated language.
+- Actors, roles, capabilities, permissions, authority, responsibilities, accountability, delegation, and external parties.
+- Concepts, relationships, identifiers, states, transitions, commands, events, rules, invariants, decisions, exceptions, and evidence.
+- Current source-of-truth state, freshness, quality, provenance, conflicts, uncertainty, and unavailable sources.
+- Boundary contracts, translations, dependencies, semantic-version changes, and downstream invalidation.
+- AI actors and models with identity, provenance, capability, granted authority, current assignment, uncertainty, fallback, and revocation.
+- Open questions, disputes, assumptions, failed examples, human decisions, approvals, and reopening triggers.
+- A path to inspect why a domain decision or state exists, correct misunderstood intent, and safely halt or appeal consequential execution where applicable.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Domain-analysis charter, question, scope, context, authority, and source map.
+- Canonical glossary, terminology decision log, synonym and ambiguity map, and deprecation record.
+- Subdomain, bounded-context, responsibility, ownership, and authority map.
+- Actor, role, capability, permission, delegation, accountability, and affected-party model.
+- Concept, entity, value-object, classification, relationship, identifier, and lifecycle model.
+- Intent, command, action, event, outcome, state, transition, decision, rule, invariant, exception, escalation, and recovery models.
+- Process, user-journey, information, source-of-truth, evidence, privacy, security, safety, accessibility, and retention map.
+- Boundary, integration, translation, contract, version, and anti-corruption specification.
+- Human-AI domain interaction and authority model where applicable.
+- Examples, counterexamples, edge cases, disputes, assumptions, validation, approval, and change-governance records.
+- Requirements-ready and Domain-Architecture-ready traceability and continuity package.
+
+EVIDENCE REQUIREMENTS
+
+- Authoritative source identity, owner, version, date, jurisdiction, scope, integrity, and applicability for each material definition, rule, state, and decision.
+- Direct observation of current domain work, events, states, exceptions, decisions, artifacts, and system behavior where available.
+- Domain-expert, user, operator, owner, regulator, auditor, and affected-party validation with method and limitations.
+- Concrete examples and counterexamples demonstrating concepts, boundaries, rules, states, transitions, and exceptions.
+- Evidence distinguishing legitimate domain rule from current implementation behavior, convention, workaround, or preference.
+- Traceable human approval for canonical terminology, critical invariants, authority, policy interpretation, exceptions, and disputed resolutions.
+- Cross-artifact consistency evidence among glossary, models, requirements, schemas, APIs, events, policy, fixtures, tests, UI, documentation, and runtime behavior.
+- Unresolved conflict, missing source, model limitation, jurisdictional difference, time sensitivity, and evidence that would change the model.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Ask independent domain experts and representative users to interpret canonical terms and verify consistent or explicitly context-specific meaning.
+- Present examples and counterexamples for every critical concept, rule, invariant, state, and boundary.
+- Attempt invalid state transitions, unauthorized decisions, missing-evidence transitions, expired authority, revoked delegation, and impossible combinations; each must be rejected or classified correctly.
+- Change jurisdiction, effective date, time zone, role, product tier, context, or source version and verify applicable rules and meanings update without contaminating other contexts.
+- Modify a database schema or API representation and confirm the domain meaning does not silently change.
+- Compare UI labels, documentation, API fields, event names, policy, tests, and runtime state to the canonical terminology and model.
+- Give a technically capable AI actor no permission and verify it cannot perform or claim an authorized domain action.
+- Inject ambiguous natural-language intent and confirm the system clarifies or narrows before consequential execution.
+- Change an upstream definition, invariant, or rule and verify dependent requirements, architecture, code, tests, and decisions are invalidated or reviewed.
+- Restart a downstream role from the domain handoff and verify it can distinguish established, proposed, disputed, and unknown domain elements.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating the existing database, API, UI, codebase, vendor product, or model vocabulary as the domain itself.
+- One universal model that erases bounded contexts, jurisdictions, time, organizations, or legitimate differences in meaning.
+- Anemic domain model containing nouns and fields but no behavior, rules, invariants, decisions, exceptions, or lifecycle.
+- Invented terminology, ontology, business rules, exceptions, consensus, or authority generated by AI without source validation.
+- Conflating identity, role, capability, permission, responsibility, accountability, approval, authority, and execution.
+- Conflating request, recommendation, decision, command, action, event, state, outcome, and evidence.
+- Happy-path process and state models that omit denial, expiry, revocation, cancellation, failure, compensation, recovery, archival, deletion, and retirement.
+- Rules documented but not enforced on every execution path.
+- Semantic drift across UI, API, events, policy, prompts, documentation, tests, and runtime state.
+- False precision or excessive modeling unrelated to actual decisions, behavior, interfaces, risk, or evidence.
+- Domain model treated as timeless despite legal, policy, organizational, market, scientific, or operational change.
+- Dissenting domain interpretations removed to create a cleaner diagram.
+
+RECOVERY AND RECONSIDERATION
+
+Domain-analysis recovery identifies the first invalid meaning, rule, boundary, authority, or source and prevents that defect from propagating further through the system.
+
+- Pause dependent requirement, architecture, policy, migration, automation, or release decisions affected by the invalid domain element.
+- Preserve the disputed model, source versions, examples, implementation behavior, decisions, and evidence rather than rewriting history.
+- Identify whether the defect is terminological, factual, jurisdictional, temporal, methodological, implementation-specific, authority-related, or value-based.
+- Reconsult authoritative sources, domain experts, representative users, owners, regulators, or governance reviewers as appropriate.
+- Revise, split, translate, deprecate, supersede, or restore the affected definition, context, rule, state, or boundary through recorded approval.
+- Reclassify downstream requirements, architecture, data, APIs, events, code, policy, tests, documentation, analytics, and decisions that depended on the invalid model.
+- Migrate data and behavior safely where semantic change affects persisted state, compatibility, users, legal obligations, or audit history.
+- Update model versions, traceability, dissent, decisions, communication, and continuity before resuming consequential work.
+
+COMPLETION CRITERIA
+
+- The domain question, scope, contexts, owners, authoritative sources, jurisdictions, and downstream use are explicit.
+- Canonical terminology and disputed or context-specific meanings are versioned, sourced, exemplified, and governed.
+- Actors, identities, capabilities, permissions, responsibilities, accountability, authority, delegation, and affected parties are distinct.
+- Concepts, relationships, identifiers, commands, events, states, transitions, rules, invariants, decisions, exceptions, evidence, and lifecycle are modeled to the depth required by consequence.
+- Normal, alternate, denial, failure, expiry, revocation, recovery, archival, deletion, and retirement paths are addressed where applicable.
+- Bounded contexts, integrations, translations, external authorities, source-of-truth state, and semantic versions are explicit.
+- Human-AI roles and authority boundaries are modeled without converting capability or recommendation into legitimacy.
+- Models are validated through authoritative sources, experts, users, examples, counterexamples, and consistency checks; unresolved disagreement remains visible.
+- Traceability is sufficient for Requirements Engineering and Domain Architecture without forcing them to invent missing domain meaning.
+- The continuity package states what is established, proposed, disputed, unknown, expired, and safe to use.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Provide the exact domain scope, contexts, glossary, source map, model version, owners, jurisdictions, and approval state.
+- Transfer actor, authority, concept, relationship, behavior, rule, state, decision, exception, information, evidence, boundary, integration, and lifecycle models.
+- Carry forward privacy, security, safety, accessibility, legal, regulatory, records, retention, deletion, and protected-knowledge constraints.
+- Map each domain rule, invariant, decision, state, interface, and unresolved question to Requirements Engineering, Domain Architecture, Business Architecture, Data Modeling, API Architecture, Event-Driven Architecture, policy, AI, testing, operations, or lifecycle work as applicable.
+- Preserve examples, counterexamples, rejected alternatives, legacy terms, dissent, assumptions, unknowns, invalidation dependencies, and evidence needed to resolve them.
+- Identify which elements are authoritative, accepted working models, hypotheses, disputed interpretations, implementation observations, or unknowns.
+- State the next safe action, required human decisions, reopening triggers, and whether downstream work may proceed within the declared limits.
+
+RELATED CODEX SECTIONS
+
+001 Research
+004 Mission Strategy
+005 Business Strategy
+006 Product Strategy
+010 Product Management
+011 Business Analysis
+012 Market Research
+014 Stakeholder Management
+015 User Research
+017 Feasibility Analysis
+018 Risk Management
+019 Requirements Engineering
+020 Systems Engineering
+021 Enterprise Architecture
+022 Solution Architecture
+023 Systems Architecture
+024 Domain Architecture
+025 Business Architecture
+026 Capability Architecture
+027 Process Architecture
+028 Functional Architecture
+029 Operational Architecture
+030 Information Architecture
+031 Data Architecture
+041 Integration Architecture
+042 API Architecture
+043 Event-Driven Architecture
+045 Security Architecture
+046 Identity Architecture
+047 Privacy Architecture
+048 Governance Architecture
+049 Compliance Architecture
+050 Safety Architecture
+054 Content Architecture
+055 Knowledge Architecture
+056 AI Architecture
+154 Data Modeling
+175 Knowledge Graph Engineering
+176 Ontology Engineering
+177 Semantic Systems Engineering
+178 Agent Systems Engineering
+183 AI Governance
+202 Authorization Engineering
+221 Policy
+225 Records Management
+256 Verification
+257 Validation
+387 Compatibility Management
+389 Deprecation Management
+405 Lifecycle Governance
+406 System Retirement
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+This draft applies the supplied requirements for exact objectives, source identity, current-state inspection, terminology consistency, unknown and assumption typing, conflicting evidence, human authority, capability-versus-permission separation, architectural responsibilities, interfaces, authority flows, trust boundaries, invariants, failure and recovery, evidence, hostile review, and continuity. The Architect, Researcher, Analyst, Observer, Memory Curator, Governance Reviewer, User Experience Reviewer, Tester, Verifier, Security Auditor, Red Team, Teacher, Documentation Writer, and Decision Arbiter Advisory contracts provide the bounded role behaviors used throughout this section. The Owner's Cockpit supplies owner-recognizable language, complete journeys, grounded actions, agent identity and role, governed boundaries, authoritative state and freshness, and visible recovery. V4 supplies epistemic typing, claim graphs, obligation lattices, conservation of authority, scope, evidence, uncertainty and dissent, proof-carrying work, and artifact-consistency blocking.
+
+Unresolved source gap: the supplied corpus does not contain a dedicated universal domain-analysis or domain-driven-design standard, formal ontology method, semantic-versioning policy for domain meaning, or industry-specific domain model. The entity, value-object, bounded-context, event, state, invariant, decision, and anti-corruption structures in this draft are general domain-analysis scaffolding and must be validated against actual source authority rather than treated as source-derived truth. This section must later be reconciled with Domain Architecture, Business Architecture, Data Modeling, Knowledge Graph Engineering, Ontology Engineering, Semantic Systems Engineering, Requirements Engineering, Policy, and the relevant industry, legal, scientific, safety, and lifecycle sections.

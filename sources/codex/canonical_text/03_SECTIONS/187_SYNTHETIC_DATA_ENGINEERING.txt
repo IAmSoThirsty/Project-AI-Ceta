@@ -1,0 +1,103 @@
+SECTION 187 — Synthetic Data Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed creation, validation, use, disclosure, retention, and retirement of data generated to resemble or simulate real data for development, testing, analysis, training, evaluation, or operations.
+
+REQUIRED OUTCOME
+
+- A synthetic-data purpose, generator, source basis, population, privacy, quality, utility, and limitation record.
+- Evidence that synthetic data is labeled, fit for its bounded use, not mistaken for observed fact, and not a hidden disclosure channel.
+- Controlled generation, access, correction, deletion, and retirement.
+
+WHY THIS MATTERS
+
+Synthetic data can reduce exposure but can also memorize, reproduce, amplify bias, create unrealistic correlations, or be treated as real evidence. Its value and limits must be measured for the intended use.
+
+APPLICABILITY
+
+Applies to generated records, simulations, augmented samples, masked or perturbed data, test fixtures, synthetic images, text, audio, features, labels, and training or evaluation data. Depth increases with sensitive source data or consequential models.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to hand-written non-sensitive test constants with no claim of realism, privacy, or population representation. Record scope, owner, source status, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires source-data authority, purpose, privacy and security review, generator identity, quality and utility criteria, downstream use, and retention. Depends on Sections 031, 156, 164, 167, 179, 180, and 183.
+
+REQUIRED INPUTS
+
+Purpose; source data; lawful basis; generator; configuration; population; sensitive attributes; privacy target; utility metrics; bias plan; disclosure; labeling; downstream model or test; and deletion requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve source use, privacy target, generator, disclosure, realism claim, downstream use, and retention. Data owners and privacy authorities decide whether synthetic output remains sensitive or linkable.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate, profile, and test synthetic data within authorization. It must preserve synthetic status, provenance, and uncertainty and must not claim privacy, representativeness, or independence without evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Data Engineer, Data Scientist, Researcher, Analyst, Privacy Reviewer, Security Auditor, Data Governance Reviewer, Tester, Verifier, Critic, Red Team, Documentation Writer, Memory Curator, and Governance Reviewer. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define purpose, population, source, sensitivity, use, and prohibited inference.
+2. Assess source rights, memorization, linkage, re-identification, and disclosure risk.
+3. Select generator and record configuration, seed, transformations, and output label.
+4. Test utility, fidelity, coverage, bias, rare cases, privacy, and leakage.
+5. Validate downstream use and prevent synthetic data from masquerading as observed data.
+6. Control access, retention, correction, deletion, and retirement.
+7. Record failures, limitations, decisions, and reopening conditions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show synthetic status, source basis, generator, configuration, privacy result, utility, intended use, and limitations. Humans approve disclosure and downstream use. Users must distinguish generated records from observed records and retain correction and deletion paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version sources, generators, seeds, configurations, outputs, labels, privacy tests, utility tests, and downstream artifacts. Enforce synthetic labeling and provenance in storage, APIs, exports, prompts, logs, and model pipelines. Preserve deletion and lineage.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show dataset identity, synthetic status, source, generator, privacy, utility, bias, users, downstream uses, retention, and evidence. Allow authorized restrict, quarantine, relabel, regenerate, withdraw, delete, and retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Synthetic-data charter; source and rights record; generator and configuration; privacy and utility report; bias and rare-case analysis; labeling and access contract; downstream impact record; decision; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify source, generator, version, seed, population, configuration, privacy method, utility metric, bias result, reviewer, use, and limitation. Similarity or privacy scores do not prove absence of disclosure or real-world validity.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test memorization, nearest-neighbor disclosure, linkage, rare records, attribute inference, bias, distribution shift, schema, labels, access, deletion, downstream model behavior, and independent regeneration. Verify synthetic status survives all interfaces.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Synthetic labeled as real; source leakage; privacy score overreach; rare-case omission; bias amplification; generator drift; hidden synthetic data in training or evaluation; and deletion that leaves derived copies.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine synthetic data on disclosure, provenance, labeling, quality, or downstream failure. Preserve evidence, restrict access, notify owners, delete or regenerate under authority, review affected models and decisions, and reopen.
+
+COMPLETION CRITERIA
+
+Purpose, source, generator, privacy, utility, bias, label, downstream use, controls, evidence, recovery, and authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve dataset IDs, sources, generators, seeds, configs, tests, labels, decisions, downstream links, incidents, dissent, and gaps. Hand off to Data Governance, Data Quality, ML, Training, Evaluation, Privacy, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 155 Data Governance; 156 Data Quality Engineering; 164 Data Science; 167 Machine Learning Engineering; 179 Model Training; 180 Model Evaluation; 254 Data Testing; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Data Architecture, AI, and evidence sections. Actual source rights, privacy thresholds, utility criteria, downstream use, rare populations, and retention authority remain unresolved.

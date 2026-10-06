@@ -1,0 +1,95 @@
+SECTION 329 — Restore Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Restore data, configuration, artifacts, services, or infrastructure to a known, authorized, coherent, and usable state after loss, corruption, migration, or recovery action.
+
+REQUIRED OUTCOME
+
+A restore model with source, point in time, target, authority, integrity, dependency, sequencing, validation, reconciliation, rollback, communication, and evidence.
+
+WHY THIS MATTERS
+
+Restore can overwrite good state, reintroduce vulnerabilities, violate retention, or produce a technically available but semantically inconsistent system. A successful copy is not a restored outcome.
+
+APPLICABILITY
+
+Apply when backup, archive, snapshot, replica, prior artifact, or known-good state is used to return a system, data, or service to operation.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no state, data, service, or recovery path requires restoration and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use backup, storage, database, data, identity, security, continuity, DR, failover, change, validation, and operations baselines.
+
+REQUIRED INPUTS
+
+Source copy, point in time, target, authority, keys, dependencies, sequence, integrity, validation, reconciliation, rollback, and communication.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Recovery owners approve source, target, data loss, overwrite, access, sequence, communication, and return to service. Humans judge semantic and user impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized restore metadata, compare state, draft runbooks, and analyze results. It must not restore, overwrite, delete, expose data, or declare success without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Restore Engineer, Data Engineer, Database Administrator, Storage Administrator, DR Planner, Security Auditor, Tester, Verifier, and Incident Commander.
+
+REQUIRED ACTIVITIES
+
+Define recovery objective; select and verify source; prepare target; protect current state; restore in order; validate integrity and semantics; reconcile; communicate; monitor; roll back or retry; and record.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, point in time, target, authority, data, keys, sequence, evidence, impact, and limitation. Require human approval for restore, overwrite, deletion, data exposure, and return to service.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use isolated restore, immutable source, key availability, dependency ordering, checkpoint, reconciliation, transaction, validation, rollback, and audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show restore phase, source, target, data point, integrity, dependencies, evidence freshness, owner, and authorized start, pause, rollback, reconcile, communicate, and accept controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Restore charter; source and target record; execution and integrity; validation and reconciliation; rollback and communication; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, version, point in time, target, method, authority, time, result, integrity, reconciliation, actor, and limitation. Copy completion proves neither usable state nor correctness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify source, integrity, keys, target isolation, sequence, dependencies, data semantics, permissions, reconciliation, rollback, RTO/RPO, and user outcome.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Restore over current state, wrong point in time, key unavailable, dependency omitted, data integrity assumed, backup copy accepted without test, and return before validation.
+
+RECOVERY AND RECONSIDERATION
+
+Stop, preserve both states, roll back or choose alternate source, reconcile, communicate, and reassess data and user impact. Reopen on source, target, key, dependency, or validation change.
+
+COMPLETION CRITERIA
+
+Source, point in time, target, authority, integrity, sequence, validation, reconciliation, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve restore logs, source, target, checks, reconciliations, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Backup, DR, Failover, Data, Database, Storage, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+328 Backup; 326-327 Continuity and Disaster Recovery; 330 Failover; 307 Data Operations; 285-286 Database and Storage; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, restore, data, storage, continuity, and operations context, and the integration roadmap. Exact sources, targets, keys, sequence, validation, RTO/RPO, and acceptance authority remain unresolved.

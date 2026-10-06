@@ -1,0 +1,148 @@
+SECTION 033 — Software Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the structure, responsibilities, interfaces, state, quality attributes, and lifecycle of software that realizes approved application and functional obligations. Software Architecture keeps design intent distinct from source code, build output, runtime behavior, and evidence of acceptance.
+
+REQUIRED OUTCOME
+
+- A bounded software context with responsibilities, components, interfaces, data, control flow, state, dependencies, environments, owners, and lifecycle.
+- Versioned design views and contracts covering composition, quality attributes, security, observability, failure, recovery, compatibility, and change.
+- Traceability from requirements, functions, applications, data, interfaces, implementation, tests, evidence, operation, maintenance, and retirement.
+- Explicit human and AI participation, authority, tool access, review, fallback, and revocation where software makes or supports consequential decisions.
+
+WHY THIS MATTERS
+
+Software structure determines how change, failure, privilege, data, and responsibility propagate. A clean module diagram can still conceal shared state, unsafe defaults, untestable coupling, unsupported dependencies, or a recovery path that depends on the failed component.
+
+APPLICABILITY
+
+- Software realizes material functions, application responsibilities, data handling, interfaces, automation, or user and operator journeys.
+- Composition, dependency, concurrency, state, performance, security, accessibility, reliability, maintainability, or lifecycle has material consequence.
+- Software is changed, reused, generated, integrated, deployed, migrated, or retired across environments.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work is a documentation-only or reversible change with no material effect on software responsibility, contract, state, control, evidence, or lifecycle.
+- An approved baseline covers the exact software, version, environment, and change and impact analysis confirms no material effect.
+- The artifact is exploratory and is labeled proposed, simulated, or unverified.
+
+The record must name the baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-032 provide requirements, systems, information, data, operational, and application boundaries.
+- Source, build, dependency, runtime, security, privacy, accessibility, testing, deployment, and support authorities are identifiable or recorded as gaps.
+
+REQUIRED INPUTS
+
+- Requirements, functions, application boundaries, data and interface contracts, users, operators, environments, risks, and acceptance criteria.
+- Source repositories, build definitions, dependencies, configuration, runtime targets, performance budgets, security controls, observability, recovery, and retirement obligations.
+- Model, provider, prompt, tool, data, evaluation, and human-review constraints where AI is embedded.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable owner approves software boundaries, quality attributes, dependencies, security and privacy posture, release risk, exceptions, AI authority, and lifecycle decisions. Humans resolve tradeoffs, accept residual risk, approve material changes, and retain stop, isolate, rollback, restore, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized source and design artifacts, propose decomposition, identify coupling and gaps, draft contracts and tests, and analyze bounded traces. It must preserve versions and evidence, label inference and proposal, and escalate unresolved authority or safety issues. It must not invent behavior, expose secrets, approve releases, change production, or treat a build, benchmark, or generated code sample as acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Implementer, Refactorer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Planner, Documentation Writer, Memory Curator, Optimizer, and Red Team.
+
+Role selection is proportional to consequence; existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish scope, owners, environments, quality attributes, criticality, and lifecycle.
+2. Inventory components, responsibilities, data, interfaces, dependencies, configurations, and trust boundaries.
+3. Model composition, control flow, state, concurrency, resource use, failure, recovery, and compatibility.
+4. Define contracts for identity, authority, schema, timing, errors, retry, idempotency, observability, and ownership.
+5. Allocate requirements and cross-cutting controls to components and interfaces without creating authority by allocation.
+6. Analyze dependency, supply-chain, configuration, secret, migration, and technical-debt risks.
+7. Validate with users, operators, maintainers, security, privacy, accessibility, and domain specialists.
+8. Test normal, invalid, concurrent, degraded, offline, recovery, migration, rollback, and retirement behavior.
+9. Baseline the design and record unresolved decisions, dissent, evidence limits, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Identify whether each consequential software action is human, rule-based, automated, AI, external, or hybrid.
+- Show model, provider, prompt, tool, data, authority, review, and evidence identity for generated behavior.
+- Require human approval for rights, safety, privacy, security, release, privilege, or irreversible effects.
+- Preserve status, stop, correction, manual fallback, evidence, and recovery paths when models or providers fail.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Keep design, source, build artifact, deployed instance, runtime state, logs, cache, backup, and evidence distinct.
+- Represent components, contracts, state transitions, dependencies, versions, ownership, and lifecycle as attributable records.
+- Enforce identity, authorization, validation, audit, accessibility, and recovery across UI, API, batch, event, administrative, and emergency paths.
+- Define substitution, rollback, migration, deprecation, and compatibility semantics before implementation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show baseline, version, environment, owner, dependencies, current state, authority, evidence freshness, and open risks.
+- Expose consequential actions, required approvals, acting identity, data boundary, and recovery options.
+- Permit authorized pause, revoke, isolate, rollback, restore, migrate, supersede, and retire actions.
+- Export design views, contracts, traceability, decisions, evidence, dissent, and continuation state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Software context, composition, dependency, data-flow, control-flow, state, deployment, quality, security, and recovery views.
+- Component and interface catalog, decision record, traceability matrix, risk and assumption register, test basis, and lifecycle handoff.
+- Human-AI software participation, authority, evaluation, monitoring, fallback, and revocation record where applicable.
+
+EVIDENCE REQUIREMENTS
+
+- Each claim identifies artifact, version, environment, configuration, method, actor, date, result, and limitation.
+- Source, build, test, benchmark, deployment, trace, and runtime evidence proves only its bounded claim.
+- AI evidence identifies model, provider, context, data, tools, permissions, review, and limitations.
+- Failed, stale, partial, contradictory, or missing evidence constrains status and remains visible.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace requirements and functions through components, contracts, builds, deployments, tests, runtime evidence, and retirement.
+- Detect duplicate, orphaned, unowned, unreachable, incompatible, and over-privileged components.
+- Exercise invalid, unauthorized, concurrent, stale, dependency-loss, degraded, rollback, restore, migration, and retirement paths.
+- Disable models, providers, credentials, networks, data, configuration, and evidence stores and verify safe behavior.
+- Reproduce representative claims from the exact baseline without hidden chat state.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating source, build success, test pass, benchmark, or diagram as proof of general correctness.
+- Hiding shared state, manual work, configuration, privilege, dependencies, or recovery coupling.
+- Letting generated code or AI confidence become authorization.
+- Optimizing local performance or cost while weakening security, privacy, accessibility, reliability, maintainability, or control.
+
+RECOVERY AND RECONSIDERATION
+
+- On defect, authority conflict, dependency loss, security event, data issue, or evidence failure, stop or isolate affected behavior and preserve state.
+- Name the blocker, safe operation, owner, authority, evidence, communication, and review condition.
+- Use approved fallback, feature reduction, substitution, rollback, restore, migration, or retirement paths.
+- Reopen when requirements, interfaces, dependencies, models, environments, or lifecycle assumptions change.
+
+COMPLETION CRITERIA
+
+- Responsibilities, boundaries, contracts, state, dependencies, controls, quality, evidence, recovery, and lifecycle are explicit.
+- Failure, degraded, migration, rollback, support, and retirement behavior is addressed or justified.
+- Exact baseline, validity, unresolved gaps, verification, and acceptance authority are recorded.
+- The section remains CONTENT-COMPLETE until source reconciliation, hostile review, and owner acceptance are separately completed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve identities, versions, contracts, decisions, evidence, dissent, incidents, open gaps, and next safe action.
+- Hand off to Platform, Infrastructure, Testing, Security, Operations, Maintenance, Deployment, and Retirement sections.
+- Record changes requiring reopening Application, Data, Interface, Security, Reliability, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-032 Requirements through Application Architecture; 034-044 Platform through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 107-150 Software and systems engineering; 255-300 testing and delivery; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-032, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal language, runtime, licensing, supply-chain, performance, accessibility, or sector standard is supplied. Actual technology, owners, contracts, threat model, support model, and acceptance evidence remain unresolved.

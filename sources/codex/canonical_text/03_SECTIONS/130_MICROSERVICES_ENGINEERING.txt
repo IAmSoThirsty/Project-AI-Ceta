@@ -1,0 +1,98 @@
+SECTION 130 - Microservices Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of independently deployable services organized around bounded responsibilities, explicit contracts, data ownership, operational authority, resilience, security, observability, and lifecycle.
+
+REQUIRED OUTCOME
+
+A service baseline with bounded contexts, ownership, APIs and events, data authority, deployment, failure, scaling, security, observability, compatibility, and retirement evidence.
+
+WHY THIS MATTERS
+
+Microservices distribute failure and decision-making. Poor boundaries create chatty coupling, inconsistent data, operational overload, and unclear responsibility disguised as flexibility.
+
+APPLICABILITY
+
+Applies when a solution uses multiple independently deployed services, service teams, containers, queues, or provider components with separate lifecycles.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to a bounded monolith or single process with no service boundary, independent deployment, or distributed contract. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires domain and capability boundaries, requirements, service ownership, APIs and events, data authority, identity, threat model, deployment, observability, reliability, support, and retirement policy.
+
+REQUIRED INPUTS
+
+Provide service goals, boundaries, dependencies, data, commands, events, SLOs, failure domains, scaling, security, tenancy, migration, test, operational, and compensation requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve service boundaries, ownership, data authority, risk, operational burden, release, exceptions, and retirement. Humans retain authority over cross-service business decisions and external commitments.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose boundaries, contracts, tests, capacity analysis, and diagnostics. It must not create services for fashion, alter data authority, deploy changes, or hide distributed failure without authorization.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Security Auditor, Governance Reviewer, Implementer, Tester, Verifier, Observer, Coordinator, Documentation Writer, Memory Curator, Optimizer, Critic, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define bounded contexts, outcomes, owners, data authority, and contracts.
+2. Model calls, events, dependencies, consistency, failure, retries, tracing, deployment, and recovery.
+3. Build and release with independent evidence, operational readiness, and migration control.
+4. Monitor service and outcome health, manage change, and retire consumers and services safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show service identity, owner, version, dependencies, authority, data, health, evidence, and consequence. Human review is required for boundary, data, and production decisions; stop and recovery controls must survive model failure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use explicit bounded contexts, contract versions, data ownership, synchronous and event paths, timeouts, circuit breaking, idempotency, tracing, tenancy, secrets, deployment, and compensation. Avoid distributed transactions unless justified.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show service map, versions, owners, dependencies, SLOs, capacity, incidents, data freshness, deployment state, contract drift, and controls to throttle, isolate, roll back, restore, or retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Service catalog, boundary and dependency model, contracts, data ownership, threat assessment, deployment and observability design, resilience tests, runbooks, migration, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, revision, dependency, request or event, data, environment, trace, workload, method, result, and limits. Distinguish service health from end-to-end outcome and preserve partial-failure evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify contracts, authorization, tenancy, timeout, retry, idempotency, ordering, consistency, dependency loss, scaling, deployment, rollback, tracing, recovery, migration, and retirement.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Service per table; shared database authority; chatty synchronous chains; unbounded retries; missing timeouts; independent deploy without compatibility; and green service health masking failed outcomes.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate failing services, stop unsafe writes, preserve queues and traces, use approved fallback or prior version, reconcile data, compensate external effects, and reopen boundaries and readiness evidence.
+
+COMPLETION CRITERIA
+
+Boundaries, ownership, contracts, data, controls, operations, evidence, recovery, change, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve service and revision identity, maps, contracts, traces, incidents, evidence, decisions, open gaps, and next safe action. Hand off to Distributed Systems, API, Integration, Data, Platform, Reliability, Testing, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+038 Distributed Systems Architecture; 041 Integration Architecture; 042 API Architecture; 130 Microservices Engineering; 131 Distributed Systems Engineering; 243 Reliability Testing; 301 Site Reliability Engineering; 389 Deprecation Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 038, 041-044 and 107-129, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual domain boundaries, team ownership, consistency needs, traffic, cost, supplier limits, and recovery objectives remain unresolved.

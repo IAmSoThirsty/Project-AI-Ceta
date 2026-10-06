@@ -1,0 +1,103 @@
+SECTION 165 — Statistics
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed statistical reasoning for describing uncertainty, estimating quantities, testing claims, designing samples and experiments, and supporting decisions without overstating precision or causality.
+
+REQUIRED OUTCOME
+
+- A defined estimand, population, sampling design, assumptions, method, uncertainty, and decision context.
+- Reproducible calculations and transparent treatment of missingness, dependence, multiplicity, confounding, and sensitivity.
+- An interpretation bounded by the design and accepted by the accountable human owner.
+
+WHY THIS MATTERS
+
+Statistical language can conceal consequential assumptions. Confidence intervals, significance tests, forecasts, and averages are useful only when their population, design, uncertainty, and limits are understood.
+
+APPLICABILITY
+
+Applies to estimation, inference, forecasting, experimentation, sampling, measurement, risk quantification, quality control, and statistical claims. Greater review is required for regulated, rights-affecting, safety, financial, or public decisions.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to exact deterministic counts or formatting with no inferential, predictive, comparative, or decision claim. Record the bounded rationale and reopening trigger; a small sample is not a reason to omit statistical qualification.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires a defined population, data lineage, measurement meaning, sampling frame, domain context, and decision owner. Depends on Sections 154, 156, 163, 164, 180, and 254 for modeling, quality, analysis, evaluation, and tests.
+
+REQUIRED INPUTS
+
+Estimand; population; sampling frame; unit; design; outcome; covariates; missing-data plan; assumptions; model; prior or baseline; error tolerance; power or precision target; multiplicity; subgroup plan; and decision consequences.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve estimands, assumptions, acceptable error, subgroup treatment, stopping rules, publication, and use. A qualified statistician may advise, but only the owner accepts residual uncertainty and resulting action.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may calculate, simulate, explain, compare methods, and flag violations. It must expose assumptions and code or procedure, preserve exact inputs, and must not invent p-values, confidence, samples, causal effects, or significance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Analyst, Researcher, Observer, Critic, Verifier, Tester, Data Governance Reviewer, Privacy Reviewer, Security Auditor, Documentation Writer, Memory Curator, and Decision Arbiter Advisory. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define estimand, population, unit, outcome, and decision.
+2. Audit sampling, measurement, missingness, dependence, and data quality.
+3. Select and justify design and method before interpreting results.
+4. Calculate uncertainty, sensitivity, subgroup, and multiplicity effects.
+5. Test assumptions and compare plausible alternatives.
+6. Separate statistical result from causal or policy interpretation.
+7. Record limitations, failed checks, dissent, and owner decision.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show formulas or procedures, assumptions, sample construction, uncertainty, and interpretation limits. AI-generated statistical explanations require review. Users must be able to inspect raw definitions and non-AI calculations; no automated threshold may silently become policy.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version estimands, datasets, sampling frames, code, randomization, models, results, and decisions. Preserve units and denominators. Store uncertainty and invalidation rules with results, and prevent dashboards from hiding revisions or adverse subgroups.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show estimand, population, design, sample, assumptions, uncertainty, method, subgroup results, status, and owner. Provide authorized controls to rerun, challenge, restrict, publish, withdraw, correct, and reopen. Explain what the result does not establish.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Statistical analysis plan; data and sampling record; estimand definition; method and assumptions; code or procedure; results; uncertainty and sensitivity report; subgroup analysis; limitations; decision record; and reproducibility handoff.
+
+EVIDENCE REQUIREMENTS
+
+Each result identifies population, sample, design, period, measure, method, assumptions, software or tool version, uncertainty, reviewer, and limitation. Significance, precision, and forecast accuracy support only bounded claims and never prove causation alone.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce calculations; perturb samples and assumptions; test missingness, dependence, multiplicity, leakage, and subgroup effects; compare independent implementations; verify denominators and units; and confirm interpretation matches the design.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+P-hacking; optional stopping; multiple testing without control; Simpson's paradox ignored; ecological fallacy; confidence mistaken for probability of truth; averages hiding harm; causal claims from association; and fabricated statistical certainty.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine results when assumptions, data, sampling, or calculations fail. Preserve prior outputs, identify affected decisions, rerun or revise with qualified review, and notify owners. Reopen after population, measure, policy, data, or decision changes.
+
+COMPLETION CRITERIA
+
+Estimand, design, data, method, assumptions, results, uncertainty, limitations, verification, and owner decision are explicit. Status remains CONTENT-COMPLETE until source reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve analysis-plan identity, data, sample, code, environment, results, failed checks, decisions, dissent, and gaps. Hand off to Data Analysis, Data Science, Experimentation, Model Evaluation, Quality, Governance, and Operations.
+
+RELATED CODEX SECTIONS
+
+154 Data Modeling; 156 Data Quality Engineering; 163 Data Analysis; 164 Data Science; 180 Model Evaluation; 239 Performance Testing; 254 Data Testing; 369 Experimentation; 370 A or B Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data and analysis sections, and evidence lexicon. Sector-specific statistical standards, estimands, lawful purposes, sampling frames, error tolerances, and decision authorities remain unresolved until supplied.

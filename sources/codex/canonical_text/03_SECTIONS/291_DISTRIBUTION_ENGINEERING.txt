@@ -1,0 +1,95 @@
+SECTION 291 — Distribution Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Deliver exact artifacts, content, updates, or data to authorized targets with integrity, compatibility, availability, audience control, observability, rollback, and withdrawal.
+
+REQUIRED OUTCOME
+
+A distribution model with artifact, channel, audience, identity, entitlement, integrity, region, scheduling, throttling, delivery evidence, rollback, withdrawal, and support.
+
+WHY THIS MATTERS
+
+Distribution can expose the wrong version or data to the wrong audience and can make withdrawal difficult once copied. Delivery success does not prove installation, comprehension, or safe operation.
+
+APPLICABILITY
+
+Apply when software, firmware, content, data, reports, models, documentation, or configuration is delivered across users, devices, systems, regions, or channels.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no artifact, audience, channel, entitlement, region, or delivery behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use artifact, release, license, identity, authorization, compatibility, CDN, update, privacy, security, support, and rollback baselines.
+
+REQUIRED INPUTS
+
+Artifact, digest, audience, entitlement, channel, region, version, schedule, integrity, compatibility, telemetry, rollback, withdrawal, and approval.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve audience, channel, entitlement, release, regional, legal, communication, withdrawal, and support decisions. Humans accept delivery and copy risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft distribution plans, segment authorized targets, analyze delivery, and identify anomalies. It must not publish, widen audience, expose data, revoke delivery, or claim receipt without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Distribution Engineer, Release Engineer, Artifact Manager, Security Auditor, Support Reviewer, Network Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Define audience and channel; validate artifact and entitlement; stage; distribute; monitor receipt and integrity; handle failure and retry; withdraw or replace; support users; and record evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show artifact, audience, entitlement, channel, region, identity, delivery, evidence, impact, and limitation. Require human approval for public, sensitive, regional, or irreversible distribution.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use signed artifacts, access and entitlement, staged rollout, regional isolation, throttling, cache invalidation, receipt telemetry, revocation, and fallback channel.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show distribution status, audience, channel, version, integrity, failures, evidence freshness, owner, and authorized pause, narrow, retry, withdraw, replace, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Distribution charter; channel and audience model; entitlement and integrity; rollout and receipt; withdrawal and support; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify artifact, audience, target, channel, version, digest, time, method, receipt, failure, actor, and limitation. Download or delivery event proves only transmission.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify audience, entitlement, integrity, compatibility, regional, privacy, channel, retry, receipt, withdrawal, cache, rollback, and support behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Wrong audience, unsigned artifact, mutable channel, delivery without entitlement, cache retains withdrawn content, retry duplicates, and transmission treated as operation.
+
+RECOVERY AND RECONSIDERATION
+
+Pause, revoke or withdraw, preserve delivery evidence, notify affected parties, replace or correct, invalidate copies where possible, and reassess downstream impact.
+
+COMPLETION CRITERIA
+
+Artifact, audience, channel, entitlement, integrity, region, evidence, withdrawal, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve artifacts, channels, audiences, receipts, failures, withdrawals, decisions, evidence, exceptions, and open gaps. Hand off to Release, Packaging, Installation, CDN, Support, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+262 Artifacts; 288 Release; 292 Packaging; 293 Installation; 300 Content Delivery Networks; 355-357 Provisioning, Logistics, and Distribution; 391-400 Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, release, distribution, security, support, and lifecycle context, and the integration roadmap. Exact channels, audiences, entitlements, regions, withdrawal, providers, and acceptance authority remain unresolved.

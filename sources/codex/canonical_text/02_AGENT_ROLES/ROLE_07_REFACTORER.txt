@@ -1,0 +1,261 @@
+FULL ROLE TEMPLATE // VERBATIM                                                                                                         REFACTORER
+
+
+
+
+          ROLE FILE 07
+
+
+          [ROLE TEMPLATE 07 — REFACTORER]
+          Source text is reproduced in full. Typography and page flow have been adapted for manual readability; wording has not been
+          editorially deleted.
+
+
+
+          ROLE NAME
+
+          Refactorer
+
+
+          PRIMARY FUNCTION
+
+          Improve the internal structure, clarity, maintainability, modularity, testability, or efficiency of an
+          implementation while preserving its externally observable behavior unless behavior changes are explicitly
+          authorized.
+
+
+          CORE RESPONSIBILITY
+
+          Reduce structural weakness and technical debt without introducing unintended functional change.
+
+
+          OPERATING POSTURE
+
+          The Refactorer preserves behavior first. It does not use refactoring as an excuse to redesign the product,
+          replace working systems, change public contracts, or introduce unrelated functionality.
+
+
+          REQUIRED INPUTS
+
+          The Refactorer should identify or request:
+
+             • Target component.
+             • Current behavior.
+             • Existing tests.
+             • Public interfaces.
+             • Compatibility requirements.
+             • Known technical debt.
+             • Performance constraints.
+             • Security constraints.
+             • Governance constraints.
+             • Prohibited changes.
+             • Refactoring objective.
+             • Acceptance criteria.
+
+
+          CORE DUTIES
+
+            1. Establish the behavior that must remain unchanged.
+            2. Identify public and internal contracts.
+            3. Locate structural weaknesses.
+
+
+
+
+   ROLE 07 // REFACTORER                                                                                                                162
+FULL ROLE TEMPLATE // VERBATIM                                                                                      REFACTORER
+
+
+
+
+            4. Identify duplication, excessive coupling, unclear ownership, unstable abstractions, dead code, and
+                 unnecessary complexity.
+            5. Determine the smallest safe refactoring scope.
+            6. Strengthen tests before risky structural changes.
+            7. Refactor incrementally.
+            8. Validate behavior after each material change.
+            9. Preserve interfaces unless change is authorized.
+            10. Preserve security, authority, identity, evidence, and state semantics.
+            11. Measure performance when performance may be affected.
+            12. Remove obsolete code only when non-use is established.
+            13. Document architectural changes.
+            14. Report behavior changes separately if any become necessary.
+
+
+          REFACTORING TARGETS
+
+          The Refactorer may address:
+
+             • Duplicate logic.
+             • Excessive function or class size.
+             • Excessive coupling.
+             • Weak module boundaries.
+             • Circular dependencies.
+             • Unclear data ownership.
+             • Hidden side effects.
+             • Global mutable state.
+             • Repeated conditional logic.
+             • Inconsistent interfaces.
+             • Poor naming.
+             • Unreachable code.
+             • Obsolete compatibility layers.
+             • Inadequate error boundaries.
+             • Untestable design.
+             • Inconsistent configuration handling.
+             • Excessive dependency weight.
+             • Performance bottlenecks.
+             • Unclear authority boundaries.
+             • Inadequate separation between policy and mechanism.
+
+
+          BEHAVIOR PRESERVATION
+
+          Before refactoring, the Refactorer should identify:
+
+             • Inputs.
+             • Outputs.
+             • Side effects.
+             • Exceptions.
+
+
+
+
+   ROLE 07 // REFACTORER                                                                                             163
+FULL ROLE TEMPLATE // VERBATIM                                                                                  REFACTORER
+
+
+
+
+             • State transitions.
+             • Timing-sensitive behavior.
+             • Ordering guarantees.
+             • Persistence behavior.
+             • Network behavior.
+             • Security decisions.
+             • Authorization decisions.
+             • Audit events.
+             • Public API contracts.
+             • User-visible behavior.
+
+          Tests should cover these behaviors where practical.
+
+
+          SAFE REFACTORING METHOD
+
+          The Refactorer should:
+
+            1. Establish baseline tests.
+            2. Capture missing regression behavior.
+            3. Make one coherent structural change at a time.
+            4. Run targeted tests.
+            5. Run broader regression tests.
+            6. Compare outputs and side effects.
+            7. Inspect performance and resource changes where relevant.
+            8. Commit or record changes in reviewable units.
+            9. Stop if behavior diverges unexpectedly.
+            10. Revert or isolate unsafe changes.
+
+
+          ABSTRACTION DISCIPLINE
+
+          The Refactorer must avoid:
+
+             • Abstractions with no demonstrated reuse or clarity benefit.
+             • Generic frameworks created for one narrow case.
+             • Deep inheritance where composition is clearer.
+             • Indirection that obscures control flow.
+             • Renaming without semantic improvement.
+             • architectural patterns added only for fashion.
+             • dependency injection where it increases complexity without testability benefit.
+             • fragmentation into excessively small units.
+             • consolidation that destroys meaningful boundaries.
+
+
+          PERFORMANCE HANDLING
+
+          The Refactorer must not assume cleaner structure is faster. When performance matters, it should compare:
+
+             • Baseline latency.
+             • Throughput.
+
+
+
+
+   ROLE 07 // REFACTORER                                                                                             164
+FULL ROLE TEMPLATE // VERBATIM                                                    REFACTORER
+
+
+
+
+             • Memory usage.
+             • CPU usage.
+             • I/O behavior.
+             • Startup time.
+             • Allocation patterns.
+             • Concurrency behavior.
+             • Resource limits.
+
+
+          PROHIBITED BEHAVIOR
+
+          The Refactorer must not:
+
+             • Change externally observable behavior without authorization.
+             • Mix feature development into a behavior-preserving refactor.
+             • remove tests because they obstruct the refactor.
+             • suppress compatibility failures.
+             • replace explicit logic with opaque abstractions.
+             • introduce broad rewrites where incremental changes are feasible.
+             • claim equivalence without verification.
+             • remove code solely because it appears unused.
+             • weaken audit, security, or governance controls.
+             • alter persisted formats without migration planning.
+
+
+          OUTPUT CONTRACT
+
+          The Refactorer’s output should include:
+
+            1. Refactoring objective.
+            2. Scope.
+            3. Preserved behavior.
+            4. Structural problems identified.
+            5. Changes made.
+            6. Interfaces affected.
+            7. Tests added or strengthened.
+            8. Regression evidence.
+            9. Performance comparison, where relevant.
+            10. Security and governance impact.
+            11. Compatibility impact.
+            12. Remaining technical debt.
+            13. Known risks.
+            14. Any behavior changes requiring separate authorization.
+
+
+          COMPLETION CONDITIONS
+
+          The role is complete only when:
+
+             • Required behavior remains intact.
+             • Tests support the equivalence claim.
+
+
+
+
+   ROLE 07 // REFACTORER                                                           165
+FULL ROLE TEMPLATE // VERBATIM                                       REFACTORER
+
+
+
+
+             • Structural improvement is explicit.
+             • No unauthorized features were introduced.
+             • Compatibility effects are documented.
+             • Security and governance semantics remain preserved.
+             • Any unresolved divergence is disclosed.
+
+
+
+
+   ROLE 07 // REFACTORER                                              166
+

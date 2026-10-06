@@ -1,0 +1,95 @@
+SECTION 276 — Infrastructure as Code
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Express infrastructure intent as versioned, reviewed, testable, repeatable, and auditable code or declarative configuration with controlled state and recovery.
+
+REQUIRED OUTCOME
+
+An IaC model with modules, inputs, state, providers, secrets boundary, policy, plan, approval, apply, drift, rollback, import, destruction, and evidence.
+
+WHY THIS MATTERS
+
+IaC improves repeatability but can encode destructive or overprivileged behavior and can diverge from actual state. A plan is not an apply, and a successful apply is not proof of safe operation.
+
+APPLICABILITY
+
+Apply when code or declarative configuration provisions, changes, observes, or retires infrastructure, platform, network, storage, identity, or environment resources.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no infrastructure state is managed declaratively or no IaC behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use infrastructure, configuration, source, identity, policy, secrets, provider, environment, security, testing, and recovery baselines.
+
+REQUIRED INPUTS
+
+Modules, inputs, state, provider, resources, dependencies, policy, plan, environment, secrets references, approvals, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve modules, providers, state, plan, apply, import, destroy, exception, and recovery. Humans review blast radius and irreversible changes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft IaC, analyze plans and drift, and propose validation. It must not apply, destroy, access state secrets, change provider or policy, or represent a plan as actual state without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+IaC Engineer, Infrastructure Engineer, Architect, Platform Engineer, Security Auditor, Tester, Verifier, Implementer, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define modules and inputs; secure state; validate and lint; plan; review; policy-check; apply; observe; detect drift; import or reconcile; recover; and retire resources and modules.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show module, input, provider, target, plan, state, identity, impact, evidence, and limitation. Require human approval for apply, destroy, import, secret, provider, and production action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use modularity, pinned providers, remote state protection, policy gates, least privilege, plan/apply separation, drift detection, locking, idempotence, rollback, and state recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show plan, target, diff, state, drift, owner, provider, evidence freshness, and authorized review, apply, cancel, rollback, import, quarantine, and destroy controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+IaC modules and policy; state and provider record; plan and approval; apply and drift; recovery and destruction; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify code ref, module, input, provider, target, state version, plan, actor, time, result, and limitation. Plan output proves intended diff, not actual successful or safe state.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify syntax, policy, permissions, state, plan, idempotence, drift, apply, rollback, import, destroy guard, provider failure, and recovery. Test malicious or unexpected input.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unreviewed destroy, state exposure, floating provider, plan ignored, drift overwritten, module overprivilege, no state backup, and apply treated as service acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Stop apply, preserve state, restore or reconcile, rotate credentials, roll back or repair, and reassess dependencies and data. Reopen on module, provider, input, target, or policy change.
+
+COMPLETION CRITERIA
+
+Modules, inputs, state, providers, policy, plans, approvals, drift, recovery, evidence, owners, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve modules, state versions, plans, approvals, applies, drift, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Infrastructure, Platform, Configuration, Security, GitOps, and Operations.
+
+RELATED CODEX SECTIONS
+
+258 Configuration; 263 Environments; 271 GitOps; 275 Infrastructure Engineering; 277-286 Infrastructure Layers; 301-330 Operations and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, infrastructure, delivery, security, and operations context, and the integration roadmap. Exact tool, state, providers, modules, policy, recovery, and acceptance authority remain unresolved.

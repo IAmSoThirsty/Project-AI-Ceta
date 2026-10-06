@@ -1,0 +1,103 @@
+SECTION 174 — Reinforcement Learning
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering for agents that learn policies through interaction, reward, feedback, or planning, with explicit environment, objective, constraint, exploration, oversight, and deployment boundaries.
+
+REQUIRED OUTCOME
+
+- A formal task and environment contract with states, actions, observations, rewards, constraints, termination, and authority.
+- Evidence that behavior meets protected outcomes beyond reward optimization in simulation or training.
+- Controlled exploration, evaluation, deployment, monitoring, interruption, and recovery.
+
+WHY THIS MATTERS
+
+An agent can maximize a reward while exploiting its proxy, harming users, or violating constraints. Interactive learning also creates data, state, and action effects that are difficult to reverse.
+
+APPLICABILITY
+
+Applies to reinforcement learning, preference optimization, online learning, planning agents, adaptive control, bandits, and systems that learn from actions or feedback. Depth increases with physical action, external users, autonomy, or live exploration.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to static supervised inference or offline conceptual discussion with no policy, action, or learning claim. Record exact scope and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires environment and domain models, reward authority, safety constraints, evaluation, simulation validity, security, privacy, operations, and human interruption. Depends on Sections 073, 074, 164, 167, 180, 182, 184, and 188.
+
+REQUIRED INPUTS
+
+Task; state; observation; action; reward; hard constraints; environment; simulator; feedback; exploration budget; safety envelope; policy; human approval; monitoring; termination; and compensation.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans define protected outcomes, constraints, reward legitimacy, exploration limits, deployment, intervention, and acceptable residual risk. They may pause, override, revoke, or retire; the learner cannot redefine its objective.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may learn policies and propose actions within a sandbox or delegated boundary. It must expose reward and uncertainty and must not explore live without authority, hide reward hacking, or treat success in simulation as safe operation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Planner, Implementer, Safety Auditor, Security Auditor, Privacy Reviewer, Tester, Verifier, Critic, Red Team, Governance Reviewer, Optimizer, Documentation Writer, and HITL Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define environment, task, state, actions, reward, constraints, and authority.
+2. Validate simulator, feedback, reward, data, and safety envelope.
+3. Isolate exploration and record seeds, trajectories, policies, and configuration.
+4. Evaluate reward hacking, distribution shift, rare events, adversarial behavior, and subgroups.
+5. Test human stop, override, fallback, termination, and compensation.
+6. Gate promotion from simulation to offline, shadow, limited, and live operation.
+7. Monitor, investigate, and retire policy with evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show current state, action, policy, reward, constraint, authority, uncertainty, and review. Require confirmation for consequential actions and preserve an immediate stop path. Human feedback must be attributable and cannot be silently converted into policy.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version environments, simulators, policies, trajectories, reward functions, constraints, seeds, feedback, checkpoints, actions, and outcomes. Enforce safety constraints outside the policy where possible and preserve idempotent interruption and compensation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show policy, environment, current state, action queue, reward, constraints, exploration mode, reviewer, incidents, and evidence. Provide authorized pause, stop, override, reduce scope, revoke, fallback, compensate, rollback configuration, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+RL task charter; environment and simulator specification; reward and constraint register; trajectory and policy records; evaluation and red-team report; promotion gates; intervention runbook; decision record; and continuity package.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify environment, policy, reward, constraint, scenario, trajectory, seed, evaluator, outcome, uncertainty, and limitation. Reward, episode count, or simulation success does not prove protected outcome or safe deployment.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test reward misspecification, constraint violation, exploration, rare state, adversarial input, simulator gap, feedback poisoning, action interruption, authority revocation, fallback, compensation, and live promotion gates. Reproduce accepted runs.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Reward hacking; proxy-only success; unrestricted exploration; simulator overconfidence; hidden policy state; unsafe retries; feedback poisoning; no human stop; and destructive rollback of prior policy evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Stop policy actions on constraint violation, reward anomaly, unsafe trajectory, drift, feedback poisoning, or authority loss. Preserve state and immutable decisions, use safe fallback or compensation, review impact, and requalify before resuming.
+
+COMPLETION CRITERIA
+
+Task, environment, reward, constraints, policy, exploration, evaluation, intervention, recovery, evidence, and authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve environments, policies, trajectories, rewards, constraints, seeds, feedback, evaluations, interventions, incidents, decisions, dissent, and gaps. Hand off to Robotics, Control, ML, Safety, Evaluation, MLOps, Operations, and HITL.
+
+RELATED CODEX SECTIONS
+
+073 Control Systems Engineering; 074 Robotics Engineering; 136 Simulation Engineering; 164 Data Science; 167 Machine Learning Engineering; 180 Model Evaluation; 182 AI Safety; 184 MLOps; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance. Actual environments, reward authority, safety envelopes, action consequences, simulation validity, feedback rights, and promotion authority remain unresolved.

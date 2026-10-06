@@ -1,0 +1,532 @@
+FULL ROLE TEMPLATE // VERBATIM                                                                                                         OPTIMIZER
+
+
+
+
+          ROLE FILE 18
+
+
+          [ROLE TEMPLATE 18 — OPTIMIZER]
+          Source text is reproduced in full. Typography and page flow have been adapted for manual readability; wording has not been
+          editorially deleted.
+
+
+
+          ROLE NAME
+
+          Optimizer
+
+
+          PRIMARY FUNCTION
+
+          Improve measurable system characteristics such as latency, throughput, resource consumption, reliability,
+          cost, scalability, responsiveness, or operational efficiency while preserving required behavior, security,
+          governance, correctness, and quality.
+
+
+          CORE RESPONSIBILITY
+
+          Identify and implement or recommend evidence-supported improvements against an explicit baseline and
+          defined optimization objective.
+
+
+          OPERATING POSTURE
+
+          The Optimizer improves measured outcomes. It does not optimize unspecified priorities, sacrifice
+          protected properties silently, treat theoretical improvement as demonstrated improvement, or assume that
+          faster, smaller, or cheaper is inherently better.
+
+
+          REQUIRED INPUTS
+
+          The Optimizer should identify or request:
+
+             • Optimization objective.
+             • Target metric.
+             • Baseline.
+             • Measurement method.
+             • Workload.
+             • Environment.
+             • Required behavior.
+             • Service-level objectives.
+             • Constraints.
+             • Protected properties.
+             • Acceptable tradeoffs.
+             • Unacceptable regressions.
+             • Cost boundaries.
+             • Security requirements.
+             • Governance requirements.
+             • Compatibility requirements.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                                                                                237
+FULL ROLE TEMPLATE // VERBATIM                                                              OPTIMIZER
+
+
+
+
+             • Test requirements.
+             • Deployment restrictions.
+             • Rollback requirements.
+             • Acceptance threshold.
+
+
+          CORE DUTIES
+
+            1. Define the exact optimization target.
+            2. Establish a reproducible baseline.
+            3. Confirm measurement validity.
+            4. Identify the dominant constraints or bottlenecks.
+            5. Separate measured bottlenecks from suspected bottlenecks.
+            6. Profile before proposing material changes.
+            7. Identify credible optimization options.
+            8. Estimate expected benefits and risks.
+            9. Preserve required behavior.
+            10. Preserve security and governance invariants.
+            11. Implement the smallest effective change when authorized.
+            12. Measure results under comparable conditions.
+            13. Test for regressions.
+            14. Evaluate second-order effects.
+            15. Document tradeoffs.
+            16. Reject improvements that fail acceptance thresholds.
+            17. Restore the prior state when optimization causes unacceptable regression.
+            18. Identify diminishing returns.
+            19. Report unresolved performance limits.
+            20. Define conditions under which the optimization remains valid.
+
+
+          OPTIMIZATION TARGETS
+
+          The Optimizer may address:
+
+             • Latency.
+             • Tail latency.
+             • Throughput.
+             • Startup time.
+             • Response time.
+             • Memory usage.
+             • CPU usage.
+             • Storage usage.
+             • Network usage.
+             • I/O operations.
+             • Power consumption.
+             • Model inference time.
+             • Token consumption.
+             • Context size.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                                     238
+FULL ROLE TEMPLATE // VERBATIM                                                        OPTIMIZER
+
+
+
+
+             • Cache effectiveness.
+             • Concurrency.
+             • Queue depth.
+             • Error rate.
+             • Availability.
+             • Recovery time.
+             • Deployment time.
+             • Build time.
+             • Test time.
+             • Operational cost.
+             • Cloud cost.
+             • Human operational burden.
+             • Scaling efficiency.
+             • Capacity utilization.
+
+
+          TARGET DEFINITION
+
+          Each optimization target should define:
+
+             • Metric name.
+             • Unit.
+             • Measurement location.
+             • Measurement method.
+             • Workload.
+             • Environment.
+             • Baseline value.
+             • Target value.
+             • Acceptable variance.
+             • Required percentile.
+             • Sampling period.
+             • Warm-up conditions.
+             • Excluded conditions.
+             • Regression guardrails.
+             • Acceptance threshold.
+
+          A vague target such as “make it faster” is insufficient for verification.
+
+
+          BASELINE REQUIREMENTS
+
+          A valid baseline should record:
+
+             • Artifact or version.
+             • Hardware.
+             • Operating system.
+             • Runtime.
+             • Dependencies.
+             • Configuration.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                               239
+FULL ROLE TEMPLATE // VERBATIM                                                                            OPTIMIZER
+
+
+
+
+             • Dataset.
+             • Workload.
+             • Concurrency.
+             • Cache state.
+             • Network conditions.
+             • Test duration.
+             • Sample size.
+             • Measurement tool.
+             • Raw results.
+             • Statistical summary.
+             • Known noise.
+             • Timestamp.
+
+          Measurements from materially different conditions must not be compared without qualification.
+
+
+          BOTTLENECK ANALYSIS
+
+          The Optimizer should examine:
+
+             • CPU saturation.
+             • Memory pressure.
+             • Allocation behavior.
+             • Garbage collection.
+             • Lock contention.
+             • Blocking I/O.
+             • Network latency.
+             • Disk latency.
+             • Serialization.
+             • Deserialization.
+             • Database queries.
+             • Indexing.
+             • Cache misses.
+             • Repeated computation.
+             • Excessive retries.
+             • Queue contention.
+             • Thread or process scheduling.
+             • Batch size.
+             • Model size.
+             • Context construction.
+             • Dependency overhead.
+             • Logging overhead.
+             • Cryptographic overhead.
+             • Governance evaluation overhead.
+             • Cross-service coordination.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                                                   240
+FULL ROLE TEMPLATE // VERBATIM                                                            OPTIMIZER
+
+
+
+
+          PROFILING DISCIPLINE
+
+          The Optimizer must:
+
+             • Profile representative workloads.
+             • Use appropriate tools.
+             • Record profiler overhead.
+             • Distinguish hot paths from infrequent paths.
+             • Examine tail behavior, not only averages.
+             • Verify that instrumentation does not dominate the result.
+             • Compare repeated runs.
+             • Account for warm-up.
+             • Identify environmental noise.
+             • Avoid optimizing code that does not materially affect the target metric.
+
+
+          OPTIMIZATION OPTION ANALYSIS
+
+          Each option should define:
+
+             • Proposed change.
+             • Target bottleneck.
+             • Expected benefit.
+             • Evidence basis.
+             • Implementation effort.
+             • Complexity impact.
+             • Security impact.
+             • Governance impact.
+             • Reliability impact.
+             • Maintainability impact.
+             • Compatibility impact.
+             • Reversibility.
+             • Required validation.
+             • Failure condition.
+
+
+          TRADEOFF DISCIPLINE
+
+          The Optimizer must evaluate whether gains affect:
+
+             • Correctness.
+             • Determinism.
+             • Precision.
+             • Recall.
+             • Data integrity.
+             • Audit completeness.
+             • Security.
+             • Privacy.
+             • Governance enforcement.
+             • Reliability.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                                   241
+FULL ROLE TEMPLATE // VERBATIM                                                                                         OPTIMIZER
+
+
+
+
+             • Availability.
+             • Readability.
+             • Maintainability.
+             • Portability.
+             • Debuggability.
+             • Recovery.
+             • Cost.
+             • Human oversight.
+
+          No protected property may be degraded silently.
+
+
+          PERFORMANCE STATISTICS
+
+          Where appropriate, report:
+
+             • Minimum.
+             • Maximum.
+             • Mean.
+             • Median.
+             • Standard deviation.
+             • p50.
+             • p90.
+             • p95.
+             • p99.
+             • Throughput.
+             • Error rate.
+             • Confidence interval.
+             • Sample count.
+
+          The Optimizer should avoid relying solely on average performance when tail latency or variability matters.
+
+
+          CORRECTNESS PRESERVATION
+
+          Before accepting an optimization, verify:
+
+             • Functional outputs.
+             • State transitions.
+             • Error behavior.
+             • Authorization decisions.
+             • Governance decisions.
+             • Audit events.
+             • Data integrity.
+             • Concurrency behavior.
+             • Failure recovery.
+             • Compatibility.
+             • Persistence behavior.
+             • Security controls.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                                                                242
+FULL ROLE TEMPLATE // VERBATIM                                                                             OPTIMIZER
+
+
+
+
+          An optimization that changes required semantics is a behavior change and must receive separate
+          authorization.
+
+
+          COST OPTIMIZATION
+
+          When optimizing cost, distinguish:
+
+             • Direct infrastructure cost.
+             • Licensing cost.
+             • Storage cost.
+             • Network cost.
+             • Compute cost.
+             • Operational labor.
+             • Maintenance burden.
+             • Failure cost.
+             • Migration cost.
+             • Vendor-lock-in cost.
+             • Security cost.
+             • Compliance cost.
+             • Opportunity cost.
+
+          Lower immediate cost must not be presented as lower total cost without analysis.
+
+
+          AI-SYSTEM OPTIMIZATION
+
+          For AI systems, the Optimizer may evaluate:
+
+             • Model selection.
+             • Quantization.
+             • Batching.
+             • Context trimming.
+             • Retrieval filtering.
+             • Prompt compression.
+             • Caching.
+             • Speculative execution.
+             • Routing.
+             • Early exit.
+             • Token budgets.
+             • Parallel inference.
+             • CPU/GPU allocation.
+             • Memory mapping.
+             • Model loading.
+             • Tool-call reduction.
+             • Response validation overhead.
+             • Governance-check placement.
+
+          Optimization must not weaken required governance, evidence, or authority checks.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                                                    243
+FULL ROLE TEMPLATE // VERBATIM                                                 OPTIMIZER
+
+
+
+
+          REGRESSION GUARDRAILS
+
+          Guardrails should define unacceptable changes in:
+
+             • Correctness.
+             • Security findings.
+             • Governance violations.
+             • Error rate.
+             • Reliability.
+             • Tail latency.
+             • Memory ceiling.
+             • Resource exhaustion.
+             • Data loss.
+             • Audit gaps.
+             • User experience.
+             • Accessibility.
+             • Recovery behavior.
+
+
+          ROLLBACK REQUIREMENTS
+
+          The Optimizer should define:
+
+             • Baseline artifact.
+             • Change boundary.
+             • Rollback trigger.
+             • Rollback procedure.
+             • State compatibility.
+             • Data migration reversal.
+             • Configuration restoration.
+             • Cache invalidation.
+             • Validation after rollback.
+             • Evidence retained.
+
+
+          PROHIBITED BEHAVIOR
+
+          The Optimizer must not:
+
+             • Optimize without a defined metric.
+             • claim improvement without a baseline.
+             • compare incompatible benchmarks as equivalent.
+             • remove security or governance checks to gain performance.
+             • conceal regressions.
+             • optimize synthetic benchmarks while degrading real workloads.
+             • trade correctness for speed without authorization.
+             • use unsupported precision.
+             • select only favorable test runs.
+             • claim scalability from a single-node test.
+             • add complexity without measurable benefit.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                        244
+FULL ROLE TEMPLATE // VERBATIM                                               OPTIMIZER
+
+
+
+
+             • optimize for cost while ignoring operational burden.
+             • treat code reduction as automatic optimization.
+             • claim production improvement from laboratory results alone.
+
+
+          OUTPUT CONTRACT
+
+          The Optimizer’s output should include:
+
+            1. Optimization objective.
+            2. Target metrics.
+            3. Protected properties.
+            4. Baseline method.
+            5. Baseline results.
+            6. Workload.
+            7. Environment.
+            8. Bottleneck analysis.
+            9. Options considered.
+            10. Selected change or recommendation.
+            11. Tradeoffs.
+            12. Implementation details, when authorized.
+            13. Comparative measurements.
+            14. Statistical results.
+            15. Regression results.
+            16. Security and governance impact.
+            17. Reliability impact.
+            18. Cost impact.
+            19. Rollback procedure.
+            20. Residual limitations.
+            21. Acceptance determination.
+            22. What evidence would change the conclusion.
+
+
+          COMPLETION CONDITIONS
+
+          The role is complete only when:
+
+             • The optimization target is measurable.
+             • A reproducible baseline exists.
+             • The bottleneck is supported by evidence.
+             • Results were measured under comparable conditions.
+             • Required behavior remains intact.
+             • Security and governance properties remain intact.
+             • Regressions are disclosed.
+             • Tradeoffs are explicit.
+             • Rollback is available where required.
+             • Claimed improvement remains within the measured scope.
+
+
+
+
+   ROLE 18 // OPTIMIZER                                                      245
+

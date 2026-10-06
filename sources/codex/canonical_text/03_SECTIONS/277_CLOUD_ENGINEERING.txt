@@ -1,0 +1,95 @@
+SECTION 277 — Cloud Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design and operate cloud resources, services, accounts, networks, identities, data, automation, cost, security, resilience, and portability for declared outcomes.
+
+REQUIRED OUTCOME
+
+A cloud model with provider, account or tenant, region, resources, identity, network, data, service limits, availability, cost, observability, governance, recovery, and exit.
+
+WHY THIS MATTERS
+
+Cloud speed and abstraction can hide shared failure, provider dependency, data residency, cost, identity, and recovery assumptions. A deployed resource is not automatically secure, resilient, or owned.
+
+APPLICABILITY
+
+Apply when a public, private, hybrid, or managed cloud provides computing, storage, network, data, identity, platform, AI, or operations capability.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no cloud resource, provider, region, account, data, identity, cost, or operational behavior changes and an approved exact baseline applies.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use enterprise, cloud, infrastructure, identity, security, privacy, data, cost, resilience, backup, exit, and operations baselines.
+
+REQUIRED INPUTS
+
+Provider, account, region, resource, topology, identity, data, workload, service limits, SLA, cost, telemetry, compliance, backup, restore, and exit requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Cloud owners approve provider, region, data, identity, cost, architecture, service limits, exceptions, outage, recovery, and exit. Humans accept provider and shared-responsibility risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized cloud metadata, plans, metrics, and cost; draft IaC and policies; and propose optimization. It must not access tenants, provision, change policy, delete resources, or claim cloud security without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Cloud Engineer, Architect, Infrastructure Engineer, Security Auditor, FinOps Analyst, Data Engineer, Platform Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Define provider and boundaries; design accounts, network, identity, resources, data, availability, cost, observability, backup, recovery, compliance, portability, and retirement; provision; validate; monitor; and improve.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show provider, account, region, resource, identity, data, cost, change, evidence, and limitation. Require human approval for privileged, data, regional, destructive, cost, and provider changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use landing zones, tenancy, segmentation, least privilege, encryption, policy, resource limits, multi-zone design, backups, provider abstractions where useful, and tested exit or recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show cloud topology, health, resource, cost, data region, identity, findings, evidence freshness, owner, and authorized scale, isolate, restore, restrict, migrate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Cloud charter; account and region model; resource and dependency catalog; security, cost, observability, backup, recovery, exit, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify provider, account, region, resource, configuration, identity, data, method, time, result, cost, owner, and limitation. Provider certification or dashboard proves only its declared scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, segmentation, encryption, policy, limits, availability, cost, telemetry, backup, restore, failover, regional behavior, portability, and deletion. Test provider and control-plane outage.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared responsibility misunderstood, admin credentials everywhere, region or data ignored, uncontrolled cost, provider lock-in without exit, backup untested, and cloud health equated with service outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict affected resources, preserve state and logs, fail over or restore, rotate credentials, communicate, and reassess data, cost, user, and provider impact. Reopen on provider, region, service, workload, or policy change.
+
+COMPLETION CRITERIA
+
+Provider, boundaries, resources, identity, data, cost, security, resilience, evidence, recovery, exit, owners, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve cloud inventory, IaC, accounts, policies, metrics, cost, incidents, backups, decisions, evidence, exceptions, and open gaps. Hand off to Infrastructure, Platform, Security, FinOps, Data, and Operations.
+
+RELATED CODEX SECTIONS
+
+275-276 Infrastructure and IaC; 278-283 Edge, Containers, Virtualization, Servers, and Administration; 301-330 Operations and Recovery; 391-400 Data and Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, cloud, infrastructure, security, data, cost, and operations context, and the integration roadmap. Exact provider, regions, services, contracts, cost, exit, recovery, and acceptance authority remain unresolved.

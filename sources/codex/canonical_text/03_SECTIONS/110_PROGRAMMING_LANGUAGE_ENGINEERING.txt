@@ -1,0 +1,100 @@
+SECTION 110 — Programming Language Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed design, implementation, evolution, tooling, verification, distribution, and retirement of programming languages and their ecosystems, including syntax, semantics, type systems, compilers, runtimes, libraries, diagnostics, compatibility, and migration.
+
+REQUIRED OUTCOME
+
+A versioned language and toolchain contract with intended users, semantics, safety and security properties, implementation status, conformance evidence, compatibility policy, migration path, and retirement conditions.
+
+WHY THIS MATTERS
+
+Language behavior is infrastructure for every program written in it. Ambiguous semantics, unsound typing, compiler divergence, runtime incompatibility, or poor diagnostics can create failures far beyond the language project.
+
+APPLICABILITY
+
+Applies when a language, dialect, DSL, compiler, interpreter, virtual machine, standard library, formatter, linter, debugger, package ecosystem, or compatibility guarantee is designed or changed.
+
+NON-APPLICABILITY CONDITIONS
+
+A project merely using an established language without changing its language, toolchain, compatibility, or conformance claims is not itself language engineering. Record the consumed baseline and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires language goals, semantic model, grammar, type and memory model, runtime assumptions, target platforms, threat model, compatibility horizon, conformance suite, licensing, and human acceptance authority.
+
+REQUIRED INPUTS
+
+Use cases, syntax, semantics, grammar, type rules, evaluation order, error model, resource and safety limits, ABI or interface rules, implementation strategy, tests, benchmarks, compatibility and migration requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve semantics, safety and security tradeoffs, compatibility breaks, ecosystem commitments, licensing, release, deprecation, and retirement. Qualified language and systems reviewers must challenge material claims.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft grammar, examples, tests, documentation, diagnostics, and implementation proposals. It must not invent semantic authority, declare conformance, hide incompatibility, or release a compiler or runtime without delegated review and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Implementer, Tester, Verifier, Critic, Security Auditor, Optimizer, Documentation Writer, Governance Reviewer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define language purpose, users, scope, non-goals, and compatibility horizon.
+2. Specify grammar, semantics, types, effects, memory, concurrency, errors, modules, tooling, and runtime behavior.
+3. Analyze safety, security, performance, portability, accessibility of tooling, licensing, and migration.
+4. Build reference and production implementations with diagnostics and conformance tests.
+5. Test valid, invalid, ambiguous, adversarial, resource-bound, concurrent, upgrade, and recovery cases.
+6. Publish versioned documentation, compatibility statements, migration tools, support policy, and retirement evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI-generated language features and compiler code remain proposals until human review. Show source specification, implementation, generated tests, tool and model identity, and known gaps. Preserve a stable escape hatch, diagnostics, and manual recovery for tooling failure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate specification, reference interpreter, compiler, runtime, standard library, tools, packages, generated artifacts, and target binaries. Define conformance, determinism, reproducibility, sandboxing, resource limits, ABI, versioning, migration, and deprecation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show language and toolchain version, specification status, conformance, target platforms, compatibility, security findings, release authority, evidence freshness, migration, and retirement controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Language specification, grammar and semantic model, compatibility matrix, reference implementation, compiler or runtime artifacts, conformance suite, diagnostics guide, benchmarks, threat review, migration guide, release record, and retirement plan.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies specification version, implementation, target, test corpus, environment, result, deviations, reviewer, and limitations. Passing examples do not prove complete conformance, safety, or ecosystem compatibility.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Compare reference and production semantics; test parser, type checker, optimizer, runtime, diagnostics, concurrency, memory, errors, resource exhaustion, portability, version compatibility, security, and migration; independently reproduce conformance results.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Undocumented semantics, compiler-specific behavior presented as standard, unsound optimization, silent breaking change, unsafe runtime default, incomplete diagnostics, unbounded resource use, and a migration plan that depends on the retired toolchain.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine the affected release, preserve source and artifacts, route users to a supported version or compatibility mode, publish the defect and impact, and use compensation for external effects. Reopen the specification when evidence or intended semantics change.
+
+COMPLETION CRITERIA
+
+Semantics, implementation, conformance, compatibility, security, support, migration, evidence, ownership, and retirement are explicit for the declared version and targets.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off specifications, test corpus, artifacts, compatibility, decisions, evidence, defects, migration, and open gaps to Compiler, Runtime, Software, Platform, Security, Operations, Testing, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+108 Computer Science; 109 Algorithm Engineering; 019 Requirements Engineering; 020 Systems Engineering; 033 Software Architecture; 044 Runtime Architecture; 045 Security Architecture; 111 Compiler Engineering; 112 Runtime Engineering; 260-261 Dependency and Package Management; 388-389 Version and Deprecation Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. No universal language specification, memory model, conformance level, target platform, licensing model, or compatibility promise is supplied; these remain system-specific gaps.

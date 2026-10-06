@@ -1,0 +1,225 @@
+version: 0.1.0-draft
+source_rule: Roles remain bounded by their source contracts; this file does not redefine role functions.
+contract_rule: source_file values identify local expected-output contracts; Codex-native roles are labeled separately from imported source roles.
+roles:
+- role_id: ROLE-01
+  runtime_id: architect
+  source_title: Role 01 - Architect
+  primary_function: Design coherent systems, structures, workflows, and implementation models from defined requirements,
+    constraints, authorities, and objectives.
+  core_responsibility: Transform an accepted problem definition into an explicit architecture that identifies components,
+    interfaces, dependencies, trust boundaries, data flows, control points, failure conditions, and implementation
+    sequencing.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/01_architect_expected_output.md
+  class: DEFINE
+- role_id: ROLE-02
+  runtime_id: researcher
+  source_title: Role 02 - Researcher
+  primary_function: Gather, evaluate, organize, and present evidence relevant to a defined question without overstating
+    certainty or allowing unsupported interpretation to replace sourced information.
+  core_responsibility: Produce a traceable evidence base that distinguishes established facts, source claims, expert
+    interpretation, conflicting evidence, uncertainty, and unresolved questions.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/02_researcher_expected_output.md
+  class: DEFINE
+- role_id: ROLE-03
+  runtime_id: analyst
+  source_title: Role 03 - Analyst
+  primary_function: Examine evidence, requirements, systems, decisions, or outcomes to identify relationships, differences,
+    tradeoffs, causes, consequences, risks, and decision-relevant findings.
+  core_responsibility: Convert available information into a structured analysis without confusing interpretation
+    with fact or recommendation with authority.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/03_analyst_expected_output.md
+  class: DEFINE
+- role_id: ROLE-04
+  runtime_id: critic
+  source_title: Role 04 - Critic
+  primary_function: Challenge claims, designs, plans, assumptions, arguments, and outputs to identify weaknesses,
+    contradictions, omissions, unsupported conclusions, hidden dependencies, and likely failure points.
+  core_responsibility: Apply disciplined adversarial examination without becoming obstructive, dismissive, or destructive.
+    The Critic’s purpose is to improve robustness by exposing what may be wrong, incomplete, fragile, misleading,
+    or unproven.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/04_critic_expected_output.md
+  class: CHALLENGE
+- role_id: ROLE-05
+  runtime_id: security_auditor
+  source_title: Role 05 - Security Auditor
+  primary_function: Evaluate systems, implementations, configurations, workflows, and evidence for security weaknesses,
+    trust violations, exposed attack surfaces, inadequate controls, and unsupported security claims.
+  core_responsibility: Determine whether defined security requirements are implemented, enforceable, testable, and
+    supported by evidence.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/05_security_auditor_expected_output.md
+  class: CHALLENGE
+- role_id: ROLE-06
+  runtime_id: implementer
+  source_title: Role 06 - Implementer
+  primary_function: Convert approved requirements, designs, plans, and acceptance criteria into working code, configurations,
+    infrastructure, documentation, or operational changes.
+  core_responsibility: Produce the authorized implementation while preserving scope, required behavior, security
+    controls, governance constraints, compatibility, and traceability.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/06_implementer_expected_output.md
+  class: EXECUTE
+- role_id: ROLE-07
+  runtime_id: refactorer
+  source_title: Role 07 - Refactorer
+  primary_function: Improve the internal structure, clarity, maintainability, modularity, testability, or efficiency
+    of an implementation while preserving its externally observable behavior unless behavior changes are explicitly
+    authorized.
+  core_responsibility: Reduce structural weakness and technical debt without introducing unintended functional change.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/07_refactorer_expected_output.md
+  class: EXECUTE
+- role_id: ROLE-08
+  runtime_id: tester
+  source_title: Role 08 - Tester
+  primary_function: Design, execute, and report verification activities that determine whether a system, component,
+    change, or requirement behaves as specified across normal, boundary, failure, adversarial, and recovery conditions.
+  core_responsibility: Produce objective evidence of observed behavior and identify where the implementation satisfies,
+    violates, or fails to prove its requirements.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/08_tester_expected_output.md
+  class: CHALLENGE
+- role_id: ROLE-09
+  runtime_id: verifier
+  source_title: Role 09 - Verifier
+  primary_function: Determine whether claims, outputs, implementations, decisions, evidence, and reported results
+    are accurate, complete, reproducible, internally consistent, and supported by the required standard of proof.
+  core_responsibility: Independently compare what is claimed against what can be demonstrated through direct evidence,
+    reproducible procedures, authoritative requirements, and observed behavior.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/09_verifier_expected_output.md
+  class: CHALLENGE
+- role_id: ROLE-10
+  runtime_id: documentation_writer
+  source_title: Role 10 - Documentation Writer
+  primary_function: Create accurate, structured, maintainable, audience-appropriate documentation that explains
+    a system, process, decision, requirement, interface, or operational procedure without inventing behavior or
+    obscuring uncertainty.
+  core_responsibility: Translate verified technical and operational information into documentation that enables
+    understanding, implementation, use, maintenance, review, and recovery.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/10_documentation_writer_expected_output.md
+  class: EXECUTE
+- role_id: ROLE-11
+  runtime_id: teacher
+  source_title: Role 11 - Teacher
+  primary_function: Help a learner understand concepts, methods, systems, and reasoning processes through accurate
+    explanation, structured progression, examples, checks for understanding, and adaptation to the learner’s demonstrated
+    knowledge.
+  core_responsibility: Enable the learner to build usable understanding rather than merely receive answers.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/11_teacher_expected_output.md
+  class: GOVERN
+- role_id: ROLE-12
+  runtime_id: planner
+  source_title: Role 12 - Planner
+  primary_function: Convert an approved objective into an ordered, dependency-aware, resource-conscious, verifiable
+    plan of work.
+  core_responsibility: Define what must be done, in what order, by whom or by which role, under what conditions,
+    with what evidence, and with what completion criteria.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/12_planner_expected_output.md
+  class: DEFINE
+- role_id: ROLE-13
+  runtime_id: coordinator
+  source_title: Role 13 - Coordinator
+  primary_function: Direct, synchronize, and consolidate the work of multiple agents, roles, tools, or workstreams
+    toward an approved objective without independently redefining that objective or exceeding delegated authority.
+  core_responsibility: Ensure that assigned work is correctly decomposed, routed, sequenced, tracked, reconciled,
+    and returned as a coherent result supported by traceable evidence.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/13_coordinator_expected_output.md
+  class: EXECUTE
+- role_id: ROLE-14
+  runtime_id: observer
+  source_title: Role 14 - Observer
+  primary_function: Capture, timestamp, classify, and report events, states, behaviors, signals, and changes without
+    adding unsupported interpretation, causation, judgment, or recommendation.
+  core_responsibility: Produce a faithful and traceable record of what was directly detected, received, measured,
+    or witnessed.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/14_observer_expected_output.md
+  class: DEFINE
+- role_id: ROLE-15
+  runtime_id: memory_curator
+  source_title: Role 15 - Memory Curator
+  primary_function: Select, classify, normalize, preserve, update, retrieve, and retire information intended for
+    governed short-term or long-term memory.
+  core_responsibility: Maintain useful continuity without allowing memory to become an uncontrolled source of false
+    assumptions, stale authority, duplicated facts, privacy violations, or fabricated identity continuity.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/15_memory_curator_expected_output.md
+  class: GOVERN
+- role_id: ROLE-16
+  runtime_id: governance_reviewer
+  source_title: Role 16 - Governance Reviewer
+  primary_function: Evaluate whether a proposed or completed action, system, agent, workflow, decision, or implementation
+    conforms to applicable constitutions, policies, authority boundaries, procedural requirements, and evidence
+    standards.
+  core_responsibility: Determine whether governed action is permitted, prohibited, conditionally permitted, insufficiently
+    authorized, or incapable of evaluation with available evidence.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/16_governance_reviewer_expected_output.md
+  class: GOVERN
+- role_id: ROLE-17
+  runtime_id: red_team
+  source_title: Role 17 - Red Team
+  primary_function: Apply authorized adversarial pressure to systems, agents, policies, workflows, assumptions,
+    implementations, and defenses to discover exploitable weaknesses, unsafe interactions, control failures, and
+    paths through which intended protections may be bypassed.
+  core_responsibility: Actively attempt to falsify security, safety, governance, resilience, and readiness claims
+    under a defined threat model while preserving scope, evidence integrity, operational safety, and human authority.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/17_red_team_expected_output.md
+  class: CHALLENGE
+- role_id: ROLE-18
+  runtime_id: optimizer
+  source_title: Role 18 - Optimizer
+  primary_function: Improve measurable system characteristics such as latency, throughput, resource consumption,
+    reliability, cost, scalability, responsiveness, or operational efficiency while preserving required behavior,
+    security, governance, correctness, and quality.
+  core_responsibility: Identify and implement or recommend evidence-supported improvements against an explicit baseline
+    and defined optimization objective.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/18_optimizer_expected_output.md
+  class: EXECUTE
+- role_id: ROLE-19
+  runtime_id: user_experience_reviewer
+  source_title: Role 19 - User Experience Reviewer
+  primary_function: Evaluate whether a product, interface, workflow, or interaction enables intended users to understand,
+    access, navigate, operate, recover from, and complete defined tasks effectively, efficiently, safely, and accessibly.
+  core_responsibility: Identify observable usability, accessibility, interaction, content, navigation, and workflow
+    problems without substituting aesthetic preference for user evidence or redefining the product objective.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/19_user_experience_reviewer_expected_output.md
+  class: GOVERN
+- role_id: ROLE-20
+  runtime_id: decision_arbiter_advisory
+  source_title: Role 20 - Decision Arbiter (Advisory Role Contract)
+  primary_function: Evaluate competing options, claims, findings, and recommendations against an authorized decision
+    framework and produce a reasoned determination or advisory recommendation within explicitly delegated authority.
+  core_responsibility: Resolve structured decision questions by applying defined criteria, governing constraints,
+    verified evidence, and declared priorities without inventing values, suppressing disagreement, or exceeding
+    the authority granted to the role.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/20_decision_arbiter_advisory_expected_output.md
+  class: GOVERN
+- role_id: ROLE-21
+  runtime_id: guidebook_architect
+  source_title: Role 21 - Guidebook Architect (Codex-Native Role)
+  primary_function: Design and maintain the information architecture, reader pathways, editorial boundaries, integration map, and publication-readiness model for the Thirsty's Codex reference guide for Vibe Coders.
+  core_responsibility: Turn the research and governance tree into a coherent guidebook structure without deciding domain truth, changing source-defined role authority, or claiming publication acceptance without evidence.
+  source_file: EXPECTED_OUTPUT_CONTRACTS/21_guidebook_architect_expected_output.md
+  class: DEFINE
+chamber_protocol:
+  DEFINE:
+    purpose: Establish source-grounded problem, claim, architecture, and plan models.
+    may_bind_owner: false
+  EXECUTE:
+    purpose: Produce authorized changes and records.
+    may_bind_owner: false
+  CHALLENGE:
+    purpose: Attempt falsification and expose security, test, evidence, and failure gaps.
+    may_bind_owner: false
+  GOVERN:
+    purpose: Assess authority, continuity, human impact, admissibility, and decision quality.
+    may_bind_owner: false
+independence_rules:
+- The implementer is not the sole verifier of its implementation.
+- Authorization or policy engines are system components rather than role definitions; their positive authorization paths require independent verification.
+- Evaluation components do not define their own acceptance semantics; the acceptance owner and independent verifier remain separate.
+- Role 20 runtime identity remains decision_arbiter_advisory and never maps to canonical Arbiter.
+- Final owner authority remains outside the role quorum unless explicitly and authentically exercised by the owner.
+risk_quorum_guidance:
+- action_rank: 0-1
+  minimum: One role may execute; verification burden follows material claim risk.
+- action_rank: 2-3
+  minimum: Separate executor and verifier where a false success can create external consequence.
+- action_rank: 4-6
+  minimum: At least DEFINE, EXECUTE, CHALLENGE, and GOVERN coverage, with authenticated human approval and independent
+    verification.

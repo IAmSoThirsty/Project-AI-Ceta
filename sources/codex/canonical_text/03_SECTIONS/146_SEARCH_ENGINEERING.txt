@@ -1,0 +1,98 @@
+SECTION 146 - Search Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of systems that ingest, index, retrieve, rank, filter, explain, and correct information under explicit relevance, authority, access, freshness, provenance, and user-control constraints.
+
+REQUIRED OUTCOME
+
+A search baseline with sources, indexing, schemas, ranking, permissions, freshness, recall and precision evidence, explanations, abuse controls, and retirement.
+
+WHY THIS MATTERS
+
+Search can omit, expose, distort, or stale information. Ranking and relevance metrics can hide minority needs, unauthorized disclosure, or poor task outcomes.
+
+APPLICABILITY
+
+Applies to keyword, semantic, federated, enterprise, media, code, geospatial, log, and AI-assisted search systems.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to systems with no retrieval, discovery, ranking, filtering, or search-dependent decision. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires information architecture, source ownership, schemas, permissions, indexing, ranking objectives, freshness, evaluation sets, privacy, security, accessibility, and correction authority.
+
+REQUIRED INPUTS
+
+Provide queries, users, sources, relevance goals, filters, ranking, access, freshness, synonyms, language, citations, latency, feedback, and failure requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve source inclusion, access, ranking objectives, protected populations, evaluation, publication, and acceptance. Humans decide disputes over relevance, omission, and disclosure.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose ranking, summarize results, classify sources, and generate queries. It must preserve permissions and citations, expose uncertainty, and never equate rank with truth.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Information Architect, Researcher, Analyst, Security Auditor, Privacy Reviewer, User Experience Reviewer, Implementer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define users, sources, scope, access, vocabulary, relevance, freshness, and lifecycle.
+2. Design ingest, index, query, ranking, filtering, explanation, correction, and deletion paths.
+3. Evaluate recall, precision, task success, accessibility, privacy, security, latency, and bias.
+4. Monitor drift, feedback, abuse, and source change; correct and retire safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show query, user, source, ranking, permission, timestamp, citation, uncertainty, and evidence. Human review is required for access, ranking changes, sensitive sources, and generated results.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate source, index, query, ranker, filter, cache, authorization, result, citation, and feedback boundaries. Enforce access before ranking or caching and preserve deletion propagation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show index version, freshness, source coverage, query, results, ranking rationale, access decisions, quality metrics, incidents, and controls to reindex, restrict, correct, or roll back.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Search charter, source and permission catalog, schema and index design, ranking policy, evaluation sets, relevance and bias evidence, provenance and correction model, runbook, and retirement record.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, index, query, ranker, user context, permissions, timestamp, method, result, and limits. Separate retrieval, ranking, citation, task success, fairness, and security evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify access isolation, freshness, deletion, ranking, recall, precision, synonyms, language, adversarial queries, prompt injection, cache, source loss, accessibility, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Ranking by engagement only; indexing unauthorized data; stale caches; missing citations; hiding no-result states; evaluation on convenient queries; and treating relevance as truth.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict or disable affected index or ranker, preserve source and query evidence, reindex from authority, correct results, notify users, compensate decisions, and reopen evaluation and access review.
+
+COMPLETION CRITERIA
+
+Sources, permissions, ranking, freshness, evidence, accessibility, correction, recovery, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve source and index identity, evaluation sets, queries, decisions, traces, incidents, evidence, and next safe action. Hand off to Information, Knowledge, AI, Data, Privacy, Security, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+030 Information Architecture; 055 Knowledge Architecture; 146 Search Engineering; 147 Recommendation Systems Engineering; 171 Natural Language Processing; 218 Privacy Engineering; 246 Security Testing; 391 Data Retention.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 030, 054-057 and 107-145, Owner Cockpit Requirements, and Status and Evidence Lexicon. Source authority, evaluation populations, protected groups, language coverage, freshness objectives, and legal disclosure constraints remain unresolved.

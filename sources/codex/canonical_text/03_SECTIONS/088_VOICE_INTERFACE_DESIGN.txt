@@ -1,0 +1,96 @@
+SECTION 088 — Voice Interface Design
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define spoken interaction, input, recognition, prompts, turn-taking, feedback, confirmation, privacy, and recovery for voice-enabled systems.
+
+REQUIRED OUTCOME
+
+ - A scoped speaker, listener, context, language, device, task, authority, privacy, and lifecycle model.
+ - Voice flows, prompts, intents, disambiguation, fallback, evidence, accessibility, testing, and acceptance records.
+
+WHY THIS MATTERS
+
+Voice is affected by noise, accent, language, privacy, interruption, and ambiguity. Fluent recognition does not prove correct intent or safe action.
+
+APPLICABILITY
+
+Applies to voice assistants, IVR, hands-free controls, accessibility tools, vehicles, devices, services, and conversational products with spoken input or output.
+
+NON-APPLICABILITY CONDITIONS
+
+No voice input, output, command, privacy, accessibility, or task effect; or an unchanged approved voice baseline with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+Tasks, users, languages, accents, devices, acoustic context, speech and intent models, content, identity, permissions, privacy, security, fallback, and acceptance authority.
+
+REQUIRED INPUTS
+
+Tasks, users, languages, accents, devices, acoustic context, speech and intent models, content, identity, permissions, privacy, security, fallback, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve commands, permissions, disclosures, confirmations, recording, accessibility, language, risk, and acceptance. They retain stop, correction, appeal, and human-support authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft prompts, intents, tests, and summaries. It must preserve transcript, speaker, language, confidence, and privacy context; it must not infer intent or execute consequential actions from uncertain speech.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Voice Interface Designer, Conversational Designer, UX Reviewer, Researcher, Accessibility specialist, Security and Privacy Auditors, Architect, Tester, Verifier, Critic, Governance Reviewer, Implementer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define tasks, invocation, turn-taking, prompts, recognition, intent, confirmation, interruption, errors, fallback, privacy, language, accessibility, and safe action; test with representative speakers and environments.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show transcript or interpretation, confidence, actor, permission, consequence, confirmation, recording state, and recovery. AI proposals remain advisory; keyboard, visual, and human alternatives remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate audio capture, recognition, intent, policy, confirmation, execution, response, logging, and recovery. Enforce identity and authorization independently of recognition confidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show voice session, speaker, language, device, transcript, confidence, permission, action queue, recording, evidence, and controls to cancel, mute, correct, escalate, or recover.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Voice architecture, intents and utterances, prompt and dialogue specs, language and accessibility coverage, privacy and permission model, test evidence, fallback, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify speaker population, language, acoustic context, device, model, version, transcript, method, result, uncertainty, and limitation. Recognition accuracy is not task or safety acceptance.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify accents, noise, silence, interruption, ambiguity, spoofing, permissions, confirmation, privacy, accessibility, localization, fallback, latency, and cancellation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Executing on low confidence; recording without clear control; no transcript or correction; language exclusion; voice-only critical action; and treating recognition score as intent truth.
+
+RECOVERY AND RECONSIDERATION
+
+Cancel or suspend action, preserve transcript and evidence, mute or revoke capture, use alternate input or human support, and reassess affected speakers before resuming.
+
+COMPLETION CRITERIA
+
+Tasks, speakers, languages, authority, privacy, dialogue, evidence, tests, fallback, recovery, open risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve dialogue versions, prompts, models, transcripts, permissions, findings, decisions, evidence, and next action. Hand off to Conversational, Audio, Speech, Accessibility, Localization, Security, Privacy, and Testing.
+
+RELATED CODEX SECTIONS
+
+075 HCI; 087 Sound Design; 089 Conversational Design; 101 Localization; 103 Accessibility Design; 173 Speech Engineering; 186 Prompt Engineering; 247 Accessibility Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance files. Actual languages, speaker populations, recording rules, speech models, device environments, and acceptance thresholds remain unresolved.

@@ -1,0 +1,344 @@
+SECTION 026 — Capability Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed architecture of the enduring abilities required to produce authorized outcomes. Capability Architecture identifies what an enterprise, system, product, service, organization, human-AI team, or ecosystem must be able to do, independent of the temporary projects, departments, applications, vendors, models, or processes used to realize that ability.
+
+This section converts mission, strategy, business architecture, value streams, requirements, risk, and architecture constraints into a stable capability model. It defines capability outcomes, boundaries, ownership, dependencies, realization, competencies, information, technology, resources, controls, evidence, performance, resilience, maturity, lifecycle, gaps, increments, investments, transitions, and retirement.
+
+Capability Architecture does not claim that naming a capability creates it. It does not confuse a feature, function, process, system, team, permission, or model output with an operationally sustained ability. It preserves the difference between required, existing, available, authorized, demonstrated, integrated, scalable, resilient, supported, effective, degraded, and retired capability states.
+
+REQUIRED OUTCOME
+
+- A declared capability-architecture scope, authority, enterprise or system boundary, stakeholders, environments, jurisdictions, and lifecycle horizon.
+- A stable capability taxonomy and map that minimizes dependence on current organization, technology, provider, project, or process labels.
+- A capability catalog with purpose, outcome, beneficiary, owner, authority, scope, inputs, outputs, dependencies, competencies, information, process, functions, organization, technology, partners, controls, measures, evidence, resilience, support, and lifecycle state.
+- Capability levels or decomposition that preserve clear parent-child meaning and avoid arbitrary hierarchy.
+- Traceability from mission, strategy, value propositions, value streams, requirements, risks, obligations, products, services, and architecture decisions to capabilities.
+- A realization model showing how each capability is delivered through people, roles, skills, processes, functions, information, data, applications, technologies, facilities, suppliers, partners, AI, and governance.
+- A dependency and enabling-capability model exposing shared services, bottlenecks, concentration, common-cause failure, sequence, and evidence dependencies.
+- A current-state assessment that distinguishes documented existence, access, authorization, use, demonstration, performance, resilience, supportability, and effectiveness.
+- A target-state capability architecture with authorized priorities, required levels, performance measures, capacity, resilience, control, evidence, and lifecycle obligations.
+- A gap model separating absent capability, insufficient level, inadequate capacity, weak quality, missing authority, poor integration, unproven evidence, fragile dependency, unsupported operation, and retirement risk.
+- Capability increments and transition states with dependencies, investment, ownership, acceptance criteria, evidence gates, adoption, training, migration, rollback, continuity, and retirement.
+- A capability-to-initiative and capability-to-investment model that prevents project completion from being mistaken for capability delivery.
+- A capability measurement and assurance model that distinguishes readiness, availability, authority, performance, quality, resilience, user outcome, benefit, harm, control effectiveness, and evidence confidence.
+- A durable handoff to Process Architecture, Functional Architecture, Operational Architecture, Information Architecture, organization and workforce design, solution and technology design, portfolio and investment governance, testing, operations, and lifecycle management.
+
+WHY THIS MATTERS
+
+Enterprises often organize change around projects, products, systems, or departments because those objects are visible and funded. The enduring ability to achieve an outcome can remain unclear. A project can finish while the required capability is unavailable, unauthorised, poorly integrated, unsupported, inaccessible, or fragile. A system may contain a feature but lack the people, process, information, controls, recovery, or authority required to use it safely.
+
+Capability Architecture creates a stable bridge between strategy and realization. It allows the owner to ask what must remain possible even when the organization, technology, provider, process, or staffing model changes. It reveals shared dependencies, investment gaps, duplicated solutions, hidden manual work, concentration risk, and capability claims unsupported by evidence.
+
+For human-AI systems, this discipline is essential because model capability changes quickly and is easily overstated. A model's technical ability to generate, classify, plan, or execute does not establish permission, reliability, competence, safety, accountability, operational support, or institutional capability. Capability Architecture keeps capability separate from authority and turns AI functionality into a governed realization component rather than a sovereign operating claim.
+
+APPLICABILITY
+
+- Strategy, Business Architecture, Enterprise Architecture, product strategy, portfolio, or transformation work requires a stable view of enduring abilities.
+- Investments, programs, projects, products, services, systems, platforms, teams, suppliers, or AI initiatives must be compared against common outcome requirements.
+- Capability ownership, dependency, maturity, capacity, resilience, evidence, or lifecycle state is unclear.
+- Multiple organizations or systems provide overlapping, fragmented, or duplicated capabilities.
+- A capability depends on cross-functional work, shared information, common platforms, external providers, specialized expertise, or distributed authority.
+- A merger, acquisition, divestiture, outsourcing, insourcing, reorganization, modernization, migration, or retirement changes how capability is realized.
+- A high-consequence capability requires explicit security, privacy, safety, accessibility, legal, resilience, recovery, continuity, or owner-control conditions.
+- AI or automation is proposed as a replacement or augmentation for human work, decision-making, analysis, operation, support, or control.
+- Portfolio and investment decisions require evidence of capability gaps and benefits rather than project advocacy.
+
+NON-APPLICABILITY CONDITIONS
+
+- A bounded change neither creates, modifies, degrades, transfers, duplicates, depends on, or retires a capability, and current evidence supports that conclusion.
+- The work is exploratory and makes no claim that a capability exists, is authorized, is operational, or can be sustained. Hypotheses must remain labeled.
+- An active incident requires containment before capability assessment or redesign can proceed safely.
+- Required operational, workforce, security, financial, partner, supplier, or system evidence is inaccessible or unauthorized, making the assessment speculative.
+- Capability ownership or decision authority cannot be established. Work may continue only as a research package or proposed model.
+
+A non-applicability decision must identify the controlling capability model, exact version, scope, evidence date, decision owner, assumptions, and reopening conditions.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-018 provide research, strategy, portfolio, program, project, market, stakeholder, user, domain, feasibility, and risk context.
+- Section 019 provides requirements, acceptance criteria, and traceability.
+- Section 020 provides system, enabling-system, lifecycle, verification, and validation context.
+- Sections 021-025 provide enterprise, solution, systems, domain, and business architecture context.
+- Business Architecture must provide sufficiently stable value propositions, outcomes, value streams, operating model, decision rights, information, products, services, and target-state context.
+- Capability terms must align with Domain Architecture and Business Architecture or include explicit mappings.
+- Current-state evidence must distinguish capability existence from performance, authority, availability, integration, resilience, and effectiveness.
+- Feasibility and risk conditions must be represented in capability requirements, levels, increments, and acceptance criteria.
+- Required owners, resource authorities, workforce authorities, risk owners, and final human decision points must be known or explicitly unresolved.
+
+REQUIRED INPUTS
+
+- Authorized capability question, scope, enterprise or system boundary, exclusions, decision owner, horizon, and lifecycle state.
+- Mission, business strategy, product strategy, portfolio priorities, value propositions, outcomes, value streams, and operating-model decisions.
+- Stakeholder, affected-party, customer, user, employee, operator, partner, supplier, and ecosystem evidence.
+- Requirements, architecture drivers, domain models, business rules, policies, obligations, risks, controls, standards, exceptions, and acceptance criteria.
+- Current products, services, systems, platforms, processes, functions, organizations, roles, competencies, information, data, facilities, vendors, partners, and contracts.
+- Current capacity, demand, performance, quality, reliability, resilience, accessibility, support, incident, recovery, and benefit evidence.
+- Workforce, skills, training, availability, succession, location, labor, accessibility, and human-factor constraints.
+- Technology, model, data, integration, infrastructure, security, privacy, safety, governance, and operational constraints.
+- Current initiatives, investments, budgets, dependencies, roadmaps, technical debt, operational debt, and retirement commitments.
+- Known capability claims, gaps, assumptions, unknowns, dissent, evidence limitations, and prior assessments.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The authorized human owner remains responsible for:
+
+- Approving capability scope, definitions, outcomes, owners, priority, target levels, investment, and lifecycle decisions.
+- Determining which outcomes, obligations, rights, harms, and tradeoffs matter.
+- Assigning legitimate capability ownership and ensuring owners have appropriate authority, resources, information, and accountability.
+- Approving capability transfer, outsourcing, insourcing, automation, workforce change, supplier dependence, risk acceptance, and retirement.
+- Resolving value, labor, policy, authority, privacy, safety, security, accessibility, legal, and public-interest decisions not validly delegated.
+- Requiring affected-party, workforce, customer, user, regulator, partner, or supplier participation where appropriate.
+- Preventing maturity scores, rankings, benchmarks, or AI recommendations from becoming binding without authorized criteria and evidence.
+- Accepting, rejecting, conditioning, deferring, superseding, or reopening capability architecture decisions.
+- Ratifying capability claims only for the exact scope, environment, demand, authority, evidence, and lifecycle state demonstrated.
+
+AI capability, system permission, organizational access, or prior conversation does not transfer these responsibilities.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may:
+
+- Extract candidate capabilities from authorized strategy, value streams, requirements, operations, products, services, systems, and evidence.
+- Normalize labels, detect duplicates, map dependencies, compare realizations, trace gaps, and maintain catalogs.
+- Analyze capability options, scenarios, capacity, bottlenecks, concentration, resilience, transition, and evidence coverage.
+- Generate candidate definitions, decompositions, levels, measures, increments, acceptance criteria, and evidence requests.
+- Identify unsupported capability claims, inconsistent maturity ratings, missing ownership, weak dependencies, stale evidence, and hidden manual work.
+- Maintain versioning, provenance, assumptions, unknowns, dissent, and reopening triggers.
+
+AI must not:
+
+- Declare a capability operational, effective, safe, compliant, resilient, scalable, or ready without current evidence.
+- Treat model benchmark performance, vendor claims, demonstrations, prototypes, or feature lists as business capability proof.
+- Assign capability ownership, authority, budget, workforce accountability, or risk acceptance without explicit human decision.
+- invent capability definitions, levels, weights, scores, demand, capacity, benefit, cost, or maturity evidence.
+- Rank people or teams through undisclosed, discriminatory, or unauthorized criteria.
+- Conceal human work, accessibility needs, labor implications, external dependencies, support burden, or failure recovery.
+- Replace mandatory human judgment with model confidence.
+- Approve its own capability model, realization, test, or assurance claim where independence is required.
+
+When evidence or authority is insufficient, AI must mark the capability state unknown, unverified, unavailable, unauthorized, blocked, degraded, or proposed as appropriate.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: defines capability structure, boundaries, dependencies, realization, interfaces, lifecycle, failure, recovery, and verification.
+- Researcher: gathers current capability, market, workforce, operational, supplier, regulatory, and benchmark evidence.
+- Analyst: compares capability options, levels, gaps, dependencies, costs, benefits, risks, capacity, and sensitivity.
+- Critic: challenges vague definitions, duplicate labels, unsupported maturity, hidden realization, weak measures, and false readiness.
+- Security Auditor: evaluates identity, authority, data, supply-chain, partner, resilience, and security implications.
+- Tester: translates capability outcomes and conditions into scenarios, tests, acceptance criteria, and coverage models.
+- Verifier: independently checks capability claims, evidence, configuration identity, environment, demand, and scope.
+- Documentation Writer: maintains capability maps, catalogs, definitions, realization views, decisions, and guidance.
+- Planner: sequences capability discovery, assessment, increments, investments, transitions, adoption, testing, and retirement.
+- Coordinator: manages bounded workstreams, dependencies, conflict, evidence, handoffs, and synthesis.
+- Observer: captures actual capability use, demand, performance, incidents, dependencies, workarounds, and state.
+- Memory Curator: preserves definitions, model versions, evidence, decisions, supersession, and continuity.
+- Governance Reviewer: checks authority, policy, obligations, exceptions, delegation, risk acceptance, and safe-halt conditions.
+- Red Team: probes capability claims, concentration, bypass, degradation, demand spikes, supplier failure, and recovery.
+- Optimizer: improves a measured capability realization without silently degrading protected outcomes, controls, or resilience.
+- User Experience Reviewer: verifies that capability realization supports understandable, accessible, controllable, and recoverable journeys.
+- Decision Arbiter Advisory: compares capability options and priorities against authorized criteria without assuming final authority.
+
+The existing role definitions remain controlling and are not redefined by this section.
+
+REQUIRED ACTIVITIES
+
+1. Confirm scope, boundary, authority, decision owner, stakeholders, environments, jurisdictions, horizon, and lifecycle state.
+2. Establish source hierarchy and distinguish observed capability, documented expectation, proposed target, vendor claim, inference, assumption, and unknown.
+3. Derive candidate capabilities from mission outcomes, strategy, value propositions, value streams, requirements, obligations, risks, products, services, and operational evidence.
+4. Normalize capability names around enduring outcome-producing ability rather than current organization, technology, project, feature, process, or supplier.
+5. Define each capability's purpose, outcome, beneficiary, scope, exclusions, owner, authority, inputs, outputs, and acceptance boundary.
+6. Decompose capabilities only where child capabilities have distinct outcomes, ownership, dependencies, realization, measures, or lifecycle decisions.
+7. Map capability relationships, enabling capabilities, dependencies, sequence, shared resources, evidence dependencies, and common-cause failure.
+8. Define capability realization through people, roles, skills, process, functions, information, data, applications, technology, facilities, partners, suppliers, AI, controls, and governance.
+9. Assess current state across existence, access, authority, availability, capacity, performance, quality, integration, resilience, supportability, accessibility, control, evidence, and effectiveness.
+10. Define target capability levels and conditions traceable to outcomes, demand, risk, requirements, architecture, and authorized strategy.
+11. Classify gaps as absent, insufficient level, insufficient capacity, poor quality, missing authority, weak integration, fragile dependency, unsupported, inaccessible, unverified, ineffective, or retirement-related.
+12. Identify capability redundancies, concentrations, single points of failure, shadow realizations, manual work, technical debt, operational debt, and supplier lock-in.
+13. Define measures and evidence for capability readiness, availability, authority, performance, quality, resilience, accessibility, user outcome, benefit, harm, and control effectiveness.
+14. Evaluate realization options and tradeoffs across build, buy, partner, share, outsource, insource, automate, augment, standardize, federate, consolidate, or retire.
+15. Define capability increments with exact outcome, scope, dependencies, resources, authority, evidence, acceptance criteria, transition, rollback, support, and review triggers.
+16. Map capabilities to initiatives, investments, products, services, systems, processes, functions, organizations, information, technology, risks, controls, and benefits.
+17. Validate definitions and assessments with capability owners, operators, users, affected parties, domain experts, finance, workforce, technology, security, governance, and independent reviewers as applicable.
+18. Hostile-review capability claims under demand surge, degraded dependency, provider outage, workforce loss, revoked authority, data failure, model failure, incident, and recovery.
+19. Preserve dissent, exceptions, assumptions, unknowns, residual risks, missing evidence, and reopening triggers.
+20. Produce a durable handoff for Process, Functional, Operational, Information, organization, solution, technology, investment, testing, operations, and lifecycle work.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- AI-generated capability names, maps, scores, and target levels remain proposals until human approval.
+- The AI must show the source and reasoning for each capability definition and distinguish extraction, normalization, inference, recommendation, and unknown.
+- The owner must be able to inspect realization, dependencies, evidence, authority, affected parties, costs, risks, and alternatives before deciding.
+- Capability and maturity scoring must expose dimensions, criteria, weights, thresholds, evidence quality, uncertainty, and who authorized the method.
+- The AI must not use fluency, benchmark scores, or provider claims to imply operational competence.
+- AI-generated gap or investment recommendations must identify mandatory constraints, assumptions, sensitivity, reversibility, residual risk, and evidence that would change the result.
+- Human approval must bind to the exact capability model version, scope, demand, environment, realization, and evidence state.
+- Material changes to demand, authority, realization, provider, data, system, risk, or evidence invalidate affected approvals and assessments.
+- The owner must be able to revoke delegation, stop analysis, narrow scope, supersede a model, and export all durable records.
+- Critical capability state and control must remain available during model or provider outage.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Capability Architecture constrains downstream design while remaining independent of any one realization.
+
+- Capabilities must map to Business Architecture value streams and outcomes, Domain Architecture meaning, Requirements Engineering obligations, and Enterprise Architecture target states.
+- Each capability realization must identify components, interfaces, information, data, authority, controls, evidence, failure, recovery, deployment, support, and retirement.
+- Process and Functional Architecture must explain how capability behavior is performed without redefining capability outcomes.
+- Operational Architecture must show how capabilities combine under real scenarios, environments, timing, resources, degraded states, and command relationships.
+- Information, Data, Application, Technology, Platform, Infrastructure, Integration, Security, Privacy, Safety, Accessibility, AI, and Human Factors Architecture must trace to capability needs where applicable.
+- Shared capabilities require explicit service boundaries, ownership, demand management, prioritization, availability, evidence, and recovery.
+- AI realization must include model identity, version, data, context, tools, permissions, validation, monitoring, fallback, human oversight, revocation, and evidence.
+- Capability changes must trigger impact analysis across requirements, business architecture, value streams, processes, functions, systems, workforce, suppliers, controls, tests, evidence, training, support, and retirement.
+- Architecture must preserve the ability to change realization without losing capability meaning, ownership, continuity, or evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner must be able to:
+
+- Inspect the active capability map, catalog, version, scope, evidence date, owner, authority, and lifecycle state.
+- Navigate from mission, strategy, outcomes, and value streams to capabilities, realization, dependencies, initiatives, investments, systems, measures, risks, controls, and evidence.
+- Distinguish required, proposed, existing, available, authorized, demonstrated, integrated, operational, effective, degraded, unsupported, superseded, and retired states.
+- Inspect the exact realization and evidence behind a capability claim.
+- See capacity, demand, bottlenecks, shared dependencies, concentration, resilience, recovery, and support state.
+- Compare capability options, target levels, increments, costs, risks, benefits, affected parties, and reversibility.
+- Inspect who may define, fund, operate, approve, verify, accept risk for, or retire each capability.
+- Stop, defer, revoke, quarantine, supersede, or reopen capability work within defined authority.
+- Export capability artifacts, decisions, evidence, traceability, and continuity records without chat dependency.
+- Retain essential capability status, stop, fallback, and recovery control during AI or provider failure.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Capability architecture charter, scope, authority, and source register.
+- Capability taxonomy, map, catalog, definitions, levels, and ownership.
+- Capability-to-mission, strategy, value proposition, value stream, requirement, obligation, risk, and architecture traceability.
+- Capability realization views covering people, roles, competencies, process, functions, information, data, applications, technology, facilities, partners, suppliers, AI, controls, and governance.
+- Capability dependency, enabling-capability, shared-service, concentration, and failure-domain model.
+- Current-state capability assessment with evidence and confidence boundaries.
+- Target-state capability architecture and required levels.
+- Capability gap, redundancy, fragility, capacity, support, and retirement analysis.
+- Capability measure, demand, capacity, performance, quality, resilience, accessibility, outcome, benefit, harm, control, and evidence model.
+- Capability increment definitions and transition roadmap.
+- Capability-to-initiative, investment, product, service, system, organization, process, function, information, technology, supplier, and benefit matrix.
+- Capability decision, dissent, assumption, unknown, exception, risk, and open-question registers.
+- Verification, assurance, hostile-review, owner-acceptance, and reopening plan.
+- Durable downstream handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Evidence may include strategy and architecture records, owner decisions, value-stream observations, process and function records, organization and role data, workforce and competency evidence, product and service performance, system telemetry, capacity and demand data, incidents, support records, continuity exercises, control tests, audits, financial evidence, supplier and contract records, user research, accessibility testing, security and privacy assessments, safety evidence, operational demonstrations, recovery tests, and benefit measurement.
+
+Every capability claim must bind to exact scope, outcome, owner, realization, environment, demand, authority, time, method, evidence, limitations, and lifecycle state. The following are insufficient alone: a capability label, a documented process, a trained employee, a software feature, an installed system, a model benchmark, a vendor promise, a successful demo, a completed project, or a passing unit test.
+
+Evidence should distinguish availability from authorization, demonstration from sustained operation, nominal performance from resilience, technical success from user outcome, and current state from target design. When realization, demand, authority, system, supplier, workforce, model, data, environment, policy, risk, or evidence changes, affected capability claims must be re-evaluated.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Select a capability and trace it to mission, outcome, value stream, requirements, owner, realization, dependencies, measures, risks, controls, initiatives, and evidence.
+- Replace a realization component with an alternative and verify that capability meaning remains stable while impacts are exposed.
+- Remove one critical dependency and confirm that capability state, degraded behavior, fallback, recovery, and owner-visible consequence are correct.
+- Increase demand, reduce capacity, revoke authority, expire evidence, disable an AI provider, and remove a critical operator; verify truthful state transitions.
+- Attempt to claim capability from a feature, project completion, demo, benchmark, or vendor statement alone and confirm rejection or downgrade.
+- Compare two capability assessments and verify that definitions, dimensions, scales, criteria, evidence dates, and environments are compatible.
+- Change a capability definition or target level and confirm impact propagation to value streams, requirements, investments, processes, functions, systems, workforce, tests, and evidence.
+- Validate capability increments against explicit outcomes, dependencies, authority, resources, acceptance criteria, evidence gates, rollback, and support.
+- Run an end-to-end operational scenario that requires multiple capabilities and verify coordination, timing, shared resources, failure, recovery, and evidence.
+- Verify that an AI system with technical ability but no authority cannot execute or approve a consequential capability action.
+- Reconstruct capability state, decisions, evidence, and next safe action from durable artifacts without conversation history.
+- Independently verify at least one high-consequence capability claim using evidence not controlled solely by the realization owner.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Capability map copied from an organization chart, application portfolio, process hierarchy, vendor taxonomy, or project list.
+- Capability names that describe current tools, departments, or initiatives rather than enduring outcomes.
+- Capability declared present because a feature, employee, system, model, or provider exists.
+- Capability maturity score with hidden dimensions, arbitrary weights, weak evidence, or no authority.
+- One broad capability hiding materially different outcomes, owners, risks, or dependencies.
+- Excessive decomposition producing a task inventory instead of an architecture.
+- Duplicate capabilities hidden by synonyms or distinct capabilities collapsed under one label.
+- Capability owner without authority, resources, evidence, or operational control.
+- Missing human work, manual exceptions, accessibility support, training, tacit knowledge, or partner contribution.
+- Capacity, demand, resilience, support, recovery, and continuity omitted.
+- AI benchmark or demo presented as operational capability.
+- Capability access confused with authorization or permission.
+- Project completion, system deployment, or training attendance treated as capability outcome proof.
+- Capability investments prioritized without value-stream, dependency, benefit, risk, or evidence context.
+- Shared capability operated as an ungoverned bottleneck or hidden single point of failure.
+- Outsourced capability treated as transferred accountability.
+- Target state represented as current or funded state.
+- Retirement of systems, skills, suppliers, or data without capability continuity.
+- Dissent, weak evidence, or unsupported scores removed to create a clean portfolio view.
+
+RECOVERY AND RECONSIDERATION
+
+When Capability Architecture is blocked or invalidated:
+
+1. Identify the exact capability, definition, owner, realization, dependency, measure, evidence, or decision affected.
+2. Classify the issue as scope, authority, terminology, outcome, realization, dependency, demand, capacity, quality, integration, resilience, support, accessibility, control, evidence, effectiveness, transition, or retirement failure.
+3. Downgrade affected capability claims to the truthful state and prevent unsupported investment, readiness, or operating claims.
+4. Preserve prior model versions, assessments, evidence, dissent, decisions, and supersession history.
+5. Identify safe work and unaffected capabilities that may continue.
+6. Define the smallest evidence request, operational test, owner decision, realization correction, or model update needed.
+7. Reassess affected value streams, requirements, architecture, initiatives, systems, workforce, suppliers, controls, tests, training, support, and benefits.
+8. Reissue capability state with explicit conditions, residual risk, review date, and reopening triggers.
+9. Escalate missing authority, value conflict, workforce impact, affected-party harm, or governing conflict to the authorized human.
+
+A blocked state must include reason, consequence, evidence gap, safe work, minimum resolution, reconsideration condition, and human decision point.
+
+COMPLETION CRITERIA
+
+Capability Architecture is complete for its declared scope only when:
+
+- Scope, authority, source hierarchy, current state, target state, transition state, assumptions, unknowns, and exclusions are explicit.
+- Capability definitions are stable, outcome-based, non-duplicative, and sufficiently independent of current realization.
+- Each material capability has an owner, outcome, beneficiary, scope, realization, dependencies, measures, evidence, risk, resilience, support, and lifecycle state.
+- Capabilities trace to mission, strategy, value propositions, value streams, requirements, obligations, architecture, initiatives, investments, systems, and benefits.
+- Current-state assessments distinguish existence, access, authority, availability, capacity, performance, quality, integration, resilience, supportability, accessibility, evidence, and effectiveness.
+- Target levels and gaps use authorized criteria, visible evidence, and explicit uncertainty.
+- Capability increments include dependencies, resources, authority, acceptance, evidence, adoption, rollback, support, and retirement.
+- Shared, enabling, external, AI, and human capabilities have explicit boundaries and accountability.
+- Required review, testing, verification, hostile review, and owner acceptance have occurred or remain truthfully open.
+- Dissent, exceptions, residual risks, missing evidence, and reopening triggers remain visible.
+- Downstream workers can proceed without inventing material capability meaning, ownership, state, authority, or acceptance criteria.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+The handoff must include:
+
+- Exact capability model identity, version, scope, environment, demand basis, evidence date, and authority state.
+- Capability map, catalog, definitions, ownership, realization, dependencies, assessments, gaps, measures, increments, decisions, risks, and evidence.
+- Traceability to Business Architecture, value streams, requirements, domain models, enterprise and systems architecture, initiatives, investments, products, services, systems, organizations, processes, functions, information, technology, controls, and benefits.
+- Proposed, approved, existing, available, authorized, demonstrated, operational, effective, degraded, unsupported, superseded, and retired states.
+- Assumptions, unknowns, dissent, exceptions, missing evidence, human decisions, review gates, rollback conditions, and reopening triggers.
+- Current safe-to-continue determination and next safe action.
+
+The receiving role must acknowledge the exact version and expose conflicts before use. Conversation history is not a substitute for durable capability continuity.
+
+RELATED CODEX SECTIONS
+
+Upstream: Sections 001-025, especially 004 Mission Strategy, 005 Business Strategy, 006 Product Strategy, 007 Portfolio Management, 008 Program Management, 011 Business Analysis, 016 Domain Analysis, 017 Feasibility Analysis, 018 Risk Management, 019 Requirements Engineering, 020 Systems Engineering, 021 Enterprise Architecture, 023 Systems Architecture, 024 Domain Architecture, and 025 Business Architecture.
+
+Downstream: 027 Process Architecture; 028 Functional Architecture; 029 Operational Architecture; 030 Information Architecture; organization and workforce design; product and service design; application, technology, platform, infrastructure, integration, security, privacy, safety, accessibility, AI, data, delivery, operations, measurement, capacity, resilience, support, maintenance, modernization, deprecation, and retirement sections.
+
+Reopen when mission, strategy, outcome, value stream, requirement, capability definition, owner, authority, realization, demand, capacity, performance, quality, dependency, workforce, supplier, system, model, data, environment, law, policy, risk, control, incident, evidence, investment, benefit, or lifecycle state materially changes.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Source basis:
+
+- Thirsty's Standard v3 supplies truthful completion, evidence-before-claims, current-state inspection, verification, hostile review, continuity, recovery, and bounded reporting.
+- Thirsty's Agents 101 supplies the existing role corpus, authority envelopes, assignment contracts, evidence requirements, independent review, disagreement preservation, and human final authority.
+- Thirsty's Owner's Cockpit Standard supplies capability-versus-authority separation, owner control, governed execution, source-of-truth state, evidence, fallback, recovery, continuity, and owner acceptance.
+- The draft V4 design materials contribute prerequisite-aware capability evidence, bounded role assembly, proof-carrying outputs, dissent ledgers, constructive denial, and trusted-state constraints. They remain draft and unratified.
+- Sections 001-025 supply the current Codex chain from research and strategy through requirements, systems engineering, enterprise, solution, systems, domain, and business architecture.
+
+Unresolved source gaps:
+
+- The supplied corpus does not define one ratified universal capability taxonomy, decomposition rule, maturity scale, capacity method, or assurance level for every organization, system, sector, jurisdiction, or lifecycle.
+- No complete crosswalk has yet been performed against current external capability-based planning, business architecture, enterprise architecture, systems engineering, workforce, resilience, benefits, portfolio, defense, public-sector, healthcare, financial, safety-critical, or other sector methods.
+- Organization-specific capability priorities, ownership, resource authorities, demand forecasts, maturity criteria, financial thresholds, risk tolerances, workforce agreements, and supplier commitments must come from authoritative application evidence.
+- Later Process, Functional, Operational, Information, Data, Application, Technology, AI, Security, Privacy, Safety, Accessibility, Testing, Operations, Support, Measurement, and Retirement sections may reveal missing capability conditions and must be allowed to reopen this draft.
+
+This section is CONTENT-COMPLETE. It is not yet source-reconciled, hostile-reviewed, or owner-accepted.

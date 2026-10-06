@@ -1,0 +1,99 @@
+SECTION 125 - Native Application Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of applications built for a specific operating system or hardware platform, using its native lifecycle, APIs, security model, accessibility services, performance characteristics, and distribution controls.
+
+REQUIRED OUTCOME
+
+An approved native baseline with platform contracts, lifecycle states, permissions, hardware use, accessibility, security, performance, build and signing provenance, release evidence, support, and retirement conditions.
+
+WHY THIS MATTERS
+
+Native APIs provide capability and integration but also create privileged access, vendor coupling, lifecycle drift, and device-specific failure. Treating platform behavior as permanent can compromise users and continuity.
+
+APPLICABILITY
+
+Applies to applications, agents, services, extensions, or device software intentionally implemented against a specific OS, runtime, hardware, or native distribution channel.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to platform-neutral services with no native process, API, binary, permission, signing, or hardware dependency. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires platform SDK policy, supported OS and hardware, native API contracts, signing and identity, threat model, permissions, privacy, accessibility, performance, store, update, support, and retirement authority.
+
+REQUIRED INPUTS
+
+Provide platform behaviors, user journeys, hardware and sensor needs, lifecycle callbacks, data and permission flows, offline requirements, performance and battery targets, test devices, release and rollback constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve privileged capability use, signing, distribution, support scope, risk, store claims, update policy, emergency disablement, and acceptance. Humans retain authority over irreversible device or user effects.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft native code and tests, inspect API changes, and identify misuse. It must not infer permission consent, claim OS behavior without evidence, expose secrets, or sign, publish, or modify device state without authorization.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Security Auditor, Privacy Reviewer, User Experience Reviewer, Accessibility specialist, Implementer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish platform and hardware scope, users, contexts, lifecycle, and authority.
+2. Map native APIs, permissions, data, identity, hardware, lifecycle, and external contracts.
+3. Design safe states, background behavior, upgrades, revocation, accessibility, performance, and recovery.
+4. Implement with reproducible builds, signed artifacts, review, testing, staged release, monitoring, and support.
+5. Requalify on SDK, OS, hardware, dependency, policy, or permission change and retire safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show native API, permission, build, signing, and device context for suggestions and actions. Human approval is required for privileged operations, release, data collection, and user-impacting changes. Preserve manual status and recovery if tools fail.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use explicit native lifecycle, permission, storage, identity, background, sensor, notification, IPC, signing, update, and hardware boundaries. Validate API availability and failure behavior; isolate vendor services and maintain migration paths.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show platform, OS, device, binary, signing, permission, rollout, crash, performance, security, and update status. Provide authorized pause, disable, revoke, rollback, restore, and retirement controls with clear consequences.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Native architecture baseline, API and permission inventory, data-flow and threat records, lifecycle model, device matrix, reproducible build and signing records, test evidence, release package, support runbook, and retirement plan.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies SDK, OS, device, binary hash, signing identity, permissions, configuration, test method, result, date, and limitations. Separate API inspection, device testing, security review, accessibility, performance, crash, and user outcome evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify installation, signing, permission denial, lifecycle interruption, background limits, storage protection, IPC, sensors, notifications, accessibility, localization, performance, battery, upgrade, rollback, revocation, and device loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Using undocumented APIs; broad permissions; hard-coded vendor assumptions; unbounded background work; trusting local storage; signing from an untracked environment; failing offline; and treating native API availability as user benefit.
+
+RECOVERY AND RECONSIDERATION
+
+Stop affected privileged actions, revoke or narrow permissions, preserve evidence, disable the feature, use approved fallback or prior binary, compensate external effects where needed, communicate impact, and reopen platform qualification.
+
+COMPLETION CRITERIA
+
+Platform scope, APIs, permissions, lifecycle, controls, evidence, build provenance, release, support, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve source revision, SDK, signing, binary identity, device evidence, decisions, incidents, exceptions, and next safe action. Hand off to Mobile, Cross-Platform, Security, Accessibility, Testing, Release, Operations, Updates, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+123 Mobile Engineering; 124 Cross-Platform Engineering; 197 Mobile Security; 203 Cryptography; 204 Key Management; 247 Accessibility Testing; 264 Build Engineering; 287 Release Engineering; 378 Software Updates.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 107-124, Owner Cockpit Requirements, and Status and Evidence Lexicon. Platform vendor policies, API lifetimes, hardware populations, support commitments, jurisdictional privacy rules, and recovery objectives remain unresolved until verified.

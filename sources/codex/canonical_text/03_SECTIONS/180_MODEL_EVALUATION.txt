@@ -1,0 +1,103 @@
+SECTION 180 — Model Evaluation
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define independent, reproducible evaluation of models and AI systems against authorized tasks, protected properties, risks, users, environments, and operational outcomes.
+
+REQUIRED OUTCOME
+
+- An evaluation charter with claims, datasets, scenarios, metrics, thresholds, uncertainty, and decision authority.
+- Evidence covering expected, boundary, adversarial, subgroup, safety, privacy, security, accessibility, robustness, and operational behavior.
+- A decision that states what the evidence supports and what remains unknown.
+
+WHY THIS MATTERS
+
+Evaluation is often reduced to a score selected after the fact. Governed evaluation prevents benchmark success, model preference, or a green dashboard from becoming an unsupported safety or readiness claim.
+
+APPLICABILITY
+
+Applies to model selection, training gates, release, monitoring, incident review, retraining, and claims about capability, safety, fairness, robustness, or alignment. Depth increases with consequence and autonomy.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to a purely deterministic non-model change or an exploratory test with no acceptance or operational claim. Record scope, claim boundary, owner, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires model and system contract, intended use, evaluation data, baseline, risk and impact context, test authority, and independent review. Depends on Sections 167-170, 179, 181-183, 253, and 254.
+
+REQUIRED INPUTS
+
+Claim; model and system version; task; population; scenarios; protected properties; test data; baseline; metrics; thresholds; uncertainty; evaluator; independence; environment; and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve claims, metrics, thresholds, exclusions, evaluator independence, release decision, exceptions, and residual risk. Evaluators report honestly and cannot convert a result into permission without owner action.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate tests, score outputs, summarize results, and identify gaps. It must preserve exact inputs and grading rules and must not grade its own success as independent proof or hide failures.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Tester, Verifier, Analyst, Researcher, Critic, Red Team, Safety Auditor, Security Auditor, Privacy Reviewer, Accessibility Reviewer, Governance Reviewer, Documentation Writer, Memory Curator, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+1. Define claim, use, population, risk, metric, threshold, and decision.
+2. Build or select representative and adversarial evaluation sets.
+3. Predeclare procedures, scoring, exclusions, and uncertainty where possible.
+4. Evaluate baseline, subgroups, boundary, robustness, safety, privacy, security, and operations.
+5. Run independent review, sensitivity, replication, and red-team checks.
+6. Record failures, abstentions, disagreement, and evidence limits.
+7. Issue a bounded decision and monitoring or reopening conditions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show claim, model, data, grader, rubric, result, uncertainty, failures, reviewer, and status. Humans must inspect representative failures and can reject or narrow claims. Evaluation output cannot silently grant authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version evaluation sets, prompts, graders, rubrics, models, environments, seeds, results, traces, and decisions. Separate development, validation, and acceptance data. Preserve reproducibility, evaluator access, and evidence immutability.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show evaluation baseline, claim, coverage, scores, uncertainty, failures, subgroups, grader, independence, decision, and freshness. Allow authorized rerun, challenge, narrow, reject, accept, publish, withdraw, and reopen.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Evaluation charter; dataset and scenario register; rubric and grader record; baseline comparison; results and uncertainty; failure catalog; red-team report; decision record; limitations; monitoring gates; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Each result identifies claim, model, version, data, scenario, rubric, grader, environment, metric, uncertainty, result, reviewer, and limitation. Aggregate scores must not hide failures or unsupported populations.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce results; vary prompts, graders, seeds, data, thresholds, and environments; inspect false positives and negatives; test leakage, gaming, subgroup and adversarial cases; and verify the decision does not exceed coverage.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Benchmark overreach; grader bias; self-evaluation treated as independence; cherry-picked samples; metric gaming; threshold drift; hidden abstentions; pass/fail without uncertainty; and evaluation performed after deployment only.
+
+RECOVERY AND RECONSIDERATION
+
+Invalidate affected claims on grader, data, model, environment, or procedure change. Preserve prior evidence, notify owners, narrow or withdraw release, rerun independently, review downstream decisions, and reopen.
+
+COMPLETION CRITERIA
+
+Claim, data, procedure, grader, coverage, results, failures, uncertainty, decision, validity, and reopen conditions are explicit. Status remains CONTENT-COMPLETE until reconciliation and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve evaluation IDs, data, rubrics, graders, prompts, outputs, traces, results, decisions, dissent, and gaps. Hand off to Training, Alignment, Safety, MLOps, Model Operations, Testing, Governance, and HITL.
+
+RELATED CODEX SECTIONS
+
+164 Data Science; 167 Machine Learning Engineering; 179 Model Training; 181 Model Alignment; 182 AI Safety; 184 MLOps; 185 Model Operations; 253 Model Testing; 254 Data Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Testing and AI sections, and evidence lexicon. Actual claims, populations, thresholds, evaluator independence, risk class, and acceptance authority remain unresolved.

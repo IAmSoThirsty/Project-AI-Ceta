@@ -1,0 +1,23 @@
+# Source standards and engineering requirements remain visible.
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Private runtime data must not enter the repository.
+.private/
+.local-runtime/
+.local-models/
+.local-credentials/
+.local-profiles/
+.local-build-cache/
+.local-test-output/
+*.key
+*.pem
+*.p12
+*.pfx
+# Exceptions for actual reviewed PUBLIC verification material must be explicit.
+
+# Reconstructed reference PDF; exact bytes are preserved in two ordinary Git parts.
+/sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf

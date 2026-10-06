@@ -1,0 +1,95 @@
+SECTION 206 — Security Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate security controls, telemetry, detection, triage, escalation, containment, communication, evidence, and continuous improvement across the declared environments and services.
+
+REQUIRED OUTCOME
+
+A security-operations model with monitored assets, signal sources, coverage, detection logic, ownership, triage, response authority, escalation, privacy, evidence preservation, continuity, recovery, and measurable gaps.
+
+WHY THIS MATTERS
+
+Security controls are only useful when they are observable, staffed, interpreted, and connected to action. A dashboard, alert, scanner, or automated verdict can miss attacks, overwhelm operators, expose private data, or create unsafe containment if coverage and authority are unclear.
+
+APPLICABILITY
+
+Apply when systems, data, identities, devices, applications, networks, providers, or physical assets require ongoing security monitoring, detection, response, assurance, or evidence.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when the scope has no ongoing security signal, protected asset, operational action, or incident consequence and an approved exact baseline documents that conclusion.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use security, identity, privacy, threat, vulnerability, incident, continuity, operations, legal, records, and architecture baselines. Identify assets, telemetry, operators, response authority, service windows, retention, and dependencies.
+
+REQUIRED INPUTS
+
+Asset inventory, threat model, telemetry, logs, detections, baselines, vulnerabilities, identities, providers, response plans, escalation, staffing, privacy limits, retention, incidents, and service objectives.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Security owners approve coverage, severity, response, containment, evidence, notification, exceptions, staffing, privacy handling, and risk acceptance. Humans decide material containment, public or customer communication, attribution, legal escalation, and closure.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate authorized signals, summarize events, identify anomalies, draft triage and hunt hypotheses, and propose bounded response steps. It must preserve source, time, asset, identity, confidence, and privacy boundaries; distinguish signal from incident and recommendation from action; and expose missing coverage. It must not suppress alerts, attribute an actor, isolate assets, revoke access, delete evidence, or close an incident without delegated authority and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Security Auditor, Observer, Analyst, Researcher, Threat Intelligence Analyst, Incident Responder, Architect, Coordinator, Implementer, Tester, Verifier, Governance Reviewer, Critic, Red Team, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define monitored assets and coverage; collect and protect signals; establish baselines and detections; triage and prioritize; investigate and preserve evidence; escalate and communicate; contain and recover under authority; tune controls; measure gaps; test playbooks; and record lessons and reopening conditions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show event source, asset, identity, time, correlation, confidence, privacy impact, recommended action, authority, and missing evidence. Require human review for containment, attribution, notification, data access, evidence destruction, and closure. Preserve operator override, pause, appeal, and manual response.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate telemetry collection, normalization, detection, case management, evidence, response orchestration, identity, and retention. Design for clock differences, missing logs, provider loss, tampering, data minimization, and safe degraded operation. Keep response authority distinct from mere signal generation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show coverage, asset state, active alerts and cases, severity, evidence freshness, operator, response authority, dependencies, privacy constraints, and open gaps. Provide authorized acknowledge, escalate, contain, release, preserve, communicate, pause, and close controls with durable audit.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Security-operations charter; asset and telemetry coverage; detection catalog; triage and escalation model; playbooks; evidence and privacy handling; staffing and service measures; test, incident, exception, decision, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, source, event, identity, time, clock basis, method, detection version, analyst or agent, result, confidence, coverage, and limitation. An alert, clean scan, or absent event proves only the declared visibility and rule scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise expected and adversarial signals, missing telemetry, duplicate events, clock skew, false positives, false negatives, provider loss, tampered logs, high volume, privacy filtering, containment, evidence preservation, recovery, and closure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Alert fatigue, unowned detections, blind spots, retention too short for investigation, unprotected logs, automatic containment without authority, attribution from weak evidence, and treating absence of alerts as absence of attack.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve available evidence, declare the gap, narrow or isolate affected actions, restore telemetry, and use manual or alternate detection. Reassess scope, privacy, user impact, containment, legal duties, and residual risk before closing. Reopen on asset, provider, threat, telemetry, policy, or staffing change.
+
+COMPLETION CRITERIA
+
+Assets, coverage, signals, detections, owners, authority, triage, evidence, privacy, response, recovery, tests, measures, gaps, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve coverage baselines, detections, case state, evidence references, decisions, communications, incidents, exceptions, staffing assumptions, and open gaps. Hand off to Threat Intelligence, Threat Modeling, Vulnerability, Incident Response, Operations, Privacy, Records, Testing, and Governance.
+
+RELATED CODEX SECTIONS
+
+045-047 Security, Identity, and Privacy Architecture; 200-205 Identity, Authentication, Authorization, Cryptography, Keys, and Secrets; 207-218 Threat, Vulnerability, Incident, Fraud, Abuse, Trust, and Privacy; 301-330 Operations and Recovery; 402-406 Review and Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security architecture, and the integration roadmap. Exact telemetry, staffing, response authority, retention, notification, privacy, jurisdiction, and service objectives remain unresolved.

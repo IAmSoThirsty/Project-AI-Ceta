@@ -1,0 +1,96 @@
+SECTION 104 — Design Systems
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define reusable design tokens, components, patterns, content, behavior, accessibility, governance, and release controls that support coherent experiences without suppressing justified variation.
+
+REQUIRED OUTCOME
+
+ - A scoped system, consumers, primitives, patterns, ownership, versioning, contribution, accessibility, evidence, and lifecycle model.
+ - Governed components and documentation with tests, exceptions, migration, and acceptance records.
+
+WHY THIS MATTERS
+
+Design systems reduce duplication but can spread a defect at scale. Reuse must preserve context, accessibility, behavior, and user outcomes.
+
+APPLICABILITY
+
+Applies to shared UI, interaction, content, visual, motion, voice, code, token, and service patterns.
+
+NON-APPLICABILITY CONDITIONS
+
+No shared component, token, pattern, accessibility, behavior, release, or consumer effect; or an unchanged approved system baseline with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+UX and UI architecture, component consumers, requirements, accessibility, content, code, versioning, testing, contribution, support, and authority.
+
+REQUIRED INPUTS
+
+Humans own system purpose, standards, accessibility, versioning, exceptions, contribution, support, and acceptance. They decide when reuse harms context and retain deprecation authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+AI may inventory drift, generate variants, and suggest tokens or tests. It must preserve source and context and must not merge, release, or enforce patterns without governance.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory components, tokens, variants, consumers, drift, and test gaps; propose reusable patterns; and generate documentation, migration options, and bounded regression evidence from approved system sources. It must preserve component context, version, consumer impact, accessibility, content behavior, compatibility, ownership, and uncertainty, and must distinguish a suggestion from an approved system rule or release. It must not impose reuse where task outcomes or access needs require variation, silently change shared defaults, bypass contribution or review controls, merge or release breaking changes, deprecate consumer paths, or claim system health from snapshot or component-level evidence alone.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Design Systems Designer, UX, UI, Interaction, Visual, Content, and Accessibility Designers, Architect, Implementer, Tester, Verifier, Governance Reviewer, Critic, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define principles and scope; inventory primitives and consumers; specify tokens and states; establish contribution, review, versioning, accessibility, tests, migration, deprecation, and support.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show component version, state, consumer, actor, authority, accessibility, evidence, exception, and migration. AI suggestions remain proposals.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent tokens, components, behavior, content, accessibility, code, docs, dependencies, tests, release, compatibility, telemetry, and retirement as versioned artifacts.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show system health, versions, consumers, defects, accessibility, evidence, changes, and controls to approve, override, migrate, deprecate, or restore.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Design-system charter, principles, tokens, component specs and code, accessibility and behavior tests, contribution and release workflow, consumer map, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify component, version, consumer, platform, state, test, method, result, and limitation. Component existence or snapshot coverage proves bounded reuse only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify states, accessibility, responsive behavior, content fit, compatibility, version migration, consumer impact, documentation, performance, and regression.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+One-size-fits-all components; hidden breaking changes; inaccessible defaults; token drift; documentation without code parity; and reuse prioritized over task outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine defective component, preserve consumer versions, publish migration or fallback, notify owners, and retest all affected consumers before broad release.
+
+COMPLETION CRITERIA
+
+Scope, ownership, components, versions, accessibility, evidence, tests, migration, recovery, open risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve system versions, components, consumers, dependencies, tests, decisions, evidence, exceptions, and next action. Hand off to UI, UX, Frontend, Content, Accessibility, Testing, and Release.
+
+RELATED CODEX SECTIONS
+
+081 UX Architecture; 083 UI Design; 084 Visual Design; 097 Content Design; 103 Accessibility Design; 118 Frontend Engineering; 258 Configuration Management; 296 Feature Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance files. Actual consumers, platforms, standards, component scope, contribution model, and acceptance thresholds remain unresolved.

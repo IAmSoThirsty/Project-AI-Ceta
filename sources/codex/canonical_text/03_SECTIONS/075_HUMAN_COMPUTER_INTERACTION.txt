@@ -1,0 +1,96 @@
+SECTION 075 — Human–Computer Interaction
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how people perceive, understand, control, correct, and recover from interaction with computational systems across users, operators, maintainers, and affected non-users.
+
+REQUIRED OUTCOME
+
+ - A declared population, context, task, device, modality, accessibility, risk, and lifecycle scope.
+ - Evidence-backed interaction requirements, flows, feedback, error recovery, authority, privacy, and acceptance criteria.
+
+WHY THIS MATTERS
+
+Interaction is where system state becomes human action. Ambiguous feedback, inaccessible controls, hidden automation, or poor recovery can turn technically correct behavior into user harm or loss of control.
+
+APPLICABILITY
+
+Applies when people interact with software, devices, services, agents, physical systems, dashboards, tools, or automation, especially where comprehension, access, decision, or recovery matters.
+
+NON-APPLICABILITY CONDITIONS
+
+Purely internal implementation with no user, operator, maintainer, accessibility, explanation, or control effect; or an unchanged approved interaction baseline with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+Users and tasks, domain and system context, requirements, journeys, accessibility needs, devices, modalities, content, policies, risks, research, telemetry, and acceptance authority.
+
+REQUIRED INPUTS
+
+Users and tasks, domain and system context, requirements, journeys, accessibility needs, devices, modalities, content, policies, risks, research, telemetry, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans define desired outcomes, populations, dignity, consent, accessibility, authority, acceptable burden, risk, and acceptance. They resolve conflicting needs, approve consequential interaction, and retain correction, appeal, stop, and override authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may synthesize research, generate alternatives, inspect interaction traces, and suggest improvements. It must distinguish observed behavior from inference, preserve participant context, and not infer consent, accessibility, preference, or comprehension from sparse signals.
+
+APPLICABLE EXISTING AGENT ROLES
+
+User Experience Reviewer, Researcher, Analyst, Architect, Interaction Designer through existing contract, Tester, Verifier, Accessibility specialist, Governance Reviewer, Critic, Observer, Documentation Writer, Memory Curator, Implementer, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+Define users, tasks, context, goals, states, actions, feedback, errors, recovery, accessibility, privacy, and authority. Research and model journeys; prototype; test normal, ambiguous, denied, interrupted, assistive, and recovery paths; baseline findings and acceptance.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Make system state, acting identity, automation, consequence, uncertainty, permission, and recovery visible. AI-generated interaction remains proposed; users can correct intent, stop actions, obtain non-AI help, and recover without chat dependence.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Connect user goals to system state and enforceable actions. Support perceivable feedback, understandable status, input validation, reversible actions, error recovery, assistive technology, localization, privacy, authorization, latency budgets, and audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show population, task, context, baseline, evidence, accessibility status, active automation, permissions, errors, open findings, and controls to stop, correct, undo, appeal, report, and recover.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Interaction requirements, personas or population records, journey and task models, prototypes, accessibility and risk findings, content and feedback specifications, test plans, research evidence, decisions, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Identify population, task, context, device, modality, participant protection, method, sample, result, limitation, and evidence date. A prototype, preference, completion rate, or AI-generated persona is bounded evidence, not universal truth.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify task success, comprehension, error prevention, recovery, accessibility, privacy, authorization, latency, modality, localization, cognitive load, and user control with representative and edge populations.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Designing for an imagined average user; hiding system state; dark patterns; inaccessible critical actions; irreversible errors; automation without explanation; measuring clicks instead of outcomes; and treating silence as consent.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve participant safety and evidence, disable harmful paths, provide human support and non-AI fallback, correct or withdraw misleading content, and retest affected populations. Reconsider when context, population, policy, system state, or evidence changes.
+
+COMPLETION CRITERIA
+
+Population, tasks, context, interaction model, accessibility, authority, risks, evidence, tests, recovery, open findings, and acceptance owner are explicit. Status remains CONTENT-COMPLETE pending reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve research, findings, decisions, prototypes, versions, participant limits, accessibility evidence, open risks, and next action. Hand off to Interaction, Experience, UI, Accessibility, Content, Application, Testing, Operations, and Governance.
+
+RELATED CODEX SECTIONS
+
+014 Stakeholder Management; 015 User Research; 053 Accessibility Architecture; 075 Human-Computer Interaction; 076 Interaction Design; 079-083 UX and UI sections; 247 Accessibility Testing; 249 Usability Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 001-074, Owner Cockpit Requirements, and evidence conventions. Actual populations, accessibility standards, domain risks, devices, modalities, and acceptance thresholds remain unresolved until supplied.

@@ -1,0 +1,95 @@
+SECTION 253 — Model Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Evaluate model behavior, performance, robustness, fairness, calibration, safety, privacy, security, interpretability, and operational drift against its intended use and limits.
+
+REQUIRED OUTCOME
+
+A model-test model with purpose, population, data, labels, baseline, metrics, slices, thresholds, adversarial cases, human review, monitoring, deployment gates, and recovery.
+
+WHY THIS MATTERS
+
+A model can score well overall while failing important populations, contexts, rare events, or safety cases. Test results are sensitive to data, labels, metric choice, threshold, and deployment environment.
+
+APPLICABILITY
+
+Apply when a statistical, machine-learning, generative, rules-based, simulation, or decision model influences output, ranking, prediction, classification, recommendation, or action.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no model behavior, data, decision, generated content, or consequential output changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use model card or purpose, data and privacy, threat, safety, fairness, security, user, deployment, monitoring, and human-review baselines. Define owner, population, threshold, and authority.
+
+REQUIRED INPUTS
+
+Purpose, inputs, outputs, model and data version, labels, baselines, metrics, slices, thresholds, human review, adversarial cases, deployment context, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Model owners define intended use and unacceptable failure; domain and affected-party experts interpret results; humans approve deployment, threshold, exception, high-impact decision, and retirement.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may help generate test cases, stratify authorized data, compare results, identify drift, and draft explanations. It must preserve data and model provenance, uncertainty, and privacy; it must not evaluate itself as sole judge, fabricate metrics, infer approval, or deploy or alter a model without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Model Tester, Data Scientist, Researcher, Analyst, Statistician, Privacy Reviewer, Security Auditor, Safety Reviewer, User Experience Reviewer, Verifier, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define intended and prohibited use; version model and data; choose metrics and slices; test baseline, robustness, fairness, calibration, privacy, security, safety, explainability, and human handoff; analyze error; gate deployment; monitor drift; and retest.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show model, data, population, slice, metric, threshold, prompt or input context where relevant, result, uncertainty, and limitation. Require human review for high-impact output and use AI judges only with independent controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Trace model, data, feature, prompt, tool, policy, provider, threshold, output, reviewer, and action. Support shadow mode, rollback, version comparison, drift detection, human override, privacy controls, and safe degradation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show model and data version, intended use, metrics, slices, drift, incidents, human-review rate, evidence freshness, owner, and authorized pause, rollback, restrict, recalibrate, accept, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Model-test strategy; model and data register; metrics and slice report; robustness, fairness, security, privacy, and safety results; deployment gate; monitoring and recovery; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify model, data, population, slice, label, metric, threshold, environment, method, result, uncertainty, reviewer, and limitation. Aggregate performance is not evidence for every population or use.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify data lineage, metrics, slices, calibration, robustness, privacy, security, fairness, safety, human review, drift, rollback, and independent reproduction. Test distribution shift and adversarial input.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Benchmark theater, aggregate-only metrics, leaked test data, self-evaluation, threshold optimized without harm analysis, model drift ignored, and output treated as fact or decision.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or narrow model use, preserve inputs and outputs, route to human or fallback, notify owners, correct affected decisions, and reassess data and model. Reopen on drift, data, model, provider, policy, population, or harm change.
+
+COMPLETION CRITERIA
+
+Purpose, model, data, metrics, slices, limits, human review, evidence, results, recovery, owners, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve model and data versions, test sets, metrics, outputs, decisions, incidents, evidence, exceptions, and open gaps. Hand off to Data, AI Operations, Security, Privacy, Safety, Product, Testing, and Governance.
+
+RELATED CODEX SECTIONS
+
+030-031 Information and Data Architecture; 157-158 AI and Machine Learning Engineering; 217-218 Trust and Privacy; 231 Software Testing; 254 Data Testing; 305 AI Operations; 369-371 Experimentation and Optimization.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, AI, data, privacy, safety, and testing context, and the integration roadmap. Exact model, data, population, metrics, fairness, safety, legal, human review, and acceptance authority remain unresolved.

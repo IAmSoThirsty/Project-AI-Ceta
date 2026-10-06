@@ -1,0 +1,103 @@
+SECTION 168 — Deep Learning Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering for deep neural systems, including architecture, training computation, data pipelines, optimization, evaluation, serving, resource use, safety controls, and lifecycle.
+
+REQUIRED OUTCOME
+
+- An attributable neural-system design with architecture, data, objective, compute, artifacts, and operational contract.
+- Reproducible training and evaluation with robustness, calibration, subgroup, privacy, security, and resource evidence.
+- Controlled deployment, monitoring, fallback, and retirement.
+
+WHY THIS MATTERS
+
+Deep models can fail outside benchmarks, encode data defects, consume extraordinary resources, and be difficult to interpret or reproduce. Explicit engineering records make those risks visible and actionable.
+
+APPLICABILITY
+
+Applies to neural networks, representation learners, multimodal models, sequence models, foundation models, and neural components used in consequential systems. It applies to training, fine-tuning, distillation, compression, and serving.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to non-neural deterministic components or conceptual research with no model artifact or operational claim. Record exact scope, owner, date, and reopening condition.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires data and model contracts, compute and supply-chain controls, evaluation, safety, privacy, security, and deployment authority. Depends on Sections 167, 179-184, and 253.
+
+REQUIRED INPUTS
+
+Task; architecture; data; objective; tokenizer or input representation; compute budget; optimizer; checkpoints; reproducibility settings; metrics; threat model; intended and prohibited uses; serving constraints; and human-control plan.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve architecture class, data use, compute, evaluation gates, release, acceptable residual risk, and public claims. Engineers cannot infer safety or authorization from scale, loss, or benchmark improvement.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may suggest architectures, code, hyperparameters, diagnostics, and tests. It must label generated work, preserve exact configuration, and must not fabricate runs, claim interpretability, or authorize release.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Researcher, Analyst, Optimizer, Tester, Verifier, Security Auditor, Privacy Reviewer, Safety Auditor, Critic, Red Team, Documentation Writer, Memory Curator, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+1. Define task, contract, threat, protected properties, and prohibited uses.
+2. Audit data, preprocessing, splits, contamination, and representativeness.
+3. Establish architecture, objective, resource, checkpoint, and reproducibility controls.
+4. Train, validate, stress-test, and compare baselines and alternatives.
+5. Evaluate robustness, calibration, subgroup, privacy, security, latency, and cost.
+6. Verify serving, fallback, monitoring, rollback, and retirement.
+7. Record failed runs, uncertainty, dissent, and owner decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose architecture, checkpoint, data, configuration, output limits, review, and uncertainty. Generated changes remain proposed. Preserve manual review, stop, fallback, and appeal paths for model outputs and deployment actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version code, data, preprocessing, architecture, weights, tokenizer, hardware, libraries, checkpoints, evaluation, container, endpoint, and policy. Protect artifacts and secrets, enforce input/output contracts, and record resource and failure telemetry.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show checkpoint lineage, training state, compute, evaluations, deployment, drift, incidents, and authority. Provide authorized controls to pause training, revoke artifacts, reduce traffic, fallback, rollback, quarantine, retrain, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Neural-system charter; architecture and data record; training configuration; checkpoint register; reproducible environment; evaluation and robustness report; security and safety review; serving contract; deployment and retirement plan; decision record.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify architecture, weights, data, compute, configuration, evaluation set, metric, subgroup, method, result, uncertainty, and limitation. Loss and benchmark scores do not prove real-world safety, fairness, or usefulness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce checkpoints; test preprocessing and serving parity; exercise corruption, shift, adversarial input, resource exhaustion, access, fallback, rollback, and authority revocation; and verify evidence invalidation after configuration changes.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Checkpoint confusion; undocumented preprocessing; contamination; unstable training; benchmark fixation; hidden unsafe capability; unbounded resource use; artifact tampering; and silent post-release retraining.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze affected checkpoints and deployments on unsafe behavior, mismatch, breach, drift, or evidence loss. Preserve artifacts, use approved prior or manual mode, investigate, re-evaluate, and reopen before resuming.
+
+COMPLETION CRITERIA
+
+Architecture, data, training, evaluation, serving, controls, resources, recovery, evidence, and authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve checkpoints, data, code, hardware, environment, metrics, decisions, incidents, dissent, and gaps. Hand off to ML Engineering, Training, Evaluation, MLOps, Model Operations, Safety, Security, and Governance.
+
+RELATED CODEX SECTIONS
+
+167 Machine Learning Engineering; 169 AI Engineering; 179 Model Training; 180 Model Evaluation; 182 AI Safety; 184 MLOps; 185 Model Operations; 253 Model Testing; 264 Build Engineering.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance. Architecture-specific safety criteria, compute authority, data rights, robustness thresholds, deployment context, and support obligations remain unresolved until supplied.

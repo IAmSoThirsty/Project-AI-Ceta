@@ -1,0 +1,103 @@
+SECTION 170 — Generative AI Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering for systems that generate text, code, images, audio, video, structured content, or multimodal outputs, including grounding, safety, provenance, evaluation, tools, user control, and lifecycle.
+
+REQUIRED OUTCOME
+
+- A generation contract specifying purpose, audience, inputs, output limits, sources, authority, review, and prohibited uses.
+- Reproducible prompts, model, retrieval, tools, safety controls, evaluations, traces, and release conditions.
+- Safe handling of uncertainty, refusal, correction, disclosure, misuse, and recovery.
+
+WHY THIS MATTERS
+
+Plausible output can be wrong, copied, biased, unsafe, private, or action-inducing. Generative engineering must make provenance, uncertainty, control, and human responsibility visible at the point of use.
+
+APPLICABILITY
+
+Applies to generation, transformation, summarization, translation, code synthesis, multimodal creation, retrieval-augmented generation, and tool-using generation. Review depth increases with external publication, rights impact, autonomy, or sensitive data.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to deterministic templates or private experimentation with no consequential output. Record scope, owner, evidence date, data handling, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires content and data rights, model and provider records, prompt and tool contracts, evaluation, safety, privacy, security, accessibility, and human-review authority. Depends on Sections 169, 171-173, 180-186, and 188.
+
+REQUIRED INPUTS
+
+Purpose; audience; source rights; model; prompt; context; retrieval; tools; output schema; refusal and disclosure rules; quality and safety metrics; review; logging; cost; retention; and retirement conditions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve use, source rights, output claims, review level, publication, action, exceptions, and risk. They retain responsibility for consequential content and cannot delegate authorship, approval, or accountability merely because a model generated it.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate drafts, alternatives, tests, and bounded transformations. It must label generated content, preserve sources and uncertainty, and must not fabricate citations, claim originality, publish, or execute without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Prompt Engineer, Researcher, Analyst, Implementer, Content Reviewer, Security Auditor, Privacy Reviewer, Safety Auditor, Governance Reviewer, Tester, Verifier, Critic, Red Team, Documentation Writer, and Human-in-the-Loop Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define use, audience, harms, prohibited output, and action boundary.
+2. Establish source, license, consent, privacy, retrieval, and provenance rules.
+3. Specify prompt, model, context, tool, output, refusal, and disclosure contracts.
+4. Evaluate factuality, grounding, relevance, bias, safety, privacy, robustness, and accessibility.
+5. Validate human review, correction, appeal, logging, and safe fallback.
+6. Red-team misuse, injection, exfiltration, reproduction, and unsafe action paths.
+7. Baseline, release, monitor, and retire with owner acceptance.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show generated status, sources, timestamp, model, context, uncertainty, review, and actionability. Require human confirmation for consequential output or tool calls. Preserve edit, reject, report, cite, non-AI, and recovery paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version model, provider, prompt, system instruction, retrieval index, sources, tools, policies, output schema, filters, evaluator, and deployment. Enforce permissions and output validation outside the model. Preserve trace and content lineage.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show generation request, model, sources, context, policy, tools, output status, reviewer, traces, cost, incidents, and evidence. Allow authorized pause, restrict, regenerate, correct, withdraw, quarantine, revoke, compensate, and retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Generation charter; source-rights and provenance register; model and prompt records; tool and output contracts; evaluation and red-team report; disclosure and review design; trace schema; release record; incident and retirement plan.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify request, model, prompt, context, source, tool, policy, output, reviewer, method, date, uncertainty, and limitation. A fluent response or citation does not prove truth, permission, originality, or safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test grounding, citation, hallucination, prompt injection, data leakage, toxic or biased output, copyright and license handling, malformed schema, refusal, ambiguity, provider loss, human review, correction, withdrawal, and tool authorization.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uncited generation; source laundering; prompt-only security; hidden retrieval; fabricated confidence; unsafe tool use; model output treated as record; reviewer rubber-stamping; and silent publication or data retention.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine harmful or unsupported outputs, preserve request and lineage, notify affected owners, withdraw or correct published content, review downstream actions, and use manual or constrained fallback. Reopen after model, source, policy, audience, or risk changes.
+
+COMPLETION CRITERIA
+
+Use, audience, sources, model, prompt, tools, controls, evaluation, review, provenance, recovery, evidence, and authority are explicit. Status remains CONTENT-COMPLETE until reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve prompts, models, sources, contexts, tools, outputs, traces, decisions, incidents, dissent, and gaps. Hand off to NLP, Vision, Speech, Prompt Engineering, Evaluation, Safety, Governance, MLOps, and HITL Operations.
+
+RELATED CODEX SECTIONS
+
+054 Content Architecture; 056 AI Architecture; 089 Conversational Design; 097 Content Design; 169 AI Engineering; 171 Natural Language Processing; 180 Model Evaluation; 182 AI Safety; 186 Prompt Engineering; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, AI and application architecture, and evidence lexicon. Actual content rights, risk class, disclosure rules, model terms, user expectations, and review authority remain unresolved until supplied.

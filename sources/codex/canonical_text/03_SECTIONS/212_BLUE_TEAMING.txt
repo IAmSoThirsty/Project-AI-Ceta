@@ -1,0 +1,95 @@
+SECTION 212 — Blue Teaming
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Build and continuously improve defensive capability to prevent, detect, investigate, contain, communicate, recover from, and learn from security threats.
+
+REQUIRED OUTCOME
+
+A defensive operating model with asset and telemetry coverage, baselines, detections, analyst workflows, response playbooks, hardening, threat-informed validation, evidence, authority, recovery, and measurable improvement.
+
+WHY THIS MATTERS
+
+Defenders work with incomplete signals, changing systems, limited time, and competing service obligations. A tool deployment or alert rule is not a defensive capability unless people can interpret it, act safely, preserve evidence, and recover.
+
+APPLICABILITY
+
+Apply when a team or capability is responsible for security monitoring, detection, investigation, hardening, response, resilience, or defensive learning for systems, people, data, devices, or facilities.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no ongoing defensive activity, protected asset, security signal, response authority, or material threat is in scope and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use security operations, threat intelligence, threat modeling, vulnerability, incident, identity, privacy, continuity, records, staffing, and architecture baselines. Identify assets, coverage, defenders, escalation, authority, tools, training, and recovery objectives.
+
+REQUIRED INPUTS
+
+Asset inventory, threats, intelligence, telemetry, detections, baselines, vulnerabilities, incidents, playbooks, staffing, skills, privacy limits, evidence requirements, service objectives, and owner decisions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Defensive owners approve monitoring, hardening, detection, containment, evidence, user communication, staffing, exceptions, and residual risk. Humans decide high-impact response, attribution, notification, service interruption, and closure; defenders must be able to stop unsafe automation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize authorized signals, correlate events, draft detection logic and playbooks, propose hunts or hardening, and identify coverage gaps. It must preserve asset, source, time, confidence, privacy, and authority boundaries. It must not alter production defenses, block users, delete evidence, attribute incidents, or close cases without explicit delegation and human oversight.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Security Operations Analyst, Blue Team Lead, Security Auditor, Threat Intelligence Analyst, Threat Modeler, Observer, Analyst, Implementer, Tester, Verifier, Governance Reviewer, Critic, Coordinator, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define defensive objectives and assets; measure coverage; establish baselines and detections; triage and investigate; harden and patch; exercise playbooks; coordinate red-team and incident work; preserve evidence; contain and recover; tune controls; train operators; measure outcomes; record lessons.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, asset, event, context, confidence, recommended action, authority, and expected impact. Require human approval for detection deployment, hardening, containment, account or device action, evidence handling, notification, and closure. Maintain manual fallback and accessible operator controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate collection, detection, analysis, case, response, hardening, identity, evidence, and recovery. Design for missing telemetry, adversarial input, provider loss, false positives, alert volume, privacy, and safe degradation. Ensure defensive changes are versioned, tested, reversible, and attributable.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show defensive coverage, asset posture, active cases, detections, findings, evidence freshness, operator, authority, dependencies, and unresolved gaps. Provide authorized tune, pause, deploy, rollback, contain, release, preserve, escalate, and close controls with rationale and audit.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Defensive charter; coverage and telemetry baseline; detection catalog; hardening and response playbooks; training and staffing model; exercise results; case, incident, remediation, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, signal, source, time, clock basis, detection or playbook version, analyst or agent, method, action, result, confidence, coverage, and limitation. A clean dashboard or absence of alert proves only the observed coverage.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise expected and adversarial signals, missing logs, false positives, false negatives, provider loss, tampered evidence, alert overload, hardening rollback, containment, recovery, communication, and operator handoff. Reproduce material defensive claims independently.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Tool-first defense, alert fatigue, unowned playbooks, automatic blocking without authority, lost evidence, hardening that breaks service, detection blind spots, and metrics optimized for activity rather than protected outcomes.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve evidence, narrow unsafe actions, restore or substitute telemetry, revert harmful hardening, escalate, and use manual response. Reassess user impact, service continuity, privacy, and residual risk before resuming. Reopen on threat, asset, provider, staffing, architecture, or telemetry change.
+
+COMPLETION CRITERIA
+
+Assets, coverage, threats, detections, playbooks, owners, authority, evidence, response, recovery, tests, measures, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve defensive baseline, detections, playbooks, case state, exercises, evidence, decisions, incidents, exceptions, staffing assumptions, and open gaps. Hand off to Security Operations, Threat Intelligence, Threat Modeling, Vulnerability, Red Team, Incident Response, Operations, Testing, and Governance.
+
+RELATED CODEX SECTIONS
+
+045 Security Architecture; 206 Security Operations; 207 Threat Intelligence; 208 Threat Modeling; 209 Vulnerability Management; 210 Penetration Testing; 211 Red Teaming; 214 Incident Response; 301-330 Operations and Recovery; 402-404 Review and Postmortem.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security operations context, and the integration roadmap. Exact defensive staffing, telemetry, response authority, service objectives, privacy, retention, training, and acceptance evidence remain unresolved.

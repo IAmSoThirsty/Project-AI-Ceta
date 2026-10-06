@@ -1,0 +1,103 @@
+SECTION 172 — Computer Vision
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering for systems that interpret images, video, depth, or spatial signals, including detection, recognition, segmentation, tracking, generation, and visual decision support.
+
+REQUIRED OUTCOME
+
+- A visual task contract covering sensor, scene, population, environment, output, uncertainty, and action boundary.
+- Evidence for accuracy, robustness, subgroup and condition coverage, privacy, security, safety, and accessibility.
+- Controlled deployment, human review, incident, fallback, and retirement paths.
+
+WHY THIS MATTERS
+
+Vision systems are sensitive to lighting, viewpoint, occlusion, sensor quality, context, and representation. Errors can identify the wrong person, miss danger, expose private imagery, or trigger physical consequence.
+
+APPLICABILITY
+
+Applies to image or video analysis, biometric or object recognition, inspection, medical or industrial vision, autonomous perception, visual search, and image generation. Depth increases with surveillance, physical action, identity, safety, or rights impact.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to static non-semantic graphics processing or exploratory imagery with no operational claim. Record exact scope, sensor, population, owner, and reopening condition.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires sensor and image rights, data lineage, scene definitions, evaluation, privacy, security, safety, accessibility, and human authority. Depends on Sections 059, 060, 170, 180, 182, and 188.
+
+REQUIRED INPUTS
+
+Task; sensor; resolution; scene and environment; subjects; labels; model; thresholds; output schema; occlusion and quality rules; privacy and retention; adversarial plan; evaluation; physical action; and fallback.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve collection, surveillance or identification purpose, thresholds, use, disclosure, physical action, review, retention, and exception. Domain and affected-party experts must review material visual classifications.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may annotate, analyze, generate, and diagnose imagery within authorization. It must preserve image provenance and uncertainty and must not infer identity, consent, or physical truth beyond evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Implementer, Safety Auditor, Privacy Reviewer, Security Auditor, Accessibility Reviewer, Tester, Verifier, Critic, Red Team, Governance Reviewer, Documentation Writer, and Human-in-the-Loop Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define visual task, subjects, scene, sensor, environment, and prohibited use.
+2. Audit collection rights, representation, labels, quality, and leakage.
+3. Define output, confidence, uncertainty, privacy, safety, and action contracts.
+4. Evaluate conditions, subgroups, occlusion, shift, adversarial input, and sensor failure.
+5. Validate human review, appeal, correction, fallback, and physical stop.
+6. Monitor drift, sensor changes, errors, incidents, and retention.
+7. Baseline and hand off exact visual evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source image or lawful reference, sensor, time, model, region, confidence limits, reviewer, and actionability. Provide human confirmation and non-AI inspection where material. Never equate a bounding box or score with identity or intent.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version sensors, calibration, images, labels, preprocessing, models, thresholds, policies, outputs, traces, and retention. Enforce access, redaction, provenance, latency, and safety interlocks outside the model. Preserve safe physical fallback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show sensor, scene, model, output, uncertainty, conditions, alerts, reviewer, retention, and evidence. Allow authorized pause sensing, restrict access, correct, quarantine, revoke, fallback, stop physical action, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Vision task charter; sensor and rights register; dataset and label guide; model card; condition and subgroup evaluation; privacy and safety review; output and action contract; deployment record; incident plan; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify sensor, scene, population, conditions, data, model, threshold, metric, subgroup, method, result, reviewer, and limitation. Aggregate accuracy does not prove performance under all conditions or safe action.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test lighting, angle, occlusion, blur, weather, sensor loss, spoofing, adversarial input, privacy, bias, latency, false positives, false negatives, human review, physical stop, fallback, and retention deletion. Reproduce material claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Biometric overreach; dataset bias; benchmark-only validation; identity inferred from appearance; confidence treated as truth; hidden sensor degradation; surveillance without authority; and automated physical action without interlock.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or restrict vision use on unsafe error, sensor drift, privacy event, spoofing, or evidence failure. Preserve records, notify owners, use manual inspection or safe state, correct downstream decisions, and reopen after scene or sensor changes.
+
+COMPLETION CRITERIA
+
+Task, sensor, data, model, conditions, evaluation, privacy, safety, action, review, recovery, evidence, and authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve sensor and calibration records, images or references, labels, models, evaluations, traces, decisions, incidents, dissent, and gaps. Hand off to Embedded, Robotics, Safety, Privacy, Security, AI, MLOps, Evaluation, and HITL Operations.
+
+RELATED CODEX SECTIONS
+
+058 Robotics Architecture; 059 Embedded Systems Architecture; 072 Signal Processing; 170 Generative AI Engineering; 180 Model Evaluation; 182 AI Safety; 198 Embedded Security; 252 Safety Testing; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, AI Architecture, and evidence lexicon. Actual sensors, image rights, populations, environmental limits, safety thresholds, retention, and action authority remain unresolved.

@@ -1,0 +1,103 @@
+SECTION 189 — Cybersecurity Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Establish and maintain engineered protections for confidentiality, integrity, availability, authenticity, accountability, privacy, safety, and user control across the system lifecycle. Cybersecurity Engineering converts approved risk, threat, governance, architecture, and operational requirements into defensible controls and measurable residual risk.
+
+REQUIRED OUTCOME
+
+ - A bounded cybersecurity scope, threat model, control architecture, owners, authorities, trust boundaries, and lifecycle states.
+ - Security requirements allocated to people, processes, applications, platforms, infrastructure, data, interfaces, suppliers, and operations.
+ - Tested prevention, detection, response, recovery, evidence, and continuous-improvement paths with explicit limitations.
+
+WHY THIS MATTERS
+
+Security failures can harm people, expose records, corrupt decisions, interrupt essential services, and destroy evidence. Security is a system property requiring coordinated engineering, operation, governance, and human judgment rather than a scan result or product feature.
+
+APPLICABILITY
+
+Applies when systems, data, identities, devices, facilities, suppliers, interfaces, models, or operations face unauthorized access, misuse, disruption, manipulation, disclosure, or loss. It applies proportionally to consequence, exposure, and recovery dependence.
+
+NON-APPLICABILITY CONDITIONS
+
+May be recorded only when an approved current security architecture covers the exact scope, version, environment, data, threat conditions, and change with no material effect. Purely descriptive or synthetic work may remain proposed, but cannot claim security acceptance.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 018, 019, 020, 021-048, and 050-052 provide risk, requirements, system, architecture, governance, safety, reliability, and resilience context. Owners for assets, threats, controls, exceptions, incidents, evidence, and acceptance must be named.
+
+REQUIRED INPUTS
+
+Asset inventory, data classifications, trust boundaries, users, operators, dependencies, threat intelligence, risk appetite, control objectives, policies, architecture, vulnerabilities, incidents, recovery targets, and legal or contractual obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human authority defines protected outcomes, accepts residual risk, approves exceptions, assigns owners, authorizes testing, and decides containment, disclosure, recovery, and acceptance. Security engineers advise and implement within that authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory, correlate, model threats, draft controls, analyze telemetry, and propose tests. It must preserve provenance and uncertainty, cannot infer permission or approve risk, cannot expose secrets, and must escalate ambiguous authority, active harm, or incomplete evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Security Auditor, Governance Reviewer, Observer, Critic, Red Team, Implementer, Tester, Verifier, Documentation Writer, Memory Curator, Coordinator, Planner, and Optimizer, selected proportionally to consequence and with independent verification where needed.
+
+REQUIRED ACTIVITIES
+
+1. Establish assets, protected outcomes, scope, owners, environments, trust boundaries, and assumptions.
+2. Identify threats, abuse cases, vulnerabilities, dependencies, attack paths, and likely impact.
+3. Derive, allocate, prioritize, and version security requirements and control objectives.
+4. Design prevention, identity, authorization, hardening, monitoring, detection, response, recovery, and evidence controls.
+5. Assess suppliers, changes, models, data, secrets, configuration, and common failure domains.
+6. Test normal, adversarial, degraded, recovery, and evidence-preservation behavior.
+7. Baseline residual risk, dissent, exceptions, invalidation conditions, and handoff obligations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+The human can inspect what is observed, inferred, proposed, implemented, tested, verified, and accepted. AI recommendations affecting access, disclosure, safety, privacy, continuity, or external communication require human review, visible evidence, alternatives, and a non-AI fallback. No conversational path bypasses identity, policy, audit, or incident controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent assets, threats, controls, requirements, decisions, identities, events, findings, evidence, exceptions, incidents, and risk as versioned attributable records. Enforce controls at boundaries, separate prevention from detection, preserve defense in depth, and make safe halt, isolation, compensation, restoration, and evidence capture independently available.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show security baseline, scope, asset criticality, active threats, control state, evidence freshness, findings, exceptions, residual risk, and available actions. Permit authorized approve, deny, isolate, revoke, contain, restore, disclose, reopen, and retire actions; show actor, authority, impact, and required approval.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Security charter, asset and trust-boundary inventory, threat model, requirements and control matrix, risk register, architecture decisions, test plans and results, exception records, monitoring and response design, recovery plan, acceptance record, and continuity handoff.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify asset, version, environment, threat, method, scope, time, evidence source, owner, result, uncertainty, and limitation. Scans, benchmarks, attestations, and clean tests prove only their bounded claim. Failed, stale, missing, or contradictory evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify traceability from protected outcome to threat, requirement, control, implementation, telemetry, test, incident, and recovery. Exercise unauthorized access, tampering, denial, disclosure, dependency loss, key loss, stale telemetry, incident escalation, restore, and evidence replay. Independently reproduce material claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Treating a scan, certificate, firewall, or green dashboard as total security; unowned assets; security by obscurity; unlogged privileged access; shared secrets; missing recovery; ignoring suppliers and humans; optimizing availability or convenience by weakening control; and allowing AI to suppress findings or act beyond authority.
+
+RECOVERY AND RECONSIDERATION
+
+Contain, isolate, preserve volatile and durable evidence, revoke affected authority, communicate through approved channels, and record the decision chain. Recover from known-good artifacts or approved compensation, validate downstream impact, reassess residual risk, and reopen when threat, scope, architecture, data, or evidence changes.
+
+COMPLETION CRITERIA
+
+Scope, assets, threats, owners, controls, evidence, testing, residual risk, exceptions, recovery, and acceptance are explicit. Normal and hostile paths are tested, unresolved gaps constrain status, and the result remains CONTENT-COMPLETE pending source reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baseline IDs, decisions, evidence, dissent, findings, exceptions, incidents, and next safe action. Hand off to Application, Platform, Infrastructure, Cloud, Network, Identity, Privacy, Governance, Compliance, Security Operations, Incident Response, Testing, Operations, and Retirement sections. Record reopening triggers.
+
+RELATED CODEX SECTIONS
+
+018 Risk Management; 019 Requirements Engineering; 020 Systems Engineering; 021-060 architecture sections; 190-218 security and privacy sections; 246 Security Testing; 270 DevSecOps; 301-330 operations and recovery; 405-406 lifecycle governance and retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 018-188, and the security and lifecycle roadmap. Supplied material does not define one universal risk standard, threat library, sector regime, control catalog, evidence retention period, or recovery target; these remain scope-specific gaps.

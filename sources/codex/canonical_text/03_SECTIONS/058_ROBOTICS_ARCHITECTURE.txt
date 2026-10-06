@@ -1,0 +1,137 @@
+SECTION 058 — Robotics Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed structure of robots, actuators, sensors, controllers, autonomy, human interaction, environments, safety, maintenance, and lifecycle.
+
+REQUIRED OUTCOME
+
+- A robotics context with physical world, tasks, bodies, sensors, actuators, control, autonomy, human authority, hazards, and recovery.
+- Explicit safe states, envelopes, communications, evidence, manual control, update, service, and retirement behavior.
+
+WHY THIS MATTERS
+
+Robotic systems can create immediate physical consequence under uncertainty, latency, sensor failure, environmental change, and human proximity. Simulation or nominal motion does not establish safe real-world operation.
+
+APPLICABILITY
+
+- Software or AI senses, plans, controls, or affects physical motion, force, environment, or equipment.
+- Physical action, human proximity, autonomy, or failure could create material harm.
+
+NON-APPLICABILITY CONDITIONS
+
+- No physical sensing, actuation, autonomy, environment, human interaction, or lifecycle effect changes.
+- An approved baseline covers exact robot, task, environment, and change with no material impact.
+- The artifact is simulation or research and explicitly not a field-safety claim.
+
+Record robot, task, environment, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-057 provide requirements, safety, AI, ML, edge, embedded, data, security, and operations context.
+- Qualified robotics, safety, human factors, domain, maintenance, accessibility, security, and legal authorities are identified or gaps recorded.
+
+REQUIRED INPUTS
+
+- Robot, task, environment, sensors, actuators, controller, autonomy, human interaction, hazards, limits, communications, and lifecycle.
+- Stop, interlock, manual control, update, maintenance, inspection, evidence, recovery, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Safety and domain owners approve tasks, operating envelope, autonomy, controls, training, maintenance, exceptions, and acceptance. Humans retain immediate stop, manual control, isolation, recovery, and retirement authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose paths, analyze sensor or telemetry data, simulate scenarios, and identify hazards. It must preserve environment and uncertainty. It must not exceed task or capability bounds, suppress alarms, issue physical action without authority, or declare safe motion.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Security Auditor, Researcher, Analyst, Observer, Tester, Verifier, Governance Reviewer, Critic, Planner, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define task, environment, people, robot, physical effect, owner, autonomy, and lifecycle.
+2. Model sensors, actuators, controller, energy, communications, control loops, workspace, and hazards.
+3. Define operating envelope, safe state, stop, interlock, manual control, degraded, recovery, and maintenance.
+4. Assess AI and ML data, model, update, security, privacy, accessibility, and human factors.
+5. Validate with users, operators, safety, domain, maintenance, security, privacy, accessibility, and emergency authorities.
+6. Test physical, simulated, degraded, sensor-loss, communication-loss, adversarial, human, and recovery conditions.
+7. Baseline safety case, evidence, decisions, dissent, residual risk, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show robot, task, environment, sensor, model, authority, trajectory, force, human proximity, and consequence.
+- Require human approval for autonomy, task change, workspace, overrides, updates, and physical action.
+- Preserve independent stop, manual, alarm, status, evidence, and recovery controls.
+- Default-deny when localization, perception, authority, or safety evidence is missing.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate mission, plan, controller, sensor input, actuator command, physical state, evidence, and decision.
+- Enforce speed, force, workspace, identity, authority, interlock, and safe-stop constraints at control boundary.
+- Account for latency, calibration, drift, power, thermal, mechanical, communication, and human factors.
+- Preserve immutable decisions and append-only safety and incident evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show robot, task, mode, location, sensors, actuators, autonomy, envelope, operator, alerts, evidence, and lifecycle.
+- Expose stop, manual, isolate, reset, inspect, recover, update, rollback, and retire actions with authority.
+- Explain uncertainty, blocked action, safe state, and recovery conditions accessibly.
+- Export telemetry, commands, decisions, evidence, incidents, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Robotics context, task and environment model, control and safety architecture, autonomy and human-control model.
+- Sensor, actuator, update, maintenance, security, privacy, test, evidence, recovery, acceptance, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify robot, task, environment, configuration, payload, model, sensor, test method, date, result, and limitation.
+- Simulation, bench, demonstration, drill, or field evidence proves only its declared conditions.
+- Safety evidence identifies envelope, hazards, controls, human role, failures, and residual risk.
+- Missing calibration, field, human, or failure evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace task through plan, control, physical action, safety control, evidence, recovery, and retirement.
+- Exercise obstacle, sensor loss, localization failure, stale model, communication loss, power loss, human intrusion, and update failure.
+- Verify independent stop, interlock, manual control, authority, audit, privacy, and recovery.
+- Disable model, provider, network, sensor, actuator, operator, and evidence path and verify safe behavior.
+- Reproduce representative safety and performance claims from exact test package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating simulation, path success, sensor confidence, or nominal motion as safe operation proof.
+- Hiding workspace, human proximity, calibration, latency, power, maintenance, or manual-control assumptions.
+- Allowing AI or remote operator convenience to bypass safety envelope or stop authority.
+
+RECOVERY AND RECONSIDERATION
+
+- On unsafe motion, sensor fault, collision risk, authority loss, or evidence failure, stop or enter safe state and preserve records.
+- Identify people, operator, authority, safe recovery, evidence, communication, and review condition.
+- Use manual recovery, isolation, repair, rollback, reduced task, compensation, or retirement.
+- Reopen on robot, task, environment, model, controller, sensor, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Robot, task, environment, control, autonomy, hazards, human authority, evidence, recovery, and lifecycle are explicit.
+- Real-world, degraded, emergency, maintenance, update, and retirement paths are addressed or justified.
+- Exact limits and unresolved safety evidence are recorded; CONTENT-COMPLETE does not imply safe deployment.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve robot, mission, model, controller, sensor, command, incident, decision, evidence, dissent, and gaps.
+- Hand off to Embedded, Hardware, Edge, AI, Safety, Security, Reliability, Testing, Operations, and Retirement.
+- Record changes requiring reopening all affected architecture and safety baselines.
+
+RELATED CODEX SECTIONS
+
+- 019-057 Requirements through Machine Learning Architecture; 059-060 Embedded Systems and Hardware.
+- 073-074 Control Systems and Robotics Engineering; 182 AI Safety; 198-199 embedded and hardware security; 252 Safety Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-057, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal robot, task, safety envelope, human factors, certification, or field evidence is supplied. Actual hardware, environments, authorities, and acceptance remain unresolved.

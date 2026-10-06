@@ -1,0 +1,95 @@
+SECTION 282 — Server Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design and operate physical or virtual servers with secure identity, operating system, resources, storage, network, patching, observability, availability, and recovery.
+
+REQUIRED OUTCOME
+
+A server model with hardware or virtual host, operating system, services, identity, configuration, resource, network, storage, patch, monitoring, backup, and retirement ownership.
+
+WHY THIS MATTERS
+
+Servers combine privileged software, data, network, and physical or virtual dependencies. Unpatched, overprivileged, poorly monitored, or undocumented servers create broad and persistent risk.
+
+APPLICABILITY
+
+Apply when a server hosts services, data, agents, workloads, control planes, or infrastructure that affects an outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no server, operating system, hosted service, configuration, resource, or lifecycle behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use infrastructure, virtualization, cloud, identity, configuration, patching, network, storage, security, backup, and operations baselines.
+
+REQUIRED INPUTS
+
+Server, host, OS, services, identity, configuration, packages, network, storage, resources, telemetry, patch, backup, recovery, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Server owners approve access, services, patching, maintenance, resource, backup, outage, recovery, exceptions, and retirement. Humans accept availability and security tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized server inventory, configuration, logs, and metrics; draft hardening and maintenance; and propose diagnosis. It must not access privileged state, change services, patch, reboot, or destroy without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Server Engineer, Systems Administrator, Infrastructure Engineer, Security Auditor, Network Engineer, Storage Administrator, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Inventory; secure identity and OS; configure; install services; patch; monitor; capacity-plan; back up; test restore; maintain; troubleshoot; replace; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show server, host, OS, service, identity, change, impact, evidence, and limitation. Require human approval for privileged, patch, reboot, data, production, and destructive actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use least privilege, hardened image, segmentation, configuration baseline, service isolation, resource limits, logging, patch rollback, backup, restore, and out-of-band recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show server health, services, resources, patches, findings, storage, network, evidence freshness, owner, and authorized isolate, patch, reboot, restore, rollback, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Server catalog; OS and service baseline; access and configuration; patch and maintenance; telemetry, backup, recovery, incident, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify server, host, OS, service, version, configuration, method, time, actor, result, and limitation. A ping or uptime metric proves only reachability or observed availability.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, hardening, services, patch, configuration, resources, network, storage, logging, backup, restore, failover, and retirement. Test unauthorized service and OS failure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared admin, unmanaged server, unsupported OS, patch without rollback, logs missing, backup untested, service dependency unknown, and uptime treated as correctness.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate, preserve logs and state, restore or rebuild, rotate credentials, fail over, communicate, and reassess service and data impact. Reopen on OS, service, host, dependency, or threat change.
+
+COMPLETION CRITERIA
+
+Server, OS, services, identity, configuration, resources, patches, evidence, backup, recovery, owners, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve server identity, images, configurations, changes, patches, incidents, backups, decisions, evidence, exceptions, and open gaps. Hand off to Administration, Network, Database, Storage, Security, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+275 Infrastructure; 281 Virtualization; 283 Systems Administration; 284 Network; 285 Database; 286 Storage; 378-381 Maintenance and Patching; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, infrastructure, systems, security, and operations context, and the integration roadmap. Exact server classes, OS, services, patch, recovery, users, and acceptance authority remain unresolved.

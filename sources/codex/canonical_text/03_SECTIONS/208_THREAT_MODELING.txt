@@ -1,0 +1,95 @@
+SECTION 208 — Threat Modeling
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Make security, safety, privacy, abuse, fraud, and resilience threats explicit early enough to shape requirements, architecture, controls, tests, operations, and owner decisions.
+
+REQUIRED OUTCOME
+
+A versioned threat model with assets, actors, trust boundaries, entry points, assumptions, threats, abuse cases, impacts, likelihood or uncertainty, mitigations, residual risk, owners, evidence, and reopening conditions.
+
+WHY THIS MATTERS
+
+Threats that remain implicit are rarely tested or owned. A model can also create false assurance when it lists generic threats without the actual system, adversary capability, affected people, control limits, or evidence that mitigations work.
+
+APPLICABILITY
+
+Apply when a system, product, process, device, data set, organization, AI capability, or change can create security, safety, privacy, financial, social, operational, or abuse consequences.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only for a bounded, low-consequence, reversible scope with no material trust boundary, protected asset, affected party, or new threat assumption, supported by an approved exact baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use current requirements, architecture, data and process models, user and owner context, incidents, intelligence, vulnerabilities, privacy, safety, legal, and operational evidence. Identify model owner, affected parties, review authority, and change triggers.
+
+REQUIRED INPUTS
+
+Objective, scope, assets, people, actors, identities, data, flows, interfaces, environments, trust boundaries, assumptions, dependencies, threats, impacts, controls, incidents, evidence, and unresolved questions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners identify unacceptable harm, protected populations, risk appetite, legal or safety duties, authority boundaries, and acceptance criteria. Humans approve threat scope, residual risk, exceptions, high-impact mitigations, and decisions affecting rights, access, safety, or public communication.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized architecture and evidence, enumerate threat hypotheses, compare patterns, draft abuse cases and tests, identify missing assumptions, and challenge the model. It must distinguish source, observation, inference, scenario, likelihood, impact, and recommendation. It must not claim exhaustive coverage, invent actors or evidence, set risk acceptance, or authorize defensive or offensive action without delegation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Security Auditor, Risk Analyst, Researcher, Observer, Analyst, Critic, Red Team, Safety Reviewer, Privacy Reviewer, Tester, Verifier, Governance Reviewer, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define purpose and scope; inventory assets and affected parties; map flows and trust boundaries; identify actors and capabilities; enumerate threats and abuse cases; assess impact and uncertainty; map controls and owners; identify residual risk; design tests; review dissent; baseline and reopen on change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show model version, scope, assumptions, evidence, actor capability, affected party, impact, uncertainty, mitigation owner, and residual risk. Require human review for high-impact scenarios, acceptance, exceptions, and changes to protected outcomes. Preserve disagreement and unknowns rather than converting them into confidence.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent assets, flows, trust boundaries, identities, controls, events, assumptions, and threats as traceable versioned records. Link each material threat to preventive, detective, responsive, and recovery controls, tests, evidence, and an owner. Model human, AI, supplier, physical, and organizational boundaries where relevant.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show scope, model version, assets, threats, impacts, assumptions, confidence, control coverage, residual risk, owners, open dissent, and change triggers. Provide authorized accept, reject, defer, assign, reopen, and risk-escalation controls with rationale and evidence.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Threat-model charter; asset and actor inventory; data-flow and trust-boundary model; threat and abuse-case register; control and test mapping; residual-risk and exception register; review, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify system version, scope, asset, actor, assumption, source, method, scenario, impact, uncertainty, control, test, owner, and limitation. A checklist or generic threat library proves neither coverage nor mitigation effectiveness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Independently reconstruct the model; challenge assumptions; verify assets, actors, boundaries, threats, mitigations, owners, and tests; exercise high-impact scenarios; compare with incidents and intelligence; and confirm change triggers and residual-risk decisions.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Generic checklist theater, missing affected people, trust boundary omission, threat count as quality, risk score without evidence, mitigation without owner, silent dissent, and model treated as complete after architecture changes.
+
+RECOVERY AND RECONSIDERATION
+
+Mark affected conclusions stale, preserve prior model and evidence, narrow the decision, and obtain the missing architecture, source, or human judgment. Reassess controls and residual risk after incidents, changes, new intelligence, population shifts, or newly discovered harms.
+
+COMPLETION CRITERIA
+
+Scope, assets, actors, boundaries, threats, impacts, controls, tests, owners, evidence, residual risk, dissent, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve model identity, assumptions, decisions, evidence, threat history, control mapping, tests, exceptions, dissent, and open gaps. Hand off to Architecture, Requirements, Security Operations, Vulnerability, Red Team, Blue Team, Privacy, Safety, Testing, and Governance.
+
+RELATED CODEX SECTIONS
+
+018 Risk Management; 019 Requirements Engineering; 020-047 Architecture; 206 Security Operations; 207 Threat Intelligence; 209 Vulnerability Management; 210-212 Teaming and Testing; 214 Incident Response; 217 Trust and Safety.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, requirements and architecture context, and the integration roadmap. Exact threat sources, risk method, adversary capability, affected populations, sector obligations, and acceptance authority remain unresolved.

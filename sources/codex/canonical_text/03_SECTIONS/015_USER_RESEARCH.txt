@@ -1,0 +1,326 @@
+SECTION 015 — User Research
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Establish a truthful understanding of the people who use, operate, own, administer, depend upon, or are materially affected by a product, service, system, process, or AI capability by examining their real goals, contexts, language, behaviors, decisions, constraints, accessibility needs, trust expectations, failure experiences, and recovery practices.
+
+User research is not persona invention, preference collection, or validation theater. It is governed inquiry into actual human experience. Its purpose is to reduce the risk that architecture, interfaces, automation, and product decisions force people to adapt to assumptions that were never observed or consented to.
+
+REQUIRED OUTCOME
+
+- A research brief linking the user-research question to a specific product, service, system, policy, or design decision.
+- An explicit population and participant plan covering intended users, owner and operator roles, affected non-users, excluded groups, accessibility, language, culture, geography, and context.
+- A lawful and ethical method with informed consent, safe withdrawal, privacy, security, compensation, retention, and AI-use disclosure where applicable.
+- Evidence-grounded user jobs, goals, journeys, mental models, terminology, decision points, pain, workarounds, risks, and recovery expectations.
+- Observed normal, boundary, failure, denial, interruption, and recovery behavior rather than happy-path preference alone.
+- Findings separated from researcher interpretation, product recommendation, assumptions, and unresolved questions.
+- A traceable set of design and product implications ready for Business Analysis, Domain Analysis, Requirements Engineering, UX, accessibility, safety, and validation work.
+- A durable research repository and continuity record that protects participants while allowing later reviewers to understand the basis and limits of each finding.
+
+WHY THIS MATTERS
+
+A technically coherent system can still fail because it uses the wrong language, assumes the wrong mental model, hides consequence, interrupts real work, excludes disabled users, or provides no usable recovery path. When research is skipped, internal stakeholders and AI-generated narratives become substitutes for users.
+
+AI increases both the reach and the risk of user research. It can help prepare instruments, transcribe, translate, cluster observations, and expose patterns. It can also fabricate participants, infer sensitive traits, generate false quotations, flatten dissent, and create a synthetic impression of human understanding. Governed user research ensures that actual human evidence remains distinguishable from simulation and that people retain dignity, agency, consent, correction, and control.
+
+APPLICABILITY
+
+- A product, service, workflow, interface, AI system, policy, or operational process is intended for or materially affects people.
+- User needs, jobs, language, mental models, trust, accessibility, or failure behavior are uncertain.
+- A design or automation proposal may change human decisions, workload, authority, accountability, privacy, safety, or recovery.
+- Existing analytics, support data, stakeholder statements, or internal assumptions do not explain why users behave as observed.
+- The system serves multiple roles, contexts, cultures, languages, devices, abilities, or levels of expertise.
+- A release, redesign, migration, deprecation, or retirement may disrupt complete user or owner journeys.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work has no human user, operator, owner, participant, subject, or materially affected party and creates no human-facing consequence.
+- The request is to analyze aggregate market demand rather than situated user behavior; Market Research controls that question.
+- The task is to verify a finished design against known criteria; User Validation or Usability Testing may be the controlling activity, though prior research should still be consulted.
+- No lawful basis, consent path, participant protection, accessibility accommodation, or secure data-handling method can be established.
+- Synthetic users, model-generated personas, or internal role-play are the only available inputs but the conclusion concerns real people.
+
+PREREQUISITES AND DEPENDENCIES
+
+- An authorized research question, decision owner, intended downstream use, scope, and consequence level.
+- Section 001 Research and relevant Mission Strategy, Product Strategy, Stakeholder Management, and Business Analysis context.
+- Initial identification of user, owner, operator, administrator, affected non-user, and vulnerable or underrepresented groups.
+- Privacy, consent, security, accessibility, legal, labor, records, and retention requirements appropriate to the participants and data.
+- A research plan proportional to risk, uncertainty, diversity of context, and cost of being wrong.
+- A repository capable of separating participant evidence, researcher interpretation, AI-derived analysis, recommendations, and decisions.
+
+REQUIRED INPUTS
+
+- The human's actual product, service, system, policy, or design question and the decision it will support.
+- Existing research, stakeholder findings, support records, incidents, analytics, complaints, accessibility findings, feedback, and prior design assumptions.
+- Known user roles, owner jobs, workflows, environments, devices, input methods, languages, cultures, abilities, constraints, and consequences.
+- Current interfaces, prototypes, products, services, documentation, processes, workarounds, and recovery paths.
+- Recruitment channels, sampling frame, inclusion and exclusion criteria, compensation, schedule, research tools, and moderator capacity.
+- Consent, privacy, security, recording, transcription, translation, data-use, AI-processing, retention, deletion, and participant-contact rules.
+- Known unknowns, disputed assumptions, high-risk journeys, and evidence that would change the product or design decision.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The authorized human research owner defines the legitimate question, participant protections, intended use, and decision boundary. Participants retain rights over consent, withdrawal, correction, and treatment according to the applicable context.
+
+- Approve the research question, population, method, recruitment, participant protections, and use of findings.
+- Ensure participants are not coerced by employment, customer, authority, financial, care, or platform relationships.
+- Authorize access to private settings, sensitive workflows, protected records, recordings, assistive technologies, or regulated populations.
+- Provide or obtain accommodations, language support, compensation, safe withdrawal, and grievance paths where applicable.
+- Correct AI or researcher interpretations that misstate lived experience, terminology, identity, role, or consequence.
+- Resolve value conflicts and decide whether evidence is sufficient for product, design, automation, or release decisions.
+- Reject research uses that exceed original consent, purpose, scope, or retention authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+The AI may support planning, collection, transcription, translation, coding, synthesis, and traceability only within the authorized method. It may not fabricate human evidence or silently substitute model simulation for participation.
+
+- Disclose AI involvement when it materially affects participant consent, interaction, recording, transcription, analysis, or downstream use.
+- Never invent participants, interviews, observations, quotations, demographic details, emotions, motives, personas, accessibility needs, or consent.
+- Separate direct participant statements and observed behavior from researcher notes, inference, sentiment analysis, clustering, and recommendation.
+- Avoid inferring sensitive traits or identities not voluntarily provided and legitimately required.
+- Use participant language accurately and preserve conflicting or minority findings rather than normalizing them away.
+- Avoid leading questions, persuasive framing, simulated empathy, or conversational pressure intended to obtain a preferred answer.
+- Protect raw research data from unnecessary model exposure, provider retention, logs, cross-purpose use, or training ingestion.
+- Identify when the sample, setting, moderator, prototype fidelity, translation, or AI analysis limits generalization.
+- Do not convert research findings directly into product commitments, requirements, or consequential execution without downstream authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Primary roles:
+
+- User Experience Reviewer — identifies intended users and roles, examines complete journeys, accessibility, comprehension, agency, trust, failure, recovery, and evidence-backed friction without inventing personas.
+- Researcher — defines the question, method, source hierarchy, inclusion, exclusion, evidence quality, conflicting findings, uncertainty, and traceable conclusions.
+- Observer — captures behavior, events, states, timing, environment, and gaps without assigning unsupported motive, cause, severity, or recommendation.
+
+Common supporting roles:
+
+- Analyst — compares patterns, segments, contexts, alternatives, causes, tradeoffs, and decision implications while disclosing sampling and measurement limits.
+- Planner — sequences recruitment, sessions, analysis, validation, decision gates, and data disposition.
+- Coordinator — assigns researchers, moderators, accessibility support, translators, and reviewers while preserving provenance and participant protections.
+- Memory Curator — preserves only authorized, necessary, source-bound research memory with expiry, access, correction, and deletion controls.
+- Teacher — prepares understandable participant and owner materials without talking down to users or changing the research purpose.
+
+Challenge and assurance roles where consequence warrants:
+
+- Critic — attacks framing, hidden assumptions, omitted alternatives, and unsupported confidence.
+- Verifier — checks artifact identity, evidence integrity, acceptance boundaries, and the exact status of claims.
+- Governance Reviewer — checks objective fidelity, authority, delegation, policy, evidence, and human decision boundaries.
+- Security Auditor — reviews research tooling, recordings, identities, access, provider use, reidentification, leakage, and retention risk.
+- Red Team — attacks leading questions, selection bias, coercion, synthetic evidence, accessibility exclusion, privacy leakage, researcher expectancy, and false validation.
+- Decision Arbiter Advisory — structures design or product implications under authorized criteria while keeping participant findings distinct from decisions.
+
+Role selection must use the smallest sufficient set, preserve chamber independence where review is required, and leave every source-defined role contract unchanged.
+
+REQUIRED ACTIVITIES
+
+1. Research question and decision linkage
+State the exact question, product or system decision, owner, scope, required confidence, consequence, and evidence that would change the decision.
+
+2. Population and role definition
+Identify intended users, owners, operators, administrators, support staff, affected non-users, excluded groups, vulnerable populations, and relevant contexts without inventing personas.
+
+3. Ethics, consent, and protection design
+Define lawful basis, informed consent, withdrawal, privacy, recording, compensation, accessibility, language, data use, AI involvement, retention, deletion, and grievance handling.
+
+4. Sampling and recruitment
+Establish inclusion, exclusion, recruitment channels, sample rationale, missing populations, conflicts, incentives, and limitations. Do not claim representativeness without a basis.
+
+5. Method selection
+Choose interviews, contextual inquiry, observation, diary study, task analysis, participatory design, survey, prototype session, cognitive walkthrough, accessibility evaluation, or mixed methods based on the question.
+
+6. Instrument and session preparation
+Use neutral questions, realistic tasks, representative content and data, appropriate prototype fidelity, accessibility accommodations, and clear moderator boundaries.
+
+7. Contextual observation
+Observe actual or representative work, artifacts, interruptions, handoffs, decisions, constraints, workarounds, tools, environment, and recovery behavior. Record before interpreting.
+
+8. Job and journey mapping
+Map trigger, goal, entry, information needs, decisions, actions, evidence, consequence, success, failure, denial, recovery, exit, and continuity for critical journeys.
+
+9. Language and mental-model analysis
+Capture participant terminology, expectations, conceptual models, trust cues, uncertainty interpretation, and points where system language forces technical reverse-engineering.
+
+10. Accessibility and inclusion analysis
+Examine complete journeys across relevant abilities, input methods, devices, environments, cognitive load, language, culture, and support needs.
+
+11. Failure, risk, and recovery inquiry
+Study mistakes, uncertainty, interruptions, degraded states, unsafe conditions, automation surprises, support, fallback, appeal, and recovery rather than ideal use alone.
+
+12. Data preparation and analysis
+Separate raw evidence, redacted evidence, codes, themes, derived findings, AI-assisted analysis, outliers, conflicting findings, and limitations. Preserve the route back to source.
+
+13. Triangulation and adversarial review
+Compare methods, roles, contexts, analytics, support, incidents, and contradictory evidence. Search for researcher and sponsor bias.
+
+14. Finding validation
+Review material interpretations with participants, representative users, domain experts, or independent researchers where appropriate; preserve disagreement.
+
+15. Decision synthesis and handoff
+Produce findings, implications, assumptions, open questions, design hypotheses, and next research actions without converting them into unauthorized requirements or claims.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Participants must know whether they are interacting with a human, AI, or combined research process when that distinction affects trust, consent, data use, or interpretation.
+- Research systems must distinguish participant words, researcher notes, AI transcription, AI translation, AI coding, inference, and approved finding.
+- Participants must be able to decline, pause, withdraw, skip questions, request accommodation, correct records, and understand what happens to their data where applicable.
+- The AI must not generate synthetic quotations, smooth language into stronger claims, or present sentiment classification as a participant's own statement.
+- The researcher must not turn temporary frustration, error, disability, literacy, emotion, or support need into a permanent identity label.
+- The human decision owner must be able to inspect the original evidence and research limitation behind every material design or product implication.
+- Research involving human-AI relationships must ask about authority, correction, transparency, reliance, disagreement, fallback, privacy, dignity, and recovery rather than merely preference for an AI persona.
+- No conversational response, usage event, or lack of complaint automatically establishes informed consent, satisfaction, trust, or acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+The work must expose architectural obligations without treating a strategy, analysis, or plan as implemented architecture.
+
+- Maintain stable research-study, participant, session, consent, artifact, finding, decision, and evidence identities with privacy-preserving controls.
+- Separate contact information, consent records, raw recordings, transcripts, redacted evidence, derived codes, AI outputs, findings, and product decisions.
+- Bind every material finding to study, population, method, context, date, source evidence, and limitation.
+- Provide purpose limitation, least privilege, encryption, retention, deletion, access logging, export, correction, and incident handling appropriate to the data.
+- Prevent research data from entering model training, analytics, logs, or external providers without explicit authorization and disclosure.
+- Version research instruments, prototypes, content, translations, codebooks, analysis, and findings so later changes do not rewrite history.
+- Link validated user jobs and journeys to product capabilities, business needs, domain concepts, requirements, design decisions, tests, and owner-cockpit surfaces.
+- Preserve the distinction between user research and telemetry; observed absence of an event is not proof that a user need or harm does not exist.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner-facing operating surface or equivalent durable record should expose:
+
+- Research question, decision owner, scope, consequence, current status, and intended use.
+- Population, roles, sample, recruitment, coverage, missing groups, accessibility, language, geography, and context.
+- Method, instruments, prototype fidelity, moderators, AI involvement, session state, deviations, and limitations.
+- Consent, recording, privacy, data access, provider use, retention, deletion, incidents, and participant requests.
+- Raw, redacted, observed, stated, inferred, AI-derived, validated, disputed, and unknown evidence states.
+- Jobs, journeys, terminology, mental models, failure, recovery, accessibility, and trust findings linked to source.
+- Assumptions, conflicts, dissent, unresolved questions, design implications, and human decisions required.
+- A direct path to pause research, revoke access, correct records, delete data, reopen a finding, or request independent review.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- User-research brief, question, scope, method, and decision linkage.
+- Population, role, sampling, recruitment, inclusion, exclusion, and coverage plan.
+- Consent, participant-information, accessibility, compensation, privacy, AI-use, retention, deletion, and grievance materials.
+- Research instruments, moderator guide, task scenarios, prototype-fidelity record, and session plan.
+- Observation notes, recordings or transcripts where authorized, artifact inventory, and session evidence.
+- User-job, critical-journey, language, mental-model, decision, trust, failure, and recovery maps.
+- Accessibility, inclusion, risk, and affected-non-user findings.
+- Finding register with evidence, context, frequency or coverage, severity or consequence, uncertainty, dissent, and validation state.
+- Design and product implications separated from recommendations and decisions.
+- Research repository index, data-disposition record, continuity map, and next safe action.
+
+EVIDENCE REQUIREMENTS
+
+- Authenticated research authorization, decision purpose, method, and participant-protection approvals.
+- Sampling frame, recruitment path, inclusion, exclusion, compensation, participation, withdrawal, missing-group, and coverage records.
+- Consent, accessibility, language, recording, privacy, provider, AI-use, retention, deletion, and incident records.
+- Direct participant statements and observed behavior bound to session, context, time, instrument, prototype, and researcher.
+- Traceable distinction among raw evidence, redaction, transcription, translation, coding, inference, theme, finding, implication, and decision.
+- Contradictory evidence, outliers, negative cases, methodological limitations, researcher bias, and unresolved uncertainty.
+- Evidence that critical findings were reviewed with appropriate participants, users, domain experts, or independent reviewers where required.
+- Evidence that downstream claims remain within the studied population, context, fidelity, and timeframe.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace every material user finding to actual participant or observation evidence and declared context.
+- Attempt to insert a synthetic user, quotation, persona, emotion, or need; the evidence system must reject or visibly classify it as simulation.
+- Ask independent reviewers to distinguish participant words, researcher interpretation, AI-derived analysis, and approved implication.
+- Run consent, withdrawal, correction, export, deletion, accessibility, language, and grievance workflows end to end.
+- Remove a major participant group or context and verify generalization and confidence narrow accordingly.
+- Review research questions and moderation for leading language, sponsor framing, deceptive disclosure, and pressure.
+- Test critical journeys from stopped, unfamiliar, denied, degraded, interrupted, mistaken, and recovery states rather than only ideal completion.
+- Verify that analytics, support data, and user statements are triangulated without treating correlation or frequency as causation or importance.
+- Change the prototype or product version and confirm prior findings are not silently represented as current validation.
+- Verify research data does not enter unauthorized AI training, provider storage, logs, or secondary use.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Invented personas, synthetic participants, fabricated quotations, or AI-generated needs presented as research.
+- Recruiting only easy, internal, expert, powerful, able-bodied, English-speaking, or successful users while claiming broad coverage.
+- Leading questions, confirmation-seeking tasks, prototype coaching, performative consultation, or sponsor-controlled interpretation.
+- Recording, transcription, translation, AI processing, contact, reuse, or retention without appropriate disclosure and authority.
+- Treating stated preference as observed behavior, one session as a population, or usage analytics as explanation.
+- Converting frustration, disability, error, low literacy, or support need into a permanent personal identity label.
+- Ignoring affected non-users, accessibility, cultural context, low-frequency catastrophic failure, denial, interruption, and recovery.
+- Flattening contradictory or minority findings into one average persona or journey.
+- Research findings converted directly into requirements, roadmap commitments, or deployment without validation and authority.
+- Usability or acceptance claimed when no representative user observation occurred.
+- Research repository functioning as uncontrolled surveillance or a permanent store of unnecessary personal information.
+
+RECOVERY AND RECONSIDERATION
+
+User-research recovery protects participants, withdraws unsupported findings, and rebuilds the evidence chain from the first invalid method, consent state, source, or interpretation.
+
+- Pause affected collection, analysis, dissemination, or downstream use while preserving evidence of the issue.
+- Contain privacy, security, consent, coercion, accessibility, retaliation, reidentification, provider, or data-retention harm.
+- Notify authorized owners and affected participants where required, provide correction, withdrawal, deletion, grievance, or remediation paths, and record actions.
+- Identify invalid recruitment, sampling, method, instrument, prototype, moderation, transcription, translation, coding, inference, or generalization.
+- Retract, narrow, relabel, or invalidate affected findings and propagate that status to product, design, requirements, architecture, and decisions.
+- Re-recruit, recollect, reanalyze, independently review, or mark the question unresolved rather than manufacturing certainty.
+- Update research protocols, controls, training, data systems, decisions, and continuity before resuming.
+
+COMPLETION CRITERIA
+
+- The research question, decision, population, method, authority, participant protections, and intended use are explicit.
+- Actual participants and observations support every material claim; synthetic and AI-derived content remains separately classified.
+- Sampling, inclusion, accessibility, language, context, missing groups, bias, and generalization limits are visible.
+- User jobs, journeys, terminology, mental models, decisions, trust, failure, denial, and recovery are represented where relevant.
+- Consent, privacy, security, retention, deletion, correction, and grievance obligations are satisfied or truthfully open.
+- Findings, interpretations, recommendations, product implications, and human decisions remain distinct and traceable.
+- Contradictory evidence, dissent, uncertainty, and evidence that would change the conclusion are preserved.
+- The handoff enables downstream work without relying on chat memory or exposing unnecessary participant data.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Provide the exact research question, decision linkage, population, sample, method, context, instruments, prototype version, and study dates.
+- Transfer user jobs, journeys, terminology, mental models, trust, accessibility, failure, recovery, and affected-non-user findings with source links and limitations.
+- Carry forward consent, privacy, security, retention, deletion, access, provider, AI-use, and participant-contact obligations.
+- Map each validated finding to Business Analysis, Domain Analysis, Product Management, Requirements Engineering, HCI, UX, accessibility, safety, testing, or validation work as applicable.
+- Preserve assumptions, negative cases, contradictory findings, missing populations, dissent, and evidence needed to resolve uncertainty.
+- Do not transfer direct identifiers or raw sensitive evidence unless the receiving role is authorized and requires them.
+- State research expiration, reopening triggers, next safe action, and whether downstream use is safe within the declared limits.
+
+RELATED CODEX SECTIONS
+
+001 Research
+004 Mission Strategy
+006 Product Strategy
+010 Product Management
+011 Business Analysis
+012 Market Research
+014 Stakeholder Management
+016 Domain Analysis
+017 Feasibility Analysis
+018 Risk Management
+019 Requirements Engineering
+075 Human–Computer Interaction
+076 Interaction Design
+077 Experience Design
+078 Service Design
+079 UX Strategy
+080 UX Research
+082 UX Design
+089 Conversational Design
+101 Localization
+103 Accessibility Design
+105 Prototyping
+106 User Validation
+165 Statistics
+183 AI Governance
+188 Human-in-the-Loop Operations
+217 Trust and Safety
+218 Privacy Engineering
+249 Usability Testing
+257 Validation
+369 Experimentation
+370 A/B Testing
+372 Feedback Management
+405 Lifecycle Governance
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+This draft applies the supplied Owner's Cockpit requirements for discovery grounded in observed owner work, owner-job inventories, complete journeys, recognizable language, failure and recovery scenarios, assumption registers, participant-data protection, cognitive walkthroughs, and usability finding records. The User Experience Reviewer contract supplies intended-user and role identification without invented personas, journey mapping, accessibility, consent, evidence-backed friction, failure, and prohibited dark patterns. The Researcher, Observer, Analyst, Memory Curator, Security Auditor, Governance Reviewer, and Red Team contracts supply source discipline, observation boundaries, sampling and uncertainty limits, data minimization, consent, evidence, adversarial review, and human authority. V3 and V4 add objective fidelity, epistemic typing, bounded roles, evidence conservation, continuity, dissent, and proof-carrying handoff.
+
+Unresolved source gap: the supplied corpus does not contain a complete universal human-subjects research standard, institutional-review framework, accessibility-research protocol, cultural research methodology, or jurisdiction-specific privacy and consent code. This section is therefore a Codex integration draft, not a substitute for qualified ethics, legal, accessibility, clinical, labor, educational, or regulated-research review. It must later be reconciled with UX Research, Accessibility Design, Privacy Engineering, Legal, Ethics, Statistics, Experimentation, Usability Testing, and Validation.

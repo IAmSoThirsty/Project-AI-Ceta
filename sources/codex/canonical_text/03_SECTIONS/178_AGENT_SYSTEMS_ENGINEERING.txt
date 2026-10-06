@@ -1,0 +1,103 @@
+SECTION 178 — Agent Systems Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering of systems that perceive context, plan, reason, call tools, coordinate, learn, or act toward goals while preserving explicit identity, authority, state, human oversight, evidence, and compensation.
+
+REQUIRED OUTCOME
+
+- A bounded agent contract for goal, capabilities, tools, data, permissions, state, planning, action, review, and termination.
+- Reproducible evaluation of planning, tool use, delegation, refusal, recovery, security, safety, and user control.
+- Immutable decisions and append-only evidence for consequential action.
+
+WHY THIS MATTERS
+
+Agents combine model uncertainty with state, tools, and external effects. A persuasive plan or completed tool call is not authorization, correctness, or safe recovery.
+
+APPLICABILITY
+
+Applies to autonomous, semi-autonomous, tool-using, multi-agent, workflow, planning, and long-running agents. Depth increases with external mutation, delegation, sensitive data, autonomy, persistence, or multi-party impact.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to stateless generation with no tool, state, delegation, or external effect. Record boundary, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires requirements, process, identity, authorization, data, tool contracts, policy evaluation, observability, evaluation, safety, security, and HITL authority. Depends on Sections 169, 170, 180-183, 185, 186, and 188.
+
+REQUIRED INPUTS
+
+Goal; user; agent identity; capability token; tools; data; policies; state; memory; delegation; approval; mutation class; stop conditions; trace; evaluation; compensation; and retirement rules.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans define goal, scope, capability, approval, protected outcomes, exceptions, risk, and final decisions. They may stop, revoke, narrow, compensate, or retire. Agents never derive authority from a goal or model confidence.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+Agents may plan, recommend, and invoke authorized tools within a complete governance binding. They must verify state and scope, expose uncertainty, and stop on expired capability, policy mismatch, missing quorum, or unresolved ambiguity.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Planner, Coordinator, Governance Reviewer, Security Auditor, Safety Auditor, Researcher, Analyst, Tester, Verifier, Critic, Red Team, Documentation Writer, Memory Curator, and Human-in-the-Loop Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define goal, actor, resources, authority, mutation class, and prohibited action.
+2. Model planning, state, memory, tools, delegation, approval, and termination.
+3. Bind each mutation to trace, policy evaluation, capability, decision, and audit records.
+4. Test prompt injection, tool misuse, delegation, replay, concurrency, failure, and recovery.
+5. Validate human cockpit, stop, revoke, appeal, explanation, and compensation.
+6. Monitor traces, policy outcomes, costs, drift, and incidents.
+7. Baseline, hand off, and retire without deleting prior decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show goal, plan, state, identity, capability, policy result, tool, data, mutation, decision, and trace. Require approval or quorum when applicable. Preserve terminal stream semantics, visible stop, correction, appeal, and compensation paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent RunRequest, ToolInvocationRequest, PolicyEvaluationRequest and Result, GovernanceEvaluationBinding, MutationGovernanceBinding, DecisionRecord, AuditDecision, trace, artifact, and compensation links as immutable or append-only records. Enforce default-deny and expiry at tool boundaries.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show active runs, goal, state, plan, pending actions, authority, capability scope, policy, decisions, traces, artifacts, cost, and incidents. Provide authorized pause, deny, revoke, quarantine, compensate, resume, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Agent charter; capability and tool catalog; state and delegation model; policy and governance binding; decision and audit records; evaluation suite; trace and artifact package; runbook; incident and compensation plan; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Every consequential action identifies trace, request, agent identity, capability, policy result, decision record, tool, resource, input, output, reviewer, and result. A plan, tool response, or successful run is not proof of authorization or outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Expire or revoke capability; alter policy; remove quorum; inject conflicting instructions; replay requests; duplicate tools; corrupt state; lose provider; interrupt stream; and verify default-deny, audit, terminal event, compensation, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Goal treated as permission; prompt as policy; missing capability binding; local-only policy check; hidden delegation; unbounded loops; silent tool mutation; lost terminal event; and destructive rollback.
+
+RECOVERY AND RECONSIDERATION
+
+Stop affected execution on authority, trace, policy, state, tool, or safety failure. Preserve immutable records and artifacts, quarantine outputs, compensate only through linked transactions, review impact, and resume only after fresh evaluation and authority.
+
+COMPLETION CRITERIA
+
+Goal, boundary, identity, capabilities, policy, state, tools, decisions, audit, trace, evaluation, stop, compensation, and owner authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve run IDs, decisions, bindings, traces, tool calls, artifacts, state, incidents, dissent, and gaps. Hand off to AI Engineering, Governance, Safety, Security, MLOps, Model Operations, Prompt Engineering, and HITL Operations.
+
+RELATED CODEX SECTIONS
+
+048 Governance Architecture; 056 AI Architecture; 169 AI Engineering; 180 Model Evaluation; 182 AI Safety; 183 AI Governance; 185 Model Operations; 186 Prompt Engineering; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, AI Architecture, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual capability tokens, policy endpoints, quorum rules, tool registry, mutation classes, and compensation contracts remain unresolved until supplied.

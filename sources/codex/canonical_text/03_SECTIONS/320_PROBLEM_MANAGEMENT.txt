@@ -1,0 +1,95 @@
+SECTION 320 — Problem Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Identify and remove systemic causes of incidents, defects, risk, toil, and recurring service failure while preserving safe workarounds and evidence.
+
+REQUIRED OUTCOME
+
+A problem model with symptoms, incidents, cause hypotheses, evidence, known error, workaround, corrective action, owner, risk, verification, and prevention.
+
+WHY THIS MATTERS
+
+Closing incidents restores service but may leave the cause. Root-cause language can also overclaim when evidence is incomplete or blame is substituted for system learning.
+
+APPLICABILITY
+
+Apply when incidents, defects, vulnerabilities, recurring workarounds, or systemic risk warrant investigation beyond immediate restoration.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no recurring or systemic issue exists and an incident closure is sufficient for the bounded event.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use incident, change, architecture, quality, vulnerability, reliability, data, support, and evidence baselines.
+
+REQUIRED INPUTS
+
+Incidents, symptoms, timeline, systems, changes, dependencies, evidence, hypotheses, workarounds, risks, owners, and corrective-action criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Problem owners coordinate investigation and action; domain experts challenge hypotheses; owners approve risk, workaround, change, and closure. Humans avoid assigning causal certainty without evidence.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate authorized incidents, draft hypotheses, identify patterns, and suggest experiments. It must distinguish correlation from cause, preserve uncertainty, and not change systems or close problems without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Problem Manager, Incident Responder, Analyst, Researcher, Architect, SRE, Tester, Verifier, Critic, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Link incidents; define symptom and impact; preserve evidence; investigate hypotheses; establish workaround or known error; design corrective action; change safely; verify; communicate; and capture prevention.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show symptom, evidence, hypothesis, confidence, impact, workaround, action, owner, and limitation. Require human review for cause, risk, change, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Link incident, change, dependency, configuration, architecture, test, evidence, and corrective action. Support reproducible diagnosis, safe experiments, rollback, and knowledge retention.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show problem, linked incidents, cause status, evidence, workaround, owner, corrective action, risk, due date, and authorized assign, investigate, mitigate, remediate, reopen, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Problem record; incident links; hypothesis and evidence; known error and workaround; corrective action; verification, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify symptom, incident, system, change, source, method, time, hypothesis, result, confidence, and limitation. A plausible narrative is not causal proof.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify evidence, reproducibility, workaround, corrective action, regression, user impact, change, monitoring, and recurrence. Independent challenge causal conclusion where material.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Root cause by assertion, blame, workaround as fix, problem backlog without owner, incident closure copied as solution, and corrective action without recurrence evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Use safe workaround, preserve evidence, protect users, implement or roll back corrective change, and reassess recurrence. Reopen on repeat incident, new evidence, invalid cause, or changed system.
+
+COMPLETION CRITERIA
+
+Symptom, impact, evidence, hypothesis, workaround, corrective action, owner, verification, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve problem, incidents, evidence, workarounds, changes, decisions, corrective action, exceptions, and open gaps. Hand off to Incident, Change, Architecture, Quality, SRE, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+319 Incident Management; 289 Change Management; 228-230 Quality; 243-245 Reliability and Resilience; 386 Technical Debt; 402-404 Review and Lessons.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, incident, quality, evidence, and operations context, and the integration roadmap. Exact cause method, owners, recurrence, risk, change, and acceptance authority remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 398 — Infrastructure Decommissioning
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Remove infrastructure resources, hosts, networks, storage, accounts, environments, and control paths after workloads, data, access, dependencies, records, and recovery obligations are resolved.
+
+REQUIRED OUTCOME
+
+An infrastructure-decommissioning model with inventory, ownership, workload migration, data, identity, network, certificates, backup, cost, provider, destruction, evidence, and verification.
+
+WHY THIS MATTERS
+
+Unused infrastructure can retain data, credentials, routes, cost, vulnerabilities, and compliance obligations. Destruction can also remove a recovery path or evidence before approval.
+
+APPLICABILITY
+
+Apply when infrastructure, cloud resource, server, network, storage, account, environment, cluster, or facility resource is removed or made inactive.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no infrastructure resource, workload, data, access, network, cost, or recovery state ends and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use infrastructure, cloud, environment, workload, data, security, network, storage, backup, records, cost, and retirement baselines.
+
+REQUIRED INPUTS
+
+Resource, owner, workload, dependencies, data, access, network, certificates, backups, cost, provider, migration, destruction, and approval.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Infrastructure owners approve drain, migration, backup, access revocation, resource destruction, cost closure, exception, and final verification. Humans resolve shared-resource and evidence risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory authorized resources and dependencies and draft decommissioning plans. It must not destroy, revoke, delete backups, change network, or declare cleanup complete without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Infrastructure Engineer, Cloud Engineer, Platform Engineer, Data Engineer, Network Engineer, Storage Administrator, Security Auditor, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Inventory; identify workloads and dependencies; migrate or drain; preserve data and records; revoke access; remove routes, certificates, and monitoring; destroy resources; reconcile cost; verify; and archive.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show resource, workload, owner, dependencies, data, access, action, evidence, and limitation. Require human approval for data, backup, network, certificate, account, destructive, and final actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use dependency discovery, drain, migration, backup, hold, access revocation, network and DNS cleanup, certificate expiry, IaC state, cost, and destruction evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show resource state, workload, dependencies, data, access, cost, evidence freshness, owner, and authorized drain, migrate, isolate, destroy, restore, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Decommissioning charter; resource and workload map; migration and data; access and network cleanup; destruction and verification; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify resource, workload, account, provider, data, access, network, method, time, result, owner, and limitation. Resource deletion proves neither data disposition nor dependency cleanup.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify workload migration, data, backups, holds, access, routes, DNS, certificates, monitoring, cost, provider, resource absence, and recovery impact.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Destroy before migration, orphaned route or credential, backup deleted early, hidden dependency, cost continues, state file stale, and deletion used as evidence removal.
+
+RECOVERY AND RECONSIDERATION
+
+Pause destruction, restore resource where possible, preserve evidence, recover workload, revoke access, communicate, and reassess. Reopen on dependency, data, hold, provider, or incident discovery.
+
+COMPLETION CRITERIA
+
+Resources, workloads, dependencies, data, access, network, backups, cost, destruction, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve inventory, migration, backups, state, destruction, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Cloud, Platform, Network, Storage, Security, Records, Operations, and System Retirement.
+
+RELATED CODEX SECTIONS
+
+275-286 Infrastructure Layers; 327-330 DR, Backup, Restore, and Failover; 391-395 Data Lifecycle; 397 Service Decommissioning; 406 System Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, infrastructure, data, security, provider, cost, recovery, and lifecycle context, and the integration roadmap. Exact resources, workloads, dependencies, data, holds, providers, destruction, and acceptance authority remain unresolved.

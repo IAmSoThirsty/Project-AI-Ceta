@@ -1,0 +1,95 @@
+SECTION 225 — Records Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Identify, classify, create, capture, protect, retain, retrieve, preserve, transfer, and dispose of records that provide evidence of obligations, decisions, rights, operations, or history.
+
+REQUIRED OUTCOME
+
+A records model with record classes, owners, authoritative copies, metadata, retention, legal hold, access, integrity, disposition, audit, continuity, and exception rules.
+
+WHY THIS MATTERS
+
+Records must remain usable and trustworthy for the period required, while unnecessary retention increases privacy, cost, and discovery risk. A backup, document, log, or database row is not automatically a record or an authoritative copy.
+
+APPLICABILITY
+
+Apply when information documents business, legal, regulatory, financial, safety, security, product, user, operational, or governance activity or must be preserved for accountability.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no record, hold, retention, evidence, right, audit, or disposition obligation is affected and an approved exact baseline supports the conclusion.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use Legal, Regulatory, Privacy, Security, Data, Evidence, Audit, Backup, Archive, and Deletion baselines. Identify jurisdictions, owners, record classes, authoritative systems, holds, retention authority, and disposal approval.
+
+REQUIRED INPUTS
+
+Record classes, sources, metadata, owners, business and legal value, retention, access, integrity, holds, jurisdictions, disposition, transfers, systems, evidence, and exceptions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Records owners and counsel approve classification, retention, hold, access, transfer, disposition, and exceptions. Humans resolve whether a record is authoritative, whether a hold applies, and whether destruction is lawful and safe.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may classify authorized metadata, identify duplicates, draft inventories, summarize records, and propose retention or disposition queues. It must preserve provenance and not delete, alter, reclassify, disclose, or declare a record non-authoritative without explicit human authority and hold checks.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Records Manager, Legal Advisor, Privacy Reviewer, Archivist, Researcher, Analyst, Governance Reviewer, Security Auditor, Verifier, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define record classes and authority; inventory sources; capture metadata; establish retention and access; apply holds; preserve integrity; enable retrieval; transfer or archive; review and dispose; audit decisions; handle exceptions and continuity.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show record class, source, authority, owner, hold, retention, sensitivity, action, evidence, and uncertainty. Require human approval for hold, disclosure, reclassification, disposition, and destruction. Keep protected content out of unnecessary AI context.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate operational data, records, evidence, backups, archives, holds, indexes, access, and disposition. Preserve metadata and integrity across migration, provide legal hold override, and prevent retention automation from destroying held records.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show record class, owner, authoritative source, retention, hold, access, integrity, evidence freshness, disposition state, and authorized classify, preserve, search, restrict, transfer, and destroy controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Records schedule; classification and authority register; metadata and access model; hold and disposition procedures; transfer and archive plan; retrieval, audit, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify record, source, class, authority, version, metadata, integrity, owner, hold, retention, access, method, time, result, and limitation. A backup or export proves only its capture and declared completeness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify capture, metadata, search, access, integrity, hold, retention, transfer, archive, disposition, deletion, recovery, and audit. Test duplicate sources, migration, clock, hold arrival, restricted access, and failed disposition.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Records without owner or metadata, uncontrolled copies, hold bypass, premature deletion, indefinite retention, backup confused with record, and AI summary treated as the authoritative record.
+
+RECOVERY AND RECONSIDERATION
+
+Stop disposition, preserve affected copies, apply or extend holds, restore metadata, notify owners, and investigate loss or disclosure. Reassess legal, privacy, evidentiary, and continuity impact before resuming.
+
+COMPLETION CRITERIA
+
+Classes, sources, authority, owners, metadata, access, holds, retention, disposition, evidence, tests, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve schedules, records, holds, disposition decisions, transfers, evidence, incidents, exceptions, and open gaps. Hand off to Legal, Compliance, Privacy, Audit, Data, Archive, Backup, Deletion, and Operations.
+
+RELATED CODEX SECTIONS
+
+004 Evidence and Truth; 219 Legal; 220 Regulatory Compliance; 223-224 IP and Licensing; 226 Audit; 391-395 Data Retention, Archive, Preservation, Disposal, and Deletion; 402-406 Review and Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, evidence and lifecycle requirements, and the integration roadmap. Exact schedules, jurisdictions, record authority, holds, retention, archive, disposal, and acceptance evidence remain unresolved.

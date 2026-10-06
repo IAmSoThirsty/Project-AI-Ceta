@@ -1,0 +1,124 @@
+SECTION 198 — Embedded Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Secure embedded devices and software across hardware, firmware, interfaces, data, physical access, update, safety, operation, recovery, and disposal.
+
+REQUIRED OUTCOME
+
+A bounded security design for the exact device, firmware, hardware, interface, environment, threat scope, population, and lifecycle, including trust boundaries, keys, data, update paths, debug controls, safe states, telemetry, response authority, recovery, and evidence.
+
+WHY THIS MATTERS
+
+Embedded systems may control physical processes, operate offline, have limited observability, and remain deployed for years. A successful boot, bench test, certification, or clean scan proves only its declared slice and can miss tampering, unsafe updates, fault injection, debug abuse, power loss, supplier compromise, or recovery failure.
+
+APPLICABILITY
+
+Apply when software, firmware, electronics, sensors, actuators, controllers, appliances, vehicles, industrial equipment, medical devices, or other physical systems contain computation, connectivity, stored data, update capability, or security-relevant identity.
+
+NON-APPLICABILITY CONDITIONS
+
+The section may be minimal when no hardware, firmware, physical interface, embedded identity, stored data, safety effect, update path, or operational dependency is affected and an approved exact baseline records that conclusion. Simulation does not remove obligations when the simulated behavior stands in for a real device or control.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use the applicable systems, hardware, firmware, safety, privacy, identity, cryptography, key, vulnerability, testing, operations, recovery, and disposal baselines. Identify device inventory, bill of materials, suppliers, build provenance, platform lifecycle, trust roots, interfaces, field conditions, maintenance authority, and safety constraints.
+
+REQUIRED INPUTS
+
+- Hardware and firmware inventory, versions, configurations, build and signing records, bill of materials, suppliers, and manufacturing or provisioning history.
+- Data flows, local storage, sensors, actuators, interfaces, debug paths, network paths, credentials, certificates, keys, and update mechanisms.
+- Threats involving physical access, tampering, cloning, extraction, fault injection, side channels, malicious peripherals, supply chain, and hostile environments.
+- Safety requirements, safe-state behavior, maintenance procedures, telemetry, support, incident response, recovery, replacement, and disposal obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable owner approves device scope, security and safety risk, debug access, update and rollback, field monitoring, supplier exceptions, recovery, replacement, and retirement. Qualified hardware, firmware, safety, security, manufacturing, operations, privacy, and support owners must be assigned. Humans decide when a device may remain in service, be isolated, be updated, be replaced, or be safely decommissioned.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized schematics, manifests, firmware metadata, configurations, build records, vulnerability results, telemetry, and test evidence; identify likely weaknesses; draft threat models, controls, tests, and runbooks; and propose bounded remediation.
+
+AI must preserve device, firmware, hardware, build, configuration, environment, source, time, and evidence boundaries. It must distinguish observed behavior, inferred risk, recommendation, executed action, and verified result, and must surface blind spots caused by unavailable hardware, offline operation, or missing telemetry.
+
+AI must not alter devices, flash firmware, enable debug, extract secrets, infer authority, suppress safety signals, approve an update, declare a safe state, or execute containment without explicit delegation, authorization, audit, and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Embedded Engineer, Hardware Engineer, Security Auditor, Safety Reviewer, Researcher, Observer, Implementer, Tester, Verifier, Red Team, Governance Reviewer, Documentation Writer, Memory Curator, and User Experience Reviewer. Select roles proportionally and preserve their Section 02 contracts.
+
+REQUIRED ACTIVITIES
+
+1. Establish the device population, hardware and firmware versions, environments, interfaces, users, operators, safety effects, and lifecycle scope.
+2. Inventory components, firmware, dependencies, trust roots, signing, keys, debug paths, provisioning, update, telemetry, and supplier boundaries.
+3. Map trust boundaries and threats for physical access, tampering, cloning, extraction, fault injection, malicious peripherals, and supply-chain change.
+4. Define least privilege, secure boot or equivalent trust establishment, signed updates, debug control, data minimization, logging, and safe-state behavior.
+5. Design offline operation, power loss, network change, interrupted update, clock drift, degraded sensors, failed actuators, and recovery behavior.
+6. Test normal, hostile, maintenance, migration, field, replacement, and disposal conditions and record limitations and residual risk.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show the exact device, firmware, hardware revision, configuration, authority, environment, and evidence for each conclusion.
+- Require human review for flashing, debug access, key or credential handling, safety-affecting changes, field containment, update, replacement, and disposal.
+- Keep a manual safe-halt, support, recovery, and evidence-preservation path when automation, telemetry, or a provider fails.
+- Treat AI-generated threat hypotheses and test plans as proposals until verified against the actual device and declared threat scope.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate hardware, boot, firmware, application, service, network, physical, manufacturing, maintenance, and operator trust boundaries.
+- Bind identity and update authority to device, version, hardware state, environment, and purpose; prevent rollback and unauthorized cloning where required.
+- Minimize local data and define protection for storage, logs, caches, debug output, backups, interfaces, and disposal.
+- Design recovery independent of the failed component where practical, with safe halt, containment, known-good image, replacement, and manual control.
+- Treat suppliers, components, tools, build systems, signing services, update providers, and field support as versioned dependencies.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show device identity, hardware and firmware version, posture, owner, location or environment at the permitted precision, safety impact, evidence freshness, findings, active update, and dependency health. Provide authorized controls to isolate, halt safely, update, roll back, recover, replace, preserve evidence, and retire. Explain impact, authority, evidence, and recovery for every consequential action.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Device, hardware, firmware, component, supplier, trust-boundary, identity, key, interface, and data inventories.
+- Threat model, security and safety requirements, secure boot and update design, debug policy, and recovery design.
+- Build provenance, vulnerability, test, field-monitoring, incident, exception, acceptance, decision, evidence, and continuity records.
+- Operating runbook, maintenance and support procedures, replacement plan, and secure disposal plan.
+
+EVIDENCE REQUIREMENTS
+
+Identify device, hardware revision, firmware and build, configuration, environment, method, coverage, actor, timestamp, result, owner, and limitation. Evidence may include reproducible tests, signed artifacts, configuration, logs, field observations, supplier records, and incident timelines. A certification or simulation proves only its bounded claim.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Verify boot trust, signing, rollback, debug control, identity, keys, permissions, data protection, update, and recovery.
+- Exercise tampering, cloning, physical access, fault or power interruption, hostile interfaces, offline operation, network change, and failed update.
+- Verify safe state, operator visibility, manual control, evidence preservation, replacement, restore, and disposal behavior.
+- Reproduce findings and confirm that hardware, firmware, supplier, and configuration changes reopen affected evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating successful boot, device enrollment, a bench test, or certification as complete security evidence.
+- Leaving debug ports, manufacturing credentials, test interfaces, recovery images, or update paths uncontrolled.
+- Assuming connectivity, power, sensors, telemetry, provider availability, or a trusted physical environment.
+- Storing secrets or sensitive data without a bounded purpose, protection, retention, and disposal path.
+- Flashing or wiping a device without authority, safety review, recovery, and evidence preservation.
+
+RECOVERY AND RECONSIDERATION
+
+On suspected compromise, unsafe behavior, invalid evidence, failed update, lost trust root, or supplier change, preserve evidence, enter the approved safe state, isolate affected devices, and notify the owner. Use known-good firmware or hardware replacement, restore, re-provisioning, manual operation, or controlled retirement. Reassess safety, data, users, field impact, residual risk, and acceptance before service resumes.
+
+COMPLETION CRITERIA
+
+The exact devices, hardware, firmware, threats, interfaces, identities, controls, owners, evidence, tests, safe states, recovery, disposal, limitations, and reopening conditions are recorded. Status remains CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baseline identity, component and supplier records, build and signing history, threat model, findings, exceptions, evidence, decisions, incidents, recovery, field communications, and open gaps. Hand off to Hardware, Embedded, Cryptography, Key Management, Vulnerability, Testing, Safety, Operations, Support, and Disposal owners.
+
+RELATED CODEX SECTIONS
+
+045-047 Security, Identity, and Privacy Architecture; 050 Safety Architecture; 058-060 Hardware, Embedded, and Firmware Engineering; 190 Application Security; 197 Mobile Security; 199 Hardware Security; 203-205 Cryptography, Keys, and Secrets; 231-254 Testing; 298 Field Operations; 379 Firmware Updates; 398-400 Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-060, security and testing context, and the integration roadmap. Exact device classes, safety regimes, platforms, supplier controls, certification, jurisdictions, field telemetry, retention, recovery authority, and owner acceptance evidence remain unresolved until supplied.

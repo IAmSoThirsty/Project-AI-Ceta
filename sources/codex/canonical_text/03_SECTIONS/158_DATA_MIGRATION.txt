@@ -1,0 +1,95 @@
+SECTION 158 — Data Migration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Move or transform data between versions, systems, stores, regions, or ownership boundaries without losing meaning, authority, integrity, continuity, or evidence.
+
+REQUIRED OUTCOME
+
+A migration plan with inventory, mapping, reconciliation, controls, rehearsal, cutover, coexistence, rollback or compensation, validation, communications, and retirement.
+
+WHY THIS MATTERS
+
+Migration changes historical truth and future behavior. A completed transfer can still lose records, alter meaning, duplicate identity, or leave unauthorized residual copies.
+
+APPLICABILITY
+
+Apply to material movement, conversion, consolidation, separation, modernization, provider change, schema change, region change, or retention transition.
+
+NON-APPLICABILITY CONDITIONS
+
+No material data, meaning, authority, continuity, lifecycle, or evidence changes; exact baseline covers it and the decision records why migration analysis is unnecessary.
+
+PREREQUISITES AND DEPENDENCIES
+
+Source and target models, inventories, mappings, owners, quality, access, retention, volume, downtime, recovery, legal, security, privacy, and acceptance authority.
+
+REQUIRED INPUTS
+
+Migration scope, records, schemas, mappings, transformations, counts, checksums, exceptions, cutover, coexistence, reconciliation, rollback, communications, and unknowns.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The owner approves scope, timing, risk, downtime, mapping, cutover, residual copies, rollback or compensation, communications, and acceptance; assigns source, target, security, privacy, and operations authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized migration inventories, draft mappings, transformations, rehearsal plans, test cases, reconciliation logic, cutover criteria, communications, and evidence packages. It must preserve provenance, source and target versions, exceptions, uncertainty, residual-copy implications, and the distinction between count, checksum, and semantic equivalence. It must not infer authority or equivalence, expose records, execute transfer, cutover, deletion, destructive cleanup, or compensation, or declare migration success without authorized validation. Any migration mutation or cutover requires the applicable policy evaluation, capability scope, immutable decision record, human approval, and append-only audit linkage; rollback must use an approved compensation path rather than destructive reversal.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Planner, Implementer, Analyst, Researcher, Tester, Verifier, Observer, Governance Reviewer, Security Auditor, Critic, Coordinator, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+Inventory and classify; map and rehearse; validate quality; secure and transfer; reconcile; execute controlled cutover; preserve evidence; verify consumers; retire or quarantine the source.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may draft mappings, scripts, test cases, and reconciliation queries from authorized data. It must not execute destructive migration, infer equivalence, expose records, or declare success from counts alone.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Preserve source, target, versions, mappings, lineage, checkpoints, idempotency, audit, compatibility, reconciliation, compensation, and residual-copy semantics. Prefer reversible stages and explicit cutover gates.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show migration baseline, phase, counts, exceptions, quality, owners, approvals, source and target state, cutover readiness, residual copies, and authorized pause, abort, reconcile, compensate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Migration charter, inventory, mapping, transformation, rehearsal, security, runbook, reconciliation, cutover, validation, rollback or compensation, communication, evidence, and handoff records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, target, scope, version, population, method, counts, exceptions, environment, authority, result, and limitation. A checksum does not prove semantic equivalence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify inventory completeness, mapping, transformation, authorization, counts, checksums, semantics, referential integrity, performance, cutover, coexistence, recovery, and deletion of residual copies.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Big-bang cutover, untested rollback, hidden source writes, count-only validation, lost exceptions, duplicate identities, unbounded downtime, and destructive cleanup before acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Pause writes or isolate phases on mismatch; preserve both states and evidence. Use reconciliation, replay, prior version, coexistence, controlled forward repair, or compensation; never silently erase the source.
+
+COMPLETION CRITERIA
+
+Scope, authority, mappings, tests, cutover, reconciliation, residual copies, evidence, gaps, and next decision are recorded. Status remains CONTENT-COMPLETE pending later gates.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off to Database, Storage, Data Engineering, Integration, Application, Security, Privacy, Testing, Operations, Data Migration Operations, Retention, and Retirement.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 151-157 Database through Data Integration; 255-300 delivery and deployment; 382 Data Migration Operations; 391-398 retention, archival, deletion, and decommissioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, data architecture, and roadmap. Actual data volume, legal basis, downtime, reconciliation tolerance, and owner-approved recovery path remain unresolved.

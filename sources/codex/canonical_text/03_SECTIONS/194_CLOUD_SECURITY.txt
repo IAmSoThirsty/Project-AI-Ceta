@@ -1,0 +1,99 @@
+SECTION 194 — Cloud Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer security for cloud accounts, subscriptions, tenants, regions, services, control planes, workload identities, data, and provider relationships.
+
+REQUIRED OUTCOME
+
+Cloud scope, account ownership, tenancy, identity, policy, network, data, logging, provider responsibility, resilience, recovery, and evidence are explicit.
+
+WHY THIS MATTERS
+
+Cloud centralizes powerful control and creates opaque provider dependencies. Mis-scoped identity or policy can expose many workloads at once and complicate evidence and recovery.
+
+APPLICABILITY
+
+Applies to public, private, hybrid, multi-cloud, managed services, cloud-native applications, accounts, subscriptions, regions, and provider control planes.
+
+NON-APPLICABILITY CONDITIONS
+
+Non-applicability requires an approved exact cloud baseline with no material account, tenancy, provider, data, identity, region, or configuration change.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 032-046, 048-052, 258-281, 301-330, and 348-350 provide application, platform, identity, governance, resilience, delivery, cloud, operations, recovery, and supplier context.
+
+REQUIRED INPUTS
+
+Accounts, tenants, regions, services, provider contracts, shared responsibility, identities, policies, networks, data, keys, logs, workloads, dependencies, incidents, and recovery objectives.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Cloud and workload owners approve account structure, provider access, policy, region, data, exceptions, recovery, and risk. Humans retain authority over provider commitments and disclosure.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized cloud state, policy drift, cost-security tradeoffs, and telemetry. It cannot change cloud resources, grant roles, accept provider risk, or infer tenant isolation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Cloud Architect, Platform Engineer, Security Auditor, Identity Engineer, Network Engineer, Analyst, Implementer, Tester, Verifier, Red Team, Governance Reviewer, Observer, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+1. Map accounts, tenants, regions, control planes, provider responsibilities, and trust boundaries.
+2. Define identity, policy, network, data, logging, configuration, workload, and recovery controls.
+3. Assess provider, region, service, supply-chain, and shared-responsibility risk.
+4. Test isolation, policy enforcement, key loss, region loss, provider outage, restore, and evidence access.
+5. Baseline exceptions and hand off operational controls.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose provider evidence versus local verification, acting identity, scope, authority, and blast radius. Human approval is required for broad policy, privileged roles, region changes, incident disclosure, and recovery.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use landing-zone boundaries, deny-by-default policy, short-lived workload identity, segmented networks, centralized logs, immutable evidence, encryption, service quotas, provider substitution, and tested multi-zone or multi-region recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show account, tenant, region, service, policy, identity, findings, provider status, evidence freshness, data location, and authorized restrict, revoke, isolate, failover, restore, or retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Cloud asset map, shared-responsibility matrix, threat model, policy baseline, identity and network design, provider evidence, drift findings, recovery tests, exceptions, and continuity handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify provider, account, region, service, configuration, population, method, time, result, owner, and limit. Provider attestations and dashboards prove only their stated scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise cross-tenant access, policy bypass, credential compromise, public exposure, region loss, provider outage, quota exhaustion, logging loss, restore, and evidence replay.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Trusting provider defaults, confusing compliance with security, broad permanent roles, unlogged control-plane actions, single-region recovery, hidden data residency, and cloud automation without approval.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict or isolate affected accounts and services, revoke roles, preserve local and provider evidence, invoke approved substitution or restore, validate data and identity impact, and reopen on provider, region, policy, or threat change.
+
+COMPLETION CRITERIA
+
+Cloud scope, ownership, responsibility, controls, evidence, recovery, provider limits, exceptions, and acceptance are explicit; status remains CONTENT-COMPLETE pending qualified review.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve account, tenant, region, service, provider, policy, identity, decision, evidence, incident, dissent, and next action. Hand off to Platform, Infrastructure, Network, Identity, Data, Operations, Reliability, Incident, and Retirement.
+
+RELATED CODEX SECTIONS
+
+036 Cloud Architecture; 045-052 security and resilience architecture; 193, 195-206 security sections; 276-281 infrastructure and container engineering; 304, 310, 327-330 cloud operations and recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+No universal provider, tenancy, region, responsibility, regulatory, evidence, or recovery standard is supplied. Actual contracts, account structures, data residency, and provider controls remain unresolved.

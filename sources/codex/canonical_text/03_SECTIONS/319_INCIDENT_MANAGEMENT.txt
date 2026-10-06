@@ -1,0 +1,95 @@
+SECTION 319 — Incident Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Coordinate the lifecycle of operational incidents from detection and declaration through command, communication, stabilization, recovery, closure, and learning.
+
+REQUIRED OUTCOME
+
+An incident-management model with classification, commander, roles, timeline, evidence, impact, communications, actions, dependencies, recovery, closure, and review.
+
+WHY THIS MATTERS
+
+Incidents require coordinated authority under uncertainty. Unclear command, parallel unsafe action, missing timeline, or premature closure can increase harm and prevent recovery learning.
+
+APPLICABILITY
+
+Apply when an event disrupts or threatens service, safety, security, privacy, data, operations, users, property, or commitments.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only for events with no material impact and a routine path that preserves evidence, escalation, and user support.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use alert, monitoring, service, security, continuity, communication, support, legal, privacy, records, and recovery baselines.
+
+REQUIRED INPUTS
+
+Alert or report, impact, scope, severity, commander, contacts, evidence, actions, dependencies, communications, recovery objective, and owner authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Incident commander coordinates and can stop unsafe action. Owners approve containment, communication, service reduction, legal escalation, recovery, and closure. Humans decide material severity and harm.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize signals and timeline, draft hypotheses and status, and track authorized actions. It must not declare, contain, communicate, delete evidence, attribute, or close without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Incident Commander, Incident Responder, SRE, Security Operations Analyst, Forensic Analyst, Coordinator, Operations Engineer, Legal Advisor, Privacy Reviewer, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Prepare; intake; declare; assign command; preserve evidence; assess impact; communicate; contain; stabilize; recover; monitor; close; review; and track corrective action.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show incident, severity, impact, scope, commander, evidence, action, authority, communication, and uncertainty. Require human approval for containment, notification, recovery, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use case record, immutable timeline, evidence store, command channel, status page, action authority, privacy, audit, and recovery independent of the failed service where possible.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show incident state, commander, severity, scope, impact, actions, evidence freshness, dependencies, communication, residual risk, and authorized escalate, contain, communicate, recover, reopen, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Incident charter; timeline; impact and severity; command and communications; evidence; actions and recovery; post-incident review; decision, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify event, source, asset, user, time basis, action, actor, result, impact, confidence, and limitation. Confirmed, suspected, disproved, and unknown states remain distinct.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise declaration, command, paging, evidence, communication, containment, recovery, user support, legal and privacy escalation, closure, and post-incident follow-up.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+No commander, severity by volume, parallel conflicting action, lost timeline, status theater, premature closure, blame, and communication that overclaims.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, preserve evidence, recover, communicate, support users, and reassess impact and residual risk. Reopen on new evidence, scope, root cause, recovery failure, or harm.
+
+COMPLETION CRITERIA
+
+Command, severity, scope, evidence, actions, communication, recovery, closure, lessons, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve case, timeline, evidence, communications, actions, decisions, postmortem, exceptions, and open gaps. Hand off to Problem, Security, SRE, Support, Legal, Privacy, Records, and Governance.
+
+RELATED CODEX SECTIONS
+
+213-214 Digital Forensics and Incident Response; 306 Security Operations; 318 Alerting; 320 Problem Management; 326-330 Continuity, DR, Backup, Restore, and Failover; 402-404 Review.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, incident, evidence, continuity, and operations context, and the integration roadmap. Exact severity, command, notification, staffing, recovery, legal, privacy, and acceptance authority remain unresolved.

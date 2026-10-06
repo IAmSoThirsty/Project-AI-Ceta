@@ -1,0 +1,95 @@
+SECTION 287 — Release Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer repeatable, traceable, safe, and reversible release processes that turn accepted changes into communicated, supportable, and governed versions.
+
+REQUIRED OUTCOME
+
+A release model with version, artifact, scope, readiness, notes, dependencies, approvals, packaging, communication, rollout, rollback, support, evidence, and retirement.
+
+WHY THIS MATTERS
+
+A release is a social, technical, and operational event. A package can be correct while communication, support, migration, compatibility, or rollback is not ready.
+
+APPLICABILITY
+
+Apply when a product, service, model, firmware, data, documentation, policy, infrastructure, or configuration version is made available to users, operators, or downstream systems.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no version, consumer, artifact, deployment, communication, support, or operational expectation changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use acceptance, delivery, deployment, artifact, configuration, compatibility, support, operations, security, legal, documentation, and rollback baselines.
+
+REQUIRED INPUTS
+
+Version, artifact, changes, requirements, tests, findings, dependencies, compatibility, approvals, notes, migration, support, communication, rollout, rollback, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Release owners approve version, readiness, notes, support, communication, exceptions, timing, rollout, rollback, and retirement. Humans decide whether users and operators can safely receive the release.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may assemble change summaries, draft release notes and checklists, identify missing evidence, and propose rollout. It must not invent changes, disclose sensitive details, approve, publish, deploy, or communicate commitments without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Release Engineer, Delivery Engineer, Product Manager, Documentation Writer, Tester, Verifier, Operations Engineer, Security Auditor, Support Reviewer, Coordinator, and Critic.
+
+REQUIRED ACTIVITIES
+
+Baseline version and artifact; inspect changes; validate tests and dependencies; assess compatibility and risk; prepare notes, migration, support, and communication; approve; package and distribute; monitor; roll back or patch; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show version, artifact, audience, change, evidence, risk, dependency, communication, owner, and limitation. Require human approval for release, public notes, security or legal content, migration, and rollback.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable version and artifact, signed provenance, staged distribution, compatibility and migration, feature flags, rollback, release registry, support hooks, and audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show release candidate, readiness, change, evidence freshness, audiences, support, incidents, rollout, rollback, and authorized approve, hold, publish, promote, roll back, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Release charter; version and artifact record; change and compatibility summary; readiness and approval; notes, migration, support, communication, rollout, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify version, artifact digest, source, tests, findings, approval, audience, environment, method, time, result, and limitation. Release publication proves availability, not successful adoption or operation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify version and artifact, notes, compatibility, security, support, migration, approvals, distribution, rollback, monitoring, and retirement. Test partial, failed, and withdrawn release.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Release from unverified source, notes that overclaim, hidden breaking change, support unprepared, migration without rollback, no withdrawal, and release count treated as product success.
+
+RECOVERY AND RECONSIDERATION
+
+Hold or withdraw, preserve artifact and communications, roll back or patch, support affected users, reconcile data, and reassess commitments. Reopen on artifact, audience, dependency, incident, or compatibility change.
+
+COMPLETION CRITERIA
+
+Version, artifact, changes, readiness, approvals, audiences, support, communication, rollout, rollback, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve release records, artifacts, approvals, notes, communications, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Delivery, Deployment, Operations, Support, Documentation, Security, and Product.
+
+RELATED CODEX SECTIONS
+
+237 Acceptance Testing; 258-268 Configuration through Deployment; 273-274 Developer Experience and Tooling; 301-330 Operations; 373 Roadmap Management; 388-390 Version, Deprecation, and Sunset.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, release, testing, support, operations, and owner-control context, and the integration roadmap. Exact release authority, versioning, audiences, compatibility, migration, communication, rollback, and acceptance evidence remain unresolved.

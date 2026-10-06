@@ -1,0 +1,106 @@
+SECTION 070 — Internet of Things Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the engineering of connected physical things, gateways, device identities, telemetry, commands, lifecycle operations, and human control across intermittent, heterogeneous, and distributed environments.
+
+REQUIRED OUTCOME
+
+ - A bounded device, network, cloud, edge, data, user, operator, and lifecycle scope.
+ - Governed identity, provisioning, telemetry, command, firmware, privacy, security, resilience, interoperability, and retirement contracts.
+ - Traceable evidence from device behavior through service outcome and owner control.
+
+WHY THIS MATTERS
+
+IoT joins physical consequences with unreliable networks, fleet scale, long-lived devices, supplier dependencies, and sensitive telemetry. A locally correct device can create system-wide harm through identity failure, stale commands, insecure provisioning, or unmanageable updates.
+
+APPLICABILITY
+
+Applies to networked sensors, actuators, appliances, vehicles, facilities, industrial assets, wearables, gateways, edge devices, device fleets, and services that provision, monitor, command, or retire them.
+
+NON-APPLICABILITY CONDITIONS
+
+ - A disconnected prototype with no claim of production identity, fleet behavior, physical control, privacy, security, or lifecycle readiness.
+ - An approved IoT baseline is unchanged by a reversible documentation-only change with recorded impact analysis.
+ Record scope, baseline, evidence, authority, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+ - Device and service architecture, embedded software, network, identity, privacy, security, data, operations, safety, and lifecycle baselines.
+ - Device inventory, protocol and connectivity constraints, provisioning authority, fleet population, telemetry purpose, command policy, update mechanism, and recovery capacity.
+
+REQUIRED INPUTS
+
+ - Mission, device classes, users, operators, physical effects, locations, jurisdictions, connectivity, data classes, service levels, and retirement horizon.
+ - Schemas, protocols, credentials, certificates, firmware, gateway and cloud dependencies, support model, threat and hazard analysis, and test environments.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve purpose, collection and command authority, device identity policy, safety and privacy boundaries, fleet release, emergency action, vendor commitments, acceptable risk, and retirement. They assign owners for devices, data, security, operations, field support, and affected-party response, and retain pause, revoke, isolate, recall, and decommission authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze fleet telemetry, draft schemas and provisioning plans, detect anomalies, recommend maintenance, and simulate bounded rollout. It must preserve device, firmware, location, time, data, and authority identity and expose uncertainty. It must not issue consequential commands, enroll devices, widen collection, or deploy fleet changes without explicit delegation and approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Analyst, Observer, Security Auditor, Safety specialist through the existing role contract, Privacy and Governance Reviewers, Tester, Verifier, Planner, Coordinator, Critic, Red Team, Documentation Writer, Memory Curator, Optimizer, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+1. Define device classes, fleet boundaries, physical effects, users, operators, environments, jurisdictions, and modes.
+2. Establish identity, enrollment, ownership, trust, key, provisioning, inventory, and revocation models.
+3. Define telemetry, command, event, protocol, schema, timing, ordering, retry, idempotency, and offline behavior.
+4. Design fleet rollout, segmentation, monitoring, diagnostics, update, support, incident, recovery, and retirement paths.
+5. Test spoofing, duplication, replay, stale commands, partition, loss, scale, power failure, unsafe actuation, and partial rollout.
+6. Baseline evidence and secure owner approval for each consequential fleet transition.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show acting identity, device and fleet scope, command authority, data purpose, firmware, connectivity, freshness, health, rollout state, physical consequence, and stop or revoke controls. AI proposals must show source telemetry, uncertainty, alternatives, and human approval. Non-AI fallback and manual safe operation remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use zero-trust device identity, least privilege, secure provisioning, certificate rotation, command authorization, replay protection, device twins only as bounded representations, store-and-forward semantics, fleet segmentation, safe offline behavior, signed updates, audit, and physical fail-safe states. Keep device, edge, network, cloud, data, and owner boundaries explicit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Expose fleet inventory, identity health, connectivity, telemetry freshness, command queue, firmware, configuration, risk, affected locations, rollout, alerts, evidence, and authorized actions to pause, quarantine, revoke, isolate, roll back, recall, restore, or retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Device and fleet architecture; identity and provisioning records; telemetry and command contracts; data and privacy map; threat and hazard analysis; rollout and update plan; monitoring and incident runbook; test and field evidence; inventory, decision, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify device, firmware, configuration, certificate, protocol, gateway, network, cloud, location, time, data purpose, actor, command, test method, result, and limitation. Fleet averages, dashboards, lab devices, and simulated twins do not prove every device or physical outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify enrollment and revocation, identity isolation, authorization, telemetry integrity and freshness, command ordering and replay resistance, offline behavior, partition recovery, fleet scale, signed update, rollback, physical safe state, privacy deletion, and independent reproduction on representative device classes.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared credentials, universal device assumptions, unrestricted commands, hidden telemetry, stale twins, unbounded retries, insecure default provisioning, fleet-wide rollout without canary evidence, and dashboards that hide missing or disconnected devices.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected devices or commands, preserve logs and physical evidence, revoke authority or credentials, enter safe mode, and contain rollout. Reconsider after fleet scope, identity, firmware, data, network, safety, security, privacy, and owner authority are revalidated.
+
+COMPLETION CRITERIA
+
+All device classes, boundaries, identities, contracts, modes, controls, evidence, rollout, recovery, support, retirement, open risks, and acceptance authority are recorded. Remain CONTENT-COMPLETE pending source reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve fleet and device identities, firmware, configuration, locations, owners, certificates, decisions, evidence, incidents, rollouts, exceptions, and next safe action. Hand off to Embedded, Network, Cloud, Edge, Data, Security, Privacy, Operations, Updates, Support, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+059 Embedded Systems Architecture; 069 Embedded Software Engineering; 278 Edge Computing Engineering; 284 Network Engineering; 355 Device Provisioning; 379 Firmware Updates; 198 Embedded Security; 218 Privacy Engineering; 327-330 Recovery sections.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-069, and the Owner Cockpit and evidence conventions. Device classes, physical hazard regime, connectivity, fleet size, jurisdiction, vendor contracts, data purposes, and update authority remain unresolved until supplied.

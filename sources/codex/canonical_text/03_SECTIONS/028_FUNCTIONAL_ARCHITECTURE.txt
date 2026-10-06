@@ -1,0 +1,403 @@
+SECTION 028 — Functional Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed structure of what a system, service, product, organization, human, AI agent, device, or enabling element must do to produce authorized outcomes under declared conditions.
+
+Functional Architecture decomposes approved requirements, operational concepts, process obligations, capabilities, domain rules, and system behavior into coherent functions and subfunctions. It identifies inputs, outputs, transformations, triggers, states, controls, dependencies, interfaces, allocations, failure behavior, recovery, evidence, and verification without prematurely selecting implementation technology or treating a functional model as proof of runtime behavior.
+
+Functional Architecture specializes the whole-system functional analysis established by Systems Engineering. It preserves the difference between an enduring capability, a process sequence, a required function, a design component, an implementation artifact, and an observed outcome.
+
+REQUIRED OUTCOME
+
+- A declared functional-architecture scope identifying the system or organizational boundary, objectives, environments, users, operators, affected parties, lifecycle horizon, and authority.
+- A stable functional taxonomy and hierarchy with clear parent-child meaning, function identity, purpose, inputs, outputs, conditions, constraints, owner, allocation, dependencies, evidence, and lifecycle state.
+- A functional context model showing external actors, systems, services, people, devices, data, events, resources, commands, controls, authorities, trust boundaries, and evidence flows.
+- A functional decomposition that covers normal, boundary, denied, degraded, failure, recovery, maintenance, migration, deprecation, and retirement behavior where applicable.
+- Functional flows and behavior models connecting triggers, preconditions, transformations, decisions, outputs, states, timing, sequencing, concurrency, exceptions, and postconditions.
+- Explicit allocation of functions and interfaces to human roles, AI roles, system elements, components, services, devices, organizations, external systems, processes, or enabling systems.
+- Functional contracts defining inputs, outputs, units, schemas, identity, authority, timing, ordering, quality, error behavior, retry, idempotency, audit, evidence, and compatibility as applicable.
+- Traceability from objectives, domain meaning, requirements, capabilities, processes, risks, controls, functions, allocations, implementations, tests, evidence, acceptance, operations, maintenance, and retirement.
+- A functional-state model that distinguishes desired, defined, proposed, allocated, implemented, integrated, verified, validated, operational, degraded, blocked, superseded, and retired states.
+- A functional verification and validation basis that makes claims reproducible and distinguishes analysis or model evidence from implementation and observed-behavior evidence.
+- A durable handoff to Operational, Information, Data, Application, Software, Platform, Infrastructure, Integration, API, Event, Security, Privacy, Safety, Reliability, Resilience, Accessibility, Engineering, Testing, Operations, Maintenance, and Retirement work.
+
+WHY THIS MATTERS
+
+Requirements state what is authorized and required; process models state how work is coordinated in context. Functional Architecture makes the required behavior explicit enough to allocate, design, implement, test, verify, operate, recover, and retire. Without it, teams may implement features without a coherent behavior model, allocate a requirement to nobody, duplicate responsibility, or hide an essential control inside an assumed component.
+
+Functional decomposition is also a powerful place for false certainty. A clean function tree can omit human judgment, authority, error handling, data provenance, accessibility, latency, recovery, or evidence. A function can be mathematically defined and still be unimplemented, untestable, unsafe, or unusable in context.
+
+For human-AI systems, function boundaries determine whether an AI is classifying, recommending, deciding, executing, monitoring, or merely assisting. Those are materially different authorities and failure modes. Functional Architecture makes the boundary inspectable and prevents a model's ability to perform a function from becoming permission to perform it consequentially.
+
+APPLICABILITY
+
+- A system, service, product, organization, device, process, model, agent, or capability contains interacting behaviors, transformations, controls, decisions, or interfaces.
+- Requirements must be decomposed and allocated across people, functions, systems, components, services, devices, external providers, or lifecycle activities.
+- The system crosses software, hardware, data, human, organizational, domain, supplier, physical, or jurisdictional boundaries.
+- Functional behavior has material security, privacy, safety, accessibility, reliability, resilience, performance, support, maintenance, recovery, or retirement consequences.
+- Multiple implementations or architectural alternatives must satisfy the same outcome-level obligations.
+- AI, automation, orchestration, or external services may perform, recommend, constrain, or supervise a function.
+- Verification requires functional-level analysis, inspection, demonstration, simulation, testing, measurement, or traceability independent of implementation detail.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work is a bounded observation, documentation correction, or reversible change with no material effect on required behavior, functional allocation, interface, control, state, evidence, user journey, or lifecycle obligation.
+- A current approved functional architecture covers the exact objective, requirements baseline, version, environment, operating mode, interfaces, and change, and impact analysis confirms no material functional effect.
+- The work is exploratory and makes no claim that functions are approved, allocated, implemented, integrated, verified, validated, or operational. The model must remain labeled as proposed.
+- An active safety, security, privacy, integrity, legal, or authority incident requires containment before normal functional analysis can safely proceed.
+- The necessary requirements, domain meaning, system boundary, or acceptance authority is unavailable. Work may continue as an evidence request or proposed analysis, but not as an accepted functional baseline.
+
+A non-applicability decision must identify the controlling functional baseline, exact scope, version, environment, evidence date, authority, assumptions, and reopening condition. A component diagram, feature list, familiar implementation, or AI-generated decomposition is not sufficient reason to omit material functional analysis.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-018 provide objective, strategy, stakeholder, user, domain, feasibility, and risk context.
+- Section 019 provides the controlled requirements baseline, acceptance criteria, verification methods, variants, mandatory constraints, and change obligations.
+- Section 020 provides system context, operational concept, functional analysis, allocations, elements, interfaces, lifecycle, verification, validation, transition, and recovery context.
+- Sections 021-027 provide enterprise, solution, systems, domain, business, capability, and process architecture context.
+- Functional terminology must align with Domain Analysis, Domain Architecture, Systems Engineering, Capability Architecture, and Process Architecture or include explicit mappings.
+- The boundary between function, process, capability, design component, implementation, and observed behavior must be agreed or marked unresolved.
+- Human authority for requirements, safety, security, privacy, accessibility, policy, domain meaning, risk, architecture, allocation, acceptance, and deployment must be attributable.
+
+REQUIRED INPUTS
+
+- Authorized functional question, objective, scope, exclusions, owner, environments, operating modes, user and operator populations, and lifecycle horizon.
+- Approved requirements baseline, acceptance criteria, verification methods, criticality, variants, constraints, risk treatments, feasibility conditions, and open findings.
+- System context, operational concept, mission threads, process architecture, capability model, domain model, business and enterprise architecture.
+- Actors, roles, organizations, systems, components, services, devices, facilities, suppliers, external dependencies, data sources, authorities, and trust boundaries.
+- Current-state behavior, interface contracts, schemas, event records, logs, incidents, defects, performance, reliability, security, privacy, safety, accessibility, support, maintenance, and recovery evidence.
+- Desired states, function quality, timing, capacity, resource, evidence, control, observability, compatibility, migration, deprecation, and retirement obligations.
+- AI and model identity, intended function, capabilities, limitations, tool access, data boundary, autonomy mode, human review, fallback, monitoring, revocation, and provider dependencies where applicable.
+- Known assumptions, unknowns, dissent, alternative decompositions, implementation constraints, supplier claims, and evidence limitations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The authorized human owner retains authority over objectives, required outcomes, values, mandatory constraints, system boundary, functional criticality, acceptance, risk, safety, privacy, accessibility, security, resource commitments, autonomy, and irreversible allocation or deployment decisions.
+
+- Confirm the functional scope, system of interest, operating modes, environments, affected parties, lifecycle stages, non-goals, and acceptance authority.
+- Approve or reject derived functions, decomposition boundaries, criticality, allocations, variants, constraints, exceptions, and functional baselines.
+- Decide value conflicts involving human judgment, rights, safety, privacy, accessibility, dignity, employment, public impact, cost, schedule, performance, and residual risk.
+- Ensure qualified specialists and affected users, operators, maintainers, and support personnel review functions where consequence requires expertise or lived experience.
+- Approve AI or automation roles, autonomy levels, tool permissions, human checkpoints, fallback, revocation, and appeal paths.
+- Ratify functional claims only for the exact version, configuration, environment, scope, evidence, and unresolved conditions reviewed.
+- Retain the ability to stop, narrow, quarantine, roll back, restore, supersede, or retire functional work when authority, evidence, safety, or mission conditions fail.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect requirements and architecture, identify candidate functions, normalize terminology, compare decompositions, generate behavior models, propose allocations, analyze dependencies, draft functional contracts, produce test ideas, simulate bounded scenarios, and identify evidence gaps within its assignment.
+
+AI must:
+
+- restate the authorized objective, requirements baseline, system boundary, process context, assumptions, unknowns, and consequence limits before material decomposition;
+- distinguish source requirement, derived function, inferred behavior, proposed allocation, implementation fact, simulation, recommendation, execution result, and verified behavior;
+- preserve source identity, version, scope, environment, method, and limitations for each material functional claim;
+- identify missing inputs, outputs, actors, authority, states, error behavior, timing, resources, controls, evidence, accessibility, and recovery;
+- keep function definitions at the appropriate abstraction level and avoid narrowing them to a preferred implementation without authority;
+- model AI participation with explicit identity, function, authority, tool access, data, human review, monitoring, fallback, revocation, and evidence;
+- expose alternatives, tradeoffs, dissent, sensitivity, reversibility, and evidence that would change an allocation or recommendation;
+- stop or escalate when requirements, domain meaning, authority, mandatory constraints, or acceptance boundaries are materially unresolved.
+
+AI must not:
+
+- invent requirements, functions, actors, interfaces, performance, resources, integrations, supplier capability, certification, or current behavior;
+- convert a feature, API, prompt, component, model benchmark, prototype, simulation, or diagram into proof of functional satisfaction;
+- assign authority, approve requirements, accept risk, decide values, or bind a functional baseline without valid delegation;
+- optimize local function metrics while silently degrading mission outcome, user control, security, privacy, safety, accessibility, reliability, resilience, maintainability, evidence, or retirement;
+- hide human judgment, exception handling, denial, error, degraded behavior, or recovery to make the functional model appear complete;
+- allow conversational, administrative, retry, import, or recovery paths to bypass functional controls or authority boundaries.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: defines functional boundaries, decomposition, contracts, allocations, dependencies, states, interfaces, failure, recovery, and lifecycle implications.
+- Analyst: examines function relationships, alternatives, completeness, feasibility, quality, dependencies, tradeoffs, and consequences.
+- Researcher: gathers requirements, domain, technical, human, operational, supplier, standard, and current-behavior evidence.
+- Observer: records actual behavior, inputs, outputs, states, transitions, timings, failures, and system signals without unsupported causation.
+- Planner: sequences functional analysis, allocation, prototyping, integration, verification, validation, transition, and review work.
+- Coordinator: synchronizes functional workstreams and resolves routing or provenance issues without seizing authority.
+- Critic: challenges decomposition gaps, hidden implementation bias, circular dependencies, false completeness, and unsupported behavior.
+- Security Auditor: assesses identity, authorization, trust, data, control, abuse, evidence, and security behavior at functional boundaries.
+- User Experience Reviewer: evaluates user, owner, operator, maintainer, support, accessibility, explanation, correction, denial, and recovery functions.
+- Tester: designs functional tests across normal, boundary, failure, degraded, recovery, compatibility, security, accessibility, and governance conditions.
+- Verifier: independently checks functional claims, allocations, contracts, evidence, reproducibility, and exact scope.
+- Documentation Writer: maintains functional catalogs, models, contracts, decisions, assumptions, limitations, and handoffs.
+- Memory Curator: preserves functional baseline identity, traceability, versions, evidence, dissent, decisions, and continuity.
+- Governance Reviewer: checks authority, requirements precedence, mandatory constraints, delegation, exceptions, acceptance, and status transitions.
+- Implementer: realizes approved functions within the allocated architecture and reports deviations rather than silently changing the functional baseline.
+- Refactorer: improves internal structure while preserving approved functional behavior unless change is authorized.
+- Optimizer: improves measured function performance while preserving protected properties and acceptance boundaries.
+- Red Team: attempts authorized bypass, misuse, malformed input, privilege escalation, model manipulation, failure, recovery, and evidence attacks.
+- Decision Arbiter Advisory: compares functional alternatives under authorized criteria and preserves owner decisions.
+
+Role selection must preserve independence between implementation and verification where a false functional claim could create consequence. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish the functional context: objective, outcome, system boundary, environments, operating modes, users, operators, affected parties, lifecycle, non-goals, and authority.
+2. Accept and inspect the exact requirements, process, capability, domain, systems, and architecture handoffs, including open findings and evidence limits.
+3. Define terminology and distinguish capability, process, function, subfunction, activity, task, behavior, service, component, interface, control, requirement, and implementation.
+4. Identify functional actors and subjects, including humans, AI agents, automation, rule engines, external systems, devices, services, facilities, and enabling organizations.
+5. Establish the functional context and identify incoming and outgoing information, data, events, commands, resources, authority, identity, evidence, physical effects, and human communication.
+6. Derive candidate functions from approved requirements, operational concepts, process obligations, capability outcomes, domain rules, risk treatments, and lifecycle needs.
+7. Build a functional taxonomy and catalog with stable identities, purpose, scope, inputs, outputs, conditions, owner, criticality, status, dependencies, evidence, and lifecycle state.
+8. Decompose functions using black-box and white-box views only as far as needed for responsibility, interface, risk, allocation, verification, implementation, and lifecycle decisions.
+9. Define functional flows, behavior, sequences, timing, concurrency, state transitions, preconditions, guards, postconditions, exceptions, and compensation.
+10. Define functional contracts for inputs and outputs, schema, units, identity, authorization, timing, ordering, quality, errors, retry, idempotency, audit, evidence, compatibility, and ownership.
+11. Allocate functions to people, roles, processes, systems, components, services, devices, external providers, facilities, or enabling systems with rationale and authority.
+12. Identify duplicated, missing, circular, conflicting, unowned, unreachable, unsafe, inaccessible, or unverifiable functions and allocations.
+13. Allocate cross-cutting obligations for security, privacy, safety, accessibility, reliability, resilience, performance, maintainability, observability, support, migration, deprecation, and retirement.
+14. Define functional variants by environment, jurisdiction, population, role, data class, risk, operating mode, product, feature state, and lifecycle stage.
+15. Define function measures, thresholds, margins, evidence methods, test conditions, and invalidation rules for material quality or performance claims.
+16. Develop and compare alternatives while preserving mandatory constraints outside weighted scoring and exposing sensitivity, reversibility, and residual uncertainty.
+17. Define integration, transition, fallback, recovery, rollback, migration, coexistence, maintenance, deprecation, and retirement behavior at functional boundaries.
+18. Validate functional meaning and allocation with owners, users, operators, maintainers, support, domain experts, and qualified specialists as applicable.
+19. Hostile-review the functional architecture for omissions, unsafe assumptions, bypasses, inaccessible paths, unowned state, unsupported evidence, and implementation drift.
+20. Baseline and hand off the functional architecture with exact identity, traceability, evidence boundary, unresolved decisions, change authority, and next safe action.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Every consequential function must disclose whether it is performed by a human, AI model, agent, automation, rule engine, external service, or hybrid arrangement.
+- The owner must be able to inspect each function's purpose, source, authority, inputs, outputs, state, allocation, criticality, controls, evidence, failure, recovery, and lifecycle status.
+- AI-generated functions, decompositions, allocations, contracts, simulations, and optimizations remain proposals until authorized adoption.
+- The human must be able to correct terminology, scope, function boundaries, affected parties, allocation, criticality, and acceptance without losing history or dissent.
+- AI recommendations that affect rights, safety, privacy, accessibility, cost, commitments, autonomy, or external state must expose alternatives, assumptions, uncertainty, reversibility, affected parties, and evidence that would change the recommendation.
+- The system must distinguish defined, proposed, allocated, implemented, integrated, verified, validated, operational, degraded, blocked, superseded, and retired function states.
+- Critical stop, correction, appeal, evidence inspection, fallback, and recovery functions must remain available when an AI model, provider, network, or nonessential dependency fails.
+- Automated function selection, routing, prioritization, or optimization must preserve mandatory constraints and cannot suppress minority findings or human review conditions.
+- No conversational path may bypass the identity, authority, policy, state, evidence, audit, accessibility, or recovery controls required by other paths.
+- Long-running or autonomous functions must expose assignment, authority expiry, current state, resource use, evidence progress, stop conditions, and safe interruption behavior.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent functions, subfunctions, actors, inputs, outputs, flows, states, contracts, allocations, controls, dependencies, evidence, tests, and lifecycle states as versioned attributable records or equivalent controlled artifacts.
+- Preserve traceability among objective, requirement, capability, process, domain rule, function, allocation, interface, implementation artifact, test, evidence, acceptance, operation, incident, change, and retirement.
+- Maintain separate functional context, functional hierarchy, functional flow, functional behavior, functional state, functional allocation, and functional contract views with explicit consistency rules.
+- Use black-box functions to describe externally required behavior and white-box decomposition to expose internal structure only when that structure is needed for allocation, risk, interface, verification, or implementation decisions.
+- Keep function identity separate from implementation component identity. Multiple implementations may realize one function; one component may realize multiple functions; neither relationship creates authority automatically.
+- Define functional state transitions with actor, authority, trigger, precondition, guard, evidence, effect, error, timeout, retry, compensation, cancellation, and resulting state where applicable.
+- Treat every material functional interface as a contract with producer, consumer, purpose, data or resource, identity, authority, timing, ordering, quality, error, compatibility, observability, evidence, and ownership.
+- Allocate nonfunctional and cross-cutting obligations to functions, interfaces, actors, elements, environments, and lifecycle activities rather than leaving them as unowned global prose.
+- Preserve human judgment, manual fallback, accessibility support, control, appeal, explanation, and recovery as explicit functions when they are required outcomes.
+- Model AI and external providers as bounded functional realizations with version, data, context, tools, permissions, evaluation, monitoring, fallback, substitution, revocation, incident, and retirement behavior.
+- Instrument functional execution and outcomes sufficiently to distinguish invocation, completion, correct result, accepted outcome, control effectiveness, and recovery.
+- Ensure changes to requirements, domain rules, processes, data, interfaces, authorities, models, providers, environments, or implementations trigger functional impact analysis and evidence invalidation.
+- Preserve compatibility, migration, deprecation, support, maintenance, and retirement semantics for functional contracts and historical evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show the functional baseline identity, version, scope, environment, operating mode, owner, authority state, lifecycle state, and evidence freshness.
+- Let the owner navigate from objective, requirement, capability, process, or domain rule to function, allocation, interface, implementation, test, evidence, acceptance, operation, and retirement.
+- Identify available, unavailable, prohibited, consequential, awaiting-approval, degraded, failed, unverified, and recovery actions.
+- Expose the acting identity, role, capability, authority, tools, data boundary, approval point, and consequence boundary for each consequential function.
+- Show functional inputs, outputs, states, dependencies, controls, timing, quality, errors, retry, idempotency, observability, evidence, and owner.
+- Provide controls to approve, reject, defer, narrow, allocate, revoke, pause, stop, roll back, restore, quarantine, supersede, and retire within authority.
+- Explain what is defined versus implemented, what has been tested versus verified, what is simulated versus live, and what remains unknown.
+- Preserve critical status, stop, correction, evidence, fallback, and recovery functions when nonessential dependencies fail.
+- Export the functional baseline, contracts, allocations, traceability, evidence, decisions, dissent, and continuity record without hidden conversational state.
+
+The cockpit must not equate a function catalog, component existence, benchmark, demo, or green dashboard with functional correctness or accepted outcome.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Functional Architecture charter with objective, scope, system boundary, environments, operating modes, users, operators, affected parties, authority, and lifecycle.
+- Functional taxonomy, hierarchy, catalog, glossary, identifiers, ownership, criticality, variants, applicability, and lifecycle status.
+- Functional context, actor, trust, authority, data, information, event, command, control, evidence, and resource flow models.
+- Functional decomposition with black-box and white-box views, purpose, inputs, outputs, conditions, transformations, dependencies, and boundaries.
+- Functional behavior, sequence, state, timing, concurrency, exception, compensation, and recovery models.
+- Functional contracts and interface-control records with identity, authority, schema, units, timing, ordering, quality, errors, retry, idempotency, audit, evidence, compatibility, and ownership.
+- Process-to-function, capability-to-function, requirement-to-function, function-to-element, function-to-interface, function-to-implementation, function-to-test, function-to-evidence, and function-to-acceptance traceability.
+- Functional allocation and responsibility matrix covering people, roles, AI, automation, systems, components, services, devices, providers, facilities, and enabling organizations.
+- Functional variants, non-applicability, exception, waiver, supersession, migration, deprecation, and retirement records.
+- Functional quality, performance, capacity, reliability, resilience, security, privacy, safety, accessibility, maintainability, observability, support, and evidence model.
+- Human-AI functional participation and autonomy model with identity, authority, tools, data, review, fallback, monitoring, revocation, appeal, incident, and retirement behavior.
+- Alternatives, tradeoffs, sensitivity, reversibility, dissent, assumptions, unknowns, risks, decisions, and reopening register.
+- Integration, verification, validation, owner-acceptance, hostile-review, and durable handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Every functional claim must identify subject, function identity, version, scope, environment, operating mode, conditions, method, evidence source, timeframe, actor, and limitations.
+- A requirement proves an obligation exists; a functional model proves how the obligation is represented; neither alone proves implementation or runtime behavior.
+- Every function must identify its source requirement, capability, process, domain rule, risk treatment, or lifecycle obligation, or be explicitly marked proposed or unresolved.
+- Every allocation must identify allocated function, receiving actor or element, responsibility, authority, rationale, interface effects, verification level, and status.
+- Every functional contract must identify endpoints, exact versions, inputs, outputs, units, identity, authority, timing, ordering, quality, errors, retries, compatibility, observability, evidence, and ownership as applicable.
+- Analysis, simulation, inspection, demonstration, prototype, test, measurement, runtime record, user observation, and owner acceptance must remain distinct evidence types.
+- Performance and quality evidence must identify workload, data, configuration, environment, thresholds, uncertainty, method, result, and excluded claims.
+- AI evidence must identify model or provider, version, configuration, context, data, tools, permissions, evaluation, human review, fallback, and limitations proportionate to consequence.
+- Verification evidence must identify exact artifact or baseline, expected result, actual result, procedure, inputs, environment, actor, date, logs, deviations, reproducibility, and independence.
+- Failed, blocked, inconclusive, stale, superseded, contradictory, or partial evidence must remain visible and must constrain the related functional state.
+- Missing evidence must result in `UNKNOWN`, `NOT VERIFIED`, `BLOCKED`, `PROPOSED`, `CONDITIONAL`, or another bounded state; it must not be treated as functional success.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace representative objectives, requirements, capabilities, processes, and domain rules into functions, allocations, interfaces, implementations, tests, evidence, acceptance, operations, maintenance, and retirement.
+- Trace representative implementations, components, interfaces, and tests backward to authorized functions and their source obligations.
+- Introduce an orphan function, duplicate function, unallocated function, unreachable function, unowned state, incomplete contract, and orphan test and confirm each is detected or explicitly recorded.
+- Change a requirement, process, domain rule, interface, data schema, authority rule, model, provider, environment, or implementation and confirm impacted functions, allocations, evidence, tests, approvals, and readiness are flagged.
+- Exercise normal, boundary, invalid, unauthorized, malformed, duplicate, replayed, out-of-order, timed-out, partial, degraded, offline, failure, recovery, rollback, migration, maintenance, deprecation, and retirement behavior.
+- Verify functional contracts reject or safely handle missing, stale, malformed, incompatible, unauthorized, duplicate, replayed, or partially processed inputs as applicable.
+- Disable an AI model, external provider, network, data source, credential, or evidence store and confirm critical control, stop, status, fallback, and recovery functions remain available or fail safely.
+- Attempt to let an AI-generated function, allocation, optimization, risk acceptance, or readiness claim become binding without authority and verify rejection.
+- Confirm mandatory security, privacy, safety, accessibility, governance, reliability, resilience, and human-control obligations cannot be traded away through aggregate scoring or implementation convenience.
+- Validate complete owner, user, operator, maintainer, support, incident, and recovery journeys in realistic environments with appropriate accessibility coverage.
+- Independently reproduce representative functional claims from the exact handoff package and state what remains unverified.
+- Restore a previous functional baseline and confirm identity, allocations, interfaces, evidence, compatibility, and owner controls remain coherent.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a function list, component diagram, API list, prompt, feature list, benchmark, prototype, or simulation as proof of functional behavior.
+- Deriving functions from the current implementation and then calling them requirements or architecture without authorized analysis.
+- Decomposing too little to expose ownership, interfaces, controls, states, failure, evidence, or verification.
+- Decomposing too far into an ungoverned task inventory that obscures outcomes, responsibility, or change impact.
+- Duplicating functions under different names or assigning one function to conflicting owners without an explicit allocation rule.
+- Leaving human judgment, manual fallback, accessibility, explanation, appeal, recovery, evidence, or lifecycle work implicit.
+- Allocating a function to a team, document, or component without defining authority, inputs, outputs, contract, resources, evidence, and verification.
+- Treating a model's technical ability, provider claim, training result, or agent confidence as permission or operational competence.
+- Local optimization that improves latency, cost, or throughput while weakening correctness, safety, privacy, security, accessibility, resilience, maintainability, support, or retirement.
+- Hiding denied, malformed, adversarial, concurrent, stale, partial, degraded, or recovery behavior.
+- Treating a test of one implementation, environment, input, or path as proof of the general functional claim.
+- Allowing changes in requirements, process, domain, data, authority, provider, or environment to leave functional evidence and approvals falsely green.
+- Making recovery depend on the failed function, component, credential, network, provider, model, data, or evidence store.
+- Retiring a function or implementation without preserving required capability, user transition, compatibility, records, evidence, support, and accountability.
+
+RECOVERY AND RECONSIDERATION
+
+1. Quarantine the affected function, allocation, contract, baseline, evidence, approval, or readiness claim while preserving the last trusted state.
+2. Classify the issue as objective, requirement, domain meaning, process, decomposition, actor, authority, input, output, state, contract, allocation, control, quality, evidence, implementation, interface, failure, recovery, or lifecycle defect.
+3. Downgrade the affected functional state to `UNKNOWN`, `PROPOSED`, `BLOCKED`, `NOT VERIFIED`, `FAILED`, or another truthful state.
+4. Preserve the prior functional model, implementation, evidence, dissent, failed attempt, incident, and supersession links.
+5. Identify safe unaffected work and enter safe halt for actions that could create consequence from the invalid function.
+6. Request the smallest missing requirement clarification, domain decision, owner approval, specialist review, observation, contract correction, implementation change, test, or recovery exercise needed.
+7. Re-run impact analysis across processes, capabilities, requirements, architecture, allocations, interfaces, data, controls, tests, evidence, training, operations, support, maintenance, migration, deprecation, and retirement.
+8. Narrow scope, split the function, create a variant, use a reversible realization, restore a prior baseline, or defer advancement as authorized.
+9. Record the new state, conditions, residual uncertainty, owner decision, review date, and evidence that would change the conclusion.
+
+A blocked functional record must name the exact blocker, consequence, safe work, minimum resolution, authority required, and evidence needed for reconsideration.
+
+COMPLETION CRITERIA
+
+Functional Architecture is complete for its declared scope only when:
+
+- Objective, outcomes, requirements baseline, scope, system boundary, environments, operating modes, affected parties, authority, non-goals, and lifecycle stages are explicit.
+- Function meaning is distinguished from capability, process, activity, task, procedure, policy, component, service, interface, implementation, and observed behavior.
+- Every material function has stable identity, purpose, inputs, outputs, conditions, owner, criticality, dependencies, allocation, evidence, verification method, and lifecycle state.
+- Functional context, hierarchy, flows, behavior, states, contracts, allocations, controls, and dependencies are coherent or disagreements are visible.
+- Functions trace to authorized requirements, capabilities, processes, domain rules, risk treatments, and lifecycle obligations, or remain visibly proposed or unresolved.
+- Material cross-cutting obligations for security, privacy, safety, accessibility, reliability, resilience, performance, maintainability, observability, support, migration, deprecation, and retirement are allocated.
+- Normal, boundary, denied, malformed, concurrent, degraded, failure, recovery, rollback, migration, maintenance, deprecation, and retirement behavior is addressed where applicable.
+- Human-AI roles, authority, autonomy, human checkpoints, fallback, revocation, appeal, monitoring, evidence, and incident behavior are bounded and testable.
+- Functional contracts and allocations are versioned, compatible, traceable, and supported by appropriate evidence and independent verification.
+- Applicable owners, users, operators, maintainers, support personnel, and qualified specialists have reviewed the exact scope or their absence is recorded as a limitation or blocker.
+- Hostile review, verification, acceptance, change, invalidation, recovery, and reopening methods are defined; unresolved mandatory conditions block affected advancement.
+- Downstream roles can reconstruct the functional baseline, assumptions, evidence, decisions, open findings, and next safe action without chat history.
+
+Completion does not mean functions are implemented, integrated, verified, validated, accepted, operational, effective, or retired. It means the declared functional architecture is sufficiently coherent and governed to control the next authorized realization step truthfully.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+The handoff must include:
+
+- Functional architecture identity, version, scope, owner, authority state, environment, operating modes, lifecycle stage, evidence date, and safe-to-proceed determination.
+- Objective, outcomes, requirements baseline, capabilities, processes, domain meaning, actors, affected parties, non-goals, constraints, and acceptance authority.
+- Functional taxonomy, hierarchy, catalog, context, flows, behavior, states, contracts, allocations, variants, applicability, and lifecycle status.
+- Inputs, outputs, transformations, data, events, commands, resources, identity, authority, controls, evidence, errors, retries, timing, ordering, quality, and compatibility.
+- Mappings to requirements, capabilities, processes, system elements, components, services, roles, interfaces, data, controls, tests, evidence, acceptance, operations, maintenance, migration, deprecation, and retirement.
+- AI and automation participation, model and provider identity, tools, permissions, human review, fallback, monitoring, revocation, appeal, incident behavior, and retirement conditions.
+- Assumptions, unknowns, dissent, alternatives, risks, missing evidence, invalidated claims, unresolved allocations, failed attempts, and reopening triggers.
+- Change authority, impact analysis, versioning, compatibility, rollback, restoration, migration, support, training, and deprecation conditions.
+- Exact assignments and open decisions for Operational, Information, Data, Application, Software, Platform, Infrastructure, Integration, API, Event, Security, Privacy, Safety, Reliability, Resilience, Accessibility, Engineering, Testing, Operations, Maintenance, and Retirement work.
+- Current status, evidence boundary, human decisions required, safe work that may continue, blocker if any, and one next safe action.
+
+Downstream workers must return impossible functions, allocation conflicts, interface defects, implementation deviations, failed tests, incidents, operational evidence, maintenance findings, migration effects, and retirement constraints into the controlled functional record.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering
+020 Systems Engineering
+021 Enterprise Architecture
+022 Solution Architecture
+023 Systems Architecture
+024 Domain Architecture
+025 Business Architecture
+026 Capability Architecture
+027 Process Architecture
+029 Operational Architecture
+030 Information Architecture
+031 Data Architecture
+032 Application Architecture
+033 Software Architecture
+034 Platform Architecture
+035 Infrastructure Architecture
+038 Distributed Systems Architecture
+041 Integration Architecture
+042 API Architecture
+043 Event-Driven Architecture
+044 Runtime Architecture
+045 Security Architecture
+046 Identity Architecture
+047 Privacy Architecture
+048 Governance Architecture
+050 Safety Architecture
+051 Reliability Architecture
+052 Resilience Architecture
+053 Accessibility Architecture
+056 AI Architecture
+057 Machine Learning Architecture
+058 Robotics Architecture
+059 Embedded Systems Architecture
+060 Hardware Architecture
+075 Human-Computer Interaction
+106 User Validation
+107 Software Engineering
+117 Application Engineering
+128 API Engineering
+129 Integration Engineering
+178 Agent Systems Engineering
+182 AI Safety
+183 AI Governance
+231 Software Testing
+234 Integration Testing
+235 System Testing
+246 Security Testing
+247 Accessibility Testing
+253 Model Testing
+254 Data Testing
+256 Verification
+257 Validation
+258 Configuration Management
+289 Change Management
+301 Site Reliability Engineering
+303 Runtime Operations
+313 Observability Engineering
+319 Incident Management
+327 Disaster Recovery
+331 Operational Readiness
+332 Command and Control
+374 Maintenance Engineering
+387 Compatibility Management
+388 Version Management
+389 Deprecation Management
+405 Lifecycle Governance
+406 System Retirement
+
+Reopen Functional Architecture when objective, requirement, domain meaning, process, capability, system boundary, actor, authority, function, allocation, interface, data, model, provider, environment, risk, control, evidence, implementation, incident, or lifecycle obligation materially changes.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Source basis:
+
+- Thirsty's Standard v3 supplies truthful scope, current-state inspection, explicit unknowns, evidence before claims, independent verification, hostile review, continuity, recovery, and no fabricated completion.
+- Thirsty's Agents 101 supplies the preserved role contracts, authority boundaries, architecture duties, implementation limits, independent verification, and human final authority.
+- Thirsty's Owner's Cockpit Standard supplies owner visibility, governed actions, requirements and evidence contracts, state, fallback, recovery, versioning, and acceptance controls. It remains a candidate source for owner ratification rather than silently ratified universal authority.
+- The draft V4 design materials supply design input for typed claims, evidence contracts, role assembly, dissent, rollback, reversal, and trusted transitions. They remain draft and unratified.
+- Sections 019-027 supply the current working-draft chain from requirements and systems engineering through enterprise, solution, systems, domain, business, capability, and process architecture.
+
+Unresolved source gaps:
+
+- The supplied corpus does not define one ratified universal functional-architecture notation, decomposition rule, taxonomy, modeling language, allocation method, or assurance scale for every system, sector, jurisdiction, or lifecycle.
+- No complete crosswalk has yet been performed against current external functional-analysis, systems-engineering, software, hardware, safety, security, privacy, accessibility, human-factors, reliability, or sector-specific standards.
+- Functional granularity, criticality, timing, quality thresholds, independence, evidence freshness, model assurance, and acceptance depth must be specialized according to consequence, domain, authority, and owner decision.
+- Later Operational, Information, Data, Application, Software, Platform, Infrastructure, Integration, Security, Testing, Operations, Maintenance, and Retirement sections may expose missing functions, allocations, interfaces, controls, or lifecycle obligations and must be allowed to reopen this section.
+
+This section is CONTENT-COMPLETE. It is not yet source-reconciled, hostile-reviewed, owner-accepted, implemented, tested, or verified.

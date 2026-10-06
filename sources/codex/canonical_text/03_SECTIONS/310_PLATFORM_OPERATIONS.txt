@@ -1,0 +1,95 @@
+SECTION 310 — Platform Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate shared platforms, control planes, clusters, services, guardrails, self-service paths, resources, and support so consumer workloads remain secure, reliable, and governable.
+
+REQUIRED OUTCOME
+
+A platform-operations model with capabilities, consumers, ownership, health, access, capacity, cost, policy, change, support, incidents, recovery, and retirement.
+
+WHY THIS MATTERS
+
+Platform failure has multiplier effect. A control-plane outage, bad template, policy error, capacity issue, or hidden dependency can affect many teams and make local recovery impossible.
+
+APPLICABILITY
+
+Apply when a shared platform or service is provisioned, changed, monitored, supported, secured, recovered, or retired.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no shared platform, consumer, guardrail, resource, service, or operational behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use platform architecture, cloud, infrastructure, identity, security, configuration, DevOps, SRE, support, cost, and recovery baselines.
+
+REQUIRED INPUTS
+
+Platform capabilities, consumers, services, resources, policy, access, health, capacity, cost, incidents, support, dependencies, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Platform owners approve service, guardrails, access, change, cost, support, incident, recovery, exceptions, and retirement. Consumers retain workload responsibility and escalation rights.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized platform state, consumer signals, and incidents; draft runbooks; and recommend bounded operations. It must not change shared policy, grant access, provision, or hide consumer impact without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Platform Operations Engineer, Platform Engineer, SRE, Security Auditor, Cloud Engineer, Support Reviewer, Incident Responder, Tester, Verifier, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+Operate platform services; monitor health; manage access and capacity; support consumers; deploy and change; handle incidents; maintain guardrails; recover; communicate; and retire or migrate capabilities.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show platform, capability, consumer, policy, resource, action, evidence, authority, and limitation. Require human approval for platform-wide, privileged, destructive, cost, and recovery actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use tenant isolation, policy, service boundaries, self-service guardrails, control-plane redundancy, observability, backup, rollback, escape hatch, and consumer impact visibility.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show platform health, consumers, resources, capacity, cost, policy, incidents, evidence freshness, owner, and authorized restrict, scale, rollback, recover, migrate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Platform operations charter; capability and consumer map; health and support; access, capacity, cost, incident, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify capability, platform, consumer, resource, policy, method, time, result, cost, owner, and limitation. Platform health proves neither consumer outcome nor workload correctness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify platform service, consumer isolation, access, guardrails, capacity, cost, support, observability, change, rollback, recovery, and provider loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared control plane without recovery, guardrail drift, overprivileged support, consumer impact hidden, platform metric theater, no escape hatch, and platform outage treated as consumer fault.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize platform, protect consumers, preserve evidence, restore or fail over, provide alternate path, communicate, and reassess. Reopen on capability, consumer, policy, provider, or architecture change.
+
+COMPLETION CRITERIA
+
+Platform, capabilities, consumers, owners, policy, health, capacity, cost, evidence, support, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve platform state, consumer map, policies, incidents, changes, decisions, evidence, exceptions, and open gaps. Hand off to Platform Engineering, SRE, Security, Cloud, Support, Governance, and Operations.
+
+RELATED CODEX SECTIONS
+
+272 Platform Engineering; 277 Cloud; 280 Orchestration; 301 SRE; 304 Cloud Operations; 313-317 Observability; 323-330 Capacity, Availability, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, platform, cloud, operations, support, and owner-control context, and the integration roadmap. Exact platform, consumers, services, staffing, SLOs, cost, recovery, and acceptance authority remain unresolved.

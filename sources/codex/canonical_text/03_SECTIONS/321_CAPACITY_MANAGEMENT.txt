@@ -1,0 +1,95 @@
+SECTION 321 — Capacity Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Plan, measure, allocate, forecast, protect, and improve resources needed to meet service, user, safety, reliability, cost, and growth outcomes.
+
+REQUIRED OUTCOME
+
+A capacity model with resource, workload, demand, headroom, forecast, threshold, cost, scaling, dependency, owner, action, and failure plan.
+
+WHY THIS MATTERS
+
+Capacity failure often appears as latency, errors, queue growth, data loss, or unsafe overload before a simple utilization number turns red. Forecasts are assumptions and need validation.
+
+APPLICABILITY
+
+Apply when resources, demand, growth, concurrency, data, staff, provider quota, or budget can limit a service or outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no capacity, demand, resource, cost, or service objective changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, performance, scalability, SRE, cost, provider, staffing, data, operations, and service-level baselines.
+
+REQUIRED INPUTS
+
+Resources, demand, workload, growth, limits, headroom, service objective, cost, dependencies, forecast, scale, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners set service and cost tradeoffs, headroom, staffing, scaling, throttling, and investment. Humans accept forecast uncertainty and user impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized capacity and workload data, forecast bounded trends, and propose scale or throttle. It must expose assumptions and must not scale, shed users, or make commitments without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Capacity Engineer, SRE, Performance Engineer, Architect, FinOps Analyst, Data Analyst, Operations Engineer, Tester, Verifier, and Planner.
+
+REQUIRED ACTIVITIES
+
+Define service and resources; measure demand and utilization; establish headroom; forecast; test scale; plan procurement or automation; monitor; throttle or expand; review forecast error; and recover.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show workload, resource, forecast, assumption, threshold, cost, service impact, evidence, and limitation. Require human approval for scale, throttle, budget, and commitment decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use quotas, autoscaling guardrails, queues, backpressure, partitioning, caching, capacity signals, resource isolation, cost controls, and graceful degradation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show demand, resource, headroom, forecast, cost, SLO, incidents, evidence freshness, owner, and authorized scale, throttle, defer, budget, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Capacity charter; resource and workload model; forecast and headroom; scaling and budget plan; test, incident, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify resource, workload, period, forecast, source, method, threshold, result, cost, uncertainty, and limitation. A utilization average or forecast proves only its conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify demand model, measurement, headroom, threshold, scale, throttle, cost, dependency, queue, overload, forecast error, and recovery. Test beyond expected scale safely.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Utilization-only, no headroom, linear forecast, autoscaling cost surprise, capacity hidden in vendor quota, throttle without fairness, and commitment without evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Protect critical users, throttle or scale, preserve evidence, restore service, communicate, and reassess architecture and forecast. Reopen on workload, growth, provider, cost, or service change.
+
+COMPLETION CRITERIA
+
+Resources, demand, workload, forecast, headroom, cost, service, owners, evidence, actions, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve capacity history, forecasts, incidents, scaling, budgets, decisions, evidence, exceptions, and open gaps. Hand off to Performance, SRE, Cloud, Platform, Finance, and Operations.
+
+RELATED CODEX SECTIONS
+
+239-242 Performance, Load, Stress, and Scalability; 301 SRE; 317 Metrics; 322-324 Availability, Performance, and Reliability; 304 Cloud Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, capacity, performance, cost, SRE, and operations context, and the integration roadmap. Exact demand, resources, forecasts, budgets, service objectives, staffing, and acceptance authority remain unresolved.

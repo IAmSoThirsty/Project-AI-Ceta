@@ -1,0 +1,95 @@
+SECTION 264 — Build Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design reproducible, secure, observable, and maintainable processes that transform controlled source, dependencies, configuration, and tools into identified artifacts.
+
+REQUIRED OUTCOME
+
+A build model with inputs, toolchain, environment, dependency resolution, provenance, reproducibility, security, caching, outputs, failure, evidence, and owner control.
+
+WHY THIS MATTERS
+
+The build is a supply-chain boundary. Nonreproducible tools, mutable inputs, secret leakage, hidden network access, or untracked generated files can make an artifact impossible to trust or recover.
+
+APPLICABILITY
+
+Apply when source, packages, configuration, models, data, firmware, infrastructure, or other inputs are transformed into a distributable or deployable artifact.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no transformation, artifact, dependency, toolchain, or provenance claim is affected and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use source, dependency, package, artifact, environment, secrets, security, license, testing, and release baselines. Identify build owner, trust, runner, and output authority.
+
+REQUIRED INPUTS
+
+Source ref, dependencies, packages, toolchain, configuration, environment, secrets references, scripts, inputs, outputs, cache, provenance, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Build owners approve toolchain, inputs, runners, network, secrets, output, reproducibility, exceptions, and release linkage. Humans decide whether a nonreproducible or emergency build is usable.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized build definitions and logs, draft improvements, analyze failures, and propose hardening. It must not run untrusted code with privileged access, expose secrets, modify build gates, or claim provenance without verification.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Build Engineer, Supply Chain Analyst, Security Auditor, Dependency Manager, Platform Engineer, Tester, Verifier, Implementer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define inputs and toolchain; pin dependencies; isolate runner; secure credentials; build; capture provenance and artifacts; verify reproducibility; scan; manage cache; handle failure; promote or reject; and retire toolchain.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, toolchain, runner, dependency, configuration, network, secret boundary, artifact, result, and limitation. Require human approval for privileged build, gate change, emergency output, and promotion.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use isolated and ephemeral runners, hermetic or declared network, provenance, SBOM, cache integrity, reproducible inputs, least privilege, artifact signing, and rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show build, source, toolchain, runner, dependencies, findings, provenance, artifact, evidence freshness, and authorized start, cancel, retry, quarantine, approve, promote, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Build specification; toolchain and runner record; input and provenance manifest; logs; artifact and scan; reproducibility result; exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, toolchain, runner, dependencies, configuration, time, actor, method, artifact digest, result, and limitation. A successful build proves execution, not safe or reproducible inputs.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify isolation, dependencies, secrets, network, reproducibility, provenance, artifact identity, scans, cache, failure, cleanup, and rollback. Repeat from a clean environment.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Mutable toolchain, hidden network fetch, privileged runner, secrets in logs, untracked generated output, cache trust, nonreproducible build, and green build treated as release approval.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine output, preserve logs, restore trusted toolchain, rotate exposed secrets, rebuild, compare artifacts, and reassess consumers. Reopen on source, dependency, toolchain, runner, or configuration change.
+
+COMPLETION CRITERIA
+
+Inputs, toolchain, runner, dependencies, outputs, provenance, reproducibility, security, evidence, owners, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve build definitions, toolchains, runners, logs, artifacts, provenance, findings, decisions, evidence, exceptions, and open gaps. Hand off to Automation, CI/CD, Artifact, Security, Release, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+259-263 Source, Dependency, Package, Artifact, and Environment Management; 265-271 Build Automation, CI/CD, DevOps, DevSecOps, and GitOps; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, supply-chain, build, security, and delivery context, and the integration roadmap. Exact toolchain, runner, reproducibility, provenance, secret, network, and acceptance authority remain unresolved.

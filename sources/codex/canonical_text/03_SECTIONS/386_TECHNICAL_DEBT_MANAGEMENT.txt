@@ -1,0 +1,95 @@
+SECTION 386 — Technical Debt Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Identify, describe, prioritize, fund, reduce, contain, and retire technical debt and its interest without dismissing it as harmless or merely pre-existing.
+
+REQUIRED OUTCOME
+
+A debt model with item, cause, affected outcome, interest, risk, owner, evidence, priority, remediation, containment, decision, review, and explicit acceptance or closure.
+
+WHY THIS MATTERS
+
+Debt is a known problem that actively consumes reliability, security, speed, quality, and human capacity. Untracked debt compounds and makes future change more expensive.
+
+APPLICABILITY
+
+Apply when a shortcut, obsolete design, deferred maintenance, missing control, workaround, unsupported dependency, or known defect creates ongoing cost or risk.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no known structural weakness, deferred work, workaround, or compounding risk affects the scope and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, requirements, incidents, vulnerabilities, quality, maintenance, cost, roadmap, risk, user, and operations evidence.
+
+REQUIRED INPUTS
+
+Debt item, cause, evidence, interest, risk, outcome, owner, affected users, remediation, containment, cost, priority, and review condition.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners record and actively manage debt; accountable humans prioritize remediation, fund work, accept bounded residual risk with expiry, and cannot erase debt by relabeling it.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may identify patterns in authorized code, incidents, findings, and work, draft debt records, and estimate bounded impact. It must not minimize, close, prioritize by score alone, or claim remediation without human decision and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Refactorer, Architect, Analyst, Researcher, Quality Engineer, Security Auditor, Operations Engineer, Planner, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Discover and evidence; classify cause and interest; assess risk and users; assign owner; contain; prioritize; plan remediation; track; verify; review aging; and retire or escalate.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show debt, cause, evidence, interest, risk, owner, priority, containment, and limitation. Require human review for priority, acceptance, funding, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Link debt to components, dependencies, incidents, tests, users, cost, roadmap, and risk. Make interest visible in capacity and change decisions; preserve safe containment.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show debt inventory, aging, interest, risk, owner, remediation, evidence freshness, and authorized prioritize, contain, fund, remediate, accept with expiry, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Debt charter; item and evidence; interest and risk; remediation and containment; roadmap and review; decision, exception, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify item, source, component, cause, effect, period, method, result, interest, owner, and limitation. A ticket or estimate proves only its bounded record.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify debt identity, evidence, cause, interest, risk, owner, containment, remediation, regression, closure, expiry, and escalation. Test whether debt remains present after claimed fix.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Debt dismissed as pre-existing, backlog burial, score without impact, permanent acceptance, no owner, remediation without test, and debt interest hidden from roadmap.
+
+RECOVERY AND RECONSIDERATION
+
+Escalate aging or compounding debt, contain risk, preserve evidence, fund or de-scope, remediate, and reassess user and system impact. Reopen on recurrence, changed risk, new evidence, or invalid closure.
+
+COMPLETION CRITERIA
+
+Debt, cause, evidence, interest, risk, owner, priority, containment, remediation, decision, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve debt history, evidence, decisions, remediation, exceptions, incidents, and open gaps. Hand off to Architecture, Maintenance, Refactoring, Security, Quality, Roadmap, and Operations.
+
+RELATED CODEX SECTIONS
+
+018 Risk; 020-044 Architecture; 228-230 Quality; 374-377 Maintenance; 384-385 Modernization and Refactoring; 387-390 Compatibility, Version, Deprecation, and Sunset.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, technical debt, risk, maintenance, quality, architecture, and roadmap context, and the integration roadmap. Exact debt inventory, interest, owners, priority, funding, acceptance, and remediation evidence remain unresolved.

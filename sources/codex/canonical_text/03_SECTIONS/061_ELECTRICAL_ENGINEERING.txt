@@ -1,0 +1,101 @@
+SECTION 061 — Electrical Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed engineering of electrical power, distribution, conversion, protection, grounding, wiring, energy storage, electromagnetic behavior, and electrical safety for a bounded system and lifecycle. This section addresses physical electrical behavior and its evidence without treating a schematic, simulation, component rating, or certification claim as proof of safe installed operation.
+
+REQUIRED OUTCOME
+
+An approved electrical design with explicit loads, sources, protection, isolation, grounding, thermal and environmental limits, interfaces, safety controls, maintainability, test methods, operating modes, and lifecycle responsibilities.
+
+WHY THIS MATTERS
+
+Electrical faults can cause fire, shock, loss of control, equipment damage, unsafe energy release, data loss, and service interruption. Correct voltage or nominal load is not sufficient evidence of safe behavior during transients, faults, maintenance, environmental change, or degraded operation.
+
+APPLICABILITY
+
+Applies to generation, distribution, conversion, wiring, batteries, motors, power supplies, grounding, protection, electrical interfaces, facilities, vehicles, devices, and systems where electrical energy affects function, safety, reliability, or compliance.
+
+NON-APPLICABILITY CONDITIONS
+
+May be recorded as non-applicable when the bounded change has no electrical source, load, interface, energy storage, protection, grounding, electromagnetic, environmental, safety, or lifecycle effect. The decision must name the baseline, reviewer, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requirements, operational modes, load profiles, environments, hazards, applicable jurisdictional rules, component data, schematics, protection philosophy, installation constraints, maintenance needs, and qualified human review. Sections 019-060 provide requirements, system, architecture, safety, reliability, resilience, and hardware context.
+
+REQUIRED INPUTS
+
+Authorized objective and boundary; source and load data; nominal and worst-case conditions; fault assumptions; insulation and clearance requirements; grounding and bonding; protection coordination; thermal, mechanical, EMC, accessibility, service, disposal, and evidence constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable human engineer and owner approve safety assumptions, hazard acceptance, design basis, component substitutions, protection settings, energization, test limits, field changes, and final acceptance. A license, model, or vendor recommendation does not transfer authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may calculate bounded scenarios, check rules, identify omissions, compare designs, draft schematics or test cases, and summarize evidence. It must preserve units, assumptions, source versions, uncertainty, and calculation provenance; it must not approve energization, invent ratings, accept hazards, or conceal unresolved field conditions.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Critic, Security Auditor, Tester, Verifier, Implementer, Refactorer, Planner, Coordinator, Observer, Documentation Writer, Governance Reviewer, Red Team, Optimizer, and Memory Curator, selected according to consequence and existing role contracts.
+
+REQUIRED ACTIVITIES
+
+1. Confirm boundary, load, source, operating modes, authority, jurisdiction, and lifecycle.
+2. Establish design basis, single-line and wiring views, grounding, bonding, protection, isolation, and energy-release assumptions.
+3. Calculate steady-state, transient, short-circuit, fault-current, coordination, voltage-drop, thermal, derating, and energy-storage cases.
+4. Allocate electrical interfaces and protections to equipment, controls, people, facilities, and maintenance procedures.
+5. Assess shock, arc, fire, overcurrent, overvoltage, backfeed, battery, EMC, lightning, environmental, and human-factors hazards.
+6. Define inspection, test, commissioning, maintenance, lockout, emergency, degraded, repair, replacement, and retirement activities.
+7. Review with qualified human specialists; baseline decisions, deviations, evidence, and open gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI-generated calculations, diagrams, component choices, and recommendations remain proposals. The cockpit must show the exact model, units, assumptions, source data, limitations, reviewer, and approval state. AI may not direct a person to energize or bypass protection. Human stop, isolation, inspection, and emergency controls remain available during model or network failure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent sources, loads, conductors, protective devices, ground paths, energy stores, ratings, clearances, interfaces, hazards, controls, tests, and lifecycle states as versioned records. Preserve separation between design, installed configuration, energized state, measured result, and certification. Changes to loads, components, firmware, enclosure, environment, or protection require impact analysis.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show design baseline, energized state, source and load status, protection state, alarms, isolation authority, test evidence, hazards, deviations, maintenance, and recovery actions. Permit authorized stop, isolate, quarantine, inspect, restore, substitute, and retire actions, with identity and evidence for each consequential action.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Design basis; load and fault studies; schematics and wiring schedules; grounding and protection plan; hazard analysis; component and derating register; interface contracts; installation and commissioning plan; test records; maintenance and emergency procedures; deviation, decision, evidence, and handoff registers.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies exact design, revision, source data, units, environment, assumptions, instrument calibration, installation state, test method, result, reviewer, and limitation. Simulation, nameplate rating, supplier statement, visual inspection, and field measurement remain distinct evidence types.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify calculations, polarity, continuity, insulation, grounding, protection operation, isolation, test limits, thermal limits, EMC, battery behavior, emergency stop, maintenance access, and recovery under nominal, boundary, degraded, and fault conditions. Independently reproduce material safety claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unsafe energization; undocumented field modification; missing grounding; uncoordinated protection; ignored inrush or backfeed; overstated component rating; hidden stored energy; uncalibrated measurement; bypassed interlock; and treating a passing simulation as installed safety.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or isolate the affected energy path, preserve evidence, identify the hazard and authority, and use approved de-energized inspection, containment, repair, substitution, restoration, and re-test. Reconsider after changed loads, environment, components, protection, incident, or evidence invalidate the baseline.
+
+COMPLETION CRITERIA
+
+Scope, design basis, hazards, protections, interfaces, operating modes, maintenance, tests, evidence, owner, and unresolved gaps are explicit. No readiness or safety claim exceeds its verified environment and installation state.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve revision, installed configuration, settings, measurements, deviations, incidents, maintenance, decisions, and next safe action. Hand off to Electronics, Hardware, Embedded, Safety, Reliability, Resilience, Testing, Operations, Maintenance, Compliance, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 020 Systems Engineering; 045 Security Architecture; 050 Safety Architecture; 051 Reliability Architecture; 052 Resilience Architecture; 060 Hardware Architecture; 062 Electronics Engineering; 064 Mechanical Engineering; 232 Hardware Testing; 243 Reliability Testing; 252 Safety Testing; 351 Manufacturing; 399 Hardware Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-060, Owner Cockpit Requirements, Status and Evidence Lexicon, and the integration roadmap. Jurisdiction-specific electrical codes, licensing, utility rules, product standards, site conditions, qualified-person requirements, and owner acceptance remain unresolved until supplied and verified.

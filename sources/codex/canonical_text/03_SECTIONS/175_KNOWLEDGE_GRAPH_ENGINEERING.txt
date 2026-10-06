@@ -1,0 +1,103 @@
+SECTION 175 — Knowledge Graph Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of graph-based knowledge representations that connect entities, concepts, events, claims, sources, provenance, permissions, and temporal context for authorized retrieval and reasoning.
+
+REQUIRED OUTCOME
+
+- A graph scope, vocabulary, identity policy, relationship model, provenance model, and query contract.
+- Traceable ingestion, reconciliation, inference, access, quality, update, and retirement behavior.
+- Explicit distinction between sourced facts, derived relationships, hypotheses, and generated answers.
+
+WHY THIS MATTERS
+
+Graphs can make an inferred or stale relationship appear canonical. Identity collisions, provenance loss, and unrestricted traversal can create privacy, security, and decision harm while appearing semantically coherent.
+
+APPLICABILITY
+
+Applies to entity graphs, semantic search, lineage graphs, recommendation, dependency maps, retrieval systems, reasoning systems, and graph-based agents. Depth increases with identity, sensitive data, automated inference, or external action.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to isolated relational lookup with no graph semantics, inference, or cross-source identity. Record exact scope, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires ontology or vocabulary authority, data lineage, identity rules, access policy, quality rules, query purpose, and human acceptance. Depends on Sections 030, 031, 155, 156, 176, 177, 180, and 183.
+
+REQUIRED INPUTS
+
+Graph purpose; entity types; identifiers; relationship semantics; source data; provenance; temporal rules; inference rules; access; sensitivity; quality thresholds; query users; and update and deletion obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve canonical concepts, identity resolution, inference classes, sensitive links, publication, access, correction, retention, and deletion. Domain owners decide whether a graph claim is authoritative or merely useful.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may extract entities, propose links, reconcile records, and generate graph queries. It must preserve evidence and uncertainty and must not create canonical identity or relationship, infer permission, or publish claims without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Data Engineer, Ontology Engineer, Privacy Reviewer, Security Auditor, Governance Reviewer, Critic, Tester, Verifier, Red Team, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+1. Define graph purpose, scope, users, subjects, and prohibited traversal.
+2. Establish vocabulary, identity, relationship, temporal, provenance, and access rules.
+3. Ingest and map sources with lineage, quality, conflict, and deletion handling.
+4. Separate asserted, derived, inferred, uncertain, and generated edges.
+5. Evaluate identity collision, link quality, leakage, stale data, and query behavior.
+6. Validate graph answers with domain owners and affected parties.
+7. Monitor updates, inference drift, access, correction, and retirement.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show nodes, edges, source, timestamp, provenance, confidence, inference path, permissions, and reviewer. Users must challenge or correct links and see source evidence. Graph traversal cannot bypass access or disclosure controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version ontology, identifiers, nodes, edges, assertions, inferences, source mappings, policies, indexes, queries, and snapshots. Enforce provenance and permissions at traversal and export boundaries. Preserve temporal and deletion semantics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show graph version, source, lineage, identity decisions, inference, conflicts, access, freshness, and queries. Allow authorized approve, correct, merge, split, restrict, quarantine, withdraw, rebuild, and retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Graph charter; entity and relationship model; vocabulary and identity policy; source and lineage map; inference register; query and access contract; quality report; privacy and security review; correction and deletion plan; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Each graph claim identifies node and edge versions, source, assertion or inference type, method, timestamp, confidence, permission, reviewer, and limitation. A connected path is not proof that its inferred meaning is true.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test identity collision, duplicate, stale, conflicting, unauthorized, deleted, inferred, cyclic, and poisoned relationships; verify provenance, query permissions, temporal behavior, correction, export, and independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Identity collapse; inferred edge treated as fact; source laundering; unrestricted traversal; stale relationships; hidden conflict; graph completeness claims from one source; and deletion that leaves derived links active.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected nodes or edges on provenance, identity, access, or quality failure. Preserve prior snapshot, notify owners, correct or rebuild, review downstream answers, and reopen after vocabulary, source, identity, or policy change.
+
+COMPLETION CRITERIA
+
+Purpose, graph model, source, identity, provenance, inference, access, quality, lifecycle, verification, recovery, and authority are explicit. Status remains CONTENT-COMPLETE pending acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve graph IDs, snapshots, mappings, ontology versions, queries, evidence, decisions, corrections, incidents, dissent, and gaps. Hand off to Ontology, Semantic Systems, Data, Search, AI, Evaluation, Privacy, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+030 Information Architecture; 031 Data Architecture; 055 Knowledge Architecture; 154 Data Modeling; 155 Data Governance; 176 Ontology Engineering; 177 Semantic Systems Engineering; 180 Model Evaluation.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Information and Data Architecture, and evidence lexicon. Actual vocabularies, identity authorities, source rights, inference policy, privacy rules, and deletion obligations remain unresolved.

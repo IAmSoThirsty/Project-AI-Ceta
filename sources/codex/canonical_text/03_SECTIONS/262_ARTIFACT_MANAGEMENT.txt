@@ -1,0 +1,95 @@
+SECTION 262 — Artifact Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Preserve the identity, provenance, integrity, storage, promotion, distribution, retention, and retirement of artifacts produced or consumed across the lifecycle.
+
+REQUIRED OUTCOME
+
+An artifact model with type, version, digest, source, build, dependencies, environment, owner, status, approval, consumers, retention, evidence, rollback, and disposal.
+
+WHY THIS MATTERS
+
+Artifacts are what systems actually deploy, distribute, analyze, or archive. A source commit or successful build does not prove that the shipped artifact is the same, complete, authorized, or safe.
+
+APPLICABILITY
+
+Apply to binaries, packages, containers, firmware, models, datasets, reports, documentation, infrastructure plans, test evidence, and other lifecycle outputs.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no artifact is retained, promoted, consumed, or used as evidence and an approved exact baseline covers the work.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use source, package, dependency, build, security, license, release, environment, records, retention, and recovery baselines. Identify repository, registry, owner, and promotion authority.
+
+REQUIRED INPUTS
+
+Artifact type, source, version, digest, build, dependencies, metadata, owner, environment, approval, scan, consumers, retention, distribution, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve artifact status, promotion, distribution, retention, withdrawal, exception, and deletion. Humans verify provenance and consequences before release or use.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized metadata, compare artifacts, draft manifests and checks, and identify anomalies. It must not fabricate provenance, promote, alter, replace, publish, or delete artifacts without explicit authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Artifact Manager, Build Engineer, Release Engineer, Security Auditor, Dependency Manager, Tester, Verifier, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define artifact classes; capture metadata and provenance; hash and sign where required; scan; store; approve; promote; distribute; monitor; revoke or replace; back up; retain; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show artifact, digest, source, build, dependency, environment, status, owner, evidence, and limitation. Require human approval for promotion, distribution, withdrawal, retention exception, and deletion.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable storage, content addressing, provenance, SBOM, access control, quarantine, promotion stages, retention, replication, rollback, and consumer impact tracking.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show artifact identity, status, provenance, consumers, findings, evidence freshness, retention, owner, and authorized approve, promote, quarantine, withdraw, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Artifact inventory and schema; provenance and integrity record; storage and promotion model; scan and approval; distribution and rollback; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify artifact, digest, source, build, dependencies, environment, signer, method, time, result, actor, and limitation. Filename, tag, or registry path alone proves neither identity nor integrity.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, provenance, digest, signature, metadata, scan, access, promotion, distribution, rollback, withdrawal, retention, and recovery. Test corruption, replacement, provider loss, and consumer mismatch.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Mutable artifact, missing digest, build output not retained, artifact not linked to source, unscanned release, broad registry access, and retirement without consumer impact analysis.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine or withdraw, preserve evidence, restore known-good artifact, notify consumers, rotate trust if needed, and reassess releases and records. Reopen on source, build, dependency, policy, or consumer change.
+
+COMPLETION CRITERIA
+
+Artifacts, identity, provenance, owners, status, consumers, storage, promotion, evidence, recovery, retention, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve artifact and digest history, build links, consumers, promotions, findings, decisions, evidence, exceptions, and open gaps. Hand off to Build, Release, Package, Security, Records, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+259-261 Source, Dependency, and Package Management; 264-268 Build and Delivery; 388 Version Management; 391-395 Data Lifecycle; 397-400 Decommissioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, supply-chain, release, and evidence context, and the integration roadmap. Exact artifact classes, signing, storage, retention, consumers, distribution, and acceptance authority remain unresolved.

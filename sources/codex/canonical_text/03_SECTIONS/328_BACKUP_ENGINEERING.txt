@@ -1,0 +1,95 @@
+SECTION 328 — Backup Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Create protected, attributable, complete, recoverable, and lifecycle-governed copies of data, configuration, artifacts, and state needed for continuity and recovery.
+
+REQUIRED OUTCOME
+
+A backup model with scope, source, frequency, consistency, retention, encryption, isolation, immutability, ownership, integrity, monitoring, restore test, and destruction.
+
+WHY THIS MATTERS
+
+A completed backup job may capture the wrong data, a corrupted state, an inaccessible key, or a copy that cannot be restored. Backup can also preserve unwanted sensitive data indefinitely.
+
+APPLICABILITY
+
+Apply when data or state must be recovered after deletion, corruption, outage, disaster, ransomware, error, or migration.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no recoverable state, continuity obligation, data, configuration, or evidence requires backup and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data, storage, database, security, key, records, retention, continuity, DR, restore, and operations baselines.
+
+REQUIRED INPUTS
+
+Data and state, owner, priority, RPO, frequency, consistency, destination, encryption, key, retention, immutability, monitoring, restore, and deletion.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve scope, RPO, retention, encryption, access, restore, legal hold, cost, and destruction. Humans decide whether backup is sufficient evidence for recovery.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized backup metadata, jobs, and integrity results; draft plans and tests; and identify gaps. It must not read sensitive content, change scope, delete copies, restore, or expose keys without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Backup Engineer, Data Engineer, Storage Administrator, Database Administrator, Security Auditor, Continuity Planner, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Classify recoverable state; define RPO and frequency; capture; encrypt and isolate; verify integrity; monitor; retain; test restore; manage key; delete; and report gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, scope, RPO, destination, key reference, integrity, retention, evidence, and limitation without exposing content or keys. Require human approval for restore, deletion, scope, and retention.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable or air-gapped copies where warranted, independent credentials, encryption, consistency, versioning, integrity checks, geographic separation, retention, and restore path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show backup scope, age, RPO, integrity, destination, retention, key state, evidence freshness, owner, and authorized run, preserve, restore, restrict, delete, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Backup charter; scope and RPO; schedule and destination; protection and integrity; restore test; retention and deletion; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, backup version, scope, time, destination, integrity, key reference, method, result, owner, and limitation. Job success proves neither completeness nor restore capability.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify scope, consistency, encryption, access, immutability, integrity, retention, key, restore, RPO, deletion, and incident behavior. Restore representative and critical data.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Backup not restored, same failure domain, key unavailable, retention unbounded, incomplete scope, backup admin shared, and backup dashboard treated as recoverability.
+
+RECOVERY AND RECONSIDERATION
+
+Protect copies, preserve evidence, restore or replicate, rotate keys, reconcile, notify owners, and reassess RPO and data impact. Reopen on data, source, key, destination, policy, or recovery change.
+
+COMPLETION CRITERIA
+
+Scope, source, RPO, frequency, protection, integrity, retention, restore, owners, evidence, deletion, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve backup inventory, jobs, versions, integrity, restore tests, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Restore, DR, Storage, Data, Security, Records, and Operations.
+
+RELATED CODEX SECTIONS
+
+225 Records; 286 Storage; 307 Data Operations; 326-330 Continuity, DR, Backup, Restore, and Failover; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data, storage, security, continuity, and operations context, and the integration roadmap. Exact data, RPO, frequency, destinations, keys, retention, restore, and acceptance authority remain unresolved.

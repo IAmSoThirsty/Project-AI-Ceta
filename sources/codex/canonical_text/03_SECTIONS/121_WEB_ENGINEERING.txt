@@ -1,0 +1,98 @@
+SECTION 121 — Web Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering of web applications and services across browser, server, network, content, identity, accessibility, performance, security, and delivery boundaries.
+
+REQUIRED OUTCOME
+
+A versioned web baseline with routes, rendering, content, APIs, state, security, accessibility, compatibility, performance, observability, deployment, recovery, and retirement evidence.
+
+WHY THIS MATTERS
+
+Web systems expose behavior to hostile and diverse environments. Routing, caching, browser state, origin rules, and accessibility failures can undermine otherwise sound services.
+
+APPLICABILITY
+
+Applies to websites, web apps, browser APIs, server-rendered or client-rendered applications, web delivery, and web-specific configuration.
+
+NON-APPLICABILITY CONDITIONS
+
+Unchanged web consumption without a behavior, content, access, compatibility, or lifecycle change may be exempt; record the baseline and trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires journeys, web and API contracts, browsers, devices, content, identity, privacy, security, accessibility, localization, performance, deployment, and acceptance authority.
+
+REQUIRED INPUTS
+
+Routes, origins, sessions, cookies, forms, rendering, APIs, cache, content, browser support, assistive technology, telemetry, and failure behavior.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own user outcome, content, consent, privacy, security, accessibility, compatibility, release, and support. They approve material disclosure or destructive interactions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft web code, tests, content, and diagnostics; it must not claim security or accessibility, expose secrets, change routes, or release without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Refactorer, Tester, Verifier, User Experience Reviewer, Security Auditor, Governance Reviewer, Critic, Documentation Writer, and Memory Curator. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define web scope, routes, audiences, browsers, data, trust, and non-goals.
+2. Implement semantic accessible interaction, secure sessions, validation, caching, error, offline, and recovery states.
+3. Test compatibility, security, performance, localization, accessibility, failure, and deployment paths.
+4. Release, monitor, support, and retire with evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Identify browser, human, AI, server, provider, and external actions. Require review for consent, identity, data, external effects, and accessibility; preserve status and non-web support paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate browser state, server state, cache, origin, credentials, content, route, API, and deployment. Enforce server authorization, secure cookies, CSP or equivalent controls, cache safety, and graceful failure.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show route, release, browser, session, permission, content, cache, dependency, evidence, incidents, and recovery controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Web architecture, route and API contracts, source, dependency and build records, accessibility and security tests, compatibility matrix, performance, deployment, support, and recovery artifacts.
+
+EVIDENCE REQUIREMENTS
+
+Identify browser, route, release, user context, data, method, result, reviewer, and limits. Visual rendering or uptime does not prove secure, accessible, or understandable use.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test origin, session, cookies, authorization, injection, caching, keyboard and assistive technology, browsers, slow network, offline, stale state, localization, and deployment recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Client-only access control, unsafe caching, inaccessible forms, missing error state, origin confusion, secret exposure, unsupported browsers, and deployment rollback without cache or session handling.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict routes, preserve evidence, invalidate unsafe cache, use maintenance or prior release, restore session and data safely, communicate impact, and reopen after material failure.
+
+COMPLETION CRITERIA
+
+Routes, content, state, APIs, security, accessibility, compatibility, evidence, operations, recovery, and retirement are explicit and accepted for declared web environments.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off routes, contracts, content, source, tests, security and accessibility evidence, telemetry, incidents, recovery, and gaps to Frontend, Backend, API, Security, Testing, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+118-120 Frontend through Full Stack Engineering; 042 API Architecture; 045-047 Security, Identity, and Privacy Architecture; 103 Accessibility Design; 247 Accessibility Testing; 299 Domain and DNS Management; 300 CDN; 314-318 Observability.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Browser matrix, web security standard, accessibility level, localization, traffic, cache, and recovery targets remain unresolved.

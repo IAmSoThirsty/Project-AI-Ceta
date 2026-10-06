@@ -1,0 +1,95 @@
+SECTION 296 — Feature Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern the activation, targeting, experimentation, monitoring, rollback, retirement, and evidence of conditional product, service, policy, or operational behavior.
+
+REQUIRED OUTCOME
+
+A feature model with owner, purpose, population, rule, dependency, default, state, metrics, safety, access, expiry, rollback, and retirement.
+
+WHY THIS MATTERS
+
+Flags and experiments are production control surfaces. Stale or conflicting flags, unsafe targeting, hidden defaults, and unowned experiments can create inconsistent behavior and permanent complexity.
+
+APPLICABILITY
+
+Apply when behavior can be enabled, disabled, varied, targeted, experimented with, or retired independently of a full artifact release.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no conditional behavior, target population, experiment, configuration, or activation state changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use release, configuration, authorization, experimentation, privacy, analytics, safety, support, and operations baselines.
+
+REQUIRED INPUTS
+
+Feature, purpose, owner, population, rule, default, dependency, data, metric, expiry, approval, rollout, rollback, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve purpose, target, data, experiment, activation, kill switch, expiry, exception, and retirement. Humans decide user and safety impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized flag state and metrics, draft targeting and test cases, and identify stale or conflicting features. It must not activate, target, infer sensitive attributes, hide cohorts, or retire flags without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Feature Manager, Product Manager, Release Engineer, Analyst, Experimenter, Privacy Reviewer, Security Auditor, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define purpose and owner; design safe default and targeting; review data and privacy; test; activate progressively; monitor; pause or roll back; expire; measure outcome; and remove.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show feature, rule, population, data, owner, state, metric, evidence, and limitation. Require human approval for activation, targeting, sensitive cohort, experiment, rollback, and retirement.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use typed flags, safe defaults, evaluation audit, targeting isolation, kill switch, dependency handling, expiry, configuration version, and behavior observability.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show feature state, population, rule, owner, metric, incidents, evidence freshness, expiry, and authorized activate, pause, roll back, restrict, extend, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Feature catalog; targeting and privacy record; test and rollout; metrics and experiment; rollback and retirement; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify feature, version, rule, population, data, environment, state, method, time, result, owner, and limitation. Activation or engagement proves neither benefit nor safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify default, targeting, authorization, privacy, accessibility, metrics, kill switch, rollback, expiry, conflict, and removal. Test missing context and evaluation service loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Stale flag, permanent experiment, unsafe default, sensitive targeting, conflicting flags, no owner, kill switch untested, and engagement treated as outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or disable, preserve state and cohort evidence, communicate if needed, correct targeting, and reassess users and data. Reopen on metric, population, policy, dependency, or feature change.
+
+COMPLETION CRITERIA
+
+Purpose, owner, state, rule, population, data, metric, expiry, rollback, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve catalog, states, targeting, experiments, metrics, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Release, Configuration, Analytics, Privacy, Product, Support, and Operations.
+
+RELATED CODEX SECTIONS
+
+161 Analytics Engineering; 218 Privacy; 267-268 Delivery and Deployment; 297 Configuration Delivery; 369-371 Experimentation, A/B Testing, and Optimization; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, feature, experimentation, privacy, analytics, and operations context, and the integration roadmap. Exact flag system, populations, metrics, authority, expiry, and acceptance evidence remain unresolved.

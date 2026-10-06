@@ -1,0 +1,98 @@
+SECTION 150 - Smart Contract Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of executable ledger contracts that encode state, rules, permissions, value transfer, events, and external effects under immutable or upgrade-controlled deployment.
+
+REQUIRED OUTCOME
+
+A smart-contract baseline with specification, invariants, authority, keys, interfaces, gas or resource limits, upgrade policy, verification, monitoring, and compensation path.
+
+WHY THIS MATTERS
+
+Contract code can be permanently executable and externally valuable. Bugs, oracle errors, reentrancy, privilege mistakes, and upgrade ambiguity can create irreversible harm.
+
+APPLICABILITY
+
+Applies to on-chain programs, tokens, escrow, DAOs, governance, automated settlement, wallets, or ledger-connected contracts.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to ordinary application rules with no ledger execution, cryptographic signing, on-chain state, or irreversible external effect. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires formal purpose, state model, invariants, threat model, language and runtime, interfaces, oracle and key authority, upgrade, audit, deployment, monitoring, legal, and compensation authority.
+
+REQUIRED INPUTS
+
+Provide states, functions, roles, assets, permissions, invariants, events, external calls, oracle data, limits, fees, upgrade, pause, dispute, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve specification, authority, key custody, deployment, audit, upgrade, pause, assets, and acceptance. Humans retain authority over irreversible value and governance effects.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft code, tests, invariant checks, and audit questions. It must not sign or deploy, claim formal security from tests, or weaken access, pause, upgrade, or compensation controls.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Cryptography Engineer, Security Auditor, Researcher, Analyst, Implementer, Tester, Verifier, Governance Reviewer, Red Team, Documentation Writer, Memory Curator, and Decision Arbiter Advisory. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Specify state, roles, invariants, calls, assets, events, authority, and external dependencies.
+2. Review code, dependencies, oracle, gas, upgrade, pause, and key paths.
+3. Verify statically, dynamically, adversarially, and formally where warranted before deployment.
+4. Deploy staged, monitor, govern upgrades, respond, compensate, and retire through authorized transactions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show contract address, version, code hash, signer, role, call, state, value, oracle, gas, evidence, and consequence. Human approval is required for deployment, signing, upgrades, and material calls; all decisions remain attributable.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent specification, code, compiler, bytecode, state, storage, roles, keys, oracle, external calls, events, upgrade proxy, pause, and compensation as linked versioned artifacts. Model reentrancy, replay, failure, and partial effects.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show contract, network, code, roles, balances, calls, events, alerts, oracle freshness, pause state, evidence, and controls to pause, revoke, upgrade, migrate, or compensate within authority.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Contract specification, state and invariant model, source and bytecode provenance, threat assessment, audit and formal evidence, deployment and key records, monitoring, incident runbook, and compensation or retirement plan.
+
+EVIDENCE REQUIREMENTS
+
+Identify network, contract, address, source, compiler, bytecode hash, call, signer, state, value, oracle, method, result, and limitations. Audit, test, formal, runtime, and owner-acceptance evidence remain distinct.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify access control, invariants, reentrancy, arithmetic, replay, oracle failure, denial of service, upgrade, pause, gas, key rotation, event integrity, deployment identity, and compensation paths.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unaudited deployment; proxy confusion; privileged upgrade; unsafe external call; missing pause; oracle trust; hidden admin key; assuming tests prove safety; and proposing destructive rollback for immutable state.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or narrow authorized calls, preserve chain evidence, revoke or rotate keys, migrate or compensate through linked transactions, communicate residual loss, and reopen specification, audit, and governance decisions.
+
+COMPLETION CRITERIA
+
+Specification, code, authority, invariants, evidence, deployment, monitoring, compensation, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve specification, source, compiler, bytecode, address, keys by reference, transactions, audits, decisions, incidents, evidence, and next safe action. Hand off to Blockchain, Cryptography, Security, Key Management, Testing, Operations, and Governance.
+
+RELATED CODEX SECTIONS
+
+048 Governance Architecture; 149 Blockchain Engineering; 150 Smart Contract Engineering; 203 Cryptography; 204 Key Management; 246 Security Testing; 251 Compliance Testing; 258 Configuration Management; 289 Change Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 045, 048-050, 107-149, Owner Cockpit Requirements, and Status and Evidence Lexicon. Contract language, chain, audit depth, formal-method need, asset jurisdiction, key custody, upgrade authority, and compensation feasibility remain unresolved.

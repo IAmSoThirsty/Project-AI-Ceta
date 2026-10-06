@@ -1,0 +1,95 @@
+SECTION 200 — Identity and Access Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern identities and access lifecycle for people, services, devices, workloads, agents, organizations, and external parties from creation through retirement.
+
+REQUIRED OUTCOME
+
+An identity and access model with authoritative sources, identity proofing, authentication dependency, authorization relationship, provisioning, review, delegation, privileged access, logging, revocation, recovery, and owner accountability.
+
+WHY THIS MATTERS
+
+Access failures arise from stale identities, unclear ownership, excessive privilege, broken federation, service accounts, orphaned devices, and delayed removal. A successful login is not proof that the identity is real, current, entitled, or acting for the right purpose.
+
+APPLICABILITY
+
+Apply whenever a person, service, device, workload, agent, supplier, or organization can access information, invoke a capability, make a decision, or affect a protected resource.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no identity, access, delegation, protected resource, service action, or lifecycle state is affected and an approved exact baseline covers the change.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use identity, authentication, authorization, privacy, security, data, application, platform, operations, legal, and governance baselines. Identify authoritative identity sources, ownership, populations, tenants, trust relationships, resource inventory, and access-review authority.
+
+REQUIRED INPUTS
+
+Identity types, attributes, proofing, lifecycle events, authoritative sources, federation, authentication methods, roles, policies, resources, environments, tenants, privileged paths, logs, review cadence, exceptions, and recovery obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define identity purpose, resource ownership, access policy, acceptable risk, privileged roles, delegation, review, exceptions, suspension, recovery, and retirement. Humans approve identity proofing, sensitive access, privilege, cross-tenant trust, automated decisions, and disputed or harmful outcomes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized identity metadata, access records, policy definitions, lifecycle signals, and review evidence; identify orphaned or inconsistent records; draft mappings and review queues; and recommend least-privilege changes. It must preserve identity, tenant, purpose, resource, source, time, and confidence boundaries. It must not create, merge, impersonate, provision, revoke, grant, or infer identity authority without explicit delegation and human approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Identity Engineer, Security Auditor, Governance Reviewer, Researcher, Analyst, Observer, Implementer, Tester, Verifier, Critic, Coordinator, Documentation Writer, Memory Curator, and User Experience Reviewer.
+
+REQUIRED ACTIVITIES
+
+Inventory identity classes and authoritative sources; define proofing and attributes; model lifecycle and ownership; map access relationships; design federation and delegation; separate privileged access; establish reviews, logging, revocation, recovery, privacy, support, and retirement; test drift and failure; record decisions and exceptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show identity type, source, owner, tenant, resource, purpose, authority, freshness, and evidence for every material recommendation. Require human review for sensitive access, privilege, identity merge, suspension, revocation, cross-boundary sharing, and appeals. Preserve manual recovery and accessible explanations.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate identity proofing, authentication, authorization, resource ownership, policy decision, policy enforcement, audit, lifecycle, and recovery. Use stable identifiers, explicit tenancy, least privilege, separation of duties, short-lived authority where appropriate, and fail-closed behavior for protected actions.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show identity inventory, owner, source, lifecycle state, active sessions, privileges, resources, policy, review status, evidence freshness, anomalies, and impact. Provide authorized approve, deny, suspend, revoke, recover, delegate, appeal, and retire controls with reason and audit trail.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Identity taxonomy; authoritative-source and lifecycle map; access and role model; federation and delegation design; privileged-access model; review, logging, revocation, recovery, exception, test, decision, evidence, and handoff records.
+
+EVIDENCE REQUIREMENTS
+
+Identify subject, identity type, source, owner, tenant, resource, purpose, policy version, method, time, actor, result, and limitation. A directory record or successful login proves only its bounded claim.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify joiner, mover, leaver, suspension, recovery, federation, privilege, delegation, tenant isolation, policy enforcement, logging, review, and revocation. Test stale source, duplicate identity, provider outage, clock skew, lost device, and disputed access.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared accounts, orphaned identities, implicit trust, unowned resources, permanent privilege, directory truth assumed without source validation, and automated provisioning without authority or rollback.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze affected changes, preserve evidence, revoke or narrow unsafe access, notify owners, and use approved recovery, source reconciliation, manual review, or prior policy. Restore only after identity, authority, privacy, and user impact are reassessed.
+
+COMPLETION CRITERIA
+
+Identity classes, sources, owners, resources, lifecycle, access, privilege, delegation, reviews, evidence, recovery, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve identity and resource inventories, source precedence, policy versions, access decisions, reviews, incidents, evidence, exceptions, and open gaps. Hand off to Authentication, Authorization, Privacy, Security Operations, Application, Platform, Support, and Records owners.
+
+RELATED CODEX SECTIONS
+
+046 Identity Architecture; 047 Privacy Architecture; 201 Authentication Engineering; 202 Authorization Engineering; 205 Secrets Management; 206 Security Operations; 214 Incident Response; 231-254 Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, identity and security architecture, and the integration roadmap. Exact identity authorities, proofing levels, legal requirements, federation partners, tenant model, retention, accessibility, and owner acceptance remain unresolved.

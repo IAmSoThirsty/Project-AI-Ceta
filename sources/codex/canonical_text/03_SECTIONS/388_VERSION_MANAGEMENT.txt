@@ -1,0 +1,95 @@
+SECTION 388 — Version Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Identify, sequence, compare, support, release, coexist, audit, and retire versions of code, data, hardware, firmware, models, documents, policies, services, and artifacts.
+
+REQUIRED OUTCOME
+
+A version model with identity, scheme, source, artifact, compatibility, status, owner, support, lineage, release, change, deprecation, retention, and retirement.
+
+WHY THIS MATTERS
+
+Without reliable version identity, evidence and rollback lose meaning. A label can be reused, a component can drift, and support or security status can be unclear.
+
+APPLICABILITY
+
+Apply when an artifact, interface, product, policy, data schema, configuration, or service has distinct states or supported revisions.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no version identity, lineage, compatibility, support, release, or lifecycle behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use source, artifact, release, compatibility, dependency, configuration, records, support, deprecation, and retirement baselines.
+
+REQUIRED INPUTS
+
+Version, scheme, source, artifact, dependencies, status, owner, support, compatibility, release, change, evidence, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Version owners define identity and support; release owners approve publication; humans decide compatibility, deprecation, security, retention, and retirement.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare version metadata, generate changelog drafts, identify drift, and map consumers. It must not assign identity, publish, mark supported, deprecate, or retire without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Version Manager, Release Engineer, Configuration Manager, Dependency Manager, Architect, Tester, Verifier, Documentation Writer, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Define scheme; assign identity; link source and artifact; record change; test compatibility; publish; support; monitor drift; deprecate; retain; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show version, source, artifact, consumer, status, support, evidence, and limitation. Require human approval for publication, support, breaking change, deprecation, and retirement.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable identity, digest, lineage, semantic contract, support metadata, compatibility, rollback, version-aware data migration, and retention.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show versions, consumers, status, support, findings, evidence freshness, owner, and authorized publish, promote, support, deprecate, roll back, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Version charter; scheme and registry; source and artifact lineage; support and compatibility; release, deprecation, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify version, source, artifact digest, environment, consumer, method, time, status, owner, and limitation. Version label proves neither exact content nor support.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, lineage, digest, compatibility, support, release, rollback, consumer, deprecation, retention, and retirement. Test duplicate or reused version and drift.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Mutable label, reused version, source-artifact mismatch, unsupported consumer, version sprawl, deprecation without notice, and release evidence without exact identity.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze or correct registry, restore identity, notify consumers, roll back or replace, preserve evidence, and reassess support and release. Reopen on source, artifact, consumer, or policy change.
+
+COMPLETION CRITERIA
+
+Identity, scheme, source, artifact, status, owner, support, compatibility, evidence, deprecation, retention, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve registry, lineage, releases, consumers, support, deprecations, decisions, evidence, exceptions, and open gaps. Hand off to Release, Compatibility, Dependency, Documentation, Support, and Retirement.
+
+RELATED CODEX SECTIONS
+
+259 Source Control; 262 Artifacts; 287-290 Release and Deployment; 381 Dependency Updates; 387 Compatibility; 389 Deprecation; 390 Sunset.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, version, artifact, release, compatibility, support, and lifecycle context, and the integration roadmap. Exact scheme, registry, identity, consumers, support, retention, and acceptance authority remain unresolved.

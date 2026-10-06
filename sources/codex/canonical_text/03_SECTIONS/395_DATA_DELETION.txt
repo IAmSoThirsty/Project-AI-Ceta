@@ -1,0 +1,95 @@
+SECTION 395 — Data Deletion
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Delete or render data inaccessible when authorized by purpose, rights, retention, contract, policy, or system lifecycle while preserving required records and evidence.
+
+REQUIRED OUTCOME
+
+A data-deletion model with data subject or scope, source and copies, authority, hold, retention, method, propagation, verification, exception, recovery, and evidence.
+
+WHY THIS MATTERS
+
+Deletion must balance privacy, security, legal hold, records, backup, analytics, and operational needs. A user-facing deletion confirmation may be false if replicas, logs, caches, backups, or derived data remain.
+
+APPLICABILITY
+
+Apply when personal, customer, operational, analytical, cached, replicated, backup, model, or configuration data is deleted, anonymized, purged, or made inaccessible.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no data, copy, purpose, right, retention, hold, or lifecycle behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use privacy, records, retention, legal, data, storage, backup, archive, security, model, vendor, and lifecycle baselines.
+
+REQUIRED INPUTS
+
+Data subject or scope, source, copies, purpose, authority, retention, hold, derived data, method, propagation, vendor, verification, and communication.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Privacy, legal, data, records, and system owners approve deletion scope, hold, exceptions, method, vendor, and communication. Humans resolve conflicting duties and rights.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may map authorized data lineage and copies, draft deletion plans, and identify likely residuals. It must not delete, infer identity or right, expose data, release hold, or certify completion without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Privacy Engineer, Data Engineer, Records Manager, Legal Advisor, Security Auditor, Archivist, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Validate request and authority; map data and copies; check hold and retention; plan propagation; delete or transform; verify; record exceptions; notify; and review derived or backup state.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show scope, identity reference, source, copies, authority, hold, method, evidence, and limitation without exposing data. Require human approval for scope, hold, exception, and final confirmation.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use data lineage, deletion orchestration, tombstone or suppression, replica and cache propagation, backup policy, derived-data handling, audit, and privacy-preserving verification.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show deletion request, scope, progress, sources, copies, hold, exceptions, evidence freshness, owner, and authorized approve, pause, restrict, verify, retry, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Deletion charter; scope and authority; lineage and copy map; execution and propagation; verification and exception; communication, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify scope, source, copy, authority, hold, method, time, result, verifier, residual, and limitation. A delete response or row count proves only targeted scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, scope, authority, hold, source, replicas, caches, backups, derived data, vendors, logs, verification, user communication, and exception.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Delete source only, identity mismatch, hold bypass, backup ignored, derived data forgotten, deletion confirmation overstated, and deletion used to remove evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Stop, preserve lawful copies, apply hold, notify owners, restore where authorized, correct confirmation, and reassess rights and obligations. Reopen on residual data, source, law, hold, or system change.
+
+COMPLETION CRITERIA
+
+Scope, authority, sources, copies, hold, method, propagation, verification, evidence, owners, exceptions, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve request, lineage, execution, verification, exceptions, decisions, evidence, and open gaps without retaining unnecessary personal data. Hand off to Privacy, Records, Legal, Data, Backup, Archive, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+218 Privacy; 225 Records; 391 Retention; 392-394 Archive, Preservation, and Records Disposal; 328 Backup; 400 Secure Destruction; 401 Environmental Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, privacy, data, records, legal, storage, backup, and lifecycle context, and the integration roadmap. Exact data, identities, copies, holds, rights, vendors, verification, and acceptance authority remain unresolved.

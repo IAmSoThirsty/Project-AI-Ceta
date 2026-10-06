@@ -1,0 +1,139 @@
+SECTION 045 — Security Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the security objectives, trust boundaries, assets, threats, controls, identities, detection, response, recovery, and lifecycle protections for the system of interest.
+
+REQUIRED OUTCOME
+
+- A security context and threat model covering assets, actors, trust, attack paths, controls, residual risk, evidence, and owners.
+- Enforceable confidentiality, integrity, availability, accountability, privacy, safety, and recovery controls across all material paths.
+- Traceability from requirements through design, implementation, operation, incidents, verification, and retirement.
+
+WHY THIS MATTERS
+
+Security is a property of the whole socio-technical system, not a checklist or perimeter. Unmodeled identities, suppliers, logs, recovery tools, AI prompts, or physical paths can defeat a strong local control.
+
+APPLICABILITY
+
+- Any system handles assets, identities, data, capabilities, external interfaces, physical effects, or consequential decisions.
+- Security compromise or control failure could cause material harm, loss, rights impact, or governance failure.
+
+NON-APPLICABILITY CONDITIONS
+
+- No asset, trust boundary, identity, data, external effect, control, evidence, or lifecycle security condition changes.
+- An approved security baseline covers exact scope and change with no material impact.
+- The artifact is exploratory and not a security, compliance, or absence-of-vulnerability claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-044 provide requirements, architecture, data, interfaces, runtime, operations, and recovery context.
+- Security, identity, privacy, safety, legal, incident, supplier, and acceptance authorities are attributable or marked open.
+
+REQUIRED INPUTS
+
+- Assets, actors, data, identities, trust boundaries, threats, abuse cases, controls, dependencies, environments, and criticality.
+- Vulnerability, detection, response, recovery, evidence, testing, supplier, model, tool, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Security owners approve protection objectives, residual risk, exceptions, access, incident severity, disclosure, recovery, and retirement. Asset and domain owners approve business impact. Humans retain authority to stop, isolate, revoke, contain, restore, and accept risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory authorized assets, model threats, analyze evidence, draft controls and tests, and identify anomalies. It must preserve scope, evidence, and uncertainty. It must not declare secure, suppress findings, accept risk, expose secrets, or execute containment beyond delegation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Security Auditor, Red Team, Architect, Analyst, Researcher, Observer, Tester, Verifier, Governance Reviewer, Critic, Planner, Implementer, Documentation Writer, Memory Curator, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+1. Define assets, actors, trust boundaries, impact, objectives, and ownership.
+2. Identify threats, abuse cases, attack paths, assumptions, dependencies, and control gaps.
+3. Design preventive, detective, corrective, compensating, and recovery controls.
+4. Allocate identity, authorization, cryptography, secrets, isolation, logging, alerting, response, and evidence controls.
+5. Validate with asset owners, users, operators, privacy, safety, legal, suppliers, and affected parties.
+6. Test misuse, bypass, privilege, injection, exfiltration, tampering, denial, recovery, and retirement paths.
+7. Baseline risk, decisions, evidence, exceptions, dissent, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show actor, asset, authority, tool, data, model, provider, threat, control, and consequence.
+- Require human review for risk acceptance, exceptions, disclosure, containment, privilege, and irreversible security actions.
+- Preserve independent stop, evidence, incident, appeal, and recovery paths when AI fails.
+- Never treat model confidence or a clean scan as proof of security.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Enforce security at identity, data, interface, runtime, network, physical, supplier, management, and recovery boundaries.
+- Separate policy, decision, enforcement, telemetry, evidence, incident, and compensation records.
+- Bind controls to assets, actors, scope, conditions, expiry, evidence, and revocation.
+- Preserve append-only audit and non-destructive compensation for recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show assets, threats, controls, findings, exceptions, risk, actor, authority, evidence freshness, and lifecycle.
+- Expose approve, deny, revoke, isolate, contain, investigate, restore, compensate, and retire actions.
+- Explain control state, uncertainty, affected users, and evidence that would change the decision.
+- Export threat model, decisions, findings, evidence, dissent, incidents, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Security context, asset and trust catalog, threat model, control architecture, risk register, and exception records.
+- Identity, access, data, secrets, cryptographic, monitoring, incident, recovery, supplier, AI, and retirement designs.
+- Verification, evidence, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify asset, scope, threat, control, configuration, environment, method, date, result, and limitation.
+- Scan, review, test, attestation, incident, or provider claim proves only its coverage and time.
+- Control evidence distinguishes existence, operation, and effectiveness; unknown remains unknown.
+- Failed, stale, suppressed, contradictory, or missing findings constrain security status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace assets and threats through controls, enforcement, evidence, incident, recovery, and retirement.
+- Exercise unauthorized access, privilege escalation, injection, tampering, exfiltration, replay, denial, insider, supplier, and recovery paths.
+- Verify controls cannot be bypassed through UI, API, bulk, admin, AI, offline, or emergency paths.
+- Disable detection, identity, key, network, provider, model, and evidence services and verify safe containment.
+- Reproduce representative security claims from exact baseline and evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating compliance paperwork, scan results, encryption, or perimeter controls as complete security.
+- Hiding assets, threats, residual risk, exceptions, false positives, supply-chain, recovery, or human factors.
+- Allowing convenience, AI, emergency access, or owner pressure to bypass controls or audit.
+
+RECOVERY AND RECONSIDERATION
+
+- On compromise, control failure, risk change, evidence loss, or authority conflict, contain affected scope and preserve immutable records.
+- Identify safe work, affected parties, owner, authority, disclosure, evidence, and review condition.
+- Use approved isolation, credential rotation, patch, restore, compensation, disclosure, or retirement paths.
+- Reopen on asset, threat, control, provider, data, model, population, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Assets, threats, controls, owners, residual risk, evidence, response, recovery, and lifecycle are explicit.
+- Boundary, abuse, supplier, AI, incident, and retirement behavior is addressed or justified.
+- Exact validity, open findings, and acceptance authority are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve threat, asset, control, finding, exception, incident, decision, evidence, dissent, and gap identities.
+- Hand off to Identity, Privacy, Governance, Compliance, Safety, Reliability, Operations, Testing, and Retirement.
+- Record changes requiring reopening all affected architecture and risk sections.
+
+RELATED CODEX SECTIONS
+
+- 019-044 Requirements through Runtime Architecture; 046-060 Identity through Hardware Architecture.
+- 189-217 security, threat, incident, fraud, and trust engineering; 246-252 security, compliance, and safety testing; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-044, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal threat taxonomy, control catalog, risk appetite, jurisdiction, or assurance regime is supplied. Actual assets, threats, owners, evidence, and acceptance remain unresolved.

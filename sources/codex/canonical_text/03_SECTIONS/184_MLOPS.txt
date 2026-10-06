@@ -1,0 +1,103 @@
+SECTION 184 — MLOps
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed delivery and lifecycle practice for data, models, code, evaluation, deployment, monitoring, incident response, retraining, and retirement.
+
+REQUIRED OUTCOME
+
+- Reproducible, traceable promotion of ML artifacts through controlled environments.
+- Gates for data, evaluation, security, safety, policy, approval, observability, rollback, and compensation.
+- Continuous evidence that distinguishes pipeline health from model or outcome validity.
+
+WHY THIS MATTERS
+
+Automation can accelerate an unapproved or invalid model into production. MLOps must preserve evidence and authority across frequent data, code, model, and infrastructure changes.
+
+APPLICABILITY
+
+Applies to ML build, registry, validation, release, serving, monitoring, retraining, promotion, rollback, incident, and retirement workflows. Depth increases with autonomy, continuous learning, sensitive data, or external effect.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to static non-ML software or an offline experiment with no pipeline, promotion, or operational claim. Record exact boundary and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires data and model contracts, evaluation, governance, security, privacy, safety, observability, operations, and owner authority. Depends on Sections 167, 179, 180, 183, 185, 253, and 266-270.
+
+REQUIRED INPUTS
+
+Pipeline; artifacts; data; registry; environments; tests; evaluation gates; policy result; capability; trace; deployment strategy; monitoring; incident; rollback or compensation; and retirement conditions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve promotion gates, exceptions, retraining, production changes, risk, and retirement. Operators may stop pipelines and revoke authority; automation cannot waive failed gates.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate pipeline code, diagnose failures, and recommend promotion. It must preserve logs and evidence and cannot approve its own output, suppress failures, or mutate environments without a complete binding.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, DevOps Engineer, Tester, Verifier, Governance Reviewer, Security Auditor, Privacy Reviewer, Safety Auditor, Critic, Optimizer, Planner, Documentation Writer, Memory Curator, and HITL Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define artifact, environment, promotion, and evidence contracts.
+2. Version source, data, features, model, code, image, configuration, and dependencies.
+3. Enforce quality, evaluation, security, safety, policy, and approval gates.
+4. Promote through reproducible stages with immutable records and traces.
+5. Monitor data, model, service, policy, cost, and outcome drift.
+6. Exercise incident, pause, rollback configuration, fallback, compensation, and retirement.
+7. Review pipeline changes and reopen invalidated claims.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show pipeline state, artifact lineage, gate result, policy evaluation, decision, authority, trace, and environment. Human approval is explicit for consequential promotion. Preserve stop, evidence, and manual recovery if automation fails.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable artifact and decision identities, append-only events, reproducible environments, segregated credentials, signed or equivalent provenance, and default-deny promotion. Keep rollback distinct from compensation for external effects.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show pipeline, model, data, gates, risks, drift, environment, approvals, traces, incidents, and evidence freshness. Provide authorized pause, deny, revoke, quarantine, promote, fallback, compensate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+MLOps charter; pipeline and environment map; artifact registry; gate and policy records; deployment and promotion logs; monitoring and alert plan; incident and compensation runbook; decision and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Each promotion claim identifies source, data, model, code, environment, gates, policy result, decision, trace, actor, result, and limitation. Green pipelines prove execution, not validity, safety, or accepted outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Break data, tests, evaluator, registry, credentials, policy, capability, deployment, monitor, provider, and stream termination; verify promotion denies, evidence remains, alerts fire, and recovery follows approved controls.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Auto-promotion on weak metrics; mutable registry; missing lineage; silent retraining; test bypass; shared credentials; green pipeline equals model quality; and destructive rollback of governed history.
+
+RECOVERY AND RECONSIDERATION
+
+Pause affected pipeline or deployment on gate, artifact, policy, drift, or authority failure. Preserve records, use prior qualified or manual mode, compensate external effects, re-evaluate, and resume only with fresh authorization.
+
+COMPLETION CRITERIA
+
+Artifacts, environments, gates, policy, decisions, traces, monitoring, incident, recovery, compensation, and retirement are explicit. Status remains CONTENT-COMPLETE pending reconciliation and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve pipeline IDs, artifacts, environments, logs, decisions, bindings, traces, incidents, drift, dissent, and gaps. Hand off to Model Operations, Training, Evaluation, Security, Governance, Operations, and Retirement.
+
+RELATED CODEX SECTIONS
+
+167 Machine Learning Engineering; 179 Model Training; 180 Model Evaluation; 183 AI Governance; 185 Model Operations; 258 Configuration Management; 266 Continuous Integration; 267 Continuous Delivery; 270 DevSecOps.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, architecture, testing, and delivery sections. Actual registries, gate thresholds, signing, environments, approval authority, service levels, and compensation contracts remain unresolved.

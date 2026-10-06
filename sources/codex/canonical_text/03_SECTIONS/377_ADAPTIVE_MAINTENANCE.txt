@@ -1,0 +1,95 @@
+SECTION 377 — Adaptive Maintenance
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Modify a system, product, service, process, or maintenance approach to remain fit as users, environment, dependencies, technology, threats, regulation, or operating conditions change.
+
+REQUIRED OUTCOME
+
+An adaptive-maintenance model with change trigger, current baseline, intended adaptation, impact, compatibility, test, migration, rollout, rollback, evidence, and owner decision.
+
+WHY THIS MATTERS
+
+Adaptation can preserve relevance or introduce uncontrolled redesign. A change motivated by new conditions still requires traceability, safety, compatibility, support, and recovery.
+
+APPLICABILITY
+
+Apply when maintenance changes behavior, interfaces, platform, data, security, performance, compliance, usability, or environment in response to changed conditions.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no maintenance change or changed operating condition affects behavior, support, compatibility, or lifecycle and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use change, requirements, architecture, compatibility, security, privacy, quality, release, operations, and retirement baselines.
+
+REQUIRED INPUTS
+
+Trigger, current baseline, changed condition, objective, impact, users, dependencies, design, test, migration, support, rollback, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve adaptation scope, risk, compatibility, migration, support, communication, exception, and retirement. Humans decide whether preserving old behavior remains required.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze change drivers, dependencies, evidence, and options; draft adaptations and tests; and identify gaps. It must not modify production, infer acceptance, remove compatibility, or retire old path without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Adaptive Maintenance Engineer, Architect, Product Manager, Researcher, Analyst, Implementer, Tester, Verifier, Security Auditor, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Identify trigger; baseline; assess impact and users; design adaptation; validate security, privacy, compatibility, quality, and operations; migrate; release; monitor; rollback or retire; and update documentation.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show trigger, baseline, changed condition, adaptation, evidence, impact, compatibility, owner, and limitation. Require human approval for behavior, data, security, user, migration, and retirement decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use versioning, compatibility, feature flags, migration, fallback, rollback, data conversion, support, observability, and explicit deprecation and exit path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show adaptation, trigger, versions, affected users, dependencies, evidence freshness, owner, migration, and authorized approve, phase, rollback, support, deprecate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Adaptive-maintenance charter; trigger and baseline; impact and design; compatibility and migration; test and rollout; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify trigger, baseline, version, change, user, source, method, time, result, compatibility, owner, and limitation. Adaptation success proves only its tested conditions and outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify trigger, requirements, compatibility, security, privacy, data, quality, migration, support, rollback, user outcome, and retirement. Test old and new paths and changed environment.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Adaptation without baseline, breaking change hidden, old users ignored, migration one-way, support unprepared, dependency drift, and maintenance used as ungoverned redesign.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or roll back, preserve state and evidence, support affected users, restore compatibility, communicate, and reassess adaptation need. Reopen on condition, user, dependency, threat, law, or design change.
+
+COMPLETION CRITERIA
+
+Trigger, baseline, adaptation, impact, compatibility, migration, evidence, owners, support, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baselines, versions, migrations, tests, support, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Corrective, Preventive, Version, Deprecation, Release, Operations, and Product.
+
+RELATED CODEX SECTIONS
+
+289 Change; 374 Maintenance; 378-389 Updates, Migration, Modernization, Refactoring, Debt, Compatibility, Version, and Deprecation; 390 Sunset; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, maintenance, change, architecture, compatibility, product, and lifecycle context, and the integration roadmap. Exact triggers, baselines, users, migrations, compatibility, support, and acceptance authority remain unresolved.

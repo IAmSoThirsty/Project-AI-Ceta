@@ -1,0 +1,95 @@
+SECTION 323 — Performance Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Manage response, throughput, resource, latency, cost, and user-experience performance over time through objectives, monitoring, capacity, change, and improvement.
+
+REQUIRED OUTCOME
+
+A performance-management model with service and user outcomes, indicators, objectives, workload, baselines, budgets, ownership, action, and review.
+
+WHY THIS MATTERS
+
+Performance changes with workload, dependency, data, configuration, and time. A one-time test or average can miss tail behavior and can encourage optimization that harms correctness or cost.
+
+APPLICABILITY
+
+Apply when performance affects users, operators, service levels, cost, capacity, safety, or business outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no performance, workload, cost, or user outcome changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use performance tests, metrics, SRE, capacity, architecture, cost, service levels, and operations baselines.
+
+REQUIRED INPUTS
+
+Outcome, workload, indicators, objective, baseline, latency, throughput, resource, cost, dependency, incidents, and action.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define meaningful performance and tradeoffs; engineers manage causes; humans decide scale, degrade, cost, and acceptance.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized performance data, identify bottlenecks, and propose bounded tuning. It must expose context and not change production or optimize a proxy without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Performance Engineer, SRE, Capacity Engineer, Architect, Analyst, Operations Engineer, Tester, Verifier, Optimizer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define outcomes and indicators; baseline; monitor; analyze workload and dependencies; tune; capacity-plan; test; communicate; review regressions; and recover.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show metric, workload, percentile, environment, dependency, cost, action, evidence, and limitation. Require human approval for tuning, scale, service reduction, and commitment.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use business and technical indicators, tail latency, resource and cost signals, backpressure, caching, queueing, degradation, capacity, and rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show performance, workload, SLO, resource, cost, bottleneck, trend, evidence freshness, owner, and authorized tune, scale, throttle, rollback, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Performance charter; indicator and baseline; workload and capacity; tuning and change; incident, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, workload, metric, percentile, environment, period, source, method, result, cost, and limitation. Average latency or throughput proves only its measured slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify indicators, workload, latency distribution, resource, cost, dependency, user outcome, regression, degradation, recovery, and reproducibility.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Average-only, benchmark theater, optimization without user outcome, cost hidden, warm cache, tail latency ignored, and performance target treated as quality.
+
+RECOVERY AND RECONSIDERATION
+
+Reduce workload, scale, roll back tuning, preserve evidence, communicate, and reassess architecture and objectives. Reopen on workload, dependency, version, cost, or user change.
+
+COMPLETION CRITERIA
+
+Outcomes, workload, indicators, objectives, resources, cost, evidence, owners, actions, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baselines, workload, tuning, incidents, metrics, decisions, evidence, exceptions, and open gaps. Hand off to Capacity, SRE, Testing, Application, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+239-242 Performance and Scale Testing; 317 Metrics; 321 Capacity; 322 Availability; 324 Reliability; 325 Service Levels; 301-310 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, performance, capacity, SRE, service, and operations context, and the integration roadmap. Exact outcomes, workloads, indicators, objectives, costs, and acceptance authority remain unresolved.

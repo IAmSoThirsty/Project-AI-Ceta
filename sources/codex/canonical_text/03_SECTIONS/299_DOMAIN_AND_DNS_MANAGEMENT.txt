@@ -1,0 +1,95 @@
+SECTION 299 — Domain and DNS Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern domains, names, registrations, delegation, DNS records, ownership, security, routing, change, expiry, recovery, and retirement.
+
+REQUIRED OUTCOME
+
+A domain and DNS model with names, owners, registrars, authoritative service, records, TTL, validation, certificates, access, monitoring, change, renewal, and recovery.
+
+WHY THIS MATTERS
+
+Domain and DNS state controls identity and reachability. Expiry, hijack, stale records, weak delegation, misrouting, and uncontrolled automation can redirect users or take services offline.
+
+APPLICABILITY
+
+Apply when domains, DNS, names, delegation, service discovery, certificate validation, or routing names affect a system, user, or service.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no domain, name, record, delegation, routing, certificate, or expiry behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use identity, network, certificate, cloud, application, security, configuration, provider, records, and operations baselines.
+
+REQUIRED INPUTS
+
+Domains, owners, registrars, authorities, records, zones, TTL, providers, access, certificates, services, renewal, monitoring, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve registration, delegation, records, access, provider, renewal, transfer, emergency change, and retirement. Humans verify ownership and high-impact routing.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized DNS metadata, expiry, records, and health; draft changes and tests; and identify anomalies. It must not change delegation, routing, registration, or records without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+DNS Engineer, Network Engineer, Certificate Manager, Cloud Engineer, Security Auditor, Platform Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Inventory domains and zones; verify ownership; secure registrar and DNS access; manage records and TTL; monitor expiry and health; renew; change; recover; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show domain, zone, record, owner, authority, provider, target, evidence, and limitation. Require human approval for delegation, registrar, routing, certificate, and production changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use separate registrar and DNS roles, multi-provider or secondary DNS where warranted, DNSSEC where applicable, change audit, health checks, low-risk TTL strategy, and recovery contacts.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show domain health, expiry, authority, records, targets, certificates, incidents, evidence freshness, owner, and authorized update, fail over, restrict, renew, transfer, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Domain and zone inventory; ownership and access; record and routing model; certificate links; monitoring, renewal, recovery, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify domain, zone, record, authority, target, provider, owner, method, time, result, and limitation. DNS query response proves only the observed resolver and time.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify ownership, delegation, records, TTL, DNSSEC, certificate validation, routing, expiry, provider, monitoring, failover, rollback, and recovery. Test stale, malicious, and unavailable authority.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Expired domain, shared registrar account, untracked record, wildcard overreach, stale target, DNS change without audit, resolver cache ignored, and DNS health treated as service health.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict access, restore known-good records, fail over authority, renew or recover registration, preserve evidence, communicate, and reassess certificate and service impact. Reopen on provider, domain, record, or threat change.
+
+COMPLETION CRITERIA
+
+Domains, zones, owners, authorities, records, targets, certificates, monitoring, evidence, recovery, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve registration, delegation, records, changes, incidents, certificates, decisions, evidence, exceptions, and open gaps. Hand off to Network, Certificates, Cloud, Security, Platform, Release, and Operations.
+
+RELATED CODEX SECTIONS
+
+038 Network Architecture; 284 Network Engineering; 298 Certificate Management; 277 Cloud; 300 Content Delivery Networks; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, network, identity, certificate, provider, and operations context, and the integration roadmap. Exact domains, authorities, providers, records, security, renewal, recovery, and acceptance authority remain unresolved.

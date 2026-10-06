@@ -1,0 +1,95 @@
+SECTION 361 — Subscription Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Manage recurring entitlement, plan, term, renewal, upgrade, downgrade, pause, cancellation, billing, payment, access, and customer communication accurately and fairly.
+
+REQUIRED OUTCOME
+
+A subscription model with customer, plan, term, entitlement, price, usage, renewal, notice, payment, status, cancellation, refund, support, evidence, and lifecycle.
+
+WHY THIS MATTERS
+
+Subscription state controls access and recurring financial obligation. Ambiguous renewal, failed payment, entitlements, or cancellation can create customer harm and legal exposure.
+
+APPLICABILITY
+
+Apply when a product or service grants recurring or term-based access, billing, usage, or commitment.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no recurring entitlement, term, price, renewal, cancellation, payment, or customer obligation changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use commerce, billing, payments, identity, product, legal, privacy, support, usage, and records baselines.
+
+REQUIRED INPUTS
+
+Customer, plan, price, term, entitlement, usage, renewal, notice, payment, status, cancellation, refund, support, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Subscription owners approve plans, price, terms, renewal, grace, cancellation, refund, access, exception, and customer communication. Humans resolve disputes and legal obligations.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized subscription state, identify anomalies, and draft customer explanations. It must not alter entitlement, renew, cancel, charge, refund, or disclose customer data without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Subscription Manager, Commerce Manager, Billing Engineer, Payments Engineer, Customer Support, Legal Advisor, Analyst, Tester, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Define plan and entitlement; create; activate; bill; renew; handle payment failure; upgrade or downgrade; pause; cancel; refund; notify; reconcile; and retire plan.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show customer, plan, term, price, entitlement, status, payment, action, evidence, authority, and limitation. Require human approval for refund, exception, disputed cancellation, and high-impact access.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use explicit state machine, immutable history, idempotence, entitlement and billing linkage, notice, grace, access, privacy, audit, and reconciliation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show subscription, plan, term, renewal, entitlement, payment, cancellation, dispute, evidence freshness, owner, and authorized change, pause, cancel, refund, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Subscription charter; plan and entitlement; term and price; lifecycle and payment; notice, cancellation, refund, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify customer, subscription, plan, term, price, entitlement, payment, state, notice, method, time, result, and limitation. State transition proves only recorded system state.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify create, activate, renew, grace, payment failure, upgrade, downgrade, pause, cancel, refund, entitlement, notice, privacy, support, and reconciliation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unclear renewal, access after cancel, charge after failure, cancellation maze, entitlement mismatch, hidden term, refund without ledger, and subscription count as value.
+
+RECOVERY AND RECONSIDERATION
+
+Correct state, stop charge, restore or restrict access, refund or credit, communicate, preserve evidence, and reassess customer and legal impact. Reopen on plan, price, term, payment, or policy change.
+
+COMPLETION CRITERIA
+
+Customer, plan, term, price, entitlement, payment, lifecycle, notices, evidence, owners, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve subscription state, plans, notices, payments, billing, cancellations, disputes, decisions, evidence, exceptions, and open gaps. Hand off to Commerce, Billing, Payments, Support, Legal, Revenue, and Records.
+
+RELATED CODEX SECTIONS
+
+358 Commerce; 359 Billing; 360 Payments; 362 Revenue Operations; 334 Customer Support; 219 Legal; 225 Records.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, commerce, finance, payments, customer, legal, privacy, and service context, and the integration roadmap. Exact plans, terms, prices, jurisdictions, notices, entitlements, refunds, and acceptance authority remain unresolved.

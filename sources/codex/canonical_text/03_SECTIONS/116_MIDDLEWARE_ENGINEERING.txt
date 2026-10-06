@@ -1,0 +1,98 @@
+SECTION 116 — Middleware Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the engineering of shared middleware that coordinates applications, services, messaging, transactions, identity, serialization, and cross-cutting controls.
+
+REQUIRED OUTCOME
+
+A versioned middleware contract with supported patterns, interfaces, compatibility, security, observability, failure, recovery, performance, and ownership.
+
+WHY THIS MATTERS
+
+Middleware concentrates hidden coupling. A default serializer, retry, transaction, or identity behavior can affect every consumer and make failures systemic.
+
+APPLICABILITY
+
+Applies to brokers, RPC layers, service meshes, transaction managers, serializers, workflow engines, caches, configuration services, and shared libraries.
+
+NON-APPLICABILITY CONDITIONS
+
+An application using an unchanged approved middleware component is not middleware engineering; record the consumed baseline and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires consumer contracts, workload, data, trust model, delivery semantics, failure model, compatibility, capacity, observability, support, and acceptance authority.
+
+REQUIRED INPUTS
+
+Interfaces, schemas, identity, ordering, delivery, retries, idempotency, transactions, timeouts, backpressure, quotas, telemetry, upgrades, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve shared defaults, security, compatibility, service commitments, risk, release, and deprecation. Consumer owners remain accountable for local consequences.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft adapters, schemas, tests, and analyses. It must not change shared semantics, retry or identity policy, or production configuration without delegated approval and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Critic, Security Auditor, Governance Reviewer, Optimizer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Inventory consumers and define shared contracts and ownership.
+2. Specify delivery, identity, schema, error, retry, transaction, ordering, and compatibility behavior.
+3. Implement observability, backpressure, quotas, isolation, and safe degradation.
+4. Test failures, duplicates, reordering, partial work, upgrades, and recovery.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose middleware and consumer identity, data, policy, authority, version, and outcome. Require human review for shared behavior and preserve direct or manual fallback.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate middleware definition, configuration, runtime state, consumer contract, message or transaction, and evidence. Design idempotency, dead-letter, replay, compatibility, and compensation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show service, version, consumers, queues, dependency, capacity, failure, evidence, and recovery state with authorized pause, drain, replay, isolate, and rollback controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Middleware contracts, schemas, ownership matrix, configuration, compatibility, load and failure tests, security review, observability, migration, runbooks, and retirement records.
+
+EVIDENCE REQUIREMENTS
+
+Identify consumer, message or transaction, version, configuration, workload, environment, result, reviewer, and limitations. Nominal delivery does not prove end-to-end outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test duplicate, loss, delay, reorder, poison data, timeout, retry storm, partition, schema change, unauthorized access, overload, replay, drain, restore, and compensation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unbounded retries, hidden coupling, incompatible schema change, shared credentials, lost messages, unowned dead letters, and rollback that duplicates external effects.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or isolate, preserve messages and evidence, drain or quarantine, use compatible prior behavior, replay or compensate idempotently, and reopen affected consumer contracts.
+
+COMPLETION CRITERIA
+
+Contracts, semantics, ownership, capacity, security, observability, compatibility, recovery, evidence, support, and retirement are explicit and verified for consumers.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off contracts, schemas, configuration, consumer inventory, evidence, incidents, decisions, migration, recovery, and open gaps to Integration, API, Event, Application, Platform, Security, Testing, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+041-044 Integration, API, Event-Driven, and Runtime Architecture; 045-046 Security and Identity Architecture; 128-131 API through Distributed Systems Engineering; 266-270 CI through DevSecOps; 319-330 Incident through Failover.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Delivery guarantees, transaction model, broker, capacity, compatibility window, and recovery objectives remain system-specific gaps.

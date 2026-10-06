@@ -1,0 +1,136 @@
+SECTION 057 — Machine Learning Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed lifecycle and structure of datasets, features, training, evaluation, models, serving, monitoring, human review, and retirement for machine learning systems.
+
+REQUIRED OUTCOME
+
+- A machine learning lifecycle model with purpose, data, labels, features, model, pipeline, evaluation, deployment, drift, owners, risks, evidence, and lifecycle.
+- Reproducible lineage and bounded claims for performance, fairness, robustness, safety, privacy, and operational behavior.
+
+WHY THIS MATTERS
+
+Machine learning behavior depends on data, labels, population, objective, threshold, environment, and feedback. A high aggregate score can conceal subgroup harm, leakage, drift, or an invalid deployment context.
+
+APPLICABILITY
+
+- A learned model influences classification, prediction, ranking, generation, recommendation, control, resource allocation, or decisions.
+- Training, data, evaluation, drift, or model change affects material outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No learned artifact, training data, feature, evaluation, model output, deployment, or lifecycle effect changes.
+- An approved baseline covers exact task, population, model, data, and change with no material impact.
+- The artifact is research or synthetic and not a production, fairness, safety, or accuracy claim.
+
+Record baseline, scope, owner, evidence date, assumptions, population, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-056 provide requirements, data, privacy, security, safety, AI, knowledge, operations, and governance context.
+- Data, domain, evaluation, safety, privacy, security, model, deployment, and human-review authorities are known or open.
+
+REQUIRED INPUTS
+
+- Task, objective, population, labels, datasets, features, model, training, evaluation, thresholds, deployment, feedback, and lifecycle.
+- Quality, fairness, privacy, security, robustness, interpretability, monitoring, drift, rollback, retraining, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Model and domain owners approve task, data purpose, labels, metrics, thresholds, evaluation, deployment, monitoring, retraining, risk, and retirement. Humans decide whether evidence supports use and retain authority over consequential outcomes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized datasets, propose features and tests, summarize evaluations, and identify drift. It must preserve lineage, population, split, metric, and uncertainty. It must not fabricate labels, hide subgroup results, approve deployment, or infer safety from aggregate performance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Researcher, Analyst, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define task, outcome, population, prohibited use, owners, and lifecycle.
+2. Inventory data, labels, features, models, code, configurations, dependencies, and provenance.
+3. Define training, validation, test, deployment, threshold, calibration, and monitoring contracts.
+4. Assess leakage, bias, drift, robustness, privacy, security, explainability, accessibility, and feedback loops.
+5. Validate with domain, data, users, privacy, security, safety, accessibility, operations, and governance authorities.
+6. Test distribution shift, adversarial input, missing data, subgroup performance, retraining, rollback, and recovery.
+7. Baseline lineage, evaluation, decisions, evidence, dissent, limitations, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show task, population, data, model, metric, threshold, confidence, human review, authority, and consequence.
+- Require human approval for training data purpose, deployment, threshold, retraining, and high-impact use.
+- Preserve manual review, explanation, appeal, stop, status, evidence, and recovery paths.
+- Never treat a score, benchmark, or model card as universal validity.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Preserve lineage from source data and label through feature, training run, model artifact, deployment, output, feedback, and retirement.
+- Separate training, validation, test, shadow, canary, production, rollback, and archived model states.
+- Bind model change to evaluation invalidation, approval, monitoring, and rollback or compensation semantics.
+- Protect datasets, features, weights, prompts, logs, and outputs under privacy, security, retention, and deletion controls.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show task, population, dataset, model, version, metric, subgroup results, drift, owner, authority, evidence, and lifecycle.
+- Expose review, constrain, pause, rollback, retrain, revoke, investigate, appeal, and retire actions.
+- Explain evidence limits, uncertainty, threshold, data change, and human decision point.
+- Export lineage, runs, evaluations, decisions, audits, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- ML context, data and label catalog, feature and model lineage, experiment and evaluation records, deployment and monitoring plan.
+- Fairness, privacy, security, robustness, safety, human review, drift, retraining, rollback, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify task, population, data, split, feature, model, version, metric, threshold, environment, method, result, and limitation.
+- Benchmark, validation, model card, user rating, or provider claim proves only its declared population and condition.
+- Subgroup, drift, leakage, robustness, privacy, and deployment evidence remains visible and bounded.
+- Missing, stale, biased, leaked, or unrepresentative evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace a claim from requirement through data, label, feature, run, model, evaluation, deployment, output, monitoring, and retirement.
+- Exercise leakage, shift, missingness, adversarial input, subgroup harm, threshold change, retraining, model swap, and provider loss.
+- Verify lineage, access, privacy, fairness, robustness, human review, rollback, audit, and appeal.
+- Reproduce representative evaluations from exact code, data, configuration, and environment.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating aggregate accuracy, benchmark, model card, or training completion as production validity.
+- Hiding data leakage, subgroup failure, drift, feedback loops, label uncertainty, or threshold effects.
+- Retraining or replacing a model without re-evaluation, approval, lineage, and rollback.
+
+RECOVERY AND RECONSIDERATION
+
+- On drift, bias, leakage, unsafe output, data issue, evaluation failure, or evidence loss, restrict model use and preserve runs.
+- Identify affected population, owner, authority, evidence, communication, remedy, and review condition.
+- Use human review, threshold restriction, rollback, model substitution, retraining, compensation, or retirement.
+- Reopen on task, population, data, feature, model, provider, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Task, population, data, lineage, model, evaluation, thresholds, human review, evidence, monitoring, recovery, and lifecycle are explicit.
+- Drift, adversarial, subgroup, retraining, rollback, and retirement behavior is addressed or justified.
+- Exact validity and unresolved evidence are recorded; CONTENT-COMPLETE does not imply model fitness.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve datasets, labels, features, runs, models, evaluations, decisions, evidence, incidents, dissent, and gaps.
+- Hand off to Data, AI, Security, Privacy, Safety, MLOps, Testing, Operations, Governance, and Retirement.
+- Record changes requiring reopening AI, Data, Privacy, Safety, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-056 Requirements through AI Architecture; 058-060 Robotics through Hardware Architecture.
+- 164-186 data science, ML, deep learning, AI engineering, evaluation, alignment, safety, governance, MLOps, and model operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-056, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal task, population, metric, fairness, robustness, privacy, or deployment standard is supplied. Actual datasets, labels, owners, evaluations, and acceptance evidence remain unresolved.

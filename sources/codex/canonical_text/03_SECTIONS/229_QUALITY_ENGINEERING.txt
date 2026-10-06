@@ -1,0 +1,95 @@
+SECTION 229 — Quality Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Build quality into requirements, architecture, design, implementation, operation, and retirement through measurable characteristics, prevention, feedback, automation, and learning.
+
+REQUIRED OUTCOME
+
+A quality-engineering approach that links risks and quality characteristics to design choices, controls, tests, observability, defect prevention, maintainability, and measurable outcomes.
+
+WHY THIS MATTERS
+
+Finding defects late is expensive and can leave structural causes untouched. Quality engineering prevents teams from treating testing as the only quality activity or from automating checks that measure the wrong behavior.
+
+APPLICABILITY
+
+Apply when quality must be designed into software, hardware, data, processes, services, AI, or operations rather than inspected only after production.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when the artifact is low consequence, isolated, reversible, and has no material quality characteristic or consumer expectation beyond a documented baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use requirements, architecture, risk, quality management, testing, observability, operations, user research, and support evidence. Identify quality characteristics, constraints, environments, and feedback owners.
+
+REQUIRED INPUTS
+
+Quality goals, risks, requirements, architecture, user journeys, interfaces, data, dependencies, defect history, testability, observability, thresholds, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners set protected outcomes and tradeoffs; engineers design controls and testability; humans decide acceptance, exception, and residual risk. Specialists review safety, security, accessibility, performance, and domain quality where relevant.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized requirements and defect evidence, identify quality risks, draft tests and instrumentation, and propose design improvements. It must not substitute generated tests for user or domain judgment, redefine acceptance, hide uncertainty, or approve release.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Quality Engineer, Architect, Researcher, Analyst, Implementer, Tester, Verifier, User Experience Reviewer, Security Auditor, Critic, Optimizer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define characteristics and risks; design for testability, observability, resilience, accessibility, security, and maintainability; automate repeatable checks; review defects and causes; measure outcomes; experiment safely; and feed lessons into requirements and architecture.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show quality goal, risk, evidence, test or control, owner, assumption, result, and limitation. Require human review for generated tests, design tradeoffs, high-impact changes, and acceptance. Preserve exploratory and qualitative evidence.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Expose contracts, invariants, state, errors, telemetry, versioning, fault injection, rollback, and test seams. Keep production safety and privacy boundaries intact while enabling representative validation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show quality risk, characteristic, control, test coverage, defect trend, evidence freshness, owner, decision, and authorized accept, defer, remediate, experiment, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Quality strategy; characteristic and risk map; design and testability decisions; automation and observability plan; defect and cause analysis; experiment, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify quality characteristic, scenario, configuration, population, method, result, owner, environment, uncertainty, and limitation. Automation coverage is not behavioral coverage unless its scope is shown.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify quality risks are linked to controls and tests; validate representative data and environments; exercise failure, accessibility, security, performance, recovery, and change paths; and independently reproduce material claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Test-only quality, brittle checks, coverage theater, unrepresentative fixtures, no user evidence, ignored defect causes, and optimization that harms protected characteristics.
+
+RECOVERY AND RECONSIDERATION
+
+Stop affected release, preserve evidence, diagnose cause, use rollback or containment, update design and tests, and reassess acceptance. Reopen on requirement, architecture, usage, dependency, or defect-pattern change.
+
+COMPLETION CRITERIA
+
+Quality characteristics, risks, design controls, tests, observability, owners, evidence, defects, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve quality strategy, design decisions, tests, instrumentation, defect history, evidence, experiments, and open gaps. Hand off to Quality Management, QA, Testing, Architecture, Operations, Support, and Governance.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 020 Systems Engineering; 228 Quality Management; 230 Quality Assurance; 231-254 Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, requirements and quality context, and the integration roadmap. Exact quality characteristics, domain risks, testability, measures, thresholds, and acceptance authority remain unresolved.

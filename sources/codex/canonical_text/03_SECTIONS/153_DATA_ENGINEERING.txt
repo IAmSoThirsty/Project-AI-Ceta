@@ -1,0 +1,100 @@
+SECTION 153 — Data Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer reliable data collection, movement, transformation, publication, and observability so authorized data reaches intended consumers with preserved meaning, lineage, quality, security, and lifecycle control.
+
+REQUIRED OUTCOME
+
+A versioned data-flow design with source and destination contracts, pipelines, schedules, state, lineage, quality gates, idempotency, recovery, ownership, and evidence.
+
+WHY THIS MATTERS
+
+Pipelines can produce plausible but wrong results through loss, duplication, late data, schema drift, or silent transformation. Successful execution is not proof of valid data.
+
+APPLICABILITY
+
+Apply when data is ingested, transformed, enriched, joined, streamed, batched, exported, synchronized, or published across a material boundary.
+
+NON-APPLICABILITY CONDITIONS
+
+No material flow, transformation, schema, lineage, quality, access, timing, cost, or recovery behavior changes and an exact baseline covers the work. Record the determination.
+
+PREREQUISITES AND DEPENDENCIES
+
+Data and information architecture, source authority, contracts, workload, latency, quality, privacy, security, retention, consumers, recovery, and operational ownership.
+
+REQUIRED INPUTS
+
+Sources, destinations, schemas, events, schedules, volumes, ordering, lateness, transformations, dependencies, credentials, quality rules, SLAs, assumptions, and known gaps.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner approves purpose, sources, transformations, sharing, quality thresholds, cost, risk, exceptions, and acceptance, and assigns data, pipeline, security, privacy, operations, and retirement authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized source and destination contracts, pipeline definitions, lineage, run records, schemas, quality results, offsets, logs, quarantines, and replay evidence. It may propose mappings, transformations, quality gates, orchestration, tests, observability, capacity controls, and recovery procedures, while identifying assumptions, uncertainty, data loss, duplication, lateness, drift, access, and cost risks.
+
+AI must preserve source provenance and distinguish observed records and run outcomes from inferred meaning or simulated results. It must not approve data sharing, alter a pipeline, replay or backfill material data, bypass quality or access controls, expose credentials or protected records, or declare data correctness from pipeline completion, samples, checksums, or green status alone. Any mutation-capable proposal must identify the authorized actor, exact flow and data window, idempotency and dependency effects, validation, audit and lineage records, and forward recovery or compensation path; unresolved authority, provenance, or quality gaps require quarantine or owner review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Observer, Security Auditor, Governance Reviewer, Critic, Optimizer, Documentation Writer, Memory Curator, Coordinator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Map sources, consumers, contracts, lineage, ownership, and data states.
+2. Design batch and streaming paths with validation, ordering, deduplication, replay, idempotency, quarantine, and reconciliation.
+3. Define orchestration, secrets, observability, capacity, cost, access, retention, and recovery.
+4. Test late, duplicate, malformed, partial, out-of-order, unavailable, and replayed data; baseline evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may inspect authorized pipeline metadata and propose mappings or tests. It must label inference and simulated results, preserve provenance, and never alter flows, approve sharing, or treat pipeline completion as data correctness.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent data products, stages, checkpoints, lineage, schemas, quality results, offsets, retries, quarantines, replays, evidence, and lifecycle states separately. Design for idempotency, backpressure, ordering, replay, compensation, and safe stop.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show pipeline version, source freshness, offsets, lag, quality gates, failures, quarantines, active runs, owners, dependencies, authority, and controls for pause, replay, quarantine, compensate, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Pipeline catalog; data contracts; lineage and mapping records; orchestration and runbook design; quality and reconciliation rules; observability, security, recovery, test, decision, evidence, and handoff artifacts.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, run, code, configuration, schema, data window, environment, actor, method, result, and limitation. A green run, checksum, or sample supports only its bounded claim.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify completeness, schema compatibility, ordering, deduplication, replay, idempotency, quality gates, access, lineage, latency, backpressure, failure recovery, and independent result reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Silent drops, duplicate loads, unbounded retries, hidden manual fixes, hard-coded credentials, schema drift, unbounded backlogs, missing lineage, destructive replay, and optimistic freshness claims.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or quarantine affected stages on corruption, drift, access failure, or quality breach. Preserve offsets and evidence; use approved replay, reconciliation, corrected source, backfill, compensation, or safe degradation.
+
+COMPLETION CRITERIA
+
+Contracts, owners, lineage, transformations, quality, security, operations, recovery, tests, evidence, gaps, and next action are recorded. Status remains CONTENT-COMPLETE pending later review gates.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off contracts, mappings, offsets, runbooks, alerts, quality rules, recovery, retention, and migration obligations to Data Modeling, Integration, Storage, Database, Platform, Security, Testing, Data Operations, and Retirement.
+
+RELATED CODEX SECTIONS
+
+030 Information Architecture; 031 Data Architecture; 041 Integration Architecture; 043 Event-Driven Architecture; 151 Database Engineering; 154 Data Modeling; 156 Data Quality Engineering; 157 Data Integration; 159-163 Warehousing, Lake, Analytics, BI, and Analysis; 307 Data Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, Sections 019-032, and roadmap. Source-specific standards for streaming, orchestration, residency, quality, cost, retention, and sector controls remain unresolved.

@@ -1,0 +1,98 @@
+SECTION 113 — Operating Systems Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the engineering of operating-system services that manage hardware, processes, memory, files, devices, identity, isolation, scheduling, and system calls.
+
+REQUIRED OUTCOME
+
+A versioned OS contract, kernel and user-space boundaries, security model, driver and hardware assumptions, compatibility, test evidence, update, recovery, and retirement plan.
+
+WHY THIS MATTERS
+
+Operating systems mediate nearly every resource and authority. A defect can compromise confidentiality, integrity, availability, safety, or recoverability across all applications.
+
+APPLICABILITY
+
+Applies to kernels, system services, distributions, boot systems, filesystems, process models, security subsystems, device support, and OS-level configuration or update.
+
+NON-APPLICABILITY CONDITIONS
+
+Using an unchanged supported OS without altering OS behavior, configuration baseline, trust boundary, or support claim is not OS engineering; record the baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires hardware and platform model, threat model, privilege model, resource goals, compatibility, update, backup, recovery, testing, support, and acceptance authority.
+
+REQUIRED INPUTS
+
+System calls, processes, memory, storage, scheduling, identity, permissions, boot, update, logging, hardware, drivers, failure, recovery, target platforms, and lifecycle obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve privilege, security, safety, compatibility, update, release, incident, and retirement decisions. They retain authority to isolate, stop, restore, and accept residual risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze source and telemetry, draft tests and documentation, and propose fixes. It must not alter kernel, privilege, boot, update, or recovery controls without explicit authority and independent review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Security Auditor, Red Team, Critic, Governance Reviewer, Documentation Writer, Memory Curator, and Optimizer. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish platform, hardware, scope, privilege, trust, lifecycle, and non-goals.
+2. Specify kernel, service, device, storage, process, identity, update, telemetry, and recovery contracts.
+3. Implement with least privilege, isolation, safe defaults, diagnostics, and reproducible builds.
+4. Test faults, hostile inputs, upgrades, hardware loss, corruption, recovery, and compatibility.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI-assisted OS changes remain proposed until human review. Show toolchain, source, target, authority, evidence, and affected assets. Keep offline administration, safe boot, recovery, and evidence access available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate kernel, services, drivers, firmware, configuration, secrets, hardware, boot artifacts, and logs. Enforce privilege separation, secure update, rollback or recovery, integrity measurement, and compatibility.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show platform, version, boot state, privilege, patch, driver, resource, security, evidence, and recovery state with authorized isolate, restore, update, and rollback controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+OS architecture and threat model, source, build and signing records, configuration baseline, compatibility matrix, driver inventory, tests, incident and recovery runbooks, update, support, and retirement records.
+
+EVIDENCE REQUIREMENTS
+
+Identify hardware, OS, configuration, privilege, test, environment, result, reviewer, and limitations. A booted host or patch result does not prove secure or reliable operation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test privilege boundaries, system calls, memory, storage, scheduling, drivers, boot, update, corruption, outage, hostile input, isolation, logging, restore, and hardware compatibility.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Running as administrator, unsigned updates, shared secrets, hidden driver assumptions, missing recovery media, suppressed kernel errors, unbounded resource use, and destructive rollback that erases evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate affected hosts, preserve forensic and operational evidence, use safe boot or approved prior image, restore or replace hardware, compensate external effects, and reopen after independent review.
+
+COMPLETION CRITERIA
+
+The OS behavior, privilege, platform, security, update, compatibility, recovery, evidence, ownership, support, and retirement boundaries are explicit and verified.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off platform, source, signed artifacts, configuration, hardware assumptions, test evidence, incidents, decisions, recovery, and open gaps to Kernel, Driver, Infrastructure, Security, Operations, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 035 Infrastructure Architecture; 044 Runtime Architecture; 045 Security Architecture; 113-115 Kernel, Driver, and Middleware Engineering; 258-299 Configuration through Domain Management; 327-330 Disaster Recovery through Failover.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Hardware targets, OS family, privilege standards, support window, certification, and recovery objectives remain unresolved until supplied.

@@ -1,0 +1,100 @@
+SECTION 062 — Electronics Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed design of electronic circuits and assemblies that sense, condition, convert, communicate, compute, control, or protect signals and energy within a bounded system. Preserve analog, digital, mixed-signal, power, timing, EMC, thermal, safety, manufacturing, service, and lifecycle concerns.
+
+REQUIRED OUTCOME
+
+A traceable electronic design with schematics, constraints, interfaces, component identity, tolerances, power integrity, signal integrity, EMC behavior, thermal limits, test access, manufacturing controls, failure handling, and evidence for the declared environment.
+
+WHY THIS MATTERS
+
+Small component, timing, noise, thermal, or layout errors can produce intermittent faults, unsafe outputs, data corruption, field failures, and impossible diagnosis. Simulation and nominal bench success do not establish production robustness.
+
+APPLICABILITY
+
+Applies to analog, digital, mixed-signal, power, sensing, actuation, communications, control, instrumentation, and electronic assemblies, including prototypes and production transitions.
+
+NON-APPLICABILITY CONDITIONS
+
+Non-applicability requires no material circuit, signal, power, timing, EMC, component, assembly, firmware interface, test, manufacturing, or lifecycle effect, with baseline, evidence, authority, and reopening trigger recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+Functional requirements, electrical environment, schematics, timing and signal budgets, component data, tolerances, power and thermal limits, EMC targets, safety constraints, manufacturing process, firmware and mechanical interfaces, and service requirements. Sections 019-061 provide upstream context.
+
+REQUIRED INPUTS
+
+Circuit boundary, net intent, part identity, approved alternatives, power domains, clocks, signal levels, tolerances, derating, environmental profile, EMC limits, safety controls, assembly process, test access, calibration, service, and evidence constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human design authority approves critical parts, substitutions, tolerances, safety and EMC margins, prototype-to-production transition, deviations, destructive tests, and acceptance. Human experts decide whether evidence represents the intended field population.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze schematics, datasheets, simulations, layouts, bills of material, and test results; draft checks and alternatives; and identify missing margins. It must not invent pinouts, assume equivalent parts, approve a design, hide uncertainty, or authorize field use.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Critic, Implementer, Tester, Verifier, Security Auditor, Red Team, Optimizer, Planner, Coordinator, Observer, Documentation Writer, Governance Reviewer, and Memory Curator under the existing role contracts.
+
+REQUIRED ACTIVITIES
+
+1. Establish circuit boundary, functions, modes, interfaces, environment, criticality, and lifecycle.
+2. Capture schematics, net intent, component identity, tolerances, derating, power, timing, signal, thermal, and EMC budgets.
+3. Analyze operating, transient, fault, startup, shutdown, calibration, sensor, actuator, communication, and recovery behavior.
+4. Review layout, grounding, return paths, shielding, isolation, test points, manufacturability, serviceability, and obsolete or counterfeit parts.
+5. Define prototype, qualification, production, incoming, in-process, end-of-line, field, and regression tests.
+6. Baseline evidence, deviations, substitutions, hazards, open gaps, and approval state.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI outputs remain proposed and retain source part numbers, revisions, units, simulation configuration, data, uncertainty, and reviewer. Human approval is required for safety, security, EMC, production, substitution, and release decisions. Stop and diagnostic paths must not depend on AI availability.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Model circuits, components, nets, signals, power domains, clocks, interfaces, constraints, tolerances, layouts, assembly versions, test points, configuration, firmware boundaries, and lifecycle state as controlled artifacts. Separate simulation, prototype, production, and field evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show assembly revision, powered state, rails, signals, temperatures, faults, test status, component substitutions, calibration, evidence freshness, and authorized isolate or repair actions. Preserve human inspection, safe shutdown, and non-AI diagnosis.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Schematics; net and interface definitions; bill of materials; approved parts and substitutions; budgets; simulations; layout and EMC review; hazard analysis; assembly drawings; manufacturing and test plans; qualification results; service and lifecycle records.
+
+EVIDENCE REQUIREMENTS
+
+Evidence binds part and assembly revision, instruments, fixtures, calibration, firmware, environment, stimulus, limits, result, operator, and limitations. Supplier data and simulation are not production evidence without correlation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify connectivity, polarity, timing, power-up, thermal, signal integrity, noise, EMC, tolerance, fault insertion, protection, calibration, production variation, aging, vibration interface, and recovery behavior. Reproduce failures and confirm corrective evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uncontrolled substitutions; stale datasheets; floating inputs; missing return paths; ignored tolerances; layout afterthought; untested startup or brownout; hidden counterfeit risk; inadequate test access; and treating nominal simulation as field reliability.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected assemblies or functions, preserve configuration and test evidence, identify safe operation, and use approved repair, substitution, rework, rollback, recalibration, or redesign. Reopen after component, layout, firmware, environment, manufacturing, or failure changes.
+
+COMPLETION CRITERIA
+
+The electronic baseline, constraints, interfaces, parts, margins, tests, evidence, service, production, and unresolved gaps are explicit for the declared environment; no production or safety claim exceeds evidence.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve design and assembly revisions, BOM, substitutions, test fixtures, calibration, failures, decisions, and next action. Hand off to Electrical, Semiconductor, PCB, Firmware, Embedded Software, Hardware Testing, Manufacturing, Security, Reliability, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+061 Electrical Engineering; 063 Computer Engineering; 066 Semiconductor Engineering; 067 PCB Design; 068 Firmware Engineering; 069 Embedded Software Engineering; 232 Hardware Testing; 246 Security Testing; 252 Safety Testing; 351 Manufacturing; 354 Hardware Certification.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-060, and the integration roadmap. Part availability, EMC jurisdiction, certification, manufacturing capability, environmental profile, counterfeit controls, and owner acceptance remain unresolved until supplied and verified.

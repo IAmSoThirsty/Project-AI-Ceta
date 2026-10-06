@@ -1,0 +1,95 @@
+SECTION 256 — Verification
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Determine, with traceable evidence, whether the specified artifact, process, or system was built and operates according to approved requirements, design, contracts, and constraints.
+
+REQUIRED OUTCOME
+
+A verification record linking requirement or constraint to method, artifact, configuration, test or inspection, result, reviewer, exception, and conclusion within a bounded scope.
+
+WHY THIS MATTERS
+
+Verification answers whether the work conforms to its specification; it does not by itself prove that the specification solves the human problem. Confusing verification with validation creates polished failure.
+
+APPLICABILITY
+
+Apply whenever conformance to requirements, design, contract, standard, configuration, or implementation claim matters.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no conformance claim is made or an approved exact baseline and lower-risk evidence are sufficient for the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use requirements, architecture, contracts, baselines, configuration, tests, inspection, quality, evidence, and acceptance authority. Define independent reviewer where consequence warrants.
+
+REQUIRED INPUTS
+
+Requirement, source, version, artifact, configuration, method, test, inspection, evidence, result, exception, reviewer, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define conformance and exceptions; verifiers assess evidence; humans decide material deviation, waiver, and acceptance. The verifier must not claim more than the method demonstrates.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may trace requirements, inspect authorized artifacts, draft checks, and summarize results. It must not fabricate execution, infer conformance from similarity, alter evidence, or sign verification without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Verifier, Tester, Quality Assurance Reviewer, Requirements Engineer, Architect, Analyst, Researcher, Critic, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define conformance; baseline sources and versions; select method; inspect, analyze, or test; record evidence and deviations; review independently; issue bounded conclusion; track correction; and reopen on change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show requirement, source, artifact, version, method, evidence, result, exception, reviewer, and limitation. Require human judgment for semantic interpretation, waiver, and conclusion.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Maintain traceability, immutable baselines, configuration identity, test reproducibility, independent evidence, and change impact. Keep verification records separate from unverified claims.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show requirement, conformance state, evidence freshness, deviation, owner, reviewer, and authorized verify, reject, waive, remediate, reopen, and accept controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Verification plan; traceability matrix; method and evidence record; results and deviations; reviewer conclusion; remediation, exception, decision, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify requirement, version, artifact, environment, method, execution or inspection, result, reviewer, time, and limitation. A test result proves only the tested requirement and conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify source authority, version, traceability, method validity, evidence integrity, result reproducibility, deviation handling, independence, and conclusion boundary.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Verification by assertion, stale requirement, untraceable test, conformance inferred from intent, waiver without authority, and verification presented as user validation.
+
+RECOVERY AND RECONSIDERATION
+
+Mark conclusion uncertain, preserve evidence, correct artifact or requirement trace, obtain review, and reverify. Reopen on requirement, design, implementation, configuration, environment, or evidence change.
+
+COMPLETION CRITERIA
+
+Requirement, artifact, method, evidence, result, deviations, reviewer, conclusion, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baselines, traceability, evidence, results, deviations, decisions, exceptions, and open gaps. Hand off to Validation, Acceptance, Quality, Release, Operations, Audit, and Governance.
+
+RELATED CODEX SECTIONS
+
+004 Evidence and Truth; 019 Requirements; 228-230 Quality; 231-255 Testing; 257 Validation; 237 Acceptance Testing; 402-404 Review.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, requirements and evidence context, and the integration roadmap. Exact conformance criteria, independence, methods, standards, deviations, and acceptance authority remain unresolved.

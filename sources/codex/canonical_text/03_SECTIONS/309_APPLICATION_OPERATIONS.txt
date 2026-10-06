@@ -1,0 +1,95 @@
+SECTION 309 — Application Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate applications and their runtime dependencies so user outcomes, data, security, support, performance, and recovery remain within declared boundaries.
+
+REQUIRED OUTCOME
+
+An application-operations model with service owner, versions, configuration, dependencies, health, jobs, data, access, release, support, incidents, and recovery.
+
+WHY THIS MATTERS
+
+Application behavior is more than process health. Feature, data, dependency, user, support, and operational failure can occur while the application reports as running.
+
+APPLICABILITY
+
+Apply when an application or service is deployed, configured, monitored, supported, changed, recovered, or retired.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no application, service, user, data, configuration, dependency, or operational behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use application architecture, runtime, release, configuration, data, identity, security, observability, SRE, support, and recovery baselines.
+
+REQUIRED INPUTS
+
+Application, version, config, users, data, dependencies, health, jobs, metrics, logs, traces, incidents, support, SLO, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Application owners approve release, config, access, data, support, incident, recovery, exception, and retirement. Humans decide user-impact and service-risk tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized application signals, logs, traces, and incidents; draft diagnosis and runbooks; and recommend bounded action. It must not alter, access restricted data, suppress alerts, or close incidents without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Application Operations Engineer, Application Engineer, SRE, Operations Engineer, Security Auditor, Incident Responder, Tester, Verifier, and Support Reviewer.
+
+REQUIRED ACTIVITIES
+
+Operate runtime and jobs; monitor health and outcomes; manage config and releases; support users; respond; manage data and dependencies; back up; recover; reduce toil; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show app, version, config, user journey, data, signal, action, authority, evidence, and limitation. Require human approval for production, data, security, recovery, and communication.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use health plus business indicators, structured logs, traces, feature control, graceful degradation, idempotent jobs, rollback, data recovery, and support diagnostics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show application state, version, dependencies, health, incidents, user impact, evidence freshness, owner, and authorized pause, rollback, scale, restrict, recover, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Application operations charter; service and dependency map; runbooks; release and config; monitoring and support; incident, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify app, version, environment, user outcome, data, signal, source, method, time, result, actor, and limitation. Process health proves neither application correctness nor user success.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify release, config, access, data, health, job, dependency, alert, log, trace, support, backup, restore, rollback, and retirement. Test user-impacting failure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Process-only monitoring, hidden job failure, config drift, log without context, support unprepared, recovery without data reconciliation, and application uptime treated as outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, preserve evidence, pause change, rollback or fail over, restore data, communicate, support users, and reassess. Reopen on app, dependency, data, config, user, or incident change.
+
+COMPLETION CRITERIA
+
+Application, users, data, versions, config, dependencies, signals, support, recovery, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve app baseline, runbooks, releases, configs, incidents, telemetry, backups, decisions, evidence, exceptions, and open gaps. Hand off to Platform, SRE, Security, Data, Support, and Release.
+
+RELATED CODEX SECTIONS
+
+033 Application Architecture; 258 Configuration; 290 Deployment; 301-303 SRE, Production, and Runtime; 313-317 Observability; 323-330 Availability and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, application, runtime, data, security, SRE, and operations context, and the integration roadmap. Exact applications, journeys, SLOs, telemetry, staffing, recovery, and acceptance authority remain unresolved.

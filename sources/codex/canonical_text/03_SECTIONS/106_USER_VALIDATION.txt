@@ -1,0 +1,221 @@
+SECTION 106 — User Validation
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed process for determining whether a proposed or implemented product, service, system, process, interaction, content, or operating change supports the intended users and affected people under declared real or representative conditions.
+
+User Validation examines outcomes, not merely opinions or task completion. It tests whether the right problem is being addressed, whether people can understand and use the result, whether the result is accessible and safe, whether it fits real contexts and constraints, and whether users can recover, correct, complain, or decline. Validation evidence is bounded by population, context, method, version, and time; it does not automatically establish universal satisfaction, adoption, compliance, or operational effectiveness.
+
+REQUIRED OUTCOME
+
+- A declared validation question, intended user and affected-party outcome, population, context, version, owner, authority, and decision boundary.
+- A participant and evidence plan that addresses representativeness, accessibility, safety, privacy, consent or authorization, bias, and limitations.
+- Reproducible tasks, scenarios, instruments, observation methods, and acceptance criteria appropriate to the decision.
+- Evidence showing what users and affected people could understand, accomplish, experience, challenge, correct, or recover from under stated conditions.
+- Analysis that separates observed behavior, participant report, interpretation, recommendation, and owner decision.
+- A decision record identifying validated outcomes, failed or unresolved outcomes, affected groups, required changes, residual risk, and the authority to accept, defer, narrow, reject, or reopen.
+
+WHY THIS MATTERS
+
+A system can meet its written requirements and still fail the people who must live with it. Users may be unable to discover a control, understand a status, complete a task, recover from an error, access content, challenge a decision, or trust what the system is claiming. People excluded from the study may carry the greatest burden.
+
+User validation creates disciplined evidence about real-world fit while preserving uncertainty. It prevents the organization from substituting stakeholder preference, internal completion, model confidence, survey volume, or a small enthusiastic sample for demonstrated user and affected-party outcomes.
+
+APPLICABILITY
+
+- A change may affect user goals, comprehension, workflow, accessibility, safety, privacy, security, dignity, rights, trust, burden, or recovery.
+- A product, service, system, process, content, interaction, AI behavior, policy, or operating model is proposed for a defined population or context.
+- Requirements or acceptance depend on user outcomes, task performance, comprehension, accessibility, satisfaction, confidence, correction, appeal, or harm reduction.
+- Different populations, environments, devices, languages, abilities, roles, or operating conditions may experience materially different results.
+- AI, automation, recommendation, ranking, generation, or decision support may change what users see, decide, or can control.
+
+NON-APPLICABILITY CONDITIONS
+
+- The change has no material effect on user or affected-party outcomes, access, comprehension, burden, privacy, safety, security, accessibility, control, or recovery.
+- An approved validation package covers the exact population, context, version, outcome, and change, and impact analysis shows no material effect.
+- The work is an internal technical activity with no user-facing or affected-party claim and no change to user data, expectations, rights, or access.
+- The activity is only a research or discovery input and makes no acceptance or effectiveness claim; it must still be labeled and its limitations preserved.
+
+A non-applicability decision must identify the controlling evidence, exact population and context, version, owner, evidence date, assumptions, and reopening trigger. A small sample, familiar workflow, or internal approval is not by itself sufficient reason to omit validation.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-020 provide objectives, stakeholders, users, domain, feasibility, risk, requirements, systems, verification, validation, transition, and recovery context.
+- Sections 021-104 provide applicable architecture, process, functional, operational, information, data, application, human-computer interaction, experience, accessibility, content, and design-system boundaries.
+- The target population, affected non-users, intended outcome, decision authority, version, test environment, and consequence limits are explicit.
+- Privacy, security, safety, accessibility, research ethics, legal, records, language, compensation, and safeguarding controls are known or marked unresolved.
+
+REQUIRED INPUTS
+
+- Authorized validation question, intended outcome, user jobs, affected parties, population, context, jurisdiction, environment, version, and lifecycle stage.
+- Requirements, acceptance criteria, prototypes or implementation, domain rules, process and functional models, architecture, risks, policies, and known constraints.
+- Participant segments, recruitment criteria, accessibility needs, language, devices, assistive technology, skills, support conditions, and exclusion risks.
+- Tasks, scenarios, stimuli, data, accounts, instrumentation, consent or authorization materials, moderator guidance, and safety or escalation procedures.
+- Analysis plan, success and failure signals, disconfirming evidence, sampling limits, privacy plan, retention and disposal plan, and decision threshold.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The authorized human owner retains authority over the outcome being validated, participant treatment, population definition, evidence sufficiency, risk acceptance, policy interpretation, design or release decision, and commitments made to users or affected people.
+
+- Confirm the validation question, intended outcome, population, context, version, non-goals, and decision boundary.
+- Approve recruitment, consent or authorization, accessibility accommodations, incentives, data use, recording, safeguarding, and escalation.
+- Decide whether the evidence supports change, continued testing, limited release, full acceptance, deferral, rejection, or retirement.
+- Resolve conflicts involving user welfare, rights, safety, privacy, security, accessibility, dignity, cost, schedule, feasibility, and organizational commitments.
+- Ensure representative users, affected non-users, operators, domain experts, support, security, privacy, safety, accessibility, legal, and governance specialists participate as consequence requires.
+- Retain the ability to pause, narrow, withdraw, compensate, correct, quarantine, reject, or reopen validation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may help identify user segments, draft tasks, generate accessible variants, summarize authorized sessions, code observations, compare patterns, identify missing outcomes, and propose follow-up research within the approved boundary.
+
+AI must preserve participant identity protections, consent or authorization, population, context, version, method, source, uncertainty, dissent, and limitations; distinguish direct evidence from interpretation; and escalate when participant welfare, rights, privacy, security, safety, accessibility, or evidence integrity is unresolved.
+
+AI must not fabricate users, consent, reactions, quotes, success rates, accessibility outcomes, representative coverage, or acceptance. It must not manipulate participants, infer sensitive attributes beyond authorization, expose session data, decide that users are satisfied, or replace accountable human interpretation and acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Researcher: designs and conducts evidence gathering with users and affected people.
+- User Experience Reviewer: examines usability, accessibility, comprehension, burden, dignity, trust, and recovery.
+- Analyst: evaluates outcomes, patterns, segments, tradeoffs, uncertainty, and disconfirming evidence.
+- Observer: records behavior, context, workarounds, hesitation, errors, and environmental conditions.
+- Architect: traces findings into process, function, information, data, application, and system implications.
+- Governance Reviewer: checks authority, consent, participant treatment, claims, privacy, records, and acceptance.
+- Security Auditor: examines disclosure, identity, access, abuse, and secure recovery.
+- Critic: challenges sample bias, leading instruments, false consensus, omitted populations, and weak causation.
+- Planner: sequences recruitment, sessions, analysis, remediation, re-test, and decision gates.
+- Coordinator: synchronizes participants, owners, specialists, logistics, and handoffs.
+- Implementer: makes authorized changes arising from validated findings without changing the question silently.
+- Tester: converts validated outcomes into reproducible acceptance, regression, accessibility, and recovery tests.
+- Verifier: independently checks methods, records, findings, traceability, and claims.
+- Documentation Writer: maintains protocols, instruments, findings, decisions, limitations, and participant-facing records.
+- Memory Curator: preserves versions, evidence, consent boundaries, dissent, decisions, and continuity.
+- Optimizer: improves outcome measures without gaming, excluding, or burdening participants.
+- Red Team: probes manipulation, exclusion, privacy leakage, unsafe behavior, and denial or recovery failure.
+- Decision Arbiter Advisory: compares alternatives under authorized user-outcome criteria without deciding for the owner.
+
+Role selection remains proportional to consequence. Existing role contracts remain controlling and are not redefined here.
+
+REQUIRED ACTIVITIES
+
+1. Define the outcome, validation question, decision owner, population, context, version, scope, non-goals, and consequence boundary.
+2. Identify users, affected non-users, operators, support staff, maintainers, vulnerable groups, and stakeholders who may experience different outcomes.
+3. Translate requirements and intended outcomes into tasks, scenarios, observable behaviors, reported experiences, and acceptance criteria.
+4. Select a method proportionate to the question, such as moderated study, field observation, accessibility evaluation, diary, pilot, survey, benchmark, support analysis, or operational evidence review.
+5. Define recruitment, sampling, inclusion, exclusion, compensation, consent or authorization, safeguarding, privacy, recording, and withdrawal procedures.
+6. Prepare representative tasks, content, accounts, data, devices, assistive technology, language, environment, and support conditions.
+7. Conduct sessions or measurement without leading participants or hiding relevant failures, alternatives, burden, or uncertainty.
+8. Record direct observations, task results, participant reports, context, workarounds, errors, emotional or safety signals, dissent, and non-completion.
+9. Analyze results by population, context, device, language, ability, role, environment, and other material factors rather than averaging away differences.
+10. Evaluate comprehension, completion, outcome quality, accessibility, burden, trust, privacy, safety, security, control, correction, appeal, and recovery.
+11. Compare results with declared criteria and identify confounders, missing evidence, alternative explanations, and disconfirming cases.
+12. Obtain specialist review for accessibility, privacy, security, safety, legal, research ethics, domain, and affected-party concerns as applicable.
+13. Translate findings into requirements, design, process, architecture, implementation, support, training, policy, or research changes with traceability.
+14. Re-test changed behavior and record the owner decision, residual risk, validity limit, handoff, and next safe action.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show whether each result is direct observation, participant report, instrument output, automated measure, AI interpretation, or owner decision.
+- Let the owner and qualified reviewers inspect and correct population, task, context, coding, interpretation, acceptance criteria, and exclusions without losing history or dissent.
+- Require human review before recording quotes, publishing findings, accepting risk, changing rights or access, or making commitments to users.
+- Make participant burden, accessibility conditions, non-completion, harm signals, missing groups, uncertainty, and contradictory evidence visible.
+- Preserve participant stop, withdrawal, complaint, correction, explanation, appeal, support, and recovery paths during AI-assisted sessions.
+- Do not use an AI moderator, synthesizer, classifier, or recommender to bypass consent, safeguarding, privacy, authority, audit, or human review.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent validation question, outcome, population, context, version, method, session or measurement, evidence, finding, decision, and lifecycle as attributable records.
+- Separate participant identity and protected data from analysis identifiers, findings, published summaries, and decision records.
+- Preserve traceability from user need and requirement through task, observation, finding, remediation, re-test, acceptance, and operational monitoring.
+- Make population, context, language, ability, device, environment, support, and version dimensions queryable so material differences are not erased.
+- Support consent, withdrawal, redaction, access restriction, retention, deletion, correction, appeal, and secure export of validation records.
+- Ensure instruments, prototypes, builds, AI providers, prompts, content, data, and configurations are versioned and reproducible.
+- Instrument product behavior sufficiently to compare validation findings with later operational evidence without treating the comparison as automatic proof.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show validation question, intended outcome, population, context, version, owner, authority, method, status, evidence freshness, and validity period.
+- Show who participated, which groups were missing or underrepresented, what tasks were completed or failed, and where conditions differed.
+- Let owners inspect raw or protected evidence according to permission, coded findings, dissent, limitations, risks, decisions, and open questions.
+- Provide authorized pause, stop, withdraw, redact, restrict, correct, reopen, approve, reject, and handoff controls.
+- Explain what was observed, inferred, measured, reported, unresolved, and accepted, including the evidence that would change the conclusion.
+- Provide participants and users understandable status, complaint, correction, privacy, accessibility, appeal, and recovery controls appropriate to the activity.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- User Validation charter with question, intended outcome, owner, population, context, version, scope, authority, and decision boundary.
+- Participant, recruitment, consent or authorization, accessibility, safeguarding, privacy, recording, compensation, and disposal plan.
+- Protocol, tasks, scenarios, instruments, stimuli, environment, data, account, moderator, observer, and escalation records.
+- Session, observation, measurement, participant feedback, non-completion, failure, harm, dissent, and limitation records.
+- Analysis by material population, context, language, ability, device, role, environment, and version dimensions.
+- Traceability from user needs and requirements to tasks, findings, changes, re-tests, acceptance, and operational monitoring.
+- Remediation, decision, residual-risk, unresolved-question, and reopening records.
+- Participant-facing summary or notification where required, plus secure continuity, retention, and deletion package.
+
+EVIDENCE REQUIREMENTS
+
+- Each finding identifies question, population, context, version, method, task, date, source, observer or instrument, result, uncertainty, and limitation.
+- A quote, survey response, task success, completion time, benchmark, support ticket, rating, or session proves only its bounded claim.
+- Representativeness claims identify recruitment, sample, coverage, exclusions, non-response, accessibility conditions, and limits.
+- Accessibility evidence identifies users or evaluators, assistive technology, environment, task, standard or criterion, result, and limitation.
+- AI-assisted analysis identifies model, provider, version, prompt or method, input boundary, reviewer, transformation, result, and limitation.
+- Negative, contradictory, partial, missing, stale, withdrawn, inaccessible, or harmed-participant evidence remains visible and constrains acceptance.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Reproduce the validation from the exact protocol, version, tasks, instruments, population criteria, environment, and evidence package.
+- Verify the stated outcome is measured directly or through a justified proxy and that proxy limits are explicit.
+- Test normal, boundary, denied, error, degraded, accessibility, multilingual, privacy, safety, correction, appeal, and recovery journeys as applicable.
+- Confirm that participants can understand the task, decline or stop, request help, report harm, correct a record, and recover from failure.
+- Compare outcomes across relevant populations and contexts; investigate material disparities rather than hiding them in aggregate results.
+- Introduce misleading content, missing information, stale state, unauthorized access, model failure, provider failure, and inaccessible controls and verify safe handling.
+- Re-test every material remediation and verify the new evidence is tied to the changed version and same decision boundary.
+- Independently review whether the owner decision exceeds what the evidence supports.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating satisfaction, preference, a small positive sample, task completion, engagement, or internal approval as universal validation.
+- Recruiting only convenient or enthusiastic participants and describing the result as representative.
+- Leading participants, suppressing dissent, discarding non-completion, or averaging away material disparities.
+- Testing a prototype or staged flow while claiming the production experience, support burden, accessibility, privacy, or recovery is validated.
+- Fabricating quotes, users, consent, metrics, accessibility outcomes, or causal conclusions with AI or any other tool.
+- Exposing participant data, recording without authority, ignoring withdrawal, or making complaint and correction impossible.
+- Shipping a validated interaction without tracing required changes to architecture, implementation, operations, support, training, and monitoring.
+
+RECOVERY AND RECONSIDERATION
+
+- On participant harm, privacy or security exposure, unsafe behavior, accessibility exclusion, invalid method, sample failure, evidence loss, or scope drift, stop the activity and protect affected people.
+- Identify the blocker, affected groups, containment owner, authority, communication, evidence preservation, and safe work that may continue.
+- Withdraw or correct misleading findings, notify affected participants when required, restrict records, revoke access, and obtain specialist review.
+- Reframe recruitment, tasks, instruments, version, environment, or analysis before repeating the activity.
+- Reopen validation when the population, context, requirement, design, policy, model, data, environment, risk, or lifecycle stage changes materially.
+
+COMPLETION CRITERIA
+
+- Question, outcome, population, context, version, method, owner, authority, safeguards, criteria, and evidence limits are explicit.
+- Representative tasks and material user, affected-party, accessibility, safety, privacy, security, control, and recovery conditions are addressed or justified.
+- Findings include positive, negative, contradictory, missing, and unresolved evidence, with material differences preserved.
+- Remediation, re-test, owner decision, residual risk, participant obligations, retention, deletion, and handoff are complete or explicitly blocked.
+- The section is marked CONTENT-COMPLETE while source reconciliation, hostile review, and owner acceptance remain separate activities.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve validation identity, question, outcome, population, context, version, protocol, participant protections, evidence, findings, dissent, decisions, limitations, and open gaps.
+- Hand off evidence-supported changes to Requirements, User Research, Prototyping, UX, Interaction, Accessibility, Content, Process, Functional, Information, Data, Application, Engineering, Testing, Operations, Security, Privacy, and Governance work.
+- Record which findings are local, which require architectural change, which require policy or training change, and which require future revalidation.
+- State the next safe action, blocked action, authority, evidence request, participant or records obligation, validity period, and exact continuation point.
+- Do not claim universal user acceptance, adoption, safety, compliance, or operational effectiveness from this section alone.
+
+RELATED CODEX SECTIONS
+
+- 014 Stakeholder Management; 015 User Research; 016 Domain Analysis; 017 Feasibility Analysis; 018 Risk Management; 019 Requirements Engineering; 020 Systems Engineering.
+- 021-106 Architecture, User Experience, Design, Prototyping, and User Validation sections, especially Process, Functional, Information, Data, Application, HCI, Interaction, UX, Accessibility, Content, and Design Systems.
+- 231-257 Testing through Validation; 247 Accessibility Testing; 249 Usability Testing; 251 Compliance Testing; 252 Safety Testing; 253 Model Testing.
+- 331 Operational Readiness; 334 Customer Support; 369-372 Experimentation through Feedback Management; 402-406 Post-Implementation Review through System Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- This draft uses the Canonical Section Contract, shared governance files, Sections 001-105, Owner Cockpit Requirements, Status and Evidence Lexicon, and the Remaining-Section Integration Roadmap.
+- No universal participant recruitment standard, sample-size threshold, research ethics regime, accessibility test method, outcome metric, or acceptance threshold applies to every future context.
+- Actual populations, affected non-users, consent and safeguarding requirements, language and accessibility needs, jurisdictional duties, evidence thresholds, and owner decisions remain unresolved until supplied and verified.

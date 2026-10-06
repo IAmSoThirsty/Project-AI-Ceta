@@ -1,0 +1,95 @@
+SECTION 278 — Edge Computing Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design and operate computation, storage, networking, identity, data, and control close to users, devices, or physical environments under limited connectivity and distributed authority.
+
+REQUIRED OUTCOME
+
+An edge model with site and node inventory, autonomy, synchronization, security, update, telemetry, resource limits, safety, offline behavior, recovery, and fleet ownership.
+
+WHY THIS MATTERS
+
+Edge nodes operate in variable physical and network conditions with partial visibility and local consequences. A central control plane cannot be assumed available when an edge action or recovery decision is needed.
+
+APPLICABILITY
+
+Apply when computation or data processing occurs outside a central facility or cloud, including devices, sites, gateways, field systems, and distributed nodes.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no edge node, site, offline behavior, synchronization, physical environment, or distributed control changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use infrastructure, embedded, cloud, network, identity, data, security, safety, fleet, operations, and recovery baselines.
+
+REQUIRED INPUTS
+
+Nodes, sites, hardware, software, data, identity, connectivity, autonomy, synchronization, updates, telemetry, resource, safety, recovery, and disposal.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve autonomy, site access, update, data, safety, isolation, recovery, and retirement. Field operators have clear local stop and manual control; humans accept fleet and site risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized fleet metadata, telemetry, drift, and incidents; draft rollout and recovery plans; and propose local optimization. It must not issue physical or consequential edge commands, access private site data, or update a fleet without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Edge Engineer, Infrastructure Engineer, Embedded Engineer, Network Engineer, Security Auditor, Fleet Operator, Tester, Verifier, Safety Reviewer, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Inventory sites and nodes; define autonomy and trust; secure provisioning; design synchronization and offline; manage resources and updates; observe; test failure and safety; recover; replace; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show site, node, version, connectivity, data, identity, command, authority, evidence, and limitation. Require human approval for physical, safety, fleet-wide, data, update, and destruction action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support local safe state, bounded autonomy, eventual consistency, conflict resolution, offline credentials, fleet identity, staged update, telemetry buffering, tamper, and independent recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show fleet and node posture, site, connectivity, version, data, safety, evidence freshness, owner, and authorized isolate, update, pause, recover, replace, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Edge charter; site and node inventory; autonomy and synchronization design; update and telemetry; security and safety; fleet recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify site, node, version, hardware, connectivity, data, identity, command, method, time, result, operator, and limitation. Central health proves neither local state nor offline safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify offline, network change, synchronization conflict, update, rollback, identity, local safety, resource, telemetry, recovery, physical access, and fleet isolation. Test control-plane loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Central dependency assumed, fleet-wide update, stale commands, split brain, shared device identity, telemetry treated as complete, and remote recovery without local safety.
+
+RECOVERY AND RECONSIDERATION
+
+Enter local safe mode, isolate, preserve evidence, restore known-good image, reconcile data, provide field support, and reassess site and fleet impact. Reopen on node, site, network, threat, hardware, or policy change.
+
+COMPLETION CRITERIA
+
+Sites, nodes, autonomy, connectivity, data, identity, updates, safety, evidence, recovery, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve fleet identity, versions, commands, telemetry, incidents, updates, recovery, decisions, evidence, exceptions, and open gaps. Hand off to Cloud, Embedded, Network, Security, Field Operations, Safety, and Disposal.
+
+RELATED CODEX SECTIONS
+
+058-060 Hardware, Embedded, and Firmware; 198-199 Embedded and Hardware Security; 277 Cloud; 284 Network; 298 Field Operations; 301-330 Operations; 379 Firmware Updates.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, edge, infrastructure, security, safety, and operations context, and the integration roadmap. Exact sites, nodes, autonomy, connectivity, safety, data, fleet, recovery, and acceptance authority remain unresolved.

@@ -1,0 +1,96 @@
+SECTION 102 — Internationalization
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define product and system foundations that allow locale, language, culture, legal, accessibility, and regional variation without unsafe rewrites or hidden assumptions.
+
+REQUIRED OUTCOME
+
+ - A scoped locale model, language, data, formatting, content, architecture, workflow, testing, ownership, and lifecycle baseline.
+ - Explicit variation points, defaults, fallback, evidence, and acceptance criteria.
+
+WHY THIS MATTERS
+
+Internationalization failures surface late as broken layouts, incorrect calculations, exclusion, or legal error. Early variation modeling reduces systemic rework and hidden regional assumptions.
+
+APPLICABILITY
+
+Applies to products, platforms, data, content, APIs, services, operations, and systems expected to support more than one locale or cultural context.
+
+NON-APPLICABILITY CONDITIONS
+
+No locale, language, format, culture, legal, accessibility, or regional behavior effect; or an unchanged approved foundation with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+Target locales, language and script requirements, data and format rules, content, architecture, legal, privacy, accessibility, testing, deployment, and authority.
+
+REQUIRED INPUTS
+
+Humans approve supported locales, defaults, regional obligations, data boundaries, accessibility, legal fit, tradeoffs, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+AI may identify hard-coded assumptions and generate locale tests. It must preserve evidence and uncertainty and must not select regional policy or infer cultural meaning without authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect code, content, schemas, and tests for locale assumptions; propose variation points; generate representative fixtures; and report unsupported scripts, formats, parsing paths, or fallback behavior. It must preserve locale and regional scope, data meaning, privacy boundaries, accessibility, precision, timezone, currency, and uncertainty, and must separate detection from implementation and acceptance. It must not silently change global defaults, normalize or reinterpret user data, select legal or regional policy, treat one locale as proof of general support, or merge architecture changes without authorized review and recorded test evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Localization Specialist, Technical Writer, Content Designer, UX Reviewer, Tester, Verifier, Accessibility specialist, Security and Privacy Auditors, Governance Reviewer, Implementer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory locale assumptions; define variation points; externalize strings and formats; support scripts, direction, plural, units, sorting, data, time, identity, accessibility; test locales; document and hand off.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show locale, source, default, fallback, format, actor, data boundary, uncertainty, and user control. AI findings remain recommendations pending qualified review.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use locale-aware schemas, formatting, collation, parsing, resource loading, content keys, test fixtures, timezone, currency, accessibility, and deployment without global mutable assumptions.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show supported locales, coverage, defaults, fallback, format rules, defects, evidence, dependencies, and controls to approve, restrict, switch, or recover.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Internationalization requirements, locale model, resource and format contracts, test matrix, hard-coded assumption inventory, evidence, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify locale, platform, data, format, version, test method, result, uncertainty, and limitation. Passing one locale proves bounded support only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify scripts, direction, plural, dates, numbers, units, sorting, timezones, currency, parsing, accessibility, fallback, data integrity, and locale switching.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Hard-coded strings; locale as decoration; incorrect numeric or date parsing; global defaults; untestable formatting; and falling back to a language that hides critical meaning.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict unsupported locale, preserve data, use approved fallback, correct formatting, notify owners, and retest affected locales before expansion.
+
+COMPLETION CRITERIA
+
+Locale model, variation, data, formats, accessibility, tests, evidence, fallback, recovery, risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve locale rules, resources, fixtures, decisions, defects, evidence, and next action. Hand off to Localization, Content, Data, Application, UI, Accessibility, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+030 Information Architecture; 031 Data Architecture; 042 API Architecture; 097 Content Design; 101 Localization; 103 Accessibility Design; 248 Compatibility Testing; 250 Localization Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance files. Actual locale matrix, supported scripts, regional data rules, legal obligations, and acceptance thresholds remain unresolved.

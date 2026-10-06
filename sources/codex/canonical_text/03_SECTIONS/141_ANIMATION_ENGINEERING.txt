@@ -1,0 +1,98 @@
+SECTION 141 - Animation Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of time-varying visual, spatial, or state transitions with explicit timing, interpolation, interaction, accessibility, performance, provenance, and interruption behavior.
+
+REQUIRED OUTCOME
+
+A baseline with animation state, timing, assets, controls, transitions, cancellation, reduced-motion behavior, device support, evidence, and lifecycle.
+
+WHY THIS MATTERS
+
+Animation communicates state and can cause motion harm, confusion, performance loss, or inaccessible interaction when timing and interruption are not designed.
+
+APPLICABILITY
+
+Applies to UI, games, film, visualization, avatars, motion graphics, simulations, and procedural or generated animation.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to static output with no temporal behavior, transition, sequence, or motion claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires motion purpose, state model, timing, input, assets, platform, reduced-motion, accessibility, performance, safety, and content-rights requirements.
+
+REQUIRED INPUTS
+
+Provide states, triggers, duration, easing, keyframes, procedural rules, interruption, reduced motion, input, device, and acceptance conditions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve motion meaning, accessibility, safety, content, and release. Humans decide when motion is optional, prohibited, or consequential.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose sequences, identify timing defects, and generate tests. It must not ignore reduced-motion needs, copy protected style, or ship generated animation without review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Motion Designer, User Experience Reviewer, Accessibility specialist, Implementer, Tester, Verifier, Critic, Governance Reviewer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define motion purpose, state, trigger, timing, interruption, and audience.
+2. Implement asset and procedural paths with reduced-motion and low-resource behavior.
+3. Verify semantics, timing, accessibility, performance, input, cancellation, and recovery.
+4. Release, monitor, and retire animation assets and rules.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show state, motion purpose, source, duration, user setting, evidence, and consequence. Human review is required for accessibility and safety; users must control or bypass nonessential motion.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Model animation state separately from business state; make triggers, cancellation, interruption, time scaling, reduced motion, frame loss, and resource fallback explicit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show active animation, state, timing, reduced-motion setting, performance, errors, and controls to pause, skip, slow, disable, or restore.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Animation state and timing model, asset and provenance record, accessibility and reduced-motion plan, test fixtures, performance evidence, release record, and fallback guidance.
+
+EVIDENCE REQUIREMENTS
+
+Identify animation, asset, build, state, device, setting, method, result, and limits. Separate timing, semantic, accessibility, performance, and user-outcome evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify state transitions, interruption, reduced motion, keyboard or alternative input, frame loss, low power, long duration, localization, and safe fallback.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Motion without purpose; no skip; flashing or vestibular risk; animation blocking state; timing tied to frame rate; and treating visual smoothness as usability.
+
+RECOVERY AND RECONSIDERATION
+
+Disable or reduce motion, preserve state, use a static representation, communicate status, compensate incomplete transitions, and reopen accessibility and safety review.
+
+COMPLETION CRITERIA
+
+Purpose, state, timing, control, accessibility, evidence, fallback, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve animation and asset revisions, settings, tests, incidents, decisions, evidence, and next safe action. Hand off to Motion, UI, Game, Graphics, Accessibility, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+086 Motion Design; 082 UX Design; 083 UI Design; 138 Game Engineering; 139 Graphics Engineering; 247 Accessibility Testing; 249 Usability Testing; 239 Performance Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 075-106 and 107-140, Owner Cockpit Requirements, and Status and Evidence Lexicon. Motion-safety criteria, reduced-motion populations, platform behavior, content rights, and performance budgets remain unresolved.

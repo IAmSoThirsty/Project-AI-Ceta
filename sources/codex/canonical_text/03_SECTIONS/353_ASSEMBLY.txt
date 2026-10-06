@@ -1,0 +1,95 @@
+SECTION 353 — Assembly
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Combine approved components, software, firmware, materials, and instructions into a traceable, safe, tested, and accepted assembly.
+
+REQUIRED OUTCOME
+
+An assembly model with component identity, revision, sequence, tools, operators, interfaces, configuration, inspection, quality, safety, test, rework, and release.
+
+WHY THIS MATTERS
+
+Assembly errors can be invisible until field use. A component can be correct in isolation while orientation, connection, version, torque, firmware, or configuration makes the whole unsafe.
+
+APPLICABILITY
+
+Apply when parts, modules, software, firmware, or services are combined into a product, device, system, kit, or deployable unit.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no assembly, integration, component traceability, quality, safety, or output behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use manufacturing, hardware, embedded, supply, quality, safety, testing, provisioning, and logistics baselines.
+
+REQUIRED INPUTS
+
+Assembly definition, components, revisions, tools, sequence, operator, configuration, software, firmware, inspection, test, safety, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Assembly and quality owners approve parts, sequence, substitution, inspection, rework, safety, and release. Workers can stop unsafe or suspect assembly.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized assembly records, identify mismatch, draft checklists, and analyze quality. It must not control equipment, approve lot, infer worker fault, or change sequence without qualified human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Assembly Engineer, Manufacturing Engineer, Hardware Engineer, Embedded Engineer, Quality Engineer, Safety Reviewer, Tester, Verifier, and Observer.
+
+REQUIRED ACTIVITIES
+
+Verify parts and revision; prepare tools; assemble; configure; inspect; test; trace; quarantine; rework; release; package; and capture lessons.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show unit, part, revision, sequence, tool, operator role, configuration, result, safety, and limitation. Require human approval for substitution, rework, release, and safety.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use work instructions, serialization, component traceability, poka-yoke or equivalent controls, configuration binding, calibration, inspection, test, and rework segregation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show unit, parts, revisions, progress, quality, safety, evidence freshness, owner, and authorized hold, inspect, rework, quarantine, release, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Assembly charter; unit and component record; work instruction; inspection and test; rework and release; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify unit, part, revision, sequence, tool, configuration, method, time, result, inspector, and limitation. Assembly completion proves neither correct function nor safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify component, orientation, connection, software, firmware, configuration, inspection, quality, safety, function, rework, traceability, and release. Test variation and misassembly.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Wrong revision, untraceable unit, skipped inspection, unsafe rework, tool calibration ignored, assembly count as quality, and component pass treated as system pass.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine unit and related lot, preserve evidence, inspect or rework, notify owners, retest, and reassess downstream units. Reopen on component, instruction, tool, design, or quality change.
+
+COMPLETION CRITERIA
+
+Unit, parts, revisions, sequence, tools, quality, safety, tests, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve assembly records, units, parts, tests, rework, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Manufacturing, Certification, Provisioning, Logistics, Quality, and Operations.
+
+RELATED CODEX SECTIONS
+
+058-060 Hardware, Embedded, and Firmware; 351-352 Manufacturing and Planning; 354 Certification; 355 Provisioning; 232 Hardware Testing; 252 Safety Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, hardware, manufacturing, quality, safety, testing, and logistics context, and the integration roadmap. Exact units, components, tools, standards, workers, safety, and acceptance authority remain unresolved.

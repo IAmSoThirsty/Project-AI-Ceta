@@ -1,0 +1,95 @@
+SECTION 240 — Load Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Validate system behavior under expected and planned concurrent workload, including throughput, latency, resource use, queues, dependencies, and user-visible outcome.
+
+REQUIRED OUTCOME
+
+A load-test plan with workload model, ramp and duration, environment, data, service objectives, instrumentation, safety controls, results, bottlenecks, and capacity decision.
+
+WHY THIS MATTERS
+
+Expected load is not a single number. Arrival pattern, concurrency, data mix, cache state, dependency behavior, and duration determine whether a service remains useful or degrades.
+
+APPLICABILITY
+
+Apply when concurrent users, requests, jobs, devices, events, or transactions can affect capacity, latency, cost, or reliability.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no concurrent workload or capacity claim changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use workload, performance, architecture, capacity, cost, reliability, rate-limit, provider, data, and operations baselines. Establish authorization, isolation, and stop conditions.
+
+REQUIRED INPUTS
+
+Arrival and concurrency model, duration, data mix, users, dependencies, environment, limits, service objectives, metrics, baseline, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve workload, environment, cost, production-like testing, stop conditions, and capacity decision. Operators protect shared services and decide emergency stop.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft workload models, scripts, analysis, and bottleneck hypotheses. It must not launch unapproved load, use real sensitive users, overload dependencies, or claim capacity from a synthetic mismatch.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Load Test Engineer, Performance Engineer, Tester, Architect, Analyst, Operations Engineer, Observer, Verifier, Quality Engineer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define expected load and success; prepare isolated environment and data; validate generator; ramp and sustain; monitor service and dependencies; capture resource and user outcome; stop safely; analyze; tune; rerun; and record capacity and limitations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show workload, generator, target, dependency, environment, rate, duration, metric, result, cost, and stop state. Require human approval before execution and tuning.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide rate limiting, backpressure, queue visibility, idempotency, autoscaling, resource isolation, dependency protection, synthetic identity, and cleanup.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show active load, rate, concurrency, duration, target, dependency health, metrics, cost, safety state, and authorized pause, stop, scale, rollback, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Load model; generator and data record; environment and authorization; telemetry; results; bottleneck and capacity analysis; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify workload, rate, concurrency, duration, version, environment, data, dependency, metric, method, result, and limitation. One load profile proves only that profile.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify model realism, generator accuracy, safety, service objectives, queues, resource, dependency impact, autoscaling, degradation, recovery, cost, and repeatability.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Load against shared production without authority, generator bottleneck, unrealistic traffic, ignored dependency impact, throughput-only success, and load test that becomes an outage.
+
+RECOVERY AND RECONSIDERATION
+
+Stop load, protect dependencies, restore resources, preserve telemetry, and reassess capacity. Reopen on workload, architecture, provider, configuration, or objective change.
+
+COMPLETION CRITERIA
+
+Workload, authorization, environment, results, service objectives, safety, bottlenecks, capacity, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve workload, generator, environment, telemetry, results, tuning, decisions, evidence, exceptions, and open gaps. Hand off to Performance, Stress, Scalability, Reliability, Release, and Operations.
+
+RELATED CODEX SECTIONS
+
+239 Performance Testing; 241 Stress Testing; 242 Scalability Testing; 301-330 Capacity, Availability, Performance, Reliability, and Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, performance and operations context, and the integration roadmap. Exact load profile, service levels, environment, dependency limits, cost, and acceptance authority remain unresolved.

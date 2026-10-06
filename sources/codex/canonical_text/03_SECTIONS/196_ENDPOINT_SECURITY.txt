@@ -1,0 +1,98 @@
+SECTION 196 — Endpoint Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Protect user, operator, server, mobile, virtual, and specialized endpoints through identity, configuration, software, data, telemetry, response, and lifecycle controls.
+
+REQUIRED OUTCOME
+
+Endpoint inventory, ownership, posture, access, software, patching, encryption, isolation, monitoring, response, recovery, and disposal are explicit and verifiable.
+
+WHY THIS MATTERS
+
+Endpoints are where people and physical systems meet untrusted content and credentials. Lost, compromised, unmanaged, or shared devices can bypass architecture and expose sensitive work.
+
+APPLICABILITY
+
+Applies to workstations, servers, mobile devices, virtual desktops, kiosks, field devices, privileged consoles, and endpoint management systems.
+
+NON-APPLICABILITY CONDITIONS
+
+Only an approved exact endpoint population, operating system, management boundary, configuration, user group, and lifecycle change can justify non-applicability.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 032-040, 045-046, 193-195, 197-206, 258-286, 301-318, and 398-400 provide application, architecture, security, network, endpoint, identity, engineering, operations, and disposal context.
+
+REQUIRED INPUTS
+
+Endpoint inventory, owner, user, location, operating system, software, configuration, identity, data, management, patch, vulnerability, telemetry, incident, backup, and disposal records.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Endpoint owners authorize enrollment, access, monitoring, isolation, wipe, recovery, exceptions, and retirement while respecting privacy, labor, safety, and legal authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may assess posture and anomalies and propose containment. It cannot inspect beyond authorization, wipe or isolate without delegated authority, infer user intent, expose personal data, or close findings from a score.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Endpoint Engineer, Security Auditor, Identity Engineer, Systems Administrator, Privacy Reviewer, Analyst, Observer, Implementer, Tester, Verifier, Red Team, Governance Reviewer, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+1. Inventory and classify endpoints, users, data, management, and trust.
+2. Define enrollment, hardening, patch, software, identity, encryption, isolation, monitoring, backup, and disposal controls.
+3. Test lost device, malware, privilege, offline, stale policy, remote wipe, restore, and evidence paths.
+4. Review posture, exceptions, user burden, and lifecycle evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show endpoint state, owner, user, posture, evidence freshness, privacy boundary, acting authority, and available quarantine, revoke, restore, or retire actions. Keep manual support and recovery available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use managed enrollment, least privilege, secure boot where applicable, application control, encrypted storage, network segmentation, tamper-evident telemetry, offline limits, and independent recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show population, posture, software, patch, identity, anomalies, exposure, evidence, exceptions, and authorized isolate, wipe, restore, replace, or retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Endpoint catalog, baseline, management and identity matrix, software inventory, patch and vulnerability records, privacy assessment, tests, response and recovery runbooks, exceptions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify endpoint population, version, user context, configuration, method, time, coverage, result, owner, and limitations. Enrollment or compliance status proves only the measured condition.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise malware, lost device, stale policy, local privilege, removable media, offline operation, management loss, remote action, restore, replacement, and evidence preservation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unmanaged devices, shared accounts, excessive monitoring, permanent admin, unpatched software, unenforced encryption, remote wipe without authority, and treating management enrollment as security.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine or revoke affected endpoints, preserve evidence, support affected users, restore or replace from approved state, validate data and identity impact, and reopen when population, platform, policy, or threat changes.
+
+COMPLETION CRITERIA
+
+Population, owners, controls, privacy, evidence, tests, recovery, exceptions, and disposal are explicit; status remains CONTENT-COMPLETE pending qualified review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve endpoint identity, user, posture, configuration, decisions, evidence, incidents, dissent, and next action. Hand off to Mobile, Embedded, Identity, Application, Network, Security Operations, Incident, Support, Recovery, and Disposal.
+
+RELATED CODEX SECTIONS
+
+046 Identity Architecture; 193-195 and 197-206 security sections; 123 Mobile Engineering; 198 Embedded Security; 231-254 testing; 301-330 operations and recovery; 398-400 disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Endpoint types, monitoring authority, privacy boundaries, supported operating systems, patch windows, evidence retention, remote action rules, and disposal standards remain unresolved until scope is supplied.

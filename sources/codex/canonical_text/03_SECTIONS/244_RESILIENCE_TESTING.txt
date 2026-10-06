@@ -1,0 +1,95 @@
+SECTION 244 — Resilience Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Validate the ability of a system, organization, or service to absorb disruption, adapt, preserve protected outcomes, recover, and learn without unsafe or unauthorized behavior.
+
+REQUIRED OUTCOME
+
+A resilience-test model with disruption scenarios, protected outcomes, dependencies, degradation, continuity, recovery, communications, evidence, owners, and residual-risk decision.
+
+WHY THIS MATTERS
+
+Resilience is more than availability. A service may stay online while losing integrity, privacy, safety, user agency, or recoverability. Recovery plans without exercised authority and evidence are assumptions.
+
+APPLICABILITY
+
+Apply when disruption, dependency loss, resource failure, human absence, attack, environmental change, or organizational shock can affect essential outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no protected outcome, dependency, continuity, recovery, or disruption claim is material and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use operational, continuity, disaster recovery, reliability, safety, security, capacity, backup, restore, communication, staffing, and ownership baselines.
+
+REQUIRED INPUTS
+
+Protected outcomes, disruption scenarios, dependencies, modes, service levels, recovery objectives, staffing, facilities, data, communications, runbooks, evidence, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define essential outcomes and acceptable degradation; commanders control exercise and recovery; humans approve service reduction, failover, communication, risk, and return to service.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may model dependencies, draft scenarios, analyze recovery evidence, and identify gaps. It must not declare resilience, trigger failover, change service mode, or suppress user and operator impact without delegated human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Resilience Engineer, Architect, Continuity Planner, Operations Engineer, Tester, Observer, Analyst, Verifier, Safety Reviewer, Security Auditor, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define outcomes and modes; map dependencies and common failure; select controlled disruptions; establish safety and stop; execute; observe technical and human response; recover; communicate; assess residual impact; remediate; and repeat.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show disruption, outcome, dependency, authority, mode, evidence, user impact, recovery, and stop state. Require human control for exercise, failover, service reduction, communication, and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide redundancy, isolation, graceful degradation, data integrity, fallback, manual operation, checkpoint, backup, restore, failover, communication, and control-plane independence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show current mode, disruption, protected outcome, dependency, recovery objective, operator, evidence freshness, and authorized pause, degrade, fail over, restore, communicate, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Resilience charter; scenario and outcome map; dependency and recovery model; exercise and safety plan; results; communication and lessons record; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify outcome, scenario, version, environment, dependency, authority, method, time, result, impact, recovery, and limitation. A failover drill proves only the exercised path and conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify disruption control, safe degradation, integrity, operator response, staffing, communication, failover, restore, data reconciliation, return to service, and lesson closure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Availability-only resilience, exercise without stop, dependency correlation ignored, recovery dependent on failed system, user impact hidden, and drill success treated as durable resilience.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, preserve evidence, operate in approved degraded mode, recover or fail over, communicate, and reassess protected outcomes. Reopen on dependency, threat, staffing, architecture, or recovery change.
+
+COMPLETION CRITERIA
+
+Outcomes, scenarios, dependencies, modes, recovery, owners, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve scenarios, results, recovery, communications, decisions, evidence, exceptions, and open gaps. Hand off to Chaos, Reliability, Disaster Recovery, Operations, Security, Safety, and Governance.
+
+RELATED CODEX SECTIONS
+
+005 Continuity and Recovery; 029 Operational Architecture; 244 Resilience; 245 Chaos Engineering; 301-330 Reliability, Continuity, Disaster Recovery, Backup, Restore, and Failover.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, operational and continuity context, and the integration roadmap. Exact protected outcomes, scenarios, recovery objectives, staffing, communications, and acceptance authority remain unresolved.

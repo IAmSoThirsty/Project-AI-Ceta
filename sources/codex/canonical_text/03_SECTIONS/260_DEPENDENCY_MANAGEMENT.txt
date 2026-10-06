@@ -1,0 +1,95 @@
+SECTION 260 — Dependency Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Discover, evaluate, select, version, update, monitor, constrain, and retire dependencies that affect behavior, security, quality, licensing, cost, availability, or trust.
+
+REQUIRED OUTCOME
+
+A dependency inventory and lifecycle with owner, purpose, version, provenance, license, vulnerability, support, compatibility, update policy, fallback, evidence, and retirement.
+
+WHY THIS MATTERS
+
+Dependencies are part of the real system even when teams do not own them. Unknown, stale, transitive, unmaintained, or incompatible dependencies can introduce risk that local tests and source review miss.
+
+APPLICABILITY
+
+Apply when software, hardware, data, service, provider, model, tool, package, API, or process relies on an external or separately owned component.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no external or separately versioned dependency affects the artifact and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, source, package, license, vulnerability, security, privacy, release, compatibility, support, and operations baselines. Identify dependency owner and acceptable substitution.
+
+REQUIRED INPUTS
+
+Dependency graph, versions, source, owner, purpose, license, support, vulnerability, compatibility, data access, provider, update, fallback, cost, and retirement status.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve dependency selection, version, risk, license, update, exception, provider, fallback, and retirement. Humans decide whether a change is safe for users and commitments.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized graphs, advisories, changelogs, licenses, and test evidence; identify drift; and draft update or replacement plans. It must not install, upgrade, remove, or accept a dependency without authority or hide transitive impact.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Dependency Manager, Architect, Security Auditor, License Analyst, Researcher, Analyst, Tester, Verifier, Implementer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory direct and transitive dependencies; capture provenance and ownership; assess risk, license, compatibility, and support; pin or constrain; monitor advisories; update; test; mitigate; substitute; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show dependency, version, source, owner, license, data, vulnerability, change, tests, evidence, and limitation. Require human approval for install, upgrade, removal, exception, license, and production impact.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support lockfiles, provenance, SBOM, isolation, version negotiation, compatibility, fallback, patching, rollback, provider substitution, and observability of dependency behavior.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show graph, owners, versions, findings, support, licenses, updates, evidence freshness, impact, and authorized approve, update, pin, replace, isolate, rollback, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Dependency inventory and graph; risk, license, and support assessment; update and fallback plan; SBOM or equivalent; test, exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify dependency, version, source, build, environment, license, advisory, method, time, result, owner, and limitation. Package presence or lockfile proves identity, not safety or compatibility.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify direct and transitive inventory, provenance, licenses, vulnerabilities, compatibility, behavior, update, rollback, fallback, data access, and retirement. Test unavailable or compromised provider.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unknown transitive dependency, floating version, unreviewed update, stale support, license conflict, advisory ignored, provider single point, and dependency changed without test or rollback.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected dependency or artifact, roll back or substitute, rotate exposed secrets, notify owners, preserve evidence, and reassess downstream impact. Reopen on advisory, provider, version, license, or architecture change.
+
+COMPLETION CRITERIA
+
+Dependencies, versions, owners, purpose, provenance, license, risk, support, tests, fallback, evidence, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve graph, versions, advisories, decisions, licenses, tests, incidents, evidence, exceptions, and open gaps. Hand off to Package, Build, Security, Licensing, Release, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+223-224 IP and Licensing; 259 Source Control; 261 Package Management; 262 Artifact Management; 264-268 Build and Delivery; 380-381 Security and Dependency Updates; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, source, security, licensing, and delivery context, and the integration roadmap. Exact graph, support, SBOM, policy, providers, update, fallback, and acceptance authority remain unresolved.

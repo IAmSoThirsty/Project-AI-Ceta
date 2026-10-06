@@ -1,0 +1,95 @@
+SECTION 394 — Records Disposal
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Dispose of records only when authorized, no longer required, not held, and handled in a way that protects confidentiality, evidence, rights, and traceability.
+
+REQUIRED OUTCOME
+
+A records-disposal model with class, authority, retention expiry, hold check, scope, copies, method, vendor, approval, certificate, exception, and evidence.
+
+WHY THIS MATTERS
+
+Disposal can destroy evidence, violate hold, expose data, or leave copies behind. A deletion command is not proof that all records were disposed of lawfully or securely.
+
+APPLICABILITY
+
+Apply when records, documents, logs, archives, messages, media, or evidence are destroyed, deleted, returned, or rendered inaccessible.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no record, copy, retention, hold, disposition, or evidence behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use records, retention, legal hold, privacy, legal, security, archive, deletion, vendor, and environmental baselines.
+
+REQUIRED INPUTS
+
+Records, class, owner, retention, expiry, hold, copies, authority, method, vendor, scope, approval, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Records, legal, privacy, security, and data owners approve disposition and hold release. Humans decide exceptions, scope, vendor, and whether evidence or rights require preservation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may identify candidates and check metadata, retention, and hold status. It must not dispose, release hold, infer authority, or certify complete destruction without human approval and controlled tooling.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Records Manager, Legal Advisor, Privacy Reviewer, Security Auditor, Data Engineer, Archivist, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Classify; verify authority and expiry; check hold and copies; approve; choose method; execute; verify; obtain vendor evidence; record; and review exception or failure.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show record class, scope, hold, retention, authority, method, copies, evidence, and limitation. Require human approval for hold release, scope, vendor, and destruction.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use retention and hold gates, copy discovery, deletion propagation, secure method, vendor chain, audit, certificate, access restriction, and exception workflow.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show disposal candidate, class, age, hold, copies, authority, method, evidence freshness, owner, and authorized approve, preserve, restrict, dispose, verify, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Disposal charter; record and authority; hold and copy check; method and execution; certificate and verification; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify record, class, source, copies, authority, hold, method, vendor, time, result, verifier, and limitation. Deletion response proves only the targeted operation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify class, expiry, hold, scope, copies, authority, method, vendor, completion, certificate, recovery implications, and audit. Test held, replicated, backed-up, and inaccessible record.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Dispose on schedule despite hold, copy blind spot, no approval, vendor assertion only, certificate without scope, backup ignored, and disposal used to hide evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Stop disposal, preserve remaining copies, apply hold, notify owners, investigate, restore where lawful, and reassess legal and privacy impact. Reopen on hold, record, scope, authority, or method change.
+
+COMPLETION CRITERIA
+
+Record class, scope, authority, expiry, hold, copies, method, evidence, owners, exceptions, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve schedules, approvals, holds, certificates, vendor records, evidence, decisions, exceptions, and open gaps. Hand off to Data Deletion, Archive, Legal, Privacy, Security, Records, and Environment.
+
+RELATED CODEX SECTIONS
+
+225 Records; 391 Retention; 392-393 Archive and Preservation; 395 Data Deletion; 400 Secure Destruction; 401 Environmental Disposal; 219 Legal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, records, legal, privacy, security, archive, deletion, and environmental context, and the integration roadmap. Exact records, schedules, holds, copies, methods, vendors, and acceptance authority remain unresolved.

@@ -1,0 +1,98 @@
+SECTION 140 - Rendering Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of pipelines that transform scene, geometry, data, or content into pixels or other visual output under declared device, timing, color, accessibility, and correctness constraints.
+
+REQUIRED OUTCOME
+
+A rendering baseline with pipeline stages, resource ownership, output contract, device support, performance, fallback, evidence, and recovery.
+
+WHY THIS MATTERS
+
+Rendering failures include wrong ordering, stale resources, color errors, dropped frames, leaks, and nonreproducible GPU behavior. Output must be judged beyond appearance.
+
+APPLICABILITY
+
+Applies to raster, vector, 3D, offline, real-time, server-side, browser, GPU, display, and visualization renderers.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable where no renderer or generated visual output exists. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires output purpose, renderer and device APIs, scene and asset contracts, color, frame, memory, accessibility, security, test, build, and fallback requirements.
+
+REQUIRED INPUTS
+
+Provide pipeline, resources, inputs, output, resolution, color, timing, memory, device, failure, determinism, accessibility, and comparison requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve output meaning, quality, accessibility, budgets, device support, and release. Humans decide whether degraded rendering is acceptable.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect frames, generate tests, and suggest optimization. It must not claim visual correctness from similarity alone or ship rendering changes without review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Graphics Engineer, Analyst, Implementer, Optimizer, Tester, Verifier, Accessibility specialist, Security Auditor, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define output and pipeline stages, resources, targets, and budgets.
+2. Implement deterministic, instrumented paths with fallback and device-loss handling.
+3. Verify pixels, semantics, accessibility, performance, compatibility, and recovery.
+4. Release and retire pipeline versions with evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show pipeline, stage, resource, device, output, evidence, and degraded state. Human approval is required for material visual or accessibility changes; status and software fallback remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate scene submission, scheduling, resource, shader, raster, display, cache, and capture boundaries. Version output contracts and isolate GPU faults.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show renderer, frame timing, memory, queue, device, errors, output quality, accessibility, and controls to lower fidelity, switch path, capture, stop, or roll back.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Renderer contract, pipeline model, device matrix, resource budget, visual and accessibility tests, performance evidence, capture fixtures, build record, and fallback runbook.
+
+EVIDENCE REQUIREMENTS
+
+Identify renderer, stage, device, build, scene, assets, settings, method, result, and limits. Preserve captures, metrics, accessibility findings, and device-specific failures.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify stage ordering, resource lifetime, shader errors, color, scaling, frame and memory budgets, device loss, malformed assets, accessibility, and fallback.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Testing one GPU; visual snapshots without semantics; leaking resources; blocking the UI; unsafe shader input; and treating average frame rate as absence of deadline misses.
+
+RECOVERY AND RECONSIDERATION
+
+Switch to safe renderer, lower workload, preserve captures and logs, quarantine assets, restore prior pipeline, compensate visible effects, and reopen performance and correctness claims.
+
+COMPLETION CRITERIA
+
+Pipeline, output, budgets, evidence, compatibility, fallback, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve renderer and shader revisions, captures, device results, decisions, incidents, evidence, and next safe action. Hand off to Graphics, Game, Browser, Accessibility, Testing, Build, and Operations.
+
+RELATED CODEX SECTIONS
+
+139 Graphics Engineering; 138 Game Engineering; 126 Browser Engineering; 247 Accessibility Testing; 239 Performance Testing; 248 Compatibility Testing; 264 Build Engineering; 300 Content Delivery Networks.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 083-084 and 107-139, Owner Cockpit Requirements, and Status and Evidence Lexicon. GPU populations, output standards, capture fixtures, accessibility criteria, and performance limits remain unresolved.

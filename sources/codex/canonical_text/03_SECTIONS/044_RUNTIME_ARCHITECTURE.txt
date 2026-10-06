@@ -1,0 +1,139 @@
+SECTION 044 — Runtime Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the execution environment and behavior of software, services, jobs, agents, models, schedulers, resources, state, observability, control, and lifecycle after deployment.
+
+REQUIRED OUTCOME
+
+- A runtime model with processes, threads or tasks, services, resources, scheduling, state, dependencies, identities, environments, and owners.
+- Explicit startup, shutdown, scaling, concurrency, resource limits, upgrade, failure, recovery, and evidence behavior.
+- Traceability from application and software design through platform, infrastructure, operations, testing, incident, and retirement.
+
+WHY THIS MATTERS
+
+Runtime behavior depends on timing, scheduling, resource pressure, configuration, provider behavior, and interactions absent from static design. A deployed artifact can be correct in isolation and unsafe under load, restart, drift, or partial failure.
+
+APPLICABILITY
+
+- Software executes over time in managed, hosted, embedded, desktop, mobile, edge, or distributed environments.
+- Scheduling, state, resources, concurrency, runtime configuration, or failure affects material outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material execution, state, resource, schedule, dependency, or lifecycle effect changes.
+- An approved runtime baseline covers exact artifact, environment, workload, and change with no material impact.
+- The artifact is exploratory and not a runtime readiness or performance claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-043 provide requirements, applications, software, platform, infrastructure, distributed, network, API, event, security, and operations context.
+- Runtime, resource, scheduler, configuration, identity, model, provider, observability, and recovery authorities are known or open.
+
+REQUIRED INPUTS
+
+- Artifacts, processes, tasks, state, resources, schedules, workload, concurrency, limits, dependencies, environments, and lifecycle.
+- Startup, shutdown, health, scaling, upgrade, logging, tracing, metrics, access, backup, restore, failover, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Runtime owners approve resource limits, scheduling, autonomy, configuration, upgrades, scaling, risk, and recovery. Application and platform owners retain responsibility for behavior and data. Humans retain pause, drain, revoke, restart, restore, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect runtime telemetry, identify resource or scheduling anomalies, draft configurations and tests, and recommend bounded actions. It must preserve workload and environment context. It must not change runtime state, kill work, grant authority, or declare reliability without delegation and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Observer, Planner, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory runtime artifacts, processes, tasks, state, resources, schedules, identities, dependencies, and owners.
+2. Define startup, readiness, liveness, shutdown, cancellation, timeout, concurrency, limits, and ownership.
+3. Model normal, overloaded, restarted, upgraded, degraded, partitioned, offline, recovery, and retirement behavior.
+4. Define configuration, secrets, observability, audit, data, security, privacy, accessibility, and support controls.
+5. Validate with application, platform, infrastructure, operations, security, data, and user authorities.
+6. Test load, restart, kill, leak, timeout, race, stale configuration, dependency loss, restore, and upgrade rollback.
+7. Baseline and hand off runtime evidence, decisions, gaps, and continuity state.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show workload, runtime, resource, identity, authority, model, provider, action, and consequence.
+- Require human review for killing or migrating work, changing limits, granting runtime access, or changing autonomous behavior.
+- Preserve status, logs, evidence, manual control, stop, and recovery paths when runtime automation fails.
+- Prevent chat or administrative shortcuts from bypassing runtime controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate desired configuration, deployed artifact, runtime instance, process state, telemetry, log, trace, metric, and evidence.
+- Define scheduling, resource isolation, health, timeout, cancellation, retry, idempotency, restart, and drain semantics.
+- Preserve identity, authorization, secrets, audit, observability, graceful degradation, and safe shutdown across runtime paths.
+- Invalidate evidence when artifacts, configuration, workload, provider, or environment changes.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show artifact, runtime, environment, workload, resources, state, health, limits, dependencies, owner, authority, and evidence freshness.
+- Expose start, stop, drain, pause, restart, scale, revoke, rollback, restore, and retire actions with impact.
+- Permit authorized manual intervention and explain inferred versus observed health.
+- Export runtime state, telemetry, traces, decisions, evidence, dissent, incidents, and continuation state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Runtime context, execution and resource model, lifecycle and scheduling contract, configuration and observability model.
+- Health, scaling, security, privacy, resilience, recovery, upgrade, rollback, support, and retirement design.
+- Test, evidence, decision, readiness, incident, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify artifact, runtime, environment, workload, configuration, resource, time, method, actor, result, and limitation.
+- Process exit, health signal, benchmark, log, trace, or dashboard proves only its bounded observation.
+- Load, concurrency, recovery, and availability evidence identifies workload, coverage, failure injection, and validity.
+- Missing or stale telemetry constrains runtime status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace requirements and application behavior through runtime configuration, execution, telemetry, evidence, recovery, and retirement.
+- Exercise overload, restart, kill, timeout, race, resource exhaustion, stale config, dependency loss, upgrade, rollback, and restore.
+- Verify identity, authorization, secrets, audit, health semantics, graceful shutdown, cancellation, and safe fallback.
+- Disable scheduler, runtime provider, model, network, data, and evidence services and verify safe behavior.
+- Reproduce representative claims from exact runtime package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating process existence, liveness, uptime, or log volume as correctness or reliability proof.
+- Ignoring scheduling, resource exhaustion, memory or state leaks, stale configuration, restart, and upgrade behavior.
+- Allowing automated remediation to kill, migrate, or alter work without authority, evidence, and compensation.
+
+RECOVERY AND RECONSIDERATION
+
+- On crash, overload, unsafe state, configuration drift, dependency loss, or evidence failure, stop or drain affected work and preserve state.
+- Identify safe operation, owner, authority, affected users, evidence, communication, and review condition.
+- Use approved restart, reduced mode, drain, rollback, restore, failover, migration, or retirement.
+- Reopen on artifact, runtime, scheduler, provider, workload, configuration, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Execution, state, scheduling, resources, identity, configuration, evidence, recovery, and lifecycle are explicit.
+- Load, restart, degradation, upgrade, migration, and retirement are addressed or justified.
+- Exact validity and unresolved gaps are recorded; CONTENT-COMPLETE does not imply runtime readiness.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve artifact and runtime identities, configurations, telemetry, traces, incidents, decisions, evidence, dissent, and gaps.
+- Hand off to Platform, Infrastructure, Cloud, Distributed, Network, Security, Operations, Testing, Reliability, and Retirement.
+- Record changes requiring reopening Software, Application, Data, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-043 Requirements through Event-Driven Architecture; 045-060 Security through Hardware Architecture.
+- 112 Runtime Engineering; 130-145 distributed, real-time, performance, and streaming engineering; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-043, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal runtime, scheduler, resource, workload, or service-level standard is supplied. Actual runtime targets, configurations, limits, recovery objectives, and acceptance evidence remain unresolved.

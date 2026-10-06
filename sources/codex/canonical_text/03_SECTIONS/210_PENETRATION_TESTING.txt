@@ -1,0 +1,95 @@
+SECTION 210 — Penetration Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Perform authorized, bounded security testing that validates whether real systems, controls, configurations, interfaces, and recovery paths resist declared attack scenarios.
+
+REQUIRED OUTCOME
+
+A scoped penetration-test plan and evidence package with authorization, targets, exclusions, safety limits, methods, observations, findings, impact, reproducibility, remediation, retest, and owner acceptance.
+
+WHY THIS MATTERS
+
+A penetration test can reveal control interaction and real exposure that reviews or scanners miss, but an unsafe or poorly scoped test can cause outage, data exposure, legal conflict, or false confidence. A clean result is bounded by scope, time, method, and tester access.
+
+APPLICABILITY
+
+Apply when authorized adversarial testing can materially validate security of applications, networks, devices, APIs, identities, cloud resources, facilities, or operational controls.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when testing would add no material information beyond current verified evidence, the scope is non-consequential and reversible, or authorization and safe test conditions cannot be established. The determination must name the alternative evidence and reopening condition.
+
+PREREQUISITES AND DEPENDENCIES
+
+Obtain written authorization, target and exclusion list, rules of engagement, contacts, safety and privacy controls, data handling, legal review where needed, rollback and stop conditions, environment access, and incident or support coverage.
+
+REQUIRED INPUTS
+
+Objective, scope, assets, versions, environments, identities, test accounts, allowed methods, exclusions, schedule, rate limits, data constraints, safety limits, threat model, prior findings, evidence, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners authorize scope, methods, timing, data access, stop conditions, risk, and communication. Test leads protect evidence and people. Humans decide whether testing may affect production, whether a finding requires immediate containment, and whether residual risk is accepted.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may help draft scope, test cases, evidence plans, code or configuration review, and bounded analysis of authorized results. It must preserve authorization and target boundaries, avoid secret exposure, and distinguish observed behavior from inference. It must not initiate testing, expand scope, exploit, persist, exfiltrate, alter, or publish findings without explicit authorized execution and human oversight.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Security Auditor, Penetration Tester, Architect, Researcher, Analyst, Implementer, Observer, Tester, Verifier, Governance Reviewer, Critic, Red Team, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define objective and rules; verify authorization; inventory and validate targets; prepare safety and stop controls; execute bounded tests; record evidence; triage findings; notify urgent risk; clean up; remediate; retest; report limitations; preserve continuity.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Display authorization, target, method, account, environment, time, rate, evidence, and stop state before consequential activity. Require human approval for scope, production testing, data access, exploit execution, containment, and disclosure. Provide immediate stop and escalation paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate test identity, test control, target, telemetry, evidence, notification, rollback, and production authority. Ensure tests are attributable, rate-limited, reversible where possible, isolated from real data, and visible to defenders without invalidating the declared exercise.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show authorization, scope, active test, targets, methods, safety state, findings, evidence, contacts, and impact. Provide authorized start, pause, stop, narrow, escalate, clean up, approve remediation, retest, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Authorization and rules of engagement; target and exclusion register; test plan; evidence and data-handling plan; findings and severity rationale; cleanup, remediation, retest, exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify authorization, tester or agent, target, version, environment, method, timestamp, account, observed result, evidence location, impact, reproduction boundary, and limitation. Do not retain unnecessary sensitive data or weaponized material.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorization and scope before start; exercise stop, rate, privacy, cleanup, and evidence controls; reproduce material findings safely; validate remediation and retest; confirm no unauthorized target or data was affected; and obtain owner acceptance of limitations.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Testing without authorization, scope drift, production impact without approval, uncontrolled exploit or data collection, unannounced testing that defeats safety, clean result treated as total security, and findings published without handling controls.
+
+RECOVERY AND RECONSIDERATION
+
+Stop immediately on unsafe, out-of-scope, or unexpected impact; preserve state and evidence; notify the owner and incident path; clean up or restore under authority; assess data and user impact; and reopen findings or scope when evidence changes.
+
+COMPLETION CRITERIA
+
+Authorization, scope, methods, safety, findings, evidence, limitations, remediation, retest, owner decisions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve rules, target identity, test timeline, findings, evidence references, cleanup, remediation, retest, exceptions, and open gaps. Hand off to Security Operations, Vulnerability, Threat Modeling, Red Team, Blue Team, Incident Response, Testing, and Governance.
+
+RELATED CODEX SECTIONS
+
+018 Risk Management; 045 Security Architecture; 206 Security Operations; 208 Threat Modeling; 209 Vulnerability Management; 211 Red Teaming; 212 Blue Teaming; 231-254 Testing; 402-404 Review and Postmortem.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security architecture, and the integration roadmap. Exact testing standards, authorization authority, production tolerance, data handling, legal constraints, and acceptance evidence remain unresolved.

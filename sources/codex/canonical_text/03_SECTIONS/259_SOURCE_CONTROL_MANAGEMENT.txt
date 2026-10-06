@@ -1,0 +1,95 @@
+SECTION 259 — Source Control Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Preserve the identity, history, collaboration, review, authorization, integrity, and recoverability of source, configuration, documentation, infrastructure, and other controlled change.
+
+REQUIRED OUTCOME
+
+A source-control model with repositories, ownership, branches, commits, review, access, signing, protection, provenance, retention, release linkage, recovery, and retirement.
+
+WHY THIS MATTERS
+
+Source history is evidence and an execution input. Unreviewed changes, lost provenance, exposed repositories, force pushes, generated material, or weak recovery can compromise delivery and accountability.
+
+APPLICABILITY
+
+Apply when versioned files, code, configuration, documentation, infrastructure, tests, models, data definitions, or artifacts are collaboratively changed or released.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no controlled source, history, review, release, or recovery claim is affected and an approved exact baseline covers the work.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use identity, access, IP, licensing, secrets, build, release, records, backup, and security baselines. Identify repository owners, branch policy, review authority, retention, and emergency change.
+
+REQUIRED INPUTS
+
+Repositories, content, authors, ownership, branches, commits, reviews, protections, dependencies, secrets scan, release linkage, access, retention, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve repository policy, protected changes, reviewers, access, emergency bypass, retention, and deletion. Humans review meaning, security, IP, and release risk; authors remain accountable for truthful change description.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized history, draft changes, tests, messages, and review summaries. It must preserve authorship and provenance, not impersonate approval, rewrite history, expose secrets, merge, delete, or bypass branch protection without explicit authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Source Control Manager, Implementer, Reviewer, Security Auditor, IP Analyst, Tester, Verifier, Researcher, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory repositories; assign owners; define access and protection; capture changes; review; scan; link to issues, builds, and releases; back up; recover; handle emergency changes; audit; and retire repositories with records.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show repository, ref, author, change, review, protection, evidence, and intended effect. Require human approval for merge, protected branch bypass, secret or IP handling, release, and deletion.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable or auditable history, protected branches, signed commits or equivalent provenance where warranted, review gates, access segregation, secret scanning, backup, and release traceability.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show repository health, owners, changes, reviews, protection, findings, release links, evidence freshness, and authorized approve, reject, merge, revert, restrict, recover, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Repository inventory and policy; access and protection model; review and provenance record; scan and build links; backup and recovery; exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify repository, ref, commit, author, reviewer, time, source, change, method, result, and limitation. A commit proves history, not correctness, authorization, or safe deployment.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify access, protection, review, provenance, secret and license scanning, revert, backup, restore, release linkage, audit, and emergency change. Test unauthorized push, lost branch, compromised account, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared accounts, force push without authority, unreviewed protected changes, secrets in history, source without owner, generated code without provenance, and repository deletion without records.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict compromised access, preserve history, rotate secrets, revert or restore known-good refs, investigate, notify owners, and reassess downstream artifacts. Reopen on source, author, dependency, policy, or release change.
+
+COMPLETION CRITERIA
+
+Repositories, owners, access, history, review, protection, provenance, releases, recovery, evidence, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve repository identity, refs, history, reviews, findings, releases, decisions, backups, evidence, exceptions, and open gaps. Hand off to Build, Release, Security, IP, Licensing, Records, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+223-224 Intellectual Property and Licensing; 258 Configuration; 260-262 Dependencies, Packages, and Artifacts; 264-271 Build, CI/CD, DevOps, DevSecOps, and GitOps; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, source, IP, security, and delivery context, and the integration roadmap. Exact repository, access, branch, review, signing, retention, recovery, and acceptance authority remain unresolved.

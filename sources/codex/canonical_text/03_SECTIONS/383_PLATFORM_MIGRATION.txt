@@ -1,0 +1,95 @@
+SECTION 383 — Platform Migration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Move workloads, services, infrastructure, identities, data, configuration, and operations from one platform to another while preserving outcomes, security, continuity, and exit evidence.
+
+REQUIRED OUTCOME
+
+A platform-migration model with source and target, inventory, equivalence, dependencies, data, identity, compatibility, rehearsal, cutover, rollback, support, cost, and retirement.
+
+WHY THIS MATTERS
+
+Platform migration changes hidden assumptions about runtime, identity, networking, storage, provider, performance, cost, and support. A workload running on the target is not proof of equivalent or acceptable service.
+
+APPLICABILITY
+
+Apply when workloads, applications, data, infrastructure, tooling, or operations move between providers, platforms, runtimes, regions, or architectural foundations.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no platform, workload, dependency, identity, data, cost, or operational behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, cloud, infrastructure, data, identity, security, cost, compatibility, testing, release, operations, continuity, and exit baselines.
+
+REQUIRED INPUTS
+
+Source, target, workloads, dependencies, identity, data, configuration, performance, cost, support, rehearsal, cutover, rollback, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Migration owners approve scope, equivalence, downtime, data, security, cost, cutover, rollback, communication, and retirement. Humans accept provider and operational tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory authorized platform metadata, compare options, draft mapping and tests, and identify gaps. It must not migrate, delete source, change access, expose data, or declare equivalence without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Migration Engineer, Architect, Cloud Engineer, Platform Engineer, Data Engineer, Security Auditor, Tester, Verifier, Operations Engineer, and Planner.
+
+REQUIRED ACTIVITIES
+
+Inventory and baseline; define equivalence; map dependencies and identity; plan data and config; rehearse; test; cut over; observe; roll back or complete; retire source; and document.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, target, workload, dependency, identity, data, cost, evidence, action, owner, and limitation. Require human approval for cutover, deletion, production, data, security, and exit.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use parallel or staged migration, compatibility, identity mapping, data replication, configuration translation, observability, rollback, provider exit, and support readiness.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show migration phase, source and target, workloads, health, data, cost, evidence freshness, owner, and authorized pause, test, cut over, rollback, reconcile, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Migration charter; source and target; equivalence and dependency; rehearsal and cutover; data, identity, cost, support, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, target, workload, version, dependency, data, method, time, result, cost, user outcome, and limitation. Successful target deployment proves neither equivalence nor exit.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify workload, identity, data, config, network, storage, performance, security, cost, support, recovery, rollback, cutover, and source retirement. Test provider loss and partial migration.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Lift-and-shift assumption, source deleted early, identity mismatch, cost surprise, compatibility hidden, data split, no rollback, and provider exit ignored.
+
+RECOVERY AND RECONSIDERATION
+
+Pause, preserve both platforms, roll back or restore, reconcile data, communicate, and reassess outcome and cost. Reopen on platform, workload, provider, data, or requirement change.
+
+COMPLETION CRITERIA
+
+Source, target, workloads, dependencies, identity, data, equivalence, cutover, rollback, cost, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve inventory, mappings, rehearsals, cutovers, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Cloud, Platform, Data, Security, Operations, Support, Finance, and Retirement.
+
+RELATED CODEX SECTIONS
+
+277 Cloud; 275-276 Infrastructure and IaC; 282-286 Server, Network, Database, and Storage; 382 Data Migration; 384 Modernization; 397-400 Decommissioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, migration, platform, data, identity, cost, security, and operations context, and the integration roadmap. Exact platforms, workloads, equivalence, cost, providers, recovery, exit, and acceptance authority remain unresolved.

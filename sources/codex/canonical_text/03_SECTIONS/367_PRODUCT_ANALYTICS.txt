@@ -1,0 +1,95 @@
+SECTION 367 — Product Analytics
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Measure and understand product behavior, adoption, journeys, outcomes, quality, and opportunity to inform responsible product decisions.
+
+REQUIRED OUTCOME
+
+A product-analytics model with question, outcome, event, metric, population, cohort, funnel, experiment, data quality, privacy, decision, and limitation.
+
+WHY THIS MATTERS
+
+Product telemetry can show what happened but not always why, whether it helped, or who was excluded. Optimizing clicks or retention can harm comprehension, safety, or trust.
+
+APPLICABILITY
+
+Apply when product usage, journey, feature, quality, outcome, or experiment data informs product or operational decisions.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no product data, event, metric, journey, decision, or customer impact changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use product, user research, data, privacy, metrics, feature, experimentation, support, and governance baselines.
+
+REQUIRED INPUTS
+
+Question, product, user, journey, event, metric, cohort, source, period, feature, outcome, privacy, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Product owners define outcome and decision; data and privacy owners approve collection and use; humans validate interpretation with research and domain judgment.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized aggregate product data, identify patterns, and draft hypotheses. It must not infer user intent, expose individuals, make product decisions, or claim causal effect without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Product Analyst, Data Analyst, Product Manager, Researcher, Statistician, Privacy Reviewer, Experimenter, Verifier, and Critic.
+
+REQUIRED ACTIVITIES
+
+Define question and outcome; instrument events; validate data; analyze journeys and cohorts; combine qualitative evidence; assess harm; recommend; experiment; monitor; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show question, event, metric, cohort, source, period, evidence, uncertainty, privacy, and limitation. Require human review for high-impact product, targeting, and retention decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use event taxonomy, identity and consent, data lineage, metric versioning, privacy, aggregation, quality, experiment separation, and feedback to product decisions.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show product question, journey, metric, cohort, freshness, data quality, findings, owner, and authorized instrument, correct, restrict, experiment, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Product-analytics charter; event and metric catalog; journey and cohort; analysis and outcome; decision, evidence, privacy, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify question, event, user or cohort, source, metric, period, method, result, reviewer, and limitation. Usage or funnel change proves neither cause nor value.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify events, identities, consent, data quality, metrics, cohorts, journey, privacy, causality limits, experiment, and decision traceability.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Instrument everything, metric drift, event semantics unclear, retention as value, cohort bias, personal data exposure, and product change driven by dashboard alone.
+
+RECOVERY AND RECONSIDERATION
+
+Correct or withdraw data, preserve versions, notify consumers, revise product decision, and reassess user impact. Reopen on event, metric, feature, population, privacy, or product change.
+
+COMPLETION CRITERIA
+
+Question, outcome, events, metrics, cohorts, privacy, evidence, owners, decisions, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve event and metric versions, analyses, experiments, decisions, evidence, exceptions, and open gaps. Hand off to Product, Customer Analytics, Data, Experimentation, Feedback, and Governance.
+
+RELATED CODEX SECTIONS
+
+010 Product Management; 161-162 Analytics and BI; 218 Privacy; 366 Customer Analytics; 368-372 Growth, Experimentation, Optimization, and Feedback.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, product, data, privacy, analytics, and decision context, and the integration roadmap. Exact questions, events, users, metrics, consent, experiments, and acceptance authority remain unresolved.

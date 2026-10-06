@@ -1,0 +1,98 @@
+SECTION 145 - Streaming Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of time-based delivery of audio, video, data, or interactive content across variable networks and clients with explicit latency, quality, access, continuity, and recovery behavior.
+
+REQUIRED OUTCOME
+
+A streaming baseline with source, segments, manifests, timing, authorization, adaptation, buffering, observability, accessibility, evidence, and retirement.
+
+WHY THIS MATTERS
+
+Streaming fails through latency, stalls, drift, stale manifests, unauthorized access, or quality adaptation. Availability metrics alone do not describe user or operational outcome.
+
+APPLICABILITY
+
+Applies to live, on-demand, interactive, event, media, telemetry, and data streaming systems.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable where content is delivered only as bounded nonstreaming transfers with no timing or continuity claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires source, timing, codec, manifests, network, authorization, latency, quality, buffering, captions, recording, privacy, observability, and recovery objectives.
+
+REQUIRED INPUTS
+
+Provide stream type, segments, clocks, bitrate, clients, latency, access, DRM or protection, captions, failover, storage, and user-outcome requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve access, content, latency and quality tradeoffs, recording, privacy, continuity, and release. Humans decide incident communication and stream termination.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may detect stalls, optimize adaptation, caption, summarize, and forecast capacity. It must not expose streams, alter access, or trade safety or meaning for engagement without approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Media Engineer, Network Engineer, Security Auditor, Privacy Reviewer, Accessibility specialist, Implementer, Tester, Verifier, Governance Reviewer, Observer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define source, timing, clients, protocol, access, quality, continuity, and lifecycle.
+2. Design ingest, packaging, manifests, delivery, adaptation, captions, failover, and recording.
+3. Test latency, stalls, loss, drift, authorization, accessibility, scaling, and recovery.
+4. Monitor, communicate, correct, and retire streams and contracts.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show stream identity, source time, playback time, access, quality, buffer, captions, evidence, and consequence. Human approval is required for recording, access, and termination; nonstreaming status remains available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Model source, clock, encode, segment, manifest, cache, edge, authorization, client, caption, and archive boundaries. Support adaptation, backpressure, failover, replay, and deletion.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show stream, audience, latency, stalls, drift, quality, access, incidents, evidence, and controls to throttle, pause, fail over, restrict, record, or terminate.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Streaming charter, source and rights records, protocol and manifest design, latency and quality budgets, access and privacy assessment, accessibility plan, load evidence, runbook, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+Identify stream, source, timestamp, segment, client, network, build, method, result, and limits. Separate delivery, quality, accessibility, security, privacy, and user outcome evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorization, manifests, timing, stalls, loss, reconnect, adaptation, captions, failover, load, recording, deletion, and client compatibility.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unbounded buffering; stale manifests; unauthorized caches; hiding latency; ignoring captions; recording without consent; and treating stream availability as comprehension.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or restrict stream, preserve source and timeline, fail over, provide alternate delivery, revoke access, compensate commitments, and reopen timing, rights, or capacity decisions.
+
+COMPLETION CRITERIA
+
+Source, timing, access, quality, evidence, accessibility, recovery, ownership, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve source, manifest, segment, access, traces, incidents, decisions, evidence, and next safe action. Hand off to Media, Video, Network, CDN, Search, Security, Accessibility, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+043 Event-Driven Architecture; 143 Video Engineering; 144 Media Engineering; 145 Streaming Engineering; 195 Network Security; 300 Content Delivery Networks; 239 Performance Testing; 322 Availability Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 040-044, 075-106 and 107-144, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual protocols, network populations, rights, latency, retention, and availability objectives remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 387 — Compatibility Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Manage supported combinations, contracts, migrations, version coexistence, deprecation, fallback, and user or system impact across change.
+
+REQUIRED OUTCOME
+
+A compatibility model with producer, consumer, version, platform, data, interface, support policy, test evidence, migration, fallback, owner, and retirement.
+
+WHY THIS MATTERS
+
+Compatibility is a relationship, not a property of one component. Silent breakage, indefinite support, or untested fallback creates hidden cost and user harm.
+
+APPLICABILITY
+
+Apply when versions, platforms, interfaces, formats, providers, devices, users, or consumers must coexist or transition.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no supported relationship, interface, consumer, platform, or migration behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, interface, version, release, testing, dependency, support, data migration, and deprecation baselines.
+
+REQUIRED INPUTS
+
+Producer, consumer, version, platform, contract, data, support, test, migration, fallback, owner, and retirement condition.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define support and breaking-change policy; producers and consumers coordinate; humans approve deprecation, migration, exception, and customer communication.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized compatibility matrices and changes, draft tests and migration, and identify risk. It must not declare compatibility, remove support, or change interface without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Compatibility Manager, Architect, Release Engineer, API Engineer, Data Engineer, Tester, Verifier, Support Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory relationships; define support; identify breaking change; test; publish compatibility; provide migration and fallback; monitor; deprecate; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show producer, consumer, version, contract, platform, evidence, migration, support, and limitation. Require human approval for breaking change, deprecation, fallback, and communication.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use version negotiation, schema evolution, feature detection, adapter, backward compatibility, explicit failure, migration, fallback, and support metadata.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show matrix, support, versions, consumers, findings, evidence freshness, owner, migration, and authorized approve, restrict, deprecate, migrate, fallback, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Compatibility charter; producer and consumer matrix; contract and support; tests and migration; deprecation and fallback; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify producer, consumer, version, platform, contract, data, method, time, result, owner, and limitation. One compatible combination proves only that combination.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify contract, versions, data, platform, support, migration, fallback, error, security, performance, accessibility, and deprecation. Test old and new consumer.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Breaking change hidden, version support assumed, matrix ignored, fallback untested, indefinite support, migration one-way, and compatibility claim from one environment.
+
+RECOVERY AND RECONSIDERATION
+
+Restore compatibility or fallback, communicate, preserve evidence, migrate or roll back, and reassess users and consumers. Reopen on version, contract, platform, data, or policy change.
+
+COMPLETION CRITERIA
+
+Relationships, versions, support, contracts, evidence, migration, fallback, owners, deprecation, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve matrix, contracts, tests, migrations, communications, decisions, evidence, exceptions, and open gaps. Hand off to Version, Deprecation, Release, Data, Support, Architecture, and Operations.
+
+RELATED CODEX SECTIONS
+
+248 Compatibility Testing; 378-383 Updates and Migration; 388 Version; 389 Deprecation; 390 Sunset; 234 Integration Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, compatibility, interfaces, data, release, support, and lifecycle context, and the integration roadmap. Exact producers, consumers, versions, contracts, support, migration, and acceptance authority remain unresolved.

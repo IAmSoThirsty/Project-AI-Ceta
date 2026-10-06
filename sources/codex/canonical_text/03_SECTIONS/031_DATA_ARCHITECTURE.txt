@@ -1,0 +1,214 @@
+SECTION 031 — Data Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed structure and lifecycle of data: what data exists, what it means, where it comes from, how it moves and changes, who owns it, how it is protected and qualified, and when it is retained, archived, migrated, deleted, or destroyed.
+
+Data Architecture turns information obligations, domain rules, processes, functions, requirements, and operational needs into data entities, relationships, flows, stores, contracts, controls, quality rules, lineage, and lifecycle behavior. It is not a database product choice and does not prove that data is accurate, complete, available, lawfully held, or safe in runtime.
+
+REQUIRED OUTCOME
+
+- A bounded data landscape with domains, entities, events, records, sources, consumers, owners, custodians, authorities, sensitivity, jurisdictions, and lifecycle.
+- Conceptual, logical, and physical data views with explicit mappings and intentional variation.
+- Data-flow, lineage, provenance, transformation, synchronization, replication, integration, and dependency models.
+- Data quality, validation, reconciliation, observability, access, privacy, security, resilience, backup, restore, retention, archival, migration, and deletion obligations.
+- Versioned data contracts and ownership for meaning, schema, quality, access, evidence, change, and retirement.
+- Traceability from objectives, requirements, domains, processes, functions, information, applications, controls, tests, evidence, decisions, and outcomes.
+
+WHY THIS MATTERS
+
+Data is often treated as inert material when it is actually a source of decisions, obligations, identity, automation, records, and harm. Wrong lineage, stale values, incompatible schemas, missing consent, weak deletion, or unowned quality can make an otherwise functional system untrustworthy.
+
+Data Architecture makes data behavior explicit across its full life rather than at one storage boundary. It preserves the distinction between a value and its interpretation, a copy and its source, a record and a cache, a generated feature and an observed fact, and a successful transfer and a valid outcome.
+
+APPLICABILITY
+
+- A system creates, receives, stores, transforms, exchanges, analyzes, publishes, generates, retains, archives, migrates, or deletes data.
+- Data influences identity, rights, safety, privacy, security, finance, compliance, operations, models, decisions, or user experience.
+- Multiple systems, domains, jurisdictions, environments, suppliers, or lifecycle stages share or derive data.
+- Data quality, freshness, lineage, availability, confidentiality, integrity, portability, retention, or deletion is material.
+- AI, analytics, search, recommendation, simulation, or automation uses data beyond a single bounded transient operation.
+
+NON-APPLICABILITY CONDITIONS
+
+- The change has no material effect on data meaning, source, schema, flow, quality, access, lifecycle, evidence, or user or system outcomes.
+- An approved data architecture covers the exact scope, data classes, environment, version, population, and change, with impact analysis showing no material effect.
+- The artifact is exploratory and is clearly labeled as proposed, synthetic, sample, or unverified rather than as production data design or evidence.
+
+The decision must identify scope, baseline, owners, evidence date, assumptions, and reopening condition. A small table, payload, file, or model input is not exempt when it carries material meaning or consequence.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 016, 019, 020, and 030 provide domain, requirements, systems, information, lifecycle, evidence, and context obligations.
+- Sections 021-029 provide architecture, capability, process, functional, and operational ownership and boundaries.
+- Privacy, security, records, legal, quality, accessibility, resilience, and AI governance constraints are known or explicitly open.
+- Human authorities for data meaning, access, quality, retention, deletion, migration, and acceptance are attributable.
+
+REQUIRED INPUTS
+
+- Objectives, domains, entities, data subjects, users, operators, jurisdictions, environments, sensitivity, purposes, and lifecycle.
+- Business rules, requirements, information structures, processes, functional contracts, application boundaries, interfaces, events, and controls.
+- Source inventories, schemas, metadata, lineage, data dictionaries, catalogs, records schedules, access policies, quality results, incidents, and migration history.
+- Availability, integrity, confidentiality, freshness, accuracy, completeness, timeliness, retention, portability, recovery, and deletion obligations.
+- AI, analytics, model, feature, training, evaluation, synthetic, prompt, retrieval, and generated-data requirements where applicable.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable human owner retains authority over purpose, collection, classification, consent or other lawful basis, sharing, quality thresholds, access, retention, correction, migration, deletion, risk, and acceptance.
+
+- Confirm data scope, purpose, subjects, domains, jurisdictions, environments, sensitivity, and non-goals.
+- Assign data owners, custodians, stewards, processors, consumers, quality authorities, privacy and security authorities, and lifecycle owners.
+- Approve schemas, canonical sources, transformations, sharing, retention, archival, deletion, migration, and exceptions.
+- Resolve conflicting meanings, quality thresholds, access interests, privacy rights, operational needs, and evidence requirements.
+- Ensure affected people and qualified domain, privacy, security, records, legal, accessibility, and safety specialists participate as needed.
+- Retain the ability to restrict, quarantine, correct, restore, migrate, withdraw, delete, or destroy data within authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory data, compare schemas, identify lineage gaps, propose models or quality rules, analyze distributions, draft mappings, detect anomalies, and generate migration or test ideas within authorized data access.
+
+AI must preserve data provenance, permission, sensitivity, purpose, version, transformations, uncertainty, and representativeness; identify missing or biased evidence; and stop or escalate when use, sharing, retention, or deletion authority is unclear.
+
+AI must not invent data, infer permission, expose restricted values, silently change records, treat synthetic or generated values as observed facts, approve data sharing, or declare quality from a sample, score, or successful pipeline run alone.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: defines data boundaries, ownership, flows, contracts, controls, lineage, and lifecycle.
+- Analyst: evaluates data relationships, quality, dependencies, transformations, tradeoffs, and impact.
+- Researcher: gathers source, domain, legal, user, operational, and data-use evidence.
+- Observer: records actual data behavior, flows, failures, quality, and user or system effects.
+- Governance Reviewer: checks purpose, authority, access, retention, records, privacy, and policy.
+- Security Auditor: examines confidentiality, integrity, identity, access, secrets, abuse, and recovery.
+- Verifier: independently checks lineage, quality, contracts, controls, and evidence.
+- Tester: exercises schema, quality, access, migration, deletion, recovery, and compatibility behavior.
+- Documentation Writer: maintains models, dictionaries, catalogs, contracts, and evidence records.
+- Memory Curator: preserves source, transformations, versions, decisions, and continuity.
+- Critic: challenges false precision, missing lineage, hidden copies, biased samples, and unowned quality.
+- Implementer: realizes approved data structures, pipelines, controls, and migrations.
+- Optimizer: improves data performance and cost without weakening meaning, quality, rights, or controls.
+- Red Team: probes exfiltration, poisoning, corruption, bypass, re-identification, and deletion failures.
+
+Role selection remains proportional to consequence. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish data purpose, subjects, domains, scope, environments, jurisdictions, sensitivity, owners, and lifecycle.
+2. Inventory data sources, entities, records, events, copies, caches, derivatives, stores, pipelines, consumers, and external parties.
+3. Define canonical meanings, identifiers, keys, relationships, metadata, classifications, and ownership.
+4. Model conceptual, logical, and physical structures and their controlled mappings.
+5. Map data creation, collection, validation, transformation, transfer, storage, use, publication, backup, archival, and deletion.
+6. Define data contracts for schema, semantics, identity, authority, quality, timing, ordering, encoding, errors, compatibility, and evidence.
+7. Establish quality dimensions, rules, thresholds, reconciliation, quarantine, correction, stewardship, and invalidation behavior.
+8. Define lineage, provenance, source authority, derivation, replication, cache, feature, synthetic, and generated-data status.
+9. Allocate confidentiality, integrity, availability, privacy, access, retention, backup, restore, and deletion controls.
+10. Assess bias, missingness, drift, leakage, duplication, corruption, re-identification, overcollection, and unauthorized reuse.
+11. Design migration, coexistence, rollback, reconciliation, archival, retention, disposal, and evidence preservation.
+12. Validate with data owners, domain experts, users, operators, privacy, security, records, legal, accessibility, and AI specialists.
+13. Test normal, malformed, stale, duplicate, unauthorized, partial, incompatible, lost, corrupted, migrated, restored, and deleted data paths.
+14. Baseline and hand off the data architecture with unresolved gaps and evidence limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show observed, sourced, transformed, inferred, synthetic, generated, cached, replicated, and verified data states distinctly.
+- Expose source, lineage, purpose, permissions, sensitivity, freshness, quality, model or tool use, and retention status where material.
+- Require human authorization for new purposes, restricted access, sharing, canonical-source changes, deletion exceptions, and consequential generated data.
+- Let owners and affected people correct, restrict, appeal, export, withdraw, or request deletion within applicable authority.
+- Keep non-AI, manual review, status, evidence, and recovery paths available when data services or models fail.
+- Never let an anomaly score, schema match, benchmark, or pipeline completion become a universal quality claim.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent entities, records, events, schemas, metadata, lineage, provenance, contracts, quality, permissions, retention, and lifecycle as versioned records.
+- Separate source data, derived data, cache, replica, backup, archive, synthetic data, feature, model artifact, and evidence copy.
+- Make purpose, subject, sensitivity, jurisdiction, identity, authority, provenance, freshness, and retention enforceable at data boundaries.
+- Design idempotency, ordering, reconciliation, versioning, compatibility, quarantine, correction, rollback, backup, restore, and deletion semantics.
+- Ensure data access, replication, indexes, logs, caches, exports, backups, models, and generated contexts respect restriction and deletion obligations.
+- Trigger impact analysis when meaning, schema, source, flow, owner, permission, purpose, quality rule, model, or retention changes.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show data baseline, source, purpose, owner, sensitivity, lineage, quality, freshness, access, retention, and lifecycle state.
+- Let owners inspect consumers, transformations, copies, dependencies, incidents, quality failures, permissions, and evidence.
+- Show available, restricted, prohibited, quarantined, stale, corrupted, synthetic, generated, retention, and deletion actions.
+- Provide authorized approve, correct, restrict, quarantine, restore, migrate, export, archive, delete, and destroy controls.
+- Explain why data was collected, transformed, retained, shown, hidden, shared, generated, or blocked.
+- Export the data model, contracts, lineage, quality, decisions, evidence, dissent, and continuity record.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Data Architecture charter, data landscape, domain and ownership map.
+- Conceptual, logical, physical, event, state, flow, storage, and lineage models.
+- Data dictionary, catalog, metadata, classification, provenance, source-of-truth, and data-contract records.
+- Quality, observability, reconciliation, access, privacy, security, backup, restore, retention, archival, migration, and deletion designs.
+- AI, analytics, feature, training, evaluation, synthetic, and generated-data governance where applicable.
+- Traceability to requirements, information, processes, functions, applications, controls, tests, evidence, and acceptance.
+- Quality, bias, assumption, risk, exception, decision, dissent, and reopening registers.
+
+EVIDENCE REQUIREMENTS
+
+- Each data claim identifies source, schema or version, purpose, population, scope, environment, time, method, owner, permission, and limitation.
+- A sample, schema, pipeline success, checksum, dashboard, or model score proves only its bounded claim.
+- Quality evidence identifies dimensions, population, sampling, rules, thresholds, missingness, uncertainty, result, and invalidation condition.
+- Lineage evidence identifies source, transformations, tools, versions, operators, destinations, timing, and unresolved gaps.
+- Migration and deletion evidence identifies scope, records, precondition, authority, procedure, result, exceptions, verification, and residual copies.
+- AI or generated-data evidence identifies model, provider, version, data, context, tools, permissions, review, result, and limitations.
+- Failed, partial, stale, contradictory, inaccessible, and missing evidence remains visible and constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace representative data from source and purpose through schema, transformation, storage, use, output, evidence, retention, and deletion.
+- Introduce missing, duplicate, malformed, stale, unauthorized, poisoned, incompatible, corrupted, and out-of-order data and verify safe handling.
+- Change a schema, definition, source, owner, permission, purpose, retention, quality rule, model, or provider and verify impact detection.
+- Verify lineage, access, encryption or equivalent protection, retention, backup, restore, archival, deletion, and residual-copy behavior.
+- Exercise migration, coexistence, rollback, reconciliation, partial completion, interrupted transfer, and recovery.
+- Disable a source, catalog, quality service, network, key, model, or evidence store and verify safe status and fallback.
+- Verify generated, synthetic, inferred, cached, and replicated data cannot be mistaken for authoritative source data.
+- Independently reproduce representative quality, lineage, access, migration, and deletion claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a schema, successful load, checksum, dashboard, or clean sample as proof of data correctness.
+- Confusing storage location with ownership, source authority, meaning, permission, retention, or deletion.
+- Creating hidden copies in logs, caches, backups, exports, models, prompts, or support tools.
+- Ignoring missingness, bias, drift, duplicate identity, incompatible versions, and common-cause corruption.
+- Allowing AI to infer permission, alter records, publish sensitive values, or make generated data appear authoritative.
+- Optimizing volume, latency, or cost while weakening data rights, provenance, quality, recoverability, or lifecycle control.
+
+RECOVERY AND RECONSIDERATION
+
+- On provenance loss, quality failure, unauthorized access, corruption, poisoning, schema break, retention uncertainty, or deletion failure, quarantine affected data and preserve evidence.
+- Name the blocker, safe uses, affected subjects, owner, authority, containment, evidence, review time, and recovery path.
+- Use approved source restoration, prior version, reconciliation, correction, reprocessing, rollback, restricted mode, manual review, or deletion procedures.
+- Reassess downstream reports, decisions, models, records, notifications, permissions, and evidence before resuming.
+- Reopen when domain meaning, purpose, law, source, schema, quality, model, population, or lifecycle changes invalidate the baseline.
+
+COMPLETION CRITERIA
+
+- Purpose, scope, subjects, meaning, owners, sources, structures, flows, lineage, quality, access, protection, retention, recovery, and deletion are explicit.
+- Normal, malformed, stale, unauthorized, partial, corrupted, migrated, restored, and deleted states are addressed or justified.
+- Data contracts, evidence, verification, user control, privacy, security, records, and lifecycle obligations are traceable.
+- Exact baseline, validity, unresolved gaps, and owner acceptance state are recorded.
+- The section remains CONTENT-COMPLETE until source reconciliation, hostile review, and owner acceptance are separately completed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve data identities, definitions, sources, lineage, mappings, contracts, quality, permissions, retention, decisions, evidence, dissent, and open gaps.
+- Hand off to Application, Software, Platform, Infrastructure, Integration, API, Event, Security, Identity, Privacy, Records, AI, Testing, Operations, Migration, and Retirement work.
+- Record changes requiring reopening Domain, Information, Functional, Application, Security, Privacy, Governance, AI, Testing, or Retirement sections.
+- State the next safe action, blocked action, authority, evidence request, and exact continuation point.
+
+RELATED CODEX SECTIONS
+
+- 016 Domain Analysis; 019 Requirements Engineering; 020 Systems Engineering; 030 Information Architecture.
+- 021-029 Enterprise through Operational Architecture; 032-044 Application through Runtime Architecture.
+- 045-060 Security through Hardware Architecture.
+- 151-188 Database and Data Engineering through Human-in-the-Loop Operations.
+- 225 Records Management; 254 Data Testing; 285 Database Administration; 307 Data Operations; 391-395 Data Retention through Data Deletion.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- This draft uses the Canonical Section Contract, shared governance files, Sections 001-030, Owner Cockpit Requirements, Status and Evidence Lexicon, and the Remaining-Section Integration Roadmap.
+- No universal supplied data classification, quality standard, records schedule, privacy regime, retention rule, storage technology, or sector-specific data authority applies to every future system.
+- Actual data inventories, lawful purposes, subjects, source authorities, quality thresholds, contracts, jurisdictional constraints, and deletion evidence remain unresolved until supplied and verified.

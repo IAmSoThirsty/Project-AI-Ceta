@@ -1,0 +1,95 @@
+SECTION 265 — Build Automation
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Automate repeatable build orchestration, validation, artifact production, evidence capture, and safe failure handling without hiding authority or supply-chain risk.
+
+REQUIRED OUTCOME
+
+A build-automation model with triggers, inputs, runners, steps, credentials, caches, outputs, logs, retries, cancellation, ownership, provenance, and maintenance.
+
+WHY THIS MATTERS
+
+Automation can scale errors and privilege. A script that “usually works” may silently fetch mutable inputs, leak secrets, retry unsafe actions, or generate artifacts with no trustworthy record.
+
+APPLICABILITY
+
+Apply when build or artifact creation is scripted, scheduled, event-driven, or run by CI, a platform, or an agent.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no build automation, artifact, privileged step, or evidence claim changes and an approved exact baseline applies.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use build, source, dependency, package, artifact, runner, secret, security, testing, and release baselines. Identify automation owner and stop authority.
+
+REQUIRED INPUTS
+
+Workflow, trigger, source, dependencies, runner, credentials, cache, steps, outputs, logs, retry, cancellation, gates, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve triggers, privilege, credentials, gates, retries, release linkage, and workflow changes. Humans retain control over production or destructive steps.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft workflows, analyze logs, suggest tests, and identify unsafe permissions. It must not activate, expand, or modify privileged automation or approve output without explicit human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Build Automation Engineer, Build Engineer, Platform Engineer, Security Auditor, Tester, Verifier, Implementer, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define workflow and trust; isolate runner; validate input; execute; capture logs and provenance; handle retry and cancel; scan; publish or quarantine; test failure; rotate credentials; maintain and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show workflow, trigger, identity, privilege, source, runner, step, output, log, and limitation. Require human approval for privileged or externally visible actions and gate changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use least privilege, ephemeral runners, secret injection, immutable artifacts, idempotent steps, bounded retries, cancellation, audit, concurrency controls, and failure isolation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show workflow status, actor, source, runner, active step, output, findings, evidence freshness, and authorized run, cancel, retry, approve, quarantine, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Workflow definition; permissions and runner record; execution log; artifact and provenance; retry and failure record; test, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify workflow version, trigger, actor, runner, source, step, time, output, result, and limitation. A green workflow proves only that execution and declared coverage.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify permissions, trigger, input validation, secret masking, isolation, retries, cancellation, artifact identity, logs, cleanup, and failure recovery. Test malicious input and runner loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Overprivileged runner, secrets in output, unbounded retry, trigger surprise, mutable action, skipped gate, non-idempotent step, and workflow ownership without maintenance.
+
+RECOVERY AND RECONSIDERATION
+
+Cancel, isolate runner, preserve logs, rotate credentials, quarantine output, restore trusted workflow, and reassess downstream impact. Reopen on workflow, trigger, permission, tool, or artifact change.
+
+COMPLETION CRITERIA
+
+Workflow, trigger, permissions, runners, steps, artifacts, evidence, failure, owners, maintenance, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve workflow versions, permissions, runs, logs, artifacts, findings, decisions, evidence, exceptions, and open gaps. Hand off to CI, CD, Build, Security, Platform, Release, and Operations.
+
+RELATED CODEX SECTIONS
+
+264 Build Engineering; 266-271 CI, CD, DevOps, DevSecOps, and GitOps; 258 Configuration; 262 Artifacts; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, automation, security, and delivery context, and the integration roadmap. Exact workflows, triggers, runners, permissions, credentials, gates, and acceptance authority remain unresolved.

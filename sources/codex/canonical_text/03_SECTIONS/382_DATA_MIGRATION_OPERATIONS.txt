@@ -1,0 +1,95 @@
+SECTION 382 — Data Migration Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Move, transform, reconcile, validate, cut over, and retire data stores or schemas while preserving meaning, integrity, privacy, availability, lineage, and recovery.
+
+REQUIRED OUTCOME
+
+A data-migration model with source, target, mapping, scope, quality, privacy, compatibility, rehearsal, cutover, dual-run, rollback, reconciliation, and owner acceptance.
+
+WHY THIS MATTERS
+
+Migration can lose, duplicate, transform, expose, or silently reinterpret data. A completed job or equal row count does not prove semantic correctness or downstream continuity.
+
+APPLICABILITY
+
+Apply when data, schema, database, warehouse, lake, archive, provider, format, or location changes through movement or transformation.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no data, schema, store, lineage, privacy, consumer, or lifecycle behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data architecture, quality, privacy, security, database, storage, records, backup, restore, application, and operations baselines.
+
+REQUIRED INPUTS
+
+Source, target, schema, mapping, data scope, quality, consumers, privacy, access, rehearsal, cutover, rollback, reconciliation, and retention.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Data owners approve mapping, scope, privacy, downtime, cutover, rollback, deletion, and acceptance. Domain owners judge semantic meaning and downstream use.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized metadata and bounded samples, draft mappings and tests, and identify anomalies. It must not expose raw data, execute migration, delete source, or declare reconciliation without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Data Migration Engineer, Data Architect, Database Administrator, Data Quality Analyst, Privacy Reviewer, Security Auditor, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Inventory source and target; map schema and meaning; classify data; rehearse; validate; back up; migrate; dual-run or cut over; reconcile; monitor; retain or delete; and hand off.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, target, schema, mapping, data scope, privacy, owner, action, evidence, and limitation. Require human approval for migration, cutover, deletion, sensitive data, and rollback.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use versioned mapping, checksums, lineage, idempotence, dual-write or staged cutover, reconciliation, rollback, access, privacy, and downstream compatibility.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show migration phase, source, target, data quality, progress, consumers, evidence freshness, owner, and authorized pause, validate, cut over, roll back, reconcile, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Migration charter; source and target; mapping and quality; rehearsal and cutover; reconciliation and deletion; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, target, schema, mapping, population, data point, method, time, result, reconciliation, actor, and limitation. Row count equality proves neither meaning nor completeness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify schema, mapping, meaning, quality, privacy, access, lineage, performance, consumers, rehearsal, cutover, rollback, reconciliation, retention, and deletion.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Copy without mapping, source deleted early, row count as correctness, sensitive data exposed, consumer not tested, one-way migration, and rollback without data plan.
+
+RECOVERY AND RECONSIDERATION
+
+Pause writes or cutover, preserve both states, roll back or restore, reconcile, notify consumers, correct data, and reassess retention and user impact. Reopen on source, target, schema, mapping, or consumer change.
+
+COMPLETION CRITERIA
+
+Source, target, mapping, scope, quality, privacy, cutover, rollback, reconciliation, evidence, owners, deletion, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve mappings, versions, rehearsals, cutovers, reconciliations, backups, decisions, evidence, exceptions, and open gaps. Hand off to Data Operations, Database, Storage, Application, Privacy, Security, and Records.
+
+RELATED CODEX SECTIONS
+
+031 Data; 254 Data Testing; 285-286 Database and Storage; 307 Data Operations; 329 Restore; 391-395 Data Retention, Archive, Preservation, Disposal, and Deletion.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data, database, storage, privacy, quality, and operations context, and the integration roadmap. Exact sources, targets, mappings, consumers, RTO, privacy, retention, and acceptance authority remain unresolved.

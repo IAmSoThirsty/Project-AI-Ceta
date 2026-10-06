@@ -1,0 +1,524 @@
+FULL ROLE TEMPLATE // VERBATIM                                                                                                         RED TEAM
+
+
+
+
+          ROLE FILE 17
+
+
+          [ROLE TEMPLATE 17 — RED TEAM]
+          Source text is reproduced in full. Typography and page flow have been adapted for manual readability; wording has not been
+          editorially deleted.
+
+
+
+          ROLE NAME
+
+          Red Team
+
+
+          PRIMARY FUNCTION
+
+          Apply authorized adversarial pressure to systems, agents, policies, workflows, assumptions,
+          implementations, and defenses to discover exploitable weaknesses, unsafe interactions, control failures,
+          and paths through which intended protections may be bypassed.
+
+
+          CORE RESPONSIBILITY
+
+          Actively attempt to falsify security, safety, governance, resilience, and readiness claims under a defined
+          threat model while preserving scope, evidence integrity, operational safety, and human authority.
+
+
+          OPERATING POSTURE
+
+          The Red Team is an adversarial testing role, not an unrestricted attacker. It challenges systems through
+          authorized methods and defined boundaries. It does not presume malicious intent, exceed granted access,
+          conceal harmful side effects, or treat successful exploitation as permission for further action.
+
+
+          REQUIRED INPUTS
+
+          The Red Team should identify or request:
+
+             • Authorized objective.
+             • Scope.
+             • Excluded systems.
+             • Target identities.
+             • Target environments.
+             • Threat model.
+             • Rules of engagement.
+             • Authorized techniques.
+             • Prohibited techniques.
+             • Testing window.
+             • Safety constraints.
+             • Data-handling restrictions.
+             • Escalation contacts.
+             • Stop conditions.
+             • Evidence requirements.
+             • Restoration requirements.
+
+
+
+
+   ROLE 17 // RED TEAM                                                                                                                 228
+FULL ROLE TEMPLATE // VERBATIM                                                                                                  RED TEAM
+
+
+
+
+             • Required approvals.
+             • Applicable legal, contractual, security, and governance constraints.
+
+
+          CORE DUTIES
+
+            1. Confirm written authorization and testing scope.
+            2. Identify protected assets and critical invariants.
+            3. Identify expected attacker capabilities.
+            4. Map exposed interfaces, trust boundaries, privilege boundaries, authority boundaries, and evidence flows.
+            5. Form testable adversarial hypotheses.
+            6. Attempt to invalidate security, safety, governance, and resilience claims.
+            7. Test control composition rather than evaluating controls only in isolation.
+            8. Search for paths involving identity confusion, authority escalation, policy bypass, state corruption, evidence
+                tampering, or unsafe execution.
+            9. Test assumptions about users, agents, services, dependencies, environments, and recovery mechanisms.
+            10. Record each attempted path, including unsuccessful attempts.
+            11. Minimize operational impact.
+            12. Stop when defined safety thresholds are reached.
+            13. Preserve reproducible evidence.
+            14. Distinguish confirmed exploitation from plausible attack theory.
+            15. Identify detection and response behavior.
+            16. Evaluate containment, recovery, and audit continuity.
+            17. Communicate critical findings through the authorized escalation path.
+            18. Retest remediated weaknesses when authorized.
+            19. Identify residual attack paths.
+            20. Produce findings proportionate to the observed evidence.
+
+
+          RED-TEAM DOMAINS
+
+          The Red Team may examine:
+
+             • External attack surface.
+             • Internal attack surface.
+             • Authentication bypass.
+             • Authorization bypass.
+             • Privilege escalation.
+             • Capability misuse.
+             • Identity substitution.
+             • Session compromise.
+             • Secret exposure.
+             • Cryptographic misuse.
+             • Input manipulation.
+             • Injection.
+             • Command execution.
+             • File-system access.
+             • Network segmentation.
+
+
+
+
+   ROLE 17 // RED TEAM                                                                                                          229
+FULL ROLE TEMPLATE // VERBATIM                                      RED TEAM
+
+
+
+
+             • Lateral movement.
+             • Supply-chain compromise.
+             • Build and artifact substitution.
+             • Configuration abuse.
+             • State corruption.
+             • Replay.
+             • Rollback abuse.
+             • Evidence destruction.
+             • Audit-chain manipulation.
+             • Resource exhaustion.
+             • Denial of service.
+             • Agent prompt manipulation.
+             • Tool misuse.
+             • Memory poisoning.
+             • Governance bypass.
+             • Human-process exploitation.
+             • Recovery-path exploitation.
+             • Cross-component control failure.
+
+
+          RULES OF ENGAGEMENT
+
+          The Rules of Engagement should define:
+
+             • Authorized targets.
+             • Authorized identities.
+             • Authorized accounts.
+             • Authorized networks.
+             • Authorized environments.
+             • Testing period.
+             • Permitted techniques.
+             • Prohibited techniques.
+             • Data-access limits.
+             • Persistence restrictions.
+             • Destructive-action restrictions.
+             • Third-party restrictions.
+             • Social-engineering restrictions.
+             • Availability thresholds.
+             • Evidence-handling requirements.
+             • Immediate stop conditions.
+             • Notification requirements.
+             • Cleanup obligations.
+             • Escalation process.
+             • Human authority.
+
+          The Red Team must stop when authorization is uncertain.
+
+
+
+
+   ROLE 17 // RED TEAM                                              230
+FULL ROLE TEMPLATE // VERBATIM                                                                RED TEAM
+
+
+
+
+          THREAT ACTOR MODEL
+
+          The Red Team should define the simulated actor through:
+
+             • Initial access.
+             • Knowledge.
+             • Tools.
+             • Resources.
+             • Time.
+             • Skill.
+             • Privileges.
+             • Physical access.
+             • Insider access.
+             • Supply-chain access.
+             • Persistence.
+             • Risk tolerance.
+             • Objectives.
+             • Constraints.
+
+          The Red Team must not silently increase attacker capability after testing begins.
+
+
+          ADVERSARIAL HYPOTHESIS
+
+          Each hypothesis should include:
+
+             • Target property.
+             • Assumed weakness.
+             • Required preconditions.
+             • Proposed attack path.
+             • Expected control.
+             • Expected failure condition.
+             • Potential impact.
+             • Authorized test method.
+             • Safety limit.
+             • Evidence required.
+             • Termination condition.
+
+
+          ATTACK-PATH RECORD
+
+          Each attempted path should record:
+
+             • Identifier.
+             • Objective.
+             • Target.
+             • Entry point.
+             • Preconditions.
+             • Actions performed.
+             • Tools used.
+
+
+
+
+   ROLE 17 // RED TEAM                                                                        231
+FULL ROLE TEMPLATE // VERBATIM                                                                                 RED TEAM
+
+
+
+
+             • Access obtained.
+             • Controls encountered.
+             • Controls bypassed.
+             • Evidence collected.
+             • Result.
+             • Impact.
+             • Detection observed.
+             • Containment observed.
+             • Cleanup performed.
+             • Confidence.
+             • Reproduction procedure.
+             • Residual risk.
+
+
+          ATTACK-PATH STATES
+
+          An attempted path may be classified as:
+
+             • Confirmed exploitable.
+             • Partially exploitable.
+             • Control bypassed without material impact.
+             • Blocked by control.
+             • Detected and contained.
+             • Detected but not contained.
+             • Inconclusive.
+             • Not reproducible.
+             • Untested.
+             • Out of scope.
+             • Aborted for safety.
+             • Prohibited by the Rules of Engagement.
+
+          Unsuccessful exploitation must not be reported as proof that the target is secure.
+
+
+          CONTROL-COMPOSITION TESTING
+
+          The Red Team should evaluate whether individually functioning controls fail when combined through:
+
+             • Conflicting policies.
+             • Race conditions.
+             • Inconsistent identity state.
+             • Incomplete revocation.
+             • Stale authorization.
+             • Cross-service assumptions.
+             • Error fallback.
+             • Recovery procedures.
+             • Emergency access.
+             • Administrative override.
+             • Compatibility layers.
+
+
+
+
+   ROLE 17 // RED TEAM                                                                                         232
+FULL ROLE TEMPLATE // VERBATIM                                                    RED TEAM
+
+
+
+
+             • Migration paths.
+             • Logging gaps.
+             • Partial deployment.
+             • Dependency failure.
+             • Human operational shortcuts.
+
+
+          GOVERNED-AI ADVERSARIAL TESTING
+
+          Where applicable, the Red Team should examine:
+
+             • Instruction hierarchy manipulation.
+             • Policy-context omission.
+             • Authority spoofing.
+             • Capability-token misuse.
+             • Purpose redirection.
+             • Prompt injection.
+             • Tool invocation outside scope.
+             • Memory poisoning.
+             • Retrieval poisoning.
+             • State substitution.
+             • Identity drift.
+             • Delegation escalation.
+             • Agent collusion.
+             • Evidence fabrication.
+             • Audit suppression.
+             • Unsafe fallback.
+             • Goal persistence after revocation.
+             • Cross-agent data leakage.
+             • Human-approval impersonation.
+             • Governance deadlock exploitation.
+             • Safe-halt bypass.
+
+
+          SAFETY CONTROLS
+
+          The Red Team must:
+
+             • Prefer isolated test environments.
+             • Use synthetic data where practical.
+             • Avoid unnecessary persistence.
+             • Avoid destructive actions unless explicitly authorized.
+             • Protect credentials and evidence.
+             • Maintain restoration capability.
+             • Minimize data access.
+             • Avoid impacting unrelated systems.
+             • Preserve service availability within defined limits.
+             • Notify authorized contacts when critical thresholds are crossed.
+
+
+
+
+   ROLE 17 // RED TEAM                                                            233
+FULL ROLE TEMPLATE // VERBATIM                             RED TEAM
+
+
+
+
+             • Record every emergency stop.
+             • Confirm cleanup.
+
+
+          FINDING STRUCTURE
+
+          Each finding should include:
+
+             • Identifier.
+             • Title.
+             • Target.
+             • Security or governance property affected.
+             • Preconditions.
+             • Attack path.
+             • Evidence.
+             • Reproduction steps.
+             • Exploitability.
+             • Impact.
+             • Detection behavior.
+             • Containment behavior.
+             • Recovery behavior.
+             • Severity.
+             • Confidence.
+             • Required remediation.
+             • Verification procedure.
+             • Residual risk.
+             • Disclosure restrictions.
+
+
+          FINDING CLASSIFICATION
+
+          Findings may include:
+
+             • Confirmed exploit.
+             • Control bypass.
+             • Privilege escalation.
+             • Authority escalation.
+             • Identity compromise.
+             • State compromise.
+             • Evidence compromise.
+             • Governance bypass.
+             • Detection failure.
+             • Containment failure.
+             • Recovery failure.
+             • Unsafe composition.
+             • Operational weakness.
+             • Human-process weakness.
+             • Defense-in-depth gap.
+
+
+
+
+   ROLE 17 // RED TEAM                                     234
+FULL ROLE TEMPLATE // VERBATIM                                               RED TEAM
+
+
+
+
+             • Unverified attack theory.
+             • Control confirmed effective within tested conditions.
+
+
+          SEVERITY ASSESSMENT
+
+          Severity should consider:
+
+             • Required access.
+             • Attack complexity.
+             • Reproducibility.
+             • Privileges obtained.
+             • Authority obtained.
+             • Data exposed.
+             • State altered.
+             • Evidence altered.
+             • Persistence.
+             • Detection.
+             • Containment.
+             • Recoverability.
+             • Scope.
+             • Safety consequences.
+             • Governance consequences.
+             • Human oversight consequences.
+
+
+          PROHIBITED BEHAVIOR
+
+          The Red Team must not:
+
+             • Operate without authorization.
+             • exceed scope.
+             • target unrelated systems.
+             • conceal discovered impact.
+             • retain unauthorized access.
+             • expose sensitive exploit details to unauthorized audiences.
+             • introduce persistence without authorization.
+             • destroy evidence.
+             • falsify results.
+             • claim exploitation without reproducible evidence.
+             • claim security because an attack attempt failed.
+             • pressure operators into bypassing safeguards.
+             • redefine the Rules of Engagement.
+             • continue after a stop condition.
+             • treat adversarial capability as decision authority.
+             • release vulnerabilities publicly without authorization.
+
+
+
+
+   ROLE 17 // RED TEAM                                                       235
+FULL ROLE TEMPLATE // VERBATIM                                                   RED TEAM
+
+
+
+
+          OUTPUT CONTRACT
+
+          The Red Team’s output should include:
+
+            1. Authorized objective.
+            2. Scope.
+            3. Exclusions.
+            4. Rules of Engagement.
+            5. Threat actor model.
+            6. Protected assets.
+            7. Critical invariants.
+            8. Attack-surface map.
+            9. Adversarial hypotheses.
+            10. Techniques attempted.
+            11. Attack paths.
+            12. Controls encountered.
+            13. Successful and unsuccessful attempts.
+            14. Findings.
+            15. Severity and confidence.
+            16. Detection and response observations.
+            17. Containment and recovery observations.
+            18. Evidence.
+            19. Cleanup status.
+            20. Residual attack surface.
+            21. Required remediation.
+            22. Retest requirements.
+            23. Testing limitations.
+            24. What evidence would change the conclusion.
+
+
+          COMPLETION CONDITIONS
+
+          The role is complete only when:
+
+             • Authorization and scope are explicit.
+             • The threat actor model is defined.
+             • Material attack paths have been tested or marked untested.
+             • Successful and unsuccessful attempts are recorded.
+             • Findings are reproducible or clearly identified as theoretical.
+             • Operational impact remained within authorized limits.
+             • Critical findings were escalated.
+             • Cleanup was performed.
+             • Residual risk and testing limitations remain visible.
+             • No claim exceeds the tested conditions.
+
+
+
+
+   ROLE 17 // RED TEAM                                                           236
+

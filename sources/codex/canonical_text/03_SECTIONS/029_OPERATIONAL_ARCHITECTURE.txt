@@ -1,0 +1,223 @@
+SECTION 029 — Operational Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how an approved capability, product, service, system, or organization is put into use and kept within its intended authority, performance, safety, security, support, continuity, and lifecycle boundaries.
+
+Operational Architecture connects process and functional design to real operating modes. It describes people, procedures, systems, facilities, suppliers, controls, schedules, signals, decision points, support paths, maintenance, incidents, degradation, recovery, and retirement. It is an operating design, not proof that the design has been staffed, deployed, adopted, or effective.
+
+REQUIRED OUTCOME
+
+- A bounded operational concept with owners, users, operators, maintainers, support parties, environments, modes, dependencies, service boundaries, and lifecycle state.
+- A catalog of operational services, responsibilities, procedures, runbooks, controls, resources, records, evidence, and escalation paths.
+- Normal, boundary, emergency, degraded, maintenance, migration, recovery, and retirement operating models.
+- Explicit operational decision rights for start, stop, approve, change, suspend, restore, fail over, communicate, and retire actions.
+- Traceability from capabilities, processes, functions, requirements, risks, controls, systems, data, interfaces, tests, evidence, incidents, and owner acceptance.
+- Measurable readiness, service, outcome, control, reliability, resilience, support, and recovery conditions with truthful evidence states.
+
+WHY THIS MATTERS
+
+A system can be architecturally coherent and still fail because no one knows who operates it, what happens outside the happy path, how authority expires, or how the service is restored after a dependency fails. Operational Architecture makes the lived operating environment explicit before implementation or launch is treated as success.
+
+It also prevents operations from becoming an unowned afterthought. Human work, automation, alerts, maintenance, support, incident response, records, training, capacity, supplier obligations, and retirement all change the system's real behavior. For human-AI systems, operations must keep model, provider, tool, data, prompt, policy, and delegated-authority changes visible and reversible.
+
+APPLICABILITY
+
+- A product, service, system, capability, facility, process, or organization will be used by people or automated actors over time.
+- Operation requires roles, schedules, procedures, monitoring, support, resources, approvals, controls, or service commitments.
+- The system has production, field, offline, emergency, maintenance, degraded, multi-tenant, supplier, or jurisdictional operating modes.
+- Operational failure could affect safety, security, privacy, accessibility, reliability, resilience, rights, finances, service continuity, or public trust.
+- AI, automation, external providers, or long-running agents may act after design or deployment.
+
+NON-APPLICABILITY CONDITIONS
+
+- The artifact is a purely explanatory model with no claim of readiness, deployment, operation, support, or service effect.
+- The change is bounded, reversible, and has no material effect on operating roles, procedures, controls, dependencies, evidence, support, recovery, or lifecycle state.
+- An approved operational baseline covers the exact version, environment, population, mode, and change, and impact analysis finds no material operational effect.
+
+The determination must name the controlling baseline, scope, evidence date, owner, assumptions, and reopening condition. Small size, test-environment use, or the presence of a runbook does not by itself establish non-applicability.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-020 provide requirements, operational concept, lifecycle, allocation, verification, validation, transition, and recovery context.
+- Sections 021-028 provide enterprise, solution, systems, domain, business, capability, process, and functional boundaries.
+- Current-state evidence identifies actual operators, environments, dependencies, support burden, incidents, capacity, and recovery behavior.
+- Human owners exist for service outcomes, risk, security, privacy, safety, staffing, commitments, changes, and acceptance, or the absence is recorded as a blocker.
+
+REQUIRED INPUTS
+
+- Approved objective, scope, service or capability outcomes, users, affected parties, environments, jurisdictions, modes, and lifecycle horizon.
+- Process and functional models, system elements, information and data obligations, interfaces, controls, requirements, risks, and acceptance criteria.
+- Deployment topology, schedules, staffing, skills, facilities, vendors, contracts, credentials, tools, budgets, support channels, and communication paths.
+- Monitoring, logging, tracing, metrics, alerting, incident, problem, change, maintenance, continuity, backup, restore, and retirement evidence where available.
+- Availability, reliability, safety, security, privacy, accessibility, capacity, performance, service-level, recovery, and evidence-freshness obligations.
+- AI and automation identities, models, providers, tools, data, policies, authority limits, review points, fallback, monitoring, and revocation paths.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable human owner retains authority over service purpose, operating risk, commitments, staffing, resource allocation, policy interpretation, exceptions, release or launch readiness, incident severity, external communication, recovery tradeoffs, and final acceptance.
+
+- Confirm operating scope, modes, populations, environments, non-goals, and service boundaries.
+- Assign accountable operators, maintainers, support owners, security, privacy, safety, accessibility, and continuity authorities.
+- Approve procedures, readiness gates, operational changes, risk treatments, emergency actions, exceptions, and retirement.
+- Decide when evidence is sufficient to enter, remain in, or leave an operating mode.
+- Ensure affected users and qualified specialists can report harm, challenge decisions, stop unsafe work, and obtain recovery or appeal.
+- Retain the ability to pause, narrow, isolate, fail over, restore, revoke, or retire the service.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect operational records, correlate signals, draft runbooks, classify alerts, propose schedules, simulate capacity or failure, summarize incidents, identify drift, and recommend bounded actions within explicit delegation.
+
+AI must label observation, inference, forecast, recommendation, action, and verified result separately; preserve source and time boundaries; expose uncertainty and missing telemetry; and escalate when authority, safety, security, privacy, service commitment, or evidence is unresolved.
+
+AI must not silently change production state, declare readiness, accept risk, suppress alerts, close incidents, communicate commitments, revoke access, or approve recovery beyond its delegated authority. Model confidence, automation success, and dashboard health are not operational acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: defines operating modes, service boundaries, responsibilities, dependencies, controls, and lifecycle implications.
+- Analyst: evaluates capacity, service behavior, incidents, tradeoffs, risk, and operational evidence.
+- Observer: records actual operating conditions, work, signals, queues, failures, and operator behavior.
+- Coordinator: synchronizes operators, suppliers, support, incidents, changes, and handoffs.
+- Planner: sequences readiness, deployment, transition, maintenance, recovery, and retirement.
+- Security Auditor: examines privileged operation, trust boundaries, monitoring, abuse, and secure recovery.
+- Governance Reviewer: checks authority, commitments, exceptions, records, and status claims.
+- Tester: exercises operational, degradation, recovery, and continuity scenarios.
+- Verifier: checks readiness and operational claims against exact evidence.
+- Documentation Writer: maintains runbooks, operating concepts, records, and handoffs.
+- Memory Curator: preserves baseline identity, changes, incidents, evidence, and continuity.
+- Critic: challenges hidden work, missing ownership, unsafe defaults, and false readiness.
+- User Experience Reviewer: evaluates user, operator, support, accessibility, and recovery journeys.
+- Implementer: performs authorized operational changes and reports deviations.
+- Optimizer: improves measured service performance without weakening protected outcomes.
+- Red Team: probes operational bypass, abuse, failure, and recovery boundaries.
+
+Role selection remains proportional to consequence. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish the operational objective, owner, scope, service boundary, populations, environments, modes, schedule, jurisdiction, and lifecycle.
+2. Identify users, operators, maintainers, support, suppliers, affected non-users, authorities, facilities, systems, and dependencies.
+3. Define operational services, outcomes, responsibilities, procedures, controls, records, communications, and escalation paths.
+4. Model normal, peak, reduced, emergency, offline, maintenance, migration, recovery, and retirement modes.
+5. Define entry, exit, transition, trigger, guard, authority, evidence, timeout, and safe-state conditions for each mode.
+6. Allocate operating work to people, teams, automation, AI, systems, suppliers, and facilities with explicit authority and fallback.
+7. Define service, capacity, performance, availability, reliability, safety, security, privacy, accessibility, support, and recovery measures.
+8. Design observability, alerting, diagnosis, incident, problem, change, communication, audit, and evidence paths.
+9. Assess staffing, skills, training, fatigue, workload, accessibility, physical conditions, tool availability, and support burden.
+10. Define deployment, promotion, rollback, backup, restore, failover, substitution, patching, maintenance, and retirement procedures.
+11. Analyze dependencies, common failure domains, suppliers, credentials, data freshness, model or provider drift, and authority expiry.
+12. Validate operating models with accountable owners, operators, users, maintainers, support, security, privacy, safety, and accessibility specialists.
+13. Exercise failure, degradation, continuity, recovery, communication, and owner-control scenarios.
+14. Baseline the operational architecture, record unresolved gaps, and hand it to delivery, testing, operations, maintenance, and governance.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show whether each operational status is observed, inferred, simulated, recommended, executed, or verified.
+- Identify the acting human, AI, automation, service, provider, authority, tool, data scope, and consequence for each consequential action.
+- Require human review for changes to protected outcomes, safety, rights, privacy, security, commitments, staffing, or risk.
+- Keep stop, pause, revoke, escalation, diagnosis, evidence, communication, fallback, and recovery paths available during model or provider failure.
+- Expose uncertainty, stale telemetry, missing coverage, conflicting signals, and the evidence that would change a recommendation.
+- Never let a conversational command bypass change, identity, authorization, audit, accessibility, or recovery controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent operational modes, services, roles, responsibilities, procedures, dependencies, schedules, controls, events, evidence, metrics, and lifecycle states as versioned records.
+- Separate intended operating design from current runtime state and measured outcome.
+- Give every operational handoff an owner, input, output, timing, authority, identity, evidence, error, and recovery contract.
+- Design safe states, graceful degradation, isolation, retry, compensation, failover, restore, and manual fallback for consequential services.
+- Preserve operator and owner visibility into state, freshness, capacity, authorization, active changes, incidents, and unresolved conditions.
+- Ensure operational changes invalidate or requalify affected tests, evidence, approvals, training, commitments, and runbooks.
+- Treat models, providers, prompts, policies, tools, and data as operational dependencies with versioning, monitoring, substitution, and revocation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show baseline identity, current mode, environment, owner, authority state, freshness, service state, and degraded conditions.
+- Show available, prohibited, consequential, awaiting-approval, and recovery actions with acting identity and required authority.
+- Expose active changes, incidents, dependencies, capacity, alerts, evidence, decisions, communications, and open findings.
+- Permit authorized pause, narrow, approve, deny, revoke, isolate, fail over, restore, rollback, and retire actions.
+- Explain what is known, inferred, stale, unverified, blocked, failed, and awaiting human decision.
+- Preserve durable status, evidence, and recovery controls when nonessential systems fail.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Operational Architecture charter and operational concept.
+- Service, mode, environment, responsibility, dependency, and authority catalogs.
+- Operating procedures, runbooks, escalation, communication, support, maintenance, and recovery models.
+- Readiness, capacity, availability, reliability, safety, security, privacy, accessibility, and service-measure definitions.
+- Observability, incident, problem, change, evidence, audit, backup, restore, failover, and retirement designs.
+- Human-AI operating participation, authority, monitoring, fallback, and revocation model.
+- Operational risk, assumption, dependency, decision, dissent, exception, and reopening registers.
+- Validation, verification, owner-acceptance, and continuity handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Each operational claim identifies the exact service, version, environment, mode, population, time, method, actor, source, and limitation.
+- A runbook, dashboard, drill, simulation, or readiness review does not by itself prove effective operation.
+- Readiness evidence identifies required condition, test or inspection method, result, exceptions, owner, date, and validity period.
+- Performance and availability evidence states workload, configuration, observation period, exclusions, uncertainty, and whether it is target, simulated, or measured.
+- Incident and recovery evidence preserves timeline, state, authority, action, communication, result, residual impact, and reproducibility.
+- AI evidence identifies model, provider, version, data, policy, tool, authority, human review, result, and limitation.
+- Failed, stale, partial, contradictory, and missing evidence constrains operational status and remains visible.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace an outcome through process, function, service, operator, system, evidence, support, maintenance, and retirement.
+- Verify every operational service and mode has an owner, entry condition, exit condition, authority, evidence, and recovery path.
+- Exercise normal, peak, degraded, offline, emergency, maintenance, dependency-loss, authority-expiry, and retirement scenarios.
+- Disable a provider, model, network, credential, operator, data source, monitoring path, and evidence store and verify safe behavior or explicit human escalation.
+- Revoke authority during a long-running action and verify consequential work stops or follows the approved safe procedure.
+- Inject stale telemetry, duplicate alerts, false positives, missed alerts, and conflicting signals and verify diagnosis and escalation.
+- Verify backup, restore, failover, rollback, communication, and return-to-service claims with recorded results.
+- Independently reproduce readiness, service, incident, and recovery claims from the handoff package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating deployment, uptime, a green dashboard, or a completed runbook as proof of operational success.
+- Leaving operators, support, suppliers, facilities, staffing, training, or communication unmodeled.
+- Designing only the normal path and omitting degraded, emergency, offline, maintenance, recovery, and retirement modes.
+- Making alerts noisy, unactionable, unowned, or impossible to investigate.
+- Allowing AI or automation to suppress evidence, close incidents, change state, or accept risk without authority.
+- Optimizing service metrics while increasing user harm, operator fatigue, accessibility barriers, security exposure, or recovery time.
+- Depending on the failed component, unavailable credential, stale data, or inaccessible cockpit for recovery.
+
+RECOVERY AND RECONSIDERATION
+
+- On uncertainty, loss of authority, unsafe condition, major drift, or material evidence failure, stop or narrow affected actions and preserve state and evidence.
+- Identify the exact blocker, safe work that may continue, authority needed, evidence required, recovery owner, and review deadline.
+- Use approved fallback, isolation, failover, manual operation, rollback, restore, provider substitution, or service reduction paths.
+- Reassess user impact, commitments, security, privacy, safety, accessibility, and residual risk before resuming.
+- Reopen the operational baseline when incidents, changes, new dependencies, changed populations, or invalidated evidence alter operating assumptions.
+
+COMPLETION CRITERIA
+
+- Scope, owners, authorities, modes, dependencies, services, procedures, controls, evidence, measures, and lifecycle states are explicit.
+- Normal, boundary, degraded, emergency, maintenance, recovery, migration, and retirement paths are addressed or justified as not applicable.
+- Readiness, support, observability, security, privacy, safety, accessibility, continuity, and human-control conditions are traceable.
+- Verification and owner acceptance identify exact versions, environments, evidence, unresolved gaps, and validity limits.
+- The result is marked CONTENT-COMPLETE until source reconciliation, hostile review, and owner acceptance are separately completed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve the operational baseline identity, version, scope, environment, modes, owners, dependencies, decisions, evidence, dissent, and open gaps.
+- Hand off service contracts, operating procedures, runbooks, readiness criteria, telemetry, incidents, recovery, support, maintenance, and retirement obligations.
+- Record changes that require reopening Process, Functional, Information, Data, Application, Security, Reliability, Resilience, Testing, or Governance sections.
+- State the next safe action, blocked actions, required authority, evidence needed, and exact continuation point.
+- Do not claim operational readiness, adoption, effectiveness, or owner acceptance from this draft alone.
+
+RELATED CODEX SECTIONS
+
+- 019 Requirements Engineering; 020 Systems Engineering.
+- 021-028 Enterprise, Solution, Systems, Domain, Business, Capability, Process, and Functional Architecture.
+- 030-044 Information, Data, Application, Software, Platform, Infrastructure, Cloud, Edge, Distributed, Network, Communications, Integration, API, Event-Driven, and Runtime Architecture.
+- 045-053 Security, Identity, Privacy, Governance, Compliance, Safety, Reliability, Resilience, and Accessibility Architecture.
+- 301-331 Site Reliability, Production, Runtime, Cloud, Network, Security, Data, AI, Application, Platform Operations, Service Management, Observability, Incident, Capacity, Availability, Performance, Reliability, Service Level, Continuity, Disaster Recovery, Backup, Restore, Failover, and Operational Readiness.
+- 332-406 Command and Control through System Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- This draft is based on the Canonical Section Contract, shared governance files, Sections 001-028, the Owner Cockpit Requirements, the Status and Evidence Lexicon, and the Remaining-Section Integration Roadmap.
+- The supplied Codex does not provide a single ratified operational standard for every sector, service level, safety regime, staffing model, jurisdiction, or technology environment.
+- Sector-specific legal, contractual, safety, labor, accessibility, security, continuity, and service obligations remain to be identified and reconciled for each actual system.
+- Current operating evidence, staffing authority, supplier commitments, recovery objectives, and owner acceptance are unresolved until supplied and independently verified.

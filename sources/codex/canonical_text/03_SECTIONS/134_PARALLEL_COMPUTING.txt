@@ -1,0 +1,98 @@
+SECTION 134 - Parallel Computing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of computation divided across concurrent workers, threads, processes, devices, or nodes with explicit decomposition, synchronization, memory, correctness, and failure behavior.
+
+REQUIRED OUTCOME
+
+A parallel-computing baseline with decomposition, data ownership, synchronization, race controls, scalability, reproducibility, resource limits, and recovery evidence.
+
+WHY THIS MATTERS
+
+Concurrency creates races, deadlocks, nondeterminism, contention, and numerical variation. Parallel speedup without correctness or diagnosability is an unsafe claim.
+
+APPLICABILITY
+
+Applies to multithreaded, vectorized, GPU, actor, task, map-reduce, distributed, and concurrent algorithms or services.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to sequential computation with no concurrency, parallelism, or scaling claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires workload, decomposition, memory and data ownership, synchronization, ordering, determinism, hardware, scheduler, correctness, performance, and failure requirements.
+
+REQUIRED INPUTS
+
+Provide parallel units, dependencies, shared state, synchronization, partitioning, scheduling, memory, precision, resource, performance, failure, and reproducibility constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve determinism, correctness, resource allocation, performance tradeoffs, and acceptance. Humans decide whether nondeterminism or approximate results are permissible.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose decomposition, identify races, generate tests, and analyze profiles. It must not claim race freedom or alter synchronization and resource policy without review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Implementer, Optimizer, Tester, Verifier, Observer, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define dependencies, ownership, ordering, determinism, workload, and correctness.
+2. Select decomposition and synchronization; analyze races, deadlocks, contention, and failure.
+3. Measure scaling and correctness under controlled and adversarial schedules.
+4. Release, monitor, checkpoint, recover, and retire safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose worker, partition, synchronization, seed, hardware, result, evidence, and consequence. Human review is required for correctness and safety exceptions; status, cancel, and recovery paths remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Make ownership, synchronization, memory visibility, ordering, cancellation, backpressure, checkpoint, and failure domains explicit. Capture schedules and versions sufficient for replay or bounded diagnosis.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show workers, queues, contention, lag, deadlocks, errors, nondeterminism, resource use, output validity, and controls to cancel, drain, checkpoint, isolate, or retry.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Parallel decomposition, ownership, synchronization design, correctness invariants, race and deadlock analysis, reproducible build, performance evidence, fault tests, and recovery runbook.
+
+EVIDENCE REQUIREMENTS
+
+Identify code, runtime, hardware, schedule, seed, inputs, partition, configuration, method, result, and limits. Preserve race, deadlock, nondeterminism, and corrected-run evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify race, deadlock, ordering, cancellation, failure, replay, scaling, determinism, numerical tolerance, resource isolation, checkpoint, and recovery across schedules and worker counts.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Assuming sequential reasoning; shared mutable state; lock-free code without proof; unbounded queues; timing-based correctness; hiding nondeterminism; and accepting speedup with changed results.
+
+RECOVERY AND RECONSIDERATION
+
+Stop affected workers, preserve schedules and partial output, restore a known-good synchronization path, validate results, compensate effects, and reopen the parallel correctness baseline.
+
+COMPLETION CRITERIA
+
+Decomposition, ownership, synchronization, correctness, evidence, performance, recovery, and authority are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve code, runtime, schedule, seed, hardware, traces, failures, decisions, evidence, and next safe action. Hand off to HPC, Distributed, Real-Time, Runtime, Testing, Reliability, and Operations.
+
+RELATED CODEX SECTIONS
+
+109 Algorithm Engineering; 112 Runtime Engineering; 131 Distributed Systems Engineering; 133 High Performance Computing; 239 Performance Testing; 242 Scalability Testing; 243 Reliability Testing; 264 Build Engineering.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 107-133, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual hardware, workloads, determinism requirements, numerical tolerances, scheduler behavior, and recovery objectives remain unresolved.

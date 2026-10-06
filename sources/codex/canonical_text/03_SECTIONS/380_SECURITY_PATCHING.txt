@@ -1,0 +1,95 @@
+SECTION 380 — Security Patching
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Reduce known security exposure through qualified, prioritized, tested, authorized, and verified patching of software, firmware, infrastructure, devices, and dependencies.
+
+REQUIRED OUTCOME
+
+A security-patching model with advisory, asset, exposure, severity, owner, deadline, compatibility, rollout, mitigation, verification, exception, and evidence.
+
+WHY THIS MATTERS
+
+Patching competes with availability and compatibility but delay leaves known exposure. A patch applied to one asset or reported by a tool does not prove fleet remediation or safe operation.
+
+APPLICABILITY
+
+Apply when a security fix, mitigation, configuration, or compensating control is required for a known vulnerability or security weakness.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no vulnerability, asset, security property, update, or mitigation changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use vulnerability, threat, asset, update, release, compatibility, change, testing, operations, and incident baselines.
+
+REQUIRED INPUTS
+
+Advisory, vulnerability, asset, version, exposure, severity, owner, deadline, patch, mitigation, test, rollout, verification, and exception.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Security and asset owners prioritize and approve patch, mitigation, outage, exception, deadline, communication, and closure. Humans accept residual exposure with expiry.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate advisories to authorized inventory, draft plans, and analyze patch results. It must not exploit, patch, suppress finding, declare remediated, or accept exception without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Security Engineer, Vulnerability Analyst, Update Engineer, Systems Administrator, Tester, Verifier, Security Auditor, Operations Engineer, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Identify exposure; map assets; prioritize; choose patch or mitigation; test; schedule; deploy; verify; handle failure; manage exception; report; and retire obsolete exposure.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show advisory, asset, version, exposure, severity, patch, mitigation, owner, evidence, deadline, and limitation. Require human review for production, emergency, exception, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use asset inventory, signed artifact, staged rollout, test, rollback, compensating control, exposure monitoring, fleet reconciliation, and evidence linked to exact version.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show vulnerability, assets, exposure, priority, patch, mitigation, evidence freshness, owner, deadline, and authorized patch, isolate, defer, accept, remediate, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Patching charter; advisory and asset map; priority and plan; test and rollout; verification and exception; decision, evidence, incident, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify vulnerability, asset, version, source, patch, mitigation, method, time, result, owner, coverage, and limitation. Scanner or patch status proves only its inventory and check.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify advisory, affected version, asset coverage, patch, mitigation, compatibility, rollout, rollback, verification, exception expiry, and incident. Test unsupported or offline asset.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Patch everything blindly, patch one asset as fleet proof, exception forever, scanner mismatch, rollback absent, unsupported asset ignored, and security score as remediation.
+
+RECOVERY AND RECONSIDERATION
+
+Pause, roll back or mitigate, preserve evidence, protect assets, communicate, reassess exposure, and reopen invalid closure. Reopen on advisory, exploit, asset, patch, dependency, or environment change.
+
+COMPLETION CRITERIA
+
+Advisory, vulnerability, assets, priority, patch, mitigation, owners, evidence, verification, exception, deadline, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve findings, asset coverage, patch versions, exceptions, incidents, decisions, evidence, and open gaps. Hand off to Vulnerability, Security Operations, Update, Dependency, Release, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+209 Vulnerability; 206 Security Operations; 378-381 Updates and Patching; 245 Chaos; 231-254 Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, vulnerability, security, update, asset, operations, and evidence context, and the integration roadmap. Exact advisories, assets, severity, deadlines, mitigations, exceptions, and acceptance authority remain unresolved.

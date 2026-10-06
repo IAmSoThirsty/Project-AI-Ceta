@@ -1,0 +1,95 @@
+SECTION 246 — Security Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Evaluate whether security requirements, controls, trust boundaries, identities, data, interfaces, configurations, and recovery paths behave as intended under authorized conditions.
+
+REQUIRED OUTCOME
+
+A risk-based security-test plan and evidence package with scope, threat basis, authorization, methods, findings, severity, remediation, retest, limitations, and owner decision.
+
+WHY THIS MATTERS
+
+Security tests can be too narrow, unsafe, stale, or detached from actual threat and user context. A clean scan or passing control test proves only its method, version, coverage, and time.
+
+APPLICABILITY
+
+Apply when a material security property, trust boundary, identity, data, interface, dependency, configuration, or defensive control changes or requires assurance.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no security property or threat-relevant behavior changes and an approved exact baseline provides sufficient current evidence.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use threat model, security architecture, IAM, cryptography, vulnerability, operations, privacy, test, incident, and authorization baselines. Define scope, handling, safety, and stop authority.
+
+REQUIRED INPUTS
+
+Threats, assets, requirements, identities, interfaces, data, versions, configurations, test accounts, methods, exclusions, evidence, findings, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Security owners authorize scope and methods, control sensitive data, interpret findings, approve remediation or exception, and accept residual risk. Testers stop on unsafe or out-of-scope behavior.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft test cases, analyze authorized results, identify control gaps, and propose remediation. It must not scan or exploit without authorization, expose secrets, broaden scope, suppress findings, or declare security from generated analysis.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Security Tester, Security Auditor, Threat Modeler, Penetration Tester, Researcher, Analyst, Implementer, Verifier, Red Team, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Map threats to tests; confirm authority; prepare safe environment and data; test preventive, detective, responsive, and recovery controls; record evidence; triage; remediate; retest; report limits; and reopen on change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show threat, asset, version, method, authority, data, environment, result, severity, evidence, and limitation. Require human review for execution, high-impact findings, containment, disclosure, exception, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support isolated test identities, traceable configurations, safe fixtures, logging, rollback, fault injection, evidence protection, and separation from production authority.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show threat, scope, active test, findings, severity, evidence freshness, remediation, owner, and authorized start, pause, stop, remediate, accept, disclose, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Security-test strategy; threat-to-test matrix; authorization and rules; cases and data; results and findings; remediation and retest; exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, version, threat, method, authorization, environment, data, test, result, time, actor, impact, and limitation. Preserve sensitive evidence with least privilege.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorization, scope, threat coverage, control behavior, logging, findings, remediation, retest, cleanup, privacy, and independent reproduction. Test false positives and missing visibility.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unapproved testing, scanner-only assurance, scope drift, exploit or secret exposure, security test data in production, clean result treated as total security, and findings closed without retest.
+
+RECOVERY AND RECONSIDERATION
+
+Stop, preserve state, contain, notify, clean up, remediate, and reassess affected assets and users. Reopen on threat, version, configuration, dependency, incident, or evidence change.
+
+COMPLETION CRITERIA
+
+Threats, scope, authority, methods, results, findings, remediation, evidence, limitations, owners, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve authorization, cases, findings, evidence, remediation, retest, exceptions, and open gaps. Hand off to Vulnerability, Security Operations, Red Team, Blue Team, Incident Response, Release, and Governance.
+
+RELATED CODEX SECTIONS
+
+045 Security Architecture; 198-209 Security and Protection; 210-212 Penetration, Red, and Blue Teaming; 231-254 Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security and testing context, and the integration roadmap. Exact threats, methods, authorization, environments, data, standards, and acceptance authority remain unresolved.

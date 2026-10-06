@@ -1,0 +1,95 @@
+SECTION 294 — Provisioning
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Create and initialize authorized resources, identities, devices, accounts, environments, data, and configuration with known ownership, security, and lifecycle.
+
+REQUIRED OUTCOME
+
+A provisioning model with request, identity, eligibility, allocation, initialization, secrets, configuration, inventory, validation, handoff, recovery, and deprovisioning.
+
+WHY THIS MATTERS
+
+Provisioning establishes authority and state. Unverified automation can create orphaned resources, excessive privilege, wrong tenant or region, exposed secrets, and no path to clean removal.
+
+APPLICABILITY
+
+Apply when resources, accounts, devices, tenants, environments, services, or data are created or initialized for use.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no resource, identity, allocation, initialization, access, or lifecycle behavior changes and an approved exact baseline applies.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use IAM, authorization, infrastructure, configuration, environment, secrets, data, policy, billing, security, support, and retirement baselines.
+
+REQUIRED INPUTS
+
+Request, requester, owner, eligibility, resource, tenant, region, identity, quota, configuration, secret reference, validation, billing, and deprovisioning.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve eligibility, allocation, identity, access, cost, data, exceptions, and retirement. Humans review high-impact or privileged provisioning and retain appeal.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may validate requests, draft provisioning plans, identify missing metadata, and summarize state. It must not create identities or resources, grant access, choose region, expose secrets, or deprovision without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Provisioning Engineer, IAM Engineer, Infrastructure Engineer, Platform Engineer, Security Auditor, Data Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Validate request and authority; allocate; create; initialize; configure; inject secrets; register; test; notify and hand off; monitor; reconcile; and deprovision or recover.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show requester, owner, resource, tenant, region, identity, cost, data, action, evidence, and limitation. Require human approval for privileged, sensitive, billable, regional, and destructive actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use idempotence, least privilege, policy, quotas, ownership tags, secret injection, inventory, approval, audit, rollback, and clean deprovisioning.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show request, resource, owner, access, tenant, region, cost, status, evidence freshness, and authorized approve, reject, provision, restrict, recover, and deprovision controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Provisioning request and policy; resource and identity record; initialization and validation; cost and ownership; handoff, deprovisioning, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify request, requester, owner, resource, identity, tenant, region, configuration, method, time, result, and limitation. Resource creation proves neither correct authorization nor readiness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify eligibility, ownership, identity, access, tenant, region, configuration, secret, quota, cost, inventory, validation, handoff, and deprovisioning. Test duplicate and partial request.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Orphaned resources, shared identity, wrong tenant, missing owner, secret in output, quota bypass, provisioning without billing, and no clean removal.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict or deprovision unsafe resource, preserve state, rotate credentials, correct metadata, notify owner, and reassess data and cost. Reopen on request, policy, provider, resource, or owner change.
+
+COMPLETION CRITERIA
+
+Request, authority, owner, resource, identity, tenant, region, configuration, cost, evidence, handoff, recovery, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve request, resource, identity, configuration, secrets references, cost, handoff, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Installation, Environment, Platform, Security, Billing, Operations, and Retirement.
+
+RELATED CODEX SECTIONS
+
+200-205 IAM and Protection; 263 Environment; 275-277 Infrastructure and Cloud; 293 Installation; 355 Device Provisioning; 396 Account Closure; 397-400 Decommissioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, identity, infrastructure, security, data, and operations context, and the integration roadmap. Exact resources, identity, tenants, regions, cost, approval, deprovisioning, and acceptance authority remain unresolved.

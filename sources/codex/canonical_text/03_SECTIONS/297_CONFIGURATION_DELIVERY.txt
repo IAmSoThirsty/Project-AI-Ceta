@@ -1,0 +1,95 @@
+SECTION 297 — Configuration Delivery
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Deliver approved configuration changes to exact environments and consumers with version, validation, authorization, observability, rollback, and drift control.
+
+REQUIRED OUTCOME
+
+A configuration-delivery model with source, target, value references, schema, gate, identity, sequence, dependency, health, rollback, audit, and recovery.
+
+WHY THIS MATTERS
+
+Configuration delivery can change behavior without a binary release. Wrong target, stale value, secret exposure, ordering, or incomplete rollback can create broad and invisible impact.
+
+APPLICABILITY
+
+Apply when configuration, policy, feature, environment, routing, threshold, or runtime setting is delivered or activated.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no configuration or runtime behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use configuration, source, environment, feature, deployment, identity, secrets, testing, operations, and rollback baselines.
+
+REQUIRED INPUTS
+
+Change, schema, source, target, value reference, identity, dependencies, gate, sequence, validation, health, rollback, and approval.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve values, target, sequence, security, production, emergency, rollback, and retirement. Humans review secret and safety impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare configs, draft delivery plans, validate schemas, and identify drift. It must not expose values, deliver, activate, change gates, or claim success without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Configuration Manager, Deployment Engineer, Release Engineer, Platform Engineer, Security Auditor, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Validate source and schema; resolve target and authority; stage; deliver; verify; observe; pause or roll back; reconcile; record; and retire obsolete configuration.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show item, target, schema, value reference, identity, impact, evidence, and limitation without revealing secrets. Require human approval for protected and production change.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use versioned source, schema validation, secret references, staged delivery, atomic or ordered change, drift detection, safe default, rollback, and audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show config version, target, drift, health, owner, evidence freshness, dependency, and authorized promote, pause, reconcile, rollback, restrict, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Configuration delivery plan; source and target; schema and validation; rollout and health; rollback and drift; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify config item, version, target, schema, identity, method, time, result, and limitation. Delivery event proves transmission, not correct activation or behavior.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify schema, target, permissions, sequence, dependency, secret boundary, activation, health, drift, rollback, and failure. Test invalid, stale, partial, and conflicting values.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Manual edit, secret in delivery log, wrong target, schema bypass, config drift, no rollback, activation without health, and config change invisible to release history.
+
+RECOVERY AND RECONSIDERATION
+
+Pause, restore prior valid configuration, preserve evidence, rotate secrets, communicate, and reassess behavior. Reopen on config, environment, dependency, policy, or feature change.
+
+COMPLETION CRITERIA
+
+Source, schema, target, identity, sequence, health, rollback, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve config versions, delivery logs, targets, drift, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Configuration, Feature, Deployment, Platform, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+258 Configuration; 290 Deployment; 295 Environment Promotion; 296 Feature Management; 298 Certificate Management; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, configuration, deployment, security, and operations context, and the integration roadmap. Exact configs, targets, schema, secrets, gates, rollback, and acceptance authority remain unresolved.

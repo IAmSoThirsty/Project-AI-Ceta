@@ -1,0 +1,95 @@
+SECTION 281 — Virtualization Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design and operate virtual compute, networks, storage, images, hypervisors, tenancy, isolation, performance, backup, and recovery.
+
+REQUIRED OUTCOME
+
+A virtualization model with host, guest, hypervisor, image, identity, resource, network, storage, tenancy, migration, monitoring, security, and lifecycle ownership.
+
+WHY THIS MATTERS
+
+Virtualization increases utilization and flexibility while concentrating risk. Host compromise, noisy neighbors, image drift, resource overcommit, or shared management can cross guest boundaries.
+
+APPLICABILITY
+
+Apply when virtual machines, hypervisors, images, virtual networks, or virtual storage support a workload or service.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no virtual resource, host, image, tenancy, migration, or management behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use infrastructure, cloud, server, storage, network, identity, image, security, capacity, backup, recovery, and operations baselines.
+
+REQUIRED INPUTS
+
+Hosts, hypervisor, guests, images, resources, identity, network, storage, tenancy, migration, telemetry, backup, recovery, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve host and guest access, overcommit, migration, image, backup, maintenance, recovery, exceptions, and retirement. Humans accept shared-failure risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized inventory, metrics, images, and plans; draft policy and tests; and propose optimization. It must not access hypervisor control, migrate, resize, or delete guests without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Virtualization Engineer, Infrastructure Engineer, Security Auditor, Server Engineer, Storage Administrator, Network Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Inventory hosts and guests; secure management; define isolation and resource; manage images; provision; monitor; migrate; patch; back up; recover; test failure; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show host, guest, image, identity, resource, tenancy, action, evidence, and limitation. Require human approval for privileged, migration, data, host, and destructive action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use management isolation, least privilege, image provenance, resource quotas, network and storage boundaries, live migration controls, host diversity, snapshot policy, and recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show host and guest health, resource, image, tenancy, incidents, evidence freshness, owner, and authorized migrate, resize, isolate, restore, roll back, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Virtualization charter; host and guest catalog; image and resource model; isolation and migration; backup and recovery; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify host, guest, hypervisor, image, resource, tenant, method, time, result, actor, and limitation. Host metric or snapshot proves only its captured state.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify management access, isolation, image, resource, network, storage, migration, backup, restore, host loss, guest failure, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared admin, guest isolation assumed, image without provenance, overcommit without evidence, snapshots as backup, host failure domain ignored, and migration without rollback.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate host or guest, preserve state, restore or migrate, rotate credentials, reconcile data, and reassess shared impact. Reopen on host, hypervisor, image, workload, or provider change.
+
+COMPLETION CRITERIA
+
+Hosts, guests, images, resources, isolation, ownership, evidence, recovery, migration, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve host and guest inventory, images, configurations, migrations, backups, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Servers, Storage, Network, Security, Cloud, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+275 Infrastructure; 277 Cloud; 279-280 Containers and Orchestration; 282 Server Engineering; 284 Network; 286 Storage; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, virtualization, infrastructure, security, and operations context, and the integration roadmap. Exact hypervisor, hosts, guests, tenancy, resource, recovery, and acceptance authority remain unresolved.

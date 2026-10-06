@@ -1,0 +1,136 @@
+SECTION 059 — Embedded Systems Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the structure and lifecycle of processors, firmware, real-time behavior, sensors, actuators, buses, power, memory, updates, diagnostics, safety, and physical integration in embedded systems.
+
+REQUIRED OUTCOME
+
+- A hardware-software context with timing, resources, interfaces, state, control, identity, security, safety, maintenance, and lifecycle.
+- Explicit boot, runtime, fault, update, recovery, calibration, manufacturing, service, and disposal behavior.
+
+WHY THIS MATTERS
+
+Embedded systems combine code with physical constraints and often persist in the field for years. A software fix can change timing, energy, safety, or secure-boot assumptions, while a hardware fault can corrupt software evidence and control.
+
+APPLICABILITY
+
+- Software is integrated with dedicated processors, firmware, sensors, actuators, buses, power, or physical equipment.
+- Timing, resource, update, physical, safety, security, or service constraints have material consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+- No firmware, hardware interface, timing, resource, power, physical, update, or lifecycle effect changes.
+- An approved baseline covers exact device, firmware, environment, and change with no material impact.
+- The artifact is simulation or prototype and explicitly not field-readiness evidence.
+
+Record device, version, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-058 provide requirements, software, hardware, robotics, safety, security, edge, data, and operations context.
+- Hardware, firmware, electrical, safety, manufacturing, service, security, and field authorities are known or gaps recorded.
+
+REQUIRED INPUTS
+
+- Device, processor, firmware, interfaces, timing, memory, power, thermal, sensors, actuators, environment, users, and lifecycle.
+- Boot, update, calibration, diagnostic, safety, security, privacy, manufacturing, maintenance, recovery, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Embedded and product owners approve timing, safety, secure update, field service, calibration, exceptions, and acceptance. Humans retain authority to stop, isolate, update, rollback, replace, recall, and retire devices.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized designs, analyze telemetry, draft firmware tests, identify resource or timing risks, and propose diagnostics. It must preserve device and configuration context. It must not flash devices, alter safety code, bypass secure boot, or declare field safety without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Implementer, Researcher, Analyst, Security Auditor, Tester, Verifier, Governance Reviewer, Critic, Planner, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define device, environment, purpose, users, physical effect, timing, resources, owners, and lifecycle.
+2. Model processor, memory, buses, firmware, boot, sensors, actuators, power, thermal, and diagnostics.
+3. Define real-time, degraded, fail-safe, update, calibration, recovery, manufacturing, service, and disposal states.
+4. Allocate safety, security, privacy, accessibility, observability, evidence, and field-support controls.
+5. Validate with hardware, firmware, electrical, safety, security, manufacturing, service, and affected-user authorities.
+6. Test timing, resource exhaustion, power loss, corruption, bus fault, update failure, recovery, and environmental stress.
+7. Baseline configuration, evidence, decisions, dissent, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show device, firmware, hardware, sensor, authority, update, data, physical effect, and safety state.
+- Require human approval for field updates, calibration, secure-boot changes, safety behavior, and irreversible actions.
+- Preserve physical stop, diagnostic, manual, status, evidence, and recovery controls.
+- Default-deny on unknown device identity, firmware provenance, or safety condition.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate source, build, signed image, installed firmware, boot state, runtime state, telemetry, calibration, and evidence.
+- Define timing, interrupt, watchdog, memory, power, thermal, bus, update, rollback, and fault containment semantics.
+- Enforce secure identity, signed updates, least privilege, diagnostics, logging, and privacy across field paths.
+- Preserve service history and non-destructive compensation or replacement records.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show device identity, hardware, firmware, boot, calibration, mode, health, authority, update, evidence, and lifecycle.
+- Expose stop, isolate, diagnose, update, rollback, replace, recall, restore, and retire actions with authorization.
+- Explain unsafe, degraded, unknown, and service-required states accessibly.
+- Export configurations, commands, telemetry, decisions, evidence, incidents, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Embedded context, hardware-software partition, timing and resource model, interface and boot contract, update and diagnostics plan.
+- Safety, security, calibration, manufacturing, service, field, evidence, recovery, acceptance, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify device, hardware revision, firmware image, configuration, environment, workload, method, date, result, and limitation.
+- Build, bench, simulation, certification, field telemetry, or update evidence proves only its declared scope.
+- Timing, power, thermal, safety, security, update, and recovery evidence identifies conditions and coverage.
+- Missing provenance, calibration, field, or failure evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace requirements through hardware-software allocation, image, device state, physical behavior, evidence, recovery, and retirement.
+- Exercise boot failure, image tamper, power loss, memory exhaustion, timing overrun, bus fault, sensor loss, update interruption, and rollback.
+- Verify device identity, secure update, watchdog, safe state, diagnostics, audit, privacy, and field recovery.
+- Reproduce representative claims from exact hardware, firmware, configuration, and test package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating build success, bench test, signed image, or nominal telemetry as field safety or reliability proof.
+- Ignoring timing, calibration, power, thermal, bus, physical access, service, and update dependencies.
+- Allowing AI or remote administration to bypass secure boot, safety, provenance, or audit.
+
+RECOVERY AND RECONSIDERATION
+
+- On unsafe state, image failure, hardware fault, timing fault, unauthorized update, or evidence loss, enter safe mode and preserve records.
+- Identify device owner, operator, authority, affected users, evidence, service, communication, and review condition.
+- Use diagnostic, rollback, manual service, replacement, recall, restore, compensation, or retirement.
+- Reopen on hardware, firmware, environment, model, update, supplier, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Device, hardware, firmware, timing, resources, interfaces, controls, evidence, service, recovery, and lifecycle are explicit.
+- Boot, fault, update, field, service, degraded, and retirement behavior is addressed or justified.
+- Exact limits and unresolved evidence are recorded; CONTENT-COMPLETE does not imply field readiness.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve device, hardware, firmware, image, calibration, command, telemetry, incident, decision, evidence, dissent, and gaps.
+- Hand off to Hardware, Software, Robotics, Security, Safety, Testing, Manufacturing, Operations, and Retirement.
+- Record changes requiring reopening affected architecture and certification baselines.
+
+RELATED CODEX SECTIONS
+
+- 019-058 Requirements through Robotics Architecture; 060 Hardware Architecture.
+- 068-074 firmware, embedded, IoT, telecommunications, control, and robotics engineering; 198-199 embedded and hardware security; 232, 252 hardware and safety testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-058, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal processor, real-time, safety, secure-boot, update, certification, environmental, or field-service standard is supplied. Actual devices, suppliers, authorities, and evidence remain unresolved.

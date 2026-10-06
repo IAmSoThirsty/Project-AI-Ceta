@@ -1,0 +1,140 @@
+SECTION 040 — Communications Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define human, machine, service, event, voice, text, visual, and emergency communication channels, contracts, meaning, identity, delivery, accessibility, privacy, and continuity.
+
+REQUIRED OUTCOME
+
+- A communications landscape with audiences, senders, receivers, channels, content, timing, identity, authority, delivery, evidence, and lifecycle.
+- Explicit normal, delayed, failed, emergency, multilingual, accessible, offline, and recovery behavior.
+- Traceability from information, processes, applications, networks, events, operations, governance, tests, and retirement.
+
+WHY THIS MATTERS
+
+Communication can create commitments, warnings, records, consent, instructions, or harm. A delivered message is not necessarily understood, authorized, accessible, timely, or complete.
+
+APPLICABILITY
+
+- Systems or organizations exchange consequential human or machine communication.
+- Delivery, interpretation, identity, accessibility, privacy, timing, records, or channel failure affects outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material channel, audience, message meaning, identity, timing, accessibility, privacy, or lifecycle effect changes.
+- An approved baseline covers exact channel and change with no material impact.
+- The artifact is exploratory and not a delivery, comprehension, or notice claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-039 provide requirements, information, processes, applications, network, distributed, security, and operations context.
+- Content, identity, accessibility, privacy, records, carrier, localization, and emergency authorities are known or open.
+
+REQUIRED INPUTS
+
+- Audiences, affected parties, purposes, channels, messages, languages, timing, urgency, consent, jurisdiction, and lifecycle.
+- Delivery, identity, authorization, templates, event, notification, logging, records, accessibility, failure, escalation, and recovery requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Communication owners approve purpose, audience, wording, urgency, channel, consent, commitments, notices, escalation, emergency use, and records. Humans resolve ambiguity and retain authority to pause, correct, retract, escalate, and communicate during failure.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may classify authorized messages, draft content, translate, summarize, route, detect delivery anomalies, and propose templates. It must preserve source, audience, channel, authority, and uncertainty. It must not invent notices, send consequential messages, impersonate, suppress dissent, or declare comprehension without approval and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+	- Architect, Researcher, Analyst, Observer, Planner, Coordinator, Documentation Writer, User Experience Reviewer, Governance Reviewer, Security Auditor, Tester, Verifier, Critic, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define audiences, purpose, message types, channels, identities, urgency, languages, and owners.
+2. Model message creation, review, approval, delivery, receipt, comprehension, correction, escalation, and retention.
+3. Define contracts for content, identity, authorization, timing, ordering, duplication, delivery, evidence, and opt-out.
+4. Address accessibility, localization, privacy, security, records, emergency, offline, and degraded channels.
+5. Validate with users, operators, content, domain, accessibility, privacy, security, legal, and support authorities.
+6. Test delivery, delay, duplication, wrong audience, translation, inaccessible channel, provider loss, correction, and recovery.
+7. Baseline and hand off content, channel, evidence, decisions, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Identify sender, reviewer, AI or automation, recipient, channel, authority, data, and external consequence.
+- Require human review for legal, safety, emergency, rights-affecting, privacy, security, or externally binding messages.
+- Provide accessible status, alternative channel, correction, appeal, and human contact paths.
+- Never let fluent generation, delivery receipt, open rate, or model confidence substitute for truth or comprehension.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate source message, template, generated draft, approved content, transmitted message, receipt, response, record, and evidence.
+- Enforce identity, consent, authorization, rate, audience, privacy, accessibility, and retention across all channels.
+- Define ordering, deduplication, expiry, retry, fallback, translation, and emergency override semantics.
+- Preserve audit and correction when providers, networks, models, or channels fail.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show message, audience, sender, channel, approval, status, urgency, language, accessibility, authority, and evidence freshness.
+- Expose send, hold, correct, retract, escalate, alternate-channel, and recovery actions with actor and impact.
+- Permit authorized pause, revoke, quarantine, resend, and retire actions.
+- Export message history, content versions, delivery evidence, decisions, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Communications context, audience and channel catalog, message and content contracts, identity and approval model.
+- Accessibility, localization, privacy, security, delivery, records, emergency, observability, incident, and recovery designs.
+- Verification, evidence, decision, risk, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify message, version, audience, channel, sender, approval, time, method, result, and limitations.
+- Delivery, receipt, open, response, survey, or simulation evidence proves only its bounded claim and not comprehension or truth.
+- Accessibility and localization evidence identifies population, method, coverage, and limitations.
+- Failed, delayed, wrong-audience, inaccessible, or missing evidence remains visible and constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace a consequential notice from source through authoring, approval, delivery, receipt, response, record, and retention.
+- Exercise wrong recipient, duplicate, delayed, out-of-order, translated, inaccessible, spoofed, retracted, and provider-loss paths.
+- Verify identity, consent, authorization, audit, opt-out, emergency, accessibility, and alternate-channel behavior.
+- Disable channel, model, network, carrier, identity, and evidence services and verify safe fallback.
+- Reproduce representative claims from the exact content and delivery package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating delivery, open rate, or polished wording as comprehension or truth.
+- Sending without identity, approval, audience validation, accessibility, privacy, or correction.
+- Using one channel or language for materially different populations without explicit justification.
+- Allowing AI to impersonate, commit, threaten, or suppress without authority.
+
+RECOVERY AND RECONSIDERATION
+
+- On wrong audience, false content, lost delivery, channel compromise, or evidence failure, pause affected communication and preserve versions.
+- Identify affected parties, owner, authority, correction, notification, evidence, and review condition.
+- Use approved retraction, correction, alternate channel, manual contact, quarantine, or incident response.
+- Reopen on audience, channel, message purpose, language, law, provider, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Audiences, channels, content, identity, authority, accessibility, delivery, evidence, correction, recovery, and lifecycle are explicit.
+- Failure, emergency, localization, offline, and retirement paths are addressed or justified.
+- Exact evidence limits and unresolved gaps are recorded; CONTENT-COMPLETE does not imply understood or accepted communication.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve content versions, audiences, channels, approvals, delivery records, incidents, evidence, dissent, and gaps.
+- Hand off to Information, Network, Integration, API, Event, Security, Privacy, Accessibility, Content, Operations, Testing, and Records.
+- Record changes requiring reopening Application, Data, Governance, Safety, or Compliance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-039 Requirements through Network Architecture; 041-044 Integration through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 088-103 voice, conversational, accessibility, and localization design; 313-318 observability.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-039, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal channel, notice, accessibility, localization, carrier, records, or emergency standard is supplied. Actual audiences, consent, authority, content, and comprehension evidence remain unresolved.

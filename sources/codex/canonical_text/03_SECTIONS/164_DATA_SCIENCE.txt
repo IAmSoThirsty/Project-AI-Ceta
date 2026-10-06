@@ -1,0 +1,103 @@
+SECTION 164 — Data Science
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed scientific investigation of data to answer authorized questions, create explanatory or predictive knowledge, and support decisions without confusing exploratory evidence with validated capability.
+
+REQUIRED OUTCOME
+
+- A research question, hypothesis, population, data basis, method, evaluation plan, and decision boundary.
+- Reproducible experiments with traceable features, assumptions, uncertainty, limitations, and alternatives.
+- Explicit separation of exploration, selection, validation, recommendation, and deployment authority.
+
+WHY THIS MATTERS
+
+Data science combines analysis, statistics, modeling, domain judgment, and experimentation. Without governance, flexible exploration can become undisclosed selection, overfitting, unfair decision support, or an unsupported claim of operational value.
+
+APPLICABILITY
+
+Applies to predictive, explanatory, causal, simulation, optimization, experimentation, or decision-support work using data and models. Depth increases with human impact, automation, external publication, regulated use, or irreversibility.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable for descriptive inspection with no new claim, decision, model, or material data use. Record the bounded rationale, owner, evidence date, and reopening trigger; exploratory code remains subject to access and retention controls.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires authorized objectives, data lineage and quality, domain definitions, statistical method, privacy and security review, and acceptance authority. Depends on Sections 163, 165, 167, 180, and 183 for analysis, statistics, engineering, evaluation, and governance.
+
+REQUIRED INPUTS
+
+Question; hypotheses; data and lawful purpose; labels or outcomes; population; sampling; features; assumptions; baseline; evaluation metric; error costs; subgroup plan; compute; reproducibility environment; and intended use and non-use.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve the research question, sensitive data use, hypotheses, success criteria, subgroup treatment, publication, deployment, and residual risk. Domain and affected-party experts resolve meaning and consequences; the scientist recommends but does not authorize.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate hypotheses, code, features, experiments, summaries, and literature maps when authorized. It must preserve provenance, disclose generated work, flag leakage and uncertainty, and must not fabricate data, citations, experiments, or validation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Researcher, Analyst, Architect, Statistician, Data Governance Reviewer, Privacy Reviewer, Security Auditor, Critic, Tester, Verifier, Documentation Writer, Memory Curator, and Decision Arbiter Advisory. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Frame the question, hypothesis, population, decision, and exclusions.
+2. Audit data provenance, quality, representativeness, consent, and leakage.
+3. Establish baselines, design experiments, and predeclare evaluation where possible.
+4. Run, compare, and stress-test analyses or models.
+5. Assess subgroup, uncertainty, causal, privacy, security, and operational implications.
+6. Record negative results, researcher degrees of freedom, dissent, and open gaps.
+7. Obtain independent review and owner acceptance before consequential use.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose generated code, assumptions, sources, data, evaluation, uncertainty, and human review. AI outputs remain hypotheses or recommendations until accepted. Provide correction, reproducibility, non-AI review, and stop paths; never let fluency substitute for evidence.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version questions, datasets, features, code, environments, experiments, models, metrics, reports, decisions, and artifacts. Isolate exploratory and approved environments. Track lineage, random seeds where relevant, access, compute, dependencies, and invalidation when data or definitions change.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show research state, owner, hypothesis, data, population, method, experiment history, metrics, subgroups, uncertainty, risks, decisions, and evidence freshness. Allow authorized pause, restrict, rerun, reject, accept, publish, withdraw, and reopen actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Research charter; data and feature register; experiment plan; reproducible environment; analysis and model artifacts; evaluation report; subgroup and risk review; decision record; negative-results log; and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify question, source, version, population, method, environment, metric, uncertainty, reviewer, result, and limitation. A notebook, benchmark, or paper is not proof of generalization or deployment fitness. Missing evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce experiments; rerun with held-out and shifted data; test leakage, missingness, confounding, subgroup performance, access controls, and dependency changes; compare to baseline; and verify the claim's scope matches the evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+HARKing; unreported experiments; train-test contamination; convenient outcome definitions; benchmark overreach; silent subgroup exclusion; fabricated citations; irreproducible environments; and treating exploratory novelty as operational validity.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected findings when data, code, method, permission, or evaluation fails. Preserve history, identify downstream decisions, correct or rerun, notify owners, and reopen after drift, changed objectives, new populations, or invalid assumptions.
+
+COMPLETION CRITERIA
+
+Question, data, method, experiments, results, uncertainty, limitations, risks, verification, decisions, and handoff are complete and attributable. Status remains CONTENT-COMPLETE until owner acceptance and source reconciliation.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve research IDs, datasets, code, environments, dependencies, results, negative findings, decisions, dissent, and gaps. Hand off to Statistics, Machine Learning Engineering, Model Evaluation, MLOps, Governance, and Operations with next safe action stated.
+
+RELATED CODEX SECTIONS
+
+163 Data Analysis; 165 Statistics; 167 Machine Learning Engineering; 179 Model Training; 180 Model Evaluation; 183 AI Governance; 184 MLOps; 254 Data Testing; 307 Data Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 030-032, and evidence conventions. Specific scientific discipline standards, lawful data bases, domain outcomes, reproducibility infrastructure, and deployment authority remain unresolved until supplied.

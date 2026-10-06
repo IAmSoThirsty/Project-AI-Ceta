@@ -1,0 +1,95 @@
+SECTION 330 — Failover Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Transfer service, traffic, workload, or control from a failed or degraded component to an alternate while preserving safety, integrity, authority, and recovery evidence.
+
+REQUIRED OUTCOME
+
+A failover model with trigger, authority, primary and alternate, data state, synchronization, health, sequencing, split-brain control, return, rollback, and evidence.
+
+WHY THIS MATTERS
+
+Failover can duplicate authority, lose data, route users to an unready target, or make recovery harder. Redundancy without tested control and reconciliation is not resilience.
+
+APPLICABILITY
+
+Apply when a service, network, data store, region, provider, device, or control plane has an alternate path or instance.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no alternate, continuity, dependency, or availability claim changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use availability, reliability, continuity, DR, backup, restore, network, database, identity, application, and operational readiness baselines.
+
+REQUIRED INPUTS
+
+Primary, alternate, trigger, authority, data sync, health, traffic, dependencies, sequence, split-brain prevention, return, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve trigger, failover, data loss, priority, communication, return, and residual risk. Humans can stop unsafe or duplicate operation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze health and sync metadata, draft failover plans, and recommend action. It must not fail over, switch traffic, promote data, or declare alternate ready without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Failover Engineer, SRE, DR Planner, Network Engineer, Database Administrator, Operations Engineer, Tester, Verifier, Security Auditor, and Incident Commander.
+
+REQUIRED ACTIVITIES
+
+Define trigger and authority; validate alternate; maintain synchronization; test; detect failure; declare; sequence failover; monitor; reconcile; return or retire primary; and record.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show primary, alternate, trigger, health, data point, authority, traffic, evidence, and limitation. Require human approval for declaration, promotion, data, routing, and return.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use independent failure domains, fencing, leader election, quorum, data consistency, health, traffic control, identity, observability, rollback, and split-brain prevention.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show primary and alternate, sync, health, mode, traffic, data loss, evidence freshness, owner, and authorized declare, fence, fail over, reconcile, return, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Failover charter; primary and alternate; trigger and authority; sync and health; exercise and runbook; reconciliation, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify primary, alternate, trigger, version, data point, authority, method, time, result, traffic, integrity, and limitation. A healthy standby proves neither safe promotion nor current data.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify trigger, fencing, sync, health, identity, traffic, data integrity, failover, user outcome, return, rollback, and operator response. Test split brain and stale standby.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Both sides active, standby untested, stale data, failover loop, traffic switched without health, no fence, return without reconciliation, and redundancy treated as recovery.
+
+RECOVERY AND RECONSIDERATION
+
+Fence unsafe primary, preserve evidence, fail over by priority, reconcile, communicate, restore or replace, and reassess data and service impact. Reopen on dependency, sync, trigger, topology, or recovery change.
+
+COMPLETION CRITERIA
+
+Primary, alternate, trigger, authority, sync, fencing, health, traffic, recovery, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve failover records, sync, health, incidents, exercises, decisions, evidence, exceptions, and open gaps. Hand off to DR, Restore, Backup, Network, Database, SRE, and Operations.
+
+RELATED CODEX SECTIONS
+
+322 Availability; 324 Reliability; 326-329 Continuity, DR, Backup, and Restore; 301 SRE; 305 Network; 285 Database; 331 Operational Readiness.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, failover, continuity, data, network, SRE, and operations context, and the integration roadmap. Exact primary, alternate, trigger, sync, RTO/RPO, authority, and acceptance evidence remain unresolved.

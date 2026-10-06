@@ -1,0 +1,103 @@
+SECTION 166 — Operations Research
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed use of mathematical models, optimization, simulation, queuing, scheduling, and decision analysis to improve authorized operations while preserving constraints, human authority, fairness, safety, resilience, and explainability.
+
+REQUIRED OUTCOME
+
+- A decision problem with objective, decision variables, constraints, scenarios, stakeholders, and authority.
+- A validated model with data lineage, assumptions, sensitivity, uncertainty, feasibility, and failure behavior.
+- A recommendation that is explicitly distinct from an authorized operational decision or execution.
+
+WHY THIS MATTERS
+
+Optimization can produce an efficient answer to the wrong objective or consume hidden safety, equity, accessibility, or resilience margins. Operations Research makes objectives and constraints inspectable before a solver's output becomes action.
+
+APPLICABILITY
+
+Applies to allocation, routing, scheduling, capacity, inventory, queues, reliability, staffing, pricing, logistics, simulation, resource planning, or multi-criteria decisions. Review depth rises with scarcity, human impact, automation, and irreversibility.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to descriptive arithmetic or reversible planning with no optimization, simulation claim, external effect, or resource commitment. Record scope, owner, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires an authorized objective, domain and process context, data quality, constraints, decision rights, and validation plan. Depends on Sections 163, 165, 301-323, and 369 for analysis, statistics, operations, performance, and experimentation.
+
+REQUIRED INPUTS
+
+Decision statement; stakeholders; objective hierarchy; variables; hard and soft constraints; capacities; costs; scenarios; data; uncertainty; fairness and safety limits; baseline; solver; runtime budget; and execution authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans set objectives, protected constraints, tradeoffs, priorities, exceptions, and acceptance. They decide whether to act, communicate, or override a recommendation. Analysts cannot relax a constraint or commit resources without explicit authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may formulate alternatives, solve bounded problems, simulate scenarios, and explain sensitivity. It must expose objective and constraint choices and cannot hide infeasibility, manipulate weights, claim optimality without proof, or execute without delegation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Planner, Operations Reviewer, Critic, Security Auditor, Privacy Reviewer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, Optimizer, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+1. Define decision, authority, stakeholders, objective, and exclusions.
+2. Separate hard constraints from preferences and document their precedence.
+3. Audit data, scenarios, uncertainty, and common-cause dependencies.
+4. Build and validate the model against observed cases and baselines.
+5. Test sensitivity, infeasibility, adversarial input, and degraded resources.
+6. Compare alternatives and expose distributional effects and residual risk.
+7. Obtain owner decision and define monitoring, override, and recovery.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show objective, constraints, weights, assumptions, alternatives, uncertainty, and affected parties. Recommendations stay non-binding until approved. Provide manual override, appeal, explanation, and safe halt; prevent conversational changes to constraints from bypassing authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version models, data, solver, parameters, scenarios, constraints, results, decisions, and execution records. Enforce hard constraints at execution boundaries. Preserve feasibility, idempotency, override, audit, rollback-by-compensation, and degraded-mode behavior.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show decision state, objective, constraints, scenario, result, sensitivity, uncertainty, affected groups, owner, and authority. Allow authorized approve, reject, constrain, rerun, pause, override, compensate, and reopen actions. Never show optimal as automatically correct.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Decision charter; model and data specification; constraint register; solver and parameter record; scenario and sensitivity report; feasibility and fairness review; recommendation; decision record; execution or non-execution record; and continuity handoff.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify model, data, version, objective, constraints, scenario, solver, run, result, uncertainty, validation, and limitation. A solver status or simulation is not proof of real-world optimality or outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce runs; remove or vary constraints; test infeasible, stale, missing, adversarial, and extreme inputs; compare baseline and alternative objectives; verify hard constraints at execution; and simulate failure, interruption, override, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Objective gaming; hidden constraints; proxy optimization; false optimality; infeasibility masked by relaxation; fairness traded away in a score; solver success treated as outcome; stale capacity; and automated execution without authority.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or constrain execution when data, model, authority, feasibility, or safety fails. Preserve the recommendation and inputs, identify affected decisions, use approved fallback or manual planning, and reassess before resuming. Reopen after objective, capacity, policy, population, or risk changes.
+
+COMPLETION CRITERIA
+
+Decision, objective, constraints, data, model, validation, sensitivity, recommendation, authority, verification, and recovery are explicit. Status remains CONTENT-COMPLETE until source reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve model IDs, inputs, parameters, solver, scenarios, results, decisions, overrides, execution evidence, dissent, and gaps. Hand off to Data Analysis, Statistics, Data Science, Operations, AI, Testing, Governance, and Incident work.
+
+RELATED CODEX SECTIONS
+
+163 Data Analysis; 165 Statistics; 164 Data Science; 018 Risk Management; 027 Process Architecture; 029 Operational Architecture; 301 Site Reliability Engineering; 321 Capacity Management; 369 Experimentation.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 027-032, and evidence conventions. Actual objectives, constraints, fairness criteria, operational authority, solver standards, sector duties, and outcome data remain unresolved until supplied and verified.

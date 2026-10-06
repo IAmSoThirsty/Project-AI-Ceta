@@ -1,0 +1,135 @@
+SECTION 055 — Knowledge Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how knowledge is represented, sourced, curated, related, retrieved, taught, cited, corrected, governed, and retired for human and machine use.
+
+REQUIRED OUTCOME
+
+- A knowledge landscape with concepts, sources, provenance, authority, versions, relationships, retrieval contexts, users, and lifecycle.
+- Explicit distinction between source fact, interpretation, inference, generated answer, uncertainty, and accepted knowledge.
+
+WHY THIS MATTERS
+
+Knowledge systems can create false authority by blending sources, inference, memory, and generation. Retrieval quality, citations, and fluency do not by themselves establish truth, currency, or suitability for a decision.
+
+APPLICABILITY
+
+- A system stores, retrieves, teaches, summarizes, links, recommends, or generates knowledge for people or machines.
+- Knowledge quality, provenance, access, currency, interpretation, or correction affects outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material knowledge source, meaning, retrieval, provenance, audience, access, or lifecycle effect changes.
+- An approved baseline covers exact domain, sources, audience, and change with no material impact.
+- The artifact is exploratory and not a truth, expertise, or answer-quality claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 016, 030, 047, and 054 provide domain, information, privacy, content, and accessibility context.
+- Domain experts, source authorities, rights, records, privacy, security, accessibility, and user authorities are known or open.
+
+REQUIRED INPUTS
+
+- Concepts, sources, evidence, authorities, versions, relationships, audiences, questions, retrieval, citations, access, correction, and lifecycle.
+- Curation, review, training, generation, retention, withdrawal, and uncertainty requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Knowledge owners and domain experts approve meaning, source authority, curation, conflict resolution, publication, and retirement. Humans decide what is accepted knowledge and retain correction, withdrawal, and appeal authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may classify sources, propose relations, retrieve context, summarize, identify conflicts, and draft knowledge records. It must preserve provenance and uncertainty. It must not fabricate sources, resolve expert conflict as fact, disclose restricted knowledge, or claim expertise without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Researcher, Analyst, Documentation Writer, Architect, User Experience Reviewer, Governance Reviewer, Verifier, Critic, Memory Curator, Tester, Planner, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory knowledge domains, sources, concepts, authorities, audiences, and lifecycle.
+2. Define ontology or vocabulary, provenance, confidence, version, conflict, citation, access, and review.
+3. Model source, derived, inferred, generated, superseded, disputed, and retired knowledge states.
+4. Design retrieval, ranking, context, explanation, correction, withdrawal, and fallback paths.
+5. Validate with domain experts, users, privacy, security, accessibility, legal, records, and support.
+6. Test ambiguity, stale source, conflicting authority, missing citation, restricted source, retrieval failure, and correction.
+7. Baseline and hand off evidence, decisions, dissent, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show source, authority, date, context, confidence limit, transformation, model, and generated status.
+- Require human review for canonical knowledge, sensitive disclosure, high-impact advice, and conflict resolution.
+- Provide citation, correction, appeal, non-AI, and recovery paths.
+- Never treat a fluent answer, rank, or citation count as truth.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate source repository, knowledge record, index, embedding, retrieval result, generated response, citation, and evidence.
+- Preserve lineage, source access, version, expiry, withdrawal, and deletion across indexes, caches, models, and prompts.
+- Bind retrieval and generation to purpose, audience, permission, provenance, and freshness.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show knowledge item, source, authority, version, date, access, confidence, conflicts, model, and lifecycle.
+- Expose review, correct, dispute, restrict, withdraw, supersede, archive, and retire actions.
+- Explain why a source or answer was included, omitted, ranked, or blocked.
+- Export knowledge graph or catalog, lineage, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Knowledge context, concept and source catalog, ontology or vocabulary, provenance and authority model.
+- Retrieval, ranking, citation, generation, correction, conflict, access, privacy, accessibility, and lifecycle design.
+- Evidence, decision, verification, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify source, authority, concept, version, date, context, retrieval, transformation, model, method, and limitation.
+- A citation, retrieval result, expert statement, benchmark, or answer proves only its bounded claim.
+- Conflicting, stale, inaccessible, withdrawn, or missing sources constrain knowledge status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace representative answers or decisions to source, authority, retrieval, transformation, citation, correction, and retirement.
+- Exercise ambiguity, conflict, stale source, restricted source, prompt injection, missing citation, retrieval loss, and withdrawal.
+- Verify permission, provenance, explanation, correction, accessibility, deletion, and fallback.
+- Reproduce representative claims from exact knowledge and evidence package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating retrieval, citation, expertise label, or fluent generation as truth.
+- Blending fact, inference, opinion, and generated content without labels or provenance.
+- Hiding source conflict, stale knowledge, rights, access, or correction paths.
+
+RECOVERY AND RECONSIDERATION
+
+- On false answer, source conflict, injection, provenance loss, restricted disclosure, or stale knowledge, restrict use and preserve history.
+- Identify affected users, domain owner, evidence, correction, communication, and review condition.
+- Use source withdrawal, manual review, restricted mode, correction, reindexing, rollback, or retirement.
+- Reopen on source, domain, audience, model, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Concepts, sources, authority, provenance, retrieval, generation, uncertainty, access, correction, evidence, and lifecycle are explicit.
+- Conflict, stale, restricted, generated, inaccessible, and retired knowledge behavior is addressed or justified.
+- Exact limitations and unresolved source gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve source, concept, relation, version, retrieval, citation, decision, evidence, dissent, and gap identities.
+- Hand off to Information, Content, AI, Machine Learning, Privacy, Security, Accessibility, Testing, Operations, and Records.
+- Record changes requiring reopening Domain, Data, Governance, or AI architecture.
+
+RELATED CODEX SECTIONS
+
+- 016, 030, 047, and 054 Domain, Information, Privacy, and Content Architecture; 056-060 AI through Hardware.
+- 171-177 NLP, knowledge graph, ontology, and semantic engineering; 342 Knowledge Management; 180 Model Evaluation.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 001-054, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal ontology, source authority, evidence threshold, retrieval standard, or domain corpus is supplied. Actual knowledge owners, sources, permissions, and acceptance remain unresolved.

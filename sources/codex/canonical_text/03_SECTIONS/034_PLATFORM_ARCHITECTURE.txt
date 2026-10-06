@@ -1,0 +1,144 @@
+SECTION 034 — Platform Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the shared platform capabilities, boundaries, interfaces, tenancy, policy, runtime services, developer surfaces, and lifecycle that support applications without silently becoming application authority.
+
+REQUIRED OUTCOME
+
+- A platform landscape with capabilities, consumers, owners, trust boundaries, service contracts, quotas, versions, dependencies, and lifecycle.
+- Explicit separation between platform defaults, tenant or application configuration, user data, and governance policy.
+- Availability, isolation, security, accessibility, observability, migration, recovery, and support obligations with evidence limits.
+- Traceability from application and software needs through platform services to infrastructure, operations, tests, and retirement.
+
+WHY THIS MATTERS
+
+Shared platforms amplify both benefit and failure. A default identity rule, quota, logging path, runtime service, or control-plane action can affect many applications at once. Platform Architecture makes blast radius, tenancy, ownership, and safe change visible.
+
+APPLICABILITY
+
+- Multiple applications or teams depend on shared runtime, delivery, identity, data, observability, policy, developer, or integration capabilities.
+- Platform changes can alter isolation, availability, cost, security, privacy, performance, accessibility, or recovery for consumers.
+- The platform provides managed automation, AI services, containers, orchestration, or external provider access.
+
+NON-APPLICABILITY CONDITIONS
+
+- A bounded application-local component has no shared consumers or material platform contract.
+- An approved platform baseline covers the exact service, tenant, environment, version, and change with no material impact.
+- The artifact is exploratory and makes no claim of platform readiness, support, isolation, or effective enforcement.
+
+Record the baseline, scope, owner, consumers, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-033 define requirements, applications, software, data, operations, security, and lifecycle context.
+- Consumer inventory, tenancy model, capacity, provider contracts, identity, policy, support, and recovery authorities are known or marked open.
+
+REQUIRED INPUTS
+
+- Consumer applications, workloads, environments, service objectives, data classes, jurisdictions, criticality, and lifecycle.
+- Platform APIs, quotas, policies, identity model, configuration, deployment, observability, cost, support, incident, and recovery requirements.
+- Supplier, license, model/provider, compliance, accessibility, migration, deprecation, and retirement obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The platform owner approves shared capabilities, defaults, tenant isolation, quotas, provider use, policy enforcement, risk, service commitments, changes, exceptions, and retirement. Consumer owners retain authority over application purpose and data use. Humans can pause, restrict, isolate, revoke, restore, or retire platform functions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory consumers, analyze dependencies and capacity, draft contracts, detect drift, and propose platform changes. It must preserve scope, tenant, version, evidence, and uncertainty. It must not change shared defaults, grant access, declare isolation, accept platform risk, or execute control-plane changes without delegated authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Planner, Coordinator, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory consumers, platform capabilities, dependencies, tenants, trust boundaries, and owners.
+2. Define service contracts, quotas, policies, identities, configuration surfaces, and compatibility rules.
+3. Model control plane, data plane, management plane, failure domains, and blast radius.
+4. Allocate security, privacy, accessibility, reliability, resilience, observability, cost, and support controls.
+5. Define onboarding, isolation, promotion, scaling, downgrade, migration, recovery, deprecation, and retirement.
+6. Validate with consumer owners, operators, security, privacy, accessibility, finance, support, and suppliers.
+7. Exercise tenant failure, quota exhaustion, provider loss, stale policy, unauthorized administration, and recovery.
+8. Baseline contracts, evidence, decisions, open gaps, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Identify platform AI, automation, policy, and administrative actions and their exact authority.
+- Require human review for shared defaults, access, isolation, data use, cost commitments, safety, and irreversible changes.
+- Preserve consumer status, stop, evidence, fallback, and recovery paths when platform models or providers fail.
+- Prevent conversational or tenant-admin shortcuts from bypassing platform controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate control plane, data plane, management plane, tenant configuration, platform state, and consumer state.
+- Represent services, contracts, policies, quotas, dependencies, versions, and blast radius as attributable records.
+- Enforce tenant isolation, identity, authorization, policy, audit, rate limits, and safe defaults at shared boundaries.
+- Provide compatibility, migration, rollback, provider substitution, capacity, and recovery semantics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show platform baseline, consumers, tenants, services, versions, policy state, capacity, incidents, dependencies, and evidence freshness.
+- Expose shared-impact actions, approvals, actor identity, scope, blast radius, and recovery options.
+- Permit authorized pause, restrict, revoke, isolate, restore, rollback, migrate, supersede, and retire actions.
+- Export contracts, consumer impact, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Platform landscape, capability and consumer catalog, tenancy and trust model, service contracts, quota and policy model.
+- Dependency, capacity, cost, observability, security, privacy, accessibility, support, recovery, migration, and retirement designs.
+- Impact, decision, risk, exception, evidence, test, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify platform service, consumer scope, tenant, version, configuration, environment, method, date, result, and limits.
+- A dashboard, successful onboarding, policy file, benchmark, or isolated test proves only its declared scope.
+- Isolation, availability, performance, quota, security, recovery, and support evidence states workload, conditions, coverage, and validity.
+- Missing or failed consumer-impact evidence constrains shared-platform status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace consumer requirements through platform contracts, implementation, deployment, runtime evidence, and retirement.
+- Verify isolation, authorization, quotas, policy enforcement, compatibility, audit, accessibility, and blast-radius boundaries.
+- Exercise noisy neighbor, quota exhaustion, provider loss, control-plane failure, stale policy, credential loss, migration, rollback, and restore.
+- Confirm one tenant cannot bypass controls or corrupt another tenant's state or evidence.
+- Reproduce representative platform claims from the baseline and handoff package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a shared service, default, or green dashboard as universally safe.
+- Hiding consumer dependencies, tenant boundaries, quotas, provider concentration, or control-plane privilege.
+- Changing defaults without impact analysis, migration, communication, or recovery.
+- Optimizing platform utilization while weakening isolation, accessibility, security, reliability, or consumer control.
+
+RECOVERY AND RECONSIDERATION
+
+- On shared failure, policy conflict, tenant isolation risk, provider loss, capacity exhaustion, or evidence failure, restrict the affected scope and preserve records.
+- Identify safe consumers, owner, authority, communications, evidence, and review condition.
+- Use approved isolation, capacity reduction, fallback, substitution, rollback, restore, migration, or retirement.
+- Reopen on consumer, provider, policy, quota, architecture, or lifecycle changes.
+
+COMPLETION CRITERIA
+
+- Consumers, services, boundaries, contracts, policies, quotas, owners, risks, evidence, recovery, and lifecycle are explicit.
+- Shared failure, tenant isolation, migration, support, and retirement are addressed or justified.
+- Exact validity and unresolved gaps are recorded; draft status does not imply readiness or effective enforcement.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve consumer maps, contracts, versions, policies, decisions, incidents, evidence, dissent, and open gaps.
+- Hand off to Infrastructure, Cloud, Network, Security, Identity, Operations, Testing, Deployment, and Retirement sections.
+- Record changes requiring reopening Application, Software, Data, Reliability, Resilience, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-033 Requirements through Software Architecture; 035-044 Infrastructure through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 255-300 delivery and platform lifecycle; 301-406 operations and retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-033, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal tenancy, service-level, quota, platform, provider, pricing, accessibility, or compliance standard is supplied. Actual consumers, capacity, contracts, and acceptance evidence remain unresolved.

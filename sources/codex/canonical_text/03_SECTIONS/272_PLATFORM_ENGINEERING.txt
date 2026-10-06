@@ -1,0 +1,95 @@
+SECTION 272 — Platform Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Create and operate a governed internal platform that gives teams reliable, secure, observable, and self-service capabilities without hiding ownership or imposing unsafe defaults.
+
+REQUIRED OUTCOME
+
+A platform model with users, products, paved paths, interfaces, guardrails, tenancy, identity, self-service, reliability, support, cost, change, feedback, and retirement.
+
+WHY THIS MATTERS
+
+A platform can reduce cognitive load and improve consistency, but an opaque or overcentralized platform becomes a bottleneck, spreads failure, and removes local understanding or control.
+
+APPLICABILITY
+
+Apply when a team provides reusable infrastructure, tooling, workflows, environments, services, templates, or developer-facing capabilities to other teams or users.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no shared platform, self-service product, reusable path, or team dependency changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use enterprise, solution, infrastructure, cloud, security, identity, data, DevOps, operations, support, cost, and product baselines. Identify platform owner, consumers, service boundaries, and feedback authority.
+
+REQUIRED INPUTS
+
+Consumer needs, platform capabilities, interfaces, templates, environments, identity, policy, reliability, cost, support, usage, incidents, roadmap, and retirement constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Platform owners define service commitments, guardrails, support, access, cost, change, exceptions, and retirement. Consumer teams retain responsibility for their workloads and can challenge or exit a platform path.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized platform telemetry and feedback, draft templates and documentation, and propose improvements. It must not provision resources, grant access, change guardrails, hide consumer impact, or claim self-service safety without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Platform Engineer, Architect, Product Manager, User Experience Reviewer, Security Auditor, Operations Engineer, Implementer, Tester, Verifier, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Research consumers; define platform product and boundaries; design paved paths and escape hatches; secure and observe; provision; document; support; measure reliability, cost, adoption, and workload; manage change; and retire or migrate.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show consumer, capability, identity, guardrail, environment, cost, reliability, evidence, and limitation. Require human approval for access, policy, platform-wide change, destructive action, and service commitment.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use stable APIs, versioned templates, tenant isolation, least privilege, self-service with policy, observability, support, rollback, migration, portability, and independent emergency control. Avoid hidden coupling and single control-plane failure.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show platform health, consumers, versions, dependencies, cost, incidents, evidence freshness, support, owner, and authorized provision, restrict, migrate, rollback, override, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Platform charter and product catalog; consumer and service map; paved paths and interfaces; guardrail and access model; reliability and support; cost, change, migration, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify platform capability, version, consumer, environment, resource, policy, method, time, result, cost, reliability, and limitation. Adoption or provisioning count proves neither usefulness nor safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify self-service, isolation, permissions, guardrails, reliability, cost, observability, support, migration, rollback, accessibility, consumer outcome, and platform failure. Test escape hatch and provider loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Platform as gatekeeper, hidden workload transfer, overbroad permissions, template drift, no escape hatch, adoption metric theater, central outage, and consumer responsibility made ambiguous.
+
+RECOVERY AND RECONSIDERATION
+
+Pause unsafe platform capability, protect consumers, restore or roll back, communicate, provide manual or alternate path, and reassess workload and contract impact. Reopen on consumer, platform, provider, policy, or architecture change.
+
+COMPLETION CRITERIA
+
+Consumers, capabilities, boundaries, interfaces, guardrails, ownership, support, cost, reliability, evidence, recovery, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner and consumer acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve platform versions, consumer map, contracts, templates, incidents, decisions, evidence, exceptions, migrations, and open gaps. Hand off to DevOps, DevSecOps, GitOps, SRE, Security, Support, Product, and Governance.
+
+RELATED CODEX SECTIONS
+
+021-028 Enterprise through Functional Architecture; 263 Environment Management; 269-271 DevOps, DevSecOps, and GitOps; 301-330 Operations; 373 Roadmap Management; 389 Deprecation Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, architecture, platform, delivery, operations, and owner-control context, and the integration roadmap. Exact consumers, platform scope, service levels, cost, guardrails, support, portability, and acceptance authority remain unresolved.

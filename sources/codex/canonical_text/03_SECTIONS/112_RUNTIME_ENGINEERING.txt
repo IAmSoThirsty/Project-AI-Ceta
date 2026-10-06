@@ -1,0 +1,98 @@
+SECTION 112 — Runtime Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the design, implementation, verification, operation, and retirement of execution environments that load, schedule, isolate, monitor, and support software.
+
+REQUIRED OUTCOME
+
+A versioned runtime contract covering execution semantics, resources, isolation, compatibility, observability, failure, recovery, security, support, and evidence.
+
+WHY THIS MATTERS
+
+Runtime behavior determines what software actually does under load, failure, concurrency, and hostile input. A healthy process or passing unit test cannot establish runtime safety or correctness.
+
+APPLICABILITY
+
+Applies to virtual machines, interpreters, managed runtimes, containers, schedulers, garbage collectors, loaders, plugin hosts, sandboxes, and execution libraries.
+
+NON-APPLICABILITY CONDITIONS
+
+An application consuming an unchanged supported runtime is not runtime engineering; record the runtime baseline and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires language and functional contracts, resource and isolation model, target environment, threat model, workload, compatibility, observability, recovery, and acceptance authority.
+
+REQUIRED INPUTS
+
+Execution semantics, memory and concurrency model, scheduling, quotas, isolation, startup and shutdown, errors, signals, telemetry, upgrade, platform constraints, tests, and support horizon.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve isolation, resource, safety, privacy, security, compatibility, release, incident, and retirement decisions. Operators retain stop and recovery authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze traces, draft runtime code or tests, and propose tuning. It must not change production scheduling, quotas, isolation, or recovery without delegation and evidence; model advice remains advisory.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Optimizer, Critic, Security Auditor, Governance Reviewer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define execution contract, resources, modes, isolation, dependencies, and non-goals.
+2. Specify lifecycle, scheduling, memory, I/O, concurrency, failure, telemetry, and compatibility behavior.
+3. Implement and test normal, boundary, adversarial, overloaded, interrupted, and degraded execution.
+4. Verify observability, safe shutdown, recovery, upgrade, rollback, support, and retirement.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose runtime version, workload, data, authority, tool or model use, decision, and evidence. Require human review for consequential tuning or isolation changes, with manual stop and fallback.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate runtime definition, configuration, host, workload, process state, telemetry, and artifacts. Enforce quotas, least privilege, sandboxing, backpressure, cancellation, idempotency, and safe upgrade.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show runtime and host identity, mode, resource use, health, authority, dependency state, evidence freshness, active changes, and authorized stop, isolate, restore, and rollback controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Runtime specification, design, source, configuration, compatibility matrix, test and stress results, threat review, telemetry model, runbooks, release, recovery, and retirement records.
+
+EVIDENCE REQUIREMENTS
+
+Identify workload, host, runtime, configuration, resource limits, inputs, environment, method, output, reviewer, and limitations. Health metrics do not prove correct or safe execution.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise scheduling, memory, concurrency, isolation, signals, cancellation, overload, dependency loss, malformed input, upgrade, restore, observability, and safe shutdown; reproduce incidents independently.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unbounded resource use, shared mutable state without control, hidden host dependence, silent data loss on shutdown, missing telemetry, unsafe plugin loading, and tuning that sacrifices isolation or recovery.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or isolate the affected runtime, preserve state and evidence, use an approved fallback or prior version, restore or compensate external effects, and reopen after root-cause and evidence review.
+
+COMPLETION CRITERIA
+
+Execution semantics, resources, isolation, observability, recovery, compatibility, ownership, evidence, and operational support are explicit and verified for declared hosts and workloads.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off runtime contract, configuration, artifacts, host assumptions, telemetry, incidents, decisions, recovery, and open gaps to Software, Platform, Infrastructure, Operations, Security, Testing, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+033-044 Software through Runtime Architecture; 045 Security Architecture; 051-052 Reliability and Resilience Architecture; 112 Runtime Engineering; 130-134 Microservices through Parallel Computing; 301-330 Operations and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Host-specific runtime guarantees, resource budgets, isolation standards, support periods, and recovery objectives remain unresolved.

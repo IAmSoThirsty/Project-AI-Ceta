@@ -1,0 +1,96 @@
+SECTION 091 — AR Design
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define augmented-reality experiences that place digital information or controls in relation to the physical world while preserving comprehension, safety, privacy, and user control.
+
+REQUIRED OUTCOME
+
+ - A scoped user, physical environment, device, tracking, content, task, interaction, safety, privacy, and lifecycle model.
+ - AR behavior, anchors, occlusion, accessibility, evidence, tests, fallback, and acceptance records.
+
+WHY THIS MATTERS
+
+AR can obscure real hazards, misalign information, expose surroundings, and overload attention. Alignment and novelty are not proof of safe use.
+
+APPLICABILITY
+
+Applies to headsets, mobile AR, industrial overlays, navigation, training, maintenance, medical, retail, and collaborative physical-digital experiences.
+
+NON-APPLICABILITY CONDITIONS
+
+No overlay, tracking, physical task, privacy, safety, accessibility, or user-control effect; or an unchanged approved AR baseline with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+Environment and user research, device and tracking limits, spatial model, content, task, physical safety, privacy, identity, accessibility, performance, and acceptance authority.
+
+REQUIRED INPUTS
+
+Environment and user research, device and tracking limits, spatial model, content, task, physical safety, privacy, identity, accessibility, performance, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve overlay purpose, safety, privacy, representation, accessibility, physical boundaries, and acceptance. They retain emergency stop and physical control authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate overlays or analyze spatial context. It must disclose tracking and recognition uncertainty and must not place consequential guidance or command action without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+AR Designer, Spatial Designer, UX and Interaction Designers, Robotics and Safety specialists, Researcher, Accessibility specialist, Security and Privacy Auditors, Tester, Verifier, Critic, Implementer, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Define context, anchors, recognition, overlay, occlusion, field of view, input, warnings, accessibility, privacy, safety, failure, and recovery; prototype and test with representative environments and users.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show physical context, tracking confidence, overlay source, actor, authority, hazard, uncertainty, and safe exit. AI-generated content remains proposed; visual and physical fallbacks remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Define coordinate frames, anchors, calibration, latency, occlusion, depth, data capture, identity, permissions, safe rendering, and degraded or no-tracking behavior.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show environment, device, overlay, confidence, hazards, privacy, evidence, and controls to hide, pause, recalibrate, exit, stop, or recover.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+AR concept and behavior model, environment map, content and anchor specifications, safety and privacy assessment, accessibility tests, prototypes, evidence, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify environment, device, tracking, content, user, task, version, method, result, uncertainty, and limitation. A lab overlay proves bounded conditions only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify alignment, latency, occlusion, tracking loss, physical hazard visibility, privacy, accessibility, motion sensitivity, input, shared space, fallback, and safe exit.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Overlay hiding hazards; stale or false anchors; attention capture; unannounced recording; inaccessible controls; and recognizing a physical object as permission to act.
+
+RECOVERY AND RECONSIDERATION
+
+Hide overlays, return control to physical environment, preserve evidence, stop related actions, notify users, and recalibrate or fall back before resuming.
+
+COMPLETION CRITERIA
+
+Environment, device, overlays, authority, safety, privacy, accessibility, evidence, tests, recovery, open risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve maps, anchors, content, versions, calibration, findings, decisions, evidence, and next action. Hand off to Spatial, VR, XR, HCI, Robotics, Safety, Privacy, Accessibility, and Testing.
+
+RELATED CODEX SECTIONS
+
+090 Spatial Interface Design; 092 VR Design; 093 XR Design; 103 Accessibility Design; 182 AI Safety; 218 Privacy Engineering; 247 Accessibility Testing; 252 Safety Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance files. Actual environments, devices, tracking, physical hazards, data capture, populations, and acceptance thresholds remain unresolved.

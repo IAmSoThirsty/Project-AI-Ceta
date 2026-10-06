@@ -1,0 +1,95 @@
+SECTION 295 — Environment Promotion
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Move an identified artifact, configuration, data change, or capability between environments only after declared evidence, policy, ownership, and readiness conditions are met.
+
+REQUIRED OUTCOME
+
+A promotion model with source and target environment, artifact, configuration, data, gates, approvals, compatibility, migration, health, rollback, and evidence.
+
+WHY THIS MATTERS
+
+Promotion can hide environment drift and turn test evidence into an unsupported production claim. Data, identity, provider, capacity, and operations can change the meaning of a result.
+
+APPLICABILITY
+
+Apply when a candidate moves from development, test, staging, field, canary, or recovery into another environment or population.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no environment, artifact, configuration, data, or audience transition occurs and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use artifact, environment, configuration, testing, acceptance, release, change, data migration, identity, operations, and rollback baselines.
+
+REQUIRED INPUTS
+
+Candidate, source and target, evidence, configuration, data, gates, compatibility, approvals, migration, health, support, and rollback.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve gate interpretation, target, data, migration, risk, exception, timing, and promotion. Humans decide whether evidence transfers honestly between environments.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare environment state, assemble evidence, identify gaps, and draft promotion plans. It must not approve, promote, alter gates, or claim parity without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Release Engineer, Environment Manager, Deployment Engineer, Tester, Verifier, Architect, Operations Engineer, Security Auditor, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+Baseline source and target; compare configuration and dependencies; review evidence; validate data and identity; approve; promote; observe; pause or roll back; record; and update support.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show candidate, source, target, differences, gates, evidence, impact, authority, and rollback. Require human approval for production, sensitive data, migration, and exception.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable artifacts, environment-specific config, policy gates, staged promotion, synthetic or controlled data, health, rollback, migration checkpoints, and audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show source and target, candidate, drift, gates, approvals, health, evidence freshness, owner, and authorized promote, pause, rollback, restrict, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Promotion plan; environment comparison; readiness and approvals; migration and health; rollout and rollback; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, target, artifact, config, data, test, approval, method, time, result, impact, and limitation. Promotion proves movement, not target acceptance or user success.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify artifact, environment, config, data, identity, gates, compatibility, migration, health, rollback, audit, and partial promotion. Test target drift and failed gate.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Environment parity assumed, gate bypass, production data copied, target health stale, configuration overwritten, promotion treated as deployment success, and rollback without data plan.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or roll back, preserve source and target state, restore data, communicate, and reassess evidence transfer and user impact. Reopen on environment, candidate, dependency, data, or gate change.
+
+COMPLETION CRITERIA
+
+Source, target, candidate, gates, approvals, config, data, health, rollback, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve comparisons, approvals, promotions, health, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Deployment, Release, Configuration, Operations, Support, and Governance.
+
+RELATED CODEX SECTIONS
+
+263 Environment; 267-268 Delivery and Deployment; 290 Deployment; 297 Configuration Delivery; 301-330 Operations; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, environment, release, testing, and operations context, and the integration roadmap. Exact environments, gates, data, identity, health, rollback, and acceptance authority remain unresolved.

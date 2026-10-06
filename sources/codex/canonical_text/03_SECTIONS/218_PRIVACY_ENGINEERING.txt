@@ -1,0 +1,95 @@
+SECTION 218 — Privacy Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Translate privacy expectations, obligations, risks, and human control into data, system, process, interface, and lifecycle design.
+
+REQUIRED OUTCOME
+
+A privacy-engineering model with purpose, data inventory, lawful or authorized basis, minimization, notice, choice, access, correction, retention, deletion, security, sharing, automation, incident, and evidence controls.
+
+WHY THIS MATTERS
+
+Privacy harm can arise even when data is accurate and secure. Excess collection, unexpected reuse, opaque inference, indefinite retention, inaccessible controls, and AI-generated conclusions can remove agency or expose people to decisions they cannot understand or contest.
+
+APPLICABILITY
+
+Apply whenever information can identify, describe, infer about, locate, affect, or be linked to a person, household, device, organization, or protected group.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no personal, sensitive, linkable, inferred, behavioral, device, or human-impacting information is processed and an approved exact baseline documents the conclusion.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data, security, identity, user research, legal, regulatory, ethics, accessibility, records, AI, and operations baselines. Identify data owners, subjects, purposes, jurisdictions, processors, transfers, retention, and rights or support authority.
+
+REQUIRED INPUTS
+
+Data inventory and flows, purpose, classification, source, subjects, consent or legal basis, minimization, inference, sharing, access, retention, deletion, security, user controls, incidents, vendors, and unresolved risks.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Privacy and data owners approve purpose, collection, reuse, sharing, retention, deletion, rights handling, automated decisions, exceptions, and residual risk. Humans assess meaningful impact, respond to requests, and decide disputed or high-risk processing.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized schemas and process descriptions, identify data-flow or minimization gaps, draft notices and tests, and summarize privacy evidence. It must not infer consent, legal basis, identity, sensitivity, or acceptable use from data alone. It must not expose personal data, make a rights decision, repurpose data, or deny a request without human authority and review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Privacy Engineer, Researcher, Data Architect, Security Auditor, Legal Advisor, Ethics Reviewer, User Experience Reviewer, Analyst, Tester, Verifier, Governance Reviewer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory and classify data; define purpose and basis; minimize; map flows and inference; assess harms; design notice, choice, access, correction, deletion, retention, sharing, security, and incident controls; test user journeys; monitor drift; and record decisions and exceptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show data source, purpose, subject, sensitivity, processing, retention, authority, evidence, and limitation. Keep personal data out of unnecessary AI context; require human review for rights, high-impact inference, disclosure, deletion, and policy exceptions. Provide accessible explanations and appeal.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate collection, purpose, identity, processing, inference, sharing, storage, access, retention, deletion, audit, and rights services. Minimize and segregate data, enforce purpose and tenant boundaries, support correction and deletion propagation, and make AI inputs and outputs traceable.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show data classes, purposes, flows, processors, access, retention, consent or authority state, user requests, incidents, evidence freshness, and authorized restrict, correct, export, delete, revoke, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Privacy charter; data inventory and flow; purpose and basis register; impact assessment; minimization, notice, rights, retention, deletion, sharing, security, and AI-processing designs; test, decision, evidence, incident, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify data, source, subject, purpose, processing, authority, processor, jurisdiction, time, method, result, owner, and limitation. A notice, consent record, deletion log, or privacy scan proves only its declared scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify collection, purpose, minimization, notice, choice, access, correction, deletion, retention, sharing, inference, security, logging, incident, accessibility, and vendor controls. Test stale consent, identity mismatch, deletion failure, model reuse, and cross-boundary transfer.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Collect first and define purpose later, consent theater, hidden inference, indefinite retention, deletion that leaves replicas, privacy by policy only, inaccessible rights, and personal data placed into uncontrolled AI context.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or restrict processing, preserve required evidence, notify owners and affected people as required, correct or delete unauthorized copies, remediate, and reassess harm and legal duties. Reopen on purpose, population, data, processor, jurisdiction, model, or policy change.
+
+COMPLETION CRITERIA
+
+Data, purpose, authority, subjects, flows, minimization, rights, retention, deletion, security, sharing, owners, evidence, tests, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve inventories, purpose and authority decisions, rights records, assessments, incidents, evidence, exceptions, processor changes, and open gaps. Hand off to Data, Security, IAM, Legal, Compliance, Records, AI, Operations, Support, and Governance.
+
+RELATED CODEX SECTIONS
+
+030 Information Architecture; 031 Data Architecture; 047 Privacy Architecture; 200-205 Identity and Protection; 219-225 Legal, Compliance, Policy, Ethics, IP, Licensing, and Records; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, privacy and data architecture, and the integration roadmap. Exact jurisdiction, lawful or authorized basis, rights, transfer, processor, retention, AI, accessibility, and acceptance requirements remain unresolved.

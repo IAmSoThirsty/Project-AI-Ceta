@@ -1,0 +1,98 @@
+SECTION 119 — Backend Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering of server-side software that provides authorized services, data processing, business rules, interfaces, security controls, and operational behavior.
+
+REQUIRED OUTCOME
+
+A versioned backend contract covering APIs, processes, data, authorization, validation, transactions, observability, scaling, failure, recovery, tests, release, and retirement.
+
+WHY THIS MATTERS
+
+Backend defects can corrupt shared data, expose protected information, or create inconsistent external effects even when the client appears correct.
+
+APPLICABILITY
+
+Applies to services, server applications, workers, jobs, APIs, domain logic, data access, and backend configuration.
+
+NON-APPLICABILITY CONDITIONS
+
+Using an unchanged supported backend without changing behavior, data, access, or lifecycle claims is not backend engineering; record the baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires requirements, domain and process models, API and data contracts, identity, threat model, workload, recovery, support, and acceptance authority.
+
+REQUIRED INPUTS
+
+Service behavior, endpoints, schemas, authorization, transactions, consistency, jobs, queues, errors, idempotency, migrations, telemetry, capacity, and dependencies.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own business outcomes, data protection, authorization, risk, release, support, commitments, and retirement. They approve changes with external or irreversible effects.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft handlers, queries, tests, and diagnostics. It must not invent business rules, access permissions, data meaning, production writes, or acceptance without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Refactorer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Optimizer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define service boundaries, contracts, data, authority, lifecycle, and non-goals.
+2. Implement validation, authorization, transactions, idempotency, observability, and failure handling.
+3. Test normal, invalid, unauthorized, concurrent, duplicate, degraded, migration, and recovery paths.
+4. Release, monitor, support, patch, migrate, and retire with evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Identify human, AI, service, data, and external actors. Require human review for permission, data mutation, policy, and external effects; preserve status, correction, and compensation paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate service code, configuration, secrets, data, queues, caches, jobs, runtime state, and external effects. Enforce server-side authorization, idempotency, transaction boundaries, and safe migration.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show service version, endpoint, data, authority, dependency, queue, deployment, evidence, incident, and recovery state with authorized pause, drain, restore, and rollback controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Service contracts, domain logic, schemas, migrations, source, tests, scans, deployment, telemetry, runbooks, incident, recovery, support, and retirement artifacts.
+
+EVIDENCE REQUIREMENTS
+
+Identify request, identity, data, version, environment, method, result, side effects, reviewer, and limits. Successful HTTP responses do not prove correct outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Trace requirements through endpoint, authorization, data, transaction, tests, release, runtime, and acceptance; exercise retries, duplicates, partial work, dependency loss, and restore.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Client-only authorization, unbounded retries, non-idempotent jobs, hidden data mutation, unsafe migrations, leaked errors, and rollback that ignores committed external effects.
+
+RECOVERY AND RECONSIDERATION
+
+Stop affected writes, preserve logs and data evidence, use approved read-only or prior behavior, restore or compensate, communicate impact, and reopen contracts when assumptions change.
+
+COMPLETION CRITERIA
+
+Backend behavior, data, access, contracts, evidence, support, recovery, and retirement are explicit and verified for the declared release and environment.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off source, contracts, schemas, migrations, telemetry, incidents, decisions, runbooks, recovery, and gaps to Application, API, Integration, Database, Security, Testing, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+117 Application Engineering; 119-131 Application through Distributed Systems Engineering; 031 Data Architecture; 042 API Architecture; 045-047 Security, Identity, and Privacy Architecture; 151-161 Data Engineering; 301-330 Operations and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Domain rules, data classifications, service levels, migration limits, and acceptance thresholds remain unresolved until supplied.

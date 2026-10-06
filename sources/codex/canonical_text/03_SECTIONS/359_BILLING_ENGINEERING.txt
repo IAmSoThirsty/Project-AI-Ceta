@@ -1,0 +1,95 @@
+SECTION 359 — Billing Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Calculate, present, collect, adjust, reconcile, and record charges accurately, transparently, securely, and according to authorized product, contract, tax, and customer terms.
+
+REQUIRED OUTCOME
+
+A billing model with customer, product, price, usage, period, currency, tax, invoice, adjustment, payment dependency, ledger, dispute, audit, and correction.
+
+WHY THIS MATTERS
+
+Billing errors affect money, trust, legal obligations, service access, and records. A generated invoice or successful charge does not prove correct entitlement, price, usage, tax, or customer impact.
+
+APPLICABILITY
+
+Apply when charges, invoices, usage, credits, taxes, adjustments, collections, or financial records are calculated or changed.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no billing, price, usage, customer, invoice, adjustment, or financial obligation changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use commerce, pricing, contracts, payments, subscriptions, usage metering, finance, tax, legal, privacy, identity, and records baselines.
+
+REQUIRED INPUTS
+
+Customer, product, price, usage, period, currency, tax, terms, invoice, ledger, adjustments, payment, dispute, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Billing owners approve price and rule, invoice, adjustment, credit, write-off, dispute, access, and correction. Finance and legal owners approve material accounting or tax decisions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized billing records, identify anomalies, and draft reconciliation or customer explanation. It must not expose payment data, change charges, issue credit, or close disputes without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Billing Engineer, Financial Analyst, Commerce Manager, Payments Engineer, Subscription Manager, Legal Advisor, Data Analyst, Tester, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Define pricing and usage; calculate; validate; invoice; collect; reconcile; adjust; handle dispute; report; secure records; correct; and close or retire billing rule.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show customer, product, usage, period, price, currency, tax, rule, invoice, evidence, authority, and limitation. Require human approval for charge, adjustment, credit, write-off, dispute, and disclosure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable invoice and ledger history, idempotent calculation, usage lineage, versioned price, access segregation, reconciliation, audit, correction, and customer explanation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show invoice, usage, price, period, payment, dispute, evidence freshness, owner, and authorized hold, correct, credit, refund, reconcile, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Billing charter; price and usage; calculation and invoice; ledger and reconciliation; adjustment and dispute; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify customer, product, usage, price version, period, currency, tax, rule, method, time, result, actor, and limitation. Invoice generation proves only calculation execution.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify price, usage, period, tax, currency, entitlement, invoice, ledger, payment, adjustment, refund, dispute, reconciliation, privacy, and audit. Test duplicate, late, corrected, and missing usage.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Price drift, hidden usage, duplicate charge, invoice-ledger mismatch, credit without authority, tax assumption, payment data exposure, and billing status used as product truth.
+
+RECOVERY AND RECONSIDERATION
+
+Hold collection, preserve ledger, correct or reverse, refund or credit, communicate, reconcile, and reassess access and legal impact. Reopen on price, usage, contract, tax, payment, or customer dispute.
+
+COMPLETION CRITERIA
+
+Customer, product, price, usage, period, invoice, ledger, tax, payment, evidence, owners, corrections, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve billing rules, invoices, usage, ledgers, adjustments, disputes, decisions, evidence, exceptions, and open gaps. Hand off to Payments, Commerce, Subscriptions, Revenue, Finance, Legal, Support, and Records.
+
+RELATED CODEX SECTIONS
+
+358 Commerce; 360 Payments; 361 Subscriptions; 362 Revenue Operations; 365 Usage Metering; 359 Billing; 225 Records; 226 Audit.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, commerce, finance, payment, subscription, legal, data, and evidence context, and the integration roadmap. Exact pricing, tax, currencies, rules, ledgers, jurisdictions, disputes, and acceptance authority remain unresolved.

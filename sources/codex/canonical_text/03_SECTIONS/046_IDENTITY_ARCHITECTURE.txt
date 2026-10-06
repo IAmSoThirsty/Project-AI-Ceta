@@ -1,0 +1,139 @@
+SECTION 046 — Identity Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how people, organizations, services, devices, agents, roles, credentials, and delegated authorities are identified, linked, verified, represented, changed, and retired.
+
+REQUIRED OUTCOME
+
+- An identity landscape with subjects, identifiers, attributes, authorities, trust, proofing, federation, lifecycle, and owners.
+- Explicit authentication, delegation, impersonation, recovery, revocation, privacy, audit, and evidence behavior.
+- Traceability from requirements through authorization, applications, data, operations, incidents, tests, and retirement.
+
+WHY THIS MATTERS
+
+Identity is the basis for authority and accountability. Ambiguous subjects, shared credentials, stale roles, weak recovery, or untracked delegation can make every downstream control unreliable.
+
+APPLICABILITY
+
+- People or non-human actors access resources, make decisions, invoke tools, or create records.
+- Identity, federation, attributes, roles, credentials, proofing, or delegation affects material rights or risk.
+
+NON-APPLICABILITY CONDITIONS
+
+- No identity, subject, credential, role, delegation, access, audit, or lifecycle effect changes.
+- An approved identity baseline covers exact scope and change with no material impact.
+- The artifact is exploratory and not an authentication or attribution claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-045 provide requirements, security, applications, data, interfaces, operations, and governance context.
+- Subject, directory, credential, federation, privacy, legal, support, and revocation authorities are known or open.
+
+REQUIRED INPUTS
+
+- Subjects, identifiers, attributes, roles, resources, proofing, authentication, federation, delegation, recovery, jurisdictions, and lifecycle.
+- Credential, secret, session, audit, privacy, accessibility, break-glass, support, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Identity owners approve subject classes, proofing, role meaning, delegation, federation, recovery, exceptions, and retirement. Resource owners approve access. Humans retain authority to revoke, suspend, correct, investigate, and restore identity.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory identity flows, detect anomalies, compare role definitions, draft tests, and recommend review. It must preserve subject and evidence context. It must not infer identity, approve access, impersonate, reset credentials, or declare proofing sufficient without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Security Auditor, Governance Reviewer, Tester, Verifier, Critic, Observer, Implementer, Documentation Writer, Memory Curator, Planner, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory subjects, identifiers, attributes, roles, credentials, directories, providers, resources, and owners.
+2. Define proofing, authentication, federation, delegation, session, recovery, revocation, and audit semantics.
+3. Model joiner, mover, leaver, service, device, agent, emergency, compromised, and retired states.
+4. Minimize identity data and allocate privacy, security, accessibility, support, and continuity controls.
+5. Validate with users, resource owners, security, privacy, legal, HR or equivalent, support, and domain authorities.
+6. Test spoofing, replay, privilege, stale role, federation loss, recovery abuse, revocation, and break-glass.
+7. Baseline and hand off identity records, evidence, decisions, dissent, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show subject, proof, credential, role, authority, delegation, resource, actor, and consequence.
+- Require human approval for privileged access, delegation, impersonation, recovery, exception, and irreversible identity changes.
+- Preserve non-AI recovery, status, appeal, revocation, and evidence paths.
+- Never let behavioral similarity, model confidence, or convenience substitute for identity proof.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate subject identity, identifier, attributes, credential, session, role, authorization decision, audit, and evidence.
+- Bind credentials and delegated capability to scope, purpose, expiry, audience, and revocation.
+- Enforce identity consistently across UI, API, batch, events, admin, AI, offline, and emergency paths.
+- Preserve historical attribution without retaining unnecessary sensitive identity data.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show subject, role, sessions, credentials, delegated authority, resources, provider, status, evidence, and lifecycle.
+- Expose approve, deny, revoke, suspend, recover, correct, investigate, and retire actions with actor and scope.
+- Explain access and denial without disclosing protected information.
+- Export identity history, decisions, evidence, dissent, incidents, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Identity context, subject and identifier catalog, proofing and federation model, credential and role lifecycle.
+- Delegation, session, recovery, revocation, privacy, security, accessibility, audit, support, and retirement designs.
+- Verification, evidence, decision, risk, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify subject class, provider, proofing, credential, role, scope, time, method, actor, result, and limitation.
+- Login, token, directory, attestation, or anomaly evidence proves only its bounded claim.
+- Access evidence distinguishes authentication from authorization and attribution.
+- Stale, failed, inaccessible, or missing identity evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace identity from proofing through session, authorization, action, audit, revocation, recovery, and retirement.
+- Exercise spoofing, replay, credential theft, stale role, federation loss, delegated expiry, reset abuse, and break-glass.
+- Verify least privilege, separation, attribution, privacy, accessibility, audit, and revocation across all paths.
+- Disable directory, identity provider, key, network, model, and evidence services and verify safe behavior.
+- Reproduce representative identity claims from exact records.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a valid credential as valid authority or a login as proof of safe attribution.
+- Shared accounts, perpetual roles, unbounded delegation, weak recovery, hidden impersonation, or stale directories.
+- Allowing AI or admin convenience to bypass proofing, consent, authorization, or audit.
+
+RECOVERY AND RECONSIDERATION
+
+- On compromise, proofing dispute, provider loss, stale role, or evidence failure, suspend affected authority and preserve records.
+- Identify safe access, owner, subject impact, authority, evidence, communication, and review condition.
+- Use approved credential rotation, reproofing, manual recovery, restricted mode, revocation, or retirement.
+- Reopen on subject, role, provider, policy, population, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Subjects, identifiers, proofing, credentials, roles, authority, delegation, recovery, evidence, and lifecycle are explicit.
+- Compromise, provider loss, recovery, break-glass, migration, and retirement are addressed or justified.
+- Exact validity and unresolved gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve identity, role, credential, delegation, session, decision, evidence, incident, dissent, and gap identities.
+- Hand off to Security, Privacy, Governance, Compliance, Application, API, Operations, Testing, and Records.
+- Record changes requiring reopening all affected access and architecture sections.
+
+RELATED CODEX SECTIONS
+
+- 019-045 Requirements through Security Architecture; 047-060 Privacy through Hardware Architecture.
+- 200-205 identity, authentication, authorization, cryptography, keys, and secrets management; 246-251 testing and compliance.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-045, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal proofing, federation, role, privacy, accessibility, or identity assurance standard is supplied. Actual subjects, providers, authorities, recovery, and evidence remain unresolved.

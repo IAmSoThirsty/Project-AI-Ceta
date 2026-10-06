@@ -1,0 +1,98 @@
+SECTION 138 - Game Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of interactive games and game-like simulations, including deterministic or networked state, input, rendering, audio, progression, safety, accessibility, integrity, distribution, and live operation.
+
+REQUIRED OUTCOME
+
+A game-engineering baseline with authoritative state, client behavior, content and asset provenance, performance, accessibility, privacy, anti-abuse, release, telemetry, recovery, and retirement rules.
+
+WHY THIS MATTERS
+
+Players experience the runtime directly, and small state, timing, network, or accessibility errors can destroy fairness, safety, trust, or continuity.
+
+APPLICABILITY
+
+Applies to games, interactive simulations, game services, engines, clients, servers, multiplayer systems, tools, and live content platforms.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to noninteractive media or a static prototype with no gameplay, state, input, player, network, or distribution claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires game design, platform targets, player populations, authoritative state model, content rights, privacy, accessibility, safety, networking, moderation, monetization, performance, release, and support authority.
+
+REQUIRED INPUTS
+
+Provide mechanics, inputs, state, physics, timing, content, assets, progression, network, accounts, moderation, accessibility, telemetry, monetization, performance, and recovery requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve player safety, content, fairness, privacy, monetization, moderation, release, and acceptance. Humans retain authority over bans, purchases, resets, and live-service commitments.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate or test content, diagnose performance, and suggest balancing. It must preserve provenance, avoid unsafe or discriminatory content, and never alter live economy, bans, or player state without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Game Designer, User Experience Reviewer, Accessibility specialist, Security Auditor, Analyst, Implementer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define player, platform, game state, input, content, network, authority, and lifecycle.
+2. Implement deterministic or authoritative behavior, accessible interaction, secure accounts, and recoverable persistence.
+3. Test mechanics, performance, compatibility, networking, abuse, content, economy, and recovery.
+4. Operate live changes with review, telemetry, rollback, support, and retirement.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show player, client, server, state, latency, content source, AI involvement, evidence, and consequence. Human approval is required for live content, moderation, purchases, and player-state mutation; status and appeal remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate authoritative state, client prediction, rendering, input, physics, assets, accounts, economy, moderation, telemetry, and platform services. Define replay, rollback, anti-cheat, rate limits, and compensation for interrupted effects.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show build, server state, session, latency, errors, content version, economy, moderation, incidents, accessibility, and controls to pause events, restore state, compensate, or retire content.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Game-engineering charter, state and network model, platform matrix, content and asset provenance, accessibility and safety records, security and abuse model, test evidence, live-ops runbook, and retirement plan.
+
+EVIDENCE REQUIREMENTS
+
+Identify build, client, server, platform, session, inputs, content, configuration, test method, result, and limits. Separate frame rate, network health, mechanic correctness, player outcome, safety, and engagement evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify input, state authority, save and restore, reconnect, prediction, cheating, moderation, accessibility, content, performance, purchases, economy, migration, and safe shutdown.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Client-authoritative rewards; inaccessible controls; pay-to-fail recovery; untested netcode; opaque bans; unproven generated content; and treating engagement or frame rate as player wellbeing or fairness.
+
+RECOVERY AND RECONSIDERATION
+
+Pause affected systems, preserve sessions and ledgers, restore authoritative state, compensate valid effects, appeal moderation, communicate impact, and reopen live-change approval.
+
+COMPLETION CRITERIA
+
+State, content, authority, safety, accessibility, evidence, recovery, live change, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve build, content, asset rights, state, sessions, decisions, evidence, incidents, and next safe action. Hand off to Game Design, Graphics, Audio, Network, Security, Testing, Operations, Payments, and Retirement.
+
+RELATED CODEX SECTIONS
+
+094 Game Design; 105 Prototyping; 138 Game Engineering; 139 Graphics Engineering; 142 Audio Engineering; 197 Mobile Security; 217 Trust and Safety; 239-249 Testing sections.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 075-106 and 107-137, Owner Cockpit Requirements, and Status and Evidence Lexicon. Game platform rules, player protection obligations, content rights, monetization law, moderation policy, and service objectives remain unresolved.

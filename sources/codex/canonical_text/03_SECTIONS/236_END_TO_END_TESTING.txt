@@ -1,0 +1,95 @@
+SECTION 236 — End-to-End Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Validate complete user, operator, data, control, and recovery journeys across system boundaries from initiating action through observable outcome.
+
+REQUIRED OUTCOME
+
+An end-to-end test model with journey, actors, versions, dependencies, data, environment, expected outcome, evidence, failure and recovery behavior, and user acceptance limits.
+
+WHY THIS MATTERS
+
+Users experience journeys, not components. A complete flow can fail through identity, data, timing, support, communication, deployment, or recovery even when each internal test passes.
+
+APPLICABILITY
+
+Apply when a material outcome crosses multiple components, teams, providers, roles, or lifecycle states and must be validated as experienced.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no cross-boundary journey or material user or operator outcome changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use user research, requirements, architecture, integration, system, identity, data, support, operations, and recovery baselines. Define representative actors, data, environment, and safe test authority.
+
+REQUIRED INPUTS
+
+Journey, actors, roles, versions, components, providers, data, states, expected outcomes, accessibility, failure, support, recovery, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners and users define meaningful outcomes; testers execute; domain, accessibility, security, and operations reviewers judge their concerns. Humans approve production-like data and acceptance.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft journeys, fixtures, assertions, and analysis from authorized sources. It must not claim user experience, accessibility, or end-to-end success without actual representative execution and human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+User Experience Reviewer, Tester, Systems Engineer, Analyst, Researcher, Implementer, Verifier, Accessibility Reviewer, Security Auditor, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Select critical journeys; define actors and states; prepare data and dependencies; execute normal, boundary, error, support, accessibility, security, and recovery paths; observe user and system results; remediate; retest; and preserve limitations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show journey, actor, data, version, environment, step, result, evidence, and limitation. Require human review for user meaning, accessibility, safety, recovery, and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support trace correlation, deterministic reset, dependency substitution with fidelity labels, state cleanup, user-visible errors, support hooks, audit, rollback, and safe test data.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show journey, current step, actor, dependency, result, failures, evidence freshness, owner, and authorized run, pause, recover, accept, reject, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Journey catalog; end-to-end plan; actor and data record; environment and dependency record; results, defects, user findings, recovery, acceptance, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify journey, actor, version, step, dependency, data, environment, method, result, time, observer, and limitation. Automation completion proves only execution, not meaningful user outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify journey semantics, data, identity, authorization, communication, accessibility, errors, support, recovery, cleanup, and independent reproduction. Include representative and adverse conditions.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Synthetic journey unlike real use, missing support or recovery, hidden manual steps, dependency stubs mistaken for reality, and end-to-end pass used to hide poor component evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve trace and user impact, reset safely, remediate, provide support, and rerun. Reopen on journey, user, dependency, version, policy, or operational change.
+
+COMPLETION CRITERIA
+
+Journeys, actors, dependencies, data, outcomes, failures, recovery, user evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending user and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve journey and environment versions, traces, defects, user findings, decisions, evidence, exceptions, and open gaps. Hand off to Acceptance, Regression, Performance, Support, Release, and Operations.
+
+RELATED CODEX SECTIONS
+
+001 Research; 019 Requirements; 020 Systems Engineering; 231-235 Testing; 237 Acceptance Testing; 238 Regression Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, user, system, and testing context, and the integration roadmap. Exact journeys, users, environments, data, accessibility, support, recovery, and acceptance authority remain unresolved.

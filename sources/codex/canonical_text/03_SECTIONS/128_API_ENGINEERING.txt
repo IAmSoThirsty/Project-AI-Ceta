@@ -1,0 +1,98 @@
+SECTION 128 - API Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of application programming interfaces that expose capabilities, data, commands, events, or decisions to authorized consumers with explicit contracts, identity, authority, compatibility, evidence, and lifecycle.
+
+REQUIRED OUTCOME
+
+A versioned API baseline with purpose, consumers, schemas, errors, security, limits, observability, compatibility, test evidence, owner, change policy, and retirement path.
+
+WHY THIS MATTERS
+
+An API is a durable boundary. Ambiguous semantics, weak authorization, unsafe retries, undocumented limits, or unmanaged versions turn local defects into systemic impact.
+
+APPLICABILITY
+
+Applies to REST, GraphQL, RPC, command, query, event, file, SDK, internal, partner, or machine interfaces that cross a responsibility or trust boundary.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to purely internal computation with no caller, boundary, contract, external effect, or integration claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires requirements, domain and data models, identity, authorization, threat model, schemas, ownership, SLO or quality expectations, compatibility policy, observability, testing, and lifecycle authority.
+
+REQUIRED INPUTS
+
+Provide use cases, consumers, resources, operations, schemas, identity, permissions, idempotency, pagination, limits, errors, versioning, privacy, audit, availability, recovery, and deprecation requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve semantics, access, data exposure, commitments, compatibility, rate limits, changes, exceptions, and retirement. Humans retain authority over consequential commands and production promotion.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft schemas, clients, tests, documentation, and diagnostics. It must not invent contracts, expose data, broaden authorization, execute commands, or declare compatibility without evidence and approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Security Auditor, Privacy Reviewer, Implementer, Tester, Verifier, Governance Reviewer, Documentation Writer, Coordinator, Memory Curator, Observer, Critic, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define purpose, consumers, authority, data, operations, errors, and lifecycle.
+2. Specify schemas, invariants, idempotency, ordering, limits, compatibility, observability, and recovery.
+3. Implement contract-first with secure validation, versioned tests, and staged deployment.
+4. Monitor use and failures, manage change, deprecate consumers, and retire with notice and fallback.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show operation intent, identity, authorization, data scope, dry-run status, evidence, and consequence. Human approval is required for material mutations; no conversational route bypasses API controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate transport, contract, policy, domain, data, and side-effect boundaries. Define authentication, authorization, replay protection, idempotency, timeout, retry, rate limits, audit, tracing, and compensation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show API version, owner, consumers, health, error rate, latency, limits, schema changes, authorization decisions, incidents, evidence freshness, and controls for pause, throttle, revoke, rollback, and deprecate.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+API charter, contract and schema, security and privacy record, consumer catalog, version and compatibility matrix, test suite, observability plan, change and deprecation records, and runbook.
+
+EVIDENCE REQUIREMENTS
+
+Identify endpoint or operation, version, caller, data, configuration, environment, method, expected and actual result, trace, date, and limits. Keep contract, security, performance, and outcome evidence distinct.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authentication, authorization, validation, replay, idempotency, ordering, pagination, limits, errors, retries, timeouts, schema compatibility, audit, tracing, abuse resistance, and compensation for partial effects.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Undocumented side effects; authorization by UI; unsafe retries; leaking errors; unbounded queries; silent schema breaking; missing tenant isolation; and treating a successful response as successful business outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Throttle or disable affected operations, preserve evidence, revoke credentials, use prior compatible version or manual process, compensate completed side effects, notify consumers, and reopen the contract.
+
+COMPLETION CRITERIA
+
+Purpose, ownership, contract, security, evidence, compatibility, observability, consumers, change, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve contract version, schemas, consumers, decisions, traces, test evidence, incidents, open gaps, and next safe action. Hand off to API Architecture, Integration, Security, Data, Testing, Operations, Release, and Deprecation sections.
+
+RELATED CODEX SECTIONS
+
+042 API Architecture; 128 API Engineering; 129 Integration Engineering; 041 Integration Architecture; 019 Requirements Engineering; 045 Security Architecture; 200 Identity and Access Management; 234 Integration Testing; 389 Deprecation Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 041-042 and 107-127, Owner Cockpit Requirements, and Status and Evidence Lexicon. Sector-specific API standards, legal data constraints, consumer commitments, latency objectives, and retention rules remain unresolved until supplied.

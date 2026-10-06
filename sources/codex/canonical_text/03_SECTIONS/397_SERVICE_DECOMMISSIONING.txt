@@ -1,0 +1,95 @@
+SECTION 397 — Service Decommissioning
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Stop and remove a service safely after users, data, dependencies, access, contracts, operations, and continuity obligations are resolved.
+
+REQUIRED OUTCOME
+
+A service-decommissioning model with owner, consumers, replacement, dependencies, data, access, DNS, certificates, billing, support, records, shutdown, evidence, and recovery.
+
+WHY THIS MATTERS
+
+Service shutdown can strand users, leave credentials or routes active, lose data, break dependencies, or create a false completion claim. Decommissioning is a controlled lifecycle transition.
+
+APPLICABILITY
+
+Apply when a service, API, application, platform capability, background job, endpoint, or customer-facing offering stops operating or accepting work.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no service, consumer, data, access, dependency, contract, or operating state ends and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use sunset, deprecation, account, data, records, DNS, certificate, billing, support, security, operations, and continuity baselines.
+
+REQUIRED INPUTS
+
+Service, owner, consumers, replacement, endpoints, data, dependencies, access, DNS, certificates, billing, support, records, and shutdown plan.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Service owners approve shutdown, consumer migration, data retention, access revocation, communication, contract, billing, and final completion. Humans resolve exceptional users and dependencies.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory authorized consumers, dependencies, and endpoints and draft shutdown checklists. It must not disable service, revoke access, delete data, or declare complete without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Service Manager, Architect, Operations Engineer, Migration Engineer, Security Auditor, Data Engineer, Support Reviewer, Legal Advisor, Verifier, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+Define reason and scope; inventory consumers and dependencies; notify and migrate; close work; preserve or delete data; revoke access; remove endpoints, DNS, certificates, jobs, billing, monitoring; shut down; verify; and archive.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show service, consumers, dependencies, data, access, endpoints, authority, evidence, and limitation. Require human approval for notice, disablement, deletion, access, billing, and final closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use dependency discovery, drain, queue closure, data export, access revocation, DNS and certificate cleanup, billing state, monitoring retirement, and rollback or recovery window.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show service phase, consumers, dependencies, data, access, endpoints, support, evidence freshness, owner, and authorized drain, migrate, pause, disable, preserve, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Decommissioning charter; consumer and dependency map; migration and communication; data and access; shutdown and verification; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, version, consumer, dependency, endpoint, data, access, method, time, result, owner, and limitation. Shutdown command proves neither consumer migration nor cleanup.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify consumer inventory, drain, replacement, data, access, DNS, certificates, billing, jobs, monitoring, support, records, security, and no unintended endpoint.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shutdown before migration, hidden consumer, active credential, DNS or certificate left, data deleted early, monitoring gap, billing continues, and completion by process stop.
+
+RECOVERY AND RECONSIDERATION
+
+Pause shutdown, restore or reopen service where possible, protect data, communicate, migrate, revoke, and reassess. Reopen on consumer, dependency, data, contract, or incident discovery.
+
+COMPLETION CRITERIA
+
+Service, consumers, dependencies, migration, data, access, endpoints, support, evidence, owners, cleanup, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve service inventory, migrations, shutdown, access, incidents, communications, decisions, evidence, exceptions, and open gaps. Hand off to Infrastructure, Data, DNS, Certificates, Billing, Support, Security, and System Retirement.
+
+RELATED CODEX SECTIONS
+
+390 Sunset; 396 Account Closure; 299 DNS; 298 Certificates; 391-395 Data Lifecycle; 301-332 Operations; 406 System Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, service, migration, data, identity, customer, legal, and operations context, and the integration roadmap. Exact services, consumers, dependencies, contracts, data, cleanup, recovery, and acceptance authority remain unresolved.

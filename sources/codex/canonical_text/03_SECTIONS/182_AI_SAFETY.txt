@@ -1,0 +1,103 @@
+SECTION 182 — AI Safety
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the identification, prevention, evaluation, monitoring, containment, and recovery of AI harms, including unsafe capability, misuse, failure, loss of control, human impact, and system interaction risk.
+
+REQUIRED OUTCOME
+
+- A safety case with hazards, affected parties, severity, likelihood, controls, evidence, residual risk, and authority.
+- Tested safe states, refusal, interruption, fallback, incident, communication, and compensation paths.
+- No claim of safety beyond declared scope and evidence.
+
+WHY THIS MATTERS
+
+AI failures can scale, persist, deceive, discriminate, or interact with tools and institutions. Safety is a system property requiring human authority and recovery, not a model score or warning label.
+
+APPLICABILITY
+
+Applies to any AI system with material user, public, physical, environmental, financial, privacy, security, rights, or autonomy consequence. Depth is proportional to hazard and reversibility.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to bounded non-AI work or analysis with no AI claim or consequence. Record exact scope and reopen if capability, use, population, or integration changes.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires system boundary, hazard analysis, domain and user evidence, threat model, evaluation, operating concept, incident authority, and owner acceptance. Depends on Sections 050, 167-170, 180, 181, 183-185, and 188.
+
+REQUIRED INPUTS
+
+Use; hazards; affected parties; model and system; tools; data; autonomy; operating environment; constraints; safety requirements; tests; monitoring; stop and fallback; communications; and compensation authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own safety decisions, hazard acceptance, release, emergency action, notification, and retirement. Independent safety specialists may block unsafe work. AI cannot self-certify safety or waive a hazard.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may identify hazards, generate scenarios, simulate failures, and monitor bounded signals. It must expose uncertainty and escalate. It must not suppress safety findings, redefine hazards, or continue after revoked authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Safety Auditor, Architect, Researcher, Analyst, Critic, Red Team, Tester, Verifier, Governance Reviewer, Security Auditor, Privacy Reviewer, UX Reviewer, Documentation Writer, Memory Curator, and Human-in-the-Loop Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define safety scope, hazards, affected parties, severity, and authority.
+2. Build safety case and map hazards to requirements, controls, tests, and evidence.
+3. Assess misuse, emergent interaction, autonomy, provider, data, and human factors.
+4. Test normal, boundary, adversarial, degraded, loss-of-control, and recovery cases.
+5. Validate stop, isolation, refusal, fallback, communication, appeal, and compensation.
+6. Monitor incidents, near misses, drift, controls, and evidence freshness.
+7. Review residual risk and reopen on material change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show hazard, control, state, authority, uncertainty, stop condition, reviewer, and evidence. Humans must have effective interruption and appeal. Safety information cannot be hidden behind model confidence, automation, or a conversational interface.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent hazards, controls, safety requirements, states, interlocks, evidence, incidents, decisions, and compensations as versioned or immutable records. Enforce safety at system boundaries and preserve independent stop and audit paths.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show safety case, open hazards, control status, evidence, incidents, authority, current mode, and safe actions. Provide authorized stop, isolate, revoke, restrict, notify, compensate, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Safety charter; hazard log; safety case; control and interlock design; evaluation and red-team report; incident and near-miss register; emergency runbook; decision and residual-risk record; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Each safety claim identifies hazard, scope, system version, scenario, control, test, result, uncertainty, reviewer, date, and limitation. A test suite, refusal rate, or compliance statement is not universal safety evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise unsafe input, tool misuse, prompt injection, loss of monitor, authority expiry, provider loss, human absence, sensor failure, physical stop, fallback, communication, compensation, and recovery. Verify controls cannot be bypassed through alternate paths.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Safety as documentation only; hazard omission; model-only boundary; no independent stop; warning as control; risk accepted by default; hidden near misses; and recovery dependent on the failed AI system.
+
+RECOVERY AND RECONSIDERATION
+
+Contain and stop affected behavior on a credible hazard or control failure. Preserve immutable decisions and evidence, protect affected parties, communicate, compensate where authorized, investigate independently, and require fresh safety review before resuming.
+
+COMPLETION CRITERIA
+
+Hazards, controls, tests, evidence, residual risk, authority, stop, recovery, communication, and reopening are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve safety case, hazards, controls, tests, incidents, decisions, traces, compensations, dissent, and gaps. Hand off to Governance, Security, Privacy, Reliability, Operations, Evaluation, MLOps, Model Operations, and HITL.
+
+RELATED CODEX SECTIONS
+
+018 Risk Management; 050 Safety Architecture; 182 AI Safety; 183 AI Governance; 214 Incident Response; 244 Resilience Testing; 252 Safety Testing; 253 Model Testing; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Safety Architecture, AI Engineering, and evidence lexicon. Actual hazards, safety standards, affected parties, control authority, emergency powers, and residual-risk criteria remain unresolved.

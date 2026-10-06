@@ -1,0 +1,95 @@
+SECTION 232 — Hardware Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Evaluate hardware behavior, interfaces, tolerances, safety, reliability, manufacturing variation, environmental response, and integration against declared requirements.
+
+REQUIRED OUTCOME
+
+A hardware-test strategy with representative units, fixtures, instrumentation, conditions, limits, safety controls, data integrity, failures, coverage, acceptance, and lifecycle limitations.
+
+WHY THIS MATTERS
+
+Hardware behavior varies with component lot, temperature, power, wear, assembly, environment, and interaction. A single bench result cannot prove field reliability, safety, or behavior outside its configuration.
+
+APPLICABILITY
+
+Apply when physical components, boards, devices, sensors, actuators, enclosures, interfaces, or manufacturing variation affect a requirement or operational outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no physical behavior, interface, tolerance, safety, reliability, or manufacturing claim changes and an approved exact baseline applies.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use hardware, embedded, safety, quality, manufacturing, environmental, security, and requirements baselines. Define units, fixtures, calibration, hazards, test authority, and acceptance owner.
+
+REQUIRED INPUTS
+
+Requirements, drawings, revisions, bill of materials, tolerances, units, environments, loads, fixtures, instrumentation, hazards, prior failures, data plan, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Hardware and safety owners approve conditions, hazards, destructive testing, sample size, deviations, and acceptance. Qualified testers protect people and equipment; owners decide whether a result represents the population.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may organize authorized specifications, test data, failure patterns, and calibration records; draft procedures and analysis; and propose bounded experiments. It must not control hazardous equipment, infer safety, alter data, or accept a unit without qualified human supervision.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Hardware Tester, Hardware Engineer, Safety Reviewer, Quality Engineer, Researcher, Analyst, Observer, Implementer, Verifier, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define requirements and risks; select representative units; verify fixtures and calibration; establish safe conditions; execute functional, boundary, environmental, durability, interface, and recovery tests; record failures; analyze variation; retest; and report limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show unit, revision, fixture, calibration, condition, load, instrument, method, result, hazard, and limitation. Require human approval for hazardous, destructive, field, or safety-relevant testing and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide test points, instrumentation, safe isolation, fixture control, unit identity, environmental control, traceable data, and recovery from power, sensor, actuator, and communication failure.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show unit population, revision, condition, active test, hazard, calibration, failure, evidence freshness, owner, and authorized pause, stop, quarantine, accept, retest, and dispose controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Hardware test plan; unit and fixture record; calibration and condition record; results and failures; variation and coverage analysis; retest, acceptance, safety, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify unit, revision, lot, fixture, calibration, condition, load, instrument, method, time, result, operator, and limitation. A bench pass or certification proves only its declared conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify fixtures, calibration, unit identity, safety, functional and boundary behavior, environmental limits, variation, repeatability, failure response, recovery, and data integrity. Reproduce material failures independently.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uncalibrated instruments, nonrepresentative unit, unsafe setup, cherry-picked result, data alteration, tolerance ignored, destructive test without authority, and bench behavior treated as field proof.
+
+RECOVERY AND RECONSIDERATION
+
+Stop unsafe testing, isolate unit and fixture, preserve data, investigate, repair or replace under authority, and reassess population and acceptance. Reopen on revision, lot, environment, requirement, or failure-pattern change.
+
+COMPLETION CRITERIA
+
+Units, conditions, fixtures, requirements, hazards, results, failures, coverage, evidence, acceptance, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve unit and fixture identity, calibration, data, failures, decisions, evidence, exceptions, and open gaps. Hand off to Hardware, Embedded, Manufacturing, Safety, Quality, Release, Operations, and Disposal.
+
+RELATED CODEX SECTIONS
+
+058 Hardware Engineering; 060 Firmware Engineering; 199 Hardware Security; 228-230 Quality; 231 Software Testing; 233-242 Test Levels; 350-354 Manufacturing; 398-400 Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, hardware, safety, quality, and evidence context, and the integration roadmap. Exact units, standards, environment, calibration, sample, hazards, and acceptance authority remain unresolved.

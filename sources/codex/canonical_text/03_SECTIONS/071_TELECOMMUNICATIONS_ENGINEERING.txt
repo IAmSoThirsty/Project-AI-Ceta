@@ -1,0 +1,107 @@
+SECTION 071 — Telecommunications Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the engineering of telecommunications systems that convey authorized information, signaling, voice, video, or control across shared or dedicated transmission resources, including spectrum, timing, interoperability, quality, resilience, and lawful operation.
+
+REQUIRED OUTCOME
+
+ - A bounded service, endpoint, medium, protocol, spectrum, traffic, user, operator, jurisdiction, and lifecycle scope.
+ - Explicit interfaces, identity, authorization, quality, capacity, availability, privacy, security, emergency, and recovery obligations.
+ - Evidence linking network behavior to user and service outcomes.
+
+WHY THIS MATTERS
+
+Communications failures can prevent emergency action, corrupt control, disclose sensitive content, or create cascading outages. Nominal throughput is not sufficient: timing, loss, jitter, contention, coverage, interoperability, lawful use, and recovery determine real service.
+
+APPLICABILITY
+
+Applies to wired, wireless, optical, satellite, radio, cellular, voice, messaging, media, signaling, control, and carrier or private communications systems with material service or physical consequences.
+
+NON-APPLICABILITY CONDITIONS
+
+ - A local conceptual diagram with no operational, interoperability, spectrum, privacy, security, service, or physical-effect claim.
+ - An approved telecommunications baseline is unaffected by a reversible documentation correction and impact is recorded.
+ Record the baseline, scope, evidence date, authority, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+ - Requirements, network and communications architecture, spectrum or regulatory constraints, endpoints, protocols, traffic models, service objectives, security, privacy, safety, and continuity needs.
+ - Coverage, capacity, interference, latency, jitter, loss, redundancy, carrier, equipment, configuration, monitoring, emergency, and restoration evidence.
+
+REQUIRED INPUTS
+
+ - Approved objective, service scope, endpoints, media, spectrum, traffic, users, operators, environments, jurisdictions, and lifecycle horizon.
+ - Requirements, protocols, quality, capacity, security, privacy, safety, regulatory, continuity, monitoring, vendor, and restoration constraints.
+ - Coverage, capacity, interference, latency, jitter, loss, redundancy, equipment, configuration, emergency, and service evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans authorize service purpose, spectrum or regulatory use, endpoints, lawful intercept or privacy boundaries, service commitments, emergency priority, security, capacity, acceptable risk, and release. They decide outages, traffic restrictions, emergency operation, vendor escalation, and retirement.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze traces, propose topology or capacity options, classify alarms, model traffic, and draft test plans. It must preserve measurement context, configuration, endpoint identity, and uncertainty. It must not reconfigure routes, spectrum, priority, lawful controls, or service commitments without delegated authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Observer, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Planner, Coordinator, Critic, Red Team, Documentation Writer, Memory Curator, Optimizer, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+1. Establish service scope, endpoints, media, spectrum, traffic, users, operators, environments, and modes.
+2. Define addressing, identity, authorization, protocol, timing, ordering, quality, capacity, priority, and interface contracts.
+3. Model normal, congested, partitioned, degraded, emergency, maintenance, roaming, failover, and restoration behavior.
+4. Assess interoperability, interference, supply chain, privacy, security, resilience, accessibility, and regulatory constraints.
+5. Exercise load, loss, jitter, delay, replay, spoofing, failover, power loss, route changes, and emergency priority.
+6. Baseline evidence and obtain authorized service acceptance.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show endpoint identity, route, service mode, traffic priority, quality, capacity, freshness, authority, privacy and security state, active changes, and stop or failover actions. AI recommendations expose measurements and uncertainty; operators can override safely without bypassing audit or authorization.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Define layered interfaces, timing and synchronization, addressing, routing, redundancy, queueing, admission, congestion, encryption, key and identity boundaries, observability, service isolation, emergency traffic, graceful degradation, store-and-forward, failover, and restoration. Separate service definition from live network state.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Expose topology, endpoints, protocols, spectrum or medium, quality, capacity, alarms, dependencies, configuration, authority, evidence freshness, and authorized actions to approve, pause, isolate, reroute, fail over, restore, downgrade, or retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Communications architecture and interface-control records; traffic and capacity model; quality and service objectives; identity, privacy, security, emergency, resilience, and recovery design; configuration and change records; test, measurement, incident, and continuity package.
+
+EVIDENCE REQUIREMENTS
+
+Identify endpoint, path, medium, configuration, workload, time, location, instrument, method, actor, result, uncertainty, and limitation. A lab link, average latency, carrier statement, or dashboard proves only bounded conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify addressing and identity, protocol interoperability, timing, capacity, loss, jitter, congestion, priority, encryption, failover, emergency traffic, partition, spoofing, replay, accessibility, monitoring, restoration, and independent reproduction under representative load and geography.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Planning for bandwidth only; hidden shared failure domains; unowned spectrum or endpoints; unauthenticated control; indefinite queues and retries; treating carrier availability as end-to-end service; suppressing alarms; and failing over without evidence or privacy review.
+
+RECOVERY AND RECONSIDERATION
+
+Protect affected users and services, preserve traffic and configuration evidence, isolate faults, apply approved degraded or emergency mode, reroute or fail over, and communicate limits. Reconsider after quality, authority, security, privacy, regulatory, safety, and recovery conditions are reverified.
+
+COMPLETION CRITERIA
+
+Scope, service contracts, endpoints, protocols, traffic, quality, capacity, controls, modes, evidence, recovery, support, regulatory assumptions, open risks, and acceptance authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve topology, endpoint and configuration identity, measurements, changes, incidents, decisions, vendor contacts, spectrum or regulatory records, evidence, and continuation point. Hand off to Network, Communications, Integration, API, Security, Operations, Reliability, Resilience, and Support sections.
+
+RELATED CODEX SECTIONS
+
+039 Network Architecture; 040 Communications Architecture; 042 API Architecture; 043 Event-Driven Architecture; 071 Telecommunications Engineering; 284 Network Engineering; 305 Network Operations; 318 Alerting; 322 Availability Management; 327-330 Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-069, and owner-control and evidence conventions. Specific carrier, spectrum, regulatory, geographic, accessibility, emergency, and service-level requirements remain unresolved until supplied.

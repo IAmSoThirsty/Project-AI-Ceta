@@ -1,0 +1,95 @@
+SECTION 224 — Licensing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Select, record, comply with, monitor, and retire licenses governing software, data, content, services, models, hardware, and other received or distributed material.
+
+REQUIRED OUTCOME
+
+A license inventory and compliance model with asset, version, licensor, rights, restrictions, notices, obligations, consumers, distribution, approval, renewal, exception, and evidence.
+
+WHY THIS MATTERS
+
+Licenses create conditions on use, modification, distribution, attribution, disclosure, data, support, and termination. Package presence or a license file does not prove compatibility, notice delivery, or compliance in the shipped context.
+
+APPLICABILITY
+
+Apply when the work consumes, modifies, embeds, distributes, trains on, publishes, or operates licensed software, data, content, models, APIs, hardware, or services.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no licensed or restricted asset, dependency, distribution, notice, renewal, or termination obligation is affected and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use IP, Legal, Procurement, Security, Privacy, Supply Chain, Build, Release, Records, and Vendor baselines. Identify licensors, versions, transitive dependencies, recipients, jurisdictions, and approval authority.
+
+REQUIRED INPUTS
+
+Asset and dependency inventory, license text, version, source, licensor, rights, restrictions, notices, obligations, distribution model, consumers, contracts, renewals, exceptions, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners and counsel approve license selection, compatibility, distribution, attribution, disclosure, renewal, termination, exceptions, and risk. Humans resolve ambiguous or conflicting terms and approve shipped artifacts.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory dependencies, extract supplied license terms, compare obligations, draft notices and questions, and identify missing records. It must not interpret ambiguous terms conclusively, approve compatibility, remove notices, accept risk, or distribute material without qualified human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+License Analyst, Legal Advisor, IP Analyst, Procurement Analyst, Researcher, Governance Reviewer, Verifier, Documentation Writer, Critic, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Inventory direct and transitive assets; capture source and version; identify terms and obligations; assess compatibility and distribution; generate notices; approve exceptions; monitor change and renewal; validate shipped artifacts; handle termination or claim; preserve records.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show asset, version, source, license, obligation, restriction, distribution, jurisdiction, evidence, and uncertainty. Require human or counsel review for ambiguous, reciprocal, data, model, export, termination, or high-impact terms.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Connect source, dependency, build, artifact, license, notice, consumer, distribution, and retirement records. Gate builds and releases on approved compatibility and retain notices and obligations with the exact artifact.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show license, asset, version, owner, obligations, distribution, notice, renewal, exception, evidence freshness, and authorized approve, restrict, replace, remediate, withdraw, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+License register; dependency and provenance map; compatibility assessment; notice and attribution package; approval and exception record; renewal and termination plan; test, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, version, source, licensor, license, contract, artifact, distribution, method, reviewer, result, and limitation. A package manager record or license filename proves only its captured metadata.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify transitive coverage, exact version, license text, compatibility, notices, artifact inclusion, distribution, renewal, termination, and withdrawal. Test dependency update, missing metadata, license conflict, and build failure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+License assumed from package name, transitive dependency ignored, notices dropped, incompatible terms combined, expired entitlement, and distribution before approval.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict affected artifact or distribution, preserve records, notify owners and counsel, replace or remediate material, correct notices, and assess downstream recipients. Reopen on dependency, license, contract, artifact, jurisdiction, or distribution change.
+
+COMPLETION CRITERIA
+
+Assets, versions, licensors, terms, obligations, artifacts, owners, approvals, notices, evidence, exceptions, recovery, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve license and dependency records, notices, approvals, exceptions, renewals, claims, artifacts, evidence, and open gaps. Hand off to IP, Legal, Procurement, Supply Chain, Build, Release, Records, and Governance.
+
+RELATED CODEX SECTIONS
+
+219 Legal; 220 Regulatory Compliance; 223 Intellectual Property; 225 Records Management; 348 Procurement; 388 Version Management; 397-400 Decommissioning and Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, IP and legal context, and the integration roadmap. Exact asset inventory, license policy, contract terms, jurisdictions, notices, renewals, and acceptance authority remain unresolved.

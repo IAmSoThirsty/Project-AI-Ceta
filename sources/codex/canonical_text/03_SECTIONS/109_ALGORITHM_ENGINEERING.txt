@@ -1,0 +1,100 @@
+SECTION 109 — Algorithm Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the selection, design, implementation, analysis, testing, tuning, deployment, monitoring, and retirement of algorithms that transform inputs into outputs or decisions under explicit correctness, complexity, resource, security, fairness, safety, and human-control constraints.
+
+REQUIRED OUTCOME
+
+A specified algorithm with contract, assumptions, complexity, resource limits, implementation, test evidence, alternatives, failure behavior, monitoring, and acceptance boundaries.
+
+WHY THIS MATTERS
+
+Algorithmic errors can be systematic, invisible, amplified by scale, or mistaken for neutral automation. Engineering must expose tradeoffs, edge cases, distribution changes, adversarial inputs, and the difference between technical output and authorized decision.
+
+APPLICABILITY
+
+Applies to deterministic, randomized, heuristic, optimization, search, ranking, scheduling, control, cryptographic, statistical, or learned algorithms with material system effects.
+
+NON-APPLICABILITY CONDITIONS
+
+A trivial explanatory example or bounded refactoring with no algorithmic behavior, contract, performance, data, risk, or evidence effect may be exempt. Record the algorithm baseline and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires requirements, objective function, input and output contracts, data characteristics, constraints, threat model, resource budget, quality measures, and acceptance authority. Domain, privacy, security, safety, and accessibility obligations must be identified.
+
+REQUIRED INPUTS
+
+Problem definition, inputs, outputs, invariants, objective, constraints, complexity target, workload, data, error tolerance, adversary model, baseline, alternatives, test oracle, evidence method, and lifecycle conditions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve the objective, tradeoffs, protected constraints, acceptable error, risk, deployment, and use of outputs in consequential decisions. They ensure affected parties and qualified reviewers are represented.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose algorithms, explain tradeoffs, generate reference implementations and tests, find counterexamples, and analyze traces. It must expose assumptions and uncertainty, not fabricate complexity or benchmark results, and must not select or deploy a consequential algorithm without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Optimizer, Tester, Verifier, Critic, Red Team, Security Auditor, User Experience Reviewer, Governance Reviewer, Documentation Writer, and Memory Curator. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define the problem, objective, output use, constraints, and non-goals.
+2. Characterize inputs, distributions, missingness, adversarial conditions, and workload.
+3. Specify invariants, contracts, complexity, accuracy, latency, resource, fairness, safety, and failure requirements.
+4. Compare alternatives and implement a reference and production candidate.
+5. Test ordinary, boundary, malformed, adversarial, shifted, unavailable, duplicate, and worst-case inputs.
+6. Measure, review, monitor, tune, version, release, and retire with evidence and rollback or compensation paths.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose algorithm identity, version, data, configuration, objective, authority, reviewer, and result. Human review is required for protected outcomes, ranking, denial, allocation, safety, privacy, or external effects. Preserve explanation, appeal, and manual fallback.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version algorithm, parameters, data assumptions, random seeds, dependencies, test oracle, and evaluation environment. Separate reference, benchmark, production, and observed behavior. Design idempotency, resource limits, monitoring, drift detection, safe fallback, and retirement.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show algorithm version, objective, input scope, output use, quality, resource and evidence status, drift, incidents, approvals, and available stop, quarantine, fallback, supersede, and rollback or compensation controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Algorithm specification, contract, rationale, alternatives, reference implementation, production implementation, complexity analysis, test suite, benchmark, threat and fairness review, monitoring, release, and retirement records.
+
+EVIDENCE REQUIREMENTS
+
+Record data, workload, environment, configuration, seed, metrics, uncertainty, baselines, excluded populations, reviewer, and limitations. Benchmark results do not prove field performance or acceptable outcomes.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify invariants, correctness, complexity, resource limits, reproducibility, boundary and adversarial behavior, data shift, accessibility, security, fairness where applicable, fallback, monitoring, and independent acceptance.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Optimizing a proxy while harming the outcome, ignoring worst-case behavior, leaking sensitive inputs, treating ranking as neutral, using stale benchmarks, hiding error distributions, and deploying without drift or fallback controls.
+
+RECOVERY AND RECONSIDERATION
+
+On defect, drift, unsafe output, resource exhaustion, or evidence loss, stop or narrow use, preserve inputs and outputs, notify the owner, use an approved prior version or manual path, and record compensation for external effects. Reopen when objective, data, constraints, or population changes.
+
+COMPLETION CRITERIA
+
+The algorithm and its use are bounded, specified, implemented, independently tested, evidenced, accepted for the exact scope, monitored, and supported by a truthful recovery and retirement plan.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off algorithm identity, contracts, data assumptions, tests, benchmarks, risks, incidents, decisions, evidence, dissent, and next actions to Software, Data, AI, Security, Operations, Testing, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+108 Computer Science; 019 Requirements Engineering; 028 Functional Architecture; 031 Data Architecture; 056-057 AI and Machine Learning Architecture; 132-135 Computing sections; 167-180 AI Engineering through Model Evaluation; 208 Threat Modeling; 239-245 Performance and Reliability Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Domain-specific fairness, safety, statistical, cryptographic, and regulatory thresholds remain unresolved until the system owner supplies them.

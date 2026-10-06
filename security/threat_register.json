@@ -1,0 +1,260 @@
+{
+  "analysis_status": "DESIGN_THREATS_NOT_OBSERVED_INCIDENTS",
+  "threats": [
+    {
+      "id": "TH-01",
+      "title": "Model-generated permission",
+      "failure_condition": "Kernel accepts a caller-built permit or role string as authority.",
+      "component_owner": "CMP-02",
+      "tests": [
+        "B057",
+        "B059",
+        "B063"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-02",
+      "title": "Prompt injection via files",
+      "failure_condition": "Untrusted source instructions widen tools, egress or memory access.",
+      "component_owner": "CMP-07",
+      "tests": [
+        "B029",
+        "B051",
+        "B065"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-03",
+      "title": "Stale approved candidate",
+      "failure_condition": "The reviewed input changes before action.",
+      "component_owner": "CMP-14",
+      "tests": [
+        "B031",
+        "B046",
+        "B070",
+        "B114"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-04",
+      "title": "Crash duplication",
+      "failure_condition": "An uncertain effect is replayed after restart.",
+      "component_owner": "CMP-05",
+      "tests": [
+        "B060",
+        "B098",
+        "B103"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-05",
+      "title": "History rollback",
+      "failure_condition": "A modified prefix or removed tail still supports positive authority.",
+      "component_owner": "CMP-03",
+      "tests": [
+        "B011",
+        "B012",
+        "B013"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-06",
+      "title": "Local endpoint impersonation",
+      "failure_condition": "Another process receives private prompts at the expected port.",
+      "component_owner": "CMP-16",
+      "tests": [
+        "B068",
+        "B074"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-07",
+      "title": "Path alias escape",
+      "failure_condition": "A junction, stream, hardlink or rename changes the actual resource accessed.",
+      "component_owner": "CMP-14",
+      "tests": [
+        "B065",
+        "B069",
+        "B070"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-08",
+      "title": "Credential inheritance",
+      "failure_condition": "Untrusted children inherit handles, environment or load paths.",
+      "component_owner": "CMP-14",
+      "tests": [
+        "B067",
+        "B071"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-09",
+      "title": "Cross-project leakage",
+      "failure_condition": "Retrieval reveals private content or existence outside scope.",
+      "component_owner": "CMP-08",
+      "tests": [
+        "B037",
+        "B117"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-10",
+      "title": "Unbounded internal work",
+      "failure_condition": "Feedback loops, watchers or queues exhaust recovery capacity.",
+      "component_owner": "CMP-05",
+      "tests": [
+        "B020",
+        "B042",
+        "B115"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-11",
+      "title": "False model competence",
+      "failure_condition": "A fluent probe hides failed instructions or actual task quality.",
+      "component_owner": "CMP-25",
+      "tests": [
+        "B081",
+        "B082",
+        "B085"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-12",
+      "title": "Evaluation contamination",
+      "failure_condition": "Held-out results are trained against or selectively suppressed.",
+      "component_owner": "CMP-25",
+      "tests": [
+        "B086",
+        "B087"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-13",
+      "title": "False independent review",
+      "failure_condition": "Role relabeling or shared producer logic claims independence.",
+      "component_owner": "CMP-12",
+      "tests": [
+        "B045",
+        "B126"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-14",
+      "title": "Fake protected-domain separation",
+      "failure_condition": "Local keys/containers are sold as independent authority domains.",
+      "component_owner": "CMP-19",
+      "tests": [
+        "B090",
+        "B091",
+        "B096"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-15",
+      "title": "Incorrect ciphertext/permit binding",
+      "failure_condition": "A new session key cannot decrypt unchanged ciphertext, or approval replays.",
+      "component_owner": "CMP-19",
+      "tests": [
+        "B092",
+        "B093"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-16",
+      "title": "Secret residues and metadata",
+      "failure_condition": "Sensitive information persists in logs, buffers or derived indexes.",
+      "component_owner": "CMP-18",
+      "tests": [
+        "B038",
+        "B089",
+        "B095"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-17",
+      "title": "Corrupt identity reset",
+      "failure_condition": "Missing keys trigger replacement authority beside historical records.",
+      "component_owner": "CMP-04",
+      "tests": [
+        "B101",
+        "B108"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-18",
+      "title": "Migration loss",
+      "failure_condition": "Unknown or divergent records are silently discarded.",
+      "component_owner": "CMP-23",
+      "tests": [
+        "B105",
+        "B106",
+        "B109",
+        "B111"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-19",
+      "title": "Supply-chain identity mismatch",
+      "failure_condition": "A frozen binary loads unqualified dependencies or an old installer is relabeled.",
+      "component_owner": "CMP-24",
+      "tests": [
+        "B075",
+        "B122",
+        "B123"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    },
+    {
+      "id": "TH-20",
+      "title": "Coercive interaction controls",
+      "failure_condition": "Tone is mislabeled as attack or synthetic results are shown as real.",
+      "component_owner": "CMP-20",
+      "tests": [
+        "B120",
+        "B041",
+        "B044"
+      ],
+      "treatment_status": "REQUIRED_NOT_IMPLEMENTED",
+      "residual_risk_status": "UNASSESSED_UNTIL_TESTED"
+    }
+  ]
+}

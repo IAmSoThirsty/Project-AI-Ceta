@@ -1,0 +1,139 @@
+SECTION 039 — Network Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define network zones, paths, identities, trust boundaries, addressing, routing, transport, performance, availability, monitoring, and lifecycle for authorized communication.
+
+REQUIRED OUTCOME
+
+- A network context and topology with zones, endpoints, flows, owners, dependencies, controls, failure domains, and lifecycle.
+- Explicit connectivity, segmentation, identity, authorization, encryption, naming, routing, capacity, observability, and recovery contracts.
+- Traceability from application, platform, data, security, operations, tests, evidence, and retirement.
+
+WHY THIS MATTERS
+
+Network paths are control boundaries as well as transport. Overbroad reachability, ambiguous trust, unmanaged DNS, hidden egress, or untested failover can turn a local defect into broad compromise or outage.
+
+APPLICABILITY
+
+- Systems communicate across hosts, zones, sites, clouds, devices, suppliers, or public networks.
+- Reachability, latency, segmentation, routing, naming, availability, privacy, or interception has material consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material path, endpoint, zone, identity, routing, exposure, or lifecycle effect changes.
+- An approved baseline covers exact topology and change with no material impact.
+- The artifact is exploratory and not a connectivity, security, or availability claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-038 provide requirements, applications, data, distributed behavior, cloud, infrastructure, security, and operations context.
+- Addressing, identity, DNS, certificates, providers, physical links, monitoring, incident, and recovery authorities are known or open.
+
+REQUIRED INPUTS
+
+- Endpoints, zones, users, services, data classes, trust, flows, protocols, ports, latency, capacity, availability, jurisdictions, and lifecycle.
+- Firewall, routing, DNS, certificate, identity, segmentation, logging, detection, backup, failover, maintenance, and retirement obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Network owners approve zones, reachability, exposure, routing, identity, certificates, providers, maintenance, exceptions, risk, and retirement. Workload and security owners approve required flows and residual risk. Humans retain isolate, revoke, reroute, restore, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized topology, flows, logs, capacity, and policy drift, and draft bounded rule or test proposals. It must preserve endpoint and time context and must not alter routes, firewalls, DNS, certificates, or exposure or declare security without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Observer, Planner, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory endpoints, zones, links, providers, owners, flows, trust boundaries, and failure domains.
+2. Define addressing, naming, routing, segmentation, identity, authorization, encryption, and exposure rules.
+3. Model normal, congested, partitioned, failover, maintenance, emergency, migration, and retirement modes.
+4. Define flow contracts, observability, filtering, alerting, capacity, and recovery.
+5. Validate with application, platform, cloud, security, privacy, operations, and site owners.
+6. Test unauthorized reachability, egress, spoofing, DNS failure, certificate expiry, congestion, partition, and failover.
+7. Baseline topology, evidence, decisions, open gaps, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show endpoint, zone, identity, data, path, authority, actor, exposure, and consequence for network changes.
+- Require human review for public exposure, segmentation, privileged routes, certificate, DNS, and emergency changes.
+- Preserve out-of-band status, evidence, isolate, console, and recovery paths when network automation fails.
+- Prevent chat or break-glass shortcuts from bypassing audit and policy.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate intended, declared, provisioned, observed, and historical topology.
+- Treat DNS, certificates, routing, firewall, identity, egress, proxies, and telemetry as governed dependencies.
+- Enforce least reachability, segmentation, authentication, authorization, encryption, logging, rate limits, and safe failover.
+- Define addressing, naming, compatibility, migration, rollback, and retirement semantics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show topology, zones, paths, exposure, health, traffic, policy, certificates, capacity, owner, authority, and evidence freshness.
+- Expose shared-impact and public-impact actions with approvals, actor, scope, and recovery.
+- Permit authorized block, isolate, reroute, rotate, fail over, restore, rollback, and retire actions.
+- Export topology, flow records, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Network context, topology, zone and trust model, flow catalog, addressing and naming plan, identity and exposure model.
+- Routing, segmentation, certificate, DNS, capacity, observability, incident, failover, migration, and retirement designs.
+- Verification, evidence, risk, decision, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify path, endpoint, zone, protocol, configuration, time, workload, method, actor, result, and limitation.
+- Reachability tests, scans, telemetry, diagrams, provider status, or failover drills prove only their scope and time.
+- Security, performance, availability, and recovery evidence states coverage, traffic, conditions, and validity.
+- Missing flow inventory or stale topology constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace application and data flows through zones, controls, paths, telemetry, operation, recovery, and retirement.
+- Verify least reachability, segmentation, identity, certificate, DNS, egress, logging, and failover.
+- Exercise congestion, route loss, DNS failure, certificate expiry, provider loss, spoofing, unauthorized path, and partition.
+- Confirm emergency access is bounded, attributable, time-limited, and audited.
+- Reproduce representative claims from exact topology and evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a diagram, ping, scan, or provider status as proof of secure or reliable connectivity.
+- Allowing any-to-any access, unmanaged egress, shared credentials, stale DNS, or unowned certificates.
+- Hiding proxy, supplier, management, monitoring, or out-of-band dependencies.
+
+RECOVERY AND RECONSIDERATION
+
+- On exposure, partition, congestion, certificate or DNS failure, compromise, or evidence loss, restrict affected paths and preserve records.
+- Identify safe connectivity, owner, authority, communications, evidence, and review condition.
+- Use approved block, isolate, alternate path, credential or certificate rotation, failover, restore, or retirement.
+- Reopen on endpoint, zone, provider, flow, identity, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Endpoints, zones, paths, identities, policies, capacity, evidence, recovery, and lifecycle are explicit.
+- Exposure, partition, congestion, maintenance, migration, and retirement behavior is addressed or justified.
+- Exact validity and unresolved gaps are recorded; CONTENT-COMPLETE does not imply secure or available networking.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve topology, flows, endpoints, certificates, DNS, decisions, incidents, evidence, dissent, and gaps.
+- Hand off to Cloud, Infrastructure, Communications, Integration, API, Security, Identity, Operations, Testing, and Retirement.
+- Record changes requiring reopening Distributed, Platform, Application, Data, Reliability, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-038 Requirements through Distributed Systems Architecture; 040-044 Communications through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 195 Network Security; 284 Network Engineering; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-038, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal network, carrier, protocol, segmentation, certificate, or jurisdiction standard is supplied. Actual topology, flows, owners, exposure, capacity, and acceptance evidence remain unresolved.

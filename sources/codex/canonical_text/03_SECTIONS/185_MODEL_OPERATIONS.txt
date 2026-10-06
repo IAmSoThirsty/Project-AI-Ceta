@@ -1,0 +1,102 @@
+SECTION 185 — Model Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define operation of models in live and controlled environments, including serving, routing, versioning, monitoring, drift, incidents, access, cost, human review, fallback, and retirement.
+
+REQUIRED OUTCOME
+
+- An operational model inventory and serving contract with owner, version, scope, authority, dependencies, and lifecycle.
+- Reliable observability of model, service, data, policy, user, and outcome behavior.
+- Safe stop, fallback, incident, compensation, and retirement paths.
+
+WHY THIS MATTERS
+
+Operational model behavior changes with traffic, data, providers, prompts, tools, and policy. Availability alone cannot show whether the model remains valid, safe, or authorized.
+
+APPLICABILITY
+
+Applies to deployed, hosted, embedded, batch, edge, shadow, or human-reviewed model use. Depth increases with live learning, external mutation, sensitive data, and high consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to an unserved research artifact with no operational claim. Record artifact scope, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires model contract, deployment identity, evaluation, monitoring, access, incident, safety, privacy, security, operations, and governance authority. Depends on Sections 167, 180, 182-184, 301-318, and 188.
+
+REQUIRED INPUTS
+
+Model and endpoint; version; data; provider; prompts; tools; users; load; SLOs; quality and drift metrics; policy; capability; traces; incidents; fallback; compensation; and retirement plan.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own operating mode, traffic, release, thresholds, incidents, communications, risk, and retirement. Operators may pause, route away, revoke, or compensate but cannot erase operational evidence.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize telemetry, detect anomalies, and recommend actions. It must distinguish signal from inference and cannot suppress alerts, change routing, close incidents, or accept risk without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Operations Engineer, Architect, Analyst, Observer, Security Auditor, Privacy Reviewer, Safety Auditor, Governance Reviewer, Tester, Verifier, Critic, Planner, Documentation Writer, Memory Curator, and HITL Operator.
+
+REQUIRED ACTIVITIES
+
+1. Register model, endpoint, owner, scope, version, dependencies, and authority.
+2. Define serving, routing, latency, capacity, quality, cost, and evidence contracts.
+3. Instrument requests, outputs, errors, policy, tools, users, drift, and incidents.
+4. Monitor quality, safety, privacy, security, availability, cost, and outcome signals.
+5. Exercise provider loss, model mismatch, data shift, authority expiry, and fallback.
+6. Manage incidents, communication, compensation, requalification, and retirement.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show model, provider, request, output, policy, authority, review, confidence limits, trace, and operational status. Require human approval for material routing or model changes and preserve manual service and stop paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version endpoints, weights, runtime, prompts, policies, data, routing, thresholds, telemetry, and decisions. Enforce identity, capability, rate, data, and output controls at serving boundaries. Preserve append-only traces and compensation links.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show live model state, traffic, drift, quality, incidents, dependencies, policy, cost, authority, and evidence. Provide authorized pause, drain, route, revoke, fallback, quarantine, compensate, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Model operations charter; inventory; serving and SLO contract; dashboards and alert rules; drift and incident runbook; provider and dependency map; access and policy records; decision, audit, trace, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify model, endpoint, version, environment, traffic, data, metric, observation period, method, actor, result, and limitation. Uptime, latency, or output samples do not prove model correctness or safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test version mismatch, stale data, drift, provider loss, load, malformed input, unauthorized access, policy conflict, monitor failure, alert noise, stop, fallback, compensation, and retirement. Reproduce operational claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uptime equals quality; unowned drift; alert suppression; silent routing; untracked provider change; model-output logs without privacy control; no manual path; and incident closure without evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict or stop affected model behavior on drift, incident, policy, security, privacy, safety, or evidence failure. Preserve state, notify owners, use qualified fallback, compensate impacts, re-evaluate, and resume only with authority.
+
+COMPLETION CRITERIA
+
+Inventory, serving, authority, observability, quality, drift, incidents, recovery, compensation, evidence, and lifecycle are explicit. Status remains CONTENT-COMPLETE pending reconciliation and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve endpoints, versions, telemetry, alerts, decisions, traces, incidents, compensations, dissent, and gaps. Hand off to MLOps, Operations, Evaluation, Safety, Security, Privacy, Governance, and HITL.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 167 Machine Learning Engineering; 180 Model Evaluation; 182 AI Safety; 183 AI Governance; 184 MLOps; 301 Site Reliability Engineering; 313 Observability Engineering; 318 Alerting.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Operational Architecture, and evidence lexicon. Actual SLOs, drift thresholds, provider terms, incident authority, data rights, and retirement requirements remain unresolved.

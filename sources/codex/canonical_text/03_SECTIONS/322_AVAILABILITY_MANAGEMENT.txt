@@ -1,0 +1,95 @@
+SECTION 322 — Availability Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Ensure services and capabilities are available to authorized users and dependent systems when needed, with declared windows, degradation, maintenance, and recovery.
+
+REQUIRED OUTCOME
+
+An availability model with service, critical journey, window, objective, dependency, redundancy, maintenance, monitoring, incident, recovery, and evidence.
+
+WHY THIS MATTERS
+
+Availability is not merely process uptime. A service can respond while unusable, inaccessible, incorrect, unsafe, or unavailable to a critical population.
+
+APPLICABILITY
+
+Apply when service access, continuity, user journey, dependency, maintenance, or recovery is material.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no availability, access, dependency, maintenance, or recovery outcome changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use service levels, SRE, architecture, capacity, performance, resilience, continuity, support, monitoring, incident, and recovery baselines.
+
+REQUIRED INPUTS
+
+Service, users, critical journeys, window, objective, dependency, redundancy, maintenance, signals, incidents, support, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define availability and user outcomes, maintenance, redundancy, incident, service reduction, communication, and recovery. Humans accept availability and cost tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized health and outage data, identify dependencies, and recommend bounded action. It must not declare available, suppress incident, fail over, or communicate status without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Availability Engineer, SRE, Operations Engineer, Architect, Capacity Engineer, Incident Responder, Tester, Verifier, and Service Manager.
+
+REQUIRED ACTIVITIES
+
+Define outcomes and windows; map dependencies; design redundancy and maintenance; monitor; manage incident; fail over or reduce service; recover; measure; and improve.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show service, journey, window, dependency, signal, user impact, evidence, authority, and limitation. Require human approval for failover, maintenance, status, and service reduction.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use redundancy, health and business checks, graceful degradation, maintenance mode, failover, rollback, queueing, backup, and independent control.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show service availability, journey, dependency, maintenance, incident, evidence freshness, owner, and authorized pause, fail over, reduce, restore, communicate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Availability charter; service and journey; dependency and redundancy; maintenance and monitoring; incident, failover, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, journey, window, source, metric, period, method, result, user impact, and limitation. Uptime or ping proves only reachability and selected interval.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify availability objective, critical journey, dependency, health, maintenance, redundancy, failover, communication, recovery, and user outcome. Test partial and regional outage.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uptime-only, critical journey omitted, dependency hidden, failover untested, maintenance surprise, status page inaccurate, and availability traded for unsafe operation.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, fail over or reduce service, preserve evidence, communicate, restore, and reassess user and commitment impact. Reopen on service, dependency, window, architecture, or recovery change.
+
+COMPLETION CRITERIA
+
+Service, journey, window, objective, dependency, redundancy, evidence, incident, recovery, owner, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve availability history, maintenance, incidents, failovers, decisions, evidence, exceptions, and open gaps. Hand off to SRE, Capacity, Performance, Continuity, Disaster Recovery, Support, and Operations.
+
+RELATED CODEX SECTIONS
+
+301 SRE; 321 Capacity; 323-324 Performance and Reliability; 325 Service Levels; 326-330 Continuity, DR, Backup, Restore, and Failover.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, availability, service, SRE, resilience, and operations context, and the integration roadmap. Exact services, journeys, windows, objectives, dependencies, recovery, and acceptance authority remain unresolved.

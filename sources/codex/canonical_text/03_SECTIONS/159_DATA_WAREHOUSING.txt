@@ -1,0 +1,99 @@
+SECTION 159 — Data Warehousing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design governed analytical stores that preserve historical meaning, dimensional context, lineage, quality, access, performance, retention, and decision evidence.
+
+REQUIRED OUTCOME
+
+A warehouse model with source contracts, grain, dimensions, facts, history, refresh, quality, lineage, security, ownership, recovery, and lifecycle controls.
+
+WHY THIS MATTERS
+
+Warehouses can make stale or transformed data appear authoritative. A report that runs successfully does not prove its grain, lineage, freshness, or interpretation.
+
+APPLICABILITY
+
+Apply when historical, integrated, subject-oriented, or decision-support data is consolidated for reporting, analysis, compliance, or operations.
+
+NON-APPLICABILITY CONDITIONS
+
+No material analytical meaning, source, grain, refresh, access, quality, retention, or consumer behavior changes and an exact baseline covers the work; record the reason.
+
+PREREQUISITES AND DEPENDENCIES
+
+Business definitions, source systems, grain, history, dimensions, measures, refresh, quality, lineage, users, access, retention, performance, and acceptance authority.
+
+REQUIRED INPUTS
+
+Source inventory, model, mappings, snapshots, schedules, late data, corrections, consumers, reports, controls, privacy, security, recovery, assumptions, and gaps.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The owner approves definitions, metrics, sources, refresh, access, quality, retention, exceptions, and acceptance; assigns data, reporting, privacy, security, and operations authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized schemas, lineage, load histories, quality results, query plans, metric definitions, and warehouse metadata; identify inconsistencies; draft mappings, tests, documentation, and bounded analysis; and propose model, refresh, quality, access, cost, or recovery improvements.
+
+AI must distinguish source facts, transformed values, inferred relationships, metric definitions, recommendations, and verified results. It must preserve grain, time window, source identity, transformation version, freshness, privacy classification, and known limitations in every material output.
+
+AI must not silently redefine a metric, merge incompatible grains, infer sensitive attributes, publish consequential reports, change production schemas or loads, widen access, delete history, approve retention exceptions, or declare data quality or business truth without delegated authority and human acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Data Engineer, Implementer, Tester, Verifier, Governance Reviewer, Security Auditor, Observer, Critic, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+Define grain and history; map sources; build conformed dimensions and facts; establish refresh, quality, lineage, access, reconciliation, observability, recovery, and consumer validation.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may analyze authorized warehouse metadata and propose models or queries. It must preserve metric definitions and provenance and must not publish consequential reports or infer authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate source, staging, warehouse, mart, cache, report, and evidence. Preserve slowly changing history, late-arriving data, correction, reconciliation, access, retention, and reproducible query semantics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show warehouse version, grain, freshness, source status, quality, metric owner, consumers, access, costs, incidents, evidence, and pause, correct, restrict, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Warehouse charter; dimensional and lineage models; metric catalog; source and refresh contracts; quality, access, retention, recovery, report, test, decision, evidence, and handoff records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, grain, transformation, window, refresh, model, query, environment, actor, result, and limitation. A report or row count proves only its declared slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify grain, joins, history, late data, refresh, reconciliation, access, performance, report definitions, correction, recovery, retention, and independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Metric drift, double counting, stale dimensions, hidden filters, untracked corrections, unrestricted marts, snapshot confusion, and dashboards presented as decisions or truth.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected loads or reports, preserve versions and evidence, notify consumers, and use approved correction, backfill, prior snapshot, restricted mode, or compensation.
+
+COMPLETION CRITERIA
+
+Definitions, grain, sources, owners, refresh, quality, access, recovery, tests, evidence, gaps, and review cadence are recorded. Status remains CONTENT-COMPLETE.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off models and metric contracts to Data Engineering, Data Quality, BI, Analytics, Database, Storage, Governance, Security, Testing, Operations, and Migration.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 153-156 Data Engineering through Data Quality; 160 Data Lake; 161 Analytics Engineering; 162 Business Intelligence; 163 Data Analysis; 254 Data Testing; 307 Data Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, Sections 019-032, and roadmap. Industry warehouse patterns, metric authority, refresh tolerance, residency, and retention rules remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 378 — Software Updates
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Plan, qualify, deliver, verify, monitor, roll back, and retire software updates while preserving security, compatibility, data, service, support, and evidence.
+
+REQUIRED OUTCOME
+
+An update model with source, version, artifact, vulnerability or defect, target, prerequisites, rollout, configuration, migration, health, rollback, communication, and owner.
+
+WHY THIS MATTERS
+
+Updates change live behavior and dependency state. A newer version can fix one risk while breaking compatibility, data, performance, support, or recovery.
+
+APPLICABILITY
+
+Apply when software, application, library, operating system, service, model, configuration, or package is updated in any environment or population.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no software or behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use release, dependency, vulnerability, compatibility, configuration, testing, deployment, backup, support, and operations baselines.
+
+REQUIRED INPUTS
+
+Current and target version, artifact, reason, advisories, dependencies, target, data, config, tests, rollout, rollback, support, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve version, target, urgency, compatibility, rollout, exception, rollback, communication, and retirement. Humans decide emergency update and service impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare versions, advisories, changelogs, and test evidence; draft plans; and identify affected targets. It must not install, widen target, suppress finding, or declare safe update without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Update Engineer, Release Engineer, Dependency Manager, Security Auditor, Tester, Verifier, Operations Engineer, Support Reviewer, and Planner.
+
+REQUIRED ACTIVITIES
+
+Identify reason and scope; inventory target; validate artifact and dependencies; test; back up; stage; update; monitor; pause or roll back; communicate; verify; and retire old version.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show current and target version, reason, target, evidence, dependency, config, data, owner, and limitation. Require human approval for production, security, emergency, data, and rollback actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use signed immutable artifact, staged rollout, compatibility, feature flags, migration checkpoint, health, rollback, version inventory, and support path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show update, targets, versions, health, findings, evidence freshness, owner, rollout, rollback, and authorized approve, pause, retry, rollback, defer, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Update charter; version and artifact; impact and test; rollout and health; rollback, support, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify current and target version, artifact, target, environment, reason, method, time, result, actor, and limitation. Deployment or scan proves only its scope and time.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify artifact, version, vulnerability, compatibility, config, data, rollout, health, support, rollback, recovery, and inventory. Test partial, failed, and interrupted update.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unverified update, broad rollout, forced update without recovery, target inventory stale, rollback unavailable, support unprepared, and update count treated as security.
+
+RECOVERY AND RECONSIDERATION
+
+Pause, roll back or restore, preserve state, communicate, repair data, support users, and reassess exposure and compatibility. Reopen on version, dependency, target, threat, or incident change.
+
+COMPLETION CRITERIA
+
+Reason, versions, artifact, targets, evidence, tests, rollout, rollback, owners, support, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve version inventory, artifacts, rollout, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Dependency, Security, Release, Deployment, Support, Operations, and Retirement.
+
+RELATED CODEX SECTIONS
+
+209 Vulnerability; 260-262 Dependency, Package, and Artifact; 287-290 Release and Deployment; 379 Firmware; 380 Security Patching; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, software, security, dependency, release, compatibility, and operations context, and the integration roadmap. Exact versions, targets, urgency, testing, rollback, support, and acceptance authority remain unresolved.

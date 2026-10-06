@@ -1,0 +1,95 @@
+SECTION 247 — Accessibility Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Verify that people with varied abilities, devices, input methods, languages, and assistive technologies can perceive, understand, navigate, operate, and recover through the declared experience.
+
+REQUIRED OUTCOME
+
+An accessibility-test model with users, standards, journeys, assistive technology, environments, criteria, defects, accommodations, evidence, and owner decision.
+
+WHY THIS MATTERS
+
+Automated checks find some structural issues but cannot establish actual comprehension, operability, dignity, or recovery. Inaccessible design can deny access even when the feature is technically functional.
+
+APPLICABILITY
+
+Apply to user interfaces, documentation, devices, services, communication, support, physical environments, data presentations, and AI interactions intended for or affecting people.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no person-facing or human-control surface changes and an approved exact baseline covers the scope. Internal or “temporary” tools may still require accessibility when people rely on them.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use user research, accessibility requirements, design, content, platform, localization, privacy, security, support, and legal baselines. Include disabled users or qualified specialists and assistive technology where relevant.
+
+REQUIRED INPUTS
+
+Users, abilities, journeys, content, controls, platform, browser or device, assistive technology, standards, language, data, errors, recovery, accommodations, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners fund and prioritize accessibility; qualified reviewers and users evaluate real experience; humans accept or reject exceptions and provide accommodation and remediation. Disabled participants must not be treated as test data without care and consent.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized markup, content, interaction traces, and automated results; draft test cases and alternatives; and identify likely barriers. It must not claim accessibility from static inspection, speak for disabled people, expose personal data, or approve an exception without human and user-informed review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Accessibility Reviewer, User Experience Reviewer, Researcher, Tester, Verifier, Content Designer, Analyst, Critic, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define users and criteria; test keyboard, touch, voice, screen reader, magnification, contrast, motion, timing, language, cognitive load, error, support, and recovery; include disabled users where appropriate; record barriers; remediate; retest; and preserve limitations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show user, assistive technology, platform, journey, content, method, result, and limitation. Require human review and lived-experience input for acceptance. Provide accessible owner and appeal controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support semantic structure, keyboard and alternative input, focus, captions, text alternatives, reflow, contrast, timing control, error recovery, accessible authentication, localization, and non-visual owner control.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show accessibility scope, users, defects, severity, platform coverage, evidence freshness, accommodations, owner, and authorized prioritize, remediate, accept, provide alternative, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Accessibility charter; user and technology matrix; journey and criteria; manual and automated results; participant and accommodation record; defect, exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify user or specialist, platform, assistive technology, version, journey, method, result, barrier, impact, and limitation. An automated scan or conformance claim proves only its rule set and scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify keyboard, non-visual, touch, voice, magnification, contrast, captions, semantics, timing, errors, forms, authentication, language, support, and recovery. Reproduce with representative technology and users.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Accessibility by scan only, disabled people consulted too late, inaccessible test or owner controls, color-only meaning, time limits without extension, and exception accepted without alternative or expiry.
+
+RECOVERY AND RECONSIDERATION
+
+Provide accessible alternative or support, preserve user impact, remediate, and retest with affected users. Reopen on content, platform, assistive technology, interaction, policy, or user-population change.
+
+COMPLETION CRITERIA
+
+Users, platforms, technologies, journeys, criteria, findings, accommodations, evidence, owners, exceptions, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending user-informed review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve criteria, participant care, platform results, defects, accommodations, decisions, evidence, exceptions, and open gaps. Hand off to UX, Engineering, Content, Localization, Support, Legal, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+001 User Research; 019 Requirements; 048 Accessibility Architecture; 230 Quality Assurance; 236-237 E2E and Acceptance Testing; 249 Usability Testing; 250 Localization; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, accessibility architecture, user research, and the integration roadmap. Exact standard, users, assistive technology, jurisdiction, accommodations, content, and acceptance authority remain unresolved.

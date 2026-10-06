@@ -1,0 +1,95 @@
+SECTION 325 — Service Level Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define, negotiate, measure, review, communicate, and improve service expectations in terms users and owners can understand and evidence.
+
+REQUIRED OUTCOME
+
+A service-level model with service, consumer, outcome, indicator, objective, window, exclusions, measurement, commitment, escalation, remedy, and review.
+
+WHY THIS MATTERS
+
+Service levels can create clarity or encourage gaming. An availability percentage without user journey, error, latency, support, accessibility, or exclusion context can misrepresent service quality.
+
+APPLICABILITY
+
+Apply when a service commitment, internal objective, contract, support expectation, or measurable outcome is declared or changed.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no service expectation, consumer, metric, commitment, or operational outcome changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use service management, SRE, availability, performance, reliability, capacity, support, legal, contract, and metrics baselines.
+
+REQUIRED INPUTS
+
+Service, consumers, outcomes, indicators, objectives, windows, exclusions, source, measurement, commitment, escalation, remedy, and owner.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Service owners and consumers agree meaning, commitment, exclusions, escalation, remedies, and acceptance. Humans approve contractual language and risk tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft service-level definitions, analyze evidence, and identify gaps or trend. It must not make commitments, redefine exclusions, claim compliance, or communicate contract position without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Service Manager, SRE, Metrics Engineer, Product Manager, Legal Advisor, Analyst, Verifier, Support Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define service and outcome; identify consumers; set indicators and windows; agree objective; measure; report; review exclusions and remedies; manage breach; and improve or retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show service, consumer, outcome, metric, window, objective, exclusion, evidence, and limitation. Require human approval for commitment, breach, remedy, and public communication.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use semantic metric contracts, source lineage, user and technical indicators, measurement integrity, audit, status, support, and clear exclusion handling.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show objective, period, result, evidence freshness, exclusions, consumer impact, owner, breach, remedy, and authorized correct, communicate, escalate, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Service-level charter; consumer and outcome map; indicator and objective; measurement and reporting; breach and remedy; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, consumer, metric, window, source, exclusion, method, result, impact, and limitation. A percentage without denominator and exclusions proves little.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify definition, source, window, calculation, exclusions, user outcome, reporting, breach, communication, remedy, and reproducibility. Test metric outage and disputed result.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+SLA gaming, hidden exclusions, infrastructure proxy, commitment without capacity, breach not communicated, and metric treated as user truth.
+
+RECOVERY AND RECONSIDERATION
+
+Correct measurement, communicate, remediate, apply agreed remedy, preserve evidence, and reassess commitment. Reopen on service, consumer, metric, contract, or objective change.
+
+COMPLETION CRITERIA
+
+Service, consumer, outcome, metric, objective, window, exclusions, commitment, evidence, remedies, owners, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner and consumer acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve level versions, measurements, reports, breaches, communications, decisions, evidence, exceptions, and open gaps. Hand off to Service Management, SRE, Metrics, Legal, Support, and Operations.
+
+RELATED CODEX SECTIONS
+
+311 Service Management; 317 Metrics; 321-324 Capacity, Availability, Performance, and Reliability; 326-330 Continuity and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, service, metrics, SRE, legal, and operations context, and the integration roadmap. Exact consumers, outcomes, objectives, exclusions, contracts, remedies, and acceptance authority remain unresolved.

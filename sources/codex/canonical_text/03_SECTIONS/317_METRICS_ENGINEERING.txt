@@ -1,0 +1,95 @@
+SECTION 317 — Metrics Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define, instrument, calculate, validate, govern, and retire measures that describe system, service, user, business, security, quality, cost, and operational outcomes.
+
+REQUIRED OUTCOME
+
+A metric model with definition, owner, unit, population, dimension, source, calculation, window, freshness, quality, threshold, action, lineage, and limitation.
+
+WHY THIS MATTERS
+
+Metrics create incentives and decisions. A precise-looking number can be semantically wrong, gamed, stale, biased, or disconnected from the outcome it claims to represent.
+
+APPLICABILITY
+
+Apply when a measure informs operation, quality, performance, service level, governance, product, security, safety, cost, or human decision.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no metric, decision, threshold, outcome, or evidence claim changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data, analytics, observability, service-level, quality, user research, privacy, security, and governance baselines.
+
+REQUIRED INPUTS
+
+Question, outcome, definition, source, population, unit, dimensions, window, calculation, owner, threshold, action, freshness, and limitation.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Metric owners define meaning, use, threshold, and decision authority; domain owners validate semantics; humans approve consequential interpretation and resist metric gaming.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft metric definitions, inspect authorized data and telemetry, identify anomalies, and compare trends. It must not redefine meaning, infer causality, hide contrary measures, or make decisions from a metric without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Metrics Engineer, Data Analyst, Data Engineer, SRE, Product Analyst, Researcher, Privacy Reviewer, Verifier, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define decision and outcome; establish metric contract; instrument source; calculate; validate population and lineage; set threshold and action; monitor quality and freshness; review incentives; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show definition, source, population, window, calculation, owner, threshold, evidence, uncertainty, and limitation. Require human review for semantic, causal, high-impact, and target-setting decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use metric catalog, semantic layer, lineage, versioning, quality checks, time and identity, dimensions, privacy, retention, alert, and reproducible calculation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show metric definition, source, freshness, quality, trend, threshold, owner, consumers, evidence, and authorized correct, restrict, annotate, retire, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Metric charter and catalog; source and lineage; calculation and quality; threshold and action; decision, evidence, limitation, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify metric, definition, source, population, window, version, method, time, result, owner, uncertainty, and limitation. A chart or number proves only its declared calculation and slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify meaning, grain, source, lineage, calculation, freshness, dimensions, privacy, threshold, alert, reproducibility, and relationship to outcome. Test missing and contradictory data.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Vanity metric, denominator drift, hidden filter, stale value, target gaming, causation from correlation, aggregate hiding harm, and metric as truth without source.
+
+RECOVERY AND RECONSIDERATION
+
+Annotate or withdraw affected metric, preserve versions, notify consumers, correct source or calculation, and reassess decisions. Reopen on definition, source, population, window, policy, or outcome change.
+
+COMPLETION CRITERIA
+
+Question, outcome, definition, source, population, calculation, owner, evidence, threshold, action, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve metric versions, definitions, lineage, data, dashboards, decisions, incidents, evidence, exceptions, and open gaps. Hand off to Analytics, Data, BI, SRE, Service Management, Product, and Governance.
+
+RELATED CODEX SECTIONS
+
+161-163 Analytics, BI, and Data Analysis; 239 Performance; 301 SRE; 313-316 Observability, Monitoring, Logging, and Tracing; 318-330 Service Levels, Capacity, Availability, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data, analytics, observability, service, and decision context, and the integration roadmap. Exact outcomes, definitions, sources, owners, thresholds, privacy, and acceptance authority remain unresolved.

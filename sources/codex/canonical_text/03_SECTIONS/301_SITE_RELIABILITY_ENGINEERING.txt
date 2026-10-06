@@ -1,0 +1,95 @@
+SECTION 301 — Site Reliability Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer and operate reliable services through service-level objectives, error budgets, automation, observability, incident learning, capacity, and sustainable human work.
+
+REQUIRED OUTCOME
+
+An SRE model with service ownership, user outcomes, indicators, objectives, budgets, alerts, runbooks, toil, incidents, reliability work, capacity, and recovery.
+
+WHY THIS MATTERS
+
+Reliability requires tradeoffs between change and stability, and between automation and human judgment. Uptime alone can hide correctness, latency, safety, privacy, support, or operator harm.
+
+APPLICABILITY
+
+Apply when a team owns ongoing service reliability, availability, performance, resilience, incident response, capacity, or operational improvement.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no ongoing service, operator, reliability, or operational outcome exists and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use operational architecture, service levels, observability, incident, capacity, performance, reliability, continuity, security, support, and staffing baselines.
+
+REQUIRED INPUTS
+
+Service, users, critical journeys, indicators, objectives, budget, dependencies, alerts, runbooks, incidents, capacity, toil, staffing, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Service owners define user outcomes, objectives, budgets, risk, on-call, change, incident, and staffing. Humans decide when to spend budget, pause change, accept risk, or protect operators.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate authorized telemetry, summarize incidents, draft runbooks, identify toil, and recommend bounded action. It must not suppress alerts, change production, close incidents, or accept reliability risk without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Site Reliability Engineer, Architect, Operations Engineer, Observer, Analyst, Incident Responder, Capacity Engineer, Tester, Verifier, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define user outcomes and SLOs; instrument; alert; operate; respond; manage error budget; plan capacity; reduce toil; test failure and recovery; review changes; learn from incidents; and improve.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show service, journey, indicator, objective, budget, evidence, incident, action, authority, and uncertainty. Require human control for production and incident decisions and preserve on-call stop and escalation.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use meaningful indicators, multi-window alerts, runbooks, automation with guardrails, graceful degradation, redundancy, rollback, capacity, dependency visibility, and independent recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show service health, user outcome, SLO, budget, incidents, dependencies, toil, capacity, evidence freshness, owner, and authorized pause, rollback, scale, escalate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+SRE charter; service and ownership map; SLI/SLO and budget; alert and runbook; capacity and toil; incident, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, journey, indicator, objective, period, source, method, result, uncertainty, owner, and limitation. Availability or dashboard health proves only the measured slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify indicators, objectives, alerts, runbooks, on-call, error budget, capacity, dependency, incident, recovery, automation, and operator workload. Exercise failures and false signals.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uptime-only SLO, alert fatigue, budget ignored, toil hidden, automation without rollback, on-call burnout, incident blame, and service owner without authority.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, preserve evidence, reduce change, fail over or roll back, communicate, protect operators, and reassess user outcome and SLO. Reopen on service, dependency, workload, or objective change.
+
+COMPLETION CRITERIA
+
+Service, user outcome, indicators, objectives, budget, owners, alerts, runbooks, incidents, capacity, evidence, workload, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve SLO history, runbooks, telemetry, incidents, decisions, evidence, exceptions, toil, capacity, and open gaps. Hand off to Production, Operations, Incident, Capacity, Reliability, Support, and Governance.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 243-245 Reliability, Resilience, and Chaos Testing; 302 Production Engineering; 303-330 Observability, Incident, Capacity, Availability, Performance, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, operations, reliability, incident, and owner-control context, and the integration roadmap. Exact services, users, SLOs, budgets, staffing, telemetry, and acceptance authority remain unresolved.

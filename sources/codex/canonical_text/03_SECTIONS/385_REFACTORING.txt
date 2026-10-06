@@ -1,0 +1,95 @@
+SECTION 385 — Refactoring
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Change internal structure without changing intended external behavior while improving clarity, maintainability, testability, performance, security, or operability.
+
+REQUIRED OUTCOME
+
+A refactoring model with invariant, baseline, scope, dependency, tests, increments, review, evidence, rollback, and explicit distinction from behavior change.
+
+WHY THIS MATTERS
+
+Refactoring can reduce debt but can also change behavior through hidden coupling, timing, errors, data, or security. “No behavior change” is a claim requiring evidence.
+
+APPLICABILITY
+
+Apply when internal code, architecture, schema, configuration, or structure changes with an intended stable external contract.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no internal structure, maintainability, or behavior-related change is made and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use requirements, contracts, tests, architecture, configuration, dependency, quality, security, performance, and change baselines.
+
+REQUIRED INPUTS
+
+Invariant, current code, tests, dependencies, affected users, performance, security, scope, rollback, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners and reviewers confirm invariant and risk; implementers preserve behavior; humans approve scope, test gaps, performance, security, and merge or release.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose mechanical refactors, map dependencies, draft tests, and analyze diff. It must not claim behavior preservation, alter protected interfaces, remove tests, or merge without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Refactorer, Architect, Implementer, Tester, Verifier, Quality Engineer, Security Auditor, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+State invariant; baseline; map impact; make small changes; run tests; inspect behavior and performance; review security and data; compare; roll back if needed; and document residual risk.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show invariant, diff, dependencies, tests, results, evidence, uncertainty, and limitation. Require human review for semantic, public, security, data, and performance change.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Preserve contracts, migration, observability, rollback, version, test seams, data compatibility, and feature control. Keep refactor and behavior change separately traceable.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show refactor, invariant, diff, tests, failures, evidence freshness, owner, and authorized review, pause, rollback, merge, release, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Refactoring charter; invariant and baseline; impact and diff; tests and results; review, rollback, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify baseline, invariant, source version, diff, test, environment, method, time, result, reviewer, and limitation. Passing tests do not prove no hidden behavior change.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify contract, tests, data, errors, performance, security, compatibility, observability, deployment, rollback, and user outcome. Test hidden coupling and boundary behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Large rewrite called refactor, invariant unstated, tests removed, behavior change hidden, performance assumed, and mechanical transform accepted without review.
+
+RECOVERY AND RECONSIDERATION
+
+Rollback, preserve evidence, isolate behavior change, correct tests or implementation, communicate, and reassess scope. Reopen on failed invariant, dependency, contract, or user impact.
+
+COMPLETION CRITERIA
+
+Invariant, baseline, scope, diff, tests, evidence, owners, rollback, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve refactor history, tests, diffs, decisions, evidence, exceptions, and open gaps. Hand off to Technical Debt, Quality, Security, Release, Operations, and Maintenance.
+
+RELATED CODEX SECTIONS
+
+019 Requirements; 229 Quality Engineering; 231-238 Testing; 384 Modernization; 386 Technical Debt; 387 Compatibility; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, refactoring, quality, testing, architecture, and maintenance context, and the integration roadmap. Exact invariant, scope, tests, contracts, dependencies, and acceptance authority remain unresolved.

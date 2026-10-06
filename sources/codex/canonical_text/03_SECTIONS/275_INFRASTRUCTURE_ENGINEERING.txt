@@ -1,0 +1,95 @@
+SECTION 275 — Infrastructure Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design, provision, secure, operate, observe, scale, recover, and retire computing, network, storage, facility, and service infrastructure that supports declared outcomes.
+
+REQUIRED OUTCOME
+
+An infrastructure model with resources, dependencies, topology, identity, configuration, capacity, availability, security, cost, observability, recovery, and lifecycle ownership.
+
+WHY THIS MATTERS
+
+Infrastructure failures can affect many services at once. Manual state, common failure domains, insecure defaults, provider dependence, and undocumented capacity make recovery slow and evidence weak.
+
+APPLICABILITY
+
+Apply when physical, virtual, cloud, edge, network, storage, database, facility, or shared platform resources affect a system or service.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no infrastructure resource, dependency, configuration, capacity, security, or operational behavior changes and an approved exact baseline applies.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, identity, security, configuration, environment, IaC, cloud, network, data, capacity, continuity, and operations baselines.
+
+REQUIRED INPUTS
+
+Outcome, topology, resources, environments, identity, configuration, dependencies, workload, capacity, availability, security, cost, telemetry, recovery, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Infrastructure owners approve design, access, capacity, cost, maintenance, change, exceptions, outage, recovery, and retirement. Humans accept service and provider risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized topology, telemetry, plans, and incidents; draft infrastructure code and tests; and propose optimization. It must not provision, modify, scale, destroy, or expose infrastructure without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Infrastructure Engineer, Architect, Platform Engineer, Security Auditor, Network Engineer, Database Administrator, Storage Administrator, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Define service and topology; select resources; secure identity and configuration; provision; validate; observe; capacity-plan; maintain; back up; recover; optimize; document; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show resource, environment, owner, identity, change, dependency, cost, evidence, and limitation. Require human approval for production, privileged, destructive, security, cost, and provider changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use IaC, segmentation, redundancy, isolation, least privilege, immutable or versioned resources, observability, backup, restore, failover, and provider-independent recovery where warranted.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show topology, resource health, drift, capacity, cost, incidents, evidence freshness, owner, and authorized provision, scale, isolate, restore, rollback, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Infrastructure charter and topology; resource and dependency catalog; IaC and configuration; capacity and cost; security and observability; recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify resource, version, environment, configuration, provider, method, time, actor, result, cost, and limitation. A plan or metric proves intended or observed state only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify provisioning, identity, segmentation, configuration, capacity, availability, security, cost, monitoring, backup, restore, failover, rollback, and retirement.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Manual drift, shared credentials, common failure domain ignored, capacity by guess, provider lock-in without plan, no recovery path, and infrastructure metric treated as service outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate, preserve state, restore or rebuild, fail over, rotate credentials, communicate, and reassess service and data impact. Reopen on topology, provider, workload, dependency, or risk change.
+
+COMPLETION CRITERIA
+
+Resources, topology, owners, configuration, identity, capacity, cost, security, evidence, recovery, lifecycle, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve topology, IaC, state, changes, incidents, backups, recovery, decisions, evidence, exceptions, and open gaps. Hand off to Cloud, Edge, Network, Database, Storage, Platform, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 038-044 Infrastructure, Cloud, Edge, Distributed, Network, Communications, and Integration Architecture; 258-272 Delivery; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, infrastructure, security, delivery, and operations context, and the integration roadmap. Exact resources, providers, topology, capacity, recovery, cost, and acceptance authority remain unresolved.

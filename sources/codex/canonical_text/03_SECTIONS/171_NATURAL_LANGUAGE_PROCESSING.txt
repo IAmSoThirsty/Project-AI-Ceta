@@ -1,0 +1,103 @@
+SECTION 171 — Natural Language Processing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of systems that process, classify, retrieve, translate, summarize, generate, or reason over human language while preserving meaning, provenance, privacy, accessibility, and human authority.
+
+REQUIRED OUTCOME
+
+- A language task and contract with population, languages, context, source, output, error, and review boundaries.
+- Evaluation for meaning, robustness, subgroup and language coverage, privacy, security, and usability.
+- Traceable deployment, correction, refusal, fallback, and retirement paths.
+
+WHY THIS MATTERS
+
+Language varies by dialect, culture, domain, power, and context. A fluent or high-scoring output can still misrepresent intent, exclude speakers, disclose private content, or cause harm.
+
+APPLICABILITY
+
+Applies to classification, extraction, search, translation, question answering, dialogue, summarization, sentiment, generation, moderation, and language interfaces. Depth increases with rights, safety, employment, health, legal, or public impact.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to deterministic string handling with no semantic, user, or decision effect, or exploratory work with no operational claim. Record scope and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires language definitions, source rights, data lineage, domain review, evaluation, privacy, security, accessibility, and human oversight. Depends on Sections 097, 170, 180, 182, 186, and 188.
+
+REQUIRED INPUTS
+
+Task; language and dialect coverage; user population; corpus; labels; context; tokenizer; model; output schema; error costs; bias plan; privacy rules; translation and accessibility needs; evaluation; and fallback.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve language scope, labels, prohibited uses, publication, moderation thresholds, appeals, and residual risk. Native speakers, domain experts, and affected communities must review material language decisions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may annotate, transform, generate, and evaluate language within scope. It must preserve source and language context, disclose uncertainty, and must not invent translation, consent, meaning, or citations.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Researcher, Analyst, Domain Expert, Implementer, Prompt Engineer, UX Reviewer, Accessibility Reviewer, Privacy Reviewer, Security Auditor, Safety Auditor, Tester, Verifier, Critic, Red Team, Documentation Writer, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+1. Define task, language, dialect, audience, context, and prohibited use.
+2. Audit corpus rights, representation, labels, annotation quality, and leakage.
+3. Define semantic, structural, safety, privacy, and accessibility contracts.
+4. Evaluate per-language and subgroup behavior, ambiguity, drift, and adversarial input.
+5. Validate review, correction, appeal, refusal, and fallback.
+6. Monitor distribution, errors, user impact, and model or provider changes.
+7. Baseline and hand off evidence and unresolved language gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source language, transformation, model, context, confidence limits, review state, and citation. Users must correct or contest language output and access a safe non-AI path. No fluency score substitutes for meaning review.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version corpora, annotations, tokenizer, model, prompts, translation memory, retrieval, policy, output schema, and evaluator. Preserve character and locale handling, provenance, access, redaction, trace, and fallback across interfaces.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show language coverage, model, source, output, uncertainty, quality, subgroup results, incidents, reviewer, and freshness. Allow authorized restrict, correct, regenerate, withdraw, quarantine, fallback, revoke, and retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Language task charter; corpus and rights register; label guide; model and prompt record; per-language evaluation; bias and accessibility review; output and appeal contract; deployment record; incident plan; and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify language, dialect, corpus, model, context, task, metric, subgroup, method, result, reviewer, and limits. Aggregate scores hide gaps unless disaggregated. Missing language or population evidence is UNKNOWN.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test ambiguity, dialect, code-switching, translation, long context, malformed input, prompt injection, privacy, toxicity, accessibility, refusal, correction, appeal, provider loss, and per-language regression. Independently reproduce claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+English-only generalization; label leakage; dialect erasure; fluency mistaken for accuracy; translation hallucination; hidden moderation bias; unsupported language claims; and irreversible language decisions without appeal.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict affected language or task on harmful errors, rights impact, drift, source loss, or evidence failure. Preserve inputs and outputs, notify owners, use human review or fallback, correct downstream records, and reopen after corpus or population change.
+
+COMPLETION CRITERIA
+
+Task, language scope, data, model, evaluation, controls, review, accessibility, privacy, recovery, evidence, and authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve corpus, annotations, model, prompts, evaluations, translations, traces, decisions, incidents, dissent, and gaps. Hand off to Generative AI, Content, Localization, Speech, Evaluation, Safety, Governance, and HITL Operations.
+
+RELATED CODEX SECTIONS
+
+089 Conversational Design; 097 Content Design; 101 Localization; 102 Internationalization; 170 Generative AI Engineering; 180 Model Evaluation; 182 AI Safety; 186 Prompt Engineering; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Information and AI Architecture, and evidence lexicon. Actual languages, populations, corpora, rights, evaluation thresholds, cultural authorities, and legal duties remain unresolved.

@@ -1,0 +1,98 @@
+SECTION 117 — Application Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the engineering of applications that realize approved user, operator, business, domain, security, data, and operational outcomes through maintainable software.
+
+REQUIRED OUTCOME
+
+An application baseline with behavior, interfaces, data, configuration, dependencies, tests, accessibility, security, deployment, support, recovery, and retirement evidence.
+
+WHY THIS MATTERS
+
+Applications are where abstract requirements meet real users, data, operations, and external effects. Local shortcuts can create systemic harm or unowned lifecycle burden.
+
+APPLICABILITY
+
+Applies to application design, implementation, configuration, integration, testing, release, support, modernization, migration, and retirement.
+
+NON-APPLICABILITY CONDITIONS
+
+Read-only analysis or use of an unchanged application may be exempt when no behavior, data, access, evidence, or lifecycle claim changes; record the baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires approved requirements, process and functional context, domain rules, architecture, data and interface contracts, risks, users, support, and acceptance authority.
+
+REQUIRED INPUTS
+
+User and operator journeys, use cases, data, integrations, configurations, quality attributes, accessibility, security, tests, deployment, support, incident, and recovery needs.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own outcome, user impact, risk, privacy, security, accessibility, release, commitments, support, and retirement. They approve exceptions and exact version acceptance.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft code, tests, documentation, and diagnostics. It must preserve requirements and provenance, expose uncertainty, and never release, alter data, or accept risk without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Refactorer, Tester, Verifier, Critic, Security Auditor, Governance Reviewer, User Experience Reviewer, Documentation Writer, Memory Curator, Optimizer, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish application scope, users, outcomes, environments, lifecycle, and non-goals.
+2. Allocate requirements to journeys, modules, data, interfaces, controls, and evidence.
+3. Implement accessible, secure, observable behavior with explicit error and recovery paths.
+4. Test, release, monitor, support, migrate, patch, deprecate, and retire through controlled change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Mark human, AI, automated, and external actions. Require review for consequential behavior, permissions, data, communication, and external effects; preserve correction, appeal, manual fallback, and status.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate application source, configuration, data, dependencies, runtime, external integrations, and user state. Enforce contracts, least privilege, migrations, observability, safe rollout, and compensation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show application version, environment, user impact, dependencies, changes, tests, incidents, evidence, release state, and authorized stop, rollback, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Application plan, architecture, source and configuration, data and interface contracts, test and scan evidence, release, support, runbooks, incidents, recovery, and retirement records.
+
+EVIDENCE REQUIREMENTS
+
+Identify version, configuration, data, environment, actor, method, expected and actual result, reviewer, date, and limitations. Deployment and uptime do not prove user outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Trace requirements through user journey, code, data, interface, tests, release, runtime, accessibility, security, recovery, and acceptance; exercise invalid, denied, degraded, duplicate, and migration paths.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Feature-first delivery without support, hidden data mutation, inaccessible workflows, unowned integrations, weak authorization, missing observability, and rollback that ignores external effects.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or narrow the affected feature, preserve data and evidence, use approved fallback or prior version, restore or compensate, communicate impact, and reopen requirements or architecture when assumptions change.
+
+COMPLETION CRITERIA
+
+Exact application behavior, data, interfaces, controls, quality, evidence, support, recovery, acceptance, and retirement are explicit for the declared release.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off source, configuration, contracts, tests, release, telemetry, incidents, decisions, support, recovery, and open gaps to Frontend, Backend, Full Stack, Security, Testing, Operations, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+019-032 Requirements through Architecture; 033-053 Software through Accessibility Architecture; 117-129 Application through Integration Engineering; 231-270 Testing and Delivery; 301-406 Operations and Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Domain-specific acceptance, support, privacy, accessibility, security, and service commitments remain unresolved until supplied.

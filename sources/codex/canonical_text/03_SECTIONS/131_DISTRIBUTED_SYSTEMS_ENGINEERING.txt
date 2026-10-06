@@ -1,0 +1,98 @@
+SECTION 131 - Distributed Systems Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of systems whose state, computation, authority, or outcome spans multiple processes, machines, regions, networks, or organizations.
+
+REQUIRED OUTCOME
+
+A distributed-systems baseline with ownership, consistency, timing, partition, identity, coordination, observability, recovery, and evidence boundaries.
+
+WHY THIS MATTERS
+
+Networks fail, clocks disagree, messages duplicate, and nodes diverge. Designs that assume a single reliable state create data loss, split authority, and unreproducible incidents.
+
+APPLICABILITY
+
+Applies to distributed storage, services, actors, queues, clusters, replicated state, multi-region systems, and federated operations.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to a single-process, single-state artifact with no distributed execution or external coordination claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires consistency and availability objectives, failure model, topology, clocks, identity, data ownership, contracts, capacity, observability, recovery, security, and operational authority.
+
+REQUIRED INPUTS
+
+Provide nodes, regions, messages, state, ordering, quorum, latency, partitions, retries, duplication, tenancy, security, data, recovery, and user-impact requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve consistency tradeoffs, quorum, data authority, risk, recovery objectives, regions, cost, and acceptance. Humans decide conflict resolution and external communication.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may model failures, inspect traces, propose tests, and compare designs. It must not invent guarantees, change consensus or data authority, or execute recovery without delegation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Observer, Security Auditor, Implementer, Tester, Verifier, Governance Reviewer, Coordinator, Documentation Writer, Memory Curator, Optimizer, Critic, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define topology, state, actors, trust, authority, consistency, timing, and failure model.
+2. Design communication, coordination, partition behavior, idempotency, reconciliation, and recovery.
+3. Implement with fault injection, tracing, staged rollout, and operational readiness.
+4. Measure outcome, repair divergence, migrate, and retire safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose node, region, leader, quorum, message, state, authority, and evidence context. Human approval is required for failover and conflict decisions; status and safe halt remain available during automation failure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Model partial failure, clock uncertainty, retries, deduplication, ordering, leader election, quorum, replication, isolation, backpressure, tracing, and compensation. Separate local health from global outcome.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show topology, role, state freshness, quorum, lag, partitions, conflicts, capacity, traces, incidents, and controls to isolate, fail over, reconcile, restore, or narrow operation.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Topology and failure model, consistency contract, data authority, protocol records, test and fault-injection evidence, observability plan, recovery runbook, migration, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+Identify topology, revision, node, message, clock, workload, configuration, method, trace, result, and limitation. Preserve partition, duplicate, stale, divergent, and recovered evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify partition, duplication, reordering, clock skew, node loss, leader loss, quorum loss, replay, failover, reconciliation, recovery, migration, security, and user outcome.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Assuming reliable delivery or clocks; shared mutable state without authority; unbounded retries; split-brain; opaque failover; and treating all replicas healthy as correct outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze risky writes, isolate divergent nodes, preserve logs and state, select approved authority, reconcile and compensate effects, communicate impact, and reopen guarantees before resuming.
+
+COMPLETION CRITERIA
+
+Failure model, guarantees, ownership, controls, evidence, recovery, operations, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve topology, protocol, state, traces, incidents, decisions, evidence, and next safe action. Hand off to Distributed Architecture, Microservices, Runtime, Network, Data, Reliability, Resilience, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+038 Distributed Systems Architecture; 043 Event-Driven Architecture; 130 Microservices Engineering; 131 Distributed Systems Engineering; 243 Reliability Testing; 244 Resilience Testing; 316 Tracing; 330 Failover Engineering.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 038, 043-044 and 107-130, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual failure assumptions, consistency needs, network domains, capacity, jurisdictions, and recovery objectives remain unresolved.

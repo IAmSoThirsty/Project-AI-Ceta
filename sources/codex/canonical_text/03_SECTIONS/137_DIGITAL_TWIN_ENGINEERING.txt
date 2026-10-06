@@ -1,0 +1,98 @@
+SECTION 137 - Digital Twin Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of a digital representation linked to a physical, organizational, or operational counterpart through identity, telemetry, state, models, controls, and lifecycle evidence.
+
+REQUIRED OUTCOME
+
+A digital-twin baseline with counterpart identity, synchronization, provenance, fidelity, authority, safety boundaries, commands, model drift, and retirement conditions.
+
+WHY THIS MATTERS
+
+A twin can be stale, incomplete, or wrong while appearing live. Confusing representation with authority can cause unsafe commands, privacy exposure, or bad maintenance decisions.
+
+APPLICABILITY
+
+Applies to physical assets, facilities, processes, infrastructure, devices, organizations, or environments represented and linked to a digital system.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to an unlinked simulation, dashboard, or static model with no counterpart identity, synchronization, operational use, or command path. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires counterpart authority, identity, telemetry, data ownership, time synchronization, model purpose, command permissions, safety, privacy, security, calibration, operations, and retirement authority.
+
+REQUIRED INPUTS
+
+Provide asset identity, sensors, states, telemetry, models, commands, latency, freshness, calibration, users, decisions, safety limits, and failure or offline requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve counterpart identity, data collection, command authority, safety, privacy, calibration, and acceptance. Humans retain authority over physical or material actions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may detect anomalies, estimate state, and propose maintenance or model updates. It must distinguish telemetry from inference, never issue unapproved commands, and expose stale or missing state.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Domain Expert, Researcher, Analyst, Safety Auditor, Security Auditor, Implementer, Tester, Verifier, Governance Reviewer, Observer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Identify counterpart, scope, identity, authority, sensors, models, and lifecycle.
+2. Define synchronization, provenance, state, calibration, command, safety, privacy, and offline behavior.
+3. Validate representation against observed counterpart evidence and test command boundaries.
+4. Operate, monitor drift, update, quarantine, and retire with physical owner approval.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show counterpart identity, live or stale state, source, timestamp, model versus measurement, authority, command consequence, and evidence. Human approval is required for actuation and material maintenance decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate counterpart, telemetry, state estimation, simulation, command, policy, and physical effect. Bind data to identity and time; make freshness, uncertainty, calibration, and safe offline state explicit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show asset, sync health, freshness, data quality, model drift, alerts, commands, approvals, incidents, and controls to pause, isolate, revoke, revert, or retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Twin charter, counterpart catalog, identity and telemetry map, model and calibration records, command authority, safety and privacy assessment, validation evidence, runbook, and retirement plan.
+
+EVIDENCE REQUIREMENTS
+
+Identify counterpart, sensor, timestamp, model, data, configuration, command, authority, environment, result, uncertainty, and limit. Preserve stale, missing, contradictory, and corrected observations.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, synchronization, freshness, calibration, sensor loss, model drift, unauthorized command, stale state, network loss, safe mode, physical comparison, recovery, and retirement.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Treating a dashboard as a twin; stale telemetry as live; inferred state as measurement; shared identity; unapproved actuation; and hiding model drift or sensor gaps.
+
+RECOVERY AND RECONSIDERATION
+
+Stop commands, isolate twin and counterpart, preserve telemetry, use local safe controls, reconcile state, compensate effects, notify owners, and reopen calibration and authority decisions.
+
+COMPLETION CRITERIA
+
+Identity, sync, freshness, model, authority, evidence, safety, recovery, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve counterpart identity, telemetry, models, commands, approvals, incidents, evidence, decisions, and next safe action. Hand off to IoT, Embedded, Simulation, Control, Safety, Security, Data, and Operations.
+
+RELATED CODEX SECTIONS
+
+070 Internet of Things Engineering; 073 Control Systems Engineering; 135 Scientific Computing; 136 Simulation Engineering; 137 Digital Twin Engineering; 198 Embedded Security; 252 Safety Testing; 355 Device Provisioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 016-020, Sections 059, 070, 073, and 107-136, Owner Cockpit Requirements, and Status and Evidence Lexicon. Counterpart ownership, sensor quality, physical safety rules, latency, calibration data, and jurisdictional privacy remain unresolved.

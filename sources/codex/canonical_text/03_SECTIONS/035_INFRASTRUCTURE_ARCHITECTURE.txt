@@ -1,0 +1,140 @@
+SECTION 035 — Infrastructure Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the physical and virtual compute, storage, host, facility, power, environmental, provisioning, and infrastructure-management structure that supports approved systems and platforms.
+
+REQUIRED OUTCOME
+
+- A bounded infrastructure topology with resources, locations, ownership, dependencies, trust and failure domains, capacity, interfaces, controls, and lifecycle.
+- Explicit provisioning, configuration, patching, monitoring, backup, restore, failover, replacement, disposal, and evidence obligations.
+- Traceability from workloads and platform contracts through infrastructure resources, operations, security, testing, continuity, and retirement.
+
+WHY THIS MATTERS
+
+Infrastructure failures can affect availability, data integrity, safety, security, cost, and recovery across many services. Naming resources without modeling failure domains, physical constraints, ownership, or replacement leaves the real system ungoverned.
+
+APPLICABILITY
+
+- Software, platforms, devices, facilities, or data depend on compute, storage, host, network, power, environmental, or provisioning resources.
+- Infrastructure changes affect capacity, isolation, resilience, physical access, energy, cost, security, privacy, or continuity.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material infrastructure resource, dependency, physical effect, control, evidence, or lifecycle obligation changes.
+- An approved baseline covers the exact environment, resource class, version, and change with no material impact.
+- The artifact is explicitly exploratory and not a readiness or capacity claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-034 provide requirements, applications, software, platform, data, operations, security, and resilience context.
+- Facility, supplier, asset, capacity, energy, identity, access, network, backup, continuity, and disposal authorities are known or open.
+
+REQUIRED INPUTS
+
+- Workloads, service objectives, data classes, locations, environments, operating modes, capacity, performance, physical, environmental, and lifecycle needs.
+- Resource inventories, topology, configuration, images, credentials, dependencies, maintenance, monitoring, incidents, backup, restore, failover, and retirement records.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Infrastructure owners approve topology, placement, capacity, physical access, security, environmental risk, suppliers, maintenance, exceptions, continuity, and retirement. Workload owners approve workload needs and risk. Humans retain authority to isolate, power down, fail over, restore, replace, and dispose.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory authorized resources, compare topology, detect drift, analyze capacity, draft infrastructure-as-code and tests, and recommend remediation. It must label observation and proposal, preserve resource and environment identity, and never change infrastructure, expose credentials, declare resilience, or accept physical or service risk without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Planner, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, Coordinator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory resources, locations, owners, workloads, dependencies, physical and virtual boundaries, and failure domains.
+2. Define provisioning, configuration, identity, access, placement, capacity, performance, energy, and lifecycle policies.
+3. Model normal, maintenance, degraded, facility-loss, resource-loss, recovery, migration, and disposal states.
+4. Allocate security, privacy, safety, accessibility, observability, backup, restore, failover, and support controls.
+5. Validate topology and operations with workload owners, operators, facilities, security, suppliers, and continuity specialists.
+6. Exercise resource loss, corruption, capacity exhaustion, credential loss, network isolation, restore, replacement, and disposal.
+7. Baseline topology, evidence, decisions, open gaps, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show resource identity, environment, owner, placement, acting authority, change scope, and physical or service consequence.
+- Require human review for destructive, shared, physical, security-sensitive, cost-bearing, or irreversible changes.
+- Preserve console, status, evidence, isolation, manual recovery, and emergency paths when automation or AI fails.
+- Prevent chat, break-glass, or provisioning shortcuts from bypassing authorization and audit.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate desired infrastructure, declared configuration, provisioned resource, observed state, backup, evidence, and retired asset.
+- Model failure domains, blast radius, placement, capacity, quotas, physical constraints, and supplier dependencies.
+- Define idempotent provisioning, drift detection, patching, rollback, restore, failover, replacement, and secure disposal.
+- Protect credentials, logs, images, snapshots, backups, and management paths under the same lifecycle and access rules.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show topology, resources, location, owner, capacity, health, dependencies, cost, authority, evidence freshness, and lifecycle.
+- Expose shared-impact and physical-impact actions with approval, actor, scope, and recovery details.
+- Permit authorized isolate, pause, fail over, restore, replace, migrate, quarantine, and retire actions.
+- Export topology, configuration identity, evidence, incidents, decisions, dissent, and continuation state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Infrastructure topology, asset and resource catalog, placement and failure-domain model, capacity plan, configuration and provisioning contracts.
+- Security, physical access, energy, observability, backup, restore, failover, maintenance, migration, replacement, and disposal plans.
+- Verification, readiness, impact, risk, decision, evidence, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify resource, location, configuration, workload, environment, method, observation time, actor, result, and limits.
+- Provisioning success, inventory, uptime, capacity, benchmark, failover drill, or backup listing proves only its bounded scope.
+- Physical, environmental, security, resilience, restore, and disposal evidence states coverage, conditions, exceptions, and validity.
+- Stale, missing, failed, or contradictory evidence constrains readiness and health status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace workloads and platform contracts through resources, provisioning, operation, evidence, recovery, and retirement.
+- Verify identity, least privilege, isolation, configuration integrity, capacity, monitoring, backup, restore, failover, and disposal controls.
+- Exercise host, storage, power, facility, credential, network, image, provider, and evidence-store loss.
+- Verify drift, unauthorized placement, quota exhaustion, stale configuration, and incomplete replacement are detected.
+- Reproduce topology and recovery claims from the exact baseline.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating resource existence, inventory, uptime, or a green health signal as resilience or capacity proof.
+- Ignoring physical access, facility, energy, supplier, image, snapshot, backup, or management dependencies.
+- Making infrastructure changes without blast-radius, maintenance, rollback, and communication analysis.
+- Leaving credentials, snapshots, logs, or retired assets outside lifecycle control.
+
+RECOVERY AND RECONSIDERATION
+
+- On resource loss, corruption, physical hazard, capacity exhaustion, unauthorized change, or evidence failure, isolate affected scope and preserve records.
+- Identify safe workload operation, owner, authority, communications, evidence, and recovery window.
+- Use approved failover, restore, replacement, reduced service, migration, or secure disposal paths.
+- Reopen on location, supplier, workload, capacity, topology, security, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Resources, owners, placement, dependencies, capacity, controls, evidence, recovery, maintenance, replacement, and disposal are explicit.
+- Resource and facility failure, migration, restore, and retirement are addressed or justified.
+- Exact validity and unresolved gaps are recorded; CONTENT-COMPLETE does not imply provisioned or resilient.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve asset identities, topology, configurations, locations, dependencies, incidents, decisions, evidence, dissent, and gaps.
+- Hand off to Cloud, Network, Security, Operations, Reliability, Resilience, Testing, Provisioning, and Retirement sections.
+- Record changes requiring reopening Platform, Software, Data, Cloud, Network, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-034 Requirements through Platform Architecture; 036-044 Cloud through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 255-300 delivery and infrastructure lifecycle; 301-406 operations and retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-034, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal facility, hardware, energy, capacity, asset, supplier, or infrastructure standard is supplied. Actual topology, locations, service objectives, physical controls, and acceptance evidence remain unresolved.

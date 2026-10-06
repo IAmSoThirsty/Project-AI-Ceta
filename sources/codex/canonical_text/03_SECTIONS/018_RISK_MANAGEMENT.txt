@@ -1,0 +1,402 @@
+SECTION 018 — Risk Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Identify, understand, govern, treat, monitor, communicate, and preserve accountability for uncertainty that could affect objectives, people, systems, rights, evidence, operations, commitments, or the environment across the complete lifecycle.
+
+Risk Management does not exist to produce a decorative matrix or to make danger appear numerically controlled. It creates a living decision system that distinguishes risk from fact, issue, hazard, threat, vulnerability, defect, assumption, dependency, blocker, opportunity, and unknown; assigns legitimate ownership; defines prevention, detection, response, recovery, acceptance, escalation, and review; and prevents work from advancing beyond authorized risk and evidence boundaries.
+
+REQUIRED OUTCOME
+
+- A bounded risk-management context identifying objective, scope, assets and values at risk, affected parties, authority, risk owners, time horizon, environments, lifecycle stages, and governing constraints.
+- A common taxonomy distinguishing risk, issue, hazard, threat, vulnerability, exposure, defect, control failure, assumption, unknown, dependency, blocker, opportunity, and residual risk.
+- A traceable risk register containing source, cause, event, consequence, affected objective or party, likelihood basis, impact basis, uncertainty, velocity, detectability, interdependencies, owner, treatment, trigger, threshold, evidence, status, and review date.
+- Explicit treatment decisions: avoid, reduce, transfer or share where legitimate, accept, exploit or enable an opportunity, defer with conditions, escalate, or prohibit.
+- Control and contingency plans covering prevention, protection, detection, response, recovery, communication, rollback, restore, fallback, and safe halt.
+- Risk aggregation and dependency analysis addressing correlated, cascading, systemic, concentration, common-mode, supply-chain, model, data, human, and lifecycle risks.
+- A truthful residual-risk statement and an attributable human acceptance, rejection, or escalation decision where acceptance authority exists.
+- A handoff package that turns risk treatment into requirements, architecture controls, tests, observability, operational procedures, maintenance obligations, and retirement conditions.
+
+WHY THIS MATTERS
+
+Risk becomes dangerous when it is hidden by optimism, fragmented across specialists, reduced to unsupported scores, or treated as accepted because work continued. A system may pass functional tests while carrying unacceptable privacy, safety, security, accessibility, legal, operational, financial, environmental, or human consequences. A risk register may look complete while omitting correlated dependencies, delayed harm, vulnerable populations, AI model uncertainty, or recovery failure.
+
+For human-AI systems, risk governance must preserve human authority without assuming humans can personally detect every technical failure. AI can help surface patterns and challenge assumptions, but it cannot silently decide acceptable harm, waive rights, authorize unsafe action, or turn missing evidence into low risk.
+
+APPLICABILITY
+
+- An objective, decision, system, change, experiment, deployment, migration, operation, maintenance action, or retirement path has uncertain outcomes with material consequences.
+- Work involves security, privacy, safety, accessibility, legal, regulatory, financial, environmental, reputational, operational, data, AI/model, supply-chain, or human-impact exposure.
+- Multiple dependencies, providers, components, teams, agents, environments, or lifecycle stages can create correlated or cascading failure.
+- A decision requires explicit residual-risk acceptance, conditional approval, escalation, or stop criteria.
+- Existing controls, assumptions, evidence, or operating conditions may drift over time.
+- Failure could affect people who do not directly use or control the system.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material uncertainty or consequence exists beyond ordinary reversible execution and all applicable controls are already established, current, verified, and unchanged.
+- The matter is a confirmed defect, active incident, legal prohibition, missing authority, or hard blocker requiring direct action rather than probabilistic treatment; it must still be linked to related risks where useful.
+- The requested analysis would duplicate an authoritative current risk process with identical scope, version, environment, affected parties, and evidence; the existing process may be referenced if its adequacy is verified.
+- Required analysis would expose protected information or create unsafe testing without authority.
+
+A non-applicability determination must identify the evidence supporting it and the trigger that would reopen risk analysis.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001–017 as applicable, including current research, foresight, strategy, stakeholder, user, domain, and feasibility evidence.
+- An authorized objective, scope, environments, lifecycle stages, risk decision owner, risk owners, and escalation authority.
+- Defined values and assets to protect, including people, rights, mission, data, systems, services, money, evidence, environment, reputation, and continuity.
+- Current architecture, process, dependency, data, model, supplier, control, incident, and operational evidence.
+- Explicit legal, policy, safety, privacy, security, accessibility, contractual, financial, environmental, and mission constraints.
+- A controlled method for rating uncertainty and consequence without pretending unsupported precision.
+- A durable register, review cadence, evidence store, communication path, and mechanism to block or halt work when thresholds are crossed.
+
+REQUIRED INPUTS
+
+- Objective, scope, success criteria, mission invariants, non-goals, affected parties, user and owner journeys, domain rules, and commitments.
+- Feasibility conditions, assumptions, unknowns, dependencies, disqualifiers, points of no return, and experiment results.
+- System, architecture, component, interface, authority, trust, data, event, state, model, provider, supply-chain, deployment, operation, maintenance, and retirement maps.
+- Asset, value, harm, hazard, threat, vulnerability, defect, control, incident, near-miss, support, audit, and postmortem evidence.
+- Likelihood, frequency, exposure, impact, duration, reversibility, detectability, velocity, recovery, and uncertainty evidence.
+- Current controls, owners, control objectives, implementation status, effectiveness evidence, gaps, compensating controls, and dependencies.
+- Risk appetite, tolerance, mandatory limits, acceptance authority, escalation thresholds, review periods, and prohibited conditions.
+- Known populations or communities disproportionately exposed, accessibility needs, privacy expectations, safety conditions, and grievance or appeal pathways.
+- AI or model identity, evaluation, data, failure modes, drift, hallucination, misuse, authority, oversight, fallback, and provider risks where applicable.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Authorized humans and institutions define protected values, risk appetite, non-negotiable constraints, acceptable residual risk, treatment priorities, and the legitimacy of tradeoffs. Human authority must be real, attributable, informed, and within jurisdiction.
+
+- Identify who owns each objective, asset, affected-party obligation, control, risk, response, and acceptance decision.
+- Define unacceptable outcomes and mandatory constraints that cannot be outweighed by aggregate scoring.
+- Decide how human rights, safety, privacy, accessibility, environmental burden, employment effects, public impact, and value conflicts are treated.
+- Approve risk methods, criteria, thresholds, treatment budgets, testing, disclosures, external transfers, exceptions, and review cadence.
+- Ensure affected parties, operators, specialists, and independent reviewers are represented where their evidence or rights matter.
+- Accept residual risk only with adequate evidence, explicit scope, conditions, duration, review trigger, and authority; silence or continued work is not acceptance.
+- Revoke acceptance and halt or narrow work when evidence, conditions, controls, or consequences materially change.
+- Escalate risks that exceed delegated authority, cross jurisdictions, affect unrepresented parties, or create systemic consequences.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+The AI may help discover, classify, connect, analyze, monitor, and communicate risks. It may not invent risk appetite, accept harm, waive a mandatory constraint, suppress dissent, or assign false numerical certainty.
+
+- Separate observed conditions, confirmed issues, plausible risks, assumptions, unknowns, opportunities, and speculation.
+- Preserve causal structure: source or cause, uncertain event, consequence, affected objective or party, and conditions of exposure.
+- Identify direct, indirect, second-order, delayed, cumulative, correlated, cascading, concentration, common-mode, and systemic effects.
+- Distinguish inherent risk from current residual risk and proposed residual risk after treatment.
+- State the basis and uncertainty for likelihood, impact, velocity, detectability, and control-effectiveness judgments.
+- Do not lower a risk rating because evidence is missing; missing high-consequence evidence is itself a material uncertainty.
+- Do not treat technical capability, model confidence, user consent, legal permission, security, safety, or social legitimacy as interchangeable.
+- Surface minority findings, affected-party concerns, control dependencies, treatment tradeoffs, and risks transferred to others.
+- Identify risks introduced by the treatment itself, including added complexity, lock-in, surveillance, exclusion, operator burden, and recovery fragility.
+- Route risk acceptance, value conflict, and threshold changes to the authorized human decision owner.
+- Preserve the exact version, environment, evidence, and time boundary of every risk determination.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Primary roles:
+
+- Analyst — evaluates causes, consequences, uncertainty, comparative treatments, sensitivity, and decision implications.
+- Planner — turns treatments into owners, tasks, dependencies, triggers, contingencies, validation gates, and completion evidence.
+- Governance Reviewer — verifies authority, policy, scope, acceptance legitimacy, evidence, delegation, exceptions, and trusted-state consequences.
+- Decision Arbiter Advisory — structures treatment and residual-risk recommendations under authorized criteria without seizing the acceptance decision.
+
+Specialist and assurance roles:
+
+- Researcher — obtains current threat, hazard, legal, regulatory, scientific, supplier, market, and domain evidence.
+- Observer — records events, conditions, thresholds, incidents, near misses, control state, and data gaps without unsupported interpretation.
+- Security Auditor — evaluates security threats, vulnerabilities, identity, access, supply chain, evidence integrity, and control effectiveness.
+- Architect — identifies structural, interface, trust-boundary, dependency, common-mode, recovery, and lifecycle risks.
+- User Experience Reviewer — evaluates human error, cognitive load, accessibility, trust, consent, dark patterns, recovery, and complete journeys.
+- Tester — validates controls, boundary behavior, failure, denial, recovery, rollback, and monitoring.
+- Verifier — independently checks evidence, risk claims, control operation, residual-risk boundaries, and acceptance conditions.
+- Red Team — attacks assumptions, bypasses, abuse paths, correlated failures, control evasion, and optimistic residual-risk claims.
+- Critic — identifies hidden consequences, missing requirements, false precision, unsupported ratings, and omitted affected parties.
+- Memory Curator — maintains risk history, decisions, evidence, expiry, supersession, incidents, lessons, and reopening triggers.
+- Coordinator — manages specialist inputs, conflicts, dependencies, treatment status, and consolidated reporting.
+
+Role selection must match the risk and consequence, use independent review where required, and leave source-defined role contracts unchanged.
+
+REQUIRED ACTIVITIES
+
+1. Establish risk context
+Define the objective, scope, environments, lifecycle stages, assets and values, affected parties, authority, risk owners, acceptance authority, criteria, thresholds, and review horizon.
+
+2. Define the taxonomy
+Distinguish risk, issue, hazard, threat, vulnerability, exposure, defect, control failure, assumption, unknown, dependency, blocker, opportunity, incident, and residual risk so each receives the correct action.
+
+3. Identify protected assets and values
+Include life and safety, rights, privacy, accessibility, mission, service, data, identity, evidence, finances, environment, reputation, commitments, continuity, and future options.
+
+4. Identify risks from multiple sources
+Use research, incidents, near misses, audits, user research, stakeholder concerns, architecture, threat modeling, testing, operations, supply chain, model evaluation, legal review, foresight, and dissent.
+
+5. Write bounded risk statements
+For each risk, identify source or cause, uncertain event, consequence, affected objective or party, scope, environment, timeframe, and evidence.
+
+6. Classify and connect risks
+Identify category, lifecycle stage, ownership, dependencies, shared causes, correlated exposures, cascades, concentration, common-mode failure, and systemic reach.
+
+7. Analyze likelihood and uncertainty
+Use frequency, exposure, precedent, model, expert judgment, scenario, or interval evidence appropriate to the domain. Record confidence, data limitations, and conditions under which the estimate fails.
+
+8. Analyze consequence
+Consider severity, scale, duration, distribution, reversibility, detectability, velocity, recovery, legal or rights impact, mission impact, and who bears the harm or cost.
+
+9. Evaluate inherent risk
+Assess risk before current controls, preserving mandatory constraints and intolerable conditions separately from scored comparison.
+
+10. Map controls and control objectives
+Identify preventive, protective, detective, corrective, recovery, compensating, deterrent, governance, and evidence controls; record owner, implementation, dependencies, coverage, and verification.
+
+11. Evaluate control effectiveness
+Use design review, implementation evidence, tests, monitoring, incidents, audits, bypass attempts, human factors, and recovery evidence. Do not infer effectiveness from control documentation alone.
+
+12. Determine current residual risk
+State what remains after verified current controls, including uncertainty, untested paths, transferred exposure, and risks introduced by the controls.
+
+13. Design treatment options
+Consider avoid, reduce, isolate, substitute, share or transfer where legitimate, accept, defer with conditions, stage, monitor, prepare contingency, or prohibit. Include no-action and safe-halt options where materially distinct.
+
+14. Evaluate treatment tradeoffs
+Identify cost, delay, complexity, user burden, privacy effects, accessibility effects, new dependencies, control conflicts, risk transfer, lock-in, and recovery consequences.
+
+15. Define triggers, thresholds, and response
+For each material risk define leading and lagging indicators, trigger, threshold, alert path, owner, first action, escalation, communication, containment, rollback, restore, fallback, and safe-halt criteria.
+
+16. Address AI and autonomous-system risk
+Where AI participates, assess model limitations, data, hallucination, drift, misuse, overreliance, emergent behavior claims, authority confusion, prompt or tool abuse, provider dependence, monitoring, fallback, correction, appeal, and revocation.
+
+17. Address human and affected-party risk
+Evaluate cognitive load, accessibility, consent, manipulation, exclusion, inequitable exposure, operator fatigue, skill loss, false trust, blame transfer, grievance, and recovery burden.
+
+18. Aggregate and prioritize
+Examine interactions rather than summing isolated scores. Identify top risks, intolerable risks, systemic risks, control bottlenecks, concentration, and treatment sequencing.
+
+19. Decide and record treatment
+Record recommendation, authorized decision, owner, resources, due conditions, acceptance boundary, duration, evidence threshold, dissent, and what would change the decision.
+
+20. Monitor, review, close, and reopen
+Track indicators, incidents, control drift, environment changes, new evidence, treatment status, residual risk, expiry, and closure evidence. Reopen when conditions change or acceptance expires.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Risk information must be presented in language that names the condition, consequence, affected party, uncertainty, evidence, and next action rather than relying on color or score alone.
+- The system must distinguish a proposed AI assessment from an authorized risk decision and an accepted residual-risk record.
+- Humans must be able to inspect evidence, competing specialist views, affected-party concerns, treatment alternatives, control dependencies, and uncertainty before acceptance.
+- The AI must not assign a person's or community's willingness to bear harm, surveillance, exclusion, or loss of control.
+- Affected humans must have accessible notice, correction, appeal, grievance, and recovery paths where the system creates decisions or exposures affecting them.
+- Capability and confidence indicators must not imply authority, safety, legality, or acceptability.
+- Missing telemetry, stale evidence, unavailable sources, or unknown control state must be visible and may require degraded status or safe halt.
+- The owner must be able to pause, narrow, revoke delegation, change thresholds, reject treatment, require review, and stop consequential action.
+- AI-generated risk summaries must preserve minority findings, uncertainty, and transferred risk rather than compressing them into false consensus.
+- Notifications must avoid both alarm fatigue and silent suppression; severity, urgency, confidence, ownership, and expected response must be explicit.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Risk treatment must become enforceable system behavior where architecture or runtime control is required.
+
+- Trace risks to assets, requirements, architecture decisions, components, interfaces, data, actors, dependencies, controls, tests, monitoring, incidents, maintenance, and retirement obligations.
+- Separate control objective, control design, implementation, configuration, operation, evidence, and effectiveness status.
+- Enforce mandatory authority, security, privacy, safety, accessibility, and evidence conditions consistently across UI, API, agent, scheduled, retry, integration, and administrative paths.
+- Design for defense in depth without assuming one control compensates for every failure.
+- Identify common-mode and correlated control dependencies such as one identity provider, cloud region, model provider, key store, data source, operator, supplier, or monitoring path.
+- Provide observable indicators, control health, freshness, provenance, thresholds, alerts, escalation, and incident linkage.
+- Include graceful degradation, isolation, rate limits, circuit breaking, safe halt, manual fallback, rollback, restore, backup, failover, and recovery where appropriate.
+- Prevent an AI agent, model, or automated policy from expanding authority, changing risk thresholds, suppressing evidence, or accepting residual risk without authorization.
+- Preserve immutable or tamper-evident risk decisions, exceptions, approvals, evidence, control changes, incidents, and review history where consequence warrants.
+- Propagate invalidation when architecture, environment, data, model, provider, law, user population, or control state changes.
+- Treat maintenance, dependency updates, migration, deprecation, data deletion, service decommissioning, hardware disposal, and retirement as risk-bearing transitions.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner-facing operating surface or equivalent durable record should expose:
+
+- Risk context, objectives, assets, affected parties, environments, lifecycle stages, owners, acceptance authority, and current review state.
+- Risk statements with source, event, consequence, likelihood basis, impact basis, uncertainty, velocity, detectability, and evidence.
+- Inherent, current residual, and projected residual risk without implying false precision.
+- Mandatory constraints, intolerable conditions, appetite, tolerance, thresholds, and expired or missing authority.
+- Controls with objective, owner, implementation state, evidence, effectiveness, dependencies, gaps, and next verification.
+- Treatment alternatives, tradeoffs, transferred risks, new risks introduced, resources, due conditions, and dissent.
+- Indicators, triggers, alerts, incidents, near misses, trends, stale telemetry, and control degradation.
+- AI/model risks including identity, version, provider, evaluation, data, authority, human oversight, fallback, drift, and revocation.
+- Acceptance records with scope, decision owner, rationale, evidence, conditions, duration, review trigger, and affected parties.
+- Direct controls to pause, narrow, revoke, escalate, enter safe halt, initiate response, verify recovery, and reopen risk review.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Risk-management context and authority record.
+- Risk taxonomy and scoring or classification method with limitations.
+- Asset, value, affected-party, objective, and obligation register.
+- Risk register with bounded risk statements and provenance.
+- Risk dependency, correlation, cascade, concentration, and systemic map.
+- Hazard, threat, vulnerability, assumption, unknown, issue, defect, and opportunity linkage as applicable.
+- Control-objective and control register with implementation, ownership, dependencies, evidence, and effectiveness.
+- Inherent-risk, current-residual-risk, and projected-residual-risk assessments.
+- Treatment option analysis, decision, plan, budget, owner, conditions, and schedule.
+- Indicator, threshold, alert, escalation, communication, contingency, rollback, restore, fallback, and safe-halt plans.
+- AI/model, data, human, accessibility, privacy, security, safety, legal, operational, financial, environmental, supply-chain, and lifecycle risk assessments as applicable.
+- Risk-acceptance, exception, rejection, escalation, dissent, and review records.
+- Monitoring, incident, near-miss, control-drift, closure, and reopening evidence.
+- Downstream requirements, architecture, test, observability, operational, maintenance, and lifecycle handoff.
+
+EVIDENCE REQUIREMENTS
+
+- Every material risk must identify evidence source, version, environment, timeframe, method, scope, quality, and uncertainty.
+- Likelihood and impact ratings require an explicit basis; unsupported numeric precision is prohibited.
+- Control effectiveness requires implementation and operating evidence, not policy or configuration intent alone.
+- Incident, near-miss, audit, test, monitoring, user, support, supplier, model-evaluation, and recovery evidence must preserve provenance and known gaps.
+- Evidence must identify affected populations, conditions, environments, versions, and lifecycle stages so risk is not generalized beyond support.
+- Risk acceptance must link to the exact residual-risk assessment, conditions, decision authority, duration, review trigger, and evidence available at the time.
+- Transferred or shared risk must identify who now bears the consequence and whether the transfer is legitimate and understood.
+- Missing evidence, stale telemetry, unverifiable controls, or unknown exposure must remain visible and may increase uncertainty or block advancement.
+- Qualified domain sources are required for legal, medical, safety, environmental, financial, regulatory, or other specialist conclusions where consequence warrants.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace each top risk to objectives, affected parties, assets, causes, consequences, controls, owners, tests, indicators, treatment, and acceptance or escalation decision.
+- Independently test whether mandatory constraints can be bypassed through UI, API, agent, scheduled, retry, integration, offline, degraded, or administrative paths.
+- Remove or fail a control dependency and verify the risk state, alert, treatment, and trusted status update correctly.
+- Inject stale, missing, contradictory, or corrupted telemetry and verify the system does not display low risk or healthy control state.
+- Reproduce control tests and compare expected versus observed prevention, detection, response, recovery, rollback, and restore behavior.
+- Simulate correlated and cascading failures rather than testing each component only in isolation.
+- Test human error, accessibility, misunderstanding, alert fatigue, consent withdrawal, escalation, grievance, correction, and recovery journeys.
+- Alter model, data, provider, environment, version, workload, user population, law, or authority and verify affected risks reopen.
+- Give an AI capable of action no permission to change thresholds, accept risk, suppress alerts, or continue beyond safe-halt conditions.
+- Verify that a downstream engineering or operations role can reconstruct current risk state and treatment obligations from durable artifacts alone.
+- Review expired acceptances, exceptions, and unverified controls and confirm they cannot silently remain trusted.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Decorative risk register disconnected from requirements, architecture, controls, tests, operations, incidents, and decisions.
+- Treating missing evidence as low likelihood or no risk.
+- Using arbitrary multiplication or color coding as a substitute for causal analysis, affected-party impact, uncertainty, and mandatory constraints.
+- Confusing a confirmed issue, prohibition, defect, incident, or missing authority with a future risk.
+- Treating risks independently while ignoring shared causes, correlated exposure, concentration, common-mode failure, or cascade.
+- Recording a control as effective because it exists in policy, code, or configuration without operating evidence.
+- Allowing residual risk to be accepted by an AI, unauthorized person, silent workflow, expired approval, or default setting.
+- Transferring risk to users, operators, vendors, communities, or future maintainers without disclosure, legitimacy, or support.
+- Hiding accessibility, privacy, safety, environmental, labor, or long-term human effects behind technical or financial averages.
+- Treating consent as permission to impose any risk or as a substitute for safety, legality, accessibility, and fairness.
+- Ignoring treatment-created risks such as complexity, surveillance, lock-in, operator burden, brittle recovery, or reduced transparency.
+- Suppressing dissent, incidents, near misses, failed tests, or unfavorable evidence to maintain a preferred rating.
+- Failing to expire or reopen risk assessments after material change.
+- Treating risk acceptance as permanent approval for scope expansion.
+- Declaring safe or acceptable status when controls, telemetry, identity, evidence, or authority are unknown.
+
+RECOVERY AND RECONSIDERATION
+
+Risk recovery restores a truthful risk state before restoring ordinary operation.
+
+- Detect and name the changed condition, affected risks, objectives, parties, controls, environments, and trusted-state consequence.
+- Preserve evidence, telemetry, logs, decisions, approvals, incidents, previous ratings, and last-known-good references.
+- Enter degraded mode or safe halt where thresholds, mandatory controls, evidence, or authority require it.
+- Contain the cause without destroying evidence or unrelated safe state.
+- Reassess inherent and residual risk using current evidence; invalidate expired acceptance and affected downstream artifacts.
+- Activate contingency, rollback, restore, fallback, communication, support, grievance, or external notification as authorized.
+- Obtain qualified review and human decision where new consequences, values, or authority boundaries arise.
+- Verify control restoration, critical journeys, evidence integrity, and residual risk before trusted return to operation.
+- Record lessons, treatment changes, tests, monitoring changes, acceptance changes, and reopening triggers in continuity.
+
+COMPLETION CRITERIA
+
+- Risk context, assets, values, affected parties, authority, owners, criteria, thresholds, environments, and lifecycle stages are explicit.
+- Taxonomy separates risk from issue, hazard, threat, vulnerability, defect, assumption, unknown, dependency, blocker, opportunity, and incident.
+- Material risks use bounded causal statements and include evidence, uncertainty, ownership, dependencies, and review triggers.
+- Mandatory constraints and intolerable conditions cannot be outweighed by scoring or preference.
+- Inherent risk, current controls, control effectiveness, current residual risk, treatments, and projected residual risk are distinct.
+- Correlated, cascading, concentration, common-mode, systemic, treatment-created, and transferred risks are addressed where applicable.
+- Human, accessibility, privacy, safety, security, legal, environmental, data, AI/model, operational, financial, supply-chain, maintenance, and retirement consequences are considered proportionately.
+- Treatments have owners, resources, dependencies, evidence thresholds, tests, triggers, contingencies, and completion conditions.
+- Residual-risk acceptance or rejection is attributable, authorized, scoped, conditioned, time-bounded, reviewable, and evidence-linked.
+- Monitoring, incident, recovery, closure, reopening, and continuity mechanisms exist.
+- Requirements Engineering and Systems Engineering can consume the treatments without inventing missing control obligations.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Transfer risk context, taxonomy, criteria, assets, affected parties, owners, authority, appetite, tolerance, thresholds, and lifecycle scope.
+- Provide the complete risk register, dependency and cascade map, control register, evidence, effectiveness state, treatment plan, and residual-risk decisions.
+- Carry forward every mandatory constraint, prohibited condition, accepted exception, expiry, trigger, escalation, safe-halt condition, and human decision point.
+- Map treatments to requirements, architecture decisions, security, privacy, safety, accessibility, testing, observability, incident response, business continuity, disaster recovery, maintenance, migration, decommissioning, and retirement.
+- Preserve dissent, unknowns, transferred risk, treatment-created risk, failed controls, incidents, near misses, assumptions, and evidence needed to reopen decisions.
+- State current risk status, work allowed, work conditionally allowed, work blocked, work prohibited, next review, and next safe action.
+
+RELATED CODEX SECTIONS
+
+001 Research
+002 Foresight / Futures
+003 Innovation
+004 Mission Strategy
+005 Business Strategy
+006 Product Strategy
+007 Portfolio Management
+008 Program Management
+009 Project Management
+010 Product Management
+011 Business Analysis
+012 Market Research
+013 Competitive Intelligence
+014 Stakeholder Management
+015 User Research
+016 Domain Analysis
+017 Feasibility Analysis
+019 Requirements Engineering
+020 Systems Engineering
+045 Security Architecture
+047 Privacy Architecture
+048 Governance Architecture
+049 Compliance Architecture
+050 Safety Architecture
+051 Reliability Architecture
+052 Resilience Architecture
+053 Accessibility Architecture
+056 AI Architecture
+151 Database Engineering
+178 Agent Systems Engineering
+181 Model Alignment
+182 AI Safety
+183 AI Governance
+189 Cybersecurity Engineering
+208 Threat Modeling
+209 Vulnerability Management
+217 Trust and Safety
+218 Privacy Engineering
+219 Legal
+220 Regulatory Compliance
+222 Ethics
+226 Audit
+227 Internal Controls
+246 Security Testing
+247 Accessibility Testing
+251 Compliance Testing
+252 Safety Testing
+253 Model Testing
+256 Verification
+257 Validation
+301 Site Reliability Engineering
+306 Security Operations
+319 Incident Management
+326 Business Continuity
+327 Disaster Recovery
+330 Failover Engineering
+331 Operational Readiness
+332 Command and Control
+350 Supply Chain Management
+374 Maintenance Engineering
+380 Security Patching
+381 Dependency Updates
+383 Platform Migration
+389 Deprecation Management
+390 Sunset Planning
+397 Service Decommissioning
+400 Secure Destruction
+405 Lifecycle Governance
+406 System Retirement
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+This draft applies the supplied requirements for risk notification, blocker truth, evidence-before-claims, current-problem treatment, safety and data protection, bounded authority, role independence, hostile review, failure and recovery, continuity, and no fake success. The Planner contract supplies risk fields, triggers, likelihood, impact, prevention, detection, response, owner, residual risk, and decision threshold. The Analyst and Decision Arbiter Advisory contracts supply consistent option evaluation, mandatory constraints, uncertainty, sensitivity, reversibility, residual risk, and human decision authority. The Security Auditor, Governance Reviewer, Critic, Red Team, Tester, Verifier, Observer, User Experience Reviewer, Architect, Memory Curator, Coordinator, and Researcher contracts supply specialist identification, challenge, control, evidence, monitoring, and continuity behavior. The Owner's Cockpit contributes trust calibration, visible limitation, agent identity, bounded autonomy, incidents, safe halt, release, rollback, recovery, and owner control. The V4 draft contributes claim and obligation typing, prerequisite-aware analysis, dissent preservation, evidence contracts, trusted transitions, and artifact-consistency blocking.
+
+Unresolved source gap: the supplied corpus does not contain a single universal risk-management standard, quantitative method, hazard-analysis method, actuarial model, safety case, financial-risk framework, or sector-specific regulatory taxonomy. This section therefore provides a general lifecycle governance scaffold and prohibits invented precision. Actual risk methods, thresholds, scoring, acceptance, and specialist conclusions must use current qualified sources for the applicable domain and must later be reconciled with Requirements Engineering, Systems Engineering, Security, Privacy, Safety, Accessibility, Legal, Compliance, Internal Controls, Verification, Validation, Operations, Maintenance, and Lifecycle Governance.

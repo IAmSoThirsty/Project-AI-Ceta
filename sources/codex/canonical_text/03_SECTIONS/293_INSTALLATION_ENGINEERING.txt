@@ -1,0 +1,95 @@
+SECTION 293 — Installation Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Install, upgrade, configure, verify, roll back, uninstall, and recover a package or capability on its target while protecting data, users, service, and evidence.
+
+REQUIRED OUTCOME
+
+An installation model with prerequisites, target, identity, package, state transition, configuration, migration, permissions, validation, rollback, support, and cleanup.
+
+WHY THIS MATTERS
+
+Installation crosses the boundary from artifact to live state. Partial installation, incompatible prerequisites, hidden migration, privilege, or cleanup failure can leave a system unusable or insecure.
+
+APPLICABILITY
+
+Apply when a package, update, service, configuration, firmware, model, or infrastructure component is installed, upgraded, removed, or restored.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no target state, package, configuration, data, or installation behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use packaging, provisioning, configuration, identity, data migration, compatibility, deployment, backup, rollback, support, and operations baselines.
+
+REQUIRED INPUTS
+
+Package, target, prerequisites, identity, permissions, configuration, data, migration, state, validation, rollback, support, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve target, privilege, migration, downtime, rollback, support, exception, and completion. Humans decide whether data and service can be changed safely.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft installation steps, check prerequisites, analyze logs, and suggest recovery. It must not install, grant privilege, alter data, or claim completion without delegated authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Installation Engineer, Release Engineer, Deployment Engineer, Systems Administrator, Tester, Verifier, Security Auditor, Support Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Validate package and target; check prerequisites and authority; back up; install or upgrade; migrate; validate; record; roll back or repair; clean up; support; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show package, target, prerequisites, privilege, state, data, action, evidence, and limitation. Require human approval for production, data, privileged, destructive, and recovery actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use transactional or staged install, prerequisite checks, state checkpoints, least privilege, atomic migration, rollback, idempotence, logs, and safe uninstall.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show target, package, phase, prerequisites, data state, health, evidence freshness, owner, and authorized start, pause, rollback, repair, verify, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Installation specification; target and prerequisite record; execution and state; migration and validation; rollback and support; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify target, package, version, identity, prerequisite, action, state, method, time, result, actor, and limitation. Installer completion proves only its reported steps.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify prerequisite, permission, package, data migration, service, configuration, rollback, uninstall, restart, recovery, logging, and support. Test partial and interrupted installation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Install without backup, hidden privilege, partial state ignored, migration irreversible, uninstall leaves access, reboot surprise, and installer success treated as operational readiness.
+
+RECOVERY AND RECONSIDERATION
+
+Stop, preserve state and logs, roll back or restore, repair data, communicate, and reassess target and users. Reopen on package, target, dependency, data, or prerequisite change.
+
+COMPLETION CRITERIA
+
+Package, target, prerequisites, permissions, state, data, validation, rollback, support, evidence, owners, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve installation logs, state, package, migrations, failures, decisions, evidence, exceptions, and open gaps. Hand off to Provisioning, Deployment, Operations, Support, Release, and Security.
+
+RELATED CODEX SECTIONS
+
+292 Packaging; 294 Provisioning; 290 Deployment; 293 Installation; 295 Environment Promotion; 301-330 Operations; 391-400 Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, packaging, deployment, data, and operations context, and the integration roadmap. Exact targets, prerequisites, migration, privilege, rollback, support, and acceptance authority remain unresolved.

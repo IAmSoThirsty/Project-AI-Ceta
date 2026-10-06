@@ -1,0 +1,95 @@
+SECTION 280 — Container Orchestration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Schedule, connect, secure, scale, observe, update, and recover container workloads across nodes, services, tenants, and failure domains.
+
+REQUIRED OUTCOME
+
+An orchestration model with cluster, control plane, nodes, workloads, identity, network, storage, scheduling, health, policy, upgrades, capacity, and recovery ownership.
+
+WHY THIS MATTERS
+
+Orchestration concentrates control over many workloads. A control-plane compromise, bad policy, node failure, rollout, or scheduling assumption can affect broad service and data scope.
+
+APPLICABILITY
+
+Apply when a control plane schedules or manages containerized workloads across nodes or environments.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no orchestrator, cluster, workload scheduling, policy, or control-plane behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use container, platform, network, identity, storage, configuration, security, capacity, resilience, release, and operations baselines.
+
+REQUIRED INPUTS
+
+Cluster, nodes, workloads, policies, identities, images, network, storage, scheduling, health, capacity, upgrades, telemetry, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Cluster and workload owners approve access, policies, placement, upgrade, scale, disruption, recovery, and retirement. Humans retain emergency control over the control plane.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized cluster state and manifests, identify scheduling or resource issues, and draft policies and runbooks. It must not grant cluster access, change workloads, drain nodes, or delete resources without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Orchestration Engineer, Container Engineer, Platform Engineer, Security Auditor, Network Engineer, Storage Administrator, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Define cluster and tenancy; secure control plane; manage nodes and workload policy; schedule; observe; scale; roll out; upgrade; test disruption; recover; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show cluster, namespace or tenant, workload, identity, policy, node, action, evidence, and limitation. Require human approval for privileged, disruptive, production, and destructive actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use control-plane isolation, least privilege, network policy, resource quotas, disruption budgets, health checks, storage recovery, staged upgrades, node diversity, and audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show cluster health, workload, node, policy, capacity, rollout, incidents, evidence freshness, owner, and authorized cordon, drain, scale, pause, rollback, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Cluster charter; control-plane and node model; workload and policy; capacity and upgrade plan; observability, disruption, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify cluster, node, workload, image, policy, identity, version, method, time, result, and limitation. Control-plane health proves neither application outcome nor data integrity.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify access, isolation, scheduling, resource, network, storage, health, rollout, upgrade, node loss, control-plane loss, backup, restore, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Cluster admin everywhere, namespace isolation assumed, unbounded resources, unsafe drain, health check theater, control-plane single point, and upgrade without rollback.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict control plane, preserve state, isolate workloads, restore or fail over, repair nodes, and reassess data and service impact. Reopen on cluster, policy, workload, provider, or version change.
+
+COMPLETION CRITERIA
+
+Cluster, nodes, workloads, policy, identity, capacity, updates, evidence, recovery, owners, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve cluster state, manifests, policies, versions, incidents, upgrades, decisions, evidence, exceptions, and open gaps. Hand off to Containers, Platform, Network, Storage, Security, Release, and Operations.
+
+RELATED CODEX SECTIONS
+
+279 Container Engineering; 272 Platform Engineering; 277 Cloud; 284 Network; 286 Storage; 301-330 Operations and Recovery; 380-381 Patching.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, containers, platform, infrastructure, security, and operations context, and the integration roadmap. Exact orchestrator, cluster, tenancy, policy, recovery, provider, and acceptance authority remain unresolved.

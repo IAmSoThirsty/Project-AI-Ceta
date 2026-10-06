@@ -1,0 +1,95 @@
+SECTION 245 — Chaos Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Learn how systems and organizations behave under controlled, hypothesis-driven disruption and use the evidence to improve resilience, detection, recovery, and human control.
+
+REQUIRED OUTCOME
+
+A governed chaos experiment with steady-state hypothesis, scope, authorization, blast radius, safety, abort, observability, result, learning, remediation, and repeatability.
+
+WHY THIS MATTERS
+
+Resilience assumptions remain hidden until challenged. Uncontrolled chaos is simply an incident; controlled experiments require safety, observability, a meaningful hypothesis, and authority to stop.
+
+APPLICABILITY
+
+Apply when controlled disruption can safely answer a material resilience or operational question that ordinary testing cannot.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when risk or authority cannot support a controlled experiment, a lower-risk test answers the question, or no material resilience uncertainty exists.
+
+PREREQUISITES AND DEPENDENCIES
+
+Define steady state, hypothesis, scope, blast radius, authorization, safety, abort, contacts, observability, rollback, recovery, communication, and incident conversion.
+
+REQUIRED INPUTS
+
+Hypothesis, protected outcome, target, version, dependency, disruption, limits, environment, telemetry, rollback, responders, data, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Experiment owners approve hypothesis, scope, risk, safety, stop, communication, and recovery. A controller can abort immediately; humans interpret learning and decide remediation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft hypotheses, dependency maps, experiment plans, and analysis. It must not initiate or escalate disruption, conceal impact, change targets, or declare steady state without explicit human authority and live supervision.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Chaos Engineer, Resilience Engineer, Architect, Operations Engineer, Tester, Observer, Analyst, Verifier, Safety Reviewer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define steady state and hypothesis; authorize and bound; verify observability and abort; run smallest safe experiment; observe technical and human outcome; abort or recover; analyze; remediate; repeat; and record learning.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show hypothesis, target, disruption, blast radius, authority, steady state, evidence, impact, and abort. Require human presence for consequential experiments and immediate stop capability.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support safe injection, isolation, feature flags, rate limits, dependency substitution, rollback, recovery, telemetry, and incident conversion. Keep experiment controls separate from ordinary production authority.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show experiment phase, hypothesis, target, impact, steady state, abort state, evidence, owner, and authorized pause, abort, recover, narrow, remediate, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Experiment charter; hypothesis and steady-state definition; authorization and safety plan; run record; telemetry and impact; learning and remediation; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify experiment, hypothesis, target, version, disruption, environment, authority, time, observation, result, impact, recovery, and limitation. A successful experiment proves only its declared hypothesis and conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorization, steady state, observability, abort, blast radius, recovery, incident conversion, data integrity, operator response, and repeatability. Confirm no unapproved target or person was affected.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Chaos without hypothesis, no abort, broad blast radius, missing telemetry, surprise to responders, experiment mistaken for incident, and learning without remediation.
+
+RECOVERY AND RECONSIDERATION
+
+Abort, stabilize, preserve evidence, recover, communicate, and convert to incident handling when necessary. Reassess hypothesis and safeguards before repeating. Reopen on system, dependency, threat, or operational change.
+
+COMPLETION CRITERIA
+
+Hypothesis, scope, safety, authority, evidence, result, impact, recovery, learning, remediation, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve experiment identity, controls, timeline, telemetry, findings, recovery, decisions, evidence, exceptions, and open gaps. Hand off to Resilience, Reliability, Security Operations, Incident Response, Operations, and Governance.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 206 Security Operations; 243 Reliability Testing; 244 Resilience Testing; 301-330 Reliability, Resilience, Continuity, Disaster Recovery, and Failover.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, resilience and operations context, and the integration roadmap. Exact experiment authority, steady state, blast radius, safety, environment, and acceptance evidence remain unresolved.

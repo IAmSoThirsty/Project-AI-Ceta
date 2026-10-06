@@ -1,0 +1,98 @@
+SECTION 139 - Graphics Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of visual computation, assets, pipelines, shaders, geometry, lighting, display, and interaction with explicit correctness, performance, accessibility, provenance, and platform boundaries.
+
+REQUIRED OUTCOME
+
+A graphics baseline with scene, asset, shader, rendering, device, color, performance, accessibility, security, build, evidence, and recovery contracts.
+
+WHY THIS MATTERS
+
+Visual output can be wrong, inaccessible, misleading, or unsafe while appearing polished. GPU and asset failures also create portability, privacy, and resource risks.
+
+APPLICABILITY
+
+Applies to 2D or 3D graphics, real-time visualization, game graphics, UI rendering, GPU compute, asset pipelines, and display output.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to systems with no generated, rendered, displayed, or graphics-dependent output. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires visual purpose, target devices, GPU and API support, assets, color and accessibility rules, performance, security, licensing, build, testing, and release authority.
+
+REQUIRED INPUTS
+
+Provide scenes, geometry, materials, shaders, assets, color, resolution, input, frame and memory budgets, accessibility, privacy, and failure requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve visual meaning, accessibility, asset rights, safety, performance tradeoffs, and release. Humans retain authority over public or consequential visual claims.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft shaders, assets, tests, and profiles. It must preserve provenance and licenses, avoid unsafe or deceptive output, and never ship generated content without review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Graphics Engineer, Designer, Researcher, Security Auditor, Accessibility specialist, Implementer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define visual purpose, targets, assets, APIs, color, accessibility, and budgets.
+2. Build scene and asset pipelines with provenance, determinism, and fallback.
+3. Test rendering, correctness, performance, compatibility, accessibility, and device loss.
+4. Release, monitor, optimize, and retire assets and rendering paths.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source or generated asset, shader, device, API, frame state, evidence, and confidence. Human review is required for rights, accessibility, and consequential visuals; fallback remains available when GPU or AI fails.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate assets, scene, materials, shader, renderer, display, input, GPU, cache, and content trust boundaries. Version pipelines and preserve software fallback and device-loss recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show build, renderer, device, frame time, memory, visual errors, asset provenance, accessibility, incidents, and controls to disable effects, fall back, purge, or roll back.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Graphics charter, asset catalog and rights, render pipeline, shader records, device matrix, color and accessibility plan, performance evidence, build manifest, and recovery runbook.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, shader, build, device, API, configuration, test method, result, date, and limits. Separate pixel correctness, visual interpretation, accessibility, performance, security, and provenance evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify rendering, color, scaling, device loss, shader failure, malformed assets, memory pressure, performance, accessibility, localization, screenshots, and software fallback.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unlicensed assets; shader-only correctness; inaccessible contrast; device-specific assumptions; unbounded texture memory; hidden tracking in assets; and treating visual fidelity as semantic or user success.
+
+RECOVERY AND RECONSIDERATION
+
+Disable affected effects, preserve assets and logs, use fallback renderer, remove unsafe or unlicensed content, compensate external use, and reopen the graphics baseline.
+
+COMPLETION CRITERIA
+
+Visual purpose, assets, rights, accessibility, performance, evidence, fallback, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve assets, licenses, shaders, build, device evidence, decisions, incidents, and next safe action. Hand off to Rendering, Animation, Game, Media, Accessibility, Testing, Build, and Operations.
+
+RELATED CODEX SECTIONS
+
+083 UI Design; 084 Visual Design; 094 Game Design; 138 Game Engineering; 139 Graphics Engineering; 140 Rendering Engineering; 247 Accessibility Testing; 292 Packaging.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 075-106 and 107-138, Owner Cockpit Requirements, and Status and Evidence Lexicon. Device capability, asset rights, color standards, accessibility criteria, performance budgets, and safety obligations remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 403 — Postmortem Analysis
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Analyze a significant incident, failure, near miss, or harmful outcome to reconstruct what happened, why defenses failed, what was learned, and which actions reduce recurrence.
+
+REQUIRED OUTCOME
+
+A blameless postmortem with scope, timeline, impact, detection, response, contributing conditions, uncertainty, evidence, actions, owners, due dates, and follow-up.
+
+WHY THIS MATTERS
+
+A postmortem can improve systems or become blame theater. It must distinguish proximate event from systemic conditions and preserve uncertainty rather than inventing a neat story.
+
+APPLICABILITY
+
+Apply to material incident, outage, safety event, security event, privacy event, near miss, failed recovery, or recurring problem where learning and action matter.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when the event has no material impact, recurrence, learning, or control consequence and a bounded incident record is sufficient.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use incident, problem, forensic, observability, evidence, safety, privacy, legal, quality, continuity, and change records.
+
+REQUIRED INPUTS
+
+Event, timeline, impact, detection, response, systems, changes, dependencies, evidence, decisions, communications, user reports, and actions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Facilitators protect psychological safety and evidence integrity; owners accept actions and resources; humans resolve accountability, legal, safety, and communication boundaries.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may organize authorized timeline and evidence, identify patterns and questions, and draft action candidates. It must not assign blame, infer causality, expose private evidence, or close action without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Postmortem Facilitator, Incident Responder, Problem Manager, Researcher, Analyst, Forensic Analyst, Critic, Verifier, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Set scope and participants; preserve evidence; reconstruct timeline; quantify impact; examine detection and response; identify contributing conditions; record dissent; assign actions; review; and follow up.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show evidence, fact, inference, uncertainty, decision, impact, participant, and limitation. Require human validation of timeline, cause, harm, action, and external communication.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Link incident, change, configuration, dependency, alert, log, trace, metric, user, action, and control. Preserve immutable evidence and action tracking.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show event, impact, timeline, evidence freshness, contributing factors, actions, owners, due dates, and authorized challenge, assign, remediate, escalate, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Postmortem charter; timeline and impact; evidence and uncertainty; contributing conditions; action register; decision, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify event, source, time basis, action, actor, impact, hypothesis, confidence, and limitation. A plausible root-cause narrative is not proof.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify timeline, impact, evidence, detection, response, contributing conditions, action ownership, due dates, recurrence measures, privacy, and blameless review.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Blame, hindsight, single root cause, action without owner, evidence discarded, impact minimized, postmortem delayed until memory fades, and closure by document publication.
+
+RECOVERY AND RECONSIDERATION
+
+Correct the record, protect participants, update actions, preserve evidence, communicate, and reopen when new evidence or recurrence appears. Do not erase uncertainty to close.
+
+COMPLETION CRITERIA
+
+Scope, impact, timeline, evidence, uncertainty, contributing conditions, actions, owners, follow-up, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve postmortem, evidence, actions, decisions, communications, exceptions, and open gaps. Hand off to Problem, Lessons Learned, SRE, Security, Safety, Quality, Governance, and Operations.
+
+RELATED CODEX SECTIONS
+
+213-214 Forensics and Incident Response; 319-320 Incident and Problem Management; 402 Review; 404 Lessons Learned; 018 Risk; 004 Evidence.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, incident, evidence, learning, safety, security, and operations context, and the integration roadmap. Exact event, participants, impact, legal limits, action authority, and acceptance evidence remain unresolved.

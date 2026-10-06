@@ -1,0 +1,95 @@
+SECTION 235 — System Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Evaluate the assembled system against functional, nonfunctional, operational, security, safety, user, data, and lifecycle requirements in a representative environment.
+
+REQUIRED OUTCOME
+
+A system-test baseline with versioned system, configuration, interfaces, data, users, scenarios, environment, results, defects, coverage, acceptance, and limitations.
+
+WHY THIS MATTERS
+
+System behavior emerges from interactions among components, configuration, people, providers, timing, and operations. Unit or integration success does not prove that the whole system meets its purpose or fails safely.
+
+APPLICABILITY
+
+Apply when an assembled system or service has meaningful functional, quality, safety, security, operational, or user outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no assembled behavior, configuration, user, interface, or lifecycle claim changes and a verified exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use requirements, architecture, operational concept, quality, risk, test levels, data, identity, environments, observability, recovery, and acceptance baselines.
+
+REQUIRED INPUTS
+
+System version, configuration, requirements, scenarios, users, data, dependencies, environment, quality risks, test oracles, prior findings, recovery, and exit criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+System owners define outcomes and acceptance; testers execute and report; domain, security, safety, accessibility, and operations owners judge their concerns. Humans approve production-like data, exceptions, and release.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft scenarios, generate bounded data, analyze results, and identify gaps from authorized context. It must not claim full-system coverage, use uncontrolled data, alter environments, or accept release without human judgment.
+
+APPLICABLE EXISTING AGENT ROLES
+
+System Tester, Systems Engineer, Architect, Quality Engineer, Security Auditor, User Experience Reviewer, Analyst, Verifier, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Baseline system; select representative scenarios and users; exercise functional, boundary, failure, security, safety, performance, accessibility, recovery, and operational paths; record defects; retest; assess coverage and limits; obtain owner decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show system version, configuration, scenario, user, data, environment, execution, result, evidence, and limitation. Require human review for safety, security, user, recovery, and exit decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support representative environments, controlled dependencies, observability, fault injection, reset, data isolation, version traceability, rollback, and safe cleanup.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show system baseline, scenario coverage, failures, risks, evidence freshness, owner, exit state, and authorized run, pause, quarantine, remediate, accept, reject, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+System-test plan and matrix; version and configuration record; scenarios and data; results and defect register; coverage and limitation report; exit and acceptance; evidence and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify system, version, configuration, scenario, data, environment, method, execution, result, time, actor, coverage, and limitation. A green run proves only the executed scenarios and conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify functional and nonfunctional behavior, boundary and failure paths, user and operator journeys, security, safety, accessibility, recovery, observability, and reproducibility.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Environment drift, scenario theater, production data leakage, only happy-path coverage, system pass despite known operational gaps, and defects hidden as test exclusions.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve state and failure evidence, reset or isolate environment, remediate, retest, and reassess exit. Reopen on system, configuration, dependency, user, requirement, or risk change.
+
+COMPLETION CRITERIA
+
+System, configuration, scenarios, data, results, failures, coverage, exit criteria, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending QA and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve system baseline, data, environment, results, defects, decisions, evidence, exceptions, and open gaps. Hand off to E2E, Acceptance, Regression, Performance, Security, Operations, and Release.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 029-044 Architecture; 231 Software Testing; 234 Integration Testing; 236-242 Specialized Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, systems and quality context, and the integration roadmap. Exact system, environment, users, data, scenario, risk, exit, and acceptance requirements remain unresolved.

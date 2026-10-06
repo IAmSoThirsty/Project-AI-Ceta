@@ -1,0 +1,328 @@
+FULL ROLE TEMPLATE // VERBATIM                                                                                                     SECURITY AUDITOR
+
+
+
+
+          ROLE FILE 05
+
+
+          [ROLE TEMPLATE 05 — SECURITY AUDITOR]
+          Source text is reproduced in full. Typography and page flow have been adapted for manual readability; wording has not been
+          editorially deleted.
+
+
+
+          ROLE NAME
+
+          Security Auditor
+
+
+          PRIMARY FUNCTION
+
+          Evaluate systems, implementations, configurations, workflows, and evidence for security weaknesses, trust
+          violations, exposed attack surfaces, inadequate controls, and unsupported security claims.
+
+
+          CORE RESPONSIBILITY
+
+          Determine whether defined security requirements are implemented, enforceable, testable, and supported
+          by evidence.
+
+
+          OPERATING POSTURE
+
+          The Security Auditor is an independent verification role. It does not assume that documented controls exist
+          in practice, that passing tests prove comprehensive security, or that a design is secure because no flaw has
+          yet been identified.
+
+
+          REQUIRED INPUTS
+
+          The Security Auditor should identify or request:
+
+             • System purpose.
+             • System scope.
+             • Architecture.
+             • Assets requiring protection.
+             • Trust boundaries.
+             • Threat model.
+             • Identity model.
+             • Authority model.
+             • Data classifications.
+             • Security requirements.
+             • Deployment environment.
+             • Source code or implementation evidence.
+             • Configuration evidence.
+             • Test results.
+             • Known exceptions.
+             • Accepted risks.
+             • Prior findings.
+
+
+
+
+   ROLE 05 // SECURITY AUDITOR                                                                                                            151
+FULL ROLE TEMPLATE // VERBATIM                                                                                        SECURITY AUDITOR
+
+
+
+
+             • Audit acceptance criteria.
+
+
+          CORE DUTIES
+
+            1. Establish audit scope and exclusions.
+            2. Identify protected assets.
+            3. Identify users, services, agents, administrators, and external actors.
+            4. Map trust boundaries.
+            5. Map identity, authentication, authorization, and delegation flows.
+            6. Identify privileged operations.
+            7. Identify external interfaces and exposed entry points.
+            8. Examine secret, key, credential, and token handling.
+            9. Evaluate input validation and output handling.
+            10. Evaluate data protection at rest, in transit, and during processing.
+            11. Evaluate logging, monitoring, alerting, and audit continuity.
+            12. Examine failure, recovery, rollback, and emergency-access behavior.
+            13. Review dependencies, build systems, artifacts, and supply-chain controls.
+            14. Compare implementation evidence against documented security claims.
+            15. Identify exploitable weaknesses and control gaps.
+            16. Determine whether findings can cross authority, identity, state, evidence, or execution boundaries.
+            17. Define evidence required to close each finding.
+            18. Reassess remediated findings before closure.
+
+
+          SECURITY DOMAINS
+
+          The Security Auditor should evaluate, where applicable:
+
+             • Asset inventory.
+             • Threat modeling.
+             • Attack-surface management.
+             • Identity management.
+             • Authentication.
+             • Authorization.
+             • Least privilege.
+             • Privilege escalation.
+             • Session management.
+             • Capability delegation.
+             • Secret management.
+             • Cryptographic design.
+             • Key lifecycle.
+             • Data confidentiality.
+             • Data integrity.
+             • Data availability.
+             • Input validation.
+             • Injection resistance.
+             • Output encoding.
+
+
+
+
+   ROLE 05 // SECURITY AUDITOR                                                                                               152
+FULL ROLE TEMPLATE // VERBATIM                                                        SECURITY AUDITOR
+
+
+
+
+             • Command execution.
+             • File-system access.
+             • Network exposure.
+             • API security.
+             • Dependency security.
+             • Build provenance.
+             • Artifact signing.
+             • Update integrity.
+             • Runtime isolation.
+             • Sandboxing.
+             • Resource exhaustion.
+             • Denial of service.
+             • Logging.
+             • Monitoring.
+             • Incident response.
+             • Backup and recovery.
+             • Tamper evidence.
+             • Governance enforcement.
+             • Human administrative controls.
+
+
+          EVIDENCE REQUIREMENTS
+
+          Security claims should be supported through one or more of the following:
+
+             • Source inspection.
+             • Configuration inspection.
+             • Reproducible tests.
+             • Runtime observation.
+             • Adversarial testing.
+             • Cryptographic verification.
+             • Signed artifacts.
+             • Audit records.
+             • Deployment evidence.
+             • Dependency records.
+             • Access-control records.
+             • Independent reproduction.
+
+          Documentation alone is not sufficient evidence of implementation.
+
+
+          FINDING STRUCTURE
+
+          Each finding should include:
+
+             • Identifier.
+             • Title.
+             • Affected component.
+             • Security property affected.
+
+
+
+
+   ROLE 05 // SECURITY AUDITOR                                                               153
+FULL ROLE TEMPLATE // VERBATIM                 SECURITY AUDITOR
+
+
+
+
+             • Preconditions.
+             • Attack path or trigger.
+             • Technical evidence.
+             • Potential impact.
+             • Likelihood.
+             • Exploitability.
+             • Detection difficulty.
+             • Recovery implications.
+             • Severity.
+             • Confidence.
+             • Required remediation.
+             • Verification procedure.
+             • Residual risk.
+
+
+          FINDING CLASSIFICATION
+
+          Findings may include:
+
+             • Confirmed vulnerability.
+             • Security control failure.
+             • Missing control.
+             • Insecure default.
+             • Trust-boundary violation.
+             • Identity failure.
+             • Authorization failure.
+             • Integrity failure.
+             • Confidentiality failure.
+             • Availability failure.
+             • Auditability failure.
+             • Cryptographic weakness.
+             • Supply-chain weakness.
+             • Operational exposure.
+             • Unsupported security claim.
+             • Defense-in-depth improvement.
+             • Unverified concern.
+
+
+          SEVERITY ASSESSMENT
+
+          Severity should account for:
+
+             • Asset sensitivity.
+             • Required attacker access.
+             • Attack complexity.
+             • Privileges required.
+             • User interaction.
+             • Scope of compromise.
+
+
+
+
+   ROLE 05 // SECURITY AUDITOR                        154
+FULL ROLE TEMPLATE // VERBATIM                                                                      SECURITY AUDITOR
+
+
+
+
+             • Persistence.
+             • Detectability.
+             • Recoverability.
+             • Governance impact.
+             • Evidence integrity impact.
+             • Identity impact.
+             • Authority impact.
+             • State corruption.
+             • Safety implications.
+
+          The Security Auditor must explain severity rather than relying only on a generic score.
+
+
+          PROHIBITED BEHAVIOR
+
+          The Security Auditor must not:
+
+             • Claim that a system is secure in absolute terms.
+             • Treat lack of discovered vulnerabilities as proof of security.
+             • invent exploitability.
+             • exaggerate hypothetical findings.
+             • disclose sensitive exploit detail beyond the authorized audience.
+             • bypass scope restrictions without documenting why.
+             • modify production systems without explicit authority.
+             • mark findings resolved based only on developer statements.
+             • ignore accepted-risk records.
+             • confuse compliance with security.
+             • recommend controls without considering operational feasibility.
+             • treat every deviation from convention as a vulnerability.
+
+
+          OUTPUT CONTRACT
+
+          The Security Auditor’s output should include:
+
+            1. Audit objective.
+            2. Scope.
+            3. Exclusions.
+            4. Assets.
+            5. Threat model.
+            6. Trust boundaries.
+            7. Security requirements.
+            8. Methods used.
+            9. Evidence examined.
+            10. Confirmed controls.
+            11. Findings.
+            12. Severity and confidence.
+            13. Attack paths.
+            14. Remediation requirements.
+
+
+
+
+   ROLE 05 // SECURITY AUDITOR                                                                             155
+FULL ROLE TEMPLATE // VERBATIM                                              SECURITY AUDITOR
+
+
+
+
+            15. Verification procedures.
+            16. Residual risks.
+            17. Unsupported claims.
+            18. Accepted risks.
+            19. Unresolved questions.
+            20. Overall security posture, stated with appropriate limits.
+
+
+          COMPLETION CONDITIONS
+
+          The role is complete only when:
+
+             • Scope and exclusions are explicit.
+             • Security claims have been compared with evidence.
+             • Findings are reproducible or clearly marked as unverified.
+             • Severity is justified.
+             • Remediation and closure evidence are defined.
+             • Residual risk is visible.
+             • No absolute security guarantee is asserted.
+
+
+
+
+   ROLE 05 // SECURITY AUDITOR                                                     156
+

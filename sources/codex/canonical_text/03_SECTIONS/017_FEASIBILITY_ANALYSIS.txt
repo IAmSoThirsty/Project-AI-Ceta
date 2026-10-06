@@ -1,0 +1,380 @@
+SECTION 017 — Feasibility Analysis
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Determine whether a proposed objective, product, system, capability, change, migration, experiment, deployment, or retirement path can be realized within declared authority, evidence, constraints, resources, dependencies, risks, and lifecycle obligations.
+
+Feasibility Analysis separates aspiration from demonstrated possibility. It does not ask only whether something can be made to function in a favorable demonstration. It tests whether the intended outcome can be delivered, operated, governed, secured, supported, recovered, maintained, and eventually changed or retired without hiding the conditions that make the conclusion true.
+
+REQUIRED OUTCOME
+
+- A bounded feasibility question identifying the objective, decision owner, scope, options, exclusions, environment, horizon, and required confidence.
+- A current-state baseline distinguishing confirmed capability, available capacity, existing obligations, missing prerequisites, unresolved assumptions, and inaccessible evidence.
+- A multidimensional feasibility assessment covering technical, architectural, data, AI or model, operational, human, accessibility, security, privacy, safety, legal, regulatory, economic, schedule, resource, supply-chain, integration, migration, support, maintenance, and retirement concerns as applicable.
+- An option-by-option constraint map identifying mandatory conditions, disqualifying conditions, dependencies, tradeoffs, reversibility, points of no return, and evidence strength.
+- A cheapest-safe resolution plan for material unknowns using inspection, prototype, simulation, proof of concept, benchmark, pilot, test, consultation, or staged experiment.
+- A truthful determination such as FEASIBLE, FEASIBLE WITH CONDITIONS, LIMITED PILOT ONLY, ADDITIONAL EVIDENCE REQUIRED, NOT FEASIBLE WITHIN DECLARED CONSTRAINTS, or OUT OF SCOPE.
+- A handoff package stating which conditions must become requirements, architecture obligations, risk treatments, acceptance criteria, owner decisions, or stop conditions.
+
+WHY THIS MATTERS
+
+A convincing prototype can hide an impossible operating model. A technically working implementation can be unaffordable, inaccessible, unlawful, unsafe, dependent on unavailable infrastructure, impossible to support, or incapable of recovery. An AI-generated plan can sound complete while relying on fictional integrations, invented staffing, unverified model capability, absent data rights, or authority no actor possesses.
+
+Feasibility Analysis protects later requirements and architecture from being built on unsupported premises. In human-AI systems it also prevents technical capability from being mistaken for legitimate authority, reliable competence, acceptable risk, or readiness for unsupervised consequence.
+
+APPLICABILITY
+
+- A proposed objective requires material investment, irreversible commitment, external dependency, regulated activity, consequential automation, or long-lived operation.
+- Multiple options exist and their viability depends on different constraints, evidence, resources, or risks.
+- A new product, platform, architecture, model, device, integration, migration, deployment, manufacturing path, or retirement plan is being considered.
+- The work depends on uncertain technology, model behavior, data, performance, scale, staffing, budget, schedule, supply chain, jurisdiction, or user adoption.
+- A prototype or demonstration must be translated into a production, offline, field, safety-critical, regulated, or owner-operable system.
+- Failure to discover infeasibility early would create material cost, harm, lock-in, delay, data loss, broken commitments, or loss of trust.
+
+NON-APPLICABILITY CONDITIONS
+
+- The task is a small, reversible, already-demonstrated change using established components, current evidence, available authority, and no material new dependency or consequence.
+- Feasibility has already been demonstrated for the exact version, environment, scope, scale, user population, operating mode, and lifecycle conditions, and no material condition has changed.
+- The question is whether an option should be chosen after feasibility is already established; Decision Arbiter Advisory or the authorized human decision process controls that decision.
+- The work is still too undefined to identify an objective, option, environment, constraints, or required outcome; discovery or Business Analysis must proceed first.
+- Required investigation would expose protected systems, data, people, intellectual property, or regulated activity without authority.
+
+A non-applicability determination must identify the evidence proving that no material feasibility uncertainty remains. Convenience or schedule pressure is not sufficient.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001–016 as applicable, especially Research, Foresight / Futures, Mission Strategy, Product Strategy, Business Analysis, Market Research, Stakeholder Management, User Research, and Domain Analysis.
+- An authorized objective, decision owner, scope, option set, constraints, and required confidence.
+- Current-state evidence for systems, environments, data, integrations, models, infrastructure, staffing, budget, schedule, suppliers, operations, support, maintenance, and legal obligations.
+- Explicit acceptance criteria and a distinction between prototype, demonstration, pilot, implementation, deployment, production, and lifecycle readiness.
+- Permission to inspect, test, benchmark, simulate, consult, prototype, or pilot without exceeding data, safety, security, contractual, or operational boundaries.
+- A method to record assumptions, unknowns, evidence, costs, risks, decisions, invalidation triggers, and versioned conclusions.
+
+REQUIRED INPUTS
+
+- Objective, intended outcomes, non-goals, affected parties, user and owner journeys, domain rules, mission invariants, and success measures.
+- Candidate options, architectures, components, providers, models, tools, environments, operating modes, and fallback paths.
+- Functional and nonfunctional needs, constraints, prohibited actions, required integrations, data flows, authority flows, trust boundaries, and lifecycle expectations.
+- Current system, repository, hardware, network, cloud, local, edge, device, manufacturing, deployment, operations, support, and retirement evidence.
+- Data availability, provenance, quality, rights, privacy, retention, jurisdiction, representativeness, and migration conditions.
+- AI or model capability evidence, evaluation scope, failure modes, runtime requirements, provider dependencies, governance controls, and human-review requirements.
+- Cost, capacity, schedule, staffing, skills, energy, facilities, supply-chain, licensing, vendor, and procurement evidence.
+- Security, privacy, safety, accessibility, compliance, contractual, environmental, and ethical constraints.
+- Known risks, incidents, failed attempts, assumptions, unresolved decisions, points of no return, and evidence that would change the conclusion.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Authorized humans retain responsibility for defining the intended outcome, mandatory constraints, acceptable evidence, value tradeoffs, resource commitments, and the final decision to proceed, narrow, pilot, defer, or stop.
+
+- Establish the decision question, authority, scope, options, non-negotiable constraints, and acceptable residual uncertainty.
+- Supply or authorize access to current operational, financial, legal, personnel, user, system, and dependency evidence.
+- Distinguish what is technically possible from what is legitimate, desirable, affordable, supportable, or aligned with mission.
+- Decide value conflicts involving human impact, accessibility, privacy, safety, employment, environmental burden, rights, or long-term commitments.
+- Approve prototypes, experiments, pilots, external consultation, procurement, data use, and any consequential test.
+- Confirm whether resource, schedule, budget, staffing, supplier, jurisdiction, or risk assumptions are real commitments or merely scenarios.
+- Accept, reject, or condition residual risk only within legitimate authority; AI systems may not accept risk on behalf of affected humans or institutions.
+- Require renewed analysis when a material assumption, constraint, dependency, environment, model, provider, law, user population, or operating mode changes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+The AI may inspect evidence, decompose the feasibility question, compare options, identify dependencies, construct tests, estimate within evidence, and expose uncertainty. It may not manufacture viability, resources, authority, integrations, data rights, model competence, or operational readiness.
+
+- Separate verified facts, measurements, estimates, assumptions, hypotheses, preferences, unknowns, and prohibited conditions.
+- Bind every material feasibility claim to the exact option, version, environment, scale, timeframe, workload, user population, and operating mode examined.
+- Treat a diagram, plan, vendor statement, model response, benchmark, mockup, prototype, or successful happy path as limited evidence rather than full feasibility proof.
+- Identify hidden prerequisites, hard dependencies, resource ceilings, incompatible constraints, external approvals, and failure-recovery obligations.
+- Use comparable criteria for each option and disclose any weighting, uncertainty, or evidence asymmetry.
+- Prefer the cheapest safe experiment with useful information gain over expensive implementation built on an untested prerequisite.
+- Distinguish AI model capability from permission, reliability, governance, human acceptance, runtime availability, data legitimacy, and authority to act.
+- Avoid unsupported point estimates; provide basis, range, uncertainty, sensitivity, and conditions for cost, schedule, capacity, performance, or resource estimates.
+- Report infeasibility, conditional feasibility, or insufficient evidence directly rather than repairing gaps with optimistic language.
+- Preserve rejected options, dissent, contradictory evidence, and what would reopen the determination.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Primary roles:
+
+- Analyst — performs multidimensional option comparison, sensitivity analysis, tradeoff analysis, and evidence-proportionate conclusions.
+- Architect — examines structure, interfaces, trust boundaries, failure modes, implementation sequence, and whether requirements map to realizable components.
+- Planner — identifies deliverables, dependencies, resources, milestones, validation gates, contingencies, and completion evidence without inventing capacity or deadlines.
+- Decision Arbiter Advisory — structures the feasibility determination under human-authorized criteria and preserves disqualifying constraints, dissent, reversibility, and residual uncertainty.
+
+Common supporting roles:
+
+- Researcher — validates technologies, standards, laws, providers, costs, dependencies, and time-sensitive evidence.
+- Observer — captures current-state behavior, workloads, environments, resource use, failures, and operating conditions before interpretation.
+- Tester — designs and executes bounded prototypes, benchmarks, compatibility tests, failure tests, and recovery tests.
+- Verifier — checks claim boundaries, artifact identity, evidence integrity, reproducibility, and whether demonstrated results support the stated conclusion.
+- Security Auditor — evaluates threat exposure, trust boundaries, identity, access, dependency, supply-chain, and security-operability feasibility.
+- Governance Reviewer — checks objective fidelity, authority, approvals, evidence thresholds, delegation, and human decision boundaries.
+- User Experience Reviewer — evaluates whether real users and owners can understand, operate, recover, and complete required journeys.
+- Optimizer — evaluates performance or cost only against a measured baseline while protecting correctness, safety, security, governance, accessibility, and recovery.
+- Coordinator — routes specialist analyses, preserves conflicts, tracks dependencies, and consolidates evidence without erasing dissent.
+
+Challenge roles where consequence warrants:
+
+- Critic — attacks optimistic assumptions, omitted costs, hidden dependencies, false equivalence, and unsupported readiness.
+- Red Team — pressures security, abuse, operational, model, human, environmental, and failure-recovery assumptions.
+
+Role selection must use the smallest sufficient set, maintain independence between proposal and assurance where required, and preserve every source-defined role contract unchanged.
+
+REQUIRED ACTIVITIES
+
+1. Frame the feasibility decision
+Define the exact objective, decision owner, scope, options, exclusions, target environments, scale, horizon, users, operating modes, and confidence required.
+
+2. Establish current state
+Inspect actual systems, repositories, data, hardware, providers, networks, facilities, processes, staffing, budgets, contracts, incidents, support load, and lifecycle obligations. Record what is unavailable.
+
+3. Define feasibility dimensions
+Select only applicable dimensions, but explicitly consider technical, architectural, data, AI/model, operational, human, accessibility, security, privacy, safety, legal, regulatory, economic, schedule, resource, supply-chain, integration, migration, maintainability, supportability, and retirement feasibility.
+
+4. Establish mandatory constraints
+Separate constraints that disqualify an option from preferences that may be traded. Identify authority, law, safety, privacy, security, accessibility, budget, resource, compatibility, deadline, evidence, and irreversibility limits.
+
+5. Decompose options and dependencies
+Map each option to required capabilities, components, interfaces, data, environments, skills, suppliers, approvals, tools, infrastructure, processes, and upstream decisions. Classify hard, soft, evidence, approval, resource, environmental, and external dependencies.
+
+6. Test requirement realizability
+Trace intended outcomes and critical requirements to plausible mechanisms. Identify requirements that conflict, exceed known limits, depend on undefined behavior, or cannot be verified.
+
+7. Examine technical and architectural feasibility
+Assess component maturity, compatibility, interoperability, performance, scalability, reliability, availability, portability, maintainability, observability, security, recoverability, offline behavior, and deployment constraints.
+
+8. Examine data and AI feasibility
+Assess data existence, quality, rights, representativeness, freshness, labeling, retention, privacy, security, transfer, model fit, evaluation evidence, runtime needs, failure modes, drift, fallback, human oversight, and provider dependence.
+
+9. Examine operational and human feasibility
+Assess owner operability, staffing, skills, training, procedures, support, incident response, maintenance, change burden, accessibility, cognitive load, trust calibration, user adoption, and recovery journeys.
+
+10. Examine economic and resource feasibility
+Identify full lifecycle cost, not only build cost: acquisition, licensing, compute, storage, network, energy, labor, training, security, compliance, support, maintenance, downtime, migration, vendor exit, recovery, and retirement.
+
+11. Examine schedule feasibility
+Build a dependency-aware range using evidence for effort, review, rework, validation, procurement, external approvals, integration, migration, training, and contingency. Do not convert an unsupported target date into an estimate.
+
+12. Examine legal, policy, safety, privacy, and environmental feasibility
+Identify jurisdictions, licenses, contracts, regulatory approvals, prohibited uses, data obligations, human-rights concerns, safety cases, environmental limits, records, disposal, and qualified review needs.
+
+13. Identify critical assumptions and unknowns
+Rank them by consequence and uncertainty. State what evidence would confirm, reject, narrow, or invalidate each one.
+
+14. Design resolution experiments
+Choose inspections, prototypes, proofs of concept, simulations, benchmarks, consultations, compatibility tests, user evaluations, pilots, or staged trials with explicit scope, success thresholds, stop conditions, safety controls, and information gain.
+
+15. Test failure, recovery, and reversibility
+Examine degraded operation, dependency loss, provider outage, model failure, invalid data, security event, user error, rollback, restore, manual fallback, migration reversal, and point-of-no-return conditions.
+
+16. Compare options consistently
+Use the same criteria and disclose evidence strength, costs, benefits, dependencies, risks, human effects, conditions, and residual uncertainty. Include no-action, narrowed-scope, staged, and reversible options where materially available.
+
+17. Produce the determination
+Return a bounded state: FEASIBLE; FEASIBLE WITH CONDITIONS; LIMITED PILOT ONLY; ADDITIONAL EVIDENCE REQUIRED; NOT FEASIBLE WITHIN DECLARED CONSTRAINTS; PROHIBITED; OUT OF SCOPE; or DECISION DEFERRED.
+
+18. Define invalidation and handoff
+Record conditions, required approvals, evidence thresholds, review date, change triggers, downstream requirements, architecture obligations, risk treatments, acceptance tests, and owner decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- The system must show whether a statement is an observation, estimate, assumption, scenario, test result, recommendation, or authorized determination.
+- Humans must be able to inspect the exact evidence, option, environment, scale, version, and limitations behind a feasibility conclusion.
+- A technically capable AI or component must not be presented as operationally feasible unless authority, data, evaluation, oversight, fallback, security, privacy, support, and recovery are also addressed.
+- The AI must not infer budget, staffing, deadline, acceptable harm, legal approval, risk tolerance, or willingness to rely on a provider.
+- Material ambiguity must be narrowed before consequential prototypes, tests, purchases, migrations, or deployments.
+- Conditional feasibility must expose every condition, owner, deadline or trigger, evidence requirement, and consequence of non-fulfillment.
+- Users and owners must be able to reject a recommendation, reduce scope, request alternatives, inspect dissent, pause work, revoke delegation, and choose a no-action path where legitimate.
+- AI-generated synthetic estimates, simulations, or test data must be labeled and must not replace human, operational, or field evidence without explicit justification.
+- Failed or inconclusive experiments must remain visible and must not be averaged into a positive conclusion.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+The work must reveal implementation obligations without treating feasibility analysis as implementation proof.
+
+- Maintain traceability from objective and requirements to candidate capabilities, components, interfaces, dependencies, evidence, and unresolved conditions.
+- Represent environment, version, scale, workload, data, user population, authority, and operating mode as part of every material feasibility claim.
+- Create explicit boundaries between prototype, pilot, staging, production, offline, field, regulated, and retirement conditions.
+- Provide architecture seams for fallback, substitution, provider exit, manual operation, degraded mode, rollback, restore, migration, and safe halt.
+- Enforce authority, safety, privacy, security, and evidence requirements at governed runtime boundaries rather than relying on planning documents or prompts.
+- Instrument resource consumption, performance, reliability, model behavior, human intervention, cost, failure, and recovery so feasibility assumptions can be measured after implementation.
+- Use adapters, versioned contracts, or isolation boundaries where external providers, models, hardware, data sources, or regulations may change.
+- Avoid designs whose feasibility depends on hidden cloud access, proprietary services, unsupported hardware, undocumented behavior, unavailable credentials, or fictional staffing.
+- Where a feasibility condition remains unresolved, encode it as a requirement, gate, feature flag, deployment restriction, resource ceiling, approval, test, or trusted-state block.
+- Preserve the ability to invalidate dependent artifacts when an assumption or feasibility conclusion changes.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner-facing operating surface or equivalent durable record should expose:
+
+- The feasibility question, options, decision owner, scope, environment, scale, horizon, and current determination.
+- Applicable dimensions with status, evidence strength, assumptions, unknowns, constraints, dependencies, and responsible owner.
+- Mandatory and disqualifying constraints separately from weighted preferences.
+- Current-state capability, available capacity, missing prerequisites, external dependencies, and unsupported assumptions.
+- Prototype, pilot, implementation, deployment, production, and lifecycle-readiness distinctions.
+- Experiment plans, approvals, safety boundaries, resource caps, expected information gain, results, failures, and unresolved conditions.
+- Cost and schedule ranges with basis, confidence, dependencies, and excluded costs.
+- AI or model identity, version, provider, evaluation scope, allowed use, authority boundary, fallback, and human-review requirement.
+- Conditions required to proceed, risk treatments, approvals, review dates, stop triggers, rollback, and no-action option.
+- The ability to pause, narrow, revoke, request evidence, compare alternatives, record dissent, and prevent downstream advancement when feasibility is not established.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Feasibility question and decision record.
+- Current-state baseline and evidence inventory.
+- Option register and option boundary statements.
+- Feasibility-dimension matrix with applicability decisions.
+- Mandatory-constraint and disqualifier register.
+- Capability, requirement, dependency, resource, and approval maps.
+- Technical and architectural feasibility assessment.
+- Data and AI/model feasibility assessment where applicable.
+- Operational, human, accessibility, security, privacy, safety, legal, economic, schedule, supply-chain, maintenance, and retirement assessments as applicable.
+- Assumption and unknown register with consequence, owner, evidence need, and invalidation trigger.
+- Prototype, experiment, benchmark, consultation, or pilot plans and results.
+- Cost model, schedule range, capacity model, and sensitivity analysis where requested and evidence permits.
+- Failure, recovery, fallback, rollback, provider-exit, and reversibility analysis.
+- Option comparison, dissent record, determination, conditions, required approvals, and what evidence would change the result.
+- Downstream requirement, architecture, risk, verification, and continuity handoff.
+
+EVIDENCE REQUIREMENTS
+
+- Evidence must identify source, owner, version, environment, method, date, scope, integrity, and relevance.
+- Technical evidence should include direct inspection, reproducible tests, prototypes, benchmarks, compatibility results, runtime observations, or primary implementation documentation appropriate to the claim.
+- Operational evidence should include actual workflows, staffing, support, incident, maintenance, recovery, and owner-journey evidence rather than process diagrams alone.
+- Data and AI evidence should identify dataset or source identity, rights, quality, representativeness, model version, evaluation conditions, failure modes, and human-review boundaries.
+- Cost and schedule evidence must state basis, assumptions, range, sensitivity, exclusions, and whether values are measured, quoted, estimated, or scenario-based.
+- Legal, regulatory, safety, privacy, accessibility, and environmental conclusions require qualified or authoritative sources where consequence warrants.
+- Vendor claims must be distinguished from independently reproduced evidence.
+- A successful test in one environment, scale, version, or workload must not be generalized without evidence.
+- Missing evidence must produce UNKNOWN, CONDITIONAL, or NOT ESTABLISHED status rather than optimistic completion.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace each critical requirement and constraint to an option, mechanism, evidence source, and verification path.
+- Reproduce material prototypes, benchmarks, compatibility checks, and cost or resource measurements in the declared environment where practical.
+- Change scale, workload, environment, version, provider, data, user population, or operating mode and verify the conclusion narrows or reopens appropriately.
+- Remove a hard dependency, credential, data source, external service, key skill, budget assumption, or approval and confirm the option is blocked or reclassified.
+- Test normal, boundary, failure, degraded, offline, recovery, rollback, restore, manual fallback, and provider-exit paths.
+- Give a capable AI no authority or no valid data and verify it cannot be reported as operationally feasible for consequential action.
+- Compare prototype behavior with owner-operable production obligations and identify every unproven transition.
+- Audit full lifecycle cost and schedule against omitted support, security, compliance, maintenance, migration, recovery, and retirement work.
+- Have independent specialists challenge the highest-consequence assumptions, disqualifiers, and claimed evidence.
+- Restart a downstream planner or architect from the handoff and verify that all conditions, unknowns, and invalidation triggers are visible without conversational memory.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating possibility, novelty, or a working demonstration as full feasibility.
+- Declaring feasibility without an exact environment, version, scale, workload, data set, user population, or operating mode.
+- Treating vendor marketing, model fluency, a diagram, or an implementation plan as evidence that dependencies exist and work.
+- Inventing budget, staffing, skill, deadline, approval, data rights, provider availability, or organizational willingness.
+- Ignoring accessibility, support, maintenance, recovery, security, privacy, safety, law, environment, or retirement because initial construction appears possible.
+- Using a favorable average while hiding tail behavior, resource exhaustion, failure rate, or recovery cost.
+- Comparing options with different criteria, evidence standards, or hidden weights.
+- Allowing a soft preference to outweigh a mandatory safety, legal, privacy, authority, or evidence constraint.
+- Treating an unresolved high-consequence assumption as a manageable risk without first establishing whether the option is viable.
+- Converting a requested date or budget ceiling into a confident estimate.
+- Running an expensive or harmful experiment when a cheaper prerequisite check could invalidate the option.
+- Declaring an AI system feasible because the model can produce an answer while ignoring authority, evaluation, hallucination, drift, data, human oversight, fallback, and runtime governance.
+- Hiding failed, negative, or inconclusive experiments to preserve a preferred option.
+- Reporting conditional feasibility as unconditional approval.
+
+RECOVERY AND RECONSIDERATION
+
+Feasibility recovery begins by identifying the earliest failed prerequisite, invalid assumption, changed constraint, or overstated claim and preventing downstream work from outrunning the corrected state.
+
+- Pause dependent requirements, architecture, procurement, implementation, migration, deployment, or commitments affected by the invalid conclusion.
+- Preserve the previous determination, evidence, assumptions, experiments, dissent, decisions, and versions.
+- Classify the change as evidence failure, scope change, environment change, resource loss, dependency failure, cost or schedule change, legal or policy change, model or provider drift, user finding, incident, or newly discovered constraint.
+- Narrow the option, reduce consequence, change environment, substitute a dependency, add a fallback, obtain qualified review, or design a bounded pilot where legitimate.
+- Re-run only the affected analyses and experiments, then propagate invalidation to dependent artifacts.
+- Recalculate cost, schedule, risk, architecture, support, migration, and retirement obligations after material changes.
+- Reissue the determination with new conditions, approvals, evidence limits, review triggers, and safe next action.
+
+COMPLETION CRITERIA
+
+- The feasibility question, authority, scope, options, environment, scale, horizon, users, and required confidence are explicit.
+- Current state, available capability, capacity, resources, constraints, dependencies, and missing evidence are documented.
+- Every applicable feasibility dimension has been examined to a depth proportionate to consequence.
+- Mandatory constraints and disqualifying conditions are separated from preferences and cannot be hidden by aggregate scoring.
+- Critical requirements map to plausible mechanisms and verification paths; conflicts and unproven obligations remain visible.
+- High-consequence assumptions and unknowns have evidence plans, owners, stop conditions, and invalidation triggers.
+- Prototypes, tests, estimates, and provider claims are bounded to their actual environment, version, scale, and evidence strength.
+- Failure, recovery, fallback, rollback, provider exit, maintenance, support, and retirement have been addressed where applicable.
+- The determination is one of the defined bounded states and includes conditions, approvals, residual uncertainty, dissent, and what evidence would change it.
+- Downstream Requirements Engineering and Risk Management can proceed without inventing feasibility conditions.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Transfer the exact objective, decision owner, options, scope, environments, scale, horizon, and determination state.
+- Provide current-state evidence, constraint register, dependency map, resource and capacity assumptions, cost and schedule basis, experiment results, and evidence limitations.
+- Carry forward every condition, disqualifier, required approval, risk treatment, human decision, stop condition, review date, and invalidation trigger.
+- Map feasibility conditions to Requirements Engineering, Systems Engineering, architecture, security, privacy, safety, accessibility, legal, data, AI, testing, operations, maintenance, migration, and retirement work as applicable.
+- Preserve failed and rejected options, dissent, unknowns, unresolved value conflicts, and evidence needed to reopen them.
+- State what may proceed now, what may proceed only as a pilot, what is blocked, what is prohibited, and the next safe action.
+
+RELATED CODEX SECTIONS
+
+001 Research
+002 Foresight / Futures
+003 Innovation
+004 Mission Strategy
+005 Business Strategy
+006 Product Strategy
+007 Portfolio Management
+008 Program Management
+009 Project Management
+010 Product Management
+011 Business Analysis
+012 Market Research
+013 Competitive Intelligence
+014 Stakeholder Management
+015 User Research
+016 Domain Analysis
+018 Risk Management
+019 Requirements Engineering
+020 Systems Engineering
+021 Enterprise Architecture
+022 Solution Architecture
+023 Systems Architecture
+033 Software Architecture
+035 Infrastructure Architecture
+041 Integration Architecture
+045 Security Architecture
+047 Privacy Architecture
+050 Safety Architecture
+051 Reliability Architecture
+052 Resilience Architecture
+053 Accessibility Architecture
+056 AI Architecture
+060 Hardware Architecture
+107 Software Engineering
+151 Database Engineering
+167 Machine Learning Engineering
+178 Agent Systems Engineering
+182 AI Safety
+183 AI Governance
+208 Threat Modeling
+219 Legal
+220 Regulatory Compliance
+222 Ethics
+256 Verification
+257 Validation
+301 Site Reliability Engineering
+326 Business Continuity
+327 Disaster Recovery
+331 Operational Readiness
+348 Procurement
+349 Vendor Management
+350 Supply Chain Management
+374 Maintenance Engineering
+383 Platform Migration
+389 Deprecation Management
+390 Sunset Planning
+405 Lifecycle Governance
+406 System Retirement
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+This draft applies the supplied requirements for objective fidelity, current-state inspection, source identity, unknown-means-unknown, bounded roles, explicit dependencies, evidence-before-claims, independent verification, failure and recovery, truthful status, human authority, capability-versus-permission separation, owner operability, and continuity. The Analyst, Architect, Planner, Researcher, Observer, Tester, Verifier, Security Auditor, Governance Reviewer, User Experience Reviewer, Optimizer, Coordinator, Critic, Red Team, and Decision Arbiter Advisory contracts supply the bounded role behavior. The Owner's Cockpit contributes owner-recognizable state, trust calibration, bounded delegation, evidence visibility, degraded operation, recovery, release, rollback, and complete owner journeys. The V4 draft contributes claim typing, prerequisite-aware obligations, cheapest-safe experiments, expected information gain, proof-carrying work, dissent preservation, artifact consistency, and trusted-state blocking.
+
+Unresolved source gap: the supplied corpus does not contain one universal feasibility-analysis standard, a domain-neutral cost-estimation method, an industry-specific safety or regulatory feasibility method, or authoritative thresholds for every technical and operational domain. The multidimensional framework in this section is a general integration scaffold. Each actual feasibility determination must use qualified, current, domain-specific evidence and must later be reconciled with Requirements Engineering, Systems Engineering, the applicable architecture and engineering sections, Risk Management, Verification, Validation, Operational Readiness, and Lifecycle Governance.

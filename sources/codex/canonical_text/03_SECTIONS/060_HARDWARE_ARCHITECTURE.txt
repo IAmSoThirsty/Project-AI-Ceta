@@ -1,0 +1,136 @@
+SECTION 060 — Hardware Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the physical components, interfaces, materials, energy, thermal, mechanical, electrical, manufacturing, service, safety, security, and lifecycle structure of hardware that realizes approved outcomes.
+
+REQUIRED OUTCOME
+
+- A hardware context with components, interfaces, tolerances, environments, suppliers, manufacturing, service, failure, evidence, owners, and lifecycle.
+- Traceability from requirements through electrical, mechanical, embedded, software, testing, operation, maintenance, disposal, and retirement.
+
+WHY THIS MATTERS
+
+Physical design fixes constraints that software cannot wish away. Tolerance, heat, energy, supply, materials, manufacturing variation, serviceability, and disposal determine whether a design is safe, reliable, maintainable, and honest about its limits.
+
+APPLICABILITY
+
+- Physical components, equipment, devices, materials, energy, packaging, or facilities realize a material function or interface.
+- Hardware failure, variation, manufacture, service, supply, environment, or disposal affects consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+- No physical component, material, interface, energy, environment, supplier, manufacturing, service, or lifecycle effect changes.
+- An approved baseline covers exact hardware, environment, and change with no material impact.
+- The artifact is conceptual or simulated and explicitly not a certification or field-readiness claim.
+
+Record hardware, scope, owner, evidence date, assumptions, environment, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-059 provide requirements, software, embedded, robotics, safety, security, resilience, and operations context.
+- Hardware, electrical, mechanical, manufacturing, supplier, environmental, safety, service, and disposal authorities are known or open.
+
+REQUIRED INPUTS
+
+- Functions, loads, materials, dimensions, tolerances, power, thermal, environmental, interfaces, users, manufacturing, maintenance, and lifecycle.
+- Safety, security, reliability, accessibility, testing, certification, supply, repair, recycling, disposal, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Hardware and product owners approve design, materials, tolerances, suppliers, manufacturing, safety, service, exceptions, certification, and retirement. Humans retain authority to halt manufacture, quarantine, recall, repair, replace, dispose, and retire.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized designs, tolerances, bills of material, test data, and supplier evidence, and draft alternatives or tests. It must preserve revision and physical context. It must not approve a design, substitute material, change manufacturing, certify safety, or direct physical action without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Researcher, Analyst, Security Auditor, Tester, Verifier, Governance Reviewer, Critic, Planner, Implementer, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define product, environment, loads, users, physical effects, owners, suppliers, and lifecycle.
+2. Decompose components, materials, interfaces, energy, thermal, mechanical, electrical, and environmental constraints.
+3. Analyze tolerance, variation, failure, hazards, service, manufacturing, supply, security, and disposal.
+4. Allocate controls for safety, reliability, accessibility, embedded integration, testing, evidence, and recovery.
+5. Validate with qualified hardware, electrical, mechanical, manufacturing, safety, security, service, and affected-user authorities.
+6. Test prototype, production, environmental, stress, fault, aging, service, recovery, and disposal conditions.
+7. Baseline revision, evidence, decisions, dissent, residual risk, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show component, revision, material, supplier, load, environment, authority, evidence, and physical consequence.
+- Require human approval for material, supplier, tolerance, safety, manufacturing, recall, and irreversible changes.
+- Preserve manual inspection, stop, quarantine, traceability, evidence, repair, and recovery paths.
+- Do not treat optimization, simulation, or generated design as certification.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate requirement, design, drawing, revision, prototype, production unit, field configuration, test, and evidence.
+- Define interface, tolerance, energy, thermal, material, manufacturing, calibration, service, and disposal semantics.
+- Preserve configuration and serial traceability through manufacturing, field service, recall, replacement, and retirement.
+- Protect hardware and design records, supplier data, diagnostics, and evidence under access and retention controls.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show hardware revision, serial or batch, components, materials, supplier, environment, health, authority, evidence, and lifecycle.
+- Expose inspect, quarantine, repair, replace, recall, update, restore, dispose, and retire actions with approval.
+- Explain unsafe, out-of-tolerance, unknown, service, and recovery conditions.
+- Export drawings, revisions, test results, decisions, evidence, incidents, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Hardware context, component and interface model, materials and tolerance record, environmental and failure analysis, supplier and manufacturing plan.
+- Safety, security, embedded integration, testing, service, repair, recall, disposal, evidence, acceptance, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify hardware revision, unit or batch, material, configuration, environment, load, method, date, result, and limitation.
+- Simulation, drawing, prototype, supplier statement, certification, inspection, or field test proves only its declared scope.
+- Production, environmental, safety, reliability, service, and disposal evidence identifies sample and coverage.
+- Missing revision, provenance, manufacturing, or field evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace requirements through components, interfaces, manufacturing, embedded behavior, physical outcome, evidence, service, and retirement.
+- Exercise tolerance, thermal, power, vibration, corrosion, aging, misuse, component loss, supplier change, counterfeit, repair, and disposal.
+- Verify revision control, material identity, safety, accessibility, security, serviceability, recall, and evidence integrity.
+- Reproduce representative claims from exact drawings, unit or batch, configuration, and test package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a drawing, prototype, simulation, supplier claim, or certification as universal field proof.
+- Ignoring manufacturing variation, tolerance stack, thermal, supply, service, counterfeit, disposal, or physical access.
+- Allowing AI or schedule pressure to substitute materials, skip tests, or conceal out-of-tolerance units.
+
+RECOVERY AND RECONSIDERATION
+
+- On defect, hazard, counterfeit, supplier change, evidence loss, or out-of-tolerance condition, quarantine affected units and preserve traceability.
+- Identify owner, authority, affected users, communication, evidence, service, and review condition.
+- Use inspection, repair, replacement, recall, redesign, compensation, secure disposal, or retirement.
+- Reopen on component, material, supplier, revision, environment, firmware, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Components, interfaces, materials, tolerances, suppliers, manufacturing, environment, evidence, service, recovery, and lifecycle are explicit.
+- Fault, variation, recall, repair, disposal, embedded, and retirement paths are addressed or justified.
+- Exact limits and unresolved evidence are recorded; CONTENT-COMPLETE does not imply certified or field-ready hardware.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve revisions, units, batches, materials, suppliers, drawings, tests, incidents, decisions, evidence, dissent, and gaps.
+- Hand off to Embedded, Software, Robotics, Electrical, Mechanical, Manufacturing, Security, Safety, Testing, Operations, and Retirement.
+- Record changes requiring reopening affected architecture, certification, and lifecycle baselines.
+
+RELATED CODEX SECTIONS
+
+- 019-059 Requirements through Embedded Systems Architecture; 061-074 engineering and control sections.
+- 198-199 embedded and hardware security; 232 Hardware Testing; 252 Safety Testing; 351-355 manufacturing and device provisioning; 399-401 hardware disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-059, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal hardware, material, environmental, manufacturing, certification, service, recycling, or disposal standard is supplied. Actual designs, suppliers, units, authorities, and acceptance evidence remain unresolved.

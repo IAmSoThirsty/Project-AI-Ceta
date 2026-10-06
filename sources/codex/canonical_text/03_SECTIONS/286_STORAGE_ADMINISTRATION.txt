@@ -1,0 +1,95 @@
+SECTION 286 — Storage Administration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate and govern storage systems, volumes, files, objects, backups, replication, access, performance, retention, recovery, and disposal.
+
+REQUIRED OUTCOME
+
+A storage model with classes, owners, location, capacity, performance, access, encryption, replication, backup, retention, deletion, monitoring, recovery, and lifecycle.
+
+WHY THIS MATTERS
+
+Storage contains the durable state on which systems and people rely. Capacity exhaustion, access error, silent corruption, untested backup, retention drift, or unsafe deletion can create broad harm.
+
+APPLICABILITY
+
+Apply when data, artifacts, backups, logs, evidence, databases, files, objects, or physical or virtual volumes are stored, moved, recovered, retained, or deleted.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no storage class, data, access, capacity, performance, backup, retention, or deletion behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data, privacy, security, database, infrastructure, backup, archive, records, deletion, cost, and operations baselines.
+
+REQUIRED INPUTS
+
+Storage, data class, owner, location, access, capacity, performance, encryption, replication, backup, retention, deletion, cost, telemetry, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Storage owners approve class, location, access, retention, deletion, backup, recovery, cost, and exceptions. Humans authorize restoration, legal hold, and destructive actions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized metadata, capacity, performance, and lifecycle signals; draft plans; and identify anomalies. It must not read sensitive content, change access, delete data, migrate, or restore without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Storage Administrator, Data Architect, Database Administrator, Security Auditor, Privacy Reviewer, Infrastructure Engineer, Tester, Verifier, Analyst, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Classify and inventory; provision; secure access; encrypt; monitor capacity and performance; replicate and back up; test restore; retain and archive; delete; handle incident; and retire media.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show storage class, owner, location, data classification, access, action, evidence, and limitation without exposing content. Require human approval for access, restore, migration, retention, deletion, and disposal.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate operational, backup, archive, evidence, quarantine, and disposal states. Use immutable or protected backups, encryption, least privilege, integrity checks, capacity alerts, and recovery independent of the failed path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show capacity, class, location, access, replication, backup, retention, cost, integrity, evidence freshness, owner, and authorized restrict, restore, migrate, delete, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Storage catalog and class model; access and protection; capacity and performance; backup and restore; retention and deletion; incident, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify storage, data class, owner, location, version, method, time, capacity, integrity, result, actor, and limitation. Object count or backup completion proves only its captured scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify access, encryption, integrity, capacity, performance, replication, backup, restore, deletion, retention, legal hold, cost, and recovery. Test corruption, full volume, provider loss, and accidental deletion.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Backup as restore proof, unbounded retention, unrestricted bucket or share, capacity surprise, replica not deleted, storage tier assumed secure, and data content exposed during diagnosis.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict affected storage, preserve integrity, restore or fail over, reconcile, notify owners, correct access or retention, and reassess user and legal impact. Reopen on data, storage, provider, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+Storage, data, owners, access, protection, capacity, performance, backup, recovery, retention, deletion, evidence, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve storage inventory, classes, access, backups, restores, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Data, Database, Infrastructure, Security, Records, Archive, and Operations.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 152 Storage Engineering; 225 Records; 285 Database Administration; 301-330 Operations and Recovery; 391-400 Data Lifecycle and Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data, storage, privacy, security, and operations context, and the integration roadmap. Exact storage, classes, locations, providers, retention, recovery, cost, and acceptance authority remain unresolved.

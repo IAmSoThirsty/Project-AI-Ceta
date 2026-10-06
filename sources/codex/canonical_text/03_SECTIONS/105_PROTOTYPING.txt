@@ -1,0 +1,222 @@
+SECTION 105 — Prototyping
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed use of prototypes to learn about a proposed product, service, process, interaction, architecture, technology, or operating concept before treating it as an approved design or implementation.
+
+Prototyping creates bounded representations for inquiry. A prototype may be a sketch, storyboard, role-play, paper flow, clickable interface, service simulation, physical mock-up, data sample, technical spike, throwaway implementation, model experiment, or controlled pilot. It is evidence about selected questions under declared conditions, not evidence that the eventual system is complete, secure, accessible, reliable, lawful, adopted, or effective.
+
+REQUIRED OUTCOME
+
+- A declared prototype question, learning objective, scope, audience, fidelity, time horizon, owner, authority, and stop condition.
+- A prototype plan that identifies what is represented, what is intentionally omitted, what is simulated, what is real, and what claims the artifact cannot support.
+- A traceable relationship from the prototype to requirements, user needs, processes, functions, architecture, risks, decisions, and next actions.
+- A usable prototype artifact or experiment that allows the intended question to be examined under stated conditions.
+- Evidence from observation, inspection, measurement, technical execution, or user interaction that is bounded by method, sample, environment, and limitations.
+- A decision record stating what was learned, what remains unknown, which assumptions changed, whether the prototype should be discarded, revised, promoted, or stopped, and who has authority for that decision.
+
+WHY THIS MATTERS
+
+Prototypes make uncertainty visible while change is still relatively inexpensive. They expose misunderstanding, workflow gaps, technical constraints, accessibility barriers, unsafe assumptions, integration friction, and user burden that are easy to miss in prose or diagrams.
+
+They also create a recurring source of false confidence. A polished mock-up can hide missing data, permissions, error states, support work, and operational cost. A technical spike can prove that a narrow path runs without proving security, resilience, maintainability, or user value. A prototype must therefore preserve the boundary between learning evidence and acceptance evidence.
+
+APPLICABILITY
+
+- A proposed outcome, requirement, interaction, workflow, service, architecture, component, integration, model, or operational concept contains material uncertainty.
+- Stakeholders need to compare alternatives, expose assumptions, or inspect a future state before committing to implementation.
+- A change affects users, operators, maintainers, support, accessibility, safety, privacy, security, data, reliability, cost, or lifecycle obligations.
+- A technical or service risk can be reduced through a bounded experiment, simulation, spike, mock, pilot, or rehearsal.
+- AI, automation, tools, data, external providers, or human review are proposed for a consequential workflow.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work is a purely explanatory sketch with no claim beyond communication and no material change to requirements, decisions, user expectations, data, or authority.
+- An approved and current prototype or design evidence package answers the exact question for the same scope, population, environment, version, and decision, and impact analysis shows no material change.
+- The work is routine implementation of an already accepted design and introduces no new uncertainty or user, safety, security, privacy, accessibility, operational, or lifecycle question.
+- A live experiment would expose real people, restricted data, production state, or external commitments beyond the approved boundary. In that case the prototype is not exempt; it must be narrowed, simulated, or separately authorized.
+
+A non-applicability decision must identify the controlling artifact, exact question, evidence date, owner, assumptions, and reopening trigger. Visual simplicity, short duration, or disposable code is not by itself sufficient reason to omit governance.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-020 provide objective, stakeholder, user, domain, feasibility, risk, requirements, systems, verification, validation, transition, and recovery context.
+- Sections 021-104 provide the applicable enterprise, solution, systems, domain, business, capability, process, functional, operational, information, data, application, user-experience, design, accessibility, and design-system boundaries.
+- The prototype owner, learning question, intended audience, decision authority, allowed environment, data boundary, and consequence limit are identified.
+- Applicable safety, privacy, security, accessibility, legal, records, licensing, supplier, research, and ethical controls are known or explicitly unresolved.
+
+REQUIRED INPUTS
+
+- Authorized problem or opportunity statement, intended outcome, non-goals, scope, affected parties, population, environment, jurisdiction, and lifecycle horizon.
+- Requirements, user research, domain rules, process and functional models, architecture constraints, risks, acceptance criteria, and open decisions.
+- Prototype hypothesis, learning questions, alternatives, assumptions, success signals, disconfirming signals, fidelity level, and time limit.
+- Representative or synthetic data, test accounts, interfaces, dependencies, tools, content, devices, facilities, accessibility needs, and operational constraints.
+- Experiment protocol, consent or participation arrangements, privacy and security controls, logging plan, evidence plan, and disposal or retention plan.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The authorized human owner retains authority over the prototype question, protected outcomes, participant treatment, risk tolerance, data and environment access, external commitments, interpretation of evidence, promotion, abandonment, and final decision.
+
+- Confirm the question, scope, fidelity, audience, non-goals, consequence boundary, and decision date.
+- Approve participant involvement, data use, environment, tools, suppliers, incentives, accessibility accommodations, and safety controls.
+- Decide whether evidence is sufficient to revise requirements, continue learning, authorize a pilot, begin implementation, or stop.
+- Resolve conflicts involving user welfare, rights, privacy, security, safety, accessibility, cost, schedule, feasibility, and organizational commitments.
+- Ensure users, operators, domain experts, maintainers, support, security, privacy, safety, accessibility, legal, and governance specialists participate when consequence requires.
+- Retain the ability to pause, narrow, quarantine, destroy, revoke, withdraw, or reject a prototype and its claims.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may help frame hypotheses, generate alternative concepts, create bounded mock data, draft prototype code or content, simulate scenarios, compare observations, identify missing states, and summarize evidence within authorized scope.
+
+AI must label generated, simulated, observed, measured, inferred, and human-supplied material separately; preserve prototype identity, version, environment, data, prompt, tool, and limitation; expose uncertainty and disconfirming evidence; and stop when participant welfare, authority, privacy, security, safety, accessibility, or evidence integrity is unresolved.
+
+AI must not present a prototype as a product, fabricate user feedback, recruit or manipulate participants without authorization, use restricted or personal data by inference, silently connect to production, approve a pilot, accept risk, or convert visual polish, model output, code execution, or engagement into proof of value.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: frames prototype boundaries, fidelity, dependencies, system implications, and promotion risks.
+- Researcher: gathers source, domain, user, technical, operational, and participant evidence.
+- Analyst: compares hypotheses, alternatives, observations, feasibility, and uncertainty.
+- Critic: challenges false confidence, omitted states, hidden work, weak evidence, and premature promotion.
+- Security Auditor: examines data, identity, access, isolation, secrets, abuse, and disposal.
+- User Experience Reviewer: examines comprehension, burden, accessibility, dignity, error, correction, and recovery.
+- Governance Reviewer: checks authority, consent, policy, records, claims, and decision boundaries.
+- Planner: sequences questions, experiments, review gates, and next actions.
+- Coordinator: synchronizes participants, owners, dependencies, and handoffs.
+- Implementer: builds the bounded artifact without silently expanding its purpose or authority.
+- Refactorer: improves disposable or exploratory structure without changing the stated learning question.
+- Tester: exercises intended, boundary, failure, accessibility, security, and recovery scenarios.
+- Verifier: independently checks the prototype, method, evidence, and claims.
+- Documentation Writer: records the protocol, artifact, observations, decisions, limitations, and disposal.
+- Memory Curator: preserves versions, evidence, dissent, decisions, and continuity.
+- Optimizer: improves learning efficiency without suppressing negative results or protected outcomes.
+- Red Team: attempts authorized misuse, prompt manipulation, data leakage, bypass, failure, and misleading interpretation.
+- Decision Arbiter Advisory: compares evidence-backed options under authorized criteria without deciding for the owner.
+
+Role selection remains proportional to consequence. Existing role contracts remain controlling and are not redefined here.
+
+REQUIRED ACTIVITIES
+
+1. State the learning question, hypothesis, intended decision, owner, audience, scope, non-goals, fidelity, environment, and time limit.
+2. Identify the requirements, user needs, domain rules, process steps, functions, architecture constraints, and risks the prototype is intended to examine.
+3. Choose the smallest representation or experiment that can produce useful evidence without hiding material behavior.
+4. Define what is real, simulated, stubbed, sampled, synthetic, omitted, manually operated, or unsafe to expose.
+5. Define participant, operator, data, privacy, security, accessibility, safety, licensing, supplier, and records controls.
+6. Build or configure the prototype with stable identity, version, provenance, environment, dependencies, and disposal conditions.
+7. Include relevant normal, boundary, denied, delayed, error, degraded, correction, recovery, and exit states at the chosen fidelity.
+8. Conduct authorized observation, inspection, measurement, technical execution, role-play, pilot, or comparison using a documented protocol.
+9. Capture direct observations, participant feedback, task results, technical signals, failures, dissent, surprises, and unanswered questions without embellishment.
+10. Analyze evidence against the hypothesis and separate prototype behavior from expected future behavior.
+11. Review accessibility, privacy, security, safety, user burden, operational work, support, maintainability, and lifecycle implications.
+12. Red-team the prototype for misleading affordances, hidden authority, data leakage, unsafe defaults, prompt or input manipulation, and false promotion.
+13. Decide whether to discard, revise, repeat, transfer, pilot, implement, or stop, with owner authority and evidence limits recorded.
+14. Preserve or dispose of the artifact, data, credentials, logs, participant records, and environment according to the approved lifecycle.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show whether each prototype element is a human decision, generated suggestion, simulation, stub, live dependency, observed behavior, or proposed future behavior.
+- Let the owner inspect and correct the question, assumptions, data, participant treatment, scope, fidelity, interpretation, and decision without losing prior versions or dissent.
+- Require human review before a prototype touches real users, personal or restricted data, production systems, external commitments, or consequential decisions.
+- Make limitations, omitted states, manual work, synthetic data, model behavior, provider dependencies, and evidence gaps visible at the point of interpretation.
+- Preserve non-AI, manual, accessible, stop, correction, complaint, and recovery paths during prototype sessions.
+- Do not allow a conversational interface to bypass consent, authorization, isolation, data minimization, audit, or disposal controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent prototype identity, question, hypothesis, version, fidelity, scope, environment, dependencies, data, participants, observations, decisions, and lifecycle as attributable artifacts.
+- Isolate prototype code, data, credentials, networks, providers, and state from production unless an explicit authority approves a controlled integration.
+- Keep prototype definition separate from implementation, pilot, deployed system, user account, runtime state, and acceptance baseline.
+- Make simulation, stubbing, manual intervention, synthetic data, disabled controls, and omitted behavior explicit in the artifact and evidence.
+- Preserve traceability from question to requirement, prototype element, observation, decision, implementation implication, test, and acceptance criterion.
+- Ensure prototype disposal, data deletion, credential revocation, log handling, and provider cleanup are testable.
+- Treat AI models, prompts, tools, providers, and generated assets as versioned dependencies with evaluation, monitoring, substitution, and revocation paths.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show the prototype name, question, owner, version, fidelity, environment, audience, status, time limit, and evidence freshness.
+- Show what is live, simulated, stubbed, manual, omitted, generated, restricted, unsafe, or awaiting approval.
+- Let the owner inspect assumptions, participants, data, dependencies, observations, failures, dissent, decisions, and open questions.
+- Provide authorized pause, narrow, revoke, quarantine, reset, dispose, export, approve, reject, repeat, and handoff controls.
+- Explain what the prototype does and does not demonstrate, which evidence supports each claim, and what would change the decision.
+- Preserve status, consent, complaint, evidence, accessibility, correction, and recovery controls when nonessential tools or models fail.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Prototype charter with learning question, hypothesis, owner, scope, fidelity, audience, environment, non-goals, and stop condition.
+- Prototype plan, protocol, scenario set, participant or operator plan, risk controls, data plan, and disposal plan.
+- Versioned prototype artifact, configuration, source or construction record, dependencies, test data, and environment description.
+- Observation, measurement, feedback, failure, dissent, assumption, and decision records.
+- Traceability from prototype questions and elements to requirements, user needs, process, function, architecture, risk, and acceptance.
+- Limitation and non-claim statement distinguishing learning evidence from implementation, readiness, effectiveness, or acceptance evidence.
+- Promotion, revision, abandonment, pilot, implementation, or stop decision with owner, authority, unresolved gaps, and next action.
+- Continuity and disposal record covering artifact, data, credentials, logs, participants, retention, deletion, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+- Each claim identifies the prototype, version, question, scope, environment, population, method, date, actor, source, result, and limitation.
+- A mock-up, demo, successful execution, benchmark, simulation, interview, survey, or pilot proves only the bounded question it was designed to examine.
+- Participant evidence identifies recruitment, consent or authorization, task, context, accessibility conditions, sample, protocol, dissent, and limitations.
+- Technical evidence identifies configuration, dependencies, data, tools, provider or model, workload, instrumentation, failures, and reproducibility.
+- Generated or synthetic evidence identifies origin, transformation, model or tool, review, and the reason it cannot be treated as observed user or production evidence.
+- Failed, contradictory, stale, partial, inaccessible, missing, or negative evidence remains visible and constrains promotion.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Reproduce the prototype from its charter, version, configuration, data, environment, and protocol.
+- Verify every stated learning question has an observation or result, and every unanswered question is recorded as unresolved.
+- Exercise intended, boundary, denied, error, degraded, correction, recovery, accessibility, and disposal scenarios appropriate to the fidelity.
+- Confirm that simulated, stubbed, manual, generated, and omitted behavior is correctly labeled and cannot be mistaken for live behavior.
+- Attempt unauthorized data access, production connection, credential reuse, prompt manipulation, participant disclosure, and artifact export.
+- Verify participant, user, and operator can stop, withdraw, correct, complain, request explanation, and recover from a failed or harmful session.
+- Compare competing alternatives using the same declared protocol and disclose sample, measurement, and interpretation limits.
+- Independently reproduce the decision package and confirm that promotion does not exceed the evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a polished interface, clickable flow, technical spike, pilot, or demo as proof of product readiness or user value.
+- Testing only the happy path while hiding denial, error, accessibility, support, recovery, manual work, or operational cost.
+- Fabricating, selectively reporting, or averaging away negative feedback, dissent, failed runs, or affected-party burden.
+- Using production data, credentials, users, or external systems without explicit scope and controls.
+- Allowing AI to invent participant reactions, citations, metrics, requirements, or evidence.
+- Expanding a throwaway artifact into a production dependency without security, privacy, accessibility, reliability, support, and lifecycle review.
+- Optimizing prototype completion or engagement while weakening learning quality, participant welfare, or owner control.
+
+RECOVERY AND RECONSIDERATION
+
+- On unsafe behavior, privacy or security exposure, misleading claims, participant harm, evidence loss, authority conflict, or scope drift, stop the session and preserve relevant evidence.
+- Identify the blocker, affected people, safe work that may continue, containment owner, authority, communication, and review condition.
+- Revoke credentials, isolate systems, delete or quarantine data, reset state, withdraw materials, notify affected parties, and obtain specialist review as required.
+- Re-run only after the question, controls, protocol, environment, and evidence plan are corrected and authorized.
+- Reopen the prototype decision when new user evidence, technical evidence, policy, domain meaning, architecture, population, or lifecycle conditions invalidate the conclusion.
+
+COMPLETION CRITERIA
+
+- The question, hypothesis, scope, fidelity, owner, authority, environment, controls, evidence method, and stop condition are explicit.
+- The artifact distinguishes real, simulated, generated, stubbed, manual, omitted, and observed behavior.
+- Relevant user, operator, accessibility, privacy, security, safety, operational, and recovery conditions are addressed or justified.
+- Results, failures, dissent, limitations, decision, unresolved questions, and next action are recorded.
+- Disposal, retention, credential, data, participant, and handoff obligations are complete or explicitly blocked.
+- The section is marked CONTENT-COMPLETE while source reconciliation, hostile review, and owner acceptance remain separate activities.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve prototype identity, question, hypothesis, version, fidelity, scope, environment, dependencies, data, protocol, evidence, decisions, dissent, and limitations.
+- Hand off only the evidence-supported implications to Requirements, User Research, User Validation, Architecture, Design, Engineering, Testing, Operations, Security, Privacy, Accessibility, and Governance work.
+- Record what must not be carried forward, what requires revalidation, and which assumptions are still provisional.
+- State the next safe action, blocked action, authority, evidence request, retention or disposal obligation, and exact continuation point.
+- Do not claim implementation readiness, user validation, operational readiness, or owner acceptance from the prototype alone.
+
+RELATED CODEX SECTIONS
+
+- 015 User Research; 016 Domain Analysis; 017 Feasibility Analysis; 018 Risk Management; 019 Requirements Engineering; 020 Systems Engineering.
+- 021-104 Enterprise through Design Systems, especially Process, Functional, Information, Data, Application, User Experience, Interaction, Accessibility, and Design Architecture.
+- 231-257 Testing through Validation; 247 Accessibility Testing; 249 Usability Testing; 253 Model Testing; 254 Data Testing.
+- 369-372 Experimentation through Feedback Management; 402-406 Post-Implementation Review through System Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- This draft uses the Canonical Section Contract, shared governance files, Sections 001-104, Owner Cockpit Requirements, Status and Evidence Lexicon, and the Remaining-Section Integration Roadmap.
+- No universal prototype fidelity scale, research protocol, participant incentive rule, statistical threshold, technology stack, or promotion gate applies to every future context.
+- Actual domain authorities, participant populations, consent requirements, accessibility accommodations, data permissions, technical environments, and decision thresholds remain unresolved until supplied and verified.

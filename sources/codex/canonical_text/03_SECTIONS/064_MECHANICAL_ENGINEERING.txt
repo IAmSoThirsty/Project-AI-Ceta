@@ -1,0 +1,100 @@
+SECTION 064 — Mechanical Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed engineering of structures, mechanisms, materials, motion, loads, interfaces, enclosures, thermal paths, manufacturability, serviceability, and physical safety for a bounded system across its lifecycle.
+
+REQUIRED OUTCOME
+
+A traceable mechanical design with loads, materials, tolerances, joints, motion limits, interfaces, environmental ratings, human access, hazard controls, manufacturing, inspection, maintenance, recovery, and evidence for the declared use conditions.
+
+WHY THIS MATTERS
+
+Mechanical defects can cause collapse, pinch, impact, leakage, overheating, loss of alignment, unsafe motion, or inaccessible maintenance. A CAD model or static calculation does not prove behavior under fatigue, abuse, tolerance, environment, assembly variation, or field repair.
+
+APPLICABILITY
+
+Applies to structures, mechanisms, enclosures, mounts, rotating or moving parts, thermal and fluid interfaces, materials, packaging, tooling, facilities, devices, vehicles, and physical service environments.
+
+NON-APPLICABILITY CONDITIONS
+
+Non-applicability requires no material load, motion, material, enclosure, thermal, fluid, vibration, human-access, manufacturing, service, safety, or lifecycle effect, with baseline, authority, evidence, and reopening trigger recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+Functional and load requirements; operating modes; materials; geometry; tolerances; environments; interfaces; human factors; hazards; thermal, vibration, corrosion, fluid, acoustic, manufacturing, assembly, maintenance, accessibility, transport, and disposal constraints. Sections 019-063 provide upstream context.
+
+REQUIRED INPUTS
+
+Boundary, loads, motion, materials, geometry, interfaces, tolerances, environmental profile, human access, hazards, thermal and fluid conditions, manufacturing process, inspection, transport, maintenance, recovery, and disposal constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human mechanical authority approves design basis, materials, safety factors, critical tolerances, prototypes, substitutions, field modifications, hazard acceptance, manufacturing release, and final acceptance. Human operators decide safe use, isolation, repair, and retirement.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze CAD metadata, load cases, tolerances, simulations, inspection records, and alternatives; draft calculations and tests; and identify inconsistencies. It must preserve units and assumptions and must not certify structural safety, invent material properties, or authorize operation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Critic, Implementer, Refactorer, Tester, Verifier, Security Auditor, Red Team, Planner, Coordinator, Observer, Governance Reviewer, Documentation Writer, Optimizer, User Experience Reviewer, and Memory Curator under existing role contracts.
+
+REQUIRED ACTIVITIES
+
+1. Establish boundary, loads, motions, environments, users, operators, hazards, production, service, and lifecycle.
+2. Define geometry, materials, interfaces, joints, tolerances, fits, fasteners, seals, thermal paths, and motion limits.
+3. Analyze static, dynamic, fatigue, fracture, buckling, vibration, shock, wear, corrosion, thermal, fluid, acoustic, and abuse cases as applicable.
+4. Allocate physical interfaces and controls to electrical, electronic, software, human, facility, and maintenance boundaries.
+5. Review manufacturability, assembly, inspection, transport, accessibility, maintenance, replacement, recovery, and disposal.
+6. Validate with qualified specialists; baseline calculations, drawings, prototypes, tests, deviations, and evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI-generated geometry, material selections, simulations, and optimization remain proposals. Human review must inspect loads, assumptions, margins, manufacturing and field conditions, and affected users. AI must not approve lifting, motion, pressure, structural, or safety operation; stop and manual inspection remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent geometry, materials, loads, joints, interfaces, tolerances, motions, hazards, environmental ratings, manufacturing revisions, installed configuration, inspection, maintenance, and lifecycle as controlled artifacts. Separate CAD intent, manufactured part, assembled unit, measured state, and field evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show asset identity, configuration, load or motion state, guards, temperature, pressure, alarms, inspection, maintenance, deviations, evidence, and authorized stop, isolate, repair, recover, and retire actions. Keep manual release, emergency stop, and physical access controls visible.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Design basis; drawings and CAD; material and process register; load and tolerance analyses; hazard assessment; interface control; prototype and inspection plans; manufacturing and assembly instructions; maintenance and recovery procedures; test and deviation records.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies part or assembly revision, material batch, manufacturing process, inspection instrument, calibration, load, environment, setup, result, reviewer, and limitations. Simulation, supplier data, inspection, and destructive testing are distinct.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify dimensions, materials, interfaces, fit, motion, load, fatigue, vibration, thermal, wear, corrosion, guards, pinch and impact hazards, pressure or fluid containment, assembly variation, maintainability, and recovery under declared conditions.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uncontrolled material or fastener substitution; missing fatigue or tolerance analysis; unguarded motion; inaccessible maintenance; hidden corrosion; CAD-only acceptance; ignored assembly variation; and recovery dependent on unsafe access or failed controls.
+
+RECOVERY AND RECONSIDERATION
+
+Stop motion or isolate energy, secure the area, preserve configuration and evidence, identify the hazard and authority, and use approved inspection, repair, replacement, containment, rollback, or redesign. Reopen after load, material, geometry, manufacturing, environment, incident, or evidence change.
+
+COMPLETION CRITERIA
+
+Loads, materials, geometry, interfaces, hazards, manufacturing, inspection, service, lifecycle, tests, evidence, owner, and gaps are explicit for the declared use; no safety or durability claim exceeds verified conditions.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve drawings, CAD revision, material and batch data, as-built state, inspections, failures, maintenance, decisions, evidence, and next action. Hand off to Electrical, Electronics, Robotics, Embedded, Hardware Testing, Manufacturing, Safety, Reliability, Operations, and Disposal.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 050 Safety Architecture; 051 Reliability Architecture; 052 Resilience Architecture; 058 Robotics Architecture; 060 Hardware Architecture; 061 Electrical Engineering; 062 Electronics Engineering; 067 PCB Design; 073 Control Systems Engineering; 074 Robotics Engineering; 232 Hardware Testing; 351 Manufacturing; 399 Hardware Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-060, and the integration roadmap. Sector-specific structural, pressure, machinery, material, environmental, accessibility, manufacturing, licensing, certification, and owner-acceptance requirements remain unresolved until supplied and verified.

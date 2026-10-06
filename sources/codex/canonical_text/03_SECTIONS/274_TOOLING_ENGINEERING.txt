@@ -1,0 +1,95 @@
+SECTION 274 — Tooling Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer tools that make development, testing, delivery, operations, analysis, and support more reliable, observable, secure, accessible, and maintainable.
+
+REQUIRED OUTCOME
+
+A tooling model with users, purpose, interfaces, dependencies, permissions, data, versions, installation, support, telemetry, quality, lifecycle, and fallback.
+
+WHY THIS MATTERS
+
+Tools become part of the system and workflow. Unmaintained or overprivileged tools can leak data, corrupt source, create hidden coupling, or make recovery dependent on one person or provider.
+
+APPLICABILITY
+
+Apply when a custom or shared tool materially affects engineering, testing, delivery, operations, governance, or user control.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when the tool has no material user, access, data, automation, quality, security, or lifecycle effect and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use user, platform, source, package, security, identity, privacy, testing, documentation, support, and operations baselines.
+
+REQUIRED INPUTS
+
+Tool purpose, users, workflow, interfaces, dependencies, permissions, data, version, installation, telemetry, support, failure, and retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Tool owners approve purpose, access, data, release, support, exceptions, and retirement. Users report defects and unsafe behavior; humans decide shared adoption and risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft tool code, docs, tests, and diagnostics from authorized context. It must not execute privileged actions, access secrets, alter shared tools, or infer user authorization without explicit control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Tooling Engineer, Architect, Developer Experience Engineer, Implementer, Tester, Verifier, Security Auditor, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define users and purpose; design interfaces and access; implement; test behavior, security, accessibility, and recovery; package; document; support; observe; update; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show tool, version, user, permission, data, action, evidence, and limitation. Require human review for privileged tool behavior, shared release, data handling, and destructive operations.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use least privilege, clear APIs, isolation, reproducible install, versioning, safe defaults, audit, offline or fallback path, and dependency transparency.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show tool health, version, users, permissions, dependencies, incidents, evidence freshness, owner, and authorized upgrade, restrict, rollback, disable, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Tool charter; user and workflow model; interface and access design; build and test; documentation; support, incident, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify tool, version, user, environment, method, source, result, time, actor, and limitation. Installation or successful invocation proves neither safety nor usefulness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify install, permissions, data, functionality, accessibility, security, upgrade, failure, recovery, support, compatibility, and rollback. Test least-privilege and degraded paths.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Overprivileged tool, undocumented behavior, hidden network access, stale dependency, no fallback, personal ownership, and tool usage metric treated as outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Disable or roll back, protect data and credentials, preserve evidence, provide alternate path, and reassess users and workflows. Reopen on tool, dependency, platform, or risk change.
+
+COMPLETION CRITERIA
+
+Purpose, users, permissions, data, version, dependencies, tests, support, evidence, recovery, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve source, packages, versions, docs, tests, incidents, decisions, evidence, exceptions, and open gaps. Hand off to DX, Platform, Build, Security, Testing, Support, and Operations.
+
+RELATED CODEX SECTIONS
+
+259-265 Source, Dependency, Package, Artifact, Build, and Automation; 273 Developer Experience; 272 Platform Engineering; 341 Documentation Engineering; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, tooling, platform, security, and user context, and the integration roadmap. Exact tools, users, data, permissions, support, providers, and acceptance authority remain unresolved.

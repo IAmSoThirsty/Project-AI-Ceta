@@ -1,0 +1,95 @@
+SECTION 234 — Integration Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Verify that connected components exchange data, control, identity, errors, timing, and recovery behavior according to their contracts.
+
+REQUIRED OUTCOME
+
+An integration-test model with participating versions, interfaces, fixtures, environments, data, dependency behavior, observability, failure paths, results, and limitations.
+
+WHY THIS MATTERS
+
+Components may pass isolated tests while disagreeing on schema, timing, identity, retries, errors, versions, or ownership. Integration evidence is bounded by the participants and conditions actually exercised.
+
+APPLICABILITY
+
+Apply when two or more components, services, devices, teams, providers, data stores, or processes interact through a contract.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no interaction, interface, dependency, data exchange, or control boundary changes and an approved exact baseline covers the work.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use interface contracts, versions, data schemas, identity, environments, provider stubs or sandboxes, observability, recovery, and test-data controls.
+
+REQUIRED INPUTS
+
+Participants, interface, schema, versions, identities, data, timing, retries, failure behavior, environment, observability, prior defects, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Interface owners define contracts and compatibility; testers control environments and data; humans judge semantic behavior, provider risk, exceptions, and acceptance.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft contract cases, fixtures, dependency matrices, and failure analysis from authorized artifacts. It must not claim external execution, alter provider or production state, expose data, or infer compatibility from syntax alone.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Tester, Integration Engineer, Architect, Analyst, Implementer, Verifier, Quality Engineer, Security Auditor, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Map participants and contracts; choose representative versions and data; exercise normal, boundary, timeout, retry, duplicate, ordering, schema, identity, and failure paths; observe; diagnose; retest; and record compatibility limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show participants, versions, contract, identity, data, environment, execution, result, and limitation. Require human approval for external or production dependency testing, data access, and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support contract versioning, test doubles with declared fidelity, isolated environments, correlation, deterministic cleanup, fault injection, retries, idempotency, timeout, and rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show integration pair, versions, contract, status, failures, evidence freshness, owner, dependency health, and authorized run, pause, substitute, rollback, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Integration matrix; contract and fixture record; environment and dependency record; results and failure register; compatibility and coverage report; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify participants, versions, interface, data, environment, method, execution, result, error, time, actor, and limitation. A schema match or mock pass proves only the exercised contract slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify serialization, semantics, identity, authorization, ordering, retries, timeout, duplicate, version skew, provider loss, rollback, observability, and cleanup. Reproduce material failures independently.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Testing only happy interactions, mocks with false fidelity, version skew ignored, data semantics unverified, retry storms, and integration pass treated as end-to-end acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve traces, isolate failing participant, use approved fallback, correct contract or component, and rerun. Reopen on interface, schema, version, provider, data, or operational change.
+
+COMPLETION CRITERIA
+
+Participants, contracts, versions, cases, data, results, failures, coverage, limits, owners, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve integration and dependency versions, fixtures, traces, results, decisions, exceptions, and open gaps. Hand off to System, E2E, API, Event, Release, Operations, and Quality owners.
+
+RELATED CODEX SECTIONS
+
+034 Integration Architecture; 035 API Architecture; 036 Event-Driven Architecture; 231 Software Testing; 233 Unit Testing; 235-238 System, E2E, Acceptance, and Regression Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, integration architecture, and testing context. Exact contracts, providers, data, environment, compatibility, failure, and acceptance authority remain unresolved.

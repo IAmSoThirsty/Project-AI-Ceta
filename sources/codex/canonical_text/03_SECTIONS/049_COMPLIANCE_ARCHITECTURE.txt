@@ -1,0 +1,135 @@
+SECTION 049 — Compliance Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how applicable laws, regulations, contracts, standards, policies, controls, evidence, assessments, findings, exceptions, and reporting obligations are identified and maintained across the lifecycle.
+
+REQUIRED OUTCOME
+
+- A jurisdictional obligation register mapped to scope, controls, owners, evidence, validity, assessment, and remediation.
+- Clear distinction between designed, implemented, operating, effective, assessed, certified, and accepted states.
+- Traceability from obligations through governance, security, privacy, safety, implementation, operation, audit, and retirement.
+
+WHY THIS MATTERS
+
+Compliance is not a decorative label or a single audit event. An obligation can apply only to a population, data class, location, version, or process, and evidence can expire or prove less than the claim made from it.
+
+APPLICABILITY
+
+- Law, regulation, contract, certification, policy, or standard affects the system, organization, data, users, suppliers, or lifecycle.
+- Non-compliance could create legal, financial, safety, rights, trust, or operational consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+- No applicable obligation, jurisdiction, contract, control, evidence, or lifecycle condition changes.
+- An approved register covers exact scope, jurisdiction, version, and change with no material impact.
+- The artifact is exploratory and not a compliance, certification, or legal conclusion.
+
+Record source, effective date, scope, authority, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-048 provide authority, requirements, architecture, security, identity, privacy, and governance context.
+- Qualified legal, compliance, records, privacy, security, safety, and domain authorities are identified or gaps are recorded.
+
+REQUIRED INPUTS
+
+- Jurisdictions, populations, products, data, activities, suppliers, contracts, standards, policies, controls, assessments, evidence, and expiry.
+- Exceptions, remediation, reporting, notification, retention, audit, and retirement obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Qualified human authorities determine applicability, interpretation, evidence sufficiency, exceptions, legal risk, certification, disclosure, and acceptance. AI and operators cannot make legal determinations or certify compliance. Humans can restrict, remediate, disclose, appeal, and retire.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory obligations, map controls, compare evidence, identify gaps, and draft assessment material. It must preserve source, jurisdiction, version, and uncertainty. It must not invent law, claim certification, suppress findings, or accept exceptions without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Governance Reviewer, Researcher, Analyst, Security Auditor, Critic, Verifier, Documentation Writer, Memory Curator, Planner, Architect, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Identify authoritative obligations, scope, jurisdiction, effective dates, and owners.
+2. Map obligations to policies, controls, processes, data, systems, roles, tests, and evidence.
+3. Define assessment, sampling, validity, exception, remediation, notification, and reporting rules.
+4. Track design, implementation, operation, effectiveness, assessment, certification, and acceptance separately.
+5. Validate with qualified legal, compliance, privacy, security, safety, records, and domain authorities.
+6. Test evidence integrity, control operation, expiry, scope, exception, and reporting paths.
+7. Baseline the register and hand off unresolved determinations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show obligation source, scope, jurisdiction, control, evidence, owner, authority, and claim level.
+- Require human review for interpretation, legal conclusion, exception, certification, notification, and disclosure.
+- Preserve findings, dissent, uncertainty, appeal, and evidence history.
+- Never let an automated score or generated report become a compliance decision without authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent obligations, controls, evidence, assessments, findings, exceptions, decisions, and validity as versioned records.
+- Bind compliance status to evidence and scope; enforce controls at runtime where applicable.
+- Preserve immutable decisions, append-only audit, retention, access, and replayable assessment history.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show obligation, jurisdiction, scope, owner, control, evidence age, finding, exception, deadline, and status.
+- Expose investigate, remediate, restrict, notify, appeal, accept, supersede, and retire actions with authority.
+- Explain why a claim is unknown, conditional, failed, expired, or unverified.
+- Export register, mappings, evidence, decisions, dissent, findings, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Obligation register, applicability decisions, control map, evidence index, assessment plan, exception and remediation records.
+- Reporting, notification, audit, retention, supplier, certification, and retirement handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Each claim identifies obligation, source, jurisdiction, scope, version, control, evidence, method, date, owner, and limitation.
+- A policy, scan, attestation, test, certificate, or audit report proves only its stated scope and validity.
+- Expired, missing, contradictory, or disputed evidence constrains compliance status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace obligations through controls, implementation, operation, evidence, assessment, finding, remediation, and retirement.
+- Introduce wrong jurisdiction, expired evidence, out-of-scope sample, false attestation, missing control, and exception conflict.
+- Verify immutable decisions, audit, evidence provenance, reporting, notification, and appeal.
+- Independently reproduce representative claims from the register and evidence package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating certification, checklist completion, policy presence, or a green score as universal compliance.
+- Applying one jurisdiction or standard to all populations without applicability analysis.
+- Hiding exceptions, expired evidence, scope limits, legal uncertainty, or dissent.
+
+RECOVERY AND RECONSIDERATION
+
+- On obligation conflict, evidence failure, control failure, or changed law, restrict claims and preserve records.
+- Identify qualified authority, affected scope, safe work, evidence, notification, and review date.
+- Use remediation, compensating control, exception, disclosure, suspension, or retirement only through authorized decisions.
+- Reopen on law, contract, population, data, control, provider, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Obligations, applicability, controls, owners, evidence, validity, findings, exceptions, remediation, and lifecycle are explicit.
+- Scope, jurisdiction, expiry, assessment, reporting, and retirement are addressed or justified.
+- No legal or certification claim exceeds supplied authority and evidence.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve sources, versions, applicability, controls, evidence, findings, exceptions, decisions, dissent, and gaps.
+- Hand off to Governance, Security, Privacy, Safety, Records, Audit, Testing, Operations, and Retirement.
+- Record changes requiring reopening affected architecture and obligation mappings.
+
+RELATED CODEX SECTIONS
+
+- 001-048 governance, authority, requirements, architecture, security, privacy, and governance; 050-060 safety through hardware.
+- 220-227 compliance, policy, records, audit, and controls; 251 compliance testing; 405-406 lifecycle governance and retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 001-048, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No jurisdiction, legal advice, contract set, certification scope, control catalog, or assessment authority is supplied. Actual applicability and evidence remain unresolved.

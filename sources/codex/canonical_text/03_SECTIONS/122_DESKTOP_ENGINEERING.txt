@@ -1,0 +1,98 @@
+SECTION 122 — Desktop Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering of desktop applications and agents across local OS, filesystem, device, network, identity, update, accessibility, and user-control boundaries.
+
+REQUIRED OUTCOME
+
+A versioned desktop contract covering supported hosts, local data, permissions, offline behavior, updates, compatibility, security, accessibility, diagnostics, recovery, and retirement.
+
+WHY THIS MATTERS
+
+Desktop software operates with local privileges, intermittent connectivity, user-owned data, and diverse host configurations. A failed update or unsafe local action can strand users or expose data.
+
+APPLICABILITY
+
+Applies to desktop GUI, tray, background, command-line, workstation, and local agent software.
+
+NON-APPLICABILITY CONDITIONS
+
+Using an unchanged supported desktop application without altering behavior, permissions, data, update, or support claims may be exempt; record the baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires host matrix, user journeys, local data, permissions, network, device, update, accessibility, security, support, offline, recovery, and acceptance authority.
+
+REQUIRED INPUTS
+
+Window and input behavior, local storage, files, identity, IPC, devices, network, offline, update, crash recovery, telemetry, accessibility, and uninstall or retirement.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own local data, consent, permissions, user outcome, support, security, release, and retirement. Users must be able to decline or recover material actions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft code, tests, and diagnostics. It must not access local files, execute commands, alter settings, or claim host compatibility without explicit authority and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, User Experience Reviewer, Security Auditor, Governance Reviewer, Critic, Documentation Writer, and Memory Curator. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define hosts, users, local data, permissions, devices, modes, and non-goals.
+2. Implement accessible interaction, least privilege, safe local storage, offline, update, error, and crash recovery.
+3. Test host variance, permissions, file loss, network loss, update, uninstall, accessibility, and restore.
+4. Release, support, patch, migrate, and retire with evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show local and remote actors, AI actions, permissions, data scope, and side effects. Require confirmation for destructive local actions and preserve offline status, backup, and recovery.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate application, installer, updater, local data, credentials, OS integration, devices, caches, logs, and recovery media. Use signed updates, atomic migration, least privilege, and safe uninstall.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show host, app, version, permission, update, local data, connectivity, evidence, crash, and recovery status with authorized disable, restore, and rollback controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Desktop architecture, host matrix, source and signing records, installer and updater, local data model, accessibility and security tests, diagnostics, support, recovery, and retirement artifacts.
+
+EVIDENCE REQUIREMENTS
+
+Identify host, OS, version, user, data, permissions, device, method, result, reviewer, and limitations. A successful install does not prove safe update or recovery.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test permissions, file corruption, offline, network loss, host variance, update interruption, crash, restore, accessibility, secure storage, IPC, uninstall, and rollback.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Over-privileged install, hidden local writes, unsafe updater, lost user data, inaccessible recovery, unverified plugins, silent background action, and uninstall that destroys records.
+
+RECOVERY AND RECONSIDERATION
+
+Stop update or unsafe action, preserve local data and logs, use backup or prior version, restore or compensate, provide support path, and reopen compatibility or recovery claims.
+
+COMPLETION CRITERIA
+
+Host support, permissions, local data, updates, accessibility, security, evidence, support, recovery, and retirement are explicit and verified for declared environments.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off host matrix, installers, source, signing, local data, tests, incidents, decisions, support, recovery, and gaps to Native, Cross-Platform, Security, Testing, Operations, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+122-125 Desktop through Native Application Engineering; 045-047 Security through Privacy Architecture; 053 Accessibility Architecture; 247-248 Accessibility and Compatibility Testing; 293 Installation; 378-381 Updates and Patching.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Supported hosts, local data policy, updater authority, accessibility level, support window, and recovery objectives remain unresolved.

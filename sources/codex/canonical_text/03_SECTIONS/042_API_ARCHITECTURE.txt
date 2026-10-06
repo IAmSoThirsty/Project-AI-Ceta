@@ -1,0 +1,139 @@
+SECTION 042 — API Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define externally consumable application interfaces, resources, operations, schemas, identity, authorization, versioning, limits, errors, observability, and lifecycle.
+
+REQUIRED OUTCOME
+
+- An API inventory and contract model with purpose, consumers, ownership, resources, operations, data, authority, versions, compatibility, and lifecycle.
+- Explicit validation, error, idempotency, pagination, rate, audit, privacy, security, accessibility, and recovery behavior.
+- Traceability from requirements, functions, applications, data, integrations, tests, operations, and retirement.
+
+WHY THIS MATTERS
+
+An API is a public promise and a control boundary. Ambiguous schemas, weak authorization, unsafe retries, undocumented deprecation, or misleading errors can cause durable external effects.
+
+APPLICABILITY
+
+- A system exposes or consumes programmatic operations, data, events, tools, or administrative interfaces.
+- API contracts affect identity, rights, data, compatibility, availability, cost, or external state.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material interface, operation, schema, authority, consumer, or lifecycle effect changes.
+- An approved API baseline covers exact contract and change with no material impact.
+- The artifact is exploratory and not an availability, compatibility, or security claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-041 provide requirements, application, data, integration, network, security, privacy, and operations context.
+- Consumer, identity, schema, version, rate, records, accessibility, and support authorities are known or open.
+
+REQUIRED INPUTS
+
+- Consumers, operations, resources, schemas, identity, authorization, data classes, timing, volume, errors, versions, and lifecycle.
+- Validation, audit, rate, idempotency, pagination, observability, migration, deprecation, support, and recovery requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+API owners approve purpose, consumers, operations, data exposure, authorization, versioning, quotas, commitments, exceptions, and retirement. Data and domain owners approve meaning and sharing. Humans retain revoke, throttle, pause, correct, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect contracts, propose schemas, identify breaking changes, draft tests, and analyze bounded traffic. It must preserve version, consumer, authority, and data context. It must not expose data, change a contract, grant access, execute privileged operations, or declare compatibility without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Planner, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory APIs, consumers, resources, operations, schemas, identities, dependencies, owners, and lifecycle.
+2. Define semantics, validation, authorization, data minimization, limits, errors, idempotency, and audit.
+3. Model synchronous, asynchronous, long-running, paged, streamed, batch, admin, and recovery operations.
+4. Define versioning, compatibility, deprecation, migration, notification, support, and retirement.
+5. Validate with consumers, data, security, privacy, accessibility, operations, support, and domain owners.
+6. Test malformed, unauthorized, replayed, concurrent, throttled, stale, partial, and dependency-loss requests.
+7. Baseline and hand off contract, evidence, decisions, and open gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show caller, operation, data, tool, model, provider, authority, consent, and external effect.
+- Require review for privileged, rights-affecting, externally binding, data-sharing, or destructive operations.
+- Preserve human status, error explanation, appeal, manual, evidence, and recovery paths.
+- AI-generated API calls or schemas remain proposals until authorized.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate contract, implementation, gateway, authorization, request, response, side effect, audit, and evidence.
+- Define schema, version, identity, authorization, validation, idempotency, rate, timeout, retry, error, and compatibility semantics.
+- Enforce controls consistently across UI, API, batch, event, administrative, and emergency paths.
+- Preserve append-only audit and compensation for external effects.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show API version, consumer, operation, authority, data scope, rate, status, errors, evidence, and lifecycle.
+- Expose approve, deny, revoke, throttle, pause, retry, compensate, deprecate, and retire actions.
+- Show actor, request, impact, approval, and recovery path for consequential operations.
+- Export contracts, traffic evidence, decisions, dissent, incidents, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- API catalog, context, resource and operation model, schemas, security and data contract, version and lifecycle plan.
+- Error, rate, observability, testing, migration, deprecation, support, compensation, and recovery design.
+- Evidence, decision, risk, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify API, operation, version, caller, environment, data, method, date, result, and limitation.
+- Specification, request success, schema validation, load test, or gateway metric proves only its declared scope.
+- Compatibility and security evidence states consumer, version, threat, coverage, and validity.
+- Missing, stale, failed, or contradictory evidence constrains contract status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace requirements through API operation, authorization, implementation, consumer, evidence, and retirement.
+- Exercise malformed, unauthorized, replayed, duplicate, concurrent, oversized, paged, streamed, throttled, stale, and partial requests.
+- Verify data minimization, audit, idempotency, error truthfulness, accessibility, compatibility, and compensation.
+- Disable identity, gateway, backend, network, model, provider, and evidence paths and verify safe behavior.
+- Reproduce representative claims from exact contract and test package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating an API specification or successful request as proof of secure, compatible, or correct behavior.
+- Over-broad data exposure, implicit authorization, unsafe retries, unbounded pagination, or undocumented breaking change.
+- Allowing AI, admin, or internal callers to bypass public controls.
+
+RECOVERY AND RECONSIDERATION
+
+- On contract break, data leak, abuse, overload, dependency loss, or evidence failure, restrict the operation and preserve records.
+- Identify affected consumers, owner, authority, communication, evidence, and safe alternative.
+- Use throttle, revoke, fallback, compensation, version rollback, migration, or retirement.
+- Reopen on consumer, schema, data, identity, policy, provider, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Operations, consumers, schemas, authority, data, compatibility, errors, limits, evidence, recovery, and lifecycle are explicit.
+- Invalid, abusive, partial, migration, and retirement behavior is addressed or justified.
+- Exact validity and unresolved gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve API identities, versions, schemas, consumers, decisions, traffic evidence, incidents, dissent, and gaps.
+- Hand off to Integration, Event, Network, Security, Identity, Data, Testing, Operations, and Retirement.
+- Record changes requiring reopening Application, Software, Distributed, Privacy, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-041 Requirements through Integration Architecture; 043-044 Event-Driven and Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 128-129 API and integration engineering; 255-300 delivery; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-041, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal API style, protocol, identity, rate, accessibility, or compatibility standard is supplied. Actual consumers, data agreements, threat model, service objectives, and acceptance evidence remain unresolved.

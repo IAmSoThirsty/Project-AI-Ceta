@@ -1,0 +1,98 @@
+SECTION 156 — Data Quality Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer measurable, observable, explainable, and recoverable data quality across source, transformation, storage, use, and lifecycle boundaries.
+
+REQUIRED OUTCOME
+
+Quality dimensions, rules, thresholds, sampling, monitoring, ownership, quarantine, correction, reconciliation, evidence, and impact handling for each material data product.
+
+WHY THIS MATTERS
+
+Plausible data can be incomplete, biased, stale, duplicated, or misclassified. A score without population, rule, threshold, and consequence is not a quality claim.
+
+APPLICABILITY
+
+Apply when data informs decisions, automation, reporting, models, records, compliance, safety, service, or material operations.
+
+NON-APPLICABILITY CONDITIONS
+
+No material quality rule, threshold, source, transformation, consumer, or lifecycle behavior changes and an exact approved baseline covers the work; record the decision.
+
+PREREQUISITES AND DEPENDENCIES
+
+Purpose, data contract, population, dimensions, business rules, tolerances, source lineage, consumers, sampling, incidents, risk, and correction authority.
+
+REQUIRED INPUTS
+
+Datasets, profiles, rules, thresholds, samples, missingness, drift, duplicates, reconciliations, alerts, defects, impacts, evidence, and assumptions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The owner approves quality dimensions, thresholds, exceptions, risk acceptance, correction, quarantine, consumer notification, and acceptance; assigns domain, steward, and verification authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may profile authorized data, propose quality dimensions and rules, detect anomalies or drift, explain observed defects, and draft monitoring, quarantine, correction, reconciliation, and evidence artifacts. It must state population, sampling, method, uncertainty, limitations, and possible bias, protect sensitive values, and keep recommendations traceable to source and rule versions. It must not declare data fit for consequential use, silently impute or correct records, release quarantined data, change thresholds, suppress alerts, or notify consumers without authorized review. Any quality-control mutation or acceptance decision requires the applicable policy evaluation, capability scope, immutable decision record, human authority, and append-only audit linkage.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Analyst, Researcher, Observer, Architect, Implementer, Tester, Verifier, Governance Reviewer, Security Auditor, Critic, Optimizer, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define quality dimensions, rules, populations, thresholds, validity, and owners.
+2. Profile and monitor data; detect missingness, drift, duplication, bias, corruption, and schema change.
+3. Route failures to quarantine, correction, reconciliation, consumer notification, and evidence preservation.
+4. Test representative and adversarial cases and review threshold fitness over time.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may profile authorized data and propose rules or anomaly explanations. It must disclose sampling and uncertainty, protect values, and never auto-correct consequential data or declare fitness without authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent quality rules, results, populations, samples, thresholds, lineage, alerts, quarantines, corrections, and invalidation as versioned records. Separate data quality from model confidence and service uptime.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show dataset, rule version, population, freshness, score, threshold, uncertainty, impact, owner, alert, quarantine, correction, and evidence actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Quality charter; rule catalog; profiles; monitoring and alert definitions; defect, quarantine, correction, reconciliation, impact, test, decision, evidence, and handoff records.
+
+EVIDENCE REQUIREMENTS
+
+Identify population, sampling, dimensions, rule, threshold, source, version, method, time, result, uncertainty, and limitation. A sample never proves all records.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify rule correctness, representative coverage, threshold behavior, false positives and negatives, drift, access, correction, quarantine, consumer notification, and reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Single metric quality, biased samples, threshold gaming, silent imputation, destructive correction, alert fatigue, stale profiles, and quality gates that bypass owner decisions.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected data, preserve prior versions and evidence, notify consumers, and use approved correction, reconciliation, reprocessing, or restricted-use paths. Reassess decisions and models already using it.
+
+COMPLETION CRITERIA
+
+Rules, thresholds, populations, owners, monitoring, response, tests, evidence, limitations, and review cadence are explicit. Status remains CONTENT-COMPLETE pending later gates.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off quality contracts and alerts to Data Engineering, Data Governance, Integration, Warehousing, Analytics, ML, Testing, Operations, Incident, and Migration work.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 153 Data Engineering; 154 Data Modeling; 157 Data Integration; 158 Data Migration; 161-167 Analytics through ML Engineering; 254 Data Testing; 307 Data Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, data and information architecture, and roadmap. Sector quality definitions, sampling standards, tolerances, and legal consequences remain unresolved.

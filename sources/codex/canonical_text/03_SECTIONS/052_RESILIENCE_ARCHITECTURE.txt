@@ -1,0 +1,136 @@
+SECTION 052 — Resilience Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how a system anticipates, absorbs, adapts to, recovers from, and learns from disruption while preserving protected outcomes, authority, evidence, and human control.
+
+REQUIRED OUTCOME
+
+- A disruption and dependency model with thresholds, modes, controls, decision rights, recovery, adaptation, and learning.
+- Verified continuity, degradation, failover, restoration, communication, and compensation paths.
+
+WHY THIS MATTERS
+
+Resilience is not merely redundancy. It includes people, suppliers, data, decisions, communications, recovery, and the ability to operate safely when assumptions fail.
+
+APPLICABILITY
+
+- Disruption, degradation, dependency loss, crisis, attack, change, or uncertainty could affect material outcomes.
+- The system must continue, recover, adapt, or retire while preserving people, rights, safety, data, or accountability.
+
+NON-APPLICABILITY CONDITIONS
+
+- No protected outcome, dependency, disruption, recovery, adaptation, or lifecycle obligation changes.
+- An approved resilience baseline covers exact scope and change with no material impact.
+- The artifact is exploratory and not a continuity or recovery claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-051 provide requirements, operations, safety, security, reliability, continuity, and recovery context.
+- Business continuity, incident, supplier, data, communications, safety, and owner authorities are known or open.
+
+REQUIRED INPUTS
+
+- Protected outcomes, dependencies, disruption scenarios, thresholds, modes, people, resources, data, recovery objectives, and lifecycle.
+- Failover, restore, communication, manual operation, compensation, exercise, learning, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners set protected outcomes, priorities, thresholds, recovery tradeoffs, crisis authority, communications, exceptions, and acceptance. Humans decide when to degrade, fail over, restore, compensate, learn, or retire and retain stop authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may identify scenarios, correlate signals, simulate disruption, draft runbooks, and recommend bounded responses. It must preserve evidence and uncertainty. It must not declare resilience, choose crisis priorities, suppress warnings, or execute consequential recovery without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Observer, Planner, Coordinator, Tester, Verifier, Security Auditor, Safety Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Identify protected outcomes, people, dependencies, disruption scenarios, and owners.
+2. Define thresholds, modes, safe degradation, failover, restore, communication, and recovery authority.
+3. Model technical, human, supplier, data, financial, environmental, and governance disruption.
+4. Design redundancy, diversity, isolation, manual fallback, evidence, and learning loops.
+5. Validate with owners, users, operators, safety, security, privacy, suppliers, and continuity specialists.
+6. Exercise disruption, adaptation, recovery, communication, authority loss, and return to service.
+7. Baseline lessons, decisions, evidence, dissent, residual risk, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show scenario, protected outcome, actor, model, authority, mode, evidence, and consequence.
+- Require human review for crisis priorities, service reduction, failover, compensation, notification, and retirement.
+- Preserve independent status, stop, communication, evidence, and manual recovery paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate planned, active, degraded, recovering, restored, learned, superseded, and retired states.
+- Model common-cause, cascading, compound, slow-onset, and adversarial disruption.
+- Keep recovery evidence and decisions append-only and link compensation to prior decisions.
+- Ensure alternate people, data, communications, identity, tools, suppliers, and facilities are usable, not merely listed.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show disruption, protected outcomes, mode, dependencies, thresholds, owner, authority, evidence, and residual risk.
+- Expose degrade, isolate, fail over, restore, communicate, compensate, investigate, and retire actions.
+- Explain tradeoffs, uncertainty, affected parties, and return-to-service conditions.
+- Export exercise, incident, decision, evidence, dissent, lesson, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Resilience context, dependency and disruption model, mode and threshold design, continuity and recovery plan.
+- Communication, manual operation, supplier, data, exercise, learning, compensation, evidence, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify scenario, scope, workload, mode, dependency, configuration, exercise or incident, method, date, result, and limitation.
+- Plan, simulation, tabletop, drill, incident, or recovery evidence proves only its exercised conditions.
+- Evidence must show protected outcome, user impact, decision, recovery, and residual risk, not just technical return.
+- Missing, partial, stale, or failed exercise evidence constrains resilience status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace protected outcomes through dependencies, controls, modes, recovery, communication, evidence, and retirement.
+- Exercise provider, region, identity, data, network, staffing, facility, model, communication, and authority loss.
+- Verify safe degradation, manual fallback, failover, restore, compensation, audit, accessibility, and return-to-service.
+- Confirm lessons produce governed changes and immutable decisions.
+- Reproduce representative resilience claims from exact exercise package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating redundancy, a plan, tabletop, or restored process as proof of resilient outcome.
+- Ignoring staff, supplier, communications, data, identity, physical, financial, or governance dependencies.
+- Returning to service without evidence, owner decision, user communication, or residual-risk review.
+
+RECOVERY AND RECONSIDERATION
+
+- On disruption or evidence failure, enter the approved mode, preserve records, and protect people and critical outcomes.
+- Identify authority, affected parties, safe work, evidence, communications, recovery owner, and review condition.
+- Use failover, reduced service, manual operation, restore, substitution, compensation, or retirement.
+- Reopen on disruption, dependency, population, objective, authority, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Outcomes, scenarios, dependencies, modes, thresholds, authority, evidence, recovery, learning, and lifecycle are explicit.
+- Compound disruption, human, supplier, communication, data, and retirement paths are addressed or justified.
+- Exact exercise limits, residual risk, and unresolved gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve scenarios, dependencies, exercises, incidents, decisions, evidence, lessons, dissent, residual risk, and gaps.
+- Hand off to Reliability, Safety, Security, Operations, Continuity, Disaster Recovery, Backup, Restore, Failover, Testing, and Retirement.
+- Record changes requiring reopening affected architecture and recovery baselines.
+
+RELATED CODEX SECTIONS
+
+- 019-051 Requirements through Reliability Architecture; 053-060 Accessibility through Hardware.
+- 243-245 reliability, resilience, and chaos testing; 326-331 continuity, disaster recovery, backup, restore, failover, and readiness; 324 Reliability Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-051, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal resilience objective, disruption catalogue, recovery authority, continuity standard, or exercise evidence is supplied. Actual protected outcomes and recovery targets remain unresolved.

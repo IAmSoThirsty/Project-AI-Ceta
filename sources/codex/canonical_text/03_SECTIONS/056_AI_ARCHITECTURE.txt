@@ -1,0 +1,140 @@
+SECTION 056 — AI Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed structure of AI capabilities, models, agents, prompts, tools, context, data, evaluation, human oversight, deployment, operation, and retirement.
+
+REQUIRED OUTCOME
+
+- An AI system context with purpose, capability, model, provider, data, prompt, tool, authority, user, risk, evaluation, monitoring, fallback, and lifecycle.
+- Explicit distinction between assistance, recommendation, decision, action, and external consequence.
+- Traceability from requirements and governance through implementation, runtime, evidence, incidents, compensation, and retirement.
+
+WHY THIS MATTERS
+
+AI can generate plausible but unsupported content, act through tools, amplify data bias, drift after change, and obscure responsibility behind confidence or automation. Architecture must make capability and authority separate and inspectable.
+
+APPLICABILITY
+
+- A model, agent, classifier, generator, recommender, planner, tool-calling system, or AI provider affects people, data, decisions, workflows, or external state.
+- AI behavior has material safety, privacy, security, legal, financial, accessibility, reliability, or governance consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+- No model, agent, provider, prompt, AI-derived output, tool, data, authority, or lifecycle effect changes.
+- An approved AI baseline covers exact use, model, data, population, and change with no material impact.
+- The artifact is exploratory and not an accuracy, safety, alignment, or autonomy claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-055 provide requirements, architecture, data, privacy, security, safety, knowledge, and governance context.
+- Model, provider, data, policy, capability, evaluation, red-team, human-review, and incident authorities are known or open.
+
+REQUIRED INPUTS
+
+- Purpose, users, affected parties, model, provider, version, prompt, context, data, tools, permissions, autonomy, environment, and lifecycle.
+- Quality, safety, security, privacy, fairness, accessibility, cost, latency, monitoring, fallback, appeal, evaluation, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+AI owners and affected-domain authorities approve use case, capability, model, data, autonomy, tools, human review, risk, release, incident, and retirement. Humans retain final authority over decisions, external effects, rights, safety, privacy, and compensation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized inputs, generate bounded proposals, retrieve context, invoke explicitly permitted tools, and report uncertainty. It must identify source and confidence limits, preserve trace and evidence, and stop on missing authority or policy. It must not self-authorize, conceal uncertainty, bypass evaluation, or treat output as fact or permission.
+
+APPLICABLE EXISTING AGENT ROLES
+
+	- Architect, Researcher, Analyst, Governance Reviewer, Security Auditor, Red Team, Tester, Verifier, Critic, Planner, Implementer, Documentation Writer, Memory Curator, and User Experience Reviewer.
+
+REQUIRED ACTIVITIES
+
+1. Define purpose, capability, users, affected parties, authority, autonomy, and prohibited use.
+2. Inventory model, provider, prompt, context, data, tools, permissions, dependencies, and lifecycle.
+3. Model input, retrieval, generation, reasoning, tool call, decision, action, human review, and external effect.
+4. Define evaluation, monitoring, drift, abuse, privacy, security, safety, accessibility, cost, fallback, and incident controls.
+5. Bind every mutation-capable tool action to policy evaluation, capability, trace, immutable decision, and audit.
+6. Validate with domain, users, safety, security, privacy, legal, accessibility, operations, and governance authorities.
+7. Test normal, adversarial, ambiguous, prompt-injected, unavailable, stale, biased, degraded, recovery, and retirement paths.
+8. Baseline decisions, evidence, dissent, limitations, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show intent, model, provider, prompt, context, source, tool, capability, authority, evaluation, decision, trace, and consequence.
+- Require human approval for rights, safety, privacy, security, policy, external commitments, and irreversible mutations.
+- Preserve status, explanation, correction, appeal, non-AI, stop, evidence, and recovery paths.
+- Default-deny on uncertainty, missing binding, policy conflict, expired capability, or failed evaluation.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate model, provider, prompt, context, retrieval, output, tool invocation, decision, action, audit, and evidence.
+- Treat model and provider change as architecture change that can invalidate evaluation and controls.
+- Enforce capability scope, policy evaluation, trace, immutable decision, quorum where applicable, and append-only audit at execution.
+- Preserve compensation-only rollback and terminal success, denial, failure, cancellation, and recovery events.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show use case, model, provider, version, data, prompt, tools, authority, evaluation, uncertainty, incidents, and lifecycle.
+- Expose approve, deny, constrain, pause, revoke, inspect, appeal, compensate, supersede, and retire actions.
+- Explain source, uncertainty, policy, denial, tool effect, and human decision point.
+- Export prompts, context records, traces, decisions, evaluations, audits, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- AI context, use-case and capability catalog, model and provider record, data and prompt contract, tool and authority model.
+- Evaluation, safety, security, privacy, fairness, accessibility, monitoring, incident, fallback, compensation, and retirement design.
+- Decision, governance binding, audit, verification, evidence, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify use case, model, provider, version, prompt, context, data, tools, permissions, evaluation, environment, method, result, and limitation.
+- Benchmark, sample output, user rating, tool success, or provider statement proves only its declared scope.
+- Safety, fairness, privacy, security, reliability, and autonomy evidence states population, task, threat, coverage, and validity.
+- Missing, stale, adversarial, contradictory, or unrepresentative evidence constrains AI status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace use case through model, data, prompt, context, evaluation, output, human review, tool, decision, audit, and retirement.
+- Exercise hallucination, ambiguity, prompt injection, data leakage, bias, jailbreak, tool misuse, replay, expired capability, provider loss, and model drift.
+- Verify default-deny, mutation binding, policy evaluation, immutable decision, quorum, audit, trace, compensation, and terminal stream semantics.
+- Disable model, provider, retrieval, tool, identity, policy, network, and evidence services and verify safe fallback.
+- Reproduce representative claims from exact run, evaluation, decision, and evidence records.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating fluency, benchmark, confidence, retrieval, or automation as truth, authority, safety, or acceptance.
+- Hidden prompts, tools, context, provider changes, data leakage, stale evaluations, or unowned human review.
+- Letting an agent mutate external state without complete governance binding and immutable decision.
+
+RECOVERY AND RECONSIDERATION
+
+- On unsafe output, policy conflict, failed evaluation, tool misuse, leakage, drift, provider loss, or audit gap, stop affected execution and preserve traces.
+- Identify safe read-only work, affected parties, owner, authority, evidence, communication, and review condition.
+- Use constraint, revoke, fallback, human review, compensation, restore, replacement, or retirement through new authorized decisions.
+- Reopen on model, provider, prompt, data, tool, policy, population, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Purpose, capability, model, data, prompt, tool, authority, evaluation, human review, evidence, failure, recovery, and lifecycle are explicit.
+- Adversarial, denied, degraded, mutation, compensation, and retirement behavior is addressed or justified.
+- Exact limits and unresolved evidence are recorded; CONTENT-COMPLETE does not imply safe or approved AI.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve use case, model, provider, prompt, context, tool, trace, evaluation, decision, audit, incident, evidence, dissent, and gaps.
+- Hand off to Machine Learning, AI Safety, AI Governance, Security, Privacy, Knowledge, Testing, Operations, and Retirement.
+- Record changes requiring reopening every affected architecture and evaluation baseline.
+
+RELATED CODEX SECTIONS
+
+- 019-055 Requirements through Knowledge Architecture; 057-060 Machine Learning through Hardware Architecture.
+- 167-188 machine learning, AI engineering, model evaluation, alignment, safety, governance, MLOps, prompt, HITL; 180-186 evaluation and operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, uploaded governing requirements, shared governance files, Sections 001-055, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal model, provider, evaluation, safety, fairness, privacy, autonomy, or sector rule is supplied. Actual use cases, data, capability tokens, policy bindings, human authorities, and acceptance evidence remain unresolved.

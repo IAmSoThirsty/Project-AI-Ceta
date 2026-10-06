@@ -1,0 +1,98 @@
+SECTION 115 — Driver Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the design, implementation, verification, deployment, operation, update, and retirement of software that controls or exposes hardware devices within explicit safety, security, performance, compatibility, and recovery boundaries.
+
+REQUIRED OUTCOME
+
+A versioned driver contract covering hardware assumptions, discovery, permissions, I/O, timing, errors, isolation, compatibility, tests, update, recovery, and evidence.
+
+WHY THIS MATTERS
+
+Drivers cross the hardware and privileged software boundary. A fault can corrupt data, bypass isolation, damage equipment, or make recovery unavailable.
+
+APPLICABILITY
+
+Applies to kernel, user-space, firmware-adjacent, virtual, bus, device, sensor, actuator, and compatibility drivers.
+
+NON-APPLICABILITY CONDITIONS
+
+Using an unchanged supported driver without altering behavior, configuration, trust boundary, or support claim is not driver engineering; record the baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires hardware specification, protocol, timing, privilege, threat, safety, lifecycle, test equipment, platform, update, and recovery requirements.
+
+REQUIRED INPUTS
+
+Device behavior, discovery, initialization, I/O, concurrency, errors, timeouts, power, permissions, data integrity, diagnostics, compatibility, and failure model.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve hardware access, privilege, safety, release, field update, residual risk, and retirement. Operators retain isolation and recovery authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze protocols, draft code and tests, and inspect traces. It must not invent electrical behavior, claim hardware safety, or release a driver without qualified human review and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Implementer, Tester, Verifier, Security Auditor, Red Team, Critic, Governance Reviewer, Documentation Writer, Memory Curator, and Optimizer. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define device, bus, platform, privilege, timing, safety, and recovery scope.
+2. Specify discovery, commands, data, synchronization, errors, power, update, and compatibility contracts.
+3. Implement isolation, validation, timeouts, diagnostics, and safe defaults.
+4. Test normal, malformed, disconnected, noisy, overloaded, hostile, upgraded, and failed hardware.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Identify human, AI, automation, device, and provider actors. Require human review for safety, privilege, field update, and external effects; preserve manual and out-of-band recovery.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate driver, firmware, hardware, configuration, calibration, permissions, logs, and signed artifacts. Enforce least privilege, input validation, timeout, safe state, compatibility, and rollback or restore.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show device, driver, firmware, platform, permission, health, telemetry, evidence, update, and recovery state with authorized isolate, reset, restore, and quarantine controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Driver contract, hardware matrix, source, build and signing records, protocol tests, fault injection, compatibility, security and safety review, deployment, field recovery, and retirement records.
+
+EVIDENCE REQUIREMENTS
+
+Identify hardware revision, driver, firmware, configuration, test equipment, inputs, results, reviewer, and limitations. Emulation does not prove field behavior.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test discovery, permissions, I/O, timing, disconnect, corruption, concurrency, power loss, hostile input, hardware variance, update, recovery, and safe-state behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unsafe defaults, unchecked device data, privileged access, ignored disconnects, untested hardware revisions, field updates without recovery, and erasing diagnostics during reset.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate device, preserve logs and state, enter approved safe state, use prior driver or manual control, replace hardware if needed, compensate effects, and reopen after independent review.
+
+COMPLETION CRITERIA
+
+Hardware and driver contracts, permissions, safety, compatibility, evidence, support, update, recovery, and retirement are explicit for declared devices and platforms.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off hardware matrix, source, signed artifacts, tests, calibration, incidents, decisions, recovery, and open gaps to Kernel, OS, Embedded, Hardware, Security, Testing, Operations, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+060 Hardware Architecture; 062 Electronics Engineering; 068 Firmware Engineering; 070 Internet of Things Engineering; 113-114 OS and Kernel Engineering; 198 Embedded Security; 232 Hardware Testing; 355 Device Provisioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Hardware revisions, timing, safety certification, field support, update authority, and recovery objectives remain unresolved.

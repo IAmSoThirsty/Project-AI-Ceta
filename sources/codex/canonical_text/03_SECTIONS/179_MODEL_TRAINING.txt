@@ -1,0 +1,103 @@
+SECTION 179 — Model Training
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed preparation, training, fine-tuning, preference optimization, checkpointing, and selection of model artifacts with explicit data, objective, compute, security, evaluation, and release boundaries.
+
+REQUIRED OUTCOME
+
+- A training plan connecting authorized purpose, data, objective, configuration, compute, artifacts, and evaluation.
+- Reproducible runs with lineage, resource, contamination, privacy, security, and failure evidence.
+- Controlled checkpoint selection and handoff; training is not deployment approval.
+
+WHY THIS MATTERS
+
+Training can encode data defects, leakage, unsafe capability, bias, or hidden memorization. A lower loss or preferred output does not prove the model serves its authorized purpose safely.
+
+APPLICABILITY
+
+Applies to pretraining, fine-tuning, transfer learning, reinforcement or preference optimization, distillation, quantization-aware training, and retraining. Depth increases with sensitive data, scale, autonomy, or external use.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to using an unchanged external model with no training or artifact change, or conceptual discussion with no run claim. Record scope and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires data rights and quality, objective authority, compute and supply-chain controls, evaluation, safety, privacy, security, and model-operations gates. Depends on Sections 167-169, 180-184.
+
+REQUIRED INPUTS
+
+Training objective; data and license; population; labels or preference source; architecture; configuration; compute; budget; split; contamination controls; safety constraints; evaluator; checkpoint policy; and release authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve purpose, data use, objective, resource budget, safety limits, evaluation gate, checkpoint selection, publication, and residual risk. Training staff cannot expand use or declare alignment.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft datasets, code, configurations, schedules, and diagnostics. It must preserve run identity and cannot invent metrics, hide failed runs, or select a checkpoint for deployment without authorized review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Data Scientist, Implementer, Optimizer, Security Auditor, Privacy Reviewer, Safety Auditor, Tester, Verifier, Critic, Red Team, Governance Reviewer, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+1. Define purpose, objective, prohibited capability, data, and release boundary.
+2. Validate data lineage, rights, quality, representation, contamination, and split.
+3. Record code, configuration, hardware, software, seeds, budget, and dependencies.
+4. Run training with checkpoint, failure, resource, and access controls.
+5. Evaluate generalization, robustness, subgroup, privacy, security, safety, and memorization.
+6. Compare checkpoints against baseline and document selection rationale.
+7. Hand off only with evidence and explicit next approval.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose run, data, objective, configuration, checkpoint, metrics, failures, cost, uncertainty, and reviewer. AI-generated training changes remain proposals. Preserve pause, cancel, evidence, access, and safe checkpoint handling.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version datasets, loaders, code, libraries, hardware, configuration, seeds, checkpoints, logs, metrics, evaluators, and policies. Protect artifacts and secrets; enforce lineage, retention, access, and immutable run records.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show training state, data, objective, resources, checkpoints, metrics, failures, risks, authority, and evidence. Provide authorized pause, cancel, quarantine, revoke, compare, select, archive, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Training charter; data and rights register; objective and configuration; reproducible environment; run and checkpoint register; evaluation report; safety, privacy, and security review; selection decision; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Each claim identifies run, data, split, objective, configuration, hardware, checkpoint, metric, evaluator, result, uncertainty, and limitation. Loss, reward, or preference score is not deployment or safety evidence by itself.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce a run; verify data split and contamination; test checkpoint integrity, dependency changes, memorization, robustness, subgroups, privacy, security, safety, and failed-run visibility; independently review selection.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Untracked data; test leakage; hidden failed runs; metric gaming; checkpoint confusion; unsafe data reuse; unauthorized compute; silent retraining; and training success treated as production readiness.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze affected runs or checkpoints on data, artifact, compute, security, or safety failure. Preserve evidence, use last qualified artifact only if still valid, investigate, re-evaluate, and reopen when data, objective, or population changes.
+
+COMPLETION CRITERIA
+
+Purpose, data, objective, run, artifact, resources, evaluation, risks, selection, recovery, evidence, and authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve runs, checkpoints, data, code, environments, metrics, decisions, failed attempts, dissent, incidents, and gaps. Hand off to ML Engineering, Deep Learning, Evaluation, Alignment, MLOps, Safety, and Model Operations.
+
+RELATED CODEX SECTIONS
+
+164 Data Science; 167 Machine Learning Engineering; 168 Deep Learning Engineering; 180 Model Evaluation; 181 Model Alignment; 182 AI Safety; 184 MLOps; 253 Model Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance. Actual training objectives, data rights, compute authority, safety gates, evaluator independence, and deployment criteria remain unresolved until supplied.

@@ -1,0 +1,557 @@
+SECTION 020 — Systems Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Transform the approved requirements baseline and its upstream evidence into a coherent whole-system definition, lifecycle plan, technical baseline, integration strategy, verification strategy, validation strategy, transition path, and governed decision structure.
+
+Systems Engineering coordinates the system of interest across people, processes, software, hardware, data, models, agents, facilities, suppliers, external services, operating environments, enabling systems, and lifecycle stages. It does not replace the specialist disciplines that design, implement, test, operate, maintain, or retire those elements. It ensures that their work remains connected to one authorized objective, one controlled set of requirements and interfaces, one visible system boundary, and one evidence-backed path from need to trusted operation and eventual retirement.
+
+REQUIRED OUTCOME
+
+- A declared system of interest with purpose, owner, boundary, environments, users, operators, affected parties, external systems, enabling systems, lifecycle stages, and non-goals.
+- An operational concept describing how the system will be used, supervised, supported, degraded, recovered, changed, and retired through complete mission and owner journeys.
+- A system context model showing external actors, systems, organizations, data sources, authorities, dependencies, interfaces, trust boundaries, failure domains, and sources of truth.
+- A controlled allocation of approved requirements, constraints, risk treatments, feasibility conditions, and acceptance obligations to system functions, elements, interfaces, people, processes, and lifecycle activities.
+- Functional, logical, physical, operational, information, data, authority, control, evidence, and lifecycle views that are consistent with one another and traceable to the requirements baseline.
+- Defined system elements with responsibilities, inputs, outputs, dependencies, resources, interfaces, states, failure behavior, recovery behavior, configuration identity, ownership, and verification method.
+- A versioned interface control model covering technical, human, organizational, data, event, model, authority, evidence, security, safety, privacy, accessibility, and operational interfaces as applicable.
+- A lifecycle model integrating concept, development, acquisition, implementation, integration, verification, validation, transition, operation, support, maintenance, modernization, migration, deprecation, decommissioning, disposal, and retirement.
+- A technical management system for baselines, configuration, decisions, risks, opportunities, changes, reviews, measures, evidence, deviations, waivers, nonconformities, and continuity.
+- A system integration, verification, validation, transition, operations, support, recovery, and retirement strategy sufficient to guide downstream architecture and engineering without forcing those disciplines to invent missing system obligations.
+- Explicit separation among system need, requirement, architecture, design, implementation, integration, verification, validation, acceptance, operation, and observed outcome.
+- A bounded human-AI operating model in which AI capability, assigned role, delegated authority, execution permission, evidence, and final human decision authority remain distinct.
+
+WHY THIS MATTERS
+
+A collection of individually competent components can still fail as a system. Interfaces can disagree, requirements can be allocated to nobody, local optimizations can weaken the whole, recovery can depend on the failed component, operators can receive contradictory status, and a technically correct implementation can be unusable in the environment where it must work. These failures often emerge between disciplines, organizations, lifecycle stages, and sources of truth rather than inside one component.
+
+Systems Engineering makes those relationships explicit before implementation cost and operational consequence make them difficult to change. It keeps the system objective, human outcome, requirements baseline, architecture, interfaces, evidence, risks, verification, validation, operation, and retirement connected as one governed technical thread.
+
+AI intensifies both the opportunity and the risk. AI can map complex dependencies, compare alternatives, detect inconsistencies, maintain traceability, generate models, and assist analysis. It can also create convincing diagrams unsupported by implementation, invent interfaces, conceal uncertainty in synthesized language, treat model capability as authority, or optimize a subsystem while degrading safety, privacy, accessibility, resilience, human control, or mission success. Governed Systems Engineering uses AI as a bounded analytical and execution participant without surrendering human authority, evidence discipline, or whole-system accountability.
+
+APPLICABILITY
+
+- A product, platform, application, service, device, model, agent, robot, embedded system, infrastructure, organizational process, or socio-technical capability contains multiple interacting elements or lifecycle stages.
+- The system crosses software, hardware, data, AI, human, organizational, physical, operational, supplier, or jurisdictional boundaries.
+- Multiple teams, roles, vendors, models, repositories, environments, or authorities must produce one integrated outcome.
+- Requirements must be allocated among system elements and verified at different levels.
+- Interfaces, dependencies, trust boundaries, failure domains, external services, or sources of truth materially affect success.
+- Security, privacy, safety, accessibility, governance, compliance, reliability, resilience, supportability, maintainability, recoverability, or environmental obligations span more than one component.
+- The system must operate under degraded, disconnected, emergency, maintenance, migration, or retirement conditions.
+- A change to one element may invalidate system behavior, interfaces, evidence, approvals, training, operations, or lifecycle plans.
+- AI or autonomous functions can recommend, decide, communicate, control tools, modify state, affect people, or influence protected outcomes.
+- Acquisition, procurement, manufacturing, deployment, transition, support, modernization, decommissioning, or disposal requires coordinated technical evidence.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work is a bounded research question, text correction, or isolated reversible change whose system boundary, requirements, interfaces, affected elements, verification, recovery, and acceptance are already current and verified.
+- An approved and current Systems Engineering baseline already covers the exact system version, environment, operating concept, requirements, interfaces, lifecycle stage, and proposed change, and impact analysis confirms no material system effect.
+- The work has not yet reached a decision to create, change, acquire, integrate, deploy, operate, or retire a system; upstream research and requirements evidence must still be preserved for later use.
+- A confirmed incident, unauthorized action, safety hazard, security compromise, data-loss condition, or failed mandatory control requires immediate containment before normal systems analysis continues.
+- The requested analysis would require unauthorized access to protected systems, people, data, suppliers, facilities, or regulated information.
+
+A non-applicability determination must identify the controlling baseline, exact scope, version, environment, interfaces, evidence, authorized decision owner, and reopening trigger. A small team, simple diagram, familiar technology, or AI-generated architecture is not sufficient reason to omit Systems Engineering.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-019 as applicable, including the authenticated objective, evidence base, future conditions, strategies, management boundaries, affected parties, user evidence, domain model, feasibility conditions, risk treatments, and approved requirements baseline.
+- A legitimate human owner or delegated authority for system scope, values, resource commitments, acceptance, residual risk, and lifecycle decisions.
+- A controlled requirements baseline with stable identity, traceability, acceptance criteria, verification methods, variants, open issues, and change authority.
+- Declared system objective, non-goals, system of interest, preliminary boundary, environments, lifecycle horizon, users, operators, affected parties, and external dependencies.
+- Current-state evidence for existing systems, interfaces, architecture, data, models, infrastructure, operations, incidents, support, maintenance, suppliers, contracts, and retirement obligations.
+- Defined terminology and distinction among requirements, architecture, design, implementation, verification, validation, and acceptance.
+- A durable technical-data environment or equivalent record for system models, baselines, interfaces, decisions, requirements, risks, evidence, changes, and continuity.
+- Access to qualified specialist review proportionate to security, safety, privacy, accessibility, legal, financial, physical, environmental, medical, industrial, or other consequence.
+- A change, configuration, evidence, review, escalation, and safe-halt process.
+
+REQUIRED INPUTS
+
+- Approved requirements baseline, including requirements, constraints, applicability, variants, criticality, acceptance criteria, verification methods, source evidence, approvals, waivers, exceptions, and unresolved conditions.
+- Mission, business, product, program, project, operational, support, maintenance, modernization, and retirement objectives and constraints.
+- Stakeholder and affected-party map, user jobs and journeys, owner outcomes, operator tasks, accessibility needs, consent expectations, trust conditions, and grievance or appeal paths.
+- Domain model, terminology, bounded contexts, entities, value objects, rules, states, events, invariants, sources of truth, jurisdictions, and exceptions.
+- Feasibility conditions, risk register, treatment plan, control objectives, thresholds, indicators, residual-risk decisions, safe-halt conditions, points of no return, and evidence that would change prior conclusions.
+- Existing system context, architecture, configuration, interfaces, schemas, inventories, dependencies, suppliers, external services, environments, facilities, networks, hardware, software, data, models, and operational procedures.
+- Incident, defect, performance, reliability, availability, security, privacy, safety, accessibility, support, maintenance, recovery, and user-outcome evidence.
+- Resource, schedule, budget, procurement, manufacturing, deployment, staffing, training, support, licensing, supply-chain, and disposal constraints.
+- Applicable law, regulation, contract, policy, standard, certification, assurance, and owner governance requirements.
+- AI and model details including identity, version, provider, intended function, capabilities, limitations, data use, tool access, autonomy mode, evaluation evidence, fallback, monitoring, revocation, and human review.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Authorized humans retain authority over the system objective, values, protected interests, system boundary, acceptable tradeoffs, resource commitments, residual risk, approval, acceptance, deployment, operation, suspension, decommissioning, and retirement. Systems analysis may be delegated; legitimacy and accountability may not be manufactured by role title, model fluency, or technical access.
+
+- Confirm the system of interest, system owner, decision owners, users, operators, affected parties, environments, lifecycle stages, non-goals, and protected invariants.
+- Approve or reject changes to the requirements baseline, system boundary, operational concept, architecture direction, major interfaces, autonomy level, and lifecycle strategy.
+- Decide value conflicts and tradeoffs involving safety, rights, privacy, accessibility, security, environmental impact, cost, schedule, employment, public effect, and residual risk.
+- Ensure qualified specialists and affected participants are involved where consequence requires expertise or lived experience.
+- Authorize resources, procurement, supplier commitments, data use, testing involving people or protected systems, deployment, and irreversible actions.
+- Define which decisions may be delegated, the scope and duration of delegation, evidence required, review points, expiry, and revocation.
+- Ratify technical baselines and transition decisions only for the exact version, environment, scope, evidence set, open findings, and residual conditions reviewed.
+- Preserve the ability to stop, narrow, quarantine, roll back, supersede, or retire the system when authority, evidence, safety, or mission conditions fail.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI systems may assist with decomposition, dependency analysis, model generation, interface discovery, alternative comparison, requirements allocation proposals, traceability, simulation support, anomaly detection, review preparation, and documentation within explicit authority and evidence boundaries.
+
+The AI must:
+
+- Restate the authorized objective, scope, requirements baseline, system boundary, assumptions, unknowns, and constraints before material analysis.
+- Distinguish observed fact, supplied requirement, inference, assumption, model output, estimate, recommendation, decision, and verified result.
+- Identify missing inputs, conflicts, unsupported interfaces, hidden dependencies, unallocated requirements, orphan elements, and evidence gaps.
+- Preserve exact source, version, environment, artifact identity, and provenance for material system claims.
+- Label generated models, diagrams, allocations, scenarios, estimates, and simulations as proposals until reviewed and accepted by authorized humans or qualified mechanisms.
+- Remain within assigned role, tool, data, environment, and action boundaries.
+- Escalate value judgments, material scope changes, residual-risk acceptance, irreversible choices, and decisions outside delegation.
+- Support correction, dissent, alternative analysis, reproducibility, independent verification, and rollback.
+- Degrade honestly when model, tool, provider, data, context, or evidence is unavailable or stale.
+
+The AI must not:
+
+- Redefine the objective, system boundary, user population, lifecycle, authority, or requirements to fit a preferred solution.
+- Invent components, interfaces, integrations, resources, supplier capability, performance, certification, approval, test evidence, or operational readiness.
+- Treat a diagram, model, simulation, prototype, digital twin, test stub, or generated specification as proof of implemented behavior.
+- Convert technical capability into permission, approval, acceptance, or authority.
+- optimize one element while silently degrading mission outcome, human control, security, privacy, safety, accessibility, resilience, evidence, supportability, or retirement.
+- Approve its own architecture, verification result, validation result, risk acceptance, or release where independent human or specialist authority is required.
+- Hide contradictory specialist findings or manufacture consensus.
+- Continue consequential work through a failed prerequisite, invalid baseline, uncertain authority, or unresolved mandatory constraint.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Use the existing role files unchanged. Select only the roles required for the declared systems task, define each assignment, and preserve separation among analysis, execution, review, verification, and decision.
+
+- Architect: defines coherent system structure, elements, interfaces, data, authority, trust, failure, recovery, and verification paths from approved requirements.
+- Researcher: acquires and evaluates authoritative technical, operational, scientific, supplier, regulatory, and lifecycle evidence.
+- Analyst: performs option, tradeoff, sensitivity, dependency, consequence, and whole-system analysis without seizing decision authority.
+- Critic: challenges completeness, internal consistency, hidden assumptions, operational realism, interfaces, evidence, and readiness claims.
+- Security Auditor: examines assets, trust boundaries, identity, authorization, supply chain, runtime, evidence, recovery, and security claims.
+- Implementer: performs separately authorized system-model, integration, prototype, configuration, or implementation work within approved architecture and requirements.
+- Refactorer: improves structure without changing required behavior when a bounded behavior-preserving assignment exists.
+- Tester: translates requirements and interfaces into reproducible normal, boundary, failure, recovery, compatibility, and governance tests.
+- Verifier: independently determines whether material system claims are supported within exact scope, version, environment, and evidence limits.
+- Documentation Writer: maintains accurate system descriptions, interface records, decisions, procedures, limitations, recovery, and lifecycle documentation.
+- Teacher: explains system concepts, dependencies, tradeoffs, evidence, and operating procedures without replacing authority or qualified training.
+- Planner: sequences system definition, integration, verification, validation, transition, operation, maintenance, and retirement work with explicit gates and dependencies.
+- Coordinator: assigns and reconciles bounded specialist workstreams while preserving provenance, dissent, human authority, and one coherent system result.
+- Observer: records system states, events, measurements, transitions, anomalies, failures, and evidence without unsupported interpretation.
+- Memory Curator: preserves approved baselines, decisions, traceability, evidence, lessons, and continuity under retention and access rules.
+- Governance Reviewer: evaluates authority, scope, delegation, policy, evidence, approval, exception, and transition compliance.
+- Red Team: attacks assumptions, interfaces, authority, failure paths, recovery, bypasses, human factors, and readiness claims.
+- Optimizer: improves measurable whole-system performance or cost while preserving protected properties and regression guardrails.
+- User Experience Reviewer: evaluates complete owner, operator, maintainer, support, accessibility, failure, recovery, and control journeys.
+- Decision Arbiter Advisory: compares system alternatives under authorized criteria, constraints, evidence, sensitivity, reversibility, and human approval boundaries.
+
+REQUIRED ACTIVITIES
+
+1. Accept the controlled upstream handoff
+Verify the exact Requirements Engineering baseline, objective, scope, authority, sources, assumptions, variants, open findings, feasibility conditions, risk treatments, and acceptance boundaries. Do not proceed from an informal summary when the controlled baseline is available.
+
+2. Establish the system of interest
+Name the system, purpose, owner, intended outcomes, non-goals, lifecycle horizon, environments, users, operators, maintainers, affected parties, and preliminary boundary. Distinguish the system of interest from external systems and enabling systems.
+
+3. Define the lifecycle model
+Identify concept, research, acquisition, development, implementation, integration, verification, validation, transition, operation, support, maintenance, modernization, migration, deprecation, decommissioning, disposal, and retirement stages that apply. Define entry, exit, authority, evidence, and feedback for each stage.
+
+4. Develop the operational concept
+Describe complete mission, owner, user, operator, administrator, maintainer, support, auditor, incident, and retirement journeys. Include normal, denied, degraded, offline, emergency, recovery, maintenance, migration, and end-of-life conditions.
+
+5. Model the system context
+Identify external actors, organizations, systems, services, suppliers, facilities, environments, jurisdictions, sources of truth, data sources, communications, authorities, and dependencies. Define what crosses each boundary and under what contract.
+
+6. Establish measures and success conditions
+Define measures of effectiveness, measures of performance, technical performance measures, service levels, human outcomes, safety and security limits, evidence thresholds, and lifecycle success conditions. Identify owner, method, environment, range, uncertainty, and decision trigger for each measure.
+
+7. Analyze and allocate functions
+Identify functions required to achieve the operational concept. Decompose only to the level needed for responsibility, interface, risk, verification, and implementation decisions. Preserve end-to-end threads across functional boundaries.
+
+8. Allocate requirements and constraints
+Allocate each approved requirement, risk treatment, feasibility condition, and lifecycle obligation to system functions, elements, interfaces, people, processes, environments, or enabling systems. Record rationale, owner, verification level, and unresolved allocation.
+
+9. Identify system elements and configuration items
+Define the elements required to realize the functions. For each, record purpose, responsibility, inputs, outputs, dependencies, data, authority, trust, failure, recovery, owner, configuration identity, and verification method.
+
+10. Develop and compare system alternatives
+Create credible alternatives at the appropriate abstraction level. Compare them against mandatory constraints and authorized criteria including mission outcome, human impact, feasibility, risk, cost, time, complexity, performance, maintainability, supportability, interoperability, reversibility, and retirement.
+
+11. Define coherent system views
+Maintain consistent operational, functional, logical, physical, information, data, software, hardware, human, organizational, authority, trust, evidence, deployment, and lifecycle views as applicable. A view must identify its purpose, scope, source, version, assumptions, and relationship to other views.
+
+12. Engineer interfaces
+Define producer, consumer, purpose, data or resource exchanged, protocol, schema, units, timing, ordering, identity, authority, error behavior, retry, timeout, idempotency, versioning, compatibility, security, privacy, safety, observability, evidence, ownership, and change process for every critical interface.
+
+13. Map system flows
+Map material data, information, event, command, control, authority, identity, credential, model, evidence, audit, physical-energy, material, and human communication flows. Identify trust boundaries, transformations, custody, retention, and failure effects.
+
+14. Analyze dependencies and failure domains
+Classify hard, soft, informational, approval, evidence, resource, environmental, supplier, external, and review dependencies. Identify common-mode, cascading, correlated, circular, hidden, and single-point dependencies.
+
+15. Integrate specialty engineering
+Bring security, privacy, safety, accessibility, reliability, resilience, human factors, data, AI, software, hardware, embedded, network, compliance, quality, support, maintenance, environmental, manufacturing, and other applicable specialists into one traceable system model rather than appending isolated checklists.
+
+16. Define human-AI teaming and autonomy
+Specify AI identity, role, capabilities, limitations, autonomy mode, task envelope, allowed tools, data boundaries, human checkpoints, approval thresholds, explanations, uncertainty, monitoring, fallback, revocation, appeal, incident handling, and retirement. Preserve human control over values, consequential authority, and residual risk.
+
+17. Develop integration strategy
+Define integration sequence, environments, prerequisites, interface maturity, simulators, test doubles, hardware or service availability, data, configuration, rollback, evidence, defect handling, and exit criteria. Integrate according to dependency and risk, not convenience alone.
+
+18. Develop verification strategy
+Map each system requirement and interface obligation to verification level, method, environment, inputs, expected result, threshold, evidence, independence, and status. Distinguish analysis, inspection, demonstration, test, simulation, audit, and operational evidence.
+
+19. Develop validation strategy
+Define how authorized owners, users, operators, maintainers, affected parties, and qualified specialists will determine whether the integrated system solves the right problem in the intended context. Include complete journeys, realistic environments, failure, recovery, accessibility, and long-term effects.
+
+20. Plan transition and deployment
+Define readiness criteria, data and state migration, installation, configuration, credentials, training, support, monitoring, rollback, contingency, communications, owner control, and evidence required to move from development into operation.
+
+21. Engineer operation and support
+Define operating modes, roles, command and control, monitoring, alerting, incident response, service management, backup, restore, continuity, support, maintenance, capacity, configuration, documentation, training, and evidence retention.
+
+22. Engineer change, modernization, and migration
+Define change authority, impact analysis, compatibility, technical debt, dependency updates, model updates, schema changes, state migration, coexistence, rollback, forward recovery, re-verification, re-validation, and supersession.
+
+23. Engineer decommissioning and retirement
+Define service cessation, user transition, data export and deletion, record retention, credential and key revocation, dependency removal, contract termination, hardware disposition, environmental obligations, residual support, evidence preservation, and post-retirement monitoring.
+
+24. Establish technical baselines
+Create and control concept, requirements, functional, allocated, design, product, as-built, as-deployed, as-operated, and retirement baselines as applicable. Bind each to scope, version, configuration, approvals, evidence, open findings, and effective date.
+
+25. Establish configuration and technical-data control
+Identify configuration items, models, documents, schemas, software, hardware, data, models, policies, environments, procedures, and evidence under control. Define versioning, change, access, integrity, backup, restore, retention, and audit.
+
+26. Manage technical decisions and tradeoffs
+Record decision question, authority, criteria, options, evidence, assumptions, dissent, sensitivity, reversibility, selected path, conditions, rejected alternatives, and reopening triggers. Do not convert recommendations into decisions.
+
+27. Conduct technical reviews and gates
+Use evidence-based reviews appropriate to consequence, such as system requirements, functional, architecture, interface, integration readiness, test readiness, verification, validation, transition, operational readiness, and retirement reviews. A meeting or slide deck is not a passed gate.
+
+28. Monitor technical performance and system risk
+Track measures, margins, trends, assumptions, dependencies, interface maturity, defects, risks, control effectiveness, evidence status, and lifecycle readiness. Escalate threshold crossings and preserve uncertainty.
+
+29. Control change and invalidation
+When a requirement, interface, component, model, supplier, environment, authority, or lifecycle condition changes, identify all affected baselines, tests, evidence, approvals, procedures, training, deployments, operations, and retirement obligations. Reopen them as required.
+
+30. Hostile-review and hand off
+Attack the system model for orphan requirements, unallocated responsibility, hidden interfaces, circular recovery, stale baselines, unsupported performance, untested failure, autonomy drift, inaccessible control, supplier assumptions, evidence gaps, and retirement omissions. Deliver a durable package to architecture and engineering roles with exact next safe actions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- The system must disclose when a human, AI model, agent, automation, rule engine, external service, or hybrid process produced a material recommendation, action, status, or evidence item.
+- AI capability, assigned role, delegated authority, execution permission, approval, acceptance, and accountability must be represented as separate states.
+- The owner must be able to inspect the system objective, boundary, operating mode, active actors, configuration, dependencies, evidence, risk, and next consequence before authorizing material action.
+- AI-generated system models, allocations, interfaces, estimates, simulations, and architecture alternatives must remain proposals until reviewed under the appropriate authority.
+- High-consequence recommendations must expose sources, assumptions, uncertainty, dissent, alternatives, affected parties, reversibility, and evidence that would change the recommendation.
+- Humans must be able to correct terminology, reject system assumptions, narrow scope, change delegation, revoke authority, request independent review, stop execution, and restore a known-good baseline.
+- No conversational path may bypass the same identity, authority, policy, state, evidence, and audit controls enforced by non-conversational interfaces.
+- The interface must distinguish observed system state from inferred state, predicted state, simulated state, desired state, and planned state.
+- Model or provider outage must not remove critical status, stop, diagnosis, evidence, recovery, or owner-control functions.
+- Automated allocation, optimization, scheduling, routing, or decision support must preserve mandatory constraints and cannot hide minority findings or affected-party burdens.
+- Complete human journeys must include denial, explanation, correction, fallback, accessibility, recovery, appeal, and exit rather than only successful task completion.
+- Long-running or autonomous work must expose current assignment, elapsed state, authority expiry, resource use, evidence progress, stop conditions, and safe interruption behavior.
+- Human oversight must be operationally possible, not merely documented; the human needs sufficient time, information, access, and control to intervene.
+- Data collected for supervision, personalization, evaluation, or learning must follow declared privacy, consent, retention, access, and deletion requirements.
+- The system must preserve dignity and non-deception for users and affected non-users even when they cannot directly operate the system.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Systems Engineering must create a connected technical thread rather than a disconnected collection of documents.
+
+- Represent the system of interest, external systems, enabling systems, actors, environments, lifecycle stages, requirements, functions, elements, interfaces, risks, decisions, tests, evidence, and baselines as versioned, attributable objects or equivalent controlled records.
+- Maintain explicit relationships among objective, need, requirement, function, logical element, physical element, interface, implementation artifact, verification case, validation journey, evidence, acceptance, operation, incident, change, and retirement.
+- Keep operational, functional, logical, physical, information, data, authority, trust, deployment, and lifecycle views consistent through automated or governed checks.
+- Bind interface contracts to exact producer, consumer, schema, protocol, units, timing, identity, authority, error, compatibility, observability, and evidence semantics.
+- Separate control plane, data plane, evidence plane, governance plane, and owner-control surfaces where doing so clarifies authority and failure behavior; do not assume separation without implementation evidence.
+- Define system states and transitions for initialization, ready, active, degraded, blocked, awaiting authority, safe halt, recovery, maintenance, migration, rollback, shutdown, decommissioned, and retired as applicable.
+- Design graceful degradation around essential owner and safety functions, with explicit dependency, timeout, retry, offline, reconciliation, and stale-data behavior.
+- Ensure every consequential path is governed consistently through UI, API, agent, automation, scheduler, retry, administrative, and recovery interfaces.
+- Preserve configuration identity across source, build, artifact, deployment, runtime, model, data, policy, hardware, environment, and evidence.
+- Build observability that supports both owner situational awareness and engineering diagnosis without turning telemetry into surveillance or a substitute for verification.
+- Treat AI models and external providers as bounded, versioned dependencies with failure, drift, fallback, evaluation, substitution, and retirement plans.
+- Define interoperability and compatibility across supported versions, environments, platforms, data formats, protocols, and organizational boundaries.
+- Include backup, restore, disaster recovery, business continuity, incident response, maintenance, supply-chain, migration, deprecation, and retirement architecture from the beginning.
+- Preserve enough technical data and evidence to reproduce decisions, verify current state, investigate incidents, maintain the system, migrate it, and retire it safely.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner-facing cockpit or equivalent control record should expose:
+
+- System name, purpose, owner, baseline, configuration, environment, operating mode, lifecycle stage, active version, and authority state.
+- System context showing external systems, actors, dependencies, interfaces, trust boundaries, sources of truth, and failure domains.
+- Operational journeys and mission threads, including normal, denied, degraded, recovery, maintenance, migration, and retirement paths.
+- Requirement allocation and satisfaction status from mission objective through system element, interface, implementation, test, evidence, and acceptance.
+- Interface health, version compatibility, ownership, recent changes, open defects, risk, and evidence status.
+- Technical performance measures, margins, thresholds, trends, uncertainty, data freshness, and consequence of crossing limits.
+- Current risks, controls, residual risk, treatment status, safe-halt triggers, and legitimate risk-acceptance authority.
+- Integration, verification, validation, transition, operational-readiness, maintenance, and retirement progress as distinct states.
+- AI and agent identity, role, model or provider, capabilities, limitations, current assignment, authority, tool access, evidence, and revocation controls.
+- Baseline comparison, change impact, invalidated evidence, pending approvals, open dissent, unresolved decisions, and next safe action.
+- Controls to request evidence, compare alternatives, authorize, reject, defer, narrow, stop, roll back, restore, quarantine, revoke, supersede, and retire within the owner's authority.
+- Plain-language explanation of what is known, unknown, changed, degraded, blocked, failed, verified, unverified, and awaiting human decision.
+- Recovery guidance that remains available when nonessential services, AI models, networks, or external providers fail.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Systems Engineering management and lifecycle plan.
+- System of interest definition, ownership record, boundary statement, non-goals, environments, lifecycle scope, and context model.
+- Operational concept, concept of operations, mission threads, use cases, owner journeys, operator journeys, maintenance journeys, incident journeys, and retirement journeys as applicable.
+- Stakeholder, affected-party, user, operator, maintainer, support, supplier, regulator, and external-system registers.
+- Measures of effectiveness, measures of performance, technical performance measures, margins, thresholds, and monitoring plan.
+- Functional analysis, functional decomposition, behavior models, state models, sequence models, and requirement allocation records.
+- System element catalogue and configuration-item register.
+- Operational, functional, logical, physical, information, data, authority, trust, deployment, and lifecycle architecture views at the systems level.
+- Interface inventory, interface control documents or equivalent contracts, compatibility matrix, ownership, and change history.
+- Data, event, command, control, authority, identity, evidence, audit, material, energy, and human communication flow models as applicable.
+- Dependency, failure-domain, common-mode, cascade, and external-service analyses.
+- Human-AI teaming, autonomy, capability, authority, fallback, oversight, monitoring, revocation, appeal, and retirement model.
+- Specialty-engineering integration records for security, privacy, safety, accessibility, reliability, resilience, human factors, quality, supportability, maintainability, environmental, and other applicable disciplines.
+- Alternative-system concepts, trade studies, sensitivity analysis, decisions, dissent, rejected alternatives, and reopening conditions.
+- Integration strategy, sequence, environments, prerequisites, test resources, evidence requirements, defect process, rollback, and exit criteria.
+- Requirements verification matrix and verification strategy.
+- Validation plan connecting intended outcomes and complete journeys to realistic environments, participants, evidence, and acceptance authority.
+- Transition, deployment, migration, training, support, operational-readiness, rollback, and continuity plans.
+- Operations, maintenance, modernization, configuration, support, incident, backup, restore, disaster-recovery, and business-continuity concepts.
+- Decommissioning, data disposition, credential revocation, dependency removal, hardware disposition, environmental, archival, and retirement plans.
+- Controlled technical baselines, configuration records, change requests, impact analyses, waivers, deviations, nonconformities, and supersession history.
+- Technical review records, gate criteria, evidence, findings, decisions, owners, and closure status.
+- System risk and opportunity register linked to requirements, elements, interfaces, controls, tests, evidence, and lifecycle decisions.
+- Hostile-review findings and durable downstream handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Every material system claim must identify system, version, configuration, environment, timeframe, scope, method, evidence source, limitations, and responsible actor.
+- Each requirement allocation must identify the approved requirement baseline, allocated function or element, rationale, owner, verification level, and status.
+- Each interface claim must identify both endpoints, exact versions, contract, data or resource exchanged, preconditions, error behavior, compatibility, and observed or tested evidence.
+- Models and diagrams are evidence of the model or design record, not proof that the represented system exists or behaves as shown.
+- Simulation results must identify model, assumptions, calibration, inputs, scenario, uncertainty, validation basis, and limits of applicability.
+- Supplier, vendor, open-source, model-provider, hardware, certification, and service claims require current attributable evidence and must distinguish contractual promise from independently observed behavior.
+- Verification evidence must identify requirement, test or analysis case, expected result, actual result, environment, configuration, data, actor, time, logs, deviations, and reproducibility.
+- Validation evidence must identify intended users or owners, realistic context, complete journey, observed outcome, failure and recovery behavior, accessibility coverage, limitations, and acceptance authority.
+- Runtime evidence must distinguish current measured state from cached, inferred, simulated, estimated, or predicted state.
+- Risk controls must have implementation and effectiveness evidence; documentation or configuration presence alone is insufficient.
+- Baseline and approval evidence must bind to exact artifacts, requirements, interfaces, configuration, environment, open findings, and authority.
+- Failed, blocked, inconclusive, stale, superseded, or contradicted evidence must remain visible and linked to later resolution.
+- Missing evidence must result in UNKNOWN, UNVERIFIED, BLOCKED, CONDITIONAL, or NOT APPLICABLE with rationale, not implied success.
+- AI-generated content must retain model, provider, version, prompt or task context where permitted, tool outputs, source links, review state, and limitations proportionate to consequence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace representative objectives from source through requirement, function, system element, interface, implementation, verification evidence, validation outcome, acceptance, and operational observation.
+- Trace representative components and interfaces backward to authorized requirements and forward to tests, evidence, operation, maintenance, and retirement obligations.
+- Verify every mandatory requirement is allocated or explicitly retained at system level with owner and rationale.
+- Introduce an orphan requirement, orphan component, orphan interface, and orphan test and confirm the technical-data system identifies each.
+- Change a material requirement, interface schema, external dependency, model version, authority rule, or operating environment and confirm affected baselines, evidence, approvals, and readiness states are invalidated or reviewed.
+- Exercise normal, boundary, denied, degraded, offline, partial-failure, common-mode, recovery, rollback, migration, maintenance, and retirement scenarios.
+- Disconnect or corrupt each critical external dependency in turn and verify essential status, stop, evidence, diagnosis, and recovery paths remain available or fail safely.
+- Verify interface contracts reject malformed, unauthorized, stale, incompatible, duplicate, replayed, out-of-order, timed-out, and partially processed interactions as applicable.
+- Confirm configuration identity can be traced from requirements and source through build, artifact, deployment, runtime, model, data, policy, hardware, test, and evidence.
+- Have independent reviewers reproduce representative verification claims without relying solely on the producing role's interpretation.
+- Validate complete owner, user, operator, maintainer, support, incident, and recovery journeys in realistic environments and with appropriate accessibility coverage.
+- Disable AI models and external providers and confirm critical owner controls and deterministic safety boundaries remain operational.
+- Attempt to let an AI-generated allocation, architecture decision, risk acceptance, or readiness recommendation become binding without authorized approval and verify rejection.
+- Introduce conflicting specialist findings and confirm disagreement, evidence, scope, methods, authority, and decision owner remain visible.
+- Verify technical reviews cannot pass when required evidence, authority, interface maturity, critical risk closure, verification, validation, rollback, or continuity is missing.
+- Restore from backup or a previous baseline and verify configuration, data, authority, interfaces, evidence, and owner journeys after recovery.
+- Restart an architecture or engineering role from the Systems Engineering handoff and verify it can reconstruct the system context, baseline, allocations, interfaces, risks, decisions, and next safe action without chat history.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating Systems Engineering as diagram production, documentation after implementation, project administration, or a single architecture review.
+- Defining the system boundary around the preferred solution while excluding inconvenient users, operators, suppliers, external systems, support, maintenance, or retirement.
+- Decomposing components without preserving end-to-end mission and owner journeys.
+- Allocating requirements to teams or documents instead of accountable system elements, interfaces, people, processes, and lifecycle activities.
+- Leaving requirements, risks, controls, interfaces, or verification responsibilities unallocated.
+- Using one view as though it represents operational, logical, physical, authority, trust, data, and lifecycle truth simultaneously.
+- Treating models, simulations, prototypes, test doubles, dashboards, or digital twins as proof of production behavior.
+- Inventing integrations, performance, capacity, supplier capability, certification, resources, schedules, or readiness.
+- Freezing architecture before requirements, interfaces, feasibility conditions, risk treatments, human outcomes, and lifecycle obligations are understood.
+- Local optimization that degrades whole-system mission, security, privacy, safety, accessibility, resilience, maintainability, supportability, operator control, evidence, or retirement.
+- Interface-by-conversation: relying on informal agreement, shared assumptions, or chat history instead of versioned contracts.
+- Circular recovery in which the recovery path depends on the failed component, credential, network, provider, model, or data source.
+- Assuming external services, models, vendors, networks, users, operators, facilities, and data remain available, trustworthy, compatible, or unchanged.
+- Conflating verification with validation, test completion with acceptance, execution success with verified outcome, or deployment with operational readiness.
+- Allowing AI capability or autonomy to expand without explicit requirement, authority, monitoring, fallback, revocation, and evidence changes.
+- Hiding conflicts among specialist disciplines through consensus language or aggregate scoring.
+- Treating security, privacy, safety, accessibility, reliability, support, maintenance, and retirement as downstream add-ons.
+- Maintaining stale baselines, undocumented deviations, untracked configurations, or evidence that cannot be bound to the exact system tested.
+- Declaring the system complete while critical interfaces, dependencies, degraded modes, recovery, migration, support, or retirement remain undefined or unverified.
+
+RECOVERY AND RECONSIDERATION
+
+- Quarantine suspect baselines, models, interface contracts, allocations, evidence, approvals, and readiness claims while preserving the last known accepted state.
+- Restore a known-good technical baseline when unauthorized change, corruption, incompatible merge, model hallucination, supplier drift, or uncontrolled configuration occurs.
+- Reopen Requirements Engineering when system analysis exposes ambiguous, infeasible, conflicting, untestable, unallocated, or missing requirements.
+- Reopen feasibility and risk analysis when architecture, interfaces, dependencies, scale, environment, suppliers, models, controls, cost, schedule, or lifecycle assumptions change.
+- Re-run system context, dependency, interface, failure, security, privacy, safety, accessibility, resilience, support, maintenance, and retirement analyses after material change.
+- Narrow scope, partition the system, create variants, stage integration, use a pilot, select a reversible experiment, or defer advancement when evidence is insufficient.
+- Enter safe halt for affected work when authority, configuration identity, a mandatory requirement, critical interface, safety condition, evidence chain, or recovery path cannot be trusted.
+- Preserve failed alternatives, invalid assumptions, prior baselines, rejected decisions, incidents, and recovery evidence with supersession links.
+- Define exact evidence, specialist review, owner decision, test, validation journey, configuration restoration, or interface correction required to reopen advancement.
+- Resume only from a durable continuity package that names the exact baseline, current state, invalidated artifacts, open findings, authority, and next safe action.
+
+COMPLETION CRITERIA
+
+Systems Engineering is complete for the declared system baseline and lifecycle decision only when:
+
+- The system of interest, purpose, owner, objective, boundary, environments, lifecycle stages, users, operators, affected parties, external systems, enabling systems, non-goals, and authority are explicit.
+- The exact approved requirements baseline and all material feasibility conditions, risk treatments, mandatory constraints, variants, waivers, exceptions, and open findings are identified.
+- Operational concepts and complete journeys cover normal, denied, degraded, failure, recovery, maintenance, migration, and retirement conditions as applicable.
+- Measures of effectiveness, performance, technical performance, human outcome, limits, margins, evidence methods, and decision thresholds are defined.
+- Every material requirement is allocated or explicitly retained at system level with rationale, owner, interface effects, and verification method.
+- System elements, responsibilities, interfaces, dependencies, trust boundaries, failure domains, flows, states, recovery, ownership, and configuration identity are defined at sufficient depth for downstream work.
+- Operational, functional, logical, physical, information, data, authority, trust, deployment, and lifecycle views are consistent or their disagreements are visible.
+- Security, privacy, safety, accessibility, reliability, resilience, human factors, governance, compliance, supportability, maintainability, environmental, and other applicable specialty obligations are integrated.
+- Human-AI roles, capability, authority, autonomy, oversight, fallback, revocation, appeal, evidence, and incident behavior are bounded and testable.
+- Integration, verification, validation, transition, operation, support, maintenance, change, migration, decommissioning, and retirement strategies are defined with entry, exit, evidence, and authority conditions.
+- Technical baselines, configuration control, interface control, technical decisions, risk, change, review, evidence, and continuity processes are operationally defined.
+- Critical ambiguity, missing authority, unallocated requirements, unresolved mandatory interface, unacceptable residual risk, missing recovery, and missing acceptance evidence block affected advancement.
+- Applicable human owners and qualified specialists have reviewed the exact baseline within their authority.
+- Downstream architecture and engineering roles can proceed without inventing system objective, requirements, interfaces, authority, evidence, or lifecycle conditions.
+
+Completion does not mean the system has been implemented, integrated, verified, validated, deployed, accepted, or proven in operation. It means the declared Systems Engineering baseline is sufficiently coherent, governed, traceable, and evidenced to control those downstream stages truthfully.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+The Systems Engineering handoff must include:
+
+- System name, identifier, baseline version, immutable reference or hash, owner, approval state, scope, environments, lifecycle stage, effective date, and safe-to-proceed determination.
+- Authorized objective, non-goals, protected invariants, affected parties, system of interest, external systems, enabling systems, system context, and operating concept.
+- Exact requirements baseline, allocation, variants, feasibility conditions, risk treatments, mandatory constraints, acceptance criteria, verification methods, waivers, exceptions, and open findings.
+- System elements, configuration items, functions, behaviors, states, flows, interfaces, dependencies, trust boundaries, failure domains, sources of truth, and ownership.
+- Alternative concepts, trade studies, technical decisions, dissent, assumptions, sensitivity, reversibility, rejected alternatives, and reopening conditions.
+- Measures, thresholds, margins, monitoring, risks, controls, residual risk, safe-halt conditions, and decision authority.
+- Integration, verification, validation, transition, deployment, operational-readiness, support, maintenance, migration, recovery, decommissioning, and retirement strategies.
+- Technical baselines, configuration records, interface contracts, change history, invalidated artifacts, evidence register, review status, and unresolved decisions.
+- Exact assignments for downstream Enterprise, Solution, Systems, Domain, Business, Capability, Process, Functional, Operational, Information, Data, Application, Software, Platform, Infrastructure, Security, AI, hardware, engineering, testing, verification, validation, operations, maintenance, and retirement work as applicable.
+- Next safe action and conditions under which work may proceed, proceed conditionally, remain blocked, enter safe halt, or return upstream.
+
+Downstream roles must return interface conflicts, impossible allocations, implementation deviations, new dependencies, performance shortfalls, failed tests, validation failures, incidents, operational evidence, maintenance findings, migration effects, and retirement constraints into the controlled systems record. Chat history is not a continuity mechanism.
+
+RELATED CODEX SECTIONS
+
+001 Research
+002 Foresight / Futures
+003 Innovation
+004 Mission Strategy
+005 Business Strategy
+006 Product Strategy
+007 Portfolio Management
+008 Program Management
+009 Project Management
+010 Product Management
+011 Business Analysis
+012 Market Research
+013 Competitive Intelligence
+014 Stakeholder Management
+015 User Research
+016 Domain Analysis
+017 Feasibility Analysis
+018 Risk Management
+019 Requirements Engineering
+021 Enterprise Architecture
+022 Solution Architecture
+023 Systems Architecture
+024 Domain Architecture
+025 Business Architecture
+026 Capability Architecture
+027 Process Architecture
+028 Functional Architecture
+029 Operational Architecture
+030 Information Architecture
+031 Data Architecture
+032 Application Architecture
+033 Software Architecture
+034 Platform Architecture
+035 Infrastructure Architecture
+036 Cloud Architecture
+037 Edge Architecture
+038 Distributed Systems Architecture
+039 Network Architecture
+040 Communications Architecture
+041 Integration Architecture
+042 API Architecture
+043 Event-Driven Architecture
+044 Runtime Architecture
+045 Security Architecture
+046 Identity Architecture
+047 Privacy Architecture
+048 Governance Architecture
+049 Compliance Architecture
+050 Safety Architecture
+051 Reliability Architecture
+052 Resilience Architecture
+053 Accessibility Architecture
+056 AI Architecture
+057 Machine Learning Architecture
+058 Robotics Architecture
+059 Embedded Systems Architecture
+060 Hardware Architecture
+063 Computer Engineering
+073 Control Systems Engineering
+074 Robotics Engineering
+075 Human–Computer Interaction
+106 User Validation
+107 Software Engineering
+130 Microservices Engineering
+136 Simulation Engineering
+167 Machine Learning Engineering
+178 Agent Systems Engineering
+182 AI Safety
+183 AI Governance
+189 Cybersecurity Engineering
+219 Legal
+220 Regulatory Compliance
+222 Ethics
+226 Audit
+227 Internal Controls
+231 Software Testing
+235 System Testing
+256 Verification
+257 Validation
+258 Configuration Management
+259 Source Control Management
+260 Dependency Management
+261 Package Management
+262 Artifact Management
+263 Environment Management
+269 DevOps
+272 Platform Engineering
+289 Change Management
+301 Site Reliability Engineering
+303 Runtime Operations
+311 Service Management
+319 Incident Management
+326 Business Continuity
+327 Disaster Recovery
+331 Operational Readiness
+332 Command and Control
+333 Technical Support
+341 Documentation Engineering
+350 Supply Chain Management
+374 Maintenance Engineering
+382 Data Migration Operations
+383 Platform Migration
+388 Version Management
+389 Deprecation Management
+390 Sunset Planning
+405 Lifecycle Governance
+406 System Retirement
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Primary supplied source basis:
+
+- Thirsty's Standard v3 supplies the governing posture of truthful scope, current-state inspection, explicit unknowns, evidence before claims, minimal authorized change, complete work for the declared mode, independent verification, hostile review, continuity, and no fake completion.
+- Thirsty's Agents 101 supplies the unchanged role contracts and governance stack. Its Architect role requires components, interfaces, dependencies, trust boundaries, data, authority, control, evidence, failure, recovery, implementation sequencing, and verification paths. Its Planner, Coordinator, Researcher, Analyst, Tester, Verifier, Governance Reviewer, Security Auditor, Critic, Red Team, User Experience Reviewer, Documentation Writer, Memory Curator, Implementer, Optimizer, Observer, and Decision Arbiter Advisory roles support this section without being rewritten.
+- Thirsty's Owner's Cockpit Standard supplies system-boundary declaration, owner journeys, normative requirements, implementation ownership, evidence methods, vertical slices connecting control to execution and recovery, architecture separation, action state machines, versioned schemas, observability, configuration, reproducibility, resilience, backup and restore, lifecycle verification, change, conformance, and legitimate owner ratification. That source is a candidate for owner ratification and is not silently treated as universal ratified authority.
+- Thirsty's Standard V4 Design Blueprint supplies draft concepts relevant to typed system claims, prerequisite-aware evidence, artifact consistency, role assembly, failure taxonomy, rollback, recovery, dissent, and trusted transition. The source is draft and unratified; it is design input, not claimed runtime authority.
+- Sections 001-019 supply the current Codex working-draft chain from evidence and human purpose through strategy, affected parties, user and domain understanding, feasibility, risk, and the controlled requirements baseline.
+
+Unresolved source gaps:
+
+- The supplied corpus does not contain a complete ratified universal Systems Engineering standard for every software, hardware, aerospace, medical, industrial, infrastructure, defense, automotive, robotic, financial, public-sector, or AI system.
+- This section has not yet been reconciled against all current external Systems Engineering, lifecycle, modeling, configuration, safety, security, reliability, quality, human-factors, acquisition, manufacturing, environmental, and sector-specific standards.
+- The necessary lifecycle model, technical reviews, baselines, document forms, modeling notation, measurement thresholds, assurance independence, certification, and evidence depth must be specialized according to consequence, domain, jurisdiction, owner authority, and system type.
+- Later architecture and specialist engineering sections may expose missing system allocations, interfaces, measures, dependencies, or lifecycle obligations and must be permitted to reopen this section.
+- STATUS remains CONTENT-COMPLETE. This section has not completed full source reconciliation, independent hostile review, owner acceptance, implementation, integration, verification, validation, deployment, or operational verification.

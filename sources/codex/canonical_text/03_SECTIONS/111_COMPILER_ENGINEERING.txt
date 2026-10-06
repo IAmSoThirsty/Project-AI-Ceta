@@ -1,0 +1,99 @@
+SECTION 111 — Compiler Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed construction and evolution of compilers, interpreters, linkers, optimizers, assemblers, and associated tooling that translate source programs into executable or intermediate forms.
+
+REQUIRED OUTCOME
+
+A versioned compiler contract, implementation, target matrix, conformance suite, reproducible build, diagnostics, security model, compatibility statement, and evidence-backed release boundary.
+
+WHY THIS MATTERS
+
+Translation defects can change program meaning, weaken security, corrupt data, or create platform-specific failures. Compiler success is not proof that the source intent or target behavior is correct.
+
+APPLICABILITY
+
+Applies to compiler, interpreter, assembler, linker, optimizer, code generator, transpiler, static analyzer, debugger, build backend, or language-toolchain change.
+
+NON-APPLICABILITY CONDITIONS
+
+Using an unchanged, supported toolchain without changing its behavior or trust boundary is not compiler engineering. Record the consumed version and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires language specification, source and target model, ABI, optimization constraints, threat model, supported platforms, build inputs, conformance tests, licensing, and release authority.
+
+REQUIRED INPUTS
+
+Grammar and semantics, intermediate representation, passes, diagnostics, target architecture, runtime and ABI, optimization invariants, reproducibility needs, test corpus, performance and security limits.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve semantics, optimization risk, target support, security posture, compatibility breaks, release, and retirement; independent qualified review is required for safety or security-sensitive claims.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft passes, tests, diagnostics, documentation, and code review findings. It must not invent language semantics, claim conformance, hide miscompilation, or publish artifacts without human authorization and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Critic, Security Auditor, Optimizer, Documentation Writer, Governance Reviewer, Red Team, and Memory Curator. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish specification, targets, ABI, trust boundary, scope, and non-goals.
+2. Design front end, intermediate representation, passes, back end, diagnostics, and runtime interactions.
+3. Preserve semantic invariants through optimization and code generation.
+4. Build reproducibly and test valid, invalid, adversarial, resource-bound, cross-target, and regression cases.
+5. Record deviations, release evidence, migration, fallback, support, and retirement conditions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Generated compiler code and tests require human review. Show source, specification, toolchain, model or tool identity, and evidence. Keep diagnostic, manual build, rollback, and recovery paths available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate specification, compiler stages, generated code, runtime, binaries, symbols, build inputs, caches, and signing. Record deterministic settings, provenance, sandboxing, resource limits, ABI, compatibility, and artifact promotion.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show compiler version, source hash, target, pass configuration, conformance, diagnostics, security findings, build reproducibility, evidence freshness, approval, and quarantine or rollback controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Compiler specification, architecture, source, test corpus, conformance matrix, reproducible build record, binaries, diagnostics, benchmark, security review, release, compatibility, and retirement artifacts.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, compiler, target, flags, dependencies, environment, corpus, expected and actual output, reviewer, deviations, and limits. Benchmarks and successful compilation do not prove semantic correctness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Differential-test reference and production tools; test optimization invariants, malformed input, undefined behavior, ABI, concurrency, resource exhaustion, security, reproducibility, portability, and migration; reproduce failures independently.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unreviewed optimization, target-specific miscompilation, unsigned binaries, hidden build flags, stale test corpus, unsafe diagnostics, silent ABI break, and treating compiler speed as program correctness.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected versions, preserve source and binaries, notify users, provide a supported prior toolchain or compensation path, and publish impact. Reopen the specification when semantics, targets, or evidence change.
+
+COMPLETION CRITERIA
+
+The declared toolchain is specified, reproducible, tested, reviewed, evidenced, supported, and accepted for exact targets and versions with compatibility and retirement plans.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off specification, source, artifacts, corpus, deviations, evidence, decisions, defects, compatibility, migration, and open gaps to Language, Runtime, Software, Platform, Security, Testing, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+108 Computer Science; 110 Programming Language Engineering; 019 Requirements Engineering; 033 Software Architecture; 044 Runtime Architecture; 045 Security Architecture; 264-268 Build, CI, Delivery, and Deployment; 388-389 Version and Deprecation Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Target-specific conformance levels, compiler standards, ABI commitments, toolchain policy, and licensing remain system-specific gaps.

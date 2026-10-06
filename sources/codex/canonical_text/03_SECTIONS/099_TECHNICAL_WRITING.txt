@@ -1,0 +1,96 @@
+SECTION 099 — Technical Writing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define accurate, task-oriented technical documentation for building, using, operating, troubleshooting, securing, maintaining, and retiring a system.
+
+REQUIRED OUTCOME
+
+ - A declared reader, task, version, environment, prerequisite, authority, format, and lifecycle scope.
+ - Verified documentation with source traceability, examples, warnings, accessibility, localization, and recovery guidance.
+
+WHY THIS MATTERS
+
+Technical documentation can become an operational control. Incorrect or stale instructions can cause outage, unsafe action, data loss, or unsupported commitments.
+
+APPLICABILITY
+
+Applies to developer, API, operator, administrator, user, support, installation, migration, security, and retirement documentation.
+
+NON-APPLICABILITY CONDITIONS
+
+No material instruction, configuration, API, task, safety, security, accessibility, or recovery effect; or an unchanged approved document with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+Implementation and runtime evidence, requirements, interfaces, procedures, versions, users, accessibility, localization, security, support, records, and technical authority.
+
+REQUIRED INPUTS
+
+Implementation and runtime evidence, requirements, interfaces, procedures, versions, users, accessibility, localization, security, support, records, and technical authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve technical truth, warnings, supported scope, risks, publication, and acceptance. Owners retain correction, withdrawal, and escalation authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft, transform, index, and test documentation. It must preserve source, version, environment, commands, and uncertainty and must not invent behavior or claim execution it did not perform.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Technical Writer, Documentation Writer, Researcher, Implementer, Tester, Verifier, Architect, Operations, Security Auditor, Governance Reviewer, Critic, Accessibility specialist, Localization, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Identify readers and tasks; gather authoritative sources; draft procedures and examples; test commands; add warnings and recovery; review accessibility and localization; publish, monitor, correct, and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show document state, version, source, environment, command consequence, authority, uncertainty, and correction route. AI drafts remain untrusted until technical review.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Link docs to versions, APIs, configs, permissions, logs, support, search, localization, accessibility, records, and retirement. Examples must be reproducible or labeled illustrative.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show document owner, version, compatibility, freshness, source, tests, warnings, open issues, and controls to approve, correct, withdraw, supersede, or restore.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Documentation plan, information model, task guides, reference, examples, troubleshooting, security and recovery notes, source and review records, tests, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, artifact, version, environment, reader, method, test result, date, and limitation. A rendered page or grammar review proves bounded quality only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Execute representative commands, verify outputs and permissions, test version compatibility, accessibility, localization, error recovery, security warnings, and independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Stale commands; invented flags; examples that leak secrets; missing prerequisites; no recovery; version ambiguity; inaccessible code blocks; and documentation treated as tested because it renders.
+
+RECOVERY AND RECONSIDERATION
+
+Withdraw unsafe guidance, preserve source and prior version, publish correction, notify affected users, and retest dependent procedures before restoring status.
+
+COMPLETION CRITERIA
+
+Reader, task, version, source, evidence, tests, warnings, recovery, lifecycle, open risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve docs, sources, versions, test outputs, reviews, decisions, corrections, and next action. Hand off to Content, Application, Software, Operations, Security, Support, Localization, and Records.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 030 Information Architecture; 097 Content Design; 101 Localization; 225 Records Management; 341 Documentation Engineering; 283 Systems Administration; 333 Technical Support.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance files. Actual readers, source authority, supported versions, environments, records rules, and acceptance standards remain unresolved.

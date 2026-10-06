@@ -1,0 +1,95 @@
+SECTION 157 — Data Integration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define controlled exchange of data across systems, domains, organizations, and providers while preserving meaning, identity, authority, quality, security, and lifecycle.
+
+REQUIRED OUTCOME
+
+Integration contracts, mappings, transport, timing, ordering, error, retry, reconciliation, lineage, ownership, compatibility, and recovery are explicit.
+
+WHY THIS MATTERS
+
+Integration can create duplicate truth, unauthorized disclosure, silent loss, or incompatible change. Connectivity alone is not semantic or operational success.
+
+APPLICABILITY
+
+Apply when data crosses a system, trust, domain, supplier, jurisdiction, protocol, or lifecycle boundary.
+
+NON-APPLICABILITY CONDITIONS
+
+A bounded change has no material effect on data meaning, contract, access, timing, lineage, quality, or recovery and an exact baseline covers it; record why.
+
+PREREQUISITES AND DEPENDENCIES
+
+Source authority, schemas, mappings, identity, access, protocol, workload, ordering, latency, errors, quality, privacy, security, retention, and owners.
+
+REQUIRED INPUTS
+
+Endpoints, events, files, schemas, mappings, transformations, credentials, volumes, schedules, dependencies, consumers, failure cases, and evidence limits.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The owner approves sources, consumers, contracts, sharing, exceptions, risk, compatibility, and acceptance; assigns integration, data, security, privacy, and operations authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized schemas and exchange evidence, propose mappings, transformations, contract tests, compatibility findings, and failure-handling options, and draft integration records and runbooks. It must preserve source and destination meaning, identity, lineage, access boundaries, uncertainty, and version differences; distinguish delivery from semantic success; and surface conflicts or missing evidence. It must not infer permission or semantic equivalence, publish or transmit data, change contracts, credentials, routing, retries, or replay state, or declare an exchange accepted without human authority. Any integration mutation or consequential replay requires the applicable policy evaluation, capability scope, immutable decision record, human approval, and append-only audit linkage.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Analyst, Researcher, Tester, Verifier, Security Auditor, Governance Reviewer, Observer, Critic, Coordinator, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+Define boundaries and contracts; map and transform data; implement validation, identity, ordering, retry, idempotency, reconciliation, monitoring, quarantine, and recovery; test compatibility and failure.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may propose mappings and analyze authorized exchanges. It must not infer permission, publish data, modify integration, or claim semantic equivalence without human review and evidence.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate transport, contract, mapping, source, destination, identity, authority, lineage, and lifecycle. Design explicit timeouts, retries, deduplication, compensation, and version negotiation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show integration version, endpoints, owners, data classes, lag, failures, retries, reconciliation, authority, evidence, and controls for pause, replay, quarantine, revoke, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Integration catalog, data contracts, mappings, lineage, security model, runbooks, compatibility matrix, test results, evidence, decisions, exceptions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify producer, consumer, contract, version, data window, environment, method, result, actor, and limitation. A successful transfer proves delivery only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify schema, semantics, identity, authorization, ordering, duplicates, retries, partial failure, reconciliation, latency, compatibility, audit, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Point-to-point sprawl, shared credentials, silent coercion, unbounded retry, missing ownership, contract drift, duplicate delivery, and integration that bypasses governance.
+
+RECOVERY AND RECONSIDERATION
+
+Pause affected paths, preserve messages and evidence, quarantine unsafe data, and use approved replay, reconciliation, version fallback, manual exchange, or compensation.
+
+COMPLETION CRITERIA
+
+Contracts, owners, mappings, controls, tests, evidence, gaps, and reopening triggers are recorded; status remains CONTENT-COMPLETE pending later review.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off contracts to API, Event, Data, Application, Security, Privacy, Testing, Operations, Migration, and Retirement sections with exact versions and recovery notes.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 041 Integration Architecture; 042 API Architecture; 043 Event-Driven Architecture; 153 Data Engineering; 156 Data Quality; 158 Data Migration; 307 Data Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on shared governance, the canonical contract, Sections 019-032, and roadmap. Protocol, interoperability, residency, supplier, and sector-specific obligations remain unresolved.

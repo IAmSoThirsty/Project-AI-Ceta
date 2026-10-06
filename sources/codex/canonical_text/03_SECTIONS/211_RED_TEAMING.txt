@@ -1,0 +1,95 @@
+SECTION 211 — Red Teaming
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Conduct authorized, adversary-oriented exercises that test whether people, processes, technology, facilities, and governance detect, resist, contain, communicate, and recover from realistic attack paths.
+
+REQUIRED OUTCOME
+
+A governed red-team exercise with objective, threat scenario, authorization, scope, safety boundaries, independent control, rules, evidence, defender interaction, findings, impact, remediation, lessons, and owner decisions.
+
+WHY THIS MATTERS
+
+Security controls can pass isolated tests while failing as a system. Red teaming exposes assumptions and interactions, but it can also harm people or operations if secrecy, safety, privacy, legal authority, and stop conditions are weak. Exercise success is not proof of total resilience.
+
+APPLICABILITY
+
+Apply when an authorized adversary-emulation exercise can reveal material weaknesses in prevention, detection, response, decision-making, physical security, social process, or recovery.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when the consequence, scope, or authority cannot support a safe exercise and a lower-risk test provides the required evidence, or when no material adversarial path is in scope. Record the alternative and reopening condition.
+
+PREREQUISITES AND DEPENDENCIES
+
+Require executive or accountable-owner authorization, objective and success criteria, independent exercise control, target and exclusion list, rules of engagement, legal and privacy review, safety contacts, emergency stop, data handling, and defender coordination appropriate to the scenario.
+
+REQUIRED INPUTS
+
+Threat model, intelligence, assets, people, environments, objectives, scenarios, constraints, access, test identities, communications, safety limits, evidence plan, response capability, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners authorize objectives, scope, acceptable risk, secrecy, safety, communication, and stop conditions. Exercise control can halt activity. Humans decide whether physical, social, production, or high-impact actions are allowed and how affected people are protected.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may help analyze threats, draft scenarios, review authorized exercise evidence, identify control gaps, and propose safe tests. It must preserve authorization, target, identity, time, and handling boundaries. It must not autonomously conduct intrusion, deception, social engineering, persistence, exfiltration, destructive action, or scope expansion without explicit authorization and human supervision.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Red Team Lead, Security Auditor, Threat Intelligence Analyst, Threat Modeler, Researcher, Architect, Observer, Tester, Verifier, Governance Reviewer, Critic, Coordinator, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define objective and scenario; obtain authority; establish control and safety; map targets and exclusions; prepare communications and stop paths; execute bounded emulation; record observations; protect participants and evidence; deconflict; analyze detection and response; remediate; retest; conduct post-exercise review.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show exercise authority, scenario, target, method, safety state, identity, evidence, and stop control. Require human approval for every escalation into physical, social, production, sensitive-data, or external-party activity. Maintain a reachable controller and immediate stop mechanism.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate exercise control, test identity, target, telemetry, evidence, communication, real incident response, and production authority. Preserve enough defender visibility to evaluate detection and enough safety isolation to prevent uncontrolled harm. Define how exercise artifacts expire and are destroyed.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show authorization, objective, scope, active phase, safety state, contacts, evidence, discoveries, impact, and defender status. Provide authorized pause, stop, narrow, deconflict, escalate, disclose, remediate, and close controls with an immutable timeline.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Exercise charter; authorization and rules; threat scenario; target and exclusion register; safety and communication plan; observation and evidence record; findings; remediation and retest; participant impact; decision, postmortem, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify authority, scenario, target, actor, method, time, environment, observation, source, impact, confidence, and limitation. Protect sensitive exercise details and personal information; do not retain operationally dangerous material beyond the approved need.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorization, scope, emergency stop, participant protection, evidence integrity, deconfliction, detection, response, communication, cleanup, remediation, retest, and owner acceptance. Confirm that exercise results are distinguished from real incidents.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unapproved or indefinite exercise, unclear controller, unsafe secrecy, scope drift, harmful deception, uncontrolled persistence, real data exposure, confusing exercise with incident, and celebrating access without measuring detection or recovery.
+
+RECOVERY AND RECONSIDERATION
+
+Stop and declare an incident path on unexpected impact, exposure, or scope conflict. Preserve evidence, notify the controller and owner, clean up or restore, protect affected people, assess legal and operational consequences, and revise the model and rules before resuming.
+
+COMPLETION CRITERIA
+
+Authority, objective, scenario, scope, safety, evidence, findings, defender behavior, remediation, retest, lessons, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve exercise identity, rules, timeline, findings, evidence references, impact, decisions, remediation, and open gaps with appropriate handling. Hand off to Security Operations, Blue Team, Threat Modeling, Vulnerability, Incident Response, Governance, Testing, and Owners.
+
+RELATED CODEX SECTIONS
+
+018 Risk Management; 206 Security Operations; 207 Threat Intelligence; 208 Threat Modeling; 209 Vulnerability Management; 210 Penetration Testing; 212 Blue Teaming; 214 Incident Response; 402-404 Review and Postmortem.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security operations context, and the integration roadmap. Exact exercise authority, target environments, safety limits, legal and privacy obligations, participant protection, and acceptance evidence remain unresolved.

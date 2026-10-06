@@ -1,0 +1,95 @@
+SECTION 284 — Network Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design, secure, operate, observe, scale, troubleshoot, and recover networks that connect people, devices, services, data, and control boundaries.
+
+REQUIRED OUTCOME
+
+A network model with topology, addressing, identity, segmentation, routes, protocols, trust boundaries, performance, availability, monitoring, change, and recovery ownership.
+
+WHY THIS MATTERS
+
+Networks carry authority and data across boundaries. Misrouting, flat trust, hidden dependencies, provider loss, and inaccurate telemetry can create broad exposure or make recovery impossible.
+
+APPLICABILITY
+
+Apply when network, communication, routing, connectivity, name resolution, load balancing, firewall, wireless, or physical link affects a system or service.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no network boundary, route, protocol, connectivity, trust, or operational behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, identity, security, cloud, edge, server, database, storage, communications, configuration, monitoring, and operations baselines.
+
+REQUIRED INPUTS
+
+Topology, assets, addresses, routes, protocols, identities, zones, policies, dependencies, capacity, latency, telemetry, provider, change, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Network owners approve topology, trust, routes, access, provider, maintenance, outage, exceptions, and recovery. Humans review changes crossing protected boundaries.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized topology, flow, metrics, configurations, and incidents; draft diagrams and tests; and propose diagnosis. It must not change routes, firewall, DNS, access, or capture content without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Network Engineer, Security Auditor, Architect, Cloud Engineer, Systems Administrator, Observer, Tester, Verifier, Analyst, Critic, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Define topology and zones; allocate addressing; secure identity and protocols; configure routing and policy; monitor; capacity-plan; test failure; maintain; troubleshoot; recover; and retire links and devices.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show topology, source, route, zone, identity, action, evidence, privacy boundary, and limitation. Require human approval for firewall, routing, capture, production, and destructive changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use segmentation, least privilege, authenticated management, resilient routing, provider diversity, rate and fault controls, observability, encryption, and out-of-band recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show topology, links, routes, zones, health, capacity, flows, incidents, evidence freshness, owner, and authorized isolate, reroute, restrict, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Network charter and topology; addressing and trust model; routing and policy; capacity and monitoring; change, incident, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify link, device, route, zone, protocol, identity, configuration, method, time, result, actor, and limitation. Reachability proves neither authorization nor end-to-end service behavior.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify segmentation, routing, DNS, protocol, identity, encryption, capacity, latency, monitoring, failover, rollback, isolation, and recovery. Test provider, link, route, and control-plane loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Flat network, implicit trust, shared admin, unmonitored route, firewall change without review, packet capture without privacy authority, and connectivity treated as security or service success.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate, preserve configuration and flow evidence, reroute or fail over, restore known-good policy, rotate credentials, communicate, and reassess data and user impact. Reopen on topology, provider, threat, or service change.
+
+COMPLETION CRITERIA
+
+Topology, zones, routes, identities, policies, capacity, evidence, recovery, owners, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve diagrams, configs, changes, flows, incidents, backups, decisions, evidence, exceptions, and open gaps. Hand off to Cloud, Edge, Servers, Database, Storage, Security, Communications, and Operations.
+
+RELATED CODEX SECTIONS
+
+038-044 Network, Communications, Integration, API, Event, and Runtime Architecture; 277-278 Cloud and Edge; 282-286 Servers, Administration, Database, and Storage; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, network, security, infrastructure, and operations context, and the integration roadmap. Exact topology, providers, zones, protocols, capacity, privacy, recovery, and acceptance authority remain unresolved.

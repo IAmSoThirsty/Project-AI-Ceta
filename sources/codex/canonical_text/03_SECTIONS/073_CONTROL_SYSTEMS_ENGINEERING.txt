@@ -1,0 +1,96 @@
+SECTION 073 — Control Systems Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering of systems that sense, decide, and influence physical or computational processes through feedback, supervision, estimation, actuation, and bounded operating modes.
+
+REQUIRED OUTCOME
+
+ - A scoped plant, controller, sensor, actuator, timing, safety, stability, authority, and lifecycle model.
+ - Traceable control laws, interfaces, simulations, tests, margins, failure modes, recovery, and acceptance evidence.
+
+WHY THIS MATTERS
+
+Feedback errors can amplify, destabilize, or physically harm. Stability in a model does not prove robustness on a noisy, delayed, saturated, changing, or adversarial plant.
+
+APPLICABILITY
+
+Applies to automatic, supervisory, adaptive, robotic, industrial, vehicle, energy, medical, environmental, and software control loops.
+
+NON-APPLICABILITY CONDITIONS
+
+Conceptual equations with no claim about a plant, actuation, stability, safety, or deployed behavior; or an unchanged approved baseline with documented impact analysis. Record scope, baseline, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Plant and actuator specifications, operating modes, requirements, hazards, sensor characteristics, sampling, delays, control objectives, constraints, models, interfaces, test fixtures, and authority.
+
+REQUIRED INPUTS
+
+Plant and actuator specifications, operating modes, requirements, hazards, sensor characteristics, sampling, delays, control objectives, constraints, models, interfaces, test fixtures, and authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Approved outcomes, plant limits, safety and security boundaries, control authority, operating envelopes, release, overrides, emergency stop, and acceptance remain human decisions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may model, simulate, tune proposals, detect drift, and draft tests. It must expose assumptions, model mismatch, uncertainty, and evidence; it must not tune live control, change limits, or command actuation without delegated authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Implementer, Tester, Verifier, Observer, Safety and Security Auditors, Governance Reviewer, Critic, Red Team, Planner, Coordinator, Documentation Writer, Memory Curator, Optimizer, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+Establish plant and loop boundaries; define states, sensors, actuators, sampling, timing, control law, constraints, authority, safe modes, and recovery; analyze stability, robustness, saturation, delay, faults, and uncertainty; simulate and test representative, boundary, degraded, and emergency cases; baseline evidence and obtain approval.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show controller, plant, mode, setpoint, measured state, authority, limits, latency, uncertainty, alarms, override, and stop status. AI recommendations remain proposals; manual and independent safe-stop paths remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate plant, controller, estimator, supervisor, safety monitor, and operator authority. Define sampling, clocks, delays, saturation, anti-windup, state transitions, fail-safe output, watchdog, observability, and controlled model updates.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show loop identity, mode, stability margin, sensor freshness, actuator state, constraints, authority, active tuning, alarms, evidence, and controls to pause, limit, transfer, or stop.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Control requirements and architecture; plant and loop models; control-law and interface contracts; stability and robustness analysis; simulation and test evidence; hazard, fault, recovery, calibration, release, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify plant, controller, model, parameters, hardware, sampling, workload, environment, test method, result, uncertainty, and limitation. Simulation or nominal stability analysis proves only bounded conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify stability, robustness, delay, noise, saturation, sensor loss, actuator limits, mode transitions, disturbances, faults, adversarial input, manual override, emergency stop, recovery, and independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Ignoring delay and saturation; tuning on one scenario; hidden integrator state; unsafe loss of signal; unbounded adaptive behavior; conflating setpoint tracking with safe outcome; and relying on the controller to recover the failed safety monitor.
+
+RECOVERY AND RECONSIDERATION
+
+Enter approved safe mode, limit actuation, preserve telemetry, notify the owner, isolate faulty sensors or actuators, and require human review before resuming. Reassess plant, model, parameters, hazards, evidence, and downstream impact.
+
+COMPLETION CRITERIA
+
+Scope, models, requirements, authority, control behavior, margins, tests, evidence, safe modes, recovery, lifecycle, open risks, and acceptance authority are explicit. Status remains CONTENT-COMPLETE pending reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve model, parameters, hardware, calibration, configurations, tests, incidents, decisions, evidence, and next action. Hand off to Embedded, Robotics, Signal Processing, Safety, Security, Testing, Operations, Maintenance, and Retirement.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 050 Safety Architecture; 059 Embedded Systems Architecture; 069 Embedded Software Engineering; 072 Signal Processing; 074 Robotics Engineering; 132 Real-Time Systems; 252 Safety Testing; 322 Availability Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-072, and owner-control and evidence conventions. Plant class, stability criteria, hazard regime, actuator authority, sampling environment, and regulatory obligations remain unresolved until supplied.

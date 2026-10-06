@@ -1,0 +1,95 @@
+SECTION 066 — Semiconductor Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed engineering of semiconductor devices, process technology, fabrication assumptions, packaging, yield, reliability, security, and lifecycle evidence.
+
+REQUIRED OUTCOME
+
+A traceable device or process baseline with device behavior, process limits, masks or equivalent design artifacts, packaging, test, yield, qualification, supply, and retirement controls.
+
+WHY THIS MATTERS
+
+Small process variation, aging, contamination, defect, or supply change can alter safety, timing, leakage, reliability, and trust while remaining invisible to nominal functional tests.
+
+APPLICABILITY
+
+Applies to integrated circuits, dies, process nodes, memory, sensors, power devices, accelerators, packaging, wafer or device test, and semiconductor supply decisions.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no device, process, packaging, yield, reliability, supply, security, test, or lifecycle property is affected, with baseline and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Functional and electrical requirements, process design rules, device models, packaging, thermal and reliability targets, fab and supplier constraints, security, qualification, and lifecycle plans.
+
+REQUIRED INPUTS
+
+Device intent, masks or layout, process assumptions, libraries, models, tolerances, operating envelope, test structures, packaging, environmental profile, yield targets, provenance, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Qualified human engineers approve process assumptions, critical device behavior, foundry or supplier choices, substitutions, qualification, security, export or compliance constraints, and release. Human owners accept residual risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze models, layouts, yield data, defects, and test results; propose checks; and identify anomalies. It must preserve provenance and units and must not certify silicon, infer yield from small samples, or approve release.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Critic, Security Auditor, Implementer, Tester, Verifier, Red Team, Optimizer, Planner, Coordinator, Observer, Governance Reviewer, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+1. Define device, process, package, environment, criticality, and lifecycle. 2. Capture design rules, models, masks, libraries, and dependencies. 3. Analyze variation, power, timing, thermal, aging, defect, yield, and security cases. 4. Define wafer, package, production, incoming, field, and failure tests. 5. Qualify process and supply changes. 6. Baseline evidence and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI suggestions expose source model, process revision, sample, uncertainty, and alternatives. Human review is required for tape-out, qualification, security, supplier change, and release. Non-AI diagnostic and safe fallback paths remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Control device identity, process revision, package, masks, models, libraries, test data, provenance, configuration, and lifecycle. Changes trigger electrical, computer, firmware, thermal, security, supply, and reliability impact analysis.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show device and process revision, lot, package, qualification, yield, defect, reliability, supply, security, evidence, and authorized quarantine, substitution, recall, or retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Device specification; process and design-rule record; models and libraries; layout or mask set; packaging record; test and yield plan; qualification report; supplier and change register; failure and evidence register.
+
+EVIDENCE REQUIREMENTS
+
+Bind results to lot, wafer or device, process, package, test setup, calibration, workload, environment, sample, method, reviewer, and limitations. Simulation, characterization, qualification, and field evidence remain distinct.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify design rules, electrical behavior, timing, power, thermal, variation, aging, packaging, defect screening, yield, security, environmental qualification, traceability, and controlled change response.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uncontrolled process change; stale models; insufficient sample; hidden lot dependence; yield-only acceptance; counterfeit or opaque supply; ignored aging; and treating simulation or vendor data as field qualification.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected lots or devices, preserve traceability, identify safe scope, and use approved re-test, binning, substitution, recall, redesign, or withdrawal. Reopen after process, foundry, package, defect, security, or evidence change.
+
+COMPLETION CRITERIA
+
+Device, process, package, tests, yield, qualification, supply, reliability, security, evidence, owner, and open gaps are explicit for the declared population and environment.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve masks, models, libraries, lots, package, tests, qualification, deviations, incidents, decisions, evidence, and next action. Hand off to Electronics, Computer, PCB, Hardware Testing, Manufacturing, Security, Supply Chain, and Retirement.
+
+RELATED CODEX SECTIONS
+
+062 Electronics Engineering; 063 Computer Engineering; 067 PCB Design; 188 Human-in-the-Loop Operations; 199 Hardware Security; 203 Cryptography; 232 Hardware Testing; 246 Security Testing; 351 Manufacturing; 354 Hardware Certification.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-065, and the roadmap. Process node, foundry, packaging, qualification, export, supply-chain, security, and owner-acceptance requirements remain unresolved until supplied and verified.

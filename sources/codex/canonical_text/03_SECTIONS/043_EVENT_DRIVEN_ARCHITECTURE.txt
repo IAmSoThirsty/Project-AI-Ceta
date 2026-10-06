@@ -1,0 +1,140 @@
+SECTION 043 — Event-Driven Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define events, producers, consumers, brokers, schemas, ordering, delivery, retention, replay, projection, authorization, and lifecycle for event-driven behavior.
+
+REQUIRED OUTCOME
+
+- An event catalog with meaning, producer, consumer, identity, schema, causality, timing, retention, authority, evidence, and owner.
+- Explicit delivery, duplication, ordering, replay, poison, backpressure, privacy, security, reconciliation, and recovery behavior.
+- Traceability from requirements, processes, applications, data, APIs, distributed systems, operations, tests, and retirement.
+
+WHY THIS MATTERS
+
+Events can trigger work long after their source action and can be replayed, duplicated, delayed, or consumed by unknown parties. Without explicit semantics, a harmless retry can become a repeated external effect or an irreversible disclosure.
+
+APPLICABILITY
+
+- Systems publish or consume events, notifications, streams, commands, projections, or change records.
+- Event meaning, timing, replay, retention, consumer behavior, or delivery affects material outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No event boundary, consumer, schema, replay, retention, authority, or lifecycle effect changes.
+- An approved event baseline covers exact topics and change with no material impact.
+- The artifact is exploratory and not a delivery, ordering, or outcome claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-042 provide requirements, data, APIs, integrations, distributed behavior, security, and operations context.
+- Event, schema, broker, retention, privacy, records, identity, and consumer owners are known or open.
+
+REQUIRED INPUTS
+
+- Event purpose, schema, producer, consumer, identity, causality, ordering, timing, volume, retention, sensitivity, and lifecycle.
+- Delivery, replay, deduplication, poison handling, backpressure, audit, access, migration, testing, and retirement obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Event owners approve event meaning, producers, consumers, data sharing, retention, replay, external effects, and retirement. Domain and data owners approve semantics and use. Humans retain pause, revoke, quarantine, replay, compensate, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect event catalogs and traces, detect schema drift, draft consumers and tests, and analyze bounded streams. It must preserve event identity, causality, and data permission. It must not publish, replay, infer meaning, or trigger external effects without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Planner, Coordinator, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory events, producers, consumers, brokers, schemas, topics, identities, owners, and lifecycle.
+2. Define meaning, causality, ordering, delivery, retention, replay, access, and compatibility.
+3. Model normal, duplicate, delayed, lost, poison, out-of-order, partitioned, replayed, and retired behavior.
+4. Define consumer isolation, idempotency, backpressure, dead-letter, reconciliation, audit, and compensation.
+5. Validate with domain, data, application, integration, security, privacy, operations, and consumer owners.
+6. Test schema evolution, replay, loss, duplication, poison, lag, overload, provider loss, and recovery.
+7. Baseline and hand off catalog, evidence, decisions, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show event, producer, consumer, data, model, tool, authority, replay state, and external effect.
+- Require human review for event meaning, new consumers, sensitive data, replay, and external actions.
+- Preserve status, evidence, quarantine, manual handling, stop, and recovery paths.
+- AI-generated consumers remain proposed until authorized and tested.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate source event, broker record, consumer offset, projection, side effect, replay, dead letter, and evidence.
+- Define event identity, causality, schema, ordering, retention, replay, deduplication, expiry, and access semantics.
+- Enforce privacy, authorization, minimization, audit, and deletion across topics, logs, replicas, caches, and replays.
+- Use append-only history and compensation for external effects.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show event, topic, producer, consumers, schema, lag, retention, sensitivity, authority, evidence, and lifecycle.
+- Expose publish, pause, drain, quarantine, replay, reset, reconcile, compensate, and retire actions.
+- Require approval and show actor, population, external effect, and recovery for consequential actions.
+- Export event history, offsets, traces, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Event catalog, context, schema and ownership records, producer-consumer map, broker and retention model.
+- Delivery, replay, dead-letter, privacy, security, observability, migration, reconciliation, compensation, and retirement designs.
+- Test, evidence, decision, risk, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify event, schema, producer, consumer, topic, time, configuration, method, result, and limitation.
+- Publish, consume, lag, replay, or broker evidence proves only its bounded scope and schedule.
+- Ordering, delivery, duplication, retention, privacy, and recovery evidence identifies workload and coverage.
+- Missing offsets, schema lineage, or consumer evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace an event from source through broker, consumer, projection, side effect, evidence, retention, and retirement.
+- Exercise loss, duplicate, reorder, delay, poison, replay, schema incompatibility, lag, overload, and unauthorized consumption.
+- Verify idempotency, access, retention, deletion, dead-letter, compensation, and audit.
+- Disable broker, producer, consumer, schema, identity, model, and evidence services and verify safe behavior.
+- Reproduce claims from exact event package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating publish or broker acknowledgement as successful outcome.
+- Assuming exactly-once, ordered, complete, or private delivery without bounded evidence.
+- Retaining sensitive events indefinitely or allowing replay to repeat external effects.
+- Hiding unknown consumers, poison queues, lag, dead letters, or schema drift.
+
+RECOVERY AND RECONSIDERATION
+
+- On poison, leakage, schema break, replay error, lag, or evidence failure, pause affected topics or consumers and preserve history.
+- Identify safe consumers, owner, authority, affected records, evidence, and review condition.
+- Use quarantine, drain, replay with fencing, reconciliation, compensation, restore, migration, or retirement.
+- Reopen on event meaning, schema, consumer, retention, policy, provider, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Meaning, producers, consumers, schemas, delivery, replay, retention, authority, evidence, recovery, and lifecycle are explicit.
+- Duplicate, lost, delayed, poison, migration, and retirement paths are addressed or justified.
+- Exact validity and unresolved gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve event identities, schemas, offsets, consumers, replays, decisions, evidence, incidents, dissent, and gaps.
+- Hand off to Integration, API, Data, Distributed, Network, Security, Privacy, Operations, Testing, and Records.
+- Record changes requiring reopening Application, Information, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-042 Requirements through API Architecture; 044 Runtime Architecture; 045-060 Security through Hardware Architecture.
+- 131-145 distributed, real-time, media, and streaming engineering; 153-161 data engineering; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-042, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal event, broker, ordering, retention, replay, or privacy standard is supplied. Actual event catalog, consumers, data agreements, recovery objectives, and acceptance evidence remain unresolved.

@@ -1,0 +1,41 @@
+DRAFTING AND STATUS CONVENTIONS
+
+SECTION STATUS
+
+NOT YET DRAFTED
+The section file and title exist, but substantive requirements have not been authored. This state must never be described as drafted or complete.
+
+DRAFTED
+Substantive content exists, but authoring remains open or material content gaps may remain.
+
+CONTENT-COMPLETE
+All required substantive section content exists for the declared scope and the authoring pass is complete. The section may still be reopened by integration, source reconciliation, hostile review, owner review, or later evidence. CONTENT-COMPLETE does not mean SOURCE-RECONCILED, HOSTILE-REVIEWED, OWNER-ACCEPTED, IMPLEMENTED, TESTED, VERIFIED, READY, RATIFIED, or PUBLISHED.
+
+SOURCE-RECONCILED
+The section has been checked against all applicable supplied source material, its dependencies, and related Codex sections. Conflicts, omissions, and unresolved source gaps remain visible.
+
+HOSTILE-REVIEWED
+The section has undergone structured challenge for omission, contradiction, false claims, unusable requirements, missing recovery, and human-AI control failures.
+
+OWNER-ACCEPTED
+The accountable human owner has accepted the exact section content and artifact identity. No agent may infer this state.
+
+STATUS TRANSITION RULES
+
+- A status transition must name the exact criterion and evidence that permits it.
+- CONTENT-COMPLETE may be assigned only when every required section heading contains substantive content for the declared scope and no authoring placeholder remains.
+- Later integration or evidence may reopen a CONTENT-COMPLETE section without erasing the prior history.
+- SOURCE-RECONCILED, HOSTILE-REVIEWED, and OWNER-ACCEPTED remain separate gates and must not be inferred from authoring completion.
+- A section may be structurally complete while a project applying that section remains unimplemented, untested, unverified, or not ready.
+
+DRAFTING RULES
+
+- Preserve the user's actual objective.
+- State unknowns rather than filling them with invented certainty.
+- Use the existing role definitions rather than rewriting them.
+- Treat every material requirement as needing an evidence method and completion condition.
+- Keep human authority, AI authority, capability, evidence, operational state, and completion state distinct.
+- Prefer the minimum sufficient process, but never omit a material lifecycle obligation.
+- Cross-reference dependencies rather than duplicating entire sections.
+- Do not describe placeholders as implementation.
+- Do not call a section complete because the file exists; verify the section contract and substantive content.

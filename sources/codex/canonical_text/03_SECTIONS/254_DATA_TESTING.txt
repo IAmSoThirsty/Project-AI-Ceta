@@ -1,0 +1,95 @@
+SECTION 254 — Data Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Verify that data is accurate enough for its declared purpose, complete within scope, consistent, timely, traceable, protected, transformed correctly, and recoverable.
+
+REQUIRED OUTCOME
+
+A data-test model with contracts, schema, grain, quality dimensions, samples, lineage, privacy, reconciliation, freshness, failure handling, evidence, and owner acceptance.
+
+WHY THIS MATTERS
+
+Data can be syntactically valid and still be stale, duplicated, biased, incomplete, misjoined, unauthorized, or semantically wrong. Downstream dashboards or models can amplify a small upstream defect.
+
+APPLICABILITY
+
+Apply when data is collected, transformed, stored, exchanged, reported, modeled, archived, deleted, or used to make or support a decision.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no data meaning, quality, lineage, access, retention, transformation, or consumer behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data contracts, information and data architecture, privacy, security, quality, warehouse, lake, model, records, and operations baselines. Identify data owner and quality authority.
+
+REQUIRED INPUTS
+
+Source, schema, grain, definitions, population, lineage, transformations, quality rules, thresholds, samples, privacy, access, freshness, reconciliation, consumers, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Data owners define meaning, quality, criticality, access, retention, and acceptance. Domain owners judge semantic correctness; humans approve quarantines, corrections, deletion, and downstream use.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized metadata and bounded samples, draft quality rules, identify anomalies, and propose reconciliation. It must preserve privacy, source, grain, time, and uncertainty and must not expose raw data, change authoritative values, infer sensitive attributes, or declare quality without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Data Tester, Data Engineer, Data Quality Analyst, Data Architect, Privacy Reviewer, Security Auditor, Analyst, Researcher, Verifier, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define quality and grain; map source and lineage; test schema, completeness, validity, uniqueness, consistency, timeliness, accuracy, reconciliation, privacy, access, transformation, retention, and recovery; quarantine and correct; notify consumers; and retest.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, grain, population, time, rule, sample, result, privacy boundary, owner, and limitation. Require human review for semantic rule, correction, quarantine, deletion, and downstream decision.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support contracts, schema evolution, quality gates, quarantine, lineage, versioned transformations, reconciliation, privacy-preserving fixtures, freshness, rollback, and downstream impact notification.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show data source, grain, quality, freshness, lineage, affected consumers, evidence, incidents, owner, and authorized quarantine, correct, restrict, backfill, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Data-test strategy; contracts and quality rules; source and lineage map; samples and fixtures; results and defect register; quarantine and correction; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, schema, grain, population, time, rule, transformation, sample, method, result, actor, and limitation. Row count, null rate, or passing rule proves only its declared slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify schema, grain, definitions, quality dimensions, lineage, freshness, reconciliation, access, privacy, transformation, correction, backfill, deletion, recovery, and consumer interpretation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Quality rule without meaning, row count as accuracy, hidden filters, stale data accepted, sensitive samples copied, quarantine bypassed, and corrected data without lineage or consumer notice.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected data or outputs, preserve versions, notify consumers, correct or backfill, reconcile, restore, and reassess downstream decisions. Reopen on source, schema, definition, transformation, population, or quality change.
+
+COMPLETION CRITERIA
+
+Source, grain, meaning, quality, lineage, privacy, owners, tests, corrections, evidence, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve data and schema versions, rules, samples, results, quarantine, corrections, decisions, evidence, exceptions, and open gaps. Hand off to Data Engineering, Quality, Warehousing, Analytics, AI, Privacy, Security, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+030-031 Information and Data Architecture; 153-162 Data Engineering, Quality, Warehousing, Lake, and Analytics; 218 Privacy Engineering; 253 Model Testing; 307 Data Operations; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data architecture and quality context, and the integration roadmap. Exact definitions, quality thresholds, source authority, privacy, sample, retention, and acceptance evidence remain unresolved.

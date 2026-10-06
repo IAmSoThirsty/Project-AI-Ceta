@@ -1,0 +1,99 @@
+SECTION 162 — Business Intelligence
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design governed reporting and decision-support experiences that present timely, understandable, accessible, and traceable information without overstating certainty.
+
+REQUIRED OUTCOME
+
+A BI model with audience, decision purpose, metrics, lineage, refresh, permissions, accessibility, explanation, alerts, owner, evidence, and correction paths.
+
+WHY THIS MATTERS
+
+Dashboards influence action while hiding definitions and uncertainty. Visual clarity and a green indicator are not proof of valid decisions.
+
+APPLICABILITY
+
+Apply when reports, dashboards, scorecards, alerts, self-service analytics, or executive views influence material decisions or operations.
+
+NON-APPLICABILITY CONDITIONS
+
+No material metric, audience, decision, data, access, presentation, or alert behavior changes and an exact BI baseline covers the work.
+
+PREREQUISITES AND DEPENDENCIES
+
+Decision purpose, audiences, data, metrics, definitions, refresh, lineage, access, accessibility, thresholds, risk, and acceptance authority.
+
+REQUIRED INPUTS
+
+Reports, queries, metric definitions, filters, audiences, source windows, permissions, refresh results, user research, incidents, evidence, and limitations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The owner approves decisions, metrics, publication, access, thresholds, exceptions, risk, and acceptance; assigns business, data, privacy, security, accessibility, and reporting authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized report definitions, semantic models, lineage, refresh status, accessibility metadata, bounded report data, and alert history; draft summaries, visual alternatives, test cases, and explanations; and identify stale, contradictory, or anomalous presentation signals.
+
+AI must identify the report version, source window, filters, audience, freshness, metric definition, uncertainty, and limitations for every material summary. It must distinguish displayed values from interpretation and interpretation from a recommended decision.
+
+AI must not change metric meaning, hide contrary evidence, suppress or trigger consequential alerts, infer a user's authority, publish or withdraw a report, expose restricted data, or make a business decision without explicit delegation, accessible human review, and recorded acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Analyst, Researcher, Architect, Data Engineer, User Experience Reviewer, Tester, Verifier, Governance Reviewer, Security Auditor, Critic, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define decisions and audiences; establish semantic models; build reports and alerts; validate definitions, accessibility, refresh, permissions, uncertainty, failure, and correction; monitor use and drift.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may summarize authorized reports and propose views, but must cite sources, disclose freshness and uncertainty, and never make the decision, hide contrary evidence, or publish without authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate source, metric, semantic model, visualization, alert, interpretation, and decision. Preserve lineage, filters, permissions, accessibility, snapshots, corrections, and audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show report version, audience, metric definitions, freshness, sources, permissions, alerts, uncertainty, incidents, evidence, and controls to restrict, correct, withdraw, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+BI charter; semantic model; metric and report catalog; audience and accessibility evidence; refresh and alert design; lineage, access, test, decision, evidence, and handoff records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, metric, filter, window, report version, audience, environment, method, result, and limitation. A screenshot proves only what it displayed at that time.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify metric meaning, filters, freshness, permissions, accessibility, alert thresholds, uncertainty, contradictory data, reproducibility, and correction or withdrawal.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Dashboard theater, hidden filters, stale refresh, inaccessible charts, vanity metrics, alert overload, false precision, and conclusions presented without source or limitations.
+
+RECOVERY AND RECONSIDERATION
+
+Withdraw or label affected reports, preserve snapshots and evidence, notify decision makers, and use prior validated views, manual review, corrected data, or restricted publication.
+
+COMPLETION CRITERIA
+
+Purpose, audience, metrics, sources, access, accessibility, refresh, tests, evidence, gaps, and review authority are explicit. Status remains CONTENT-COMPLETE.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off to Analytics, Data Quality, Data Governance, Data Engineering, UX, Accessibility, Security, Testing, Operations, and Records.
+
+RELATED CODEX SECTIONS
+
+030 Information Architecture; 031 Data Architecture; 156 Data Quality; 159-161 Warehouse, Lake, and Analytics Engineering; 163 Data Analysis; 247 Accessibility Testing; 307 Data Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, data and information architecture, and roadmap. Decision authority, reporting law, accessibility standard, and metric definitions remain unresolved.

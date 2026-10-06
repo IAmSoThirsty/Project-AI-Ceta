@@ -1,0 +1,154 @@
+SECTION 107 — Software Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the disciplined creation, modification, verification, delivery, operation, maintenance, and retirement of software within approved requirements, architecture, authority, quality, security, privacy, safety, accessibility, and lifecycle boundaries.
+
+Software Engineering turns authorized intent into maintainable software artifacts and evidence. It covers construction practices and engineering controls, not product ownership, policy authority, or proof that deployed software is effective.
+
+REQUIRED OUTCOME
+
+- A bounded software scope, quality model, lifecycle, ownership, and engineering plan.
+- Traceable requirements, design, source, dependencies, configuration, builds, tests, releases, runtime evidence, defects, and retirement records.
+- Reproducible development and build conditions with review, secure supply chain, accessibility, observability, and recovery controls.
+- Explicit treatment of human, AI-assisted, generated, third-party, and machine-produced code.
+- Verification evidence that distinguishes code inspection, test results, build success, deployment, and user or operational acceptance.
+
+WHY THIS MATTERS
+
+Software is executable authority. A small change can alter data, security, user rights, service continuity, safety, cost, or auditability. Engineering controls make intent, change, provenance, defects, and recovery visible across the full software lifecycle.
+
+AI-assisted development increases throughput but also increases the need for attribution, review, dependency scrutiny, test depth, and clear boundaries on generated code. A passing build is not evidence of correctness or authorization.
+
+APPLICABILITY
+
+- Software is designed, coded, configured, generated, integrated, tested, released, operated, maintained, migrated, or retired.
+- A change affects behavior, interfaces, data, permissions, performance, reliability, accessibility, security, privacy, safety, or evidence.
+- Source, dependencies, build tools, models, generated artifacts, or external services create supply-chain or reproducibility concerns.
+- The work requires controlled collaboration, code review, branching, release, rollback, maintenance, or defect management.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work is a read-only inspection or explanatory note with no alteration to software, configuration, dependency, evidence, or lifecycle state.
+- An approved engineering baseline covers the exact artifact, version, environment, and change, and impact analysis finds no material effect.
+- A prototype is explicitly isolated, non-production, and not represented as verified, secure, supported, or deployable.
+
+The record must state the baseline, scope, owner, evidence date, limitations, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Requirements, functional and operational architecture, security, privacy, safety, accessibility, reliability, and risk constraints are available or marked unresolved.
+- Source-control, build, dependency, artifact, environment, test, release, and incident ownership is assigned.
+- The target runtime, support horizon, licensing obligations, data boundary, and acceptance authority are known.
+
+REQUIRED INPUTS
+
+- Approved requirements, interfaces, architecture, constraints, risks, acceptance criteria, and change request.
+- Source tree, build instructions, dependency manifests and locks, toolchain versions, environment definitions, and artifact locations.
+- Test strategy, quality thresholds, threat model, accessibility requirements, observability needs, release plan, support model, and recovery objectives.
+- Existing defects, incidents, compatibility commitments, user research, operational evidence, and known assumptions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable human owner approves scope, priorities, risk, quality thresholds, technology choices, exceptions, release readiness, support commitments, and retirement. Humans must review material design and code changes, approve security and privacy consequences, and accept only the exact version and evidence examined.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may explain code, draft implementation, generate tests, identify defects, propose refactors, summarize changes, and analyze build or runtime evidence within an explicit assignment. It must identify generated or inferred content, preserve source context, expose uncertainty, and stop when requirements, authority, security, privacy, safety, or evidence are unclear. AI must not merge, release, alter protected environments, accept risk, invent dependencies, or treat generated code, test passage, or build success as acceptance without delegated authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Planner, Implementer, Refactorer, Tester, Verifier, Critic, Security Auditor, Governance Reviewer, Documentation Writer, Memory Curator, Coordinator, Optimizer, Red Team, and User Experience Reviewer.
+
+Role selection is proportional to consequence; existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish scope, baseline, owners, environments, lifecycle, quality attributes, and non-goals.
+2. Inspect requirements, architecture, interfaces, data, risks, controls, and acceptance conditions.
+3. Design maintainable modules, contracts, error behavior, state, observability, security, accessibility, and recovery.
+4. Plan source control, review, branching, dependency pinning, build reproducibility, artifact promotion, and release evidence.
+5. Implement with tests, documentation, secure defaults, input validation, least privilege, and explicit failure handling.
+6. Review human-written, AI-generated, copied, generated, and third-party code for correctness, license, security, quality, and provenance.
+7. Run proportionate unit, integration, system, performance, security, accessibility, compatibility, and recovery verification.
+8. Record defects, deviations, assumptions, waivers, evidence, and unresolved risks; never silently lower the acceptance bar.
+9. Package, release, monitor, support, patch, migrate, deprecate, and retire through approved lifecycle controls.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show whether an artifact is authored, generated, transformed, copied, reviewed, tested, released, or verified.
+- Preserve prompts or generation context where policy permits, tool and model identity, reviewer identity, and resulting diff.
+- Require human review for security, privacy, safety, accessibility, data, authorization, external side effects, and release changes.
+- Keep manual review, stop, rollback, diagnosis, evidence, and recovery paths available when AI tools fail.
+- Do not let conversational convenience bypass code review, change control, provenance, or release authorization.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Keep source, configuration, generated code, dependencies, build outputs, deployment manifests, and runtime state distinct and versioned.
+- Define module and interface contracts with identity, schema, compatibility, errors, timing, authorization, observability, and ownership.
+- Make builds reproducible or record every unavoidable variance and its impact.
+- Treat dependencies, compilers, package registries, models, prompts, tools, and credentials as governed supply-chain inputs.
+- Design idempotent migration, safe rollout, rollback or compensation, feature isolation, graceful degradation, and retirement paths.
+- Preserve traceability from requirement through commit, artifact, release, runtime observation, defect, and retirement.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show repository, baseline, commit, build, dependency, environment, release, test, risk, and evidence status.
+- Expose changed files, affected requirements, reviewers, generated-code markers, findings, approvals, and invalidated evidence.
+- Provide authorized controls to review, approve, reject, pause, quarantine, promote, rollback, restore, supersede, and retire.
+- Distinguish build success, test success, deployment, runtime health, user acceptance, and operational effectiveness.
+- Export the exact source, metadata, evidence, decisions, dissent, and handoff record.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Software engineering plan, baseline, design, source, dependency, configuration, and build records.
+- Reviewed changes, traceability, test plans and results, defect and risk registers, security and license findings.
+- Reproducible build and artifact manifests, release package, deployment and rollback instructions, support and retirement records.
+- AI-assistance provenance and human-review record where applicable.
+
+EVIDENCE REQUIREMENTS
+
+- Each claim identifies artifact, version, environment, method, actor, date, result, limitations, and exact scope.
+- Build, test, review, scan, deployment, runtime, user, and operational evidence remain distinct.
+- Dependency and generated-code evidence identifies source, version, license, tool or model, configuration, reviewer, and unresolved risk.
+- Failed, stale, partial, contradictory, and missing evidence constrains status and remains visible.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Reproduce a clean build from the declared source and dependency inputs.
+- Trace requirements to design, code, tests, artifact, release, runtime evidence, and acceptance.
+- Introduce malformed input, unauthorized access, dependency failure, partial deployment, stale configuration, and unavailable build services; verify safe behavior.
+- Compare AI-generated and human-authored changes under the same review, test, security, license, and release controls.
+- Verify rollback or compensation, migration, observability, accessibility, support, and retirement procedures with recorded results.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating compilation, code coverage, a green pipeline, or deployment as proof of outcome.
+- Merging unreviewed generated code, floating dependencies, unverifiable binaries, or undocumented environment changes.
+- Hiding defects, accessibility failures, security findings, license conflicts, or operational burden.
+- Using rollback to erase evidence or reverse external effects without a compensation record.
+
+RECOVERY AND RECONSIDERATION
+
+Stop affected promotion on material uncertainty, failed controls, unsafe behavior, provenance loss, or invalid evidence. Preserve source, artifacts, logs, decisions, and user impact. Use approved isolation, rollback, restore, hotfix, substitution, or compensation; reassess requirements and reopen the baseline when assumptions or dependencies change.
+
+COMPLETION CRITERIA
+
+Scope, ownership, design, source, dependencies, build, review, tests, evidence, release, support, recovery, and retirement are explicit. Material findings are resolved, accepted by authorized humans, or recorded as blockers. This draft is not proof of implementation or production readiness.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baseline, commit, artifact, dependency, environment, decisions, evidence, dissent, defects, open risks, and next safe action. Hand off to Application, Software, Platform, Build, Testing, Security, Operations, Maintenance, and Retirement sections. Record conditions that require reopening.
+
+RELATED CODEX SECTIONS
+
+- 019 Requirements Engineering; 020 Systems Engineering; 027 Process Architecture; 028 Functional Architecture; 029 Operational Architecture.
+- 033-044 Software through Runtime Architecture; 045-053 Security through Accessibility Architecture.
+- 231-270 Testing, Build, CI, Delivery, DevSecOps; 301-406 Operations, Maintenance, Governance, and Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-032, Owner Cockpit Requirements, Status and Evidence Lexicon, and lifecycle conventions.
+- Sector-specific engineering standards, language policies, licensing rules, toolchain constraints, support commitments, and acceptance thresholds remain unresolved until supplied for the actual system.

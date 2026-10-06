@@ -1,0 +1,98 @@
+SECTION 155 — Data Governance
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern the purpose, ownership, authority, access, quality, sharing, retention, correction, and retirement of data across its lifecycle.
+
+REQUIRED OUTCOME
+
+A data-governance operating model with accountable owners, classifications, policies, decision rights, exceptions, evidence, review cadence, and enforcement paths.
+
+WHY THIS MATTERS
+
+Data governance determines who may use data and why. Unowned classification, undocumented purpose, or unenforced policy converts technical convenience into unauthorized consequence.
+
+APPLICABILITY
+
+Apply whenever data affects rights, decisions, safety, privacy, security, compliance, service, finance, models, records, or material operations.
+
+NON-APPLICABILITY CONDITIONS
+
+A bounded non-material change has no effect on purpose, ownership, access, classification, quality, retention, sharing, or lifecycle; record the exact baseline and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Authority, purpose, data inventory, owners, subjects, classifications, jurisdictions, policies, contracts, retention, access, quality, risk, and acceptance rules.
+
+REQUIRED INPUTS
+
+Data domains, purposes, lawful or organizational basis, owners, custodians, consumers, classifications, access roles, decisions, exceptions, incidents, evidence, and unknowns.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner appoints data owners and stewards, resolves conflicting rights and purposes, approves policy, exceptions, sharing, retention, deletion, risk, and acceptance. Authority is not inferred from technical access.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory authorized data, compare governance sources, identify missing ownership or control evidence, and draft classifications, policies, registers, decision records, and review questions. It must preserve provenance and uncertainty, distinguish recommendation from authorization, and use only approved sources. It must not infer lawful basis, ownership, consent, access rights, retention authority, or policy exceptions; approve sharing or access; alter authoritative records or controls; or conceal conflicts, dissent, or unresolved gaps. Any governance mutation or consequential recommendation requires the applicable policy evaluation, capability scope, immutable decision record, human authority, and append-only audit linkage before execution or acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Governance Reviewer, Architect, Researcher, Analyst, Security Auditor, Verifier, Tester, Documentation Writer, Memory Curator, Critic, User Experience Reviewer, Implementer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory data and assign ownership, purpose, classification, and lifecycle.
+2. Define policy, access, quality, sharing, retention, correction, deletion, exception, and escalation rules.
+3. Bind rules to systems, contracts, evidence, monitoring, reviews, and enforcement points.
+4. Review changes and incidents; record decisions, dissent, evidence, and reopening conditions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may inventory, compare, and draft governance artifacts from authorized sources. It must not infer lawful basis, approve access, classify sensitive data conclusively, waive policy, or conceal uncertainty.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent policies, owners, classifications, permissions, decisions, exceptions, evidence, expiries, and supersession as immutable attributable records with enforceable controls and append-only audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show purpose, owner, classification, authority, policy status, expiry, consumers, exceptions, evidence, and controls to approve, deny, restrict, revoke, quarantine, correct, retain, or delete.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Governance charter; data inventory; ownership and classification register; policy and decision records; access and exception register; retention and deletion records; audit, evidence, review, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Each decision identifies authority, scope, version, purpose, subjects, policy, evidence, date, expiry, dissent, and limitation. A policy document alone does not prove enforcement.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify ownership, purpose, classification, access, policy enforcement, exception expiry, audit integrity, subject rights, retention, deletion, and independent decision reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Implied consent, ownerless data, blanket access, policy without enforcement, permanent exceptions, hidden secondary use, mutable audit, and treating a dashboard or attestation as compliance proof.
+
+RECOVERY AND RECONSIDERATION
+
+Suspend affected use on authority, classification, policy, access, or evidence conflict. Preserve records; use restriction, quarantine, human adjudication, correction, revocation, or compensation, then review downstream effects.
+
+COMPLETION CRITERIA
+
+Scope, authority, owners, policies, controls, evidence, decisions, exceptions, review, gaps, and next action are recorded. Status remains CONTENT-COMPLETE pending reconciliation and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off enforceable rules and records to Data, Security, Privacy, Legal, Records, Application, Testing, Operations, AI Governance, and Retirement sections with reopening triggers.
+
+RELATED CODEX SECTIONS
+
+016 Domain Analysis; 019 Requirements Engineering; 030-031 Information and Data Architecture; 045-049 Security through Compliance Architecture; 155-158 data governance and migration; 183 AI Governance; 391-406 lifecycle governance and retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on shared governance, the canonical contract, Sections 016 and 019-032, Owner Cockpit Requirements, and roadmap. Jurisdictional law, sector rules, roles, lawful bases, and enforcement technology remain unresolved.

@@ -1,0 +1,139 @@
+SECTION 041 — Integration Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how applications, services, data, devices, organizations, and providers cooperate through governed interfaces, mappings, orchestration, synchronization, and failure handling.
+
+REQUIRED OUTCOME
+
+- An integration landscape with participants, ownership, trust, contracts, data, protocols, transformations, timing, dependencies, and lifecycle.
+- Explicit delivery, error, retry, compensation, reconciliation, observability, security, privacy, and recovery behavior.
+- Traceability from requirements, processes, functions, applications, data, network, APIs, events, tests, operations, and retirement.
+
+WHY THIS MATTERS
+
+Integration turns local behavior into cross-boundary consequence. A successful connection can still corrupt meaning, duplicate effects, leak data, or leave an unreconciled partial result.
+
+APPLICABILITY
+
+- Two or more bounded systems, services, domains, organizations, devices, or providers exchange data, commands, events, or decisions.
+- Mapping, orchestration, synchronization, identity, timing, or failure affects material outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material cross-boundary exchange, contract, transformation, authority, or lifecycle effect changes.
+- An approved integration baseline covers exact participants and change with no material impact.
+- The artifact is exploratory and not an interoperability, delivery, or data-quality claim.
+
+Record baseline, scope, owners, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-040 provide requirements, applications, data, networks, communication, distributed behavior, security, and operations context.
+- Participant, data, identity, contract, provider, records, privacy, and recovery authorities are known or open.
+
+REQUIRED INPUTS
+
+- Participants, data, commands, events, schemas, mappings, protocols, identity, authority, timing, delivery, error, volume, and lifecycle needs.
+- Contracts, access, transformation, reconciliation, observability, migration, testing, support, and retirement obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Integration owners approve participants, purpose, data sharing, mappings, external effects, service commitments, exceptions, and change. Domain and data owners retain authority over meaning and use. Humans retain stop, quarantine, reconcile, compensate, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare schemas, draft mappings, identify incompatibility, analyze traces, and propose tests. It must preserve source and target meaning, versions, permissions, and uncertainty. It must not approve mappings, transfer restricted data, issue external commands, or declare reconciliation without authority and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Implementer, Planner, Coordinator, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory participants, owners, flows, contracts, data, identities, providers, and failure domains.
+2. Define purpose, authority, schema, mappings, transformations, timing, delivery, idempotency, and compatibility.
+3. Model normal, delayed, duplicate, partial, incompatible, unauthorized, degraded, migration, and retirement paths.
+4. Define reconciliation, compensation, evidence, audit, privacy, security, and operational controls.
+5. Validate with domain, data, application, security, privacy, operations, and supplier owners.
+6. Test failures, retries, replay, corruption, drift, provider loss, and recovery.
+7. Baseline the integration and hand off open decisions and evidence limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show source, target, actor, data, command, model, provider, authority, and external effect for each consequential exchange.
+- Require human review for new data sharing, mappings, transformations, commands, or irreversible effects.
+- Preserve manual status, evidence, quarantine, correction, and recovery paths.
+- Do not let AI-generated mapping or orchestration become binding without approval.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate source, transformed, mapped, delivered, acknowledged, reconciled, compensated, and evidence states.
+- Define identity, schema, version, ordering, delivery, retry, deduplication, timeout, and compensation contracts.
+- Enforce privacy, authorization, minimization, audit, validation, and rate controls at integration boundaries.
+- Preserve append-only evidence and durable recovery independent of the failed participant where feasible.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show participants, flows, versions, status, lag, errors, data scope, authority, evidence, and lifecycle.
+- Expose send, pause, retry, quarantine, reconcile, compensate, restore, and retire actions with actor and impact.
+- Permit authorized stop, revoke, narrow, and recovery actions.
+- Export contracts, mappings, traces, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Integration context, participant and flow catalog, contract and mapping records, identity and trust model.
+- Error, retry, reconciliation, compensation, observability, security, privacy, migration, support, and retirement designs.
+- Test, evidence, decision, risk, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify source, target, contract version, data, environment, timing, method, actor, result, and limitation.
+- Connection, sample transfer, schema match, acknowledgement, or dashboard proves only its bounded claim.
+- Reconciliation evidence identifies population, rules, exceptions, duplicates, missing records, and validity.
+- Failed, partial, stale, contradictory, or missing evidence constrains integration status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace a representative cross-boundary outcome through mapping, transfer, processing, acknowledgement, reconciliation, and record.
+- Exercise duplicate, lost, delayed, reordered, malformed, unauthorized, stale, partial, incompatible, and replayed exchanges.
+- Verify access, minimization, audit, idempotency, compensation, quarantine, and recovery.
+- Disable each participant, provider, network, schema registry, credential, and evidence path and verify safe behavior.
+- Reproduce claims from exact contracts and evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating connectivity or acknowledgement as successful integration or correct outcome.
+- Hiding transformations, shared credentials, manual reconciliation, provider dependencies, or partial effects.
+- Allowing retries to duplicate external consequences or AI to infer mapping authority.
+
+RECOVERY AND RECONSIDERATION
+
+- On mismatch, leakage, corruption, duplicate effect, participant loss, or evidence failure, pause affected exchange and preserve records.
+- Identify safe continuation, owners, authority, affected data, evidence, communication, and review condition.
+- Use approved quarantine, replay, reconciliation, compensation, restore, fallback, migration, or retirement.
+- Reopen on participant, contract, data, policy, provider, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Participants, purpose, contracts, mappings, authority, controls, evidence, failure, recovery, and lifecycle are explicit.
+- Partial, incompatible, delayed, duplicate, migration, and retirement behavior is addressed or justified.
+- Exact validity and unresolved gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve participants, contracts, mappings, versions, traces, decisions, evidence, dissent, incidents, and gaps.
+- Hand off to API, Event, Data, Network, Security, Privacy, Operations, Testing, Migration, and Retirement.
+- Record changes requiring reopening Application, Distributed, Information, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-040 Requirements through Communications Architecture; 042-044 API through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 128-131 API, integration, and distributed engineering; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-040, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal integration, interchange, data contract, supplier, or reconciliation standard is supplied. Actual participants, mappings, authority, data agreements, and acceptance evidence remain unresolved.

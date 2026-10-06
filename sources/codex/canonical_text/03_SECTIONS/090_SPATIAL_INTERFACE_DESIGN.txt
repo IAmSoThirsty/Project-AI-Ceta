@@ -1,0 +1,96 @@
+SECTION 090 — Spatial Interface Design
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define interaction in physical or three-dimensional space, including placement, scale, orientation, movement, embodiment, context, and safety.
+
+REQUIRED OUTCOME
+
+ - Scoped space, users, devices, environment, tasks, tracking, content, accessibility, privacy, and lifecycle.
+ - Spatial behavior, anchors, controls, evidence, tests, safety, and recovery records.
+
+WHY THIS MATTERS
+
+Spatial interfaces affect orientation, attention, physical movement, and shared environments. Immersion or novelty does not prove comprehension or safety.
+
+APPLICABILITY
+
+Applies to 3D interfaces, room-scale systems, tangible interaction, spatial audio, robotics interfaces, and mixed physical-digital environments.
+
+NON-APPLICABILITY CONDITIONS
+
+No spatial placement, tracking, movement, safety, accessibility, privacy, or user-control effect; or an unchanged approved spatial baseline with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+User and environment research, device and tracking limits, task model, physical safety, accessibility, content, privacy, identity, performance, and acceptance authority.
+
+REQUIRED INPUTS
+
+User and environment research, device and tracking limits, task model, physical safety, accessibility, content, privacy, identity, performance, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve spatial purpose, safety zones, representation, accessibility, privacy, and acceptance. They retain stop, physical override, and incident authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose spatial layouts or analyze tracking. It must expose uncertainty and environmental limits and must not place content or command physical action without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Spatial Designer, UX and Interaction Designers, Architect, Researcher, Robotics and Safety specialists, Accessibility specialist, Tester, Verifier, Critic, Governance Reviewer, Implementer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define space, anchors, scale, orientation, gestures, devices, environment, shared ownership, accessibility, privacy, performance, safety, failure, and recovery; prototype and test in representative spaces.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show spatial state, tracking confidence, actor, boundaries, automation, consequence, privacy, and safe exit. AI placements remain proposals and physical stop paths remain independent.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Define coordinate frames, anchors, occlusion, latency, calibration, collision and boundary handling, shared space, identity, data, accessibility, and degraded tracking behavior.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show space, device, user, tracking, boundaries, hazards, evidence, and controls to pause, clear, recalibrate, exit, stop, or recover.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Spatial model, interaction specification, environment and safety map, tracking and calibration record, prototypes, accessibility tests, evidence, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify space, device, tracking, calibration, user, task, version, method, result, and limitation. A virtual demo proves bounded behavior only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify tracking loss, latency, scale, accessibility, shared space, privacy, collision boundaries, fatigue, motion sensitivity, calibration, interruption, and safe exit.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Ignoring physical context; stale anchors; inaccessible gestures; hidden boundaries; tracking confidence treated as truth; and immersion that prevents stop or orientation.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or remove spatial content, provide visual or non-spatial fallback, preserve state and evidence, recalibrate or isolate equipment, and retest the environment.
+
+COMPLETION CRITERIA
+
+Space, tasks, devices, tracking, safety, accessibility, evidence, tests, recovery, open risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve maps, anchors, calibration, versions, findings, decisions, evidence, incidents, and next action. Hand off to AR, VR, XR, Robotics, HCI, Accessibility, Safety, and Testing.
+
+RELATED CODEX SECTIONS
+
+074 Robotics Engineering; 075 HCI; 090 Spatial Interface Design; 091 AR Design; 092 VR Design; 093 XR Design; 103 Accessibility Design; 247 Accessibility Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance files. Actual spaces, devices, tracking, physical hazards, populations, privacy, and accessibility thresholds remain unresolved.

@@ -1,0 +1,96 @@
+SECTION 089 — Conversational Design
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define dialogue, turn-taking, intent, context, repair, escalation, and conversational content for systems that interact through language.
+
+REQUIRED OUTCOME
+
+ - Scoped participants, goals, channels, languages, authority, privacy, states, fallback, and lifecycle.
+ - Dialogue models, content, evidence, tests, controls, and acceptance criteria.
+
+WHY THIS MATTERS
+
+Conversation can create false trust and hide system limits. A fluent response is not understanding, authorization, or a successful outcome.
+
+APPLICABILITY
+
+Applies to chat, assistants, agents, messaging, support, voice transcripts, and mixed human-machine dialogue.
+
+NON-APPLICABILITY CONDITIONS
+
+No material dialogue, intent, disclosure, action, accessibility, privacy, or recovery effect; or an unchanged approved dialogue baseline with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+User research, tasks, domain language, policies, content, models, tools, identity, permissions, privacy, safety, escalation, and acceptance authority.
+
+REQUIRED INPUTS
+
+User research, tasks, domain language, policies, content, models, tools, identity, permissions, privacy, safety, escalation, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve goals, persona, disclosure, authority, tone, safety, privacy, escalation, and acceptance. They retain correction, stop, appeal, and human-support authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft dialogue and analyze transcripts. It must preserve context, uncertainty, consent, and provenance and must not invent policy, claim understanding, or execute beyond authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Conversational Designer, Voice Interface Designer, UX Reviewer, Researcher, Content Designer, Security and Privacy Auditors, Governance Reviewer, Tester, Verifier, Critic, Implementer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Model goals, turns, intents, context, confirmation, ambiguity, repair, error, handoff, privacy, language, accessibility, tool use, and recovery; prototype and test representative and adversarial conversations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show speaker, context, intent, confidence, tool, authority, consequence, recording, and recovery. AI-generated responses remain provisional; users can correct, exit, and reach humans.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate dialogue state, policy, retrieval, generation, tool execution, identity, audit, and human handoff. Enforce authority outside language interpretation and preserve terminal state.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show conversation identity, state, speaker, tool calls, permissions, evidence, uncertainty, open failures, and controls to stop, clear, correct, escalate, or recover.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Dialogue map, intents, prompts, content rules, state model, escalation paths, privacy and authority model, test transcripts, evidence, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify speaker, context, language, model, prompt, tools, version, transcript, method, result, uncertainty, and limitation. A successful chat is bounded evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify ambiguity, refusal, prompt injection, privacy, identity, permissions, tool errors, long turns, context loss, accessibility, localization, handoff, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Anthropomorphic claims; endless loops; hidden tool actions; no exit; invented sources or policy; confident ambiguity; recording without control; and treating engagement as resolution.
+
+RECOVERY AND RECONSIDERATION
+
+Stop tool actions, preserve transcript and audit, revoke access, provide human or nonconversational fallback, and reassess affected users before resuming.
+
+COMPLETION CRITERIA
+
+Goals, participants, states, authority, content, evidence, tests, fallback, recovery, open risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending review and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve dialogue versions, prompts, transcripts, tool and policy identities, decisions, evidence, incidents, and next action. Hand off to Voice, AI, Prompt, Security, Privacy, Content, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+075 HCI; 088 Voice Interface Design; 097 Content Design; 178 Agent Systems Engineering; 186 Prompt Engineering; 188 Human-in-the-Loop Operations; 182 AI Safety; 249 Usability Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance files. Actual audiences, languages, models, tools, authority, privacy, escalation, and acceptance thresholds remain unresolved.

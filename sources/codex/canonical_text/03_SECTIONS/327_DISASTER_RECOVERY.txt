@@ -1,0 +1,95 @@
+SECTION 327 — Disaster Recovery
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Restore essential systems, data, services, and control after a disaster or major loss of site, provider, infrastructure, people, or trust.
+
+REQUIRED OUTCOME
+
+A disaster-recovery model with scenarios, priorities, recovery time and data objectives, dependencies, runbooks, authority, alternate environment, evidence, testing, and return to service.
+
+WHY THIS MATTERS
+
+Disaster recovery is an operational claim that must survive real dependency and authority loss. A backup or plan without a tested restore, staffing, access, or reconciliation path is not recovery capability.
+
+APPLICABILITY
+
+Apply when loss or unavailability of a system, facility, region, provider, data, identity, or operational capability could materially affect essential outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no disaster scenario, essential service, data, dependency, or recovery claim is material and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use continuity, backup, restore, failover, service, data, identity, security, facilities, supplier, communication, and operational readiness baselines.
+
+REQUIRED INPUTS
+
+Disaster scenarios, services, priorities, RTO, RPO, dependencies, alternate site, data, access, runbooks, staff, communication, exercises, and acceptance.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Recovery owners and commanders approve declaration, priority, failover, data loss, communication, resource, and return-to-service. Humans accept residual impact and legal duties.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may map dependencies, draft recovery steps, analyze exercise evidence, and identify gaps. It must not declare disaster, fail over, restore, overwrite data, or communicate emergency status without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Disaster Recovery Planner, Incident Commander, Operations Engineer, SRE, Data Engineer, Security Auditor, Continuity Planner, Tester, Verifier, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+Define scenarios and priorities; establish RTO/RPO; map dependencies; prepare alternate environment and access; back up; exercise; declare; recover; reconcile; communicate; return; and improve.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show scenario, priority, service, data, authority, RTO/RPO, action, evidence, and limitation. Require human approval for declaration, failover, restore, data loss, communication, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use alternate control path, independent credentials, replicated data, immutable backups, infrastructure rebuild, dependency substitution, reconciliation, staged return, and evidence preservation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show disaster mode, service priority, recovery phase, data point, dependencies, owner, evidence freshness, and authorized declare, prioritize, fail over, restore, communicate, and return controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+DR charter; scenario and priority map; RTO/RPO; recovery architecture and runbooks; exercise results; data reconciliation; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify scenario, service, version, backup, restore, data point, time, authority, method, result, impact, and limitation. A tabletop or backup list proves only planning or inventory.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise declaration, access, alternate environment, backup, restore, dependencies, data loss, reconciliation, communication, staffing, security, and return. Record actual RTO/RPO and gaps.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Recovery dependent on failed system, backup not restored, credentials unavailable, data reconciliation omitted, priority unclear, tabletop only, and recovery success declared before user outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Protect people and essential service, preserve evidence, recover by priority, reconcile, communicate, monitor, and reassess residual impact. Reopen on scenario, dependency, data, provider, or objective change.
+
+COMPLETION CRITERIA
+
+Scenarios, priorities, dependencies, RTO/RPO, access, data, runbooks, evidence, exercises, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve DR plans, backups, exercises, access, recoveries, decisions, communications, evidence, exceptions, and open gaps. Hand off to Continuity, Backup, Restore, Failover, Security, Data, and Operations.
+
+RELATED CODEX SECTIONS
+
+326 Business Continuity; 328-330 Backup, Restore, and Failover; 331 Operational Readiness; 005 Continuity and Recovery; 301 SRE; 319 Incident.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, disaster, continuity, data, security, and operations context, and the integration roadmap. Exact scenarios, services, RTO/RPO, alternate sites, staffing, dependencies, and acceptance authority remain unresolved.

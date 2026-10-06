@@ -1,0 +1,95 @@
+SECTION 381 — Dependency Updates
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Update direct and transitive dependencies to maintain security, compatibility, support, license, performance, and functionality with controlled evidence and rollback.
+
+REQUIRED OUTCOME
+
+A dependency-update model with graph, current and target version, reason, advisory, license, compatibility, test, rollout, artifact, owner, and recovery.
+
+WHY THIS MATTERS
+
+Dependency updates can change APIs, licenses, performance, transitive behavior, and supply-chain trust. Automated update volume can hide important semantic or security change.
+
+APPLICABILITY
+
+Apply when a package, library, provider, image, model, module, API, or external component is updated.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no dependency version, source, behavior, license, vulnerability, or support condition changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use dependency, package, vulnerability, license, source, build, compatibility, testing, release, and operations baselines.
+
+REQUIRED INPUTS
+
+Graph, current and target version, reason, advisory, license, source, compatibility, tests, artifact, rollout, rollback, and owner.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve update reason, version, license, security, compatibility, rollout, exception, and rollback. Humans review transitive and customer impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized graph and advisories, draft update, test, and release notes, and identify impact. It must not install, merge, approve, or claim safe update without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Dependency Manager, Security Auditor, Build Engineer, Tester, Verifier, License Analyst, Release Engineer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory; identify reason and scope; review advisory and license; update; resolve; build; test; scan; release; monitor; roll back or pin; and record.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show dependency, version, reason, advisory, license, graph, test, artifact, owner, evidence, and limitation. Require human approval for security, license, release, and exception.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use lockfiles, provenance, compatibility, isolated build, SBOM, staged rollout, version pinning, rollback, provider substitution, and transitive impact visibility.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show current and target version, graph, findings, tests, evidence freshness, owner, rollout, and authorized approve, hold, update, rollback, pin, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Dependency-update charter; graph and version; advisory and license; build and test; rollout and rollback; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify dependency, current and target, source, graph, advisory, license, method, time, result, artifact, and limitation. Passing build proves neither license, security, nor runtime compatibility.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify graph, source, version, advisory, license, API, behavior, security, performance, build, artifact, rollout, rollback, and provider loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Automated merge, transitive impact missed, license conflict, advisory ignored, floating version, update without test, and build pass treated as safe deployment.
+
+RECOVERY AND RECONSIDERATION
+
+Pin or roll back, quarantine artifact, preserve evidence, remediate or substitute, communicate, and reassess consumers. Reopen on advisory, version, license, provider, or behavior change.
+
+COMPLETION CRITERIA
+
+Graph, current and target, reason, tests, license, advisory, owners, rollout, evidence, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve graphs, versions, advisories, licenses, builds, tests, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Dependency, Security, Build, Package, Release, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+260 Dependency; 261 Package; 264 Build; 209 Vulnerability; 224 Licensing; 378 Software Updates; 380 Security Patching; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, dependency, supply-chain, security, licensing, testing, and delivery context, and the integration roadmap. Exact graph, versions, advisories, licenses, compatibility, rollout, and acceptance authority remain unresolved.

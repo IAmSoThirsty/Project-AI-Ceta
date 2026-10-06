@@ -1,0 +1,134 @@
+SECTION 051 — Reliability Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the probability, predictability, durability, availability, failure-rate, maintainability, and evidence structures needed for a system to perform required functions over declared conditions and time.
+
+REQUIRED OUTCOME
+
+- Reliability objectives, failure models, dependencies, margins, measures, controls, tests, maintenance, and lifecycle are explicit.
+- Claims distinguish design intent, prediction, demonstration, measurement, operational history, and accepted residual risk.
+
+WHY THIS MATTERS
+
+Reliability is contextual and time-dependent. A system that works once or has high uptime can still fail too often, recover too slowly, or degrade users through hidden maintenance and common-cause dependencies.
+
+APPLICABILITY
+
+- Failure frequency, durability, availability, service continuity, maintainability, or evidence validity materially affects outcome.
+- Components operate over time, load, environmental stress, change, or maintenance cycles.
+
+NON-APPLICABILITY CONDITIONS
+
+- No reliability, durability, availability, maintenance, dependency, or lifecycle claim changes.
+- An approved baseline covers exact workload, environment, and change with no material impact.
+- The artifact is exploratory and not a reliability prediction or guarantee.
+
+Record baseline, scope, owner, conditions, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-050 provide requirements, safety, security, operations, architecture, and recovery context.
+- Failure data, workload, environment, maintenance, supplier, test, and acceptance authorities are known or open.
+
+REQUIRED INPUTS
+
+- Reliability objectives, workload, environment, failure modes, dependencies, repair, maintenance, capacity, margins, and lifecycle.
+- Telemetry, incident, test, supplier, backup, restore, failover, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve objectives, assumptions, margins, maintenance burden, residual risk, service commitments, exceptions, and acceptance. Humans decide tradeoffs and retain stop, degrade, repair, failover, restore, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze failure and incident data, identify trends, model scenarios, and draft reliability tests. It must preserve workload and uncertainty. It must not forecast certainty, suppress failures, change service, or accept reliability risk without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Observer, Tester, Verifier, Critic, Planner, Implementer, Optimizer, Security Auditor, Governance Reviewer, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define outcomes, conditions, workload, time horizon, reliability objectives, and owners.
+2. Identify failure modes, common causes, dependencies, margins, maintenance, repair, and evidence.
+3. Design redundancy, monitoring, graceful degradation, repair, replacement, and recovery controls.
+4. Define measures, sampling, confidence, thresholds, invalidation, and reporting.
+5. Validate with users, operators, maintainers, safety, security, suppliers, and domain authorities.
+6. Test stress, aging, failure, restart, dependency loss, maintenance, failover, restore, and change.
+7. Baseline evidence, decisions, residual risk, dissent, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show reliability claim, conditions, workload, data, model, recommendation, uncertainty, and consequence.
+- Require review for maintenance, degradation, service commitments, risk acceptance, and automated remediation.
+- Preserve status, evidence, manual control, safe degradation, and recovery paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate target, predicted, tested, measured, operational, and accepted reliability states.
+- Model common-cause failure, dependency correlation, maintenance, repair, spares, and evidence freshness.
+- Instrument failure and outcome, not only request success or uptime.
+- Link change, configuration, incident, and maintenance to validity of reliability claims.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show objectives, conditions, failure history, margins, dependencies, maintenance, evidence, residual risk, and lifecycle.
+- Expose degrade, repair, failover, restore, investigate, accept, and retire actions with authority.
+- Explain observed versus forecast reliability and evidence limits.
+- Export measures, incidents, tests, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Reliability context, objectives, failure model, dependency and maintenance plan, measures, evidence, and test basis.
+- Degradation, failover, repair, restore, change, supplier, acceptance, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify workload, environment, configuration, period, failure definition, method, sample, result, confidence, and limitation.
+- Prediction, simulation, test, drill, and operational history remain distinct.
+- Missing, censored, stale, biased, or contradictory data constrains reliability claims.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace objectives through failure modes, controls, tests, operation, incidents, recovery, and retirement.
+- Exercise load, aging, dependency loss, correlated failure, maintenance, failover, restore, and change.
+- Verify measures capture failed outcomes, degraded service, recovery, and user impact.
+- Reproduce representative reliability claims from exact evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating uptime, a benchmark, redundancy, or a prediction as general reliability proof.
+- Ignoring common-cause failure, maintenance, repair time, hidden dependencies, or user harm during degradation.
+- Optimizing a metric while silently changing the failure definition.
+
+RECOVERY AND RECONSIDERATION
+
+- On reliability breach, unknown condition, evidence invalidation, or common-cause failure, narrow service and preserve history.
+- Identify owner, authority, affected users, safe mode, evidence, communications, and review condition.
+- Use repair, degradation, failover, restore, compensation, or retirement.
+- Reopen on workload, environment, configuration, dependency, objective, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Objectives, conditions, failure, dependencies, measures, evidence, maintenance, recovery, and lifecycle are explicit.
+- Degraded, correlated, repaired, migrated, and retired behavior is addressed or justified.
+- Exact confidence, validity, residual risk, and gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve objectives, failure data, measures, incidents, decisions, evidence, dissent, residual risk, and gaps.
+- Hand off to Safety, Resilience, Runtime, Operations, Testing, Capacity, Availability, Reliability Management, and Retirement.
+- Record changes requiring reopening affected architecture and evidence baselines.
+
+RELATED CODEX SECTIONS
+
+- 019-050 Requirements through Safety Architecture; 052-060 Resilience through Hardware.
+- 243-245 reliability, resilience, and chaos testing; 301, 321-330 reliability and continuity operations; 324 Reliability Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-050, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal reliability target, failure distribution, workload, environmental profile, or statistical confidence standard is supplied. Actual objectives and evidence remain unresolved.

@@ -1,0 +1,98 @@
+SECTION 114 — Kernel Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the design, implementation, verification, operation, and retirement of a kernel and its privileged mechanisms for scheduling, memory, interrupts, devices, isolation, and system calls.
+
+REQUIRED OUTCOME
+
+A bounded kernel contract with privilege and threat model, invariants, hardware assumptions, interfaces, performance limits, test evidence, update and recovery path, and explicit acceptance authority.
+
+WHY THIS MATTERS
+
+Kernel defects have system-wide blast radius and can defeat higher-level controls. Privileged code requires stronger evidence, isolation, review, and recovery than ordinary application code.
+
+APPLICABILITY
+
+Applies to kernel code, hypervisor-like privileged layers, schedulers, memory managers, interrupt paths, system-call interfaces, and kernel configuration or extensions.
+
+NON-APPLICABILITY CONDITIONS
+
+A project using an unchanged supported kernel without modifying its privileged behavior or trust boundary is not kernel engineering; record the baseline and trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires hardware model, privilege and threat model, invariants, ABI, performance and safety goals, source and build provenance, fault model, test environment, update, recovery, and acceptance authority.
+
+REQUIRED INPUTS
+
+Scheduling, memory, interrupts, concurrency, system calls, isolation, devices, boot, fault handling, observability, resource budgets, security properties, tests, and lifecycle constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve privileged behavior, security and safety tradeoffs, release, patch, emergency response, and retirement. Independent review and explicit residual-risk acceptance are required.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect code, draft tests, identify races, and propose changes. It must not modify or release privileged code, claim absence of vulnerabilities, or suppress findings without delegated authority and independent verification.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Security Auditor, Red Team, Critic, Governance Reviewer, Documentation Writer, Memory Curator, and Optimizer. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define kernel boundary, hardware, privilege, invariants, lifecycle, and non-goals.
+2. Specify concurrency, memory, scheduling, calls, isolation, fault, update, and recovery behavior.
+3. Implement minimally with review, fuzzing, static analysis, instrumentation, and reproducible signed builds.
+4. Test races, faults, corruption, privilege escalation, resource exhaustion, boot, update, rollback, and recovery.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Human approval is required for privilege, isolation, safety, boot, update, and recovery changes. Preserve safe boot, out-of-band control, logs, and manual recovery when AI or tooling fails.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate kernel source, modules, firmware, hardware, boot chain, configuration, symbols, crash data, and signed artifacts. Enforce least privilege, memory safety where possible, isolation, quotas, integrity, and safe update.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show kernel, hardware, boot, privilege, patch, module, fault, resource, evidence, and recovery status. Provide authorized quarantine, stop, capture, restore, and update controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Kernel specification, threat model, invariants, source, build and signing records, ABI, test and fuzz results, crash analysis, compatibility, incident, recovery, release, and retirement artifacts.
+
+EVIDENCE REQUIREMENTS
+
+Identify hardware, kernel, configuration, test, fault injection, environment, result, reviewer, and limitations. Passing boot or benchmark evidence does not prove privileged safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise system calls, races, interrupts, memory corruption, privilege boundaries, devices, resource exhaustion, boot, updates, faults, logging, recovery, and compatibility with independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unreviewed privileged code, hidden race conditions, missing symbols, unsafe module loading, disabled security controls, untested recovery, and erasing crash or audit evidence during rollback.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or isolate affected systems, preserve crash and audit evidence, use safe boot or trusted prior image, restore or replace hardware, compensate external effects, and reopen after root-cause review.
+
+COMPLETION CRITERIA
+
+The kernel contract, privilege boundaries, invariants, implementation, evidence, compatibility, update, recovery, support, and retirement are explicit and independently reviewed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off kernel source, signed artifacts, ABI, hardware assumptions, crash evidence, decisions, vulnerabilities, recovery, and open gaps to OS, Driver, Security, Infrastructure, Testing, Operations, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+108 Computer Science; 113 Operating Systems Engineering; 020 Systems Engineering; 035 Infrastructure Architecture; 045 Security Architecture; 051 Reliability Architecture; 115 Driver Engineering; 246 Security Testing; 327-330 Disaster Recovery through Failover.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Hardware, certification, memory-safety, real-time, privilege, support, and recovery requirements remain system-specific gaps.

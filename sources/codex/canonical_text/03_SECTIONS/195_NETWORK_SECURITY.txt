@@ -1,0 +1,98 @@
+SECTION 195 — Network Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Protect network paths, boundaries, protocols, names, routing, wireless, remote access, and communications against unauthorized use, disclosure, disruption, and manipulation.
+
+REQUIRED OUTCOME
+
+Network assets, zones, flows, owners, identities, policy, encryption, monitoring, availability, segmentation, incident, recovery, and evidence are explicit.
+
+WHY THIS MATTERS
+
+Networks carry trust and control between otherwise protected components. A route, name, certificate, or management path can bypass local controls or make recovery impossible.
+
+APPLICABILITY
+
+Applies to enterprise, cloud, data center, wireless, edge, internet, operational, partner, service-mesh, and management networks and their protocols and providers.
+
+NON-APPLICABILITY CONDITIONS
+
+Only an approved exact topology, flow, protocol, identity, policy, environment, and change baseline can justify non-applicability.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 039-040, 045-046, 051-052, 193-206, 284, 301, 305, 313-318, and 326-330 provide network, security, identity, resilience, operations, observability, and recovery context.
+
+REQUIRED INPUTS
+
+Topology, zones, flows, protocols, addresses, names, devices, identities, keys, firewall policy, dependencies, traffic baselines, providers, threats, telemetry, and recovery paths.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Network owners approve topology, policy, privileged access, monitoring, exceptions, outage, segmentation, and recovery with security, privacy, safety, and operations review.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may map authorized flows, detect anomalies, and propose policy or tests. It cannot alter routes or rules, infer safe traffic, suppress alerts, or declare segmentation effective without evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Network Architect, Network Engineer, Security Auditor, Identity Engineer, Analyst, Observer, Implementer, Tester, Verifier, Red Team, Governance Reviewer, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+1. Inventory zones, flows, protocols, names, devices, identities, and trust boundaries.
+2. Define least-access policy, segmentation, encrypted transport, management isolation, logging, detection, and recovery.
+3. Review changes and providers; test unauthorized paths, spoofing, denial, partition, failover, and restore.
+4. Baseline evidence, exceptions, and downstream owner impact.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show observed traffic, inferred behavior, proposed policy, and enforced state separately. Human approval is required for broad rules, isolation, emergency access, and outage-risk changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use deny-by-default boundaries, authenticated protocols, segmentation, egress control, secure naming, independent management, resilient routing, time-bounded exceptions, and telemetry protected from tampering.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show topology, zones, flows, rules, identities, anomalies, dependencies, evidence freshness, blast radius, and authorized block, isolate, reroute, restore, or retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Network map, flow inventory, threat model, rule and identity matrix, protocol standards, monitoring design, change records, tests, incident and recovery evidence, exceptions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify topology, rule version, capture period, population, method, tool, result, owner, and limits. A diagram, scan, or flow sample proves only its bounded view.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise spoofing, unauthorized routes, lateral movement, DNS failure, certificate expiry, wireless compromise, partition, congestion, provider loss, failover, and evidence replay.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Flat networks, broad firewall rules, shared admin access, unmanaged wireless, unauthenticated protocols, hidden tunnels, no egress control, alert suppression, and recovery dependent on the failed network.
+
+RECOVERY AND RECONSIDERATION
+
+Contain or isolate paths, preserve captures and configuration, revoke credentials, invoke approved alternate communications, restore known-good policy, validate workloads, and reopen after topology or threat change.
+
+COMPLETION CRITERIA
+
+Flows, owners, policies, evidence, tests, recovery, exceptions, and acceptance are explicit; status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve topology, rules, identities, providers, incidents, decisions, evidence, dissent, and next action. Hand off to Cloud, Platform, Infrastructure, Identity, Communications, Security Operations, Incident, Testing, and Recovery.
+
+RELATED CODEX SECTIONS
+
+039 Network Architecture; 040 Communications Architecture; 045-046 Security and Identity; 194 Cloud; 195-206 security; 284 Network Engineering; 305 Network Operations; 313-318 observability; 327-330 recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Protocol, provider, topology, jurisdiction, retention, traffic, monitoring, and recovery standards are not universal in the supplied Codex and remain scope-specific gaps.

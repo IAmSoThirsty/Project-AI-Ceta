@@ -1,0 +1,98 @@
+SECTION 148 - Geographic Information Systems
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of systems that capture, represent, analyze, visualize, query, exchange, and act on geographic or spatial information with explicit coordinate, temporal, privacy, accuracy, and authority controls.
+
+REQUIRED OUTCOME
+
+A GIS baseline with spatial reference, data lineage, accuracy, access, analysis, visualization, update, interoperability, evidence, and recovery rules.
+
+WHY THIS MATTERS
+
+Spatial error, stale boundaries, misleading maps, and exposed locations can cause physical harm, exclusion, privacy loss, or invalid decisions.
+
+APPLICABILITY
+
+Applies to mapping, geocoding, remote sensing, routing, spatial analytics, cadastral, environmental, logistics, asset, and location-aware systems.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to systems with no location, geometry, coordinate, map, spatial query, or geography-dependent outcome. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires spatial purpose, coordinate reference, data ownership, accuracy, temporal validity, privacy, security, interoperability, accessibility, visualization, and decision authority.
+
+REQUIRED INPUTS
+
+Provide geometries, coordinates, projections, units, sources, resolution, time, uncertainty, privacy zones, analysis, routing, users, and failure requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve data collection, location privacy, boundaries, accuracy, public use, safety, and acceptance. Domain authorities retain control over official geographic claims.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may geocode, classify imagery, suggest routes, and detect spatial patterns. It must expose uncertainty, preserve source and coordinates, and never infer sensitive location or direct action without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+GIS Architect, Domain Expert, Researcher, Analyst, Privacy Reviewer, Security Auditor, Accessibility specialist, Implementer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define spatial scope, reference systems, sources, accuracy, time, users, and authority.
+2. Design capture, transform, store, index, analyze, visualize, route, share, and delete paths.
+3. Verify coordinates, topology, accuracy, privacy, accessibility, performance, interoperability, and recovery.
+4. Monitor source and boundary drift, correct, publish, restrict, and retire layers safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show layer, source, projection, time, accuracy, sensitivity, analysis, uncertainty, and consequence. Human approval is required for official boundaries, sensitive location use, and physical action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate sensor, source, coordinate, projection, geometry, topology, index, analysis, map, route, cache, and physical effect. Preserve lineage, precision, temporal validity, and privacy masking.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show map and layer versions, source freshness, projection, accuracy, access, analysis, incidents, and controls to restrict, correct, mask, roll back, or retire data.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+GIS charter, layer and source catalog, spatial reference and accuracy record, privacy assessment, data lineage, analysis and map design, interoperability tests, runbook, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+Identify layer, source, coordinate system, timestamp, resolution, method, result, uncertainty, and limits. Separate positional accuracy, semantic validity, visualization, privacy, and decision evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify coordinate and unit handling, projections, topology, geocoding, routing, stale layers, missing data, privacy masking, accessibility, interoperability, source loss, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Mixing coordinate systems; false precision; stale boundaries; exposing sensitive locations; map visual bias; routing without validation; and treating a map as the territory.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict affected layers, preserve source and lineage, use an authoritative prior layer, correct or withdraw maps, compensate decisions, and reopen accuracy, privacy, and authority review.
+
+COMPLETION CRITERIA
+
+Spatial reference, source, accuracy, privacy, authority, evidence, recovery, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve layer identity, coordinates, projections, sources, analyses, decisions, incidents, evidence, and next safe action. Hand off to Data, Search, Privacy, Security, Accessibility, Routing, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+016 Domain Analysis; 030 Information Architecture; 148 Geographic Information Systems; 157 Data Integration; 163 Data Analysis; 218 Privacy Engineering; 247 Accessibility Testing; 391 Data Retention.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 016, 019-020, 030-031 and 107-147, Owner Cockpit Requirements, and Status and Evidence Lexicon. Official data authorities, reference systems, accuracy standards, sensitive-location rules, and update or retention duties remain unresolved.

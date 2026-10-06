@@ -1,0 +1,98 @@
+SECTION 136 - Simulation Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of simulations that represent systems, environments, processes, or scenarios for analysis, training, prediction, design, or decision support without confusing simulated behavior with reality.
+
+REQUIRED OUTCOME
+
+A simulation baseline with purpose, fidelity, boundaries, assumptions, parameters, scenarios, calibration, validation, uncertainty, controls, and decision-use limits.
+
+WHY THIS MATTERS
+
+A simulation may be internally consistent yet externally wrong. Overconfidence can transfer model error into safety, finance, policy, training, or operational decisions.
+
+APPLICABILITY
+
+Applies to discrete-event, continuous, agent-based, Monte Carlo, training, operational, design, and scenario simulations.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to a static illustration or explanatory example that makes no predictive, training, decision, performance, or system-behavior claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires simulation purpose, system boundary, fidelity, source data, assumptions, equations or rules, calibration, validation targets, uncertainty, runtime, and decision authority.
+
+REQUIRED INPUTS
+
+Provide scenarios, entities, events, time model, parameters, distributions, initial conditions, outputs, validation data, sensitivity, reproducibility, and use restrictions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve fitness for use, fidelity, scenarios, assumptions, thresholds, and consequential decisions. Domain owners decide when simulation evidence is admissible.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate scenarios, explore sensitivity, and summarize runs. It must not invent calibration evidence, suppress outliers, or recommend real-world action beyond delegated scope.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Implementer, Tester, Verifier, Critic, Governance Reviewer, Documentation Writer, Memory Curator, Optimizer, Observer, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define purpose, boundary, fidelity, time, entities, scenarios, and decision limits.
+2. Build model, calibrate against evidence, conduct sensitivity and uncertainty analysis.
+3. Verify implementation, validate behavior, document mismatch, and preserve runs.
+4. Review use, monitor drift, update under change control, and retire safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show simulation versus reality, model version, scenario, inputs, assumptions, uncertainty, and use status. Human approval is required before consequential use; AI cannot silently convert a run into an operational command.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate model, simulator, scenario, data, calibration, execution, output, visualization, and decision boundaries. Support deterministic replay, seeds, time controls, provenance, and safe co-simulation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show model identity, scenario, progress, fidelity, calibration, uncertainty, validation state, output status, and controls to stop, branch, compare, quarantine, or withdraw a run.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Simulation charter, model and scenario catalog, calibration and validation records, experiment plan, uncertainty and sensitivity analysis, run manifest, results, limitations, and continuity package.
+
+EVIDENCE REQUIREMENTS
+
+Identify model, simulator, version, scenario, data, seed, parameters, environment, method, output, uncertainty, and limitations. Simulation evidence remains distinct from observed-world evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify deterministic replay, conservation or invariants, calibration, validation cases, sensitivity, rare events, time-step effects, malformed inputs, model drift, and safe interpretation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Treating a simulation as reality; validating only typical cases; hiding uncertainty; tuning to one dataset; untracked seeds; and using attractive visuals as evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Mark outputs provisional, preserve runs, restrict affected decisions, recalibrate or select an approved prior model, compensate external decisions, and reopen fitness-for-use approval.
+
+COMPLETION CRITERIA
+
+Purpose, fidelity, scenarios, evidence, uncertainty, limits, authority, and recovery are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve models, scenarios, seeds, runs, evidence, decisions, mismatches, and next safe action. Hand off to Scientific, Digital Twin, Game, HPC, Testing, Data, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+135 Scientific Computing; 136 Simulation Engineering; 137 Digital Twin Engineering; 094 Game Design; 239 Performance Testing; 253 Model Testing; 256 Verification; 257 Validation.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 016-020, Sections 107-135, Owner Cockpit Requirements, and Status and Evidence Lexicon. Domain calibration data, fidelity targets, scenario authority, validation populations, and real-world decision rules remain unresolved.

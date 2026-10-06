@@ -1,0 +1,95 @@
+SECTION 268 — Continuous Deployment
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Deploy validated artifacts through automated, observable, reversible, and authorized paths while protecting users, data, service continuity, and owner control.
+
+REQUIRED OUTCOME
+
+A deployment model with trigger, artifact, target, identity, policy gates, strategy, configuration, migration, monitoring, rollback, communication, approval, and incident behavior.
+
+WHY THIS MATTERS
+
+Automation can change production faster than humans can see. Without strong gates, canary, rollback, observability, and authority, a small change can become a broad outage, exposure, or irreversible data event.
+
+APPLICABILITY
+
+Apply when artifacts are automatically or repeatedly deployed to an environment, device population, customer, service, or infrastructure target.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no deployment, target, configuration, data, or operational behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use delivery, artifact, environment, configuration, identity, security, testing, operations, migration, backup, rollback, and incident baselines. Define deployment and stop authority.
+
+REQUIRED INPUTS
+
+Artifact, target, version, trigger, identity, gates, configuration, migration, strategy, health, telemetry, rollback, communication, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve automation scope, target, gates, strategy, rollback, exceptions, and kill switch. Humans decide emergency deployment, data migration, service interruption, and recovery tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may assemble deployment evidence, draft manifests, analyze health, and recommend pause or rollback. It must not deploy, expand target, alter gates, suppress health, or declare success without explicit delegation and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Deployment Engineer, Release Engineer, Platform Engineer, Operations Engineer, Tester, Verifier, Security Auditor, Coordinator, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Validate artifact and target; check gates and identity; deploy phased or canary; observe; pause or roll back on threshold; reconcile configuration and data; communicate; record; and improve.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show artifact, target, identity, gate, phase, health, evidence, user impact, rollback, and authority. Require human approval for production, sensitive target, migration, gate bypass, and recovery.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use progressive rollout, feature flags, immutable artifact, health checks, automatic safe pause, independent control path, migration checkpoint, rollback, audit, and target isolation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show deployment phase, target population, artifact, health, incidents, evidence freshness, owner, rollback state, and authorized pause, stop, rollback, narrow, promote, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Deployment policy and manifest; target and identity record; rollout and health evidence; migration and rollback; incident and communication; decision, exception, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify artifact, target, phase, identity, configuration, health metric, threshold, method, time, result, impact, and limitation. Deployment completion proves execution, not service or user success.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify gates, target isolation, canary, health, pause, rollback, migration, audit, access, cleanup, and recovery. Test failed deployment, partial rollout, stale health, and control-plane loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Broad automatic rollout, no kill switch, health metric blind to user outcome, rollback that cannot reverse data, gate bypass, and deployment success equated with acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or roll back, preserve state, communicate, restore or compensate, analyze impact, and reassess release. Reopen on target, artifact, health, configuration, migration, or dependency change.
+
+COMPLETION CRITERIA
+
+Artifact, target, gates, identity, rollout, health, rollback, owner, evidence, incidents, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve manifests, artifacts, rollout timeline, health, decisions, incidents, communications, evidence, exceptions, and open gaps. Hand off to Operations, Release, Platform, Security, Support, and Incident Response.
+
+RELATED CODEX SECTIONS
+
+263 Environments; 267 Continuous Delivery; 269-272 DevOps, DevSecOps, GitOps, and Platform Engineering; 301-330 Operations and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, delivery, deployment, security, and operations context, and the integration roadmap. Exact targets, gates, health, rollout, rollback, authority, migration, and acceptance evidence remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 263 — Environment Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define, provision, secure, observe, change, reconcile, and retire environments in which development, testing, staging, production, field, recovery, or archival work occurs.
+
+REQUIRED OUTCOME
+
+An environment model with purpose, owner, identity, resources, configuration, data, dependencies, isolation, access, lifecycle, evidence, cost, drift, recovery, and promotion rules.
+
+WHY THIS MATTERS
+
+Environment differences create false tests, unsafe releases, data exposure, and unreproducible incidents. An environment is more than infrastructure; it includes data, identity, providers, configuration, people, and operating mode.
+
+APPLICABILITY
+
+Apply whenever work is developed, tested, deployed, operated, recovered, or retired in a distinct technical, physical, organizational, or data context.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no environment boundary, configuration, data, access, or operational behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use configuration, identity, network, data, security, test, build, release, cost, operations, and recovery baselines. Define environment owner, purpose, isolation, and data authority.
+
+REQUIRED INPUTS
+
+Environment purpose, resources, versions, configuration, data, access, provider, dependencies, network, secrets, telemetry, cost, lifecycle, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve creation, access, data, changes, promotion, cost, isolation, emergency use, and retirement. Operators maintain truthful state; humans decide production or sensitive-data use.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized environment metadata, compare drift, draft infrastructure or validation, and summarize health. It must not provision, alter, access sensitive data, promote, or destroy environments without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Environment Manager, Platform Engineer, Architect, Security Auditor, Data Engineer, Tester, Verifier, Implementer, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define purpose and boundary; inventory resources and data; provision; secure access; configure; validate parity and isolation; monitor drift and cost; promote or clone; recover; rotate; and retire with records.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show environment, purpose, owner, resources, data, identity, configuration, provider, evidence, and impact. Require human approval for sensitive data, production, security, cost, and destruction actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use isolated accounts or boundaries, infrastructure as code where appropriate, synthetic data, environment overlays, identity separation, observability, backup, restore, and controlled promotion.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show environment state, drift, resources, data classification, access, cost, incidents, evidence freshness, owner, and authorized create, restrict, reconcile, promote, restore, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Environment catalog; purpose and boundary record; resource and configuration inventory; access and data plan; drift and cost reports; promotion, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify environment, purpose, version, configuration, resource, data, identity, provider, method, time, result, owner, and limitation. A provisioning script proves intended state, not actual state.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify isolation, access, data, configuration, provider, parity, drift, observability, cost, backup, restore, promotion, and retirement. Test accidental cross-environment access and provider loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Production as test, copied sensitive data, shared credentials, undocumented manual change, drift ignored, environment assumed identical, and destroyed environment without records or recovery.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict affected environment, preserve state, restore or rebuild from known-good baseline, rotate credentials, notify owners, and reassess data and release impact. Reopen on boundary, provider, configuration, data, or purpose change.
+
+COMPLETION CRITERIA
+
+Purpose, boundary, owner, resources, data, identity, configuration, dependencies, cost, evidence, recovery, lifecycle, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve environment identity, state, configuration, access, data, changes, incidents, backups, decisions, evidence, exceptions, and open gaps. Hand off to Build, Release, Platform, Security, Data, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 258 Configuration; 264-272 Build, CI/CD, DevOps, DevSecOps, GitOps, and Platform; 301-330 Operations and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, architecture, delivery, security, data, and operations context, and the integration roadmap. Exact environments, providers, data, isolation, cost, recovery, and acceptance authority remain unresolved.

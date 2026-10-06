@@ -1,0 +1,99 @@
+SECTION 160 — Data Lake Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer governed lake environments that retain diverse data with discoverability, provenance, security, quality, lifecycle, cost, and controlled analytical use.
+
+REQUIRED OUTCOME
+
+A lake-zone and catalog design covering ingestion, formats, schemas, metadata, access, isolation, quality, lineage, retention, recovery, and consumer contracts.
+
+WHY THIS MATTERS
+
+Cheap scale can become an unsearchable, overexposed, stale copy of everything. Flexibility does not remove ownership, quality, retention, or deletion duties.
+
+APPLICABILITY
+
+Apply when varied structured, semi-structured, unstructured, streaming, experimental, or historical data is collected for authorized reuse.
+
+NON-APPLICABILITY CONDITIONS
+
+No material source, zone, classification, access, retention, lineage, quality, cost, or consumer behavior changes and an exact baseline covers the work.
+
+PREREQUISITES AND DEPENDENCIES
+
+Purpose, sources, formats, zones, catalog, subjects, classification, access, quality, lineage, workloads, retention, deletion, cost, and recovery objectives.
+
+REQUIRED INPUTS
+
+Sources, schemas, formats, partitions, volumes, zones, metadata, consumers, identities, policies, quality, lifecycle, incidents, and unknowns.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The owner approves collection, reuse, zones, access, retention, deletion, cost, risk, and acceptance; assigns data, platform, privacy, security, and operations authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized catalogs, schemas, object metadata, lineage, quality results, partition statistics, access records, and lifecycle signals; identify drift or duplicate data; draft classifications, contracts, tests, mappings, documentation, and bounded queries; and propose quarantine, correction, cost, or recovery actions.
+
+AI must preserve source identity, zone, classification, purpose, schema version, time window, lineage, freshness, and limitations. It must keep exploratory observations separate from validated or authoritative data and must surface uncertainty when metadata is incomplete or conflicting.
+
+AI must not read, copy, expose, reclassify, retain, delete, publish, grant access to, or move data across zones or jurisdictions without explicit authorization. It must not declare a lake zone trusted, complete, compliant, or safe merely because ingestion succeeded, catalog metadata exists, or a query returned results.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Data Engineer, Researcher, Analyst, Implementer, Tester, Verifier, Governance Reviewer, Security Auditor, Observer, Critic, Optimizer, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+Classify and catalog sources; design zones, formats, partitions, schema evolution, quality gates, lineage, access, lifecycle, observability, cost, recovery, and deletion; validate consumers.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may classify authorized metadata and propose transformations or queries. It must not infer permission, expose raw data, publish unverified findings, or turn exploratory data into authoritative evidence.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate raw, validated, curated, sandbox, quarantine, archive, backup, and evidence zones. Enforce catalog, identity, purpose, lineage, retention, deletion, and isolation at boundaries.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show zone, source, owner, format, freshness, quality, access, classification, cost, retention, incidents, evidence, and controls for quarantine, restrict, restore, delete, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Lake charter; zone and catalog model; format and schema contracts; lineage, quality, access, retention, cost, recovery, test, decision, evidence, and handoff records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, zone, format, schema, partition, population, environment, method, actor, result, and limitation. Catalog presence or object count proves neither quality nor authorization.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify isolation, access, encryption, catalogability, schema evolution, partition behavior, quality, lineage, cost controls, recovery, retention, deletion, and consumer interpretation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Data swamp, public raw zone, orphaned objects, missing catalog, schema drift, copied sensitive data, unbounded retention, and exploratory output treated as source truth.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected zones, restrict access, preserve evidence, and use approved prior data, reprocessing, reconciliation, deletion, restore, or restricted operation. Reassess downstream uses.
+
+COMPLETION CRITERIA
+
+Zones, sources, ownership, catalog, quality, access, lineage, lifecycle, recovery, tests, evidence, gaps, and next action are recorded; status remains CONTENT-COMPLETE.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off zone and contract definitions to Storage, Data Engineering, Data Governance, Warehousing, Analytics, ML, Security, Privacy, Testing, Operations, and Retention work.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 152 Storage Engineering; 153 Data Engineering; 155-156 Governance and Quality; 159 Data Warehousing; 160-164 Analytics and Data Science; 391-395 data lifecycle sections.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, Sections 019-032, and roadmap. Provider formats, residency, catalog standards, deletion propagation, cost limits, and sector rules remain unresolved.

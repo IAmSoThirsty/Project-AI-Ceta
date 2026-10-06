@@ -1,0 +1,95 @@
+SECTION 239 — Performance Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Measure responsiveness, throughput, resource use, latency, capacity behavior, and user or operator experience against declared performance objectives and conditions.
+
+REQUIRED OUTCOME
+
+A performance-test model with workload, scenarios, service levels, environment, instrumentation, baselines, variability, bottleneck analysis, evidence, and limits.
+
+WHY THIS MATTERS
+
+Performance is workload and environment dependent. A fast sample or average can hide tail latency, contention, resource exhaustion, degraded user experience, or a provider bottleneck.
+
+APPLICABILITY
+
+Apply when response time, throughput, resource use, capacity, cost, or user experience is material to the capability.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when performance has no material user, operator, safety, cost, service, or scale consequence and an approved exact baseline covers the change.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use performance objectives, architecture, workload, environment, telemetry, data, capacity, cost, reliability, and operations baselines. Define safe test authority and stop conditions.
+
+REQUIRED INPUTS
+
+Workload, scenarios, users, data, service levels, latency percentiles, throughput, resource limits, environment, dependencies, instrumentation, baseline, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define meaningful performance and tradeoffs; testers control load and safety; operators approve production-like testing; humans accept performance risk and cost.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft workloads, analyze traces, identify bottlenecks, and propose experiments. It must not generate unsafe load, claim generality from one environment, alter production, or optimize a metric while harming user outcomes without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Performance Engineer, Tester, Architect, Analyst, Observer, Optimizer, Verifier, Quality Engineer, Operations Engineer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define objectives and workload; baseline; prepare data and environment; execute normal and boundary tests; capture latency distribution, throughput, resource, cost, and user evidence; analyze bottlenecks; remediate; rerun; document limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show workload, environment, version, dependency, metric definition, percentile, resource, cost, result, and limitation. Require human approval for load generation, production testing, resource changes, and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide observability, correlation, resource isolation, realistic data, capacity controls, backpressure, graceful degradation, caching semantics, and safe test cleanup.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show workload, environment, latency, throughput, resource, cost, bottleneck, evidence freshness, owner, and authorized start, pause, stop, tune, rollback, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Performance objectives; workload and scenario model; environment and instrumentation record; baseline and results; bottleneck and remediation record; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify version, workload, data, environment, dependency, metric, percentile, method, time, result, variability, and limitation. An average or one run proves only its observed slice.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify workload realism, instrument calibration, repeatability, latency distribution, throughput, resource, cost, user impact, degradation, recovery, and independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Benchmark theater, average-only reporting, synthetic workload unlike use, warm-cache bias, ignored tail latency, unsafe load, and optimization that shifts cost or harm elsewhere.
+
+RECOVERY AND RECONSIDERATION
+
+Stop unsafe test, preserve traces, recover resources, isolate bottleneck, roll back harmful tuning, and reassess targets. Reopen on workload, version, environment, dependency, user, or objective change.
+
+COMPLETION CRITERIA
+
+Objectives, workloads, environments, metrics, results, variability, bottlenecks, owners, evidence, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve workload and environment versions, traces, baselines, results, tuning, decisions, evidence, exceptions, and open gaps. Hand off to Capacity, Load, Stress, Scalability, Reliability, Release, and Operations.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 039 Runtime Architecture; 228-230 Quality; 231 Software Testing; 240-242 Load, Stress, and Scalability Testing; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, performance and operations context, and the integration roadmap. Exact workloads, objectives, environment, service levels, cost, instrumentation, and acceptance authority remain unresolved.

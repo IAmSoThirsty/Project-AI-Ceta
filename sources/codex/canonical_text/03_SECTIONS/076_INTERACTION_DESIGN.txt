@@ -1,0 +1,96 @@
+SECTION 076 — Interaction Design
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the intentional design of actions, feedback, states, flows, controls, and transitions that let people and systems achieve authorized goals with comprehension, accessibility, and recovery.
+
+REQUIRED OUTCOME
+
+ - A scoped interaction model tied to users, tasks, system states, modalities, content, permissions, and outcomes.
+ - Prototypes, specifications, evidence, accessibility, failure, recovery, and acceptance records.
+
+WHY THIS MATTERS
+
+Interaction design determines whether control is understandable and exercisable. A polished path can still conceal authority, error, exclusion, or irreversible consequence.
+
+APPLICABILITY
+
+Applies to user, operator, admin, assistive, conversational, physical, spatial, or multimodal controls and transitions.
+
+NON-APPLICABILITY CONDITIONS
+
+No material user, operator, accessibility, state, content, permission, or recovery effect; or an unchanged approved interaction specification with impact recorded.
+
+PREREQUISITES AND DEPENDENCIES
+
+User and task research, system state and contracts, content, domain rules, accessibility, privacy, security, devices, modalities, prototypes, and acceptance authority.
+
+REQUIRED INPUTS
+
+User and task research, system state and contracts, content, domain rules, accessibility, privacy, security, devices, modalities, prototypes, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve goals, populations, interaction authority, burden, inclusion, content meaning, risk, and acceptance. They decide tradeoffs and retain control over consequential and irreversible actions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose flows, inspect session evidence, generate prototypes, and identify ambiguity. It must not claim user intent or comprehension, invent policy, or publish consequential behavior without human review and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Interaction Designer, User Experience Reviewer, Researcher, Analyst, Architect, Implementer, Tester, Verifier, Accessibility specialist, Governance Reviewer, Critic, Observer, Documentation Writer, Memory Curator, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+Map goals and tasks; define states, actions, feedback, constraints, permissions, error and recovery; prototype alternatives; test with representative and assistive users; document behavior, content, evidence, and unresolved decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose current state, pending action, actor, automation, consequence, permission, uncertainty, and recovery. AI proposals remain drafts; users can revise, cancel, undo, appeal, and use an accessible non-AI path.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use explicit state machines, predictable transitions, feedback timing, reversible actions, focus and input rules, permission enforcement, error semantics, audit, localization, assistive technology, and graceful degradation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show flow and state baseline, user population, evidence, accessibility status, content, permissions, pending actions, errors, and controls for cancel, undo, correct, report, appeal, and recover.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Interaction specification, task and state models, wireframes or prototypes, content and feedback rules, accessibility annotations, behavior contracts, research findings, test evidence, decisions, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify user, task, context, device, version, prototype or implementation, method, participants, result, and limitation. A prototype or click path proves neither comprehension nor production accessibility.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify state clarity, action feedback, focus, keyboard or alternative input, error prevention, undo, authorization, timing, localization, assistive support, interruption, and recovery with representative users.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Hidden state; ambiguous labels; disabled controls without explanation; irreversible defaults; confirmation theater; inaccessible focus; automation that looks manual; and optimizing completion while increasing errors or burden.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or quarantine harmful interaction, preserve user intent and evidence, offer human support and alternative path, correct content or state, and retest. Reopen when system behavior, population, policy, modality, or evidence changes.
+
+COMPLETION CRITERIA
+
+States, actions, feedback, authority, accessibility, evidence, tests, failure, recovery, open findings, and acceptance owner are recorded. Remain CONTENT-COMPLETE pending source reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve interaction identity, state model, prototypes, content, research, participant limitations, decisions, evidence, accessibility findings, and next safe action. Hand off to HCI, Experience, UI, Content, Application, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+075 Human-Computer Interaction; 077 Experience Design; 082 UX Design; 083 UI Design; 088 Voice Interface Design; 089 Conversational Design; 103 Accessibility Design; 249 Usability Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 014-075, and evidence conventions. Actual user populations, devices, modalities, accessibility requirements, domain constraints, and acceptance thresholds remain unresolved.

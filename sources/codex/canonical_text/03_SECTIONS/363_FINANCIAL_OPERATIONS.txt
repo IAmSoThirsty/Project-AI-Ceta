@@ -1,0 +1,95 @@
+SECTION 363 — Financial Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Record, control, reconcile, forecast, report, and protect financial activity, resources, obligations, approvals, and evidence across the lifecycle.
+
+REQUIRED OUTCOME
+
+A financial-operations model with accounts, transactions, budgets, commitments, controls, approvals, reconciliation, reporting, close, audit, privacy, and correction.
+
+WHY THIS MATTERS
+
+Financial records drive decisions, obligations, trust, and legal reporting. A dashboard or ledger entry can be wrong through timing, classification, duplicate, omission, adjustment, or unsupported assumption.
+
+APPLICABILITY
+
+Apply when money, assets, commitments, budgets, costs, revenue, expenses, payments, forecasts, or financial reports are created, changed, or controlled.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no financial value, transaction, budget, obligation, control, or report changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use commerce, billing, payments, procurement, controls, audit, legal, tax, records, data, and policy baselines.
+
+REQUIRED INPUTS
+
+Accounts, transactions, invoices, payments, budgets, commitments, prices, evidence, approvals, controls, reconciliations, periods, and reports.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Finance owners approve accounting meaning, budget, adjustment, payment, write-off, close, report, access, exception, and attestation. Humans preserve segregation of duties and resolve disputes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized financial metadata, identify anomalies, draft reconciliations, and summarize reports. It must not alter ledger, approve payment, set accounting treatment, disclose data, or attest without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Financial Analyst, Accountant, Auditor, Controls Analyst, Commerce Manager, Billing Engineer, Payments Engineer, Researcher, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Define accounts and periods; record; approve; reconcile; budget; forecast; close; report; control access; investigate variance; correct; audit; and preserve or retire records.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show account, transaction, period, source, treatment, approval, evidence, variance, and limitation. Require human review for adjustment, close, report, attestation, payment, and exception.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable ledger history, segregation, approval, reconciliation, period close, lineage, access, retention, correction, and audit. Separate operational estimates from authoritative records.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show period, balances, transactions, budget, variance, approvals, evidence freshness, owner, and authorized hold, adjust, reconcile, close, report, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Financial-operations charter; account and control; transaction and reconciliation; budget and forecast; close, report, audit, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify account, transaction, period, source, treatment, method, time, actor, approval, result, and limitation. Report or ledger status proves only recorded state and scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorization, segregation, completeness, accuracy, cutoff, reconciliation, adjustment, period close, report, access, retention, and audit. Test duplicate, late, reversed, and corrected transaction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unreconciled ledger, unsupported adjustment, shared approval, period drift, forecast as fact, report without source, and financial control as paperwork only.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze affected record or period, preserve evidence, correct or reverse, reconcile, communicate, and reassess legal and financial impact. Reopen on transaction, rule, period, source, or obligation change.
+
+COMPLETION CRITERIA
+
+Accounts, transactions, periods, controls, approvals, reconciliation, reports, evidence, owners, corrections, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending authorized acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve ledger, budgets, reports, reconciliations, approvals, adjustments, decisions, evidence, exceptions, and open gaps. Hand off to Billing, Payments, Commerce, Revenue, Audit, Legal, Procurement, and Records.
+
+RELATED CODEX SECTIONS
+
+226 Audit; 227 Internal Controls; 348 Procurement; 358-362 Commerce, Billing, Payments, Subscriptions, and Revenue; 364 Licensing; 225 Records.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, finance, commerce, audit, controls, legal, and evidence context, and the integration roadmap. Exact accounts, standards, periods, tax, authority, reconciliation, and acceptance evidence remain unresolved.

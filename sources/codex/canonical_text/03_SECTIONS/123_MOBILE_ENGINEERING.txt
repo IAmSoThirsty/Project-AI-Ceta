@@ -1,0 +1,99 @@
+SECTION 123 - Mobile Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed engineering of applications and services used on mobile devices, including device constraints, mobile operating systems, connectivity variation, local state, distribution, accessibility, privacy, security, and lifecycle behavior.
+
+REQUIRED OUTCOME
+
+An approved mobile engineering baseline with platform scope, supported devices and versions, user journeys, offline and recovery behavior, release controls, evidence, ownership, and handoff conditions.
+
+WHY THIS MATTERS
+
+Mobile use occurs in variable networks, physical contexts, battery states, screen sizes, permissions, and device lifecycles. Ignoring those conditions can cause data loss, unsafe interaction, exclusion, privacy leakage, or unmaintainable releases.
+
+APPLICABILITY
+
+Applies when software runs on phones, tablets, wearables, mobile-connected devices, or mobile-specific services and the design depends on mobile hardware, operating-system APIs, app stores, sensors, notifications, intermittent connectivity, or mobile user journeys.
+
+NON-APPLICABILITY CONDITIONS
+
+May be recorded as non-applicable for a server-only or desktop-only artifact with no mobile client, mobile integration, mobile data, or mobile operational consequence. The record must name the scope, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires requirements, supported platforms, device and OS policy, threat model, privacy and accessibility obligations, identity and API contracts, data lifecycle, release authority, test environments, and support and retirement ownership.
+
+REQUIRED INPUTS
+
+Provide journeys, device classes, OS versions, network conditions, permissions, data classifications, offline expectations, performance targets, localization, accessibility, store policy, telemetry, support, incident, and recovery requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner approves supported populations, risk, permissions, data retention, release gates, store distribution, emergency controls, accessibility, privacy, and acceptance. Humans retain authority to pause distribution, revoke access, and retire a version.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may propose mobile flows, compatibility matrices, test cases, diagnostics, and implementation changes. It must label assumptions and evidence, avoid inventing device behavior, and never publish, collect sensitive data, change permissions, or release without delegated approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Security Auditor, Privacy and Governance Reviewer, User Experience Reviewer, Accessibility specialist, Implementer, Tester, Verifier, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish scope, platforms, devices, environments, users, operating contexts, and lifecycle.
+2. Define mobile journeys, permissions, identity, data, connectivity, local storage, notifications, sensors, and recovery.
+3. Allocate functions to client, service, device, operating system, and human actors with explicit authority.
+4. Design compatibility, accessibility, localization, performance, battery, privacy, security, observability, and support behavior.
+5. Build, test, verify, pilot, release, monitor, patch, support, deprecate, and retire under approved gates.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+The human must see whether a recommendation, permission request, data operation, release, or incident action is proposed, approved, executed, or verified. AI suggestions remain proposals; consent, denial, correction, stop, appeal, offline status, and recovery must remain available without AI.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use explicit client, service, device, OS, network, identity, storage, notification, and telemetry boundaries. Treat local data as an authorized cache with expiry and protection. Model sync conflicts, retries, idempotency, upgrades, rollback, deep links, and revoked sessions.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show release identity, platform, device coverage, rollout state, crash and performance evidence, permission status, data freshness, incidents, available pause or rollback actions, and the authority required for each consequential control.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Mobile architecture baseline, device and OS matrix, journey and state models, permission and data-flow records, accessibility and localization plan, security and privacy assessment, release package, test evidence, telemetry plan, support runbook, and retirement record.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies build, signing identity, platform, device, OS, network, configuration, data, test method, result, date, and limitations. Crashes, battery, accessibility, security, privacy, store, offline, sync, and recovery evidence remain distinct and failed evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify installation, upgrade, downgrade policy, permissions, authentication, offline and reconnect behavior, sync conflicts, interrupted writes, deep links, notifications, accessibility, localization, battery, performance, security, crash recovery, telemetry, rollout, and revocation across declared device classes.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unsupported devices presented as supported; assuming connectivity; storing secrets or excessive personal data locally; unbounded background work; inaccessible controls; silent permission escalation; destructive sync; store release without rollback; and treating crash-free rate as user success.
+
+RECOVERY AND RECONSIDERATION
+
+On crash, loss, stale data, revoked authority, unsafe permission, provider failure, or compatibility defect, preserve local evidence, stop risky actions, quarantine affected data, use approved fallback or compensation, communicate impact, and reopen the baseline before resuming.
+
+COMPLETION CRITERIA
+
+Scope, support matrix, contracts, permissions, controls, journeys, failure paths, evidence, release gates, owner acceptance, support, and retirement conditions are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve build and signing identity, source revision, device matrix, decisions, evidence, incidents, open gaps, and next safe action. Hand off to Native, Cross-Platform, Backend, API, Mobile Security, Accessibility, Testing, Operations, Maintenance, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+118 Frontend Engineering; 119 Backend Engineering; 121 Web Engineering; 124 Cross-Platform Engineering; 125 Native Application Engineering; 197 Mobile Security; 247 Accessibility Testing; 248 Compatibility Testing; 378 Software Updates; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 107-122, Owner Cockpit Requirements, and Status and Evidence Lexicon. Device inventories, jurisdictional privacy rules, store obligations, accessibility standards, support commitments, and recovery objectives remain unresolved until supplied and verified.

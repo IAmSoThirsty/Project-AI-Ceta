@@ -1,0 +1,98 @@
+SECTION 135 - Scientific Computing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of computational methods used to represent, analyze, or reproduce scientific phenomena, with explicit assumptions, numerical validity, provenance, uncertainty, and reproducibility.
+
+REQUIRED OUTCOME
+
+A scientific-computing baseline with model purpose, equations or algorithms, inputs, units, numerical methods, uncertainty, validation, reproducible environment, and decision limits.
+
+WHY THIS MATTERS
+
+Scientific code can produce precise-looking but invalid results when assumptions, units, discretization, uncertainty, or provenance are hidden.
+
+APPLICABILITY
+
+Applies to computational science, numerical analysis, research software, scientific workflows, experiment analysis, and domain simulations.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to ordinary business computation with no scientific model, numerical claim, experimental inference, or research reproducibility requirement. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires scientific objective, domain authority, model assumptions, data and units, numerical method, precision, validation data, uncertainty, compute environment, provenance, and publication authority.
+
+REQUIRED INPUTS
+
+Provide equations, algorithms, parameters, units, boundary conditions, data sources, tolerances, seeds, workload, validation cases, uncertainty, and intended decisions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve scientific meaning, assumptions, data use, uncertainty, publication, and decision fitness. Domain experts retain authority over interpretation and limitations.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft code, summarize literature supplied by the user, propose experiments, and inspect results. It must not invent citations, hide uncertainty, or present a numerical result as scientific truth without review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Researcher, Analyst, Architect, Implementer, Tester, Verifier, Critic, Governance Reviewer, Documentation Writer, Memory Curator, Optimizer, Security Auditor, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define scientific question, scope, model, data, units, assumptions, and acceptance.
+2. Implement and profile numerical methods with provenance and reproducibility.
+3. Validate against analytical, experimental, observational, or benchmark evidence.
+4. Quantify uncertainty, publish limits, preserve artifacts, and retire invalid methods.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show model, version, input data, units, method, uncertainty, evidence, and interpretation state. Human review is required for scientific claims and consequential use; AI output remains proposed until verified.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate model, solver, data, parameter, execution, result, visualization, and decision boundaries. Capture units, precision, seeds, environment, provenance, and uncertainty through the pipeline.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show run identity, model, inputs, parameters, code, environment, convergence, uncertainty, validation, result state, and controls to stop, reproduce, compare, or withdraw.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Scientific objective, model record, data and units catalog, code and environment manifest, experiment plan, validation and uncertainty evidence, results, limitations, and reproducibility package.
+
+EVIDENCE REQUIREMENTS
+
+Identify model, code, data, units, parameters, solver, hardware, seed, method, result, uncertainty, and limitations. Separate numerical convergence from empirical validity and scientific interpretation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify units, conservation or invariants, convergence, sensitivity, reproducibility, analytical cases, benchmark or experimental comparison, uncertainty, malformed data, and failure recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+False precision; unit mismatch; cherry-picked runs; hidden parameter tuning; invalid extrapolation; unreproducible environments; and treating convergence or visualization as validation.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve inputs and environment, mark results invalid or provisional, rerun with corrected assumptions, withdraw affected claims, compensate decisions where needed, and reopen the scientific baseline.
+
+COMPLETION CRITERIA
+
+Question, model, data, assumptions, method, evidence, uncertainty, interpretation, provenance, and limits are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve code, data, environment, seeds, runs, results, decisions, dissent, evidence, and next safe action. Hand off to Simulation, HPC, Data, Statistics, Research, Testing, and Records sections.
+
+RELATED CODEX SECTIONS
+
+001 Research; 016 Domain Analysis; 109 Algorithm Engineering; 133 High Performance Computing; 135 Scientific Computing; 136 Simulation Engineering; 163 Data Analysis; 165 Statistics; 393 Digital Preservation.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 001-020, Sections 107-134, Owner Cockpit Requirements, and Status and Evidence Lexicon. Domain-specific standards, datasets, publication rules, uncertainty tolerances, compute environments, and owner acceptance remain unresolved.

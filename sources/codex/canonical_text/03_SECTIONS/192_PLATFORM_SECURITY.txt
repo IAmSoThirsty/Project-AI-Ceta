@@ -1,0 +1,102 @@
+SECTION 192 — Platform Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define and engineer security for shared platforms that host, connect, build, deploy, observe, or govern workloads, preserving tenant isolation, administrative control, availability, integrity, and evidence.
+
+REQUIRED OUTCOME
+
+ - Platform assets, tenants, trust zones, administrative roles, control objectives, dependencies, and operating modes.
+ - Enforced isolation, identity, authorization, configuration, patching, secrets, monitoring, recovery, and supply-chain controls.
+ - Evidence linking platform state to workload impact, exceptions, incident response, and safe change.
+
+WHY THIS MATTERS
+
+A platform failure or privileged compromise can multiply across workloads. Shared services create concentration risk, hidden authority, cross-tenant leakage, and recovery dependencies that local application controls cannot fully address.
+
+APPLICABILITY
+
+Applies to runtime, container, orchestration, developer, CI/CD, data, identity, observability, integration, edge, hosting, and shared service platforms, including managed providers and control planes.
+
+NON-APPLICABILITY CONDITIONS
+
+Only when an approved platform-security baseline covers the exact platform, version, tenants, control plane, region, configuration, and change. A disposable isolated lab may record justified limited scope but not production security.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 032-044, 045-052, 107-150, 258-281, 301-318, and 326-330 provide application, platform, infrastructure, security, reliability, engineering, delivery, operations, observability, continuity, and recovery context.
+
+REQUIRED INPUTS
+
+Platform inventory, tenancy, trust zones, identities, roles, workloads, data, network paths, control-plane APIs, configurations, providers, images, dependencies, vulnerabilities, telemetry, recovery targets, and change history.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Platform owners approve isolation, privileged access, risk, changes, exceptions, availability tradeoffs, incident severity, recovery, and retirement. They must coordinate workload owners and independent security, privacy, resilience, and operations authorities.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized configuration, inventory, telemetry, drift, dependencies, and attack paths. It cannot alter shared state, grant access, suppress alerts, accept tenant risk, or claim isolation from configuration similarity or a successful deployment.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Platform Engineer, Infrastructure Engineer, Security Auditor, Identity Engineer, Network Engineer, Analyst, Observer, Implementer, Tester, Verifier, Red Team, Governance Reviewer, Operations Engineer, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+1. Inventory platform assets, tenants, control planes, trust boundaries, privileged paths, and shared dependencies.
+2. Model threats including escape, cross-tenant access, supply-chain compromise, denial, misconfiguration, and operator error.
+3. Define isolation, identity, authorization, hardening, patch, configuration, secret, logging, detection, and recovery controls.
+4. Test tenant separation, privilege boundaries, image and package provenance, change, failure, restore, and evidence paths.
+5. Monitor drift, capacity, dependency exposure, and control effectiveness; remediate or contain by authority.
+6. Baseline platform state and hand off workload impact and open risk.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose platform versus workload evidence, shared blast radius, acting identity, scope, authority, and consequence. Human review is required for privilege, isolation, failover, broad changes, and exceptions. Preserve workload-level fallback and owner control during platform or AI failure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use explicit tenant and trust boundaries, least privilege, immutable or attestable artifacts, policy-enforced configuration, separate control and data planes, blast-radius limits, secure defaults, independent monitoring, and recovery paths that do not depend solely on the failed control plane.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show platform version, regions, tenants, control state, privileged sessions, drift, dependencies, incidents, evidence freshness, exceptions, and available isolate, revoke, failover, restore, or retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Platform asset and tenancy catalog, trust-boundary model, threat model, control matrix, privileged-access design, configuration baseline, supply-chain evidence, drift findings, test and recovery results, exception register, and continuity handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify platform, version, region, tenant population, configuration, method, tool, time, result, owner, coverage, and limitation. Compliance reports, templates, uptime, and deployment success prove only bounded conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise escape and cross-tenant attempts, privilege changes, stale credentials, malicious artifacts, control-plane loss, network partition, capacity exhaustion, drift, failover, restore, and evidence replay. Reproduce critical results independently.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared admin credentials; tenant isolation by convention; mutable base images; unreviewed provider access; control-plane single point of recovery; hiding blast radius; ignoring region or supplier dependencies; and treating configuration conformance as runtime security.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze or isolate affected zones, revoke credentials, preserve platform and workload evidence, communicate impact, restore from approved known-good state, validate tenant and data boundaries, and reopen when topology, provider, version, threat, or recovery assumptions change.
+
+COMPLETION CRITERIA
+
+Assets, tenants, boundaries, owners, controls, evidence, tests, recovery, residual risk, exceptions, and workload handoff are explicit. Section remains CONTENT-COMPLETE until qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve platform identity, configuration, versions, tenants, dependencies, privileged decisions, evidence, incidents, dissent, and next action. Hand off to Infrastructure, Cloud, Network, Identity, Application, Data, Security Operations, Incident Response, Reliability, Testing, and Retirement.
+
+RELATED CODEX SECTIONS
+
+032-044 Application through Runtime Architecture; 045-052 Security through Resilience Architecture; 190, 193-206 security engineering; 258-281 configuration, delivery, platform, infrastructure, and container sections; 301-330 operations and recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Uses the Canonical Section Contract and neighboring architecture, engineering, operations, and governance sections. Platform type, tenancy model, provider, regulatory regime, isolation evidence, recovery target, and control catalog remain unresolved until scope is supplied.

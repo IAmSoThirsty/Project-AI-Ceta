@@ -1,0 +1,100 @@
+SECTION 151 — Database Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design, build, test, operate, and retire database capabilities that preserve authorized data meaning, integrity, availability, security, performance, recoverability, and evidence.
+
+REQUIRED OUTCOME
+
+An approved database design with schemas, constraints, indexes, transactions, access paths, backup and restore behavior, operational ownership, lifecycle state, and bounded evidence.
+
+WHY THIS MATTERS
+
+Database behavior can silently change truth, authority, privacy, service continuity, and recovery. A working query or healthy instance does not prove sound integrity, isolation, access control, or recoverability.
+
+APPLICABILITY
+
+Apply when a database stores, transforms, serves, replicates, audits, or governs material data, or when schema, query, transaction, availability, or recovery behavior affects outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+No material database behavior, data meaning, access, performance, evidence, lifecycle, or recovery is changed, and an exact approved baseline covers the work. Record scope, baseline, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requirements, domain and data models, information classification, application contracts, workload, users, operators, recovery objectives, security controls, legal duties, and acceptance authority.
+
+REQUIRED INPUTS
+
+Authorized objective and scope; entities and relationships; workload and concurrency; data classes; queries; retention; migrations; backup, restore, failover, monitoring, and support constraints; assumptions and unknowns.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner approves data purpose, schema meaning, access, risk, service objectives, migrations, exceptions, recovery tradeoffs, and acceptance. The owner assigns database, data, security, privacy, operations, and retirement authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized database definitions, migration history, query plans, workload evidence, operational records, and recovery test results. It may identify integrity, concurrency, access, performance, compatibility, and recovery risks; propose schemas, constraints, indexes, queries, migrations, tests, runbooks, and evidence plans; and explain expected impacts and unresolved assumptions.
+
+AI must preserve the distinction between observed engine behavior, inferred behavior, and recommendation. It must not choose data meaning, grant access, expose credentials or protected data, execute production changes, approve migrations or risk, declare recovery or correctness from partial evidence, or treat a benchmark, checksum, backup, replica, or successful query as proof beyond its stated scope. Any mutation-capable proposal must identify the authorized actor, target environment, change scope, dependencies, validation, audit record, and forward recovery or compensation path; unresolved authority, evidence, or safety gaps require stop and owner review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Observer, Critic, Optimizer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish scope, workload, data ownership, criticality, environments, and lifecycle.
+2. Define schemas, keys, constraints, transactions, isolation, indexes, queries, access paths, and compatibility.
+3. Design access control, encryption, auditing, backup, restore, replication, failover, migration, and deletion.
+4. Test normal, concurrent, malformed, unauthorized, degraded, recovery, and upgrade behavior; baseline evidence and open gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may inspect authorized schemas and plans, propose queries, indexes, tests, migrations, and documentation. It must label observation, recommendation, execution, and verification; it must not alter production, infer permission, expose secrets, approve risk, or declare correctness from a sample or benchmark.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent schemas, migrations, transactions, credentials, roles, replicas, backups, logs, evidence, and lifecycle states as versioned artifacts. Separate logical design from physical engine behavior and preserve idempotency, locking, timeout, retry, compensation, and audit semantics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show baseline, engine and version, environment, owner, data scope, active changes, locks, replication, backup freshness, alerts, evidence, and available pause, revoke, restore, failover, rollback, and retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Database design and data dictionary; schema and migration records; query and workload catalog; access and audit model; backup, restore, failover, performance, test, risk, decision, evidence, and handoff records.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify database, version, configuration, dataset, workload, environment, time, method, actor, result, and limitation. A successful migration, query plan, backup, or checksum proves only its bounded claim.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify constraints, transaction behavior, isolation, concurrency, authorization, injection resistance, performance under stated load, backup restoration, failover, migration compatibility, deletion, audit, and independent reproducibility.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unowned schema changes, shared privileged accounts, unsafe dynamic SQL, missing constraints, unbounded queries, hidden copies, untested restore, false replica assumptions, destructive rollback, and treating uptime as integrity.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or isolate affected writes on corruption, unauthorized access, migration failure, capacity exhaustion, or evidence loss. Preserve logs and state; use approved restore, reconciliation, controlled forward migration, failover, or compensation, then reassess downstream consumers.
+
+COMPLETION CRITERIA
+
+Scope, ownership, schema, controls, workload, compatibility, operations, recovery, tests, evidence, unresolved gaps, and next review point are recorded. Status remains CONTENT-COMPLETE until reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off schemas, contracts, migrations, access, monitoring, backup, restore, performance, incidents, and retirement obligations to Storage, Data, Application, Security, Testing, Operations, Migration, and Retirement sections. Record reopening triggers and exact baseline.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 020 Systems Engineering; 030 Information Architecture; 031 Data Architecture; 032 Application Architecture; 203 Cryptography; 285 Database Administration; 307 Data Operations; 328 Backup Engineering; 329 Restore Engineering; 382 Data Migration Operations; 391-395 Data Retention through Data Deletion.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-032, Owner Cockpit Requirements, Status and Evidence Lexicon, and the integration roadmap. Engine-specific locking, licensing, jurisdiction, retention, workload, and recovery standards remain unresolved until supplied and verified.

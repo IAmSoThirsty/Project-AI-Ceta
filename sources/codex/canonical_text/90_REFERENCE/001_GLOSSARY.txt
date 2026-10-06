@@ -1,0 +1,437 @@
+
+GLOSSARY — WORKING DRAFT
+
+Action contract
+A durable record translating an intended consequential action into explicit objective, actor, authority, environment, scope, preconditions, risk, approval, state, and evidence requirements.
+
+Agent
+An artificial-intelligence process acting through a stable or attributable identity, runtime, role contract, capability set, assignment, and authority boundary.
+
+Agent governance
+The rules, authority boundaries, evidence requirements, verification gates, continuity practices, and enforcement mechanisms controlling how an agent may act and how its work is judged.
+
+Agent role
+A bounded professional function with defined inputs, responsibilities, prohibited behavior, outputs, and completion conditions.
+
+Assumption
+A proposition temporarily used for reasoning or planning without sufficient evidence to call it established.
+
+Authority
+The legitimate permission to make a decision or perform an action within a defined scope and consequence boundary. Authority may be bounded, delegated, expired, reduced, revoked, or exercised; it may not be invented.
+
+Blocked
+A state in which a prerequisite prevents the affected work from advancing safely or truthfully. Blocked is not the same as failed.
+
+Capability
+What an actor or system can technically do. Capability does not itself confer authority.
+
+Codex section
+One numbered lifecycle field in Thirsty's Codex, expressed as a governed work contract with applicability, responsibilities, artifacts, evidence, failure, recovery, and completion requirements.
+
+Continuity map
+A durable operational handoff record describing current state, completed work, evidence, failures, blockers, risks, unresolved conditions, and next safe action.
+
+Constitutional work package
+A pre-execution package containing objective, scope, source state, claims, assumptions, unknowns, obligations, roles, experiments, evidence contracts, acceptance criteria, rollback, and reversal conditions.
+
+Cockpit
+The governed human-system operating layer through which an accountable human understands state, exercises authority, directs work, inspects evidence, recovers, and stops or exits the system.
+
+Delegation
+A recorded grant of bounded authority from an authorized actor to another actor. Delegation narrows or transfers exercisable authority under conditions; it does not create new authority.
+
+Dissent ledger
+A durable record preserving material disagreement, its source, impact, disposition, decision owner, and reopening condition.
+
+Evidence
+An artifact, observation, command output, test result, log, configuration, trace, measurement, record, source, signature, hash, or other admissible basis supporting a bounded claim.
+
+Critical uncertainty
+A condition that is both materially consequential to a decision and genuinely unresolved, making it suitable for explicit scenario or sensitivity analysis.
+
+Driver
+A force, condition, dependency, or structural pressure capable of influencing future states over the relevant horizon.
+
+Foresight
+The governed examination of plausible change, uncertainty, alternative futures, consequences, indicators, and reversal conditions to improve present decisions without pretending to predict one inevitable future.
+
+Future stakeholder
+A person, community, owner, operator, institution, intelligent system, or other affected party that may inherit material consequences of a present decision.
+
+Horizon
+A defined future time boundary, lifecycle stage, or decision event used to bound analysis.
+
+Indicator
+An observable condition monitored for evidence that a scenario assumption, risk, opportunity, or decision basis is strengthening, weakening, or changing.
+
+Path dependency
+A condition in which earlier choices constrain later options, often increasing the cost or difficulty of change.
+
+Point of no return
+A decision or state boundary after which reversal becomes impossible, prohibited, or materially more costly or harmful.
+
+Robust option
+An option that remains useful or acceptable across multiple materially different plausible futures.
+
+Scenario
+A structured, internally traceable plausible future used to test decisions and consequences. A scenario is not a prediction.
+
+Signal
+A dated observation that may indicate emerging change but does not by itself establish a trend or future outcome.
+
+
+Fail closed
+A control posture in which missing authority, evidence, identity, integrity, or another required condition prevents the affected action rather than silently permitting it.
+
+Human authority
+The retained authority of the authorized human to define objectives, approve material decisions, accept risk, correct intent, revoke delegation, and make final determinations where human judgment is required.
+
+Human-AI interaction
+The governed exchange through which humans and AI systems communicate intent, questions, explanations, recommendations, plans, actions, evidence, corrections, uncertainty, and decisions.
+
+Independent verification
+Assessment of a claim by a role or mechanism not relying solely on the claimant's interpretation or the implementation under review.
+
+Objective substitution
+The unauthorized replacement, broadening, narrowing, sanitization, or displacement of the human's actual objective.
+
+Operating contract
+The standing behavioral and governance requirements that apply before a role-specific assignment begins.
+
+Proof-carrying work product
+A post-execution artifact set binding the delivered result to identity, changes, execution records, evidence, tests, hostile review, dissent, unresolved conditions, transition recommendation, rollback, and continuity.
+
+Recovery
+The governed process of returning from failure, degradation, error, or invalid state to a known safe state or an explicit human decision point.
+
+Role contract
+The source-defined professional boundary governing an assigned agent role.
+
+Scope
+The declared boundary of included work, exclusions, preservation requirements, acceptance criteria, stop conditions, and consequence limits.
+
+Source identity
+The information required to know what a source is, where it came from, which version or revision is being used, how current it is, and whether its integrity and authority are adequate for a claim.
+
+Task and authority envelope
+The assignment record specifying mode, objective, role, allowed tools, permissions, data boundaries, dependencies, resource limits, prohibited actions, acceptance criteria, evidence, stop conditions, and escalation.
+
+Trusted transition
+A controlled change in trusted state, such as promotion, quarantine, hold, rejection, or revocation, that cannot outrun authority and evidence.
+
+Unknown
+A material fact or state that has not been established. Unknown is information and must not be silently converted to false, zero, safe, or irrelevant.
+
+Verification
+The process of bounding a claim, checking identity and environment, examining evidence integrity, reproducing or falsifying where practical, and stating remaining uncertainty.
+
+Vibe coder
+A person who uses natural-language and AI-assisted creation to express and build an idea, including a person who may not know every professional discipline required to make the result real.
+
+EXPANDED TERMS — SECTIONS 003–018
+
+Anti-metric
+An indicator used to detect when apparent success in a target metric is accompanied by displacement, gaming, exclusion, harm, degraded quality, or loss of the intended outcome.
+
+Business rule
+A source-bound statement defining a condition, decision, obligation, permission, prohibition, calculation, classification, or action within an organizational or domain context, including its owner, exceptions, jurisdiction, and effective period.
+
+Business strategy
+A coherent set of human-authorized choices about where to participate, whom to serve, how value will be created and sustained, which capabilities and dependencies are required, and what will not be pursued.
+
+Bounded context
+An explicit semantic and responsibility boundary inside which a domain model, terminology, rules, ownership, and source authority are internally coherent. Meaning crossing the boundary requires a defined contract or translation.
+
+Capability model
+A representation of what outcomes an organization, product, system, actor, or service must be able to produce, separated from the features, technologies, implementations, or providers used to realize those capabilities.
+
+Commitment
+An attributable promise or obligation with authorized speaker, exact beneficiary or recipient, scope, conditions, evidence, due state, change authority, and closure or breach handling.
+
+Competitive intelligence
+Lawful, ethical, source-grounded analysis of competitors, substitutes, ecosystem actors, alternatives, and relevant signals for a defined decision, with claimed and verified capability kept distinct.
+
+Domain
+The real-world or institutional field of meaning, behavior, rules, decisions, actors, information, authority, and lifecycle in which a system or change operates.
+
+Domain event
+A source-meaningful occurrence in the domain that has happened and may affect state, obligations, decisions, evidence, or downstream behavior. It is not merely a transport message.
+
+Domain invariant
+A condition that must remain true within a domain or bounded context. If a proposed state or action violates it, the transition is invalid regardless of aggregate benefit or confidence.
+
+Entity
+A domain concept whose identity and continuity matter across changes in attributes or state.
+
+Innovation hypothesis
+A bounded proposition that a proposed change can improve an evidenced outcome under declared conditions, with assumptions, failure hypotheses, experiment, evidence threshold, stop conditions, and reversal path.
+
+Market research
+Methodologically bounded inquiry into an external population, market, category, behavior, need, channel, price or funding condition, adoption barrier, or market structure for a defined decision.
+
+Mental model
+A person's internal understanding of how a system, task, concept, or process works, including expectations about available actions, consequence, evidence, failure, and recovery.
+
+Mission invariant
+A protected value, condition, prohibition, or decision boundary that downstream strategy and implementation may not silently trade away.
+
+Mission strategy
+The durable, human-ratified purpose, beneficiaries, protected values, non-goals, decision principles, outcome evidence, drift controls, and amendment path governing downstream choices.
+
+Participant
+A person who knowingly takes part in a research activity under the applicable consent, privacy, safety, accessibility, data-use, withdrawal, and grievance conditions.
+
+Portfolio
+The governed collection of initiatives, products, programs, projects, experiments, capabilities, maintenance obligations, and retirements competing for shared resources and carrying shared dependencies or risks.
+
+Product management
+The continuous decision function governing product discovery, intake, prioritization, roadmap, requirements, release, learning, support, change, deprecation, and retirement.
+
+Product strategy
+The evidence-grounded definition of what product should exist, for whom, to produce which outcomes, under which principles, capabilities, non-goals, lifecycle boundaries, and decision conditions.
+
+Program
+A coordinated group of related projects, products, workstreams, and changes managed together because the authorized outcome, integration, transition, or benefits cannot be achieved by one project alone.
+
+Project
+A temporary, bounded, authorized endeavor that creates or changes defined deliverables and outcomes under explicit scope, resources, dependencies, risk, evidence, acceptance, and closure conditions.
+
+Source of truth
+The authoritative system, record, artifact, institution, or owner from which a particular fact, state, definition, rule, or decision must be read. A source of truth is scoped; no source is automatically authoritative for every claim.
+
+Stakeholder
+A person, group, institution, owner, operator, user, affected non-user, partner, regulator, community, or other legitimate party whose authority, rights, interests, obligations, knowledge, benefit, or exposure materially affects the work.
+
+State transition
+A governed change from one defined domain or system state to another, including trigger, actor, authority, preconditions, guards, evidence, effects, failure handling, and resulting state.
+
+User job
+The outcome a user, owner, operator, or other actor is trying to achieve in a particular context, including the evidence needed before acting and the consequence of success, failure, or delay.
+
+User journey
+The end-to-end path from trigger and entry through information, decisions, actions, evidence, consequence, failure, recovery, exit, and continuity for a user or owner job.
+
+User research
+Governed inquiry using actual participants, observations, artifacts, and contextual evidence to understand human goals, behavior, language, mental models, accessibility, trust, failure, and recovery for a defined decision.
+
+Value object
+A domain concept defined primarily by its attributes and meaning rather than a persistent independent identity. Equality and replacement rules must be domain-defined.
+
+EXPANDED TERMS — SECTIONS 017–018
+
+Control effectiveness
+The evidence-supported degree to which an implemented control achieves its objective in the declared environment, version, scope, and period. Documentation or configuration presence alone does not establish effectiveness.
+
+Disqualifying condition
+A mandatory constraint violation or other condition that makes an option ineligible within the declared scope, regardless of its aggregate score or benefits.
+
+Feasibility
+The evidence-bounded ability to realize, operate, govern, support, recover, maintain, and retire an option under declared authority, constraints, resources, dependencies, environment, scale, and lifecycle conditions.
+
+Feasibility condition
+A requirement, dependency, approval, resource, control, evidence threshold, environment, or operating limitation that must remain true for a feasibility determination to hold.
+
+Inherent risk
+Risk assessed before considering the effect of current controls.
+
+Risk
+Uncertainty that may affect an objective, value, right, person, system, commitment, or environment. A useful risk statement identifies a source or cause, an uncertain event, and a consequence within a bounded context.
+
+Risk acceptance
+An attributable, authorized, evidence-informed decision to tolerate a specifically bounded residual risk for a defined scope, period, and set of conditions. Continued work or silence is not acceptance.
+
+Risk appetite
+The human-authorized type and amount of risk an accountable entity is prepared to pursue or retain in support of objectives, subject to mandatory legal, safety, rights, privacy, security, and other constraints.
+
+Risk tolerance
+A defined permissible variation or threshold around an objective or risk appetite, including the point at which escalation, treatment, degradation, or halt is required.
+
+Residual risk
+Risk remaining after considering the verified effect of current or proposed controls. Current residual risk and projected residual risk after planned treatment must be kept distinct.
+
+Safe halt
+A governed state that prevents new prohibited or consequential actions while preserving authorized diagnosis, evidence, communication, and recovery pathways.
+
+Treatment-created risk
+New or increased risk introduced by a proposed risk treatment, such as added complexity, surveillance, lock-in, operator burden, control conflict, or recovery fragility.
+
+EXPANDED TERMS — SECTION 019
+
+Acceptance criterion
+An observable condition, threshold, state, journey outcome, or evidence requirement used to determine whether a requirement has been satisfied within its declared scope and environment.
+
+Derived requirement
+A requirement produced through documented reasoning from a higher-level objective, need, constraint, risk treatment, architecture obligation, or governing source. Its derivation and authority must remain traceable.
+
+Functional requirement
+A bounded statement of behavior, service, response, transformation, or interaction the system or designated actor must perform under declared conditions.
+
+Nonfunctional requirement
+A requirement concerning a quality, constraint, operating condition, or cross-cutting property such as security, privacy, safety, accessibility, reliability, performance, maintainability, recoverability, or governance. The label does not make it optional.
+
+Requirement
+A versioned, attributable, bounded, and verifiable obligation or constraint that states what outcome, behavior, quality, control, evidence, or lifecycle condition must be satisfied within declared applicability.
+
+Requirement baseline
+An attributable, approved, immutable or change-controlled version of the in-scope requirement set, including scope, variants, open findings, source versions, approvals, and effective date.
+
+Requirement criticality
+The consequence-based importance of satisfying a requirement, distinct from implementation priority or scheduling order.
+
+Requirement source
+The authoritative artifact, law, policy, contract, decision, stakeholder statement, user evidence, domain rule, feasibility condition, risk treatment, or other traceable origin supporting a requirement.
+
+Requirements traceability
+The durable, bidirectional relationships connecting sources, needs, requirements, architecture, implementation, tests, evidence, acceptance, operation, change, and retirement.
+
+Requirements validation
+Evaluation of whether the requirement set expresses the authorized objective and legitimate stakeholder, user, domain, lifecycle, and governing needs for the declared context.
+
+Requirements verification
+Evaluation of whether requirement statements and their management records meet defined quality, consistency, traceability, structure, and evidence rules before implementation satisfaction is assessed.
+
+EXPANDED TERMS — SECTION 020
+
+Concept of operations
+A controlled description of how a system is intended to be used, supervised, supported, degraded, recovered, changed, and retired by identified actors in declared environments and lifecycle conditions.
+
+Configuration item
+A system element, artifact, model, interface, data set, policy, environment, procedure, or other controlled object whose identity, version, status, relationships, and change history must be managed.
+
+Enabling system
+A system, service, facility, process, organization, tool, supplier, or capability that supports development, integration, verification, validation, transition, operation, maintenance, or retirement of the system of interest without necessarily being part of the delivered system.
+
+Interface control
+The governed definition and change management of a boundary between producers and consumers, including exchanged data or resources, protocol, timing, units, identity, authority, errors, compatibility, security, evidence, and ownership.
+
+Measure of effectiveness
+A measure of whether the system produces the authorized mission, owner, user, or operational outcome in the intended context.
+
+Measure of performance
+A measure of how well a system or system element performs a defined function under declared conditions.
+
+System baseline
+An attributable, versioned, approved, and change-controlled representation of the system at a defined lifecycle point, including applicable requirements, elements, interfaces, configuration, evidence, open findings, and authority.
+
+System element
+A bounded part of a system with defined purpose, responsibilities, inputs, outputs, dependencies, authority, interfaces, failure behavior, recovery behavior, ownership, and verification method.
+
+System of interest
+The system selected as the primary subject of analysis, design, implementation, integration, verification, validation, operation, maintenance, or retirement, with an explicit boundary separating it from external and enabling systems.
+
+Systems Engineering
+The interdisciplinary lifecycle function that converts an approved requirements baseline into a coherent whole-system definition, allocation, interface model, technical baseline, integration path, verification and validation strategy, operational transition, support model, and retirement path.
+
+Technical performance measure
+A tracked technical characteristic, margin, or threshold used to assess whether the evolving system is likely to satisfy a critical requirement or system objective.
+
+Validation
+Evidence-based determination that the integrated system solves the right problem and supports the intended outcomes and complete journeys in the declared operational context.
+
+Verification
+Evidence-based determination that a specified requirement, interface, element, or system claim has been satisfied within its declared scope, configuration, environment, and method.
+
+EXPANDED TERMS — SECTIONS 021–022
+
+Architecture decision record
+A durable record of a material architecture decision containing context, decision owner, authority state, options, criteria, evidence, assumptions, tradeoffs, selected or recommended outcome, dissent, conditions, consequences, review trigger, and supersession history.
+
+Architecture principle
+A human-authorized rule or strong preference guiding architecture decisions across a declared scope. A principle must identify its authority, rationale, applicability, exceptions, and review condition.
+
+Architecture roadmap
+A dependency-aware sequence of current, transition, and target states with decisions, increments, evidence gates, migration, rollback, support, and retirement obligations.
+
+Capability
+An outcome-producing ability that an enterprise, system, organization, product, service, human, or agent must be able to sustain. A capability is distinct from the technology, team, feature, or provider used to realize it.
+
+Current-state architecture
+A source-bound representation of the architecture that actually exists for a declared version, environment, and evidence date. It must not include planned or inferred elements as though they were implemented.
+
+Enterprise Architecture
+The governed alignment of mission, strategy, operating model, capabilities, value streams, organizations, information, applications, technology, controls, investment, transition, and lifecycle across an enterprise boundary.
+
+Exception
+An authorized, bounded, time- or condition-limited departure from a principle, standard, requirement, or baseline, with rationale, risk, owner, evidence, expiry, monitoring, and closure or renewal path.
+
+Reference architecture
+A reusable architecture pattern defining expected layers, responsibilities, interfaces, constraints, and prohibited shortcuts for a class of solutions without claiming that a specific implementation exists.
+
+Solution Architecture
+The governed design of a bounded solution that maps requirements and context to components, interfaces, data, state, authority, security, deployment, operations, evidence, recovery, maintenance, and retirement.
+
+Target-state architecture
+An approved or advisory representation of a desired future architecture, explicitly distinguished from current and transition states and bound to assumptions, evidence, authority, and acceptance conditions.
+
+Transition architecture
+An intermediate architecture required to move safely from one controlled state to another while preserving continuity, compatibility, authority, evidence, recovery, and rollback.
+
+Value stream
+The end-to-end sequence through which an initiating need is transformed into an outcome for a stakeholder or affected party, including decisions, capabilities, processes, information, systems, evidence, support, and recovery.
+
+EXPANDED TERMS — SECTIONS 023–024
+
+Anti-corruption layer
+A controlled translation boundary that prevents one domain context's model, language, assumptions, or authority from leaking directly into another context.
+
+Architecture invariant
+A condition that must remain true across architecture states, implementations, interfaces, and changes. An invariant is treated as a mandatory constraint rather than a preference that can be outweighed by aggregate scoring.
+
+Bounded context
+A declared boundary within which a domain model, language, rules, state, authority, and ownership have consistent meaning. Meaning crossing the boundary requires an explicit contract or translation.
+
+Context map
+A governed representation of bounded contexts and their relationships, including upstream and downstream responsibility, translation, shared models, published language, dependencies, authority, and lifecycle state.
+
+Domain Architecture
+The governed organization of domain boundaries, language, models, rules, state, decisions, data ownership, services, events, authority, integrations, and change across bounded contexts.
+
+Domain service
+A domain-owned function that performs behavior belonging to a bounded context when that behavior does not naturally belong to one entity or value object. Its authority and interfaces remain explicit.
+
+Failure domain
+A bounded set of system elements, state, dependencies, or operations that may fail together or share a common cause, together with the expected blast radius, containment, detection, and recovery behavior.
+
+Published language
+A versioned, owned contract through which one domain context exposes defined meaning to other contexts without exposing or imposing its entire internal model.
+
+Semantic contract
+A versioned agreement defining the meaning, source, authority, timing, validity, error, correction, and lifecycle semantics of information or behavior exchanged across a boundary.
+
+State ownership
+The explicit assignment of authoritative responsibility for creating, changing, validating, reconciling, evidencing, and retiring a defined state.
+
+Systems Architecture
+The governed structural architecture of a system of interest, defining its elements, responsibilities, interfaces, dependencies, state, data, authority, trust, evidence, failure, recovery, deployment, operation, maintenance, and retirement.
+
+EXPANDED TERMS — SECTIONS 025–026
+
+Business Architecture
+The governed structure connecting mission and strategy to value propositions, outcomes, value streams, capabilities, organizations, roles, decisions, policies, information, products, services, resources, measures, investments, controls, transitions, and lifecycle.
+
+Business capability
+An enduring outcome-producing ability required by an enterprise or bounded organization, independent of the temporary organization, project, process, technology, provider, or product used to realize it.
+
+Capability Architecture
+The governed definition of required capabilities, including their outcomes, boundaries, ownership, realization, dependencies, levels, gaps, measures, evidence, resilience, increments, investments, transitions, and lifecycle state.
+
+Capability catalog
+A versioned register of capabilities and their definitions, owners, outcomes, scope, realization, dependencies, measures, evidence, risks, controls, and lifecycle states.
+
+Capability increment
+A bounded, dependency-aware change intended to establish or improve a defined capability outcome under explicit authority, acceptance criteria, evidence gates, transition, support, and rollback conditions.
+
+Capability map
+A governed structural view of capabilities and their relationships, decomposition, ownership, dependencies, and lifecycle state. A map does not by itself prove capability existence or effectiveness.
+
+Capability realization
+The combination of people, roles, competencies, processes, functions, information, data, applications, technologies, facilities, partners, suppliers, AI, controls, and governance through which a capability is delivered.
+
+Capability state
+The truthful status of a capability within a declared scope and environment, such as required, proposed, existing, available, authorized, demonstrated, operational, effective, degraded, unsupported, superseded, or retired.
+
+Operating model
+The governed arrangement through which value streams, capabilities, organizations, roles, decision rights, processes, information, technology, locations, partners, resources, and controls combine to deliver outcomes.
+
+Value proposition
+A source-grounded statement of the outcome or benefit intended for a defined stakeholder or affected party, together with obligations, assumptions, harms to avoid, acceptance boundaries, and evidence methods.

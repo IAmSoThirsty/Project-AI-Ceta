@@ -1,0 +1,211 @@
+{
+  "assumptions": [
+    {
+      "id": "AS-01",
+      "statement": "Trusted host kernel and broker installation",
+      "required_evidence": "Real Windows security configuration and isolated malicious-worker tests.",
+      "reopen_on": "Any kernel/broker/admin compromise evidence.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B065",
+        "B067",
+        "B072"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-02",
+      "statement": "Identity keys and trusted approval origin",
+      "required_evidence": "Current key/OS-account binding and authenticated UI approval tests.",
+      "reopen_on": "Missing keys, peer mismatch or modified approval surface.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B063",
+        "B068",
+        "B101"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-03",
+      "statement": "Persistence and filesystem durability",
+      "required_evidence": "Loaded SQLite version, synchronization, backup and power-loss tests.",
+      "reopen_on": "Storage/advisory/library/filesystem configuration change.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B009",
+        "B014",
+        "B016"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-04",
+      "statement": "Temporal freshness",
+      "required_evidence": "Boot/session, monotonic/wall-time uncertainty and anti-rollback evidence.",
+      "reopen_on": "Clock rollback, reboot or witness outage.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B015",
+        "B064",
+        "B093"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-05",
+      "statement": "Model/runtime identity",
+      "required_evidence": "Pinned bytes, tokenizer/template and protected lifetime checks.",
+      "reopen_on": "Asset, library, model, environment or worker change.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B073",
+        "B075",
+        "B076"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-06",
+      "statement": "Resource suitability",
+      "required_evidence": "Actual hardware/load and current reserve measurements.",
+      "reopen_on": "Pressure, driver/device change or unknown inventory.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B080",
+        "B115",
+        "B125"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-07",
+      "statement": "Observation completeness",
+      "required_evidence": "Qualified adapter and gap/reconciliation evidence.",
+      "reopen_on": "Missed interval, source inaccessible or partial scan.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B024",
+        "B044"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-08",
+      "statement": "Review independence",
+      "required_evidence": "Real executor lineage and separately implemented checks.",
+      "reopen_on": "Producer overlap, shared flaw or unavailable reviewer.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B045",
+        "B126"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-09",
+      "statement": "Confidentiality through recipient boundary",
+      "required_evidence": "Native consumer lifetime and residue/egress canary evidence.",
+      "reopen_on": "New consumer, dump setting, scope or memory-handling change.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B066",
+        "B089",
+        "B095"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-10",
+      "statement": "Independent distributed authority",
+      "required_evidence": "Actual domain roster, administrators, deployment and secret separation.",
+      "reopen_on": "Domain loss, shared administration or compromise.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B090",
+        "B091",
+        "B096"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-11",
+      "statement": "Cryptographic construction soundness",
+      "required_evidence": "Reviewed primitive composition, external vectors and independent review.",
+      "reopen_on": "New library/advisory, protocol amendment or mismatched vector.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B092",
+        "B093",
+        "B094"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-12",
+      "statement": "User data conservation",
+      "required_evidence": "Verified snapshots and category-level migration comparison.",
+      "reopen_on": "Schema, converter or source profile changes.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B105",
+        "B106",
+        "B111"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-13",
+      "statement": "Meaning-preserving context",
+      "required_evidence": "Exact requests, source retrieval and semantic/negation tests.",
+      "reopen_on": "Prompt/template/context policy change.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B025",
+        "B032",
+        "B083"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-14",
+      "statement": "Candidate packaging correspondence",
+      "required_evidence": "Actual installed hashes and loaded dependencies match manifest.",
+      "reopen_on": "Build, installer, dependency or distribution change.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B121",
+        "B122",
+        "B123"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    },
+    {
+      "id": "AS-15",
+      "statement": "Real elapsed qualification",
+      "required_evidence": "Clocked campaign with attributable daily use and fault reports.",
+      "reopen_on": "Unobserved time, missing logs or changed candidate.",
+      "status": "UNVERIFIED_FOR_REBUILD",
+      "tests": [
+        "B127",
+        "B128"
+      ],
+      "on_failure": "Invalidate dependent conclusions/preparation/qualifications and deny affected effects; preserve safe independent work.",
+      "evidence_refs": []
+    }
+  ]
+}

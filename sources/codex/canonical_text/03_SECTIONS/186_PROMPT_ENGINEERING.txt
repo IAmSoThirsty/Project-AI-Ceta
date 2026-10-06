@@ -1,0 +1,103 @@
+SECTION 186 — Prompt Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed design, testing, versioning, and operation of prompts and instructions as behavior-shaping inputs, without treating them as security, policy, authorization, or evidence substitutes.
+
+REQUIRED OUTCOME
+
+- A prompt contract with purpose, audience, model, context, tools, output, policy, failure, and review boundaries.
+- Reproducible prompt versions, evaluations, injection tests, provenance, and release decisions.
+- Explicit limits on what prompt changes can and cannot authorize.
+
+WHY THIS MATTERS
+
+Prompts influence behavior but are mutable, context-sensitive, and exposed to injection and ambiguity. A well-written prompt cannot replace access controls, policy enforcement, validation, or human authority.
+
+APPLICABILITY
+
+Applies to system instructions, templates, few-shot examples, routing prompts, tool instructions, evaluator prompts, retrieval context, and prompt optimization. Depth increases with tools, sensitive data, external action, or policy consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to static text with no model interaction, behavior claim, or downstream action. Record scope, model boundary, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires AI system contract, model, data, tools, policy, evaluation, security, privacy, safety, and human-review authority. Depends on Sections 169, 170, 180-183, and 188.
+
+REQUIRED INPUTS
+
+Intent; user; model; prompt layers; context; data; tools; output schema; policy; capability; threat model; examples; evaluation; version; retention; and owner decision.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve purpose, instructions, policy interpretation, tool scope, user notice, release, and risk. Prompt engineers cannot grant access, authority, or exceptions by wording.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft, compare, optimize, and test prompts. It must preserve versions and test context and must not hide injection, fabricate evaluation, or claim prompt-only protection.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Prompt Engineer, Architect, Researcher, Analyst, Implementer, Tester, Verifier, Security Auditor, Privacy Reviewer, Safety Auditor, Critic, Red Team, Governance Reviewer, Documentation Writer, and HITL Operator.
+
+REQUIRED ACTIVITIES
+
+1. Define prompt purpose, layer, model, users, context, tools, and prohibited use.
+2. Separate instructions from policy, permissions, data, and validation controls.
+3. Version prompts, examples, retrieval context, output schema, and configuration.
+4. Test instruction conflict, injection, leakage, ambiguity, long context, and model change.
+5. Evaluate quality, truthfulness, refusal, safety, accessibility, cost, and robustness.
+6. Require review for tool, policy, output, or authority effects.
+7. Monitor drift and preserve rollback configuration and compensation paths.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show prompt version, model, context, tools, policy, output, evaluator, and review. Users must see consequential limitations and can correct or stop. Prompt changes cannot bypass policy evaluation or capability binding.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Store prompts, layers, examples, context, model, tools, policies, output schemas, tests, evaluations, and decisions as versioned artifacts. Enforce authorization, validation, sandboxing, and audit outside prompt text.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show active prompt, model, context, tools, policy, evaluation, traces, failures, authority, and evidence. Provide authorized compare, stage, approve, reject, pause, revoke, fallback, withdraw, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Prompt charter; prompt registry; model and context record; tool and output contract; injection and safety suite; evaluation report; release decision; trace and incident record; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify prompt, model, context, tools, policy, data, scenario, evaluator, result, and limitation. A single response or prompt comparison does not prove general behavior, security, or authorization.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test prompt injection, instruction hierarchy, context poisoning, leakage, tool escalation, malformed output, model substitution, long context, ambiguity, refusal, correction, and release rollback. Reproduce accepted results.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Prompt as access control; hidden system instruction; unversioned examples; overfitting to tests; injection suppression; model confidence as authorization; secrets in prompts; and prompt change without evaluation or audit.
+
+RECOVERY AND RECONSIDERATION
+
+Withdraw or disable affected prompt on injection, leakage, unsafe output, model change, policy conflict, or evidence failure. Preserve prior version and traces, use qualified fallback, review impacts, and re-evaluate before release.
+
+COMPLETION CRITERIA
+
+Purpose, prompt layers, model, context, tools, policy, tests, evaluation, authority, evidence, recovery, and lifecycle are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve prompt IDs, versions, contexts, model, tools, tests, outputs, traces, decisions, incidents, dissent, and gaps. Hand off to Generative AI, Agent Systems, Evaluation, Safety, Governance, MLOps, and HITL.
+
+RELATED CODEX SECTIONS
+
+056 AI Architecture; 089 Conversational Design; 169 AI Engineering; 170 Generative AI Engineering; 178 Agent Systems Engineering; 180 Model Evaluation; 182 AI Safety; 183 AI Governance.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, AI Architecture, and evidence lexicon. Actual prompt owners, models, tools, policy layers, injection threats, user notices, and release authority remain unresolved.

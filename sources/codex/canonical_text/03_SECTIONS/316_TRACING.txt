@@ -1,0 +1,95 @@
+SECTION 316 — Tracing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Follow a request, transaction, workflow, job, or decision across components and boundaries with sufficient context to understand latency, failure, dependency, and user outcome.
+
+REQUIRED OUTCOME
+
+A tracing model with trace and span identity, propagation, boundaries, timing, attributes, sampling, privacy, storage, correlation, access, cost, and diagnostic use.
+
+WHY THIS MATTERS
+
+Without cross-boundary context, teams guess at causality. Traces can also leak payloads, create high cost, or imply complete causality when sampling and instrumentation are partial.
+
+APPLICABILITY
+
+Apply when distributed requests, jobs, events, workflows, tool calls, or decisions cross components and timing or causality matters.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no distributed path, dependency, diagnostic, or evidence claim changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use observability, logging, metrics, privacy, security, runtime, integration, incident, and data-retention baselines.
+
+REQUIRED INPUTS
+
+Trace, span, propagation, component, timing, attributes, sampling, payload policy, storage, access, retention, and diagnostic questions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define diagnostic questions and context; privacy and security owners approve attributes and access; operators interpret traces; humans decide disclosure and action.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized traces, identify dependency patterns, draft queries, and summarize latency or failure. It must not expose payloads, infer causality beyond evidence, alter sampling, or act on a trace without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Tracing Engineer, Observability Engineer, SRE, Application Engineer, Network Engineer, Privacy Reviewer, Analyst, Tester, Verifier, and Incident Responder.
+
+REQUIRED ACTIVITIES
+
+Define path and boundaries; instrument; propagate identity; capture timing and context; sample and protect; correlate with logs and metrics; query; validate gaps; retain; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show trace, span, component, timing, attributes, sample, query, evidence, privacy, and limitation. Require human approval for payload access, sensitive query, sampling, retention, and response.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use context propagation, clock handling, stable IDs, bounded attributes, redaction, sampling, resilient collectors, trace-to-log and metric correlation, and access control.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show trace health, coverage, latency, spans, dependencies, sampling, privacy, cost, evidence freshness, owner, and authorized query, restrict, preserve, adjust, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Tracing charter; path and span model; propagation and sampling; privacy and access; correlation and query; incident, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify trace, span, component, clock, sample, attribute, method, time, result, actor, and limitation. A trace shows observed spans, not every unseen path or causal explanation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify propagation, identity, timing, sampling, privacy, access, correlation, collector loss, clock skew, dropped span, and diagnostic usefulness. Test known failure path.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Payload leakage, broken propagation, clock misread, sample treated as complete, high-cardinality cost, unowned traces, and causal claims from correlation alone.
+
+RECOVERY AND RECONSIDERATION
+
+Restore collection, preserve available traces, restrict payload access, adjust sampling, notify owners, and reassess diagnostic confidence. Reopen on path, component, privacy, sampling, or incident change.
+
+COMPLETION CRITERIA
+
+Paths, spans, identity, timing, sampling, privacy, access, correlation, evidence, cost, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve trace schemas, propagation, sampling, queries, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Observability, Logging, Metrics, Application, Network, Privacy, SRE, and Operations.
+
+RELATED CODEX SECTIONS
+
+034 Integration Architecture; 313 Observability; 314 Monitoring; 315 Logging; 317 Metrics; 301-310 Operations; 318-330 Incident, Performance, and Reliability.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, distributed systems, observability, privacy, and operations context, and the integration roadmap. Exact trace paths, context, sampling, payload, tools, cost, and acceptance authority remain unresolved.

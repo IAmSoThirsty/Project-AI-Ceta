@@ -1,0 +1,95 @@
+SECTION 207 — Threat Intelligence
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Collect, evaluate, contextualize, protect, and communicate information about threats, actors, techniques, campaigns, exposures, and defensive implications relevant to the declared system and decision scope.
+
+REQUIRED OUTCOME
+
+A threat-intelligence process with source governance, collection requirements, confidence and provenance, relevance, analysis, dissemination, privacy, handling, action mapping, feedback, and explicit uncertainty.
+
+WHY THIS MATTERS
+
+Threat information can be stale, manipulated, duplicated, overgeneralized, or irrelevant to the target environment. Treating an indicator, headline, vendor claim, or model-generated narrative as verified intelligence can cause wasted effort, unsafe blocking, or false attribution.
+
+APPLICABILITY
+
+Apply when security decisions depend on external or internal information about threats, adversaries, techniques, vulnerabilities, campaigns, abuse, fraud, geopolitical or sector conditions, or emerging risk.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no threat-informed decision, protected asset, intelligence source, or risk change is in scope and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use security operations, threat modeling, vulnerability, privacy, legal, source-handling, incident, and governance baselines. Define consumers, decisions, source authority, handling restrictions, classification, and action owners.
+
+REQUIRED INPUTS
+
+Intelligence requirements, assets, sectors, threats, source inventory, indicators, reports, telemetry, vulnerabilities, incidents, confidence model, handling rules, consumers, decision thresholds, and unresolved questions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define intelligence requirements, source acceptance, handling, confidence, dissemination, collection limits, attribution posture, action thresholds, and risk acceptance. Humans approve sensitive collection, sharing, attribution, blocking, notification, and use in consequential decisions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may retrieve authorized sources, normalize indicators, compare reports, identify contradictions, draft analytic questions, and map intelligence to declared assets and controls. It must preserve provenance, freshness, handling, confidence, source limitation, and uncertainty. It must not fabricate sources, expose restricted intelligence, infer attribution, or trigger blocking or response without delegated authority and human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Threat Intelligence Analyst, Researcher, Analyst, Security Auditor, Observer, Architect, Security Operations Analyst, Verifier, Critic, Red Team, Governance Reviewer, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define intelligence requirements; inventory and qualify sources; collect within authority; preserve provenance; normalize and correlate; assess relevance, confidence, and contradiction; produce decision-ready analysis; disseminate by need and handling; map to controls; solicit feedback; expire stale intelligence; record decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, date, collection method, handling, confidence, corroboration, contradiction, target relevance, and recommended use. Require human review for attribution, sensitive dissemination, blocking, incident declaration, or high-impact risk decisions. Keep intelligence separate from fact, assumption, and action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate collection, source identity, storage, analysis, classification, dissemination, indicator use, audit, retention, and destruction. Bind indicators to context and expiry, prevent untrusted input from becoming executable control, and protect sources and affected people.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show intelligence requirement, source, freshness, confidence, relevance, handling, affected assets, contradictions, action state, owner, and evidence. Provide authorized accept, reject, expire, restrict, share, investigate, and reopen controls with rationale.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Intelligence requirements; source and handling register; collection and confidence model; analytic products; indicator and context catalog; action mapping; contradiction, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, publisher or origin, collection time, version, handling, method, corroboration, target, analyst, confidence, result, and limitation. A feed hit or generated summary proves only the source claim and declared context.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify source identity, freshness, provenance, handling, indicator context, expiry, contradiction, relevance, dissemination, access, and action mapping. Test poisoned or unavailable sources, conflicting reports, stale indicators, false positives, and unauthorized sharing.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Source laundering, false attribution, indicator without context, stale feed treated as current, vendor or model narrative treated as fact, uncontrolled collection, indiscriminate sharing, and intelligence used to bypass due process.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine questionable products or indicators, retract or annotate dissemination, preserve provenance, notify consumers, and reassess actions based on corrected or corroborated evidence. Reopen on source compromise, threat change, target change, or material contradiction.
+
+COMPLETION CRITERIA
+
+Requirements, sources, handling, provenance, confidence, relevance, outputs, consumers, actions, evidence, uncertainty, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve source and product identity, handling, decisions, indicators, expiry, contradictions, evidence, dissemination, incidents, and open gaps. Hand off to Threat Modeling, Security Operations, Vulnerability, Incident Response, Privacy, Legal, and Governance.
+
+RELATED CODEX SECTIONS
+
+018 Risk Management; 045 Security Architecture; 206 Security Operations; 208 Threat Modeling; 209 Vulnerability Management; 210-212 Testing and Teaming; 214 Incident Response; 217 Trust and Safety.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security operations context, and the integration roadmap. Exact source authorities, sharing agreements, confidence model, privacy limits, attribution policy, retention, and owner acceptance remain unresolved.

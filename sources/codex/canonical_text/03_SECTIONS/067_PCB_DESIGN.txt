@@ -1,0 +1,95 @@
+SECTION 067 — PCB Design
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed printed-circuit-board design from schematic intent through layout, fabrication, assembly, inspection, test, service, and retirement.
+
+REQUIRED OUTCOME
+
+A controlled PCB baseline with stackup, placement, routing, power and signal integrity, thermal and EMC constraints, manufacturability, test access, revision identity, and evidence.
+
+WHY THIS MATTERS
+
+Layout, fabrication, and assembly variation can create failures absent from schematics or simulation. An untraceable board revision can invalidate safety, security, and field evidence.
+
+APPLICABILITY
+
+Applies to rigid, flexible, rigid-flex, high-speed, power, RF, mixed-signal, prototype, production, and assembled PCB designs.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no board geometry, stackup, routing, component placement, fabrication, assembly, test, or lifecycle property changes.
+
+PREREQUISITES AND DEPENDENCIES
+
+Schematics, net classes, component library, electrical and mechanical interfaces, stackup, manufacturing capability, signal and power budgets, EMC, thermal, safety, test, and service constraints.
+
+REQUIRED INPUTS
+
+Controlled schematic and BOM, approved footprints, stackup, impedance targets, current and thermal limits, keepouts, enclosure, test points, assembly process, fab rules, revision, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Human PCB authority approves stackup, critical routing, substitutions, design-rule exceptions, fabrication release, field deviation, and acceptance. Human owners accept residual production and reliability risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may check rules, inspect layout, compare libraries, estimate routing or thermal issues, and draft tests. It must preserve revisions and units and must not approve release, infer equivalent footprints, or hide violations.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Critic, Implementer, Tester, Verifier, Security Auditor, Planner, Coordinator, Observer, Governance Reviewer, Red Team, Documentation Writer, Optimizer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+1. Establish board boundary, interfaces, environment, criticality, and lifecycle. 2. Control libraries, footprints, stackup, placement, routing, power, return paths, and keepouts. 3. Review SI, PI, thermal, EMC, safety, manufacturability, assembly, inspection, and test access. 4. Release fab and assembly data. 5. Verify first article and production variation. 6. Baseline deviations and evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI findings show rule, revision, geometry, source, confidence, and limitation. Human review is required for exceptions, critical nets, isolation, security features, production release, and substitutions. Manual inspection and safe shutdown remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version stackup, layers, nets, footprints, constraints, placement, routing, fab files, assembly files, test points, hardware revision, and as-built identity. Changes trigger electronics, mechanical, firmware, thermal, EMC, security, and reliability impact analysis.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show board revision, lot, fab and assembly status, rule violations, critical nets, test status, substitutions, evidence, and authorized hold, quarantine, rework, recall, or retire actions.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Schematic link; controlled libraries; stackup; layout; design-rule report; fab and assembly outputs; BOM; inspection and test plan; first-article report; deviation and evidence register.
+
+EVIDENCE REQUIREMENTS
+
+Bind evidence to board revision, library, fab lot, assembly lot, fixture, instrument, calibration, environment, test, result, and reviewer. Layout review and simulation do not prove as-built behavior alone.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify net connectivity, clearances, impedance, power, thermal, EMC, assembly, solder, polarity, test access, rework, environmental, security, and production variation behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uncontrolled libraries; wrong footprint; missing return path; ignored impedance; unreviewed rule exception; stale fab files; counterfeit part; inaccessible test point; and schematic-only acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Hold or quarantine boards, preserve lot and revision evidence, identify safe population, and use approved rework, substitution, respin, recall, or withdrawal. Reopen after library, fab, assembly, component, or environment change.
+
+COMPLETION CRITERIA
+
+Board intent, revision, constraints, production data, tests, evidence, deviations, and lifecycle owner are explicit for the declared population.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve design files, libraries, fab outputs, lots, tests, rework, failures, decisions, evidence, and next action. Hand off to Electronics, Semiconductor, Firmware, Hardware Testing, Manufacturing, Supply Chain, Security, and Retirement.
+
+RELATED CODEX SECTIONS
+
+062 Electronics Engineering; 066 Semiconductor Engineering; 068 Firmware Engineering; 069 Embedded Software Engineering; 232 Hardware Testing; 246 Security Testing; 351 Manufacturing; 354 Hardware Certification.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-066, and the roadmap. Fab capability, stackup, EMC, qualification, supplier, certification, and owner-acceptance requirements remain unresolved until supplied and verified.

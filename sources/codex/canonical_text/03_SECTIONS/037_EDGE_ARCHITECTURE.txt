@@ -1,0 +1,139 @@
+SECTION 037 — Edge Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define computation, storage, sensing, control, and decision boundaries placed near users, devices, networks, or physical environments, including synchronization with central services and operation under intermittent connectivity.
+
+REQUIRED OUTCOME
+
+- A node, site, trust, data, workload, connectivity, identity, and lifecycle model for edge resources.
+- Explicit local versus central authority, freshness, synchronization, offline, safety, privacy, security, update, and recovery behavior.
+- Traceability from workloads, data, applications, networks, devices, operations, tests, evidence, and retirement.
+
+WHY THIS MATTERS
+
+Edge placement changes latency, availability, physical exposure, data residency, consistency, and recovery. A disconnected or compromised node can continue acting after central policy or authority has changed, so local autonomy and synchronization must be deliberate.
+
+APPLICABILITY
+
+- Workloads execute near users, devices, facilities, sensors, vehicles, or constrained networks.
+- Local processing affects safety, privacy, security, latency, continuity, physical action, or data movement.
+
+NON-APPLICABILITY CONDITIONS
+
+- No local resource, offline mode, physical exposure, synchronization, or edge-specific lifecycle effect changes.
+- An approved baseline covers the exact sites, nodes, workloads, and change with no material impact.
+- The artifact is exploratory and not a deployment, coverage, or safety claim.
+
+Record baseline, sites, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-036 provide requirements, application, software, platform, infrastructure, cloud, data, security, and recovery context.
+- Site, device, network, identity, update, physical safety, privacy, and operational authorities are known or recorded as gaps.
+
+REQUIRED INPUTS
+
+- Sites, nodes, devices, users, workloads, data classes, connectivity, latency, power, environmental, safety, jurisdiction, and lifecycle constraints.
+- Synchronization, identity, policy, update, observability, backup, restore, failover, support, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Edge owners approve local autonomy, physical placement, safety, data handling, authority expiry, update, isolation, and service risk. Site and domain authorities approve physical and operational conditions. Humans retain stop, quarantine, disconnect, restore, and retire authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze edge topology, telemetry, synchronization, and capacity, and draft bounded deployment or test proposals. It must identify node, site, model, policy, and connectivity context. It must not infer offline authority, change nodes, issue physical commands, or declare safe operation without delegated authority and current evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Observer, Planner, Implementer, Tester, Verifier, Security Auditor, Safety Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory sites, nodes, workloads, data, users, physical conditions, dependencies, and owners.
+2. Define local and central responsibilities, authority, policy freshness, synchronization, and conflict resolution.
+3. Model connected, intermittent, offline, degraded, maintenance, emergency, recovery, migration, and retirement modes.
+4. Define identity, secure update, local storage, privacy, safety, observability, and evidence controls.
+5. Validate with site operators, users, network, security, privacy, safety, and continuity authorities.
+6. Exercise disconnection, stale policy, clock drift, node compromise, data conflict, update failure, and restore.
+7. Baseline and hand off decisions, evidence, open gaps, and next safe action.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show node, site, connectivity, policy age, identity, acting authority, model, data, and physical consequence.
+- Require review for local autonomy, physical effect, privacy, safety, security, updates, and irreversible actions.
+- Preserve local stop, status, evidence, manual control, and recovery when central services fail.
+- Prevent offline operation from silently extending expired authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate local state, central state, cache, replica, evidence, backup, and synchronized record.
+- Define freshness, ordering, conflict, replay, idempotency, clock, identity, and authority-expiry semantics.
+- Secure boot or equivalent, update, attestation, physical access, local encryption, quarantine, and recovery require explicit ownership.
+- Account for bandwidth, power, storage, thermal, and physical failure constraints.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show site, node, workload, connectivity, policy freshness, health, authority, data, evidence, and lifecycle.
+- Expose local and central actions, physical consequence, approval, actor, and recovery path.
+- Permit authorized stop, isolate, revoke, resynchronize, restore, update, rollback, replace, and retire actions.
+- Export node histories, synchronization records, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Edge topology, site and node catalog, local-central authority model, data and synchronization contracts, and deployment model.
+- Offline, update, physical security, privacy, safety, observability, capacity, recovery, migration, and retirement plans.
+- Verification, incident, evidence, risk, decision, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify site, node, workload, connectivity, policy age, version, configuration, method, time, actor, and limitation.
+- Lab, simulation, telemetry, deployment, synchronization, or drill evidence proves only its declared sites and conditions.
+- Offline, safety, security, freshness, recovery, and physical evidence identifies coverage and validity.
+- Missing, stale, or contradictory node evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace requirements through node allocation, data flow, policy, runtime, evidence, recovery, and retirement.
+- Exercise disconnect, stale authority, duplicate or conflicting data, clock drift, node loss, update rollback, and physical access failure.
+- Verify local actions cannot exceed authority, bypass safety or privacy controls, or erase audit history.
+- Verify restore, resynchronization, quarantine, and safe return to service.
+- Reproduce representative edge claims from the exact node and site baseline.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating central availability as edge availability or offline continuation as authorized autonomy.
+- Ignoring site conditions, physical access, stale policy, clock, power, storage, bandwidth, and update dependencies.
+- Allowing local caches, models, or operators to bypass authority, privacy, safety, or evidence controls.
+
+RECOVERY AND RECONSIDERATION
+
+- On node compromise, stale policy, unsafe condition, synchronization conflict, or evidence loss, isolate the node and preserve records.
+- Identify safe local operation, authority, site owner, affected users, evidence, and review condition.
+- Use manual control, reduced mode, quarantine, restore, resynchronization, rollback, replacement, or retirement.
+- Reopen on site, device, workload, policy, connectivity, model, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Nodes, sites, authority, connectivity, data, synchronization, safety, security, evidence, recovery, and lifecycle are explicit.
+- Offline, stale, disconnected, physical, migration, and retirement behavior is addressed or justified.
+- Exact validity and unresolved gaps are recorded; CONTENT-COMPLETE does not imply safe field operation.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve site and node identities, versions, policy, synchronization, incidents, decisions, evidence, dissent, and gaps.
+- Hand off to Cloud, Infrastructure, Network, Communications, Security, Data, Robotics, Embedded, Operations, Testing, and Retirement.
+- Record changes requiring reopening Application, Platform, Safety, Reliability, Resilience, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-036 Requirements through Cloud Architecture; 038-044 Distributed through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 068-074 embedded and robotics engineering; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-036, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal edge, site, device, connectivity, safety, or offline standard is supplied. Actual sites, node inventory, physical authority, recovery targets, and acceptance evidence remain unresolved.

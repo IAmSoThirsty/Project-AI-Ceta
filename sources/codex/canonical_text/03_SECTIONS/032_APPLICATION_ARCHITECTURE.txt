@@ -1,0 +1,216 @@
+SECTION 032 — Application Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed structure of application systems and application boundaries: which applications exist, what responsibilities they hold, how they interact with people and other systems, how they are deployed and operated, and how they change across their lifecycle.
+
+Application Architecture translates functional, information, data, process, operational, security, and user obligations into application responsibilities, boundaries, modules, services, interfaces, state, dependencies, user surfaces, deployment units, and lifecycle controls. It is not a product catalog or implementation proof.
+
+REQUIRED OUTCOME
+
+- An application landscape with stable identities, purposes, owners, users, environments, responsibilities, dependencies, criticality, data, interfaces, and lifecycle state.
+- Explicit application boundaries and allocation of functions, information, data, workflows, controls, and user journeys.
+- Application context, interaction, integration, state, deployment, configuration, observability, support, and recovery views.
+- Application contracts for interfaces, identity, authorization, data, events, timing, errors, compatibility, audit, and evidence.
+- Traceability from requirements, capabilities, processes, functions, information, data, security, privacy, operations, tests, evidence, and retirement.
+- A migration, coexistence, versioning, deprecation, support, and retirement model that preserves authority and continuity.
+
+WHY THIS MATTERS
+
+Applications become dangerous when boundaries are implicit. Responsibilities are duplicated, data is copied without ownership, users are forced across inconsistent workflows, and failures propagate because no one defined state, contracts, or recovery. A catalog alone cannot show whether an application is fit for purpose, secure, accessible, supported, or operational.
+
+Application Architecture keeps behavior and ownership visible across user-facing and back-office surfaces, services, jobs, agents, integrations, and supporting applications. For AI-enabled applications, it makes model, provider, prompt, tool, data, human-review, and fallback behavior part of the application boundary rather than hidden implementation detail.
+
+APPLICABILITY
+
+- One or more applications, services, clients, jobs, agents, or user surfaces realize material functions or information journeys.
+- Application boundaries, integration, state, identity, data, user experience, deployment, support, or lifecycle affect outcomes.
+- Applications are composed, replaced, integrated, migrated, exposed to external users, or operated across environments.
+- Failure, unauthorized action, inaccessible behavior, data loss, dependency drift, or unsupported versions could cause material consequence.
+
+NON-APPLICABILITY CONDITIONS
+
+- The change has no material effect on application responsibility, boundary, interface, state, data, identity, user journey, operation, evidence, or lifecycle.
+- An approved application architecture covers the exact scope, version, environment, population, and change, and impact analysis confirms no material effect.
+- The artifact is exploratory and makes no claim that an application is approved, implemented, deployed, secure, accessible, supported, or accepted.
+
+The determination must identify the baseline, scope, owner, evidence date, assumptions, and reopening trigger. A single executable or vendor package is not automatically exempt when it carries material responsibility.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-020 provide requirements, system boundary, functions, interfaces, lifecycle, verification, validation, transition, and recovery context.
+- Sections 021-031 provide enterprise, solution, systems, domain, business, capability, process, functional, operational, information, and data context.
+- User, operator, security, privacy, accessibility, reliability, support, deployment, and retirement obligations are known or marked unresolved.
+- Human authorities for application ownership, release, data, access, risk, acceptance, and retirement are attributable.
+
+REQUIRED INPUTS
+
+- Objectives, users, operators, affected parties, journeys, environments, operating modes, jurisdictions, and lifecycle horizon.
+- Requirements, functions, processes, information and data contracts, domain rules, controls, service levels, risks, and acceptance criteria.
+- Application inventory, source repositories, dependencies, runtime environments, interfaces, configurations, credentials, logs, incidents, support, and deployment records.
+- Identity, authorization, privacy, security, accessibility, reliability, resilience, observability, backup, migration, deprecation, and retirement obligations.
+- AI models, providers, prompts, tools, data, policies, autonomy, human review, evaluation, fallback, monitoring, and revocation requirements where applicable.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The accountable human owner retains authority over application purpose, boundaries, architecture, data use, access, release, risk, user impact, service commitments, exceptions, support, and retirement.
+
+- Confirm application scope, responsibilities, users, environments, modes, non-goals, and criticality.
+- Assign application owner, product or service owner, data owner, security, privacy, accessibility, operations, support, and retirement authorities.
+- Approve boundaries, integrations, releases, migrations, provider use, automation, exceptions, risk treatments, and decommissioning.
+- Resolve conflicts among usability, cost, performance, security, privacy, safety, accessibility, reliability, resilience, maintainability, and continuity.
+- Ensure affected users, operators, maintainers, support, and qualified specialists review material application behavior.
+- Retain the ability to stop, narrow, revoke, roll back, isolate, restore, replace, or retire an application.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory applications, map dependencies, analyze traces and interfaces, propose boundaries, draft contracts, identify drift, generate test cases, and recommend migration or remediation within explicit authority.
+
+AI must preserve artifact identity, version, environment, source, configuration, evidence, and uncertainty; distinguish application behavior from proposed design; and escalate when access, data, safety, security, privacy, user impact, or release authority is unresolved.
+
+AI must not invent application capability, claim deployment or support, change production configuration, approve release, expose secrets, alter user rights, or treat a successful build, demo, test, or model response as application acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: defines application boundaries, responsibilities, interfaces, dependencies, state, deployment, and lifecycle.
+- Analyst: evaluates application behavior, alternatives, dependencies, cost, risk, and impacts.
+- Researcher: gathers user, domain, technical, operational, supplier, and current-state evidence.
+- Implementer: realizes approved application structure and reports deviations.
+- Refactorer: improves internal structure while preserving approved contracts and behavior.
+- Tester: validates interfaces, workflows, failure, security, accessibility, performance, recovery, and compatibility.
+- Verifier: independently checks application claims, versions, configurations, evidence, and acceptance.
+- Security Auditor: examines identity, authorization, secrets, dependencies, data, attack surface, and recovery.
+- User Experience Reviewer: evaluates user, operator, accessibility, explanation, correction, and recovery journeys.
+- Governance Reviewer: checks authority, release, records, licensing, risk, and status.
+- Planner: sequences design, implementation, integration, transition, support, and retirement.
+- Documentation Writer: maintains application catalogs, contracts, runbooks, decisions, and limitations.
+- Memory Curator: preserves versions, dependencies, decisions, evidence, and continuity.
+- Critic: challenges boundary leakage, hidden coupling, false completeness, and unsupported claims.
+- Optimizer: improves measured behavior without weakening protected outcomes or controls.
+- Red Team: probes application misuse, integration, privilege, failure, and recovery paths.
+
+Role selection remains proportional to consequence. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Establish application purpose, users, scope, responsibilities, environments, modes, criticality, and lifecycle.
+2. Inventory applications, modules, services, jobs, agents, clients, packages, data stores, providers, interfaces, and dependencies.
+3. Define application boundaries and allocate functions, processes, information, data, controls, user journeys, and operations.
+4. Model application context, interaction, sequence, state, deployment, configuration, identity, trust, and failure domains.
+5. Define interfaces and application contracts for inputs, outputs, identity, authority, schema, timing, errors, retries, compatibility, and evidence.
+6. Define user, operator, administrative, support, API, batch, event, offline, and recovery surfaces.
+7. Address security, privacy, safety, accessibility, reliability, resilience, observability, support, maintainability, and cost obligations.
+8. Assess dependency, version, provider, license, configuration, secret, data, runtime, and supply-chain risks.
+9. Define build, release, deployment, configuration, promotion, rollback, migration, coexistence, support, deprecation, and retirement behavior.
+10. Define AI and automation boundaries, model or provider identity, tool permissions, review, fallback, monitoring, and revocation where applicable.
+11. Validate with owners, users, operators, maintainers, support, domain, data, security, privacy, accessibility, and operations specialists.
+12. Test normal, invalid, unauthorized, concurrent, degraded, offline, dependency-loss, migration, rollback, recovery, and retirement paths.
+13. Baseline and hand off application responsibilities, contracts, evidence, open gaps, and reopening conditions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Identify whether an application action is performed by a human, rule, automation, AI model, agent, external service, or hybrid.
+- Show application, model, provider, prompt, policy, tool, data, authority, review, and evidence identity for consequential generated behavior.
+- Require authorized human review for release, privilege, data-use, externally binding, rights-affecting, safety, privacy, or irreversible actions.
+- Keep status, evidence, correction, non-AI, manual fallback, stop, and recovery paths available during AI or provider failure.
+- Expose assumptions, uncertainty, alternatives, limitations, and evidence that would invalidate a recommendation.
+- Never allow conversational convenience, administrative access, retry, import, or recovery to bypass application controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent application identities, responsibilities, boundaries, modules, services, clients, jobs, agents, interfaces, states, configurations, dependencies, evidence, and lifecycle as versioned artifacts.
+- Separate application definition, source, build artifact, deployed instance, runtime state, user data, logs, cache, backup, and evidence.
+- Define application contracts with identity, authority, schema, timing, ordering, quality, errors, retry, idempotency, compatibility, audit, observability, and ownership.
+- Make authentication, authorization, privacy, accessibility, safety, resilience, and recovery enforceable across UI, API, batch, event, administrative, and emergency paths.
+- Preserve independent stop, diagnosis, evidence, support, fallback, rollback, and recovery capabilities.
+- Trigger impact analysis for changes to requirements, functions, data, interfaces, dependencies, providers, identity, policies, environments, or configurations.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show application baseline, version, environment, owner, status, dependencies, data scope, authority, lifecycle, and evidence freshness.
+- Let owners navigate from requirement, process, function, information, or data to application boundary, interface, deployment, test, evidence, and incident.
+- Show available, prohibited, consequential, awaiting-approval, degraded, failed, unverified, and recovery actions.
+- Expose acting identity, role, authority, tools, data boundary, user impact, and approval requirement.
+- Provide authorized approve, deny, release, pause, revoke, isolate, roll back, restore, migrate, supersede, and retire controls.
+- Explain what is designed, built, deployed, running, measured, verified, accepted, degraded, or unknown.
+- Export the application architecture, contracts, dependency map, configuration identity, evidence, decisions, dissent, and continuity record.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Application Architecture charter, landscape, ownership, criticality, and lifecycle catalog.
+- Application context, boundary, responsibility, user journey, interaction, state, deployment, trust, and dependency models.
+- Application interface, data, event, identity, authorization, configuration, observability, and support contracts.
+- Application security, privacy, accessibility, safety, reliability, resilience, backup, restore, migration, deprecation, and retirement model.
+- Build, release, deployment, promotion, rollback, coexistence, support, incident, and operational-readiness handoff.
+- Human-AI application participation, autonomy, review, provider, tool, data, monitoring, fallback, and revocation model.
+- Traceability, evidence, decision, assumption, risk, exception, dissent, and reopening registers.
+
+EVIDENCE REQUIREMENTS
+
+- Every application claim identifies artifact, version, source, environment, configuration, scope, actor, method, date, result, and limitation.
+- A source tree, build, deployment, demo, uptime signal, or test proves only its bounded claim and not general fitness or acceptance.
+- Boundary and responsibility evidence identifies requirement, function, data, interface, owner, allocation rationale, and status.
+- Interface evidence identifies endpoints, versions, schemas, identity, authority, timing, errors, compatibility, observed result, and limitations.
+- Deployment and runtime evidence identifies artifact, configuration, environment, change, timing, telemetry, result, and rollback or recovery state.
+- AI evidence identifies model, provider, version, context, data, tools, permissions, review, evaluation, and limitation.
+- Failed, stale, partial, contradictory, insecure, inaccessible, and missing evidence constrains application status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace representative requirements, processes, functions, information, and data through application boundaries, interfaces, deployments, tests, evidence, and retirement.
+- Introduce duplicate, missing, unowned, over-broad, unreachable, incompatible, unauthorized, and undocumented application responsibilities and verify detection.
+- Exercise user, operator, API, batch, event, administrative, offline, degraded, dependency-loss, rollback, recovery, migration, and retirement paths.
+- Verify identity, authorization, data minimization, audit, privacy, accessibility, safety, observability, and recovery across every material entry path.
+- Disable dependencies, credentials, providers, models, network, data sources, configuration, and evidence stores and verify safe behavior.
+- Change a contract, schema, dependency, model, provider, configuration, role, policy, or environment and verify impact and evidence invalidation.
+- Verify release, promotion, rollback, restore, migration, and deprecation procedures with recorded results.
+- Independently reproduce representative application claims from the exact baseline and handoff package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating an application catalog, source repository, build, deployment, demo, or uptime metric as proof of correctness.
+- Letting application boundaries follow team charts or vendor packaging instead of responsibility, data, authority, and outcome.
+- Hiding shared databases, privileged paths, background jobs, manual work, configuration, secrets, or provider dependencies.
+- Supporting the happy path while omitting invalid, unauthorized, concurrent, stale, offline, degraded, migration, and recovery behavior.
+- Allowing AI or administrators to bypass user, data, identity, audit, accessibility, security, or recovery controls.
+- Optimizing local application performance or cost while weakening user outcome, privacy, safety, reliability, maintainability, or retirement.
+
+RECOVERY AND RECONSIDERATION
+
+- On a critical defect, dependency loss, unauthorized state, data issue, security event, inaccessible path, evidence failure, or authority conflict, stop or isolate the affected application behavior and preserve state.
+- Name the blocker, safe operation, authority, affected users, evidence, owner, communication path, and review condition.
+- Use approved fallback, manual operation, feature reduction, provider substitution, rollback, restore, failover, migration, or retirement paths.
+- Reassess security, privacy, accessibility, safety, data, commitments, support, and downstream evidence before resuming.
+- Reopen the architecture when application boundaries, functions, data, interfaces, dependencies, environments, or lifecycle assumptions change.
+
+COMPLETION CRITERIA
+
+- Application purpose, boundary, responsibilities, users, data, interfaces, identity, deployment, dependencies, controls, operation, recovery, and lifecycle are explicit.
+- Normal, boundary, failure, degraded, offline, migration, rollback, support, deprecation, and retirement behavior is addressed or justified.
+- Application claims are traceable to requirements and bounded by evidence, verification, acceptance, and unresolved gaps.
+- Owner controls and handoff artifacts support continuation without hidden conversation state.
+- The section remains CONTENT-COMPLETE until source reconciliation, hostile review, and owner acceptance are separately completed.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve application identities, boundaries, responsibilities, contracts, versions, dependencies, configurations, decisions, evidence, incidents, dissent, and open gaps.
+- Hand off to Software, Platform, Infrastructure, Cloud, Edge, Distributed, Network, Communications, Integration, API, Event, Runtime, Security, Identity, Privacy, Testing, Operations, Maintenance, and Retirement work.
+- Record changes requiring reopening Functional, Information, Data, Operational, Security, Privacy, Reliability, Resilience, Accessibility, Testing, or Governance sections.
+- State next safe action, blocked action, authority, evidence request, exact baseline, and continuation point.
+
+RELATED CODEX SECTIONS
+
+- 019 Requirements Engineering; 020 Systems Engineering; 021-031 Enterprise through Data Architecture.
+- 033-044 Software, Platform, Infrastructure, Cloud, Edge, Distributed, Network, Communications, Integration, API, Event-Driven, and Runtime Architecture.
+- 045-060 Security through Hardware Architecture.
+- 107-150 Software Engineering through Smart Contract Engineering.
+- 255-300 Test, delivery, deployment, packaging, provisioning, and platform lifecycle sections.
+- 301-406 Operations, support, maintenance, preservation, governance, and retirement sections.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- This draft uses the Canonical Section Contract, shared governance files, Sections 001-031, Owner Cockpit Requirements, Status and Evidence Lexicon, and the Remaining-Section Integration Roadmap.
+- The supplied Codex does not specify a universal application reference architecture, technology stack, licensing regime, deployment model, service-level regime, or sector-specific acceptance standard.
+- Actual application inventory, owners, users, dependencies, environments, contracts, accessibility obligations, support model, security posture, and retirement authority remain unresolved until supplied and verified.

@@ -1,0 +1,102 @@
+SECTION 191 — Product Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern the security of a product from concept through design, development, release, use, support, update, and retirement, including customer-facing behavior, supply chain, commitments, and abuse resistance.
+
+REQUIRED OUTCOME
+
+ - Product security objectives, threat model, security requirements, accountable owners, release gates, support commitments, and retirement conditions.
+ - Security controls and evidence spanning design, build, delivery, deployment, use, update, incident, and customer communication.
+ - A risk and vulnerability process that protects users without concealing limitations or shifting unbounded burden to customers.
+
+WHY THIS MATTERS
+
+Customers experience the security of the whole product, including defaults, integrations, documentation, update paths, support, and supplier behavior. A secure component can still create an unsafe product promise or operational dependency.
+
+APPLICABILITY
+
+Applies to products, services, devices, platforms sold or provided to users, internal products with material users, managed offerings, SDKs, APIs, models, and productized AI capabilities.
+
+NON-APPLICABILITY CONDITIONS
+
+Only when an approved product-security baseline covers exact product, release, users, threat environment, dependencies, and lifecycle change. Research prototypes may be scoped as proposed and must not imply customer readiness.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 005-010, 018-020, 032, 045-050, 107-150, 179-188, 246, 260, 270, 287-297, and 301-406 provide product, risk, system, application, security, engineering, AI, testing, delivery, operations, and lifecycle context.
+
+REQUIRED INPUTS
+
+Product goals, users, abuse cases, customer promises, data and identity flows, threat model, architecture, dependencies, suppliers, release plan, support model, vulnerability history, update capability, and retirement obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Product and security owners decide acceptable risk, customer commitments, release, disclosure, exceptions, support, and retirement. They must ensure affected users and qualified security, privacy, safety, accessibility, legal, and operations authorities participate.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare product requirements, identify abuse cases, analyze vulnerabilities, draft controls and communications, and propose tests. It cannot promise security, suppress findings, invent customer impact, approve release, or disclose incidents without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Product Manager, Analyst, Researcher, Security Auditor, Governance Reviewer, Implementer, Tester, Verifier, Observer, Critic, Red Team, Documentation Writer, Memory Curator, Coordinator, and Planner.
+
+REQUIRED ACTIVITIES
+
+1. Define product scope, users, protected outcomes, promises, lifecycle, and accountability.
+2. Model product attack surface, abuse, dependencies, supply chain, update, support, and customer responsibility boundaries.
+3. Derive security requirements and release, disclosure, support, and retirement gates.
+4. Validate defaults, documentation, controls, update paths, integrations, accessibility, privacy, and failure behavior.
+5. Exercise hostile use, dependency compromise, account loss, update failure, incident communication, and recovery.
+6. Baseline residual risk and hand off support, operations, vulnerability, and retirement obligations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show product claims separately from verified evidence, customer configuration, and AI recommendations. Human approval is required for commitments, release, exceptions, disclosure, and changes affecting user rights or safety. Preserve accessible reporting, status, correction, and recovery paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Connect product requirements to architecture, code, dependencies, configuration, documentation, telemetry, support, update, and retirement records. Design secure defaults, tenant isolation, update integrity, backward compatibility, abuse controls, and customer-visible limitations.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show product release, version, threat exposure, findings, support status, update state, customer impact, evidence freshness, exceptions, and available containment or retirement actions with authority.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Product security charter, threat and abuse model, security requirements, customer responsibility matrix, supply-chain inventory, release gate, test evidence, vulnerability and disclosure process, support runbook, incident communications, and retirement record.
+
+EVIDENCE REQUIREMENTS
+
+Identify product version, configuration, population, environment, method, coverage, result, owner, date, and limitations. Marketing, certification, benchmark, scan, or pilot evidence proves only its stated scope and period.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify secure defaults, tenant separation, update authenticity, rollback, integrations, privacy, accessibility, abuse reporting, rate limits, failure, support, disclosure, and customer recovery. Independently reproduce material claims.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Security theater through badges or marketing; insecure defaults; unclear customer responsibility; unpatchable deployments; unsupported versions; hidden telemetry; silent supplier risk; hostile user assumptions; and minimizing incident impact to protect reputation.
+
+RECOVERY AND RECONSIDERATION
+
+Contain affected product behavior, preserve evidence, notify authorized parties, provide mitigations or safe degradation, patch or compensate, verify customer impact, and reopen commitments when threat, dependency, population, release, or evidence changes.
+
+COMPLETION CRITERIA
+
+Product scope, owners, users, threats, requirements, controls, lifecycle, support, update, evidence, tests, recovery, disclosure, residual risk, and acceptance are explicit. Status remains CONTENT-COMPLETE pending qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve product identity, release, dependencies, customer obligations, decisions, evidence, findings, communications, dissent, and next action. Hand off to Application, Platform, Cloud, Infrastructure, Privacy, Trust and Safety, Vulnerability, Incident, Support, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+005-010 Strategy and Management; 018-020 Risk through Systems Engineering; 032-060 architecture; 190 Application Security; 209-218 vulnerability, testing, incident, fraud, abuse, trust, and privacy; 287-297 release and change; 301-406 operations and retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and supplied neighboring sections. No universal product-security standard, customer contract, disclosure timeline, support duration, certification, threat population, or update guarantee is supplied; these remain scope-specific gaps.

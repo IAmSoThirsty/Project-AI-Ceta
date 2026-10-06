@@ -1,0 +1,95 @@
+SECTION 360 — Payments Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Authorize, initiate, authenticate, settle, reconcile, reverse, refund, and record payments securely, reliably, transparently, and within customer and regulatory boundaries.
+
+REQUIRED OUTCOME
+
+A payments model with instrument, customer, authorization, provider, amount, currency, idempotency, status, fraud, settlement, dispute, refund, privacy, and reconciliation.
+
+WHY THIS MATTERS
+
+Payments combine money, identity, availability, fraud, privacy, and legal obligations. A provider response can be delayed, duplicated, reversed, or inconsistent with commerce and ledger state.
+
+APPLICABILITY
+
+Apply when a system initiates, accepts, authorizes, settles, refunds, disputes, or reconciles monetary payment.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no payment, customer, amount, instrument, provider, settlement, refund, or financial record changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use commerce, billing, identity, fraud, privacy, security, legal, provider, ledger, records, and reconciliation baselines.
+
+REQUIRED INPUTS
+
+Customer, amount, currency, product, instrument reference, provider, authorization, idempotency, status, settlement, refund, dispute, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Payments owners approve provider, instrument, limits, fraud, refund, dispute, access, exception, and reconciliation. Humans handle high-risk or disputed financial decisions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized payment metadata, identify anomalies, and draft reconciliation or support explanations. It must not access instrument secrets, initiate or reverse payment, approve refund, or decide fraud without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Payments Engineer, Billing Engineer, Fraud Analyst, Security Auditor, Privacy Reviewer, Commerce Manager, Financial Analyst, Tester, Verifier, and Incident Responder.
+
+REQUIRED ACTIVITIES
+
+Define payment state; tokenize or reference; authorize; handle provider response; enforce idempotence; settle; reconcile; refund or dispute; monitor; secure; and recover.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show payment reference, customer, amount, currency, provider, status, action, authority, evidence, and limitation without exposing instrument data. Require human approval for refund, reversal, dispute, and exception.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use tokenization, least privilege, idempotency, state machine, provider abstraction, ledger, webhook validation, audit, privacy, fraud control, and retry without duplicate charge.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show payment state, provider, amount, currency, settlement, dispute, evidence freshness, owner, and authorized hold, retry, refund, reverse, reconcile, and restrict controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Payments charter; state and provider; instrument and security; authorization and settlement; reconciliation, refund, dispute, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify payment reference, customer, amount, currency, provider, state, method, time, actor, result, and limitation. Provider response proves only its recorded response and status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorization, token, amount, currency, idempotence, provider, webhook, settlement, refund, dispute, ledger, privacy, fraud, and recovery. Test timeout, duplicate, reversal, and provider outage.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Instrument data in logs, duplicate charge, provider state as ledger truth, retry without idempotence, refund without authorization, webhook trust, and payment success treated as fulfillment.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze or reconcile, preserve provider and ledger evidence, refund or reverse through authority, communicate, protect customer, and reassess. Reopen on provider, state, fraud, contract, or dispute change.
+
+COMPLETION CRITERIA
+
+Customer, amount, currency, provider, state, authorization, settlement, refund, dispute, evidence, owners, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve references, states, provider events, ledgers, disputes, decisions, evidence, exceptions, and open gaps. Hand off to Billing, Commerce, Fraud, Finance, Legal, Support, Security, and Records.
+
+RELATED CODEX SECTIONS
+
+358 Commerce; 359 Billing; 361 Subscription Management; 215 Fraud Prevention; 200-202 IAM; 218 Privacy; 226 Audit; 225 Records.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, commerce, finance, payments, security, privacy, fraud, and evidence context, and the integration roadmap. Exact providers, instruments, currencies, jurisdictions, fraud, settlement, refunds, and acceptance authority remain unresolved.

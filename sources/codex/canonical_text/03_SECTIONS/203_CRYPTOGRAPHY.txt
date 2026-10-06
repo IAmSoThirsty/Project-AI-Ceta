@@ -1,0 +1,95 @@
+SECTION 203 — Cryptography
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Select, apply, verify, and retire cryptographic protections that preserve confidentiality, integrity, authenticity, non-repudiation where required, and controlled recovery for the declared data and trust scope.
+
+REQUIRED OUTCOME
+
+A cryptographic architecture with protection goals, algorithms and protocols, randomness, parameters, key dependencies, trust boundaries, data states, implementation constraints, crypto-agility, verification, migration, and failure handling.
+
+WHY THIS MATTERS
+
+Cryptography can create false confidence when the wrong property, algorithm, mode, key lifecycle, implementation, or trust assumption is used. Strong primitives do not repair poor key management, unauthenticated metadata, weak randomness, unsafe downgrade, or unverified migration.
+
+APPLICABILITY
+
+Apply when information, identity, communication, software, hardware, transactions, or evidence requires confidentiality, integrity, authenticity, origin binding, controlled disclosure, or tamper detection.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no protected property, cryptographic protocol, key, trust anchor, signature, encrypted data, or migration behavior is affected and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data classification, threat model, identity, key, secrets, application, network, hardware, compliance, retention, and recovery baselines. Define security goals, adversary, data states, trust boundaries, interoperability, performance, and recovery authority.
+
+REQUIRED INPUTS
+
+Protection goals, data and protocol inventory, algorithms, modes, parameters, libraries, platforms, randomness, keys, certificates, trust anchors, users, jurisdictions, performance, retention, migration, and acceptance requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners and qualified security authorities approve cryptographic policy, algorithms, parameters, trust anchors, exceptions, export or regulatory handling, migration, decryption recovery, and retirement. Humans accept residual risk and decide when a protection is no longer adequate.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized cryptographic configurations, dependency versions, protocol traces, certificates, and test evidence; identify known mismatches; draft inventories, tests, and migration options; and explain bounded behavior. It must not invent security strength, generate or expose production keys, choose policy without authority, weaken protection, or declare compliance from a library name or successful handshake.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Cryptography Engineer, Security Auditor, Researcher, Analyst, Implementer, Tester, Verifier, Governance Reviewer, Critic, Red Team, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Map protection goals and data states; select approved primitives and protocols; define parameters and trust anchors; verify randomness and implementation; bind identities and metadata; design downgrade and failure behavior; test interoperability and misuse; plan crypto-agility, migration, recovery, and retirement; record decisions and evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show protection goal, algorithm, mode, parameter, implementation, key dependency, trust anchor, version, environment, evidence, and limitation. Require human review for policy, key, trust, downgrade, migration, decryption, and exception decisions. Never place production secrets in prompts, logs, or generated artifacts.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate cryptographic policy, implementation, key management, certificate or trust authority, data, protocol, audit, recovery, and retirement. Authenticate context and metadata, prevent downgrade, use approved randomness and libraries, minimize custom cryptography, and make algorithm and key changes versioned and observable.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show protected asset, goal, algorithm, version, trust anchor, key state, evidence freshness, findings, migration state, and authorized controls to rotate, revoke, re-encrypt, restrict, recover, and retire. Explain data and operational impact before action.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Cryptographic policy; protection and data-state map; algorithm and protocol inventory; trust-boundary and dependency model; implementation and misuse tests; migration, exception, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, protection goal, protocol, algorithm, mode, parameters, implementation, version, key or trust dependency, environment, method, result, owner, and limitation. A successful handshake or encrypted file proves only its declared property and configuration.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify confidentiality, integrity, authenticity, randomness, parameter validation, identity binding, downgrade resistance, error handling, interoperability, key rotation, revocation, migration, recovery, and logging. Test wrong keys, altered context, replay, truncation, provider loss, and unsupported versions.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Custom cryptography, obsolete or unapproved primitives, unauthenticated encryption, hard-coded keys, weak randomness, silent downgrade, missing context binding, unverifiable certificates, and treating encryption at rest as complete protection.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve protected evidence, isolate affected protocols or data, revoke compromised trust, rotate or re-encrypt under approved authority, and use controlled legacy read paths only when risk is accepted. Reassess exposure, availability, retention, and recovery before restoring normal operation.
+
+COMPLETION CRITERIA
+
+Goals, assets, threats, algorithms, parameters, implementations, trust, keys, owners, tests, migration, recovery, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve policy and implementation versions, algorithm decisions, trust anchors, findings, exceptions, evidence, migration state, incidents, and open gaps. Hand off to Key Management, Secrets, Identity, Application, Network, Hardware, Security Operations, Testing, and Records.
+
+RELATED CODEX SECTIONS
+
+045 Security Architecture; 046 Identity Architecture; 200-202 Identity, Authentication, and Authorization; 204 Key Management; 205 Secrets Management; 206 Security Operations; 231-254 Testing; 388 Version Management; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security architecture, and the integration roadmap. Exact algorithms, assurance levels, jurisdictions, interoperability, future migration, hardware support, retention, and acceptance authority remain unresolved.

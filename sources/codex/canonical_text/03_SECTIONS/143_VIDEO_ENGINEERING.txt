@@ -1,0 +1,98 @@
+SECTION 143 - Video Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of captured, encoded, processed, delivered, decoded, and displayed moving-image content with explicit provenance, quality, accessibility, privacy, security, and lifecycle controls.
+
+REQUIRED OUTCOME
+
+A video baseline with source, rights, codecs, timing, quality, captions, delivery, storage, processing, evidence, recovery, and retirement.
+
+WHY THIS MATTERS
+
+Video can mislead through edits, missing context, stale frames, inaccessible delivery, or provenance loss. Availability and resolution do not prove truth or comprehension.
+
+APPLICABILITY
+
+Applies to capture, editing, encoding, playback, conferencing, surveillance, broadcast, computer vision input, and video delivery systems.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to systems with no video capture, processing, delivery, display, or video-dependent outcome. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires purpose, sources, consent, rights, codecs, timing, quality, captions, privacy, security, storage, delivery, accessibility, and retention authority.
+
+REQUIRED INPUTS
+
+Provide source, frame rate, resolution, color, audio relation, edits, metadata, captions, latency, network, device, retention, and failure requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve content, consent, rights, surveillance, publication, accessibility, safety, and retention. Humans decide whether video is fit for evidence or decision use.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may transcode, caption, summarize, detect defects, or analyze supplied video. It must preserve provenance, expose uncertainty, and never publish or infer consequential facts without review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Video Engineer, Architect, Researcher, Privacy Reviewer, Security Auditor, Accessibility specialist, Implementer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define purpose, source, rights, consent, quality, accessibility, pipeline, and lifecycle.
+2. Build capture, edit, encode, deliver, playback, caption, and archive paths.
+3. Verify integrity, quality, timing, accessibility, privacy, security, and recovery.
+4. Operate, monitor, correct, withdraw, and retire video assets and services.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, edit history, model or tool, timestamp, consent, caption state, quality, and evidence. Human approval is required for publication and consequential interpretation; alternative access remains available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate capture, storage, edit, encode, manifest, delivery, playback, caption, analytics, and archive boundaries. Preserve hashes, time, lineage, access, deletion, and safe fallback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show asset, source, version, delivery state, latency, quality, captions, permissions, incidents, and controls to stop capture, restrict access, withdraw, restore, or delete.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Video charter, source and rights catalog, media pipeline, edit and provenance record, caption and accessibility plan, quality evidence, delivery manifest, support, and retention package.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, asset, edit, codec, build, timestamp, device, method, result, and limits. Separate media quality, integrity, accessibility, privacy, security, and interpretation evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify consent, integrity, edit lineage, timestamps, codecs, captions, quality, sync, network loss, authorization, malformed media, retention, deletion, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unmarked edits; missing captions; capture without consent; insecure manifests; inaccessible controls; codec lock-in; and treating clear video or detection output as truth.
+
+RECOVERY AND RECONSIDERATION
+
+Stop capture or publication, preserve chain of custody, restrict or withdraw content, provide alternate access, compensate affected decisions, and reopen provenance and retention review.
+
+COMPLETION CRITERIA
+
+Purpose, source, rights, consent, provenance, accessibility, evidence, delivery, recovery, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve asset hashes, source, edits, captions, permissions, decisions, incidents, evidence, and next safe action. Hand off to Media, Streaming, Search, Privacy, Security, Accessibility, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+142 Audio Engineering; 143 Video Engineering; 144 Media Engineering; 145 Streaming Engineering; 146 Search Engineering; 218 Privacy Engineering; 247 Accessibility Testing; 392 Data Archival.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 075-106 and 107-142, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual content rights, consent, chain-of-custody rules, codec populations, accessibility standards, and retention duties remain unresolved.

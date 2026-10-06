@@ -1,0 +1,95 @@
+SECTION 300 — Content Delivery Networks
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Deliver cached or proxied content with controlled origin, identity, cache, integrity, privacy, availability, invalidation, observability, and recovery.
+
+REQUIRED OUTCOME
+
+A CDN model with content, origin, audience, cache policy, headers, certificates, access, invalidation, regions, provider, metrics, cost, and rollback.
+
+WHY THIS MATTERS
+
+Caching changes what users receive and for how long. Stale, private, wrong-region, unauthorized, or poisoned content can persist after origin correction and may be hard to withdraw.
+
+APPLICABILITY
+
+Apply when a CDN, edge cache, reverse proxy, or content acceleration service stores or serves content, APIs, data, or artifacts.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no cache, origin, content, access, certificate, invalidation, or delivery behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use content, domain, certificate, network, privacy, security, artifact, release, distribution, and operations baselines.
+
+REQUIRED INPUTS
+
+Content, origin, cache key, TTL, headers, audience, identity, region, certificate, invalidation, provider, metrics, cost, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve origin, content, cache, private-data handling, access, provider, invalidation, cost, and emergency purge. Humans accept stale and provider risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized CDN metadata, cache behavior, headers, and metrics; draft policy and tests; and identify anomalies. It must not publish, purge, change origin, expose content, or alter cache policy without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+CDN Engineer, Network Engineer, Cloud Engineer, Security Auditor, Release Engineer, Content Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Define content and origin; design cache and access; configure certificates and headers; deploy; validate; monitor; invalidate; handle origin or provider failure; control cost; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show content, origin, cache, audience, region, identity, certificate, action, evidence, and limitation. Require human approval for private content, origin, purge, routing, and production change.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use correct cache keys, private-content isolation, signed or authenticated requests, origin protection, TTL, purge, versioned URLs, integrity, WAF or rate controls, and fallback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show origin, cache health, content version, freshness, regions, access, incidents, evidence freshness, cost, owner, and authorized purge, route, restrict, rollback, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+CDN charter; origin and cache model; content and access policy; certificate and header; metrics and purge; incident, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify content, origin, cache key, region, request, policy, method, time, result, actor, and limitation. Cache hit or latency proves neither freshness nor authorization.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify cache key, privacy, headers, access, integrity, TTL, invalidation, certificate, origin failover, regions, cost, and recovery. Test stale and poisoned content.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Private data cached publicly, stale security content, purge not tested, origin exposed, cache poisoning, wildcard policy, and performance treated as delivery correctness.
+
+RECOVERY AND RECONSIDERATION
+
+Purge or restrict affected content, protect origin, preserve evidence, restore or replace, rotate credentials, notify consumers, and reassess copies. Reopen on content, origin, provider, policy, or certificate change.
+
+COMPLETION CRITERIA
+
+Origin, content, cache, access, identity, regions, certificates, freshness, purge, evidence, recovery, owners, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve content and cache policy, origins, certificates, purges, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Distribution, DNS, Network, Security, Release, Cloud, and Operations.
+
+RELATED CODEX SECTIONS
+
+291 Distribution; 298 Certificates; 299 DNS; 284 Network; 277 Cloud; 301-330 Operations; 391-395 Data Retention and Deletion.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, content, network, security, distribution, and operations context, and the integration roadmap. Exact provider, content, origin, cache, privacy, invalidation, regions, cost, and acceptance authority remain unresolved.

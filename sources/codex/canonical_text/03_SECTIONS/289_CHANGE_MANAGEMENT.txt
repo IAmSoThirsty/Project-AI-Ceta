@@ -1,0 +1,95 @@
+SECTION 289 — Change Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Control proposed, planned, emergency, rejected, implemented, failed, and retired change with proportionate impact analysis, authorization, evidence, and recovery.
+
+REQUIRED OUTCOME
+
+A change model with request, scope, reason, impact, risk, dependencies, approval, implementation, validation, communication, rollback, closure, and learning.
+
+WHY THIS MATTERS
+
+Change introduces uncertainty into a working system. Process can become either bureaucracy that teams bypass or a thin approval ritual that does not examine impact, evidence, or recovery.
+
+APPLICABILITY
+
+Apply when a change can affect behavior, users, data, security, safety, cost, service, architecture, obligations, or continuity.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when impact analysis shows no material behavior, dependency, risk, or operating effect and an approved exact baseline covers the change class.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use configuration, source, release, deployment, testing, architecture, risk, security, operations, communication, and rollback baselines.
+
+REQUIRED INPUTS
+
+Request, owner, reason, scope, baseline, impact, risk, dependencies, schedule, approvals, implementation, tests, communication, rollback, and closure evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Change owners assess and implement; approvers decide risk, timing, exception, and rollback; operators can stop unsafe change. Emergency changes require later review, not absence of accountability.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize diffs, map dependencies, draft impact and test plans, and identify missing evidence. It must not classify risk conclusively, approve, implement, bypass, or close a change without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Change Manager, Architect, Planner, Implementer, Tester, Verifier, Operations Engineer, Security Auditor, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Capture request; baseline; assess impact and risk; plan test, communication, and rollback; approve; implement; observe; validate; close or recover; review emergency; and update dependencies and records.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show change, baseline, risk, owner, authority, dependencies, evidence, implementation state, and rollback. Require human approval for protected, production, data, security, safety, and emergency changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use traceable change records, dependency graph, policy gates, staged execution, immutable artifacts, feature flags, rollback, audit, and change-aware evidence invalidation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show change state, impact, risk, approvals, dependencies, evidence freshness, implementation, incidents, rollback, and authorized approve, reject, schedule, pause, roll back, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Change record; impact and risk assessment; implementation and test plan; approvals; communication; validation and rollback; emergency review; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify change, baseline, owner, approver, scope, environment, method, time, result, impact, and limitation. Approval proves authorization, not successful or safe outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify impact, approvals, tests, communication, implementation, monitoring, rollback, emergency review, closure, and traceability. Test failed, partial, conflicting, and out-of-window change.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Approval without impact, change without baseline, emergency forever, hidden manual action, rollback untested, ticket closed by deployment, and process bypass caused by excessive friction.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or roll back, preserve state and evidence, communicate, recover, and reassess change and downstream impact. Reopen on incident, failed validation, new dependency, or invalidated evidence.
+
+COMPLETION CRITERIA
+
+Request, scope, impact, risk, authority, implementation, validation, recovery, evidence, communication, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve change history, approvals, implementations, incidents, rollbacks, evidence, exceptions, and open gaps. Hand off to Release, Deployment, Configuration, Operations, Security, Testing, and Governance.
+
+RELATED CODEX SECTIONS
+
+018 Risk Management; 258 Configuration; 267-268 Delivery and Deployment; 288 Release Management; 301-330 Operations; 386-390 Debt, Version, Deprecation, and Sunset.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, change, risk, release, and operations context, and the integration roadmap. Exact classes, authority, emergency, evidence, rollback, and acceptance rules remain unresolved.

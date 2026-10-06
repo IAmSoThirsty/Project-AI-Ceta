@@ -1,0 +1,95 @@
+SECTION 204 — Key Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern cryptographic keys through generation, provisioning, activation, use, rotation, backup, recovery, revocation, archival, destruction, and retirement.
+
+REQUIRED OUTCOME
+
+A key lifecycle and trust model identifying key classes, owners, purpose, algorithms, custody, access, state transitions, separation of duties, hardware or service protection, evidence, recovery, and destruction authority.
+
+WHY THIS MATTERS
+
+Keys are operational authority and protected assets. Lost, exposed, misused, stale, duplicated, or undeleted keys can make encrypted information unavailable, permit impersonation, invalidate evidence, or leave exposure after a system is retired.
+
+APPLICABILITY
+
+Apply when cryptographic keys, certificates, signing identities, tokens, trust anchors, hardware roots, or derived secrets protect data, identity, software, devices, communications, or decisions.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no key, trust anchor, cryptographic operation, certificate, signing identity, recovery, or destruction behavior is affected and an approved exact baseline covers the work.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use cryptography, identity, secrets, hardware, application, data, retention, recovery, compliance, and operations baselines. Define key owners, purpose, classification, algorithm, custody, consumers, availability, recovery, and destruction obligations.
+
+REQUIRED INPUTS
+
+Key inventory, classes, owners, purpose, algorithm, state, generation, storage, access, rotation, escrow or backup, recovery, revocation, consumers, dependencies, logs, retention, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve key purpose, custody, access, rotation, recovery, escrow, revocation, exceptions, and destruction. Separate administration, use, approval, audit, and recovery where consequence warrants. Humans decide whether a key may be recovered, retained, or destroyed.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized key metadata, lifecycle records, certificate inventories, rotation events, and test evidence; identify stale or inconsistent state; draft inventories, controls, and tests; and propose bounded remediation. It must never request, reveal, generate, copy, store, rotate, revoke, recover, or destroy production key material without explicit authorized tooling and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Cryptography Engineer, Key Management Engineer, Security Auditor, Governance Reviewer, Implementer, Tester, Verifier, Researcher, Analyst, Critic, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Classify keys and assign owners; define state transitions; select generation and storage controls; enforce separation of duties; bind keys to purpose and identity; design rotation, revocation, backup, recovery, archival, destruction, audit, migration, and incident response; test failure and restore; record exceptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Keep key material out of prompts, logs, diagnostics, and generated documents. Show key identifier, purpose, owner, state, consumer, policy version, evidence, and limitation without exposing secret material. Require human approval for recovery, revocation, destruction, escrow, and emergency use.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate key administration, cryptographic use, storage, hardware security, backup, recovery, audit, certificate authority, and application data. Use non-exportable protection where justified, least privilege, dual control, key versioning, dependency discovery, and explicit behavior when the key service is unavailable.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show key class, identifier, purpose, owner, state, age, consumers, rotation and expiry, evidence freshness, incidents, dependencies, and authorized rotate, revoke, recover, re-encrypt, archive, and destroy controls. Never render secret material.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Key taxonomy and inventory; lifecycle and custody model; generation, storage, rotation, recovery, revocation, archival, destruction, and migration procedures; access, audit, test, exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify key class and identifier, purpose, owner, state, algorithm, version, service or device, method, time, actor, result, and limitation. Evidence must prove control behavior without exposing key material; a key record alone does not prove safe custody or use.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify generation, entropy, custody, access, use binding, rotation, revocation, expiry, backup, restore, failover, audit, destruction, and consumer migration. Test unavailable key service, lost recovery path, stale certificate, duplicate key, unauthorized export, and emergency procedure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Hard-coded or shared keys, unowned keys, indefinite lifetime, uncontrolled export, backup without protection, recovery by one person, rotation that breaks consumers, and destroying keys without retention or legal review.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve key state and evidence, isolate affected consumers, revoke or rotate compromised keys, use approved recovery or prior version, and notify owners. Re-encrypt or restrict data where required. Reassess availability, exposure, retention, and destruction before resuming.
+
+COMPLETION CRITERIA
+
+Key classes, owners, purpose, lifecycle, custody, access, consumers, recovery, destruction, evidence, tests, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve identifiers and metadata, not secret material, along with lifecycle decisions, consumer dependencies, rotations, incidents, evidence, exceptions, recovery, and open gaps. Hand off to Cryptography, Identity, Secrets, Application, Hardware, Operations, Records, and Security Operations.
+
+RELATED CODEX SECTIONS
+
+045 Security Architecture; 046 Identity Architecture; 198-199 Embedded and Hardware Security; 200-203 IAM, Authentication, Authorization, and Cryptography; 205 Secrets Management; 206 Security Operations; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, cryptographic and identity architecture, and the integration roadmap. Exact custody, hardware, escrow, recovery, regulatory, retention, algorithm, and destruction requirements remain unresolved.

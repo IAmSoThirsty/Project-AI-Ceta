@@ -1,0 +1,490 @@
+SECTION 019 — Requirements Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Transform authorized objectives, stakeholder and user needs, domain rules, feasibility conditions, risk treatments, governing constraints, and lifecycle obligations into a coherent, bounded, traceable, testable, change-controlled requirements system.
+
+Requirements Engineering does not merely collect requests or produce a feature list. It establishes what outcomes, behaviors, qualities, constraints, controls, evidence, recovery paths, and lifecycle conditions must be satisfied; who has authority to require them; why they exist; where they apply; how they will be verified and accepted; and what downstream work must be reconsidered when they change.
+
+REQUIRED OUTCOME
+
+- A requirements context identifying the authorized objective, decision owners, affected parties, system boundary, environments, lifecycle scope, applicable authorities, constraints, and intended acceptance state.
+- A controlled hierarchy connecting mission, business, stakeholder, user, domain, system, subsystem, component, interface, data, AI, governance, security, privacy, safety, accessibility, operational, support, maintenance, migration, deprecation, and retirement requirements as applicable.
+- Atomic, unambiguous, necessary, feasible, consistent, verifiable, attributable, versioned requirements with stable identifiers, source, rationale, applicability, criticality, owner, acceptance criteria, verification method, evidence expectations, dependencies, and status.
+- Explicit separation among needs, goals, requirements, constraints, assumptions, design decisions, implementation tasks, tests, preferences, recommendations, and unresolved questions.
+- Bidirectional traceability from authoritative source and affected-party evidence through requirements, architecture, implementation, tests, evidence, acceptance, operation, change, and retirement.
+- A conflict, dissent, ambiguity, gap, waiver, exception, and non-applicability record that prevents unresolved conditions from disappearing through synthesis.
+- A governed baseline and change process that identifies impact, invalidates stale approvals and evidence, preserves history, and routes material changes to legitimate authority.
+- A complete handoff to Systems Engineering and later architecture, design, implementation, testing, verification, operations, maintenance, and retirement work without forcing downstream roles to invent missing objectives or boundaries.
+
+WHY THIS MATTERS
+
+Systems often fail before implementation begins because the wrong thing is specified, a real need is converted into an assumed feature, a mandatory constraint is treated as a preference, or a vague requirement cannot be tested. A polished design can satisfy an undocumented interpretation while violating the owner's actual objective, excluding affected users, weakening a safety boundary, or creating an operating burden nobody accepted.
+
+AI increases both the reach and the danger of requirements work. It can rapidly organize evidence, identify gaps, generate alternatives, and draft acceptance criteria. It can also make unsupported assumptions appear complete, silently broaden scope, normalize one stakeholder's preference into a universal rule, invent priorities, or translate model capability into permission to act. Governed Requirements Engineering keeps synthesis useful while preserving source identity, uncertainty, dissent, human authority, and the right to reject or revise a proposed requirement.
+
+APPLICABILITY
+
+- A product, service, system, platform, application, device, process, model, agent, integration, migration, deployment, operational capability, maintenance change, or retirement action must be defined before design or implementation.
+- Multiple people, systems, environments, jurisdictions, data classes, interfaces, or lifecycle stages create different obligations or variants.
+- Stakeholder statements, user findings, domain rules, feasibility conditions, or risk treatments must become actionable and verifiable.
+- Work has material security, privacy, safety, accessibility, governance, legal, financial, environmental, reliability, recovery, or human-impact consequences.
+- Existing requirements are incomplete, contradictory, stale, untraceable, implementation-specific, or disconnected from tests and evidence.
+- A change may invalidate architecture, code, data, models, tests, approvals, procedures, training, support, or retirement plans.
+- AI systems participate in analysis, recommendation, communication, content generation, tool use, autonomous action, or decisions affecting people or protected state.
+
+NON-APPLICABILITY CONDITIONS
+
+- The task is a small, reversible correction whose exact required behavior, source authority, acceptance criterion, test method, affected scope, and rollback condition are already current and verified.
+- An authoritative requirements baseline already covers the exact objective, version, environment, user population, interfaces, lifecycle conditions, and change, and no material upstream condition has changed.
+- The work is pure observation or research and no design, implementation, procurement, policy, operational, or lifecycle commitment is being made yet; findings must still be preserved for later requirements work.
+- A requested statement is actually a legal prohibition, missing authority, active incident, confirmed defect, or hard dependency that requires direct handling rather than being disguised as a negotiable requirement.
+- Required elicitation or validation would expose protected people, systems, data, intellectual property, or regulated activity without authority.
+
+A non-applicability decision must identify the existing controlling requirement or evidence, its version and scope, the actor authorized to rely on it, and the trigger that would reopen Requirements Engineering. Schedule pressure, familiarity, or an AI-generated specification is not sufficient.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001–018 as applicable, including the current objective, evidence base, future conditions, strategies, management boundaries, business analysis, market evidence, affected-party map, user research, domain model, feasibility conditions, and risk treatments.
+- An authenticated human objective and legitimate authority to define, approve, prioritize, reject, amend, waive, or retire requirements.
+- Declared scope, system boundary, environments, operating modes, lifecycle stages, affected parties, decision horizon, non-goals, and prohibited actions.
+- Current source artifacts and system state, including contracts, policies, laws, standards, architecture, interfaces, data, models, incidents, support evidence, operations, maintenance, and retirement obligations where they exist.
+- A controlled terminology set and method for distinguishing mandatory normative language from recommendation, permission, example, assumption, and commentary.
+- A durable requirements repository or equivalent record supporting stable identifiers, versioning, provenance, relationships, review, status, history, and export.
+- Defined verification and acceptance authority, evidence expectations, change control, conflict resolution, and escalation paths.
+
+REQUIRED INPUTS
+
+- Authorized mission, business, product, program, project, and operational objectives; desired outcomes; mission invariants; non-goals; success and failure conditions.
+- Stakeholder identities, authority, rights, interests, commitments, conflicts, grievances, and affected non-users.
+- User jobs, journeys, language, mental models, accessibility needs, consent expectations, trust conditions, failure experiences, recovery expectations, and research limitations.
+- Domain terminology, bounded contexts, actors, entities, value objects, rules, invariants, events, states, transitions, exceptions, sources of truth, and jurisdictional conditions.
+- Market, competitive, supplier, platform, integration, legal, regulatory, scientific, technical, operational, and organizational evidence relevant to the objective.
+- Feasibility determinations, conditions, assumptions, disqualifiers, dependencies, resource limits, experiments, points of no return, and evidence that would change the conclusion.
+- Risk statements, mandatory limits, treatments, controls, indicators, thresholds, contingencies, residual-risk decisions, expiry conditions, and safe-halt requirements.
+- Existing requirements, specifications, contracts, service levels, schemas, policies, tests, defects, incidents, change records, waivers, exceptions, and acceptance evidence.
+- Architecture and implementation constraints that are truly fixed, together with the authority and rationale making them constraints rather than preferences.
+- AI and model identity, intended role, allowed and prohibited actions, data boundaries, evaluation needs, uncertainty behavior, human review, correction, appeal, fallback, revocation, monitoring, and provider dependencies where applicable.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Authorized humans retain authority over objectives, values, protected interests, mandatory constraints, priority, acceptable tradeoffs, approval, risk acceptance, commitments, and final acceptance. Requirements may be delegated for drafting or analysis, but legitimate authority is not transferred by fluent text or tool access.
+
+- Confirm the objective, scope, system boundary, affected parties, environments, lifecycle horizon, non-goals, and decision owners.
+- Identify which sources are authoritative for mission, law, policy, domain meaning, user need, technical state, budget, schedule, risk, and acceptance.
+- Decide conflicts involving values, rights, safety, privacy, accessibility, environmental burden, employment, public impact, cost, schedule, and residual risk.
+- Approve the normative language, criticality, priority method, baseline, variants, exceptions, waivers, and change authority.
+- Ensure that affected people and qualified specialists are represented when their rights, safety, access, domain knowledge, or operating burden matter.
+- Confirm that a proposed requirement expresses the intended need without silently embedding an unapproved design or excluding legitimate alternatives.
+- Accept, reject, revise, defer, narrow, or retire requirements and record the rationale, conditions, dissent, evidence, and review trigger.
+- Refuse downstream advancement when critical requirements, authority, acceptance criteria, or verification methods remain materially unresolved.
+- Reopen the baseline when objective, evidence, law, domain, user population, architecture, risk, environment, model, provider, or operating conditions materially change.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+The AI may organize source material, identify candidate needs, normalize terminology, detect ambiguity and conflict, propose requirement statements, generate traceability links, draft acceptance criteria, and expose missing evidence. It may not invent binding objectives, priorities, stakeholder consent, legal meaning, acceptable harm, resource commitments, or authority.
+
+- Distinguish verbatim source statements, interpreted needs, derived requirements, proposed requirements, approved requirements, assumptions, constraints, preferences, design decisions, and unresolved questions.
+- Preserve source identity, version, date, context, speaker or authority, evidence quality, and known limitations for every material derivation.
+- Mark AI-produced language as proposed until an authorized review state is recorded.
+- Do not turn frequency of mention, stakeholder status, model confidence, or persuasive wording into priority or legitimacy.
+- Do not silently broaden a requirement from one user, environment, jurisdiction, version, or scenario to all contexts.
+- Do not narrow a requirement merely to fit current architecture, available code, model limitations, budget, schedule, or implementation convenience.
+- Identify ambiguous terms, hidden quantifiers, subjective adjectives, compound obligations, missing conditions, conflicting sources, unverifiable claims, and undefined actors.
+- Propose alternatives where a need can be met through multiple designs; preserve the requirement at the outcome or constraint level unless design is legitimately fixed.
+- Separate mandatory constraints from weighted preferences so prohibited options cannot win through aggregate scoring.
+- State where legal, safety, medical, financial, regulatory, accessibility, scientific, or other specialist interpretation requires qualified human review.
+- Treat missing evidence as unknown or unresolved rather than generating a plausible requirement to close the gap.
+- Route value conflicts, scope changes, waivers, exceptions, and final acceptance to the authorized human owner.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Primary roles:
+
+- Analyst — structures needs, relationships, conflicts, dependencies, alternatives, and decision implications while separating evidence from interpretation.
+- Architect — tests whether requirements are structurally coherent, allocable, interface-aware, governable, recoverable, and compatible with system boundaries without rewriting them to fit a preferred design.
+- Governance Reviewer — checks authority, precedence, mandatory constraints, delegation, waivers, exceptions, status transitions, and acceptance legitimacy.
+- Planner — turns the requirements effort into bounded elicitation, analysis, validation, baseline, change, and verification work with owners, dependencies, gates, and evidence.
+
+Evidence, human, and domain roles:
+
+- Researcher — obtains authoritative technical, legal, regulatory, scientific, market, supplier, and domain evidence for requirements and constraints.
+- User Experience Reviewer — evaluates complete journeys, accessibility, cognitive load, trust, consent, error, denial, correction, and recovery requirements.
+- Observer — captures current behavior, state, events, workflows, gaps, and operational conditions without unsupported interpretation.
+- Security Auditor — identifies security, identity, authorization, data, supply-chain, evidence-integrity, and abuse requirements.
+- Documentation Writer — maintains clear human-readable specifications, rationale, examples, decisions, and version history.
+- Memory Curator — preserves requirement lineage, supersession, conflicts, decisions, change history, evidence, and reopening triggers.
+
+Assurance and coordination roles:
+
+- Coordinator — assigns bounded work, preserves provenance, reconciles compatible outputs, surfaces conflicts, and prevents parallel roles from silently producing different baselines.
+- Critic — challenges ambiguity, hidden assumptions, missing requirements, contradictions, implementation bias, false completeness, and unsupported priority.
+- Tester — converts requirements into verifiable conditions, identifies untestable statements, and maintains coverage and defect linkage.
+- Verifier — independently checks requirement identity, source, quality, traceability, evidence, verification state, and acceptance boundaries.
+- Red Team — attacks bypass paths, omitted adversarial conditions, unsafe defaults, privilege assumptions, evidence manipulation, and failure-recovery gaps.
+- Decision Arbiter Advisory — structures recommendations on conflicting requirements or alternatives under authorized criteria while leaving binding value decisions with the authorized human.
+- Implementer — provides current-state and implementation-deviation evidence and must not alter requirements without authorization.
+
+Role selection must match the work, consequence, and required independence. Existing source-defined role contracts remain controlling and are not redefined by this section.
+
+REQUIRED ACTIVITIES
+
+1. Establish the requirements context
+Define the authorized objective, scope, boundary, environments, lifecycle stages, affected parties, sources of authority, decision owners, constraints, non-goals, acceptance authority, and intended baseline.
+
+2. Assemble and classify source material
+Collect upstream findings, current system evidence, contracts, policies, standards, incidents, user and stakeholder evidence, feasibility conditions, risk treatments, and existing specifications. Classify each source by authority, scope, version, freshness, and limitation.
+
+3. Define terminology and normative language
+Establish canonical terms and controlled meanings for SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY, proposed, approved, verified, accepted, waived, superseded, and not applicable. Prevent ordinary prose from being mistaken for a binding obligation.
+
+4. Identify needs and obligations
+Extract mission needs, stakeholder needs, user needs, domain obligations, legal and policy duties, operational needs, risk treatments, lifecycle needs, and evidence needs without prematurely selecting implementation.
+
+5. Separate statement types
+Classify each item as objective, outcome, need, requirement, constraint, assumption, dependency, design decision, implementation task, acceptance criterion, test condition, preference, recommendation, issue, or unresolved question.
+
+6. Define the requirements hierarchy
+Organize requirements from mission and business through stakeholder, user, system, subsystem, component, interface, data, AI, governance, quality, operation, support, maintenance, migration, deprecation, and retirement levels as applicable.
+
+7. Draft atomic requirements
+Write one primary obligation per requirement. Identify actor or subject, required behavior or quality, object, triggering conditions, operating conditions, boundary, prohibited behavior, and measurable threshold where appropriate.
+
+8. Assign stable identity and provenance
+Give every requirement a unique stable identifier and record source, rationale, derivation, authority, author, owner, date, version, scope, and affected parties.
+
+9. Define applicability and variants
+State environments, jurisdictions, products, editions, user groups, roles, data classes, operating modes, lifecycle phases, feature states, and exceptions. Record legitimate non-applicability instead of deleting the requirement.
+
+10. Classify requirement type and criticality
+Distinguish functional, quality, interface, data, constraint, governance, security, privacy, safety, accessibility, reliability, performance, operational, support, maintenance, migration, deprecation, and retirement requirements. Record criticality separately from priority.
+
+11. Analyze requirement quality
+Check necessity, correctness, singularity, clarity, completeness, consistency, feasibility, verifiability, traceability, maintainability, boundedness, implementation neutrality where appropriate, and freedom from undefined terms.
+
+12. Identify relationships and dependencies
+Record parent-child, derives-from, satisfies, depends-on, conflicts-with, duplicates, refines, constrains, verifies, supersedes, and invalidates relationships. Expose circular, missing, and cross-boundary dependencies.
+
+13. Resolve ambiguity and conflict
+Return unclear statements to the appropriate source owner. Preserve competing interpretations, evidence, dissent, and value conflicts. Do not manufacture consensus or choose a value tradeoff without authority.
+
+14. Prioritize under authorized criteria
+Use mission, consequence, legal obligation, safety, security, affected-party need, dependency, evidence, cost, schedule, reversibility, and strategic value as authorized. Keep mandatory constraints outside tradeable scoring.
+
+15. Define acceptance criteria
+For every material requirement, state observable conditions for acceptance, including normal, boundary, denial, failure, degraded, recovery, rollback, migration, accessibility, security, governance, and lifecycle behavior where applicable.
+
+16. Define verification methods
+Assign inspection, analysis, demonstration, test, simulation, measurement, audit, owner acceptance, field observation, or qualified review appropriate to the claim. Identify environment, data, preconditions, threshold, evidence, and independent review needs.
+
+17. Build bidirectional traceability
+Connect each source and need to requirements, and each requirement to architecture, design, implementation, tests, evidence, acceptance, operations, maintenance, and retirement. Identify orphan sources, orphan requirements, orphan tests, and unsupported claims.
+
+18. Validate with legitimate participants
+Review requirements with authorized owners, affected stakeholders, users, operators, maintainers, support, domain experts, security, privacy, safety, accessibility, legal, and other specialists according to consequence and applicability.
+
+19. Analyze feasibility and risk feedback
+Ensure requirements preserve established feasibility conditions and risk treatments. When a requirement makes the option infeasible or creates new risk, reopen the relevant upstream decision rather than silently weakening the requirement.
+
+20. Baseline the requirement set
+Freeze an attributable version with included and excluded scope, open issues, accepted dissent, source and evidence versions, approvals, hashes or immutable identity, and effective date. A draft collection is not a baseline.
+
+21. Control change
+Require a change request with source, rationale, authority, affected requirements, impact, evidence, alternatives, migration, compatibility, cost, risk, test, documentation, and rollback implications.
+
+22. Invalidate stale downstream state
+When a material requirement changes, identify affected designs, code, configurations, data, models, interfaces, tests, evidence, approvals, procedures, training, releases, operations, maintenance, and retirement records. Do not preserve green status through a changed requirement.
+
+23. Hostile-review the baseline
+Search for omitted affected parties, unsafe assumptions, bypasses, hidden design commitments, untestable language, conflicting obligations, stale evidence, AI-generated inventions, inaccessible journeys, missing recovery, and retirement gaps.
+
+24. Handoff and maintain continuity
+Deliver the exact baseline, traceability, open questions, decisions, evidence, acceptance boundaries, change process, and safe next action so Systems Engineering and downstream roles can proceed without hidden conversational memory.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- The interface must visibly distinguish source text, human interpretation, AI synthesis, AI proposal, approved requirement, accepted baseline, and verified result.
+- Users must be able to inspect the source, rationale, authority, affected parties, dependencies, acceptance criteria, evidence method, change history, and current status of every material requirement.
+- AI-generated requirements must remain proposed until an authorized actor explicitly approves or adopts them within a defined scope.
+- The AI must explain material ambiguity and present alternatives rather than forcing a single interpretation through confident wording.
+- Humans must be able to correct terminology, reject derivations, preserve dissent, narrow scope, revoke approval, and reopen validation without losing history.
+- The system must not use dark patterns, urgency, confidence scores, default selections, or conversational pressure to obtain requirement approval or risk acceptance.
+- High-consequence requirements must expose uncertainty, missing evidence, affected-party implications, and the consequences of approval, rejection, delay, or change.
+- User, owner, operator, maintainer, and affected non-user needs must remain distinguishable; one group must not silently stand in for another.
+- Capability, permission, authority, requirement, implementation, test result, and acceptance must remain separate states.
+- Critical stop, correction, appeal, evidence inspection, and fallback paths must remain available when an AI model or provider is unavailable or degraded.
+- Synthetic personas, simulated stakeholders, model-generated user stories, and inferred needs must be labeled and cannot replace actual human evidence where actual human evidence is required.
+- Requirement discussions that materially change objective, values, rights, commitments, cost, schedule, or risk must return to the authorized human decision owner.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Requirements Engineering must produce durable structures that downstream systems can enforce and verify, not only prose that can be reinterpreted.
+
+- Represent requirements as versioned objects with stable identifiers, type, normative force, text, source, rationale, scope, applicability, criticality, priority, owner, status, acceptance criteria, verification method, evidence, relationships, and change history.
+- Maintain both human-readable and machine-readable representations with consistency checks between them.
+- Use explicit state transitions such as PROPOSED, UNDER REVIEW, APPROVED, BASELINED, IMPLEMENTED, VERIFIED, ACCEPTED, DEFERRED, WAIVED, REJECTED, SUPERSEDED, RETIRED, and REOPENED, with authority and evidence rules for each transition.
+- Preserve immutable baseline identities and bind approvals, architecture, builds, tests, evidence, and releases to the exact requirements version inspected.
+- Provide bidirectional dependency graphs and invalidation propagation so changed upstream sources or requirements reopen affected downstream claims.
+- Separate requirements from architecture decisions while supporting explicit allocation and satisfaction links.
+- Encode mandatory security, privacy, safety, governance, accessibility, identity, authority, evidence, and lifecycle constraints at enforceable system boundaries where applicable.
+- Support variants by environment, jurisdiction, product, role, data class, deployment mode, feature state, and lifecycle stage without uncontrolled copying or drift.
+- Preserve source and dissent records even when a final requirement wording is selected.
+- Ensure event, API, data, model, and interface requirements have versioned contracts, compatibility rules, error semantics, and evidence hooks.
+- Instrument runtime outcomes, incidents, support, user behavior, model behavior, performance, recovery, and maintenance so post-implementation evidence can validate or challenge requirements.
+- Provide export, backup, restore, migration, archival, and retirement mechanisms for the requirements corpus and its traceability.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner-facing operating surface or equivalent durable control record should expose:
+
+- Current baseline identity, version, scope, effective date, owner, approval state, environments, variants, and open exceptions.
+- Counts and lists by status, type, criticality, source, owner, subsystem, lifecycle stage, verification state, and affected party.
+- Every requirement's source, rationale, authority, text, interpretation history, dependencies, acceptance criteria, verification method, evidence, dissent, and change history.
+- Orphan needs, orphan requirements, orphan tests, missing evidence, unresolved ambiguity, conflicts, stale sources, expired approvals, and invalidated downstream artifacts.
+- Mandatory constraints separately from preferences and priorities.
+- Proposed AI derivations and the human action required before they become approved requirements.
+- Impact analysis before change approval, including architecture, implementation, data, model, interface, test, release, operation, support, maintenance, migration, deprecation, and retirement effects.
+- Controls to approve, reject, revise, defer, waive, supersede, retire, reopen, compare versions, request evidence, record dissent, and revoke stale approval.
+- Traceability navigation from objective and source through requirement, implementation, test, evidence, acceptance, operation, and lifecycle outcome.
+- Clear distinction between drafted, approved, baselined, implemented, verified, accepted, and operationally observed states.
+- Safe-halt or advancement-block controls when critical requirements, authority, acceptance criteria, or required evidence are missing.
+- Plain-language explanation of what changed, why it changed, what remains unresolved, who must decide, and the next safe action.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Requirements Engineering plan and governance model.
+- Requirements context, scope, boundary, authority, stakeholder, affected-party, and source registers.
+- Controlled glossary and normative-language guide.
+- Need, objective, obligation, constraint, assumption, dependency, issue, and unresolved-question registers.
+- Requirements hierarchy and allocation model.
+- Versioned requirements catalogue with stable identifiers and complete metadata.
+- Functional, quality, interface, data, AI, governance, security, privacy, safety, accessibility, operational, support, maintenance, migration, deprecation, and retirement requirement sets as applicable.
+- Applicability, variant, non-applicability, exception, waiver, and expiry records.
+- Requirement-quality review results and correction history.
+- Conflict, dissent, ambiguity, duplication, gap, and decision records.
+- Priority and criticality model with authority and rationale.
+- Acceptance-criteria catalogue and requirement-to-verification matrix.
+- Bidirectional source-to-need-to-requirement-to-design-to-test-to-evidence-to-acceptance traceability matrix.
+- Architecture allocation and interface obligation package.
+- Baseline record with identity, scope, version, approvals, open findings, hashes or immutable reference, and effective date.
+- Change requests, impact analyses, invalidation records, migration needs, compatibility decisions, and supersession history.
+- Hostile-review findings, remediation, residual gaps, and escalation records.
+- Systems Engineering and downstream handoff package with exact baseline and safe next action.
+
+EVIDENCE REQUIREMENTS
+
+- Every material requirement must identify its authoritative or evidentiary source, version, date, context, scope, owner, and derivation path.
+- A stakeholder statement is evidence of that stakeholder's statement, not automatically proof of universal need, technical fact, legal obligation, or priority.
+- User requirements must identify participant population, context, method, consent and privacy limits, accessibility coverage, sample limitations, and evidence confidence.
+- Domain requirements must identify the controlling definition, rule, jurisdiction, effective date, source of truth, and qualified review where required.
+- Feasibility and risk-derived requirements must link to the exact condition, treatment, control, threshold, or decision that created them.
+- Legal, regulatory, safety, medical, financial, environmental, accessibility, security, scientific, and other specialist requirements require authoritative or qualified evidence proportionate to consequence.
+- Requirement approval must identify the approving authority, exact version and scope, unresolved conditions, and evidence available at the time.
+- Verification evidence must identify the requirement, artifact, version, environment, method, inputs, expected result, actual result, date, actor, and limitations.
+- Evidence supporting a requirement must remain distinct from evidence showing implementation satisfaction.
+- Superseded, failed, contradicted, stale, or withdrawn evidence must remain traceable rather than being deleted from history.
+- Missing evidence must produce an explicit UNKNOWN, UNRESOLVED, PROPOSED, or BLOCKED state; it must not be repaired through polished language.
+- AI-generated text, synthetic data, inferred needs, and model-based classifications must be labeled with model or method provenance and independently reviewed where material.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Sample every requirement class and verify stable identity, source, rationale, scope, authority, acceptance criteria, verification method, owner, status, and history.
+- Trace representative objectives and source statements forward to requirements, architecture, implementation, tests, evidence, and acceptance; trace representative tests and artifacts backward to an authorized requirement.
+- Remove or invalidate a source and confirm dependent requirements and downstream evidence are flagged for review rather than remaining silently approved.
+- Change a material requirement after approval and confirm stale architecture, tests, evidence, releases, and approvals are invalidated or explicitly re-evaluated.
+- Submit ambiguous, compound, subjective, implementation-biased, contradictory, and unverifiable statements and confirm the quality process rejects or returns them for correction.
+- Attempt to approve or change a requirement without valid authority and verify denial, audit evidence, and preserved prior state.
+- Have an AI propose a plausible requirement without an authoritative source and verify it remains proposed and cannot become binding automatically.
+- Introduce conflicting stakeholder or specialist requirements and verify both positions, evidence, authority, and unresolved value conflict remain visible.
+- Verify mandatory constraints cannot be outweighed by priority scoring or bypassed through UI, API, agent, automation, import, bulk edit, or administrative path.
+- Confirm every mandatory requirement maps to at least one appropriate verification method and current result state, including untestable or blocked where truthful.
+- Identify orphan needs, orphan requirements, orphan tests, orphan evidence, and implementation with no governing requirement.
+- Test variant and applicability logic across required environments, jurisdictions, roles, data classes, operating modes, and lifecycle stages.
+- Run owner and affected-user acceptance on complete journeys, including failure, denial, correction, recovery, accessibility, and fallback, rather than demonstration alone.
+- Restart a downstream Systems Engineering or architecture role from the handoff package and verify it can reconstruct scope, baseline, obligations, open decisions, and safe next action without chat memory.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a backlog, feature list, prompt, user story collection, contract excerpt, or architecture diagram as a complete requirements baseline.
+- Writing vague requirements such as fast, intuitive, secure, intelligent, seamless, scalable, robust, or user-friendly without defined conditions and evidence.
+- Combining multiple obligations in one statement so partial satisfaction can masquerade as completion.
+- Inventing requirements, priorities, consent, authority, budgets, deadlines, laws, integrations, or user needs to make the specification appear complete.
+- Treating one stakeholder, one user, one model, or one environment as representative of all affected contexts.
+- Converting the current implementation into a requirement merely because it already exists.
+- Weakening or narrowing a requirement to fit a preferred architecture, available code, vendor, model, schedule, or budget without authorized change.
+- Embedding a design solution where the underlying need should permit alternatives, or omitting a fixed design constraint that is genuinely mandatory.
+- Using priority labels without criteria, owner, rationale, criticality, or dependency analysis.
+- Allowing mandatory legal, safety, privacy, security, accessibility, or governance constraints to compete in weighted scoring.
+- Accepting a demonstration, mockup, unit test, code review, or developer statement as proof of owner outcome or complete requirement satisfaction.
+- Maintaining one-way traceability that cannot reveal orphan implementation, orphan tests, or stale approvals.
+- Deleting superseded requirements, failed evidence, dissent, or rejected alternatives and thereby destroying decision history.
+- Treating missing evidence as low priority, low risk, not applicable, or implicitly accepted.
+- Approving a requirement set while critical ambiguity, conflict, authority, acceptance criteria, or verification methods remain unresolved.
+- Allowing AI-generated wording to become binding through repetition, default selection, import, or conversational momentum.
+- Failing to include denial, failure, degraded, recovery, rollback, migration, maintenance, deprecation, and retirement requirements.
+- Reporting implementation complete when requirements are merely drafted, or reporting requirements verified when only their presence was inspected.
+
+RECOVERY AND RECONSIDERATION
+
+- Quarantine suspect requirements, baselines, approvals, or traceability links while preserving the last known accepted state and all evidence.
+- Restore the last valid baseline when unauthorized edits, corruption, import defects, model hallucination, or uncontrolled merging occurs.
+- Reopen elicitation and analysis with the appropriate source owner when ambiguity, conflict, missing affected parties, unsupported derivation, or changed context is discovered.
+- Reclassify a statement when it was confused with a design decision, task, test, assumption, preference, or legal prohibition.
+- Re-run impact analysis and revoke stale approvals, tests, evidence, releases, or conformance claims after material change.
+- Narrow scope, create variants, defer, split requirements, stage a pilot, or return to feasibility and risk analysis where full satisfaction is not currently possible.
+- Enter safe halt for affected downstream work when a critical requirement, authority boundary, safety condition, or evidence obligation cannot be trusted.
+- Preserve failed interpretations and prior baselines with supersession links so recurring mistakes can be recognized.
+- Define the evidence, authority, participant review, specialist review, test, or decision required to close each reopened condition.
+- Resume only from a durable continuity record identifying exact baseline, changes, open findings, affected artifacts, owner decisions, and next safe action.
+
+COMPLETION CRITERIA
+
+Requirements Engineering is complete for the declared baseline only when:
+
+- The objective, scope, boundary, environments, lifecycle stages, affected parties, non-goals, authority, and acceptance owners are explicit.
+- All in-scope authoritative sources and material upstream findings have been reviewed, classified, and linked or explicitly excluded with rationale.
+- Needs, requirements, constraints, assumptions, dependencies, design decisions, tasks, tests, and unresolved questions are distinguishable.
+- Every material requirement has stable identity, source, rationale, scope, applicability, type, criticality, owner, status, acceptance criteria, verification method, and traceability.
+- Requirements are sufficiently atomic, clear, consistent, feasible, necessary, bounded, and verifiable for downstream use.
+- Mandatory constraints and prohibited conditions are separated from preferences and tradeable priorities.
+- Critical ambiguity, conflict, missing authority, and missing acceptance criteria are resolved or visibly block affected advancement.
+- Feasibility conditions and risk treatments are represented as requirements, controls, gates, tests, monitoring, recovery, or lifecycle obligations as appropriate.
+- Human-AI interaction requirements preserve disclosure, correction, appeal, evidence inspection, authority, and non-deceptive fallback.
+- Bidirectional traceability exposes source coverage, requirement coverage, test coverage, evidence state, and orphan artifacts.
+- The baseline is versioned, attributable, preserved, reviewed by applicable roles, and approved by legitimate authority.
+- Change, invalidation, supersession, waiver, exception, recovery, and reopening processes are defined and testable.
+- The handoff allows Systems Engineering and downstream roles to proceed without inventing missing objectives, requirements, authority, or acceptance boundaries.
+
+Completion does not mean every requirement is implemented or verified. It means the declared requirements baseline is sufficiently governed, bounded, and evidenced to control the next lifecycle stage truthfully.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+The Requirements Engineering handoff must include:
+
+- Baseline identifier, version, hash or immutable reference, effective date, scope, environments, variants, lifecycle coverage, owner, and approval state.
+- Objective, non-goals, affected parties, sources of authority, glossary, normative-language rules, and system boundary.
+- Complete requirements catalogue with type, criticality, priority, owner, applicability, source, rationale, acceptance criteria, verification method, and status.
+- Bidirectional traceability and explicit orphan, gap, conflict, dissent, ambiguity, waiver, exception, and non-applicability records.
+- Feasibility conditions, risk treatments, mandatory constraints, thresholds, safe-halt conditions, recovery obligations, and points of no return.
+- Open decisions, unresolved evidence, required specialists, review dates, change triggers, and evidence that would change the baseline.
+- Downstream allocation expectations for Systems Engineering, architecture, data, interfaces, security, privacy, safety, accessibility, AI, testing, operations, support, maintenance, migration, deprecation, and retirement.
+- Change authority, change-request process, impact-analysis method, invalidation rules, supersession history, rollback or restoration procedure, and audit trail.
+- Exact next safe action and a statement of whether downstream work may proceed, proceed conditionally, or must remain blocked.
+
+Downstream roles must report requirement conflicts, implementation deviations, impossible acceptance criteria, new risks, failed tests, incidents, and changed operating conditions back into the requirements system. Chat history is not an acceptable continuity mechanism.
+
+RELATED CODEX SECTIONS
+
+001 Research
+002 Foresight / Futures
+003 Innovation
+004 Mission Strategy
+005 Business Strategy
+006 Product Strategy
+007 Portfolio Management
+008 Program Management
+009 Project Management
+010 Product Management
+011 Business Analysis
+012 Market Research
+013 Competitive Intelligence
+014 Stakeholder Management
+015 User Research
+016 Domain Analysis
+017 Feasibility Analysis
+018 Risk Management
+020 Systems Engineering
+021 Enterprise Architecture
+022 Solution Architecture
+023 Systems Architecture
+024 Domain Architecture
+025 Business Architecture
+026 Capability Architecture
+027 Process Architecture
+028 Functional Architecture
+029 Operational Architecture
+030 Information Architecture
+031 Data Architecture
+032 Application Architecture
+033 Software Architecture
+041 Integration Architecture
+042 API Architecture
+044 Runtime Architecture
+045 Security Architecture
+046 Identity Architecture
+047 Privacy Architecture
+048 Governance Architecture
+049 Compliance Architecture
+050 Safety Architecture
+051 Reliability Architecture
+052 Resilience Architecture
+053 Accessibility Architecture
+054 Content Architecture
+055 Knowledge Architecture
+056 AI Architecture
+057 Machine Learning Architecture
+058 Robotics Architecture
+059 Embedded Systems Architecture
+060 Hardware Architecture
+075 Human–Computer Interaction
+106 User Validation
+107 Software Engineering
+151 Database Engineering
+167 Machine Learning Engineering
+178 Agent Systems Engineering
+182 AI Safety
+183 AI Governance
+189 Cybersecurity Engineering
+217 Trust and Safety
+218 Privacy Engineering
+219 Legal
+220 Regulatory Compliance
+222 Ethics
+226 Audit
+227 Internal Controls
+231 Software Testing
+246 Security Testing
+247 Accessibility Testing
+251 Compliance Testing
+252 Safety Testing
+253 Model Testing
+256 Verification
+257 Validation
+289 Change Management
+301 Site Reliability Engineering
+303 Runtime Operations
+319 Incident Management
+326 Business Continuity
+327 Disaster Recovery
+331 Operational Readiness
+332 Command and Control
+333 Technical Support
+341 Documentation Engineering
+374 Maintenance Engineering
+382 Data Migration Operations
+383 Platform Migration
+388 Version Management
+389 Deprecation Management
+390 Sunset Planning
+405 Lifecycle Governance
+406 System Retirement
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Primary supplied source basis:
+
+- Thirsty's Standard v3 supplies the governing posture of truthful scope, current-state inspection, explicit unknowns, evidence before claims, minimal authorized change, complete work for the declared mode, verification, hostile review, continuity, and no fake completion.
+- Thirsty's Agents 101 supplies the unchanged role contracts and governance stack: authorized human objective, global operating contract, bounded roles, task and authority envelope, execution and evidence, and independent review. Its Planner, Analyst, Architect, Researcher, Coordinator, Tester, Verifier, Governance Reviewer, Critic, Red Team, User Experience Reviewer, Documentation Writer, Memory Curator, Security Auditor, Implementer, and Decision Arbiter Advisory roles inform this section without being rewritten.
+- Thirsty's Owner's Cockpit Standard supplies requirements-as-contract use, normative language, assignment of implementation owner and evidence method, requirements traceability, owner acceptance, authority and approval boundaries, versioned action and evidence contracts, change control, conformance scope, and owner ratification. That source is identified as a candidate for owner ratification and is not silently treated as universally ratified authority.
+- Thirsty's Standard V4 Design Blueprint supplies draft concepts relevant to typed claims, obligations, evidence contracts, acceptance criteria, role assembly, rollback, reversal conditions, dissent preservation, artifact consistency, and trusted transition. The source is draft and unratified; these concepts are used as design input, not claimed as ratified governance.
+- Sections 001–018 provide the current Codex working-draft handoff of evidence, objective, strategy, management, affected parties, user evidence, domain meaning, feasibility conditions, risk treatments, controls, acceptance boundaries, and human decision points.
+
+Unresolved source gaps:
+
+- The supplied corpus does not contain a complete, ratified, universal Requirements Engineering standard covering every industry, jurisdiction, safety classification, hardware domain, medical context, public-sector obligation, defense environment, financial system, or AI application.
+- This section has not yet been reconciled against all current external Requirements Engineering standards, sector-specific regulations, contractual regimes, accessibility requirements, safety standards, or organizational procedures.
+- Quantitative quality thresholds, document forms, traceability depth, approval models, and independent-review obligations must be specialized according to consequence, domain, law, lifecycle, and owner authority.
+- Later architecture, engineering, testing, verification, operations, maintenance, and retirement sections may expose missing or conflicting requirements and must be permitted to reopen this baseline.
+- STATUS remains CONTENT-COMPLETE. This section has not yet completed full source reconciliation, independent hostile review, owner acceptance, implementation, or operational verification.

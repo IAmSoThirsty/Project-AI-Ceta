@@ -1,0 +1,100 @@
+SECTION 154 — Data Modeling
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define stable data meaning, structure, relationships, identifiers, constraints, and representations that support authorized processes, functions, systems, analysis, and lifecycle decisions.
+
+REQUIRED OUTCOME
+
+Conceptual, logical, and physical models with controlled mappings, definitions, ownership, constraints, variants, lineage, quality rules, change impact, and acceptance boundaries.
+
+WHY THIS MATTERS
+
+Ambiguous entities and identifiers create duplicate identity, invalid joins, privacy mistakes, and incompatible systems. A diagram is not proof that meanings are shared or enforced.
+
+APPLICABILITY
+
+Apply when data entities, events, relationships, schemas, identifiers, classifications, or transformations materially affect behavior or decisions.
+
+NON-APPLICABILITY CONDITIONS
+
+No material meaning, structure, relationship, identifier, constraint, interface, quality, or lifecycle behavior changes and an exact model baseline covers the work. Record scope and trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Domain and information architecture, requirements, processes, functions, data subjects, source systems, contracts, jurisdictions, quality, privacy, security, records, and lifecycle rules.
+
+REQUIRED INPUTS
+
+Business terms, entities, events, identifiers, relationships, cardinality, constraints, states, classifications, sample records, consumers, source authority, variants, assumptions, and disputes.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner approves canonical meaning, keys, classifications, relationships, exceptions, quality thresholds, compatibility, and acceptance; assigns domain, data, privacy, security, and records authorities.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized glossaries, requirements, domain evidence, source schemas, contracts, representative records, lineage, mappings, and model versions. It may propose terms, entities, relationships, identifiers, constraints, model mappings, compatibility views, test cases, and impact analyses, and may surface ambiguity, disagreement, privacy risk, and unresolved assumptions for human adjudication.
+
+AI must distinguish source-defined meaning from inference and must not declare a canonical term, resolve identity, approve classifications, expose records, alter a model or schema, or claim semantic agreement from a diagram, sample, or schema inspection. Any mutation-capable proposal must identify the authorized owner, model level and version, affected consumers and mappings, validation evidence, immutable decision and audit records, and forward migration, compatibility, or compensation path; unresolved meaning, identity, authority, or evidence conflicts require preservation of the prior version and owner review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Observer, Governance Reviewer, Security Auditor, User Experience Reviewer, Implementer, Tester, Verifier, Critic, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Establish vocabulary, scope, subjects, contexts, and model levels.
+2. Define entities, events, identifiers, relationships, states, constraints, classifications, and ownership.
+3. Map conceptual to logical and physical structures, contracts, lineage, variants, and migration impact.
+4. Validate with domain owners and test representative, ambiguous, missing, duplicate, and incompatible records.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may propose models and mappings from authorized evidence, but must distinguish source meaning from inference. It must not declare a canonical term, infer identity, expose records, or alter schemas without authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Keep meaning, model level, schema, storage, interface, and implementation distinct. Version identifiers, constraints, mappings, lineage, ownership, compatibility, and lifecycle states; make critical constraints enforceable.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show model version, domain owner, scope, mappings, terms, identifiers, constraints, consumers, conflicts, evidence, and authorized approve, supersede, restrict, migrate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Model charter; glossary and data dictionary; conceptual, logical, physical, event, state, and lineage models; contracts; mapping and compatibility records; decisions, tests, evidence, dissent, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Claims identify source, definition, model level, version, scope, population, method, owner, and limitation. A sample, diagram, or schema inspection proves only its bounded observation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify term consistency, key uniqueness, cardinality, constraints, null and unknown handling, temporal behavior, mappings, schema compatibility, access implications, and independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Entity soup, overloaded identifiers, hidden many-to-many relations, accidental null semantics, physical design masquerading as meaning, copied definitions, and unowned model changes.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze affected changes when meaning or identity conflicts arise; preserve prior versions and evidence. Use owner adjudication, mapping, quarantine, controlled migration, compatibility views, or compensation, then reassess consumers.
+
+COMPLETION CRITERIA
+
+Terms, entities, relationships, constraints, owners, mappings, consumers, tests, evidence, gaps, and reopening conditions are explicit. Status remains CONTENT-COMPLETE until later gates.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off models and contracts to Database, Data, Integration, API, Application, Analytics, ML, Privacy, Security, Records, Testing, Migration, Operations, and Retirement work.
+
+RELATED CODEX SECTIONS
+
+016 Domain Analysis; 030 Information Architecture; 031 Data Architecture; 041 Integration Architecture; 042 API Architecture; 151 Database Engineering; 155 Data Governance; 159 Data Warehousing; 175 Knowledge Graph Engineering; 391-395 data lifecycle sections.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, Sections 016, 019-032, and roadmap. Domain-specific vocabularies, modeling notation, legal identity rules, and sector standards remain unresolved.

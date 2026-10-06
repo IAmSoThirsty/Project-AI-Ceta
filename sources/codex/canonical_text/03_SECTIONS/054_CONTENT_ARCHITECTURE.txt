@@ -1,0 +1,134 @@
+SECTION 054 — Content Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the lifecycle, structure, ownership, voice, format, metadata, rights, accessibility, localization, publication, correction, retention, and retirement of content.
+
+REQUIRED OUTCOME
+
+- A content model with types, audiences, purposes, owners, sources, workflows, versions, rights, channels, evidence, and lifecycle.
+- Controlled authoring, review, publication, correction, withdrawal, localization, accessibility, and archival behavior.
+
+WHY THIS MATTERS
+
+Content can instruct, persuade, record, disclose, or create obligation. Unowned content becomes stale, inaccessible, legally risky, or impossible to correct, especially when generated at scale.
+
+APPLICABILITY
+
+- Content is created, edited, generated, translated, published, rendered, retained, or retired for users, operators, systems, or records.
+- Meaning, rights, accessibility, truth, timing, or publication affects material outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No material content, audience, meaning, rights, accessibility, channel, evidence, or lifecycle effect changes.
+- An approved content baseline covers exact type, audience, channel, and change with no material impact.
+- The artifact is exploratory and not an approved publication or rights claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 016, 019, 030, 040, and 053 provide domain, information, requirements, communications, and accessibility context.
+- Content, legal, rights, privacy, accessibility, localization, records, and publication authorities are known or open.
+
+REQUIRED INPUTS
+
+- Audiences, purpose, content types, source, rights, voice, language, channel, accessibility, review, evidence, retention, and lifecycle.
+- Editorial workflow, generated content, citation, correction, withdrawal, localization, support, and governance requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Content owners approve purpose, meaning, voice, rights, audience, publication, corrections, sensitive claims, exceptions, and retirement. Humans retain final editorial and legal authority and can pause, retract, correct, or archive.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft, classify, summarize, translate, check structure, and identify stale or duplicate content. It must preserve sources, rights, audience, version, and uncertainty. It must not publish, invent citations, copy restricted material, or make consequential claims without review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+	- Documentation Writer, Researcher, Analyst, User Experience Reviewer, Governance Reviewer, Verifier, Critic, Memory Curator, Tester, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory content types, sources, owners, audiences, rights, channels, versions, and lifecycle.
+2. Define structure, metadata, voice, evidence, citations, review, approval, accessibility, and localization.
+3. Model draft, review, approved, published, corrected, withdrawn, archived, superseded, and retired states.
+4. Validate content with users, domain, legal, rights, privacy, accessibility, localization, and support authorities.
+5. Test findability, comprehension, truth, citation, accessibility, translation, correction, withdrawal, and recovery.
+6. Baseline content model, decisions, evidence, dissent, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Label source, draft, transformation, translation, inference, generation, review, and publication state.
+- Show provenance, author, reviewer, rights, audience, date, and correction path.
+- Require human review for legal, safety, rights, privacy, public, or externally binding content.
+- Preserve non-AI authoring, correction, status, and withdrawal paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate source, draft, approved version, rendered copy, translation, cache, publication, record, and evidence.
+- Enforce rights, access, provenance, accessibility, localization, retention, correction, and withdrawal across channels.
+- Preserve versions and links when content is corrected, retracted, superseded, or deleted.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show content type, source, owner, audience, state, rights, review, accessibility, language, freshness, and lifecycle.
+- Expose draft, review, approve, publish, correct, retract, archive, and retire actions with authority.
+- Explain generated or blocked content and preserve an accessible alternative.
+- Export content versions, provenance, decisions, evidence, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Content model, type and metadata catalog, editorial workflow, rights and source register, channel and localization plan.
+- Accessibility, review, generation, citation, correction, withdrawal, records, evidence, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify content, source, version, author, reviewer, audience, channel, date, method, rights, and limitation.
+- Publication, approval, citation, accessibility, or engagement evidence proves only its bounded claim.
+- Generated and translated content records source, tool, configuration, review, and limitations.
+- Missing, stale, disputed, or inaccessible evidence constrains publication status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace content from source through authoring, review, publication, user action, correction, retention, and retirement.
+- Exercise wrong version, broken citation, rights restriction, inaccessible rendering, translation error, stale content, generation failure, and retraction.
+- Verify approval, provenance, accessibility, localization, records, correction, withdrawal, and audit.
+- Reproduce representative claims from exact content package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating publication, engagement, polish, or generated fluency as truth or comprehension.
+- Unowned stale content, missing sources, inaccessible formats, rights leakage, hidden edits, or irreversible publication.
+- Allowing AI to invent sources, imitate authority, or publish without review.
+
+RECOVERY AND RECONSIDERATION
+
+- On false, harmful, stale, inaccessible, or unauthorized content, pause distribution and preserve prior versions.
+- Identify affected audiences, owner, correction, notification, evidence, and review condition.
+- Use correction, retraction, alternate format, access restriction, archive, or retirement.
+- Reopen on source, audience, law, language, channel, model, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Types, audiences, sources, rights, review, accessibility, localization, publication, evidence, correction, and lifecycle are explicit.
+- Generated, translated, disputed, stale, withdrawn, and retired content behavior is addressed or justified.
+- Exact limitations and unresolved source gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve content, versions, provenance, rights, approvals, corrections, decisions, evidence, dissent, and gaps.
+- Hand off to Information, Knowledge, AI, Accessibility, Privacy, Security, Communications, Records, Testing, and Operations.
+- Record changes requiring reopening affected information and governance sections.
+
+RELATED CODEX SECTIONS
+
+- 016, 019, 030, 040, and 053 Domain, Requirements, Information, Communications, and Accessibility Architecture; 055-060 Knowledge through Hardware.
+- 097-103 content, strategy, writing, localization, and accessibility design; 341-342 documentation and knowledge management; 391-395 retention and deletion.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 001-053, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal editorial, rights, accessibility, localization, records, or publication standard is supplied. Actual content owners, sources, audiences, and acceptance evidence remain unresolved.

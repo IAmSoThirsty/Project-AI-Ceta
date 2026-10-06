@@ -1,0 +1,20 @@
+
+CONTINUITY, HANDOFF, AND RECOVERY
+
+Every substantial workstream maintains a durable continuity record containing:
+
+- accepted objective and scope;
+- current source, repository, system, environment, and version state where applicable;
+- files, components, interfaces, data, or physical systems inspected;
+- work created, modified, removed, or attempted;
+- commands, actions, tests, builds, deployments, and observations;
+- evidence identifiers and artifact digests where applicable;
+- failures, blockers, risks, assumptions, and unknowns;
+- decisions, dissent, and human authority points;
+- completed, pending, and unresolved work;
+- rollback and recovery information;
+- next safe action and safe-to-continue status.
+
+A handoff preserves the accepted objective, source identity, current state, assumptions, unknowns, constraints, unresolved disagreement, evidence, completion criteria, and exact delegated authority boundary.
+
+Recovery is designed before consequential execution where reasonably possible. A section is not operationally complete if ordinary or foreseeable failures leave the human without a visible recovery path.

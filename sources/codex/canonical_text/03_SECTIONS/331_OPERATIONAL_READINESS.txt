@@ -1,0 +1,95 @@
+SECTION 331 — Operational Readiness
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Determine whether a service, system, product, process, or change can be safely operated, supported, monitored, secured, recovered, and owned in its declared environment.
+
+REQUIRED OUTCOME
+
+An operational-readiness record with owner, scope, modes, runbooks, staffing, access, observability, support, security, capacity, continuity, recovery, evidence, gaps, and explicit decision.
+
+WHY THIS MATTERS
+
+Deployment or acceptance can occur before operations can safely sustain the outcome. Readiness is a decision with limitations, not a checklist or a green dashboard.
+
+APPLICABILITY
+
+Apply before entering a new operational mode, production, field use, support commitment, or material transition.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no operational ownership, support, mode, risk, user, dependency, or recovery condition changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use operational architecture, acceptance, release, deployment, security, privacy, support, SRE, observability, capacity, continuity, recovery, and training baselines.
+
+REQUIRED INPUTS
+
+Service, environment, owner, users, modes, runbooks, staffing, access, alerts, logs, traces, metrics, support, risks, capacity, backup, recovery, training, and approvals.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Accountable owners decide ready, conditionally ready, hold, or reject. Operators and support owners confirm capability; security, privacy, safety, accessibility, and continuity authorities approve affected conditions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may assemble evidence, identify missing readiness items, draft runbooks and exercises, and summarize risk. It must not declare readiness, accept residual risk, or approve operation without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Operational Readiness Reviewer, Operations Engineer, SRE, Release Manager, Support Reviewer, Security Auditor, Tester, Verifier, Coordinator, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Define scope and modes; confirm owners and access; validate runbooks, monitoring, support, security, capacity, backup, recovery, training, documentation, and communication; exercise; record gaps; decide; and schedule review.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show readiness condition, evidence, owner, gap, risk, environment, support, authority, and decision. Require human sign-off and preserve conditional or rejected status.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide operational interfaces, health, logs, traces, metrics, access, safe mode, support, rollback, backup, restore, runbooks, and owner control before operation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show readiness state, owner, environment, gaps, evidence freshness, incidents, support, training, recovery, and authorized approve, condition, hold, reject, remediate, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Readiness charter; owner and mode; runbooks; support and training; security and privacy; capacity, observability, continuity, recovery, decision, evidence, and gap records.
+
+EVIDENCE REQUIREMENTS
+
+Identify condition, system, version, environment, method, result, owner, reviewer, date, validity, gap, and limitation. Checklist completion proves neither operational effectiveness nor adoption.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify ownership, access, runbook, monitoring, alert, logs, traces, metrics, support, security, capacity, backup, restore, failover, training, communication, and user recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Readiness by checklist, owner missing, support unprepared, stale evidence, no recovery, undocumented exception, conditional ready without expiry, and deployment treated as readiness.
+
+RECOVERY AND RECONSIDERATION
+
+Hold or narrow operation, preserve evidence, remediate gaps, support users, and reconvene decision authority. Reopen on version, environment, owner, mode, dependency, incident, or evidence change.
+
+COMPLETION CRITERIA
+
+Scope, owner, modes, evidence, runbooks, support, security, observability, capacity, recovery, gaps, decision, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve readiness package, decisions, gaps, approvals, runbooks, training, evidence, exceptions, and open actions. Hand off to Operations, SRE, Support, Security, Continuity, Release, and Governance.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 237 Acceptance; 288-290 Release, Change, Deployment; 301-330 Operations and Recovery; 332 Command and Control.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, operational, acceptance, support, reliability, and owner-control context, and the integration roadmap. Exact service, owner, environment, evidence, staffing, training, recovery, and acceptance authority remain unresolved.

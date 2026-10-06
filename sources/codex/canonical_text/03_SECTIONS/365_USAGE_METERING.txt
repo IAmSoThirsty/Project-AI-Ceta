@@ -1,0 +1,95 @@
+SECTION 365 — Usage Metering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Measure resource, product, service, subscription, or licensed usage accurately, transparently, securely, and with sufficient lineage for billing, capacity, entitlement, and decisions.
+
+REQUIRED OUTCOME
+
+A usage-metering model with event, subject, unit, source, time, aggregation, correction, privacy, completeness, idempotence, retention, consumer, and evidence.
+
+WHY THIS MATTERS
+
+Usage data can drive charges, access, forecasts, and capacity. Missing, duplicate, late, misclassified, or privacy-invasive measurements can create financial and customer harm.
+
+APPLICABILITY
+
+Apply when measured usage influences billing, licensing, subscription, capacity, product analytics, service levels, or customer decisions.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no usage, event, unit, consumer, price, entitlement, capacity, or analytic behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data, analytics, commerce, billing, payments, licensing, subscriptions, privacy, security, observability, and records baselines.
+
+REQUIRED INPUTS
+
+Usage event, subject, unit, source, timestamp, context, aggregation, deduplication, correction, retention, consumer, and quality threshold.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Metering owners define unit and meaning; finance, product, licensing, privacy, and data owners approve use and corrections. Humans decide disputes and material backfill.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized metering metadata and bounded samples, identify anomalies, and draft reconciliation. It must not expose subject data, change events, alter billable quantity, or declare completeness without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Metering Engineer, Data Engineer, Billing Engineer, Product Analyst, Privacy Reviewer, Security Auditor, Tester, Verifier, and Financial Analyst.
+
+REQUIRED ACTIVITIES
+
+Define units and events; instrument; capture; timestamp; deduplicate; aggregate; validate; reconcile; correct; publish; monitor late or missing data; retain; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show subject, event, unit, source, time, aggregation, privacy, consumer, evidence, and limitation. Require human approval for correction, billing, licensing, deletion, and dispute.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable event identity, idempotence, clock and late-data handling, lineage, privacy, access, correction, backfill, retention, and separation from authoritative ledger.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show usage health, completeness, duplicate, freshness, unit, consumer, evidence freshness, owner, and authorized quarantine, correct, backfill, restrict, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Metering charter; event and unit; source and lineage; quality and aggregation; correction and reconciliation; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify event, subject, unit, source, timestamp, window, method, result, quality, actor, and limitation. Count proves only its event source, window, and rules.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify completeness, uniqueness, timing, unit, aggregation, privacy, access, late event, correction, backfill, billing, licensing, capacity, and reproducibility.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Duplicate charge, hidden event loss, unit drift, timestamp confusion, subject exposure, late usage ignored, correction without lineage, and meter as unquestioned truth.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected usage, preserve raw and derived versions, reconcile, correct or backfill, notify consumers, and reassess charges or access. Reopen on event, unit, source, price, or policy change.
+
+COMPLETION CRITERIA
+
+Events, units, subjects, sources, timing, quality, privacy, consumers, corrections, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve event and metric versions, quality, corrections, invoices, decisions, evidence, exceptions, and open gaps. Hand off to Data, Billing, Licensing, Subscription, Commerce, Analytics, Privacy, and Records.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 254 Data Testing; 358-364 Commerce, Billing, Payments, Subscriptions, Revenue, and Licensing; 366-370 Analytics and Experiments; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data, commerce, finance, privacy, analytics, and evidence context, and the integration roadmap. Exact events, units, sources, subjects, quality, correction, retention, and acceptance authority remain unresolved.

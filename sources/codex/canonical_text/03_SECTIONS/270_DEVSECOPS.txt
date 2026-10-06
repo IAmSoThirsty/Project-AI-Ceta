@@ -1,0 +1,95 @@
+SECTION 270 — DevSecOps
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Integrate security, privacy, risk, and evidence into development and delivery flow so protected outcomes are considered early, continuously, and with accountable human control.
+
+REQUIRED OUTCOME
+
+A DevSecOps model with threat and vulnerability input, secure source and build, identity, secrets, testing, policy gates, remediation, monitoring, incident response, and exception lifecycle.
+
+WHY THIS MATTERS
+
+Security added only at the end is slow and easy to bypass, while automated security checks can create noise, false confidence, or unsafe blocking. Integration must improve decisions, not merely add scanners.
+
+APPLICABILITY
+
+Apply when software, infrastructure, data, hardware, models, or delivery workflows create material security, privacy, safety, or supply-chain risk.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no security or privacy property, trust boundary, dependency, artifact, or delivery control changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use threat, vulnerability, IAM, cryptography, secrets, privacy, source, dependency, build, testing, release, operations, and incident baselines.
+
+REQUIRED INPUTS
+
+Threats, assets, source, dependencies, secrets, build, artifacts, environments, security tests, findings, policy gates, owners, exceptions, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Security and service owners define gates, severity, exceptions, remediation, release risk, and response. Humans approve bypass, high-impact changes, disclosure, and residual risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized code, configuration, advisories, scans, and threats; draft fixes and tests; and prioritize findings. It must not exploit, alter security controls, suppress findings, rotate secrets, bypass gates, or approve risk without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+DevSecOps Engineer, Security Auditor, Threat Modeler, Vulnerability Analyst, Build Engineer, Tester, Verifier, Privacy Reviewer, Implementer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Threat model changes; scan source, dependencies, artifacts, and infrastructure; test security; protect secrets; enforce policy; triage and remediate; manage exceptions; verify; monitor; respond; and improve controls.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show finding, source, asset, version, severity, evidence, owner, gate, recommendation, and limitation. Require human review for exploit, remediation, bypass, disclosure, exception, and release decisions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use policy as code with human override, least privilege, secure runners, secret isolation, provenance, threat traceability, safe fail behavior, alert quality, and rollback. Do not let a security pipeline become a single point of unsafe denial.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show security posture, findings, gates, exceptions, evidence freshness, remediation, deployment impact, owner, and authorized pause, remediate, waive, escalate, release, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+DevSecOps charter; threat and control map; secure pipeline; scan and test results; finding and exception register; remediation and release decision; evidence and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, source, version, tool, rule, finding, coverage, environment, method, time, result, owner, and limitation. A clean scan proves only the engine, configuration, and coverage.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify source, dependency, secret, build, artifact, infrastructure, identity, privacy, policy, gate, remediation, exception, and incident behavior. Test false positives, malicious input, scanner outage, and bypass audit.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Scanner count as security, unowned findings, blocking without risk context, bypass without record, secrets in pipeline, security added too late, and automation trusted more than evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine or roll back, preserve evidence, rotate secrets, remediate or mitigate, notify owners, and reassess release and user impact. Reopen on threat, tool, policy, dependency, source, or environment change.
+
+COMPLETION CRITERIA
+
+Threats, controls, pipeline, findings, owners, gates, exceptions, evidence, remediation, response, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve pipeline, findings, scans, decisions, exceptions, evidence, incidents, and open gaps. Hand off to Security Operations, Vulnerability, Threat Modeling, Build, Release, Platform, Privacy, and Governance.
+
+RELATED CODEX SECTIONS
+
+198-218 Embedded through Privacy; 258-268 Configuration through Deployment; 269 DevOps; 271 GitOps; 301-330 Operations; 386 Technical Debt; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security, privacy, supply-chain, and delivery context, and the integration roadmap. Exact gates, tools, risk thresholds, exceptions, providers, and acceptance authority remain unresolved.

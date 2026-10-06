@@ -1,0 +1,354 @@
+SECTION 001 — Research
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Establish a truthful, source-grounded understanding of the problem, context, people, domain, existing state, risks, constraints, and unknowns before those unknowns are converted into architecture or code.
+
+Research is not a ceremonial opening phase and is not limited to web searching. It is the governed process for determining what is known, how it is known, what remains uncertain, whose experience matters, which sources control, and what evidence is strong enough to support the next decision.
+
+REQUIRED OUTCOME
+
+A bounded research package that allows the human and assigned agents to answer:
+
+- What is the actual objective?
+- What problem or opportunity is being addressed?
+- Who is affected, accountable, authorized, or exposed to risk?
+- What current system, workflow, environment, market, domain, or physical reality already exists?
+- Which sources are authoritative, current, traceable, and relevant?
+- What assumptions and unknowns materially affect feasibility or design?
+- What conflicting evidence or dissent exists?
+- What must be learned next before consequential design or implementation can proceed?
+- What safe work may continue while unresolved research remains open?
+
+WHY THIS MATTERS
+
+A coding agent can produce plausible implementation faster than a human can notice that the wrong problem was framed. Once an unsupported assumption becomes architecture, every downstream artifact may become internally consistent and still be wrong.
+
+Research protects the objective from substitution, prevents stale or anonymous sources from becoming requirements, exposes dependencies before expensive work, and gives later verification a record of why decisions were made. It also protects future human-AI relationships by requiring both parties to distinguish evidence from confidence and questions from decisions.
+
+APPLICABILITY
+
+Research applies whenever the work depends on facts, needs, behavior, constraints, environments, technology, law, risk, feasibility, prior art, user experience, market conditions, physical conditions, or source state that are not already adequately established.
+
+Depth is proportional to consequence, novelty, uncertainty, disagreement, cost, and reversibility. A small reversible script may need a brief source and requirement check. A production system, safety-critical device, governance mechanism, AI system, public product, or irreversible change requires deeper and independently challenged research.
+
+NON-APPLICABILITY CONDITIONS
+
+Research may be minimal when all material inputs are already authoritative, current, directly supplied, internally consistent, and sufficient for the declared low-consequence scope.
+
+A non-applicability determination must still identify:
+
+- the controlling sources;
+- why they are sufficient;
+- their version or freshness;
+- the limited scope for which additional research is unnecessary;
+- the condition that would reopen research.
+
+"The user did not ask for research" is not by itself a sufficient reason to skip a material unknown.
+
+PREREQUISITES AND DEPENDENCIES
+
+Research begins from:
+
+- an attributable human objective;
+- a declared initial scope or question;
+- known authority and data-access boundaries;
+- available current-state and continuity records;
+- preservation constraints for people, data, systems, property, and existing work.
+
+Research commonly informs Sections 002–019 and every architecture section beginning with Section 020. It may be reopened by later feasibility, testing, incident, user-validation, or operational evidence.
+
+REQUIRED INPUTS
+
+- The human's actual objective and desired outcome.
+- Known users, owners, operators, stakeholders, affected communities, and decision owners.
+- Existing documents, repositories, systems, products, workflows, interfaces, datasets, environments, logs, incidents, and continuity records.
+- Known constraints, exclusions, prohibited actions, risk tolerance, time and resource limits.
+- Candidate external sources and access methods.
+- Questions already asked, decisions already made, and prior failed approaches.
+- Any source whose authority, identity, version, integrity, or freshness controls downstream work.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human:
+
+- defines or confirms the objective;
+- identifies values, priorities, unacceptable harms, protected information, and practical constraints;
+- authorizes access to private or controlled sources;
+- corrects mischaracterized needs, context, and lived experience;
+- decides material value conflicts and accepts risk where acceptance cannot be delegated;
+- determines whether unresolved uncertainty is tolerable for the next bounded step;
+- retains final authority over objective changes.
+
+The human is not required to know every research question in advance. The AI should surface missing questions without claiming the human already intended their answers.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+The AI:
+
+- records the objective without silent substitution;
+- inspects supplied source material and current state before proposing conclusions;
+- creates a research plan proportional to consequence and uncertainty;
+- separates observations, source claims, inferences, assumptions, recommendations, and unknowns;
+- identifies source identity, version, provenance, freshness, scope, and limitations;
+- searches for contradictory evidence and missing perspectives;
+- preserves material dissent rather than manufacturing consensus;
+- identifies the cheapest safe question, inspection, prototype, or experiment that can reduce a material unknown;
+- continues unaffected safe research when one source or question is blocked;
+- does not fabricate access, interviews, observations, citations, data, expertise, or verification;
+- does not convert research findings directly into consequential execution without the required downstream authority and design work.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Primary role:
+
+- Researcher — gathers, evaluates, organizes, and reports source-grounded information within the accepted question and authority boundary.
+
+Common supporting roles:
+
+- Observer — records system, user, process, or environment behavior without silently converting observation into interpretation.
+- Analyst — compares evidence, patterns, constraints, and implications.
+- Architect — identifies which unknowns materially affect system structure, interfaces, trust, and implementation sequencing.
+- Planner — sequences research activities, dependencies, cost, and decision points.
+- Memory Curator — preserves source identity, decisions, continuity, and retrievable research state.
+- User Experience Reviewer — ensures user and owner research addresses actual journeys, comprehension, agency, failure, and recovery.
+
+Challenge and assurance roles where consequence warrants:
+
+- Critic — attacks assumptions, framing, omissions, and unsupported conclusions.
+- Verifier — checks source identity, evidence integrity, reproducibility, and claim boundaries.
+- Security Auditor — evaluates sensitive data access, threat exposure, and research handling.
+- Governance Reviewer — checks authority, consent, provenance, policy, and evidence obligations.
+- Red Team — searches for adversarial framing, manipulation, blind spots, and failure-inducing assumptions.
+
+Role selection must use the smallest sufficient set and must not alter the source-defined role contracts.
+
+REQUIRED ACTIVITIES
+
+1. Objective capture
+Record the human's objective, desired outcome, exclusions, and known constraints in the human's own terms before translating them into professional or technical language.
+
+2. Question decomposition
+Convert the objective into explicit research questions. Identify which questions concern users, domain, technology, business, law, ethics, safety, security, feasibility, operations, or existing state.
+
+3. Source inventory
+List supplied and discovered sources. For each material source, record identity, origin, owner or publisher, version, date, location, access method, integrity information where available, relevance, and limitations.
+
+4. Source precedence
+Identify which sources are authoritative for which claims. Do not assume that popularity, confidence, technical polish, organizational title, or search ranking establishes authority.
+
+5. Current-state inspection
+Inspect existing artifacts, systems, workflows, continuity, failures, and constraints before designing a replacement or parallel structure. Research must discover what already exists, not merely what a generic solution would contain.
+
+6. Human and user inquiry
+Where people are affected, document goals, language, current journeys, pain points, decisions, workarounds, accessibility needs, trust expectations, failure experiences, and recovery behavior. Protect personal information and do not turn temporary frustration into a permanent identity label.
+
+7. Assumption and unknown register
+Record every material assumption and unknown, its impact, owner, evidence needed, expiration or review condition, and whether safe work can continue.
+
+8. Contradiction and dissent search
+Seek credible contradictory evidence. Preserve disagreements with their source, impact, decision owner, current disposition, and reopening condition.
+
+9. Risk and ethics review
+Identify potential harm to people, data, property, systems, institutions, environments, and future users. Determine whether research itself requires consent, privacy controls, security controls, or legal review.
+
+10. Resolution design
+For each blocking or high-impact unknown, identify the minimum safe evidence request or experiment with expected information gain, cost, risk, and stop conditions.
+
+11. Synthesis
+Produce direct findings first, followed by evidence, uncertainty, implications, and recommended next actions. Deep research may be complex; its result must remain navigable.
+
+12. Handoff
+Transfer the research package without losing source identity, uncertainty, dissent, authority, or the boundary between findings and decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Research questions proposed by the AI remain proposals until accepted or safely included within delegated scope.
+- The AI must show when it is asking, observing, inferring, recommending, or reporting a verified fact.
+- The human must be able to correct misunderstood terminology, context, priorities, and affected parties.
+- Operational claims must identify the current source and freshness.
+- The AI must not claim to have interviewed, observed, tested, browsed, measured, or verified anything it did not actually access or perform.
+- When the human rejects a proposed research direction, the AI must preserve the decision and any resulting uncertainty rather than reintroducing it as settled fact.
+- Material ambiguity that changes safety, legality, cost, architecture, or consequence must be clarified before execution.
+- Research should expose the next decision without seizing it.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Research must identify architectural obligations without prematurely selecting an architecture. Relevant findings may include:
+
+- actors, identities, authority sources, and trust boundaries;
+- data types, sensitivity, location, retention, quality, and provenance;
+- external systems, APIs, devices, infrastructure, networks, and physical constraints;
+- expected scale, latency, availability, reliability, safety, and resilience;
+- regulatory, contractual, licensing, intellectual-property, and accessibility constraints;
+- user journeys, operator workflows, cockpit requirements, and recovery expectations;
+- deployment, environment, offline, integration, maintenance, and retirement conditions;
+- unresolved facts whose absence prevents responsible architecture.
+
+The output should tell the Architect what must be accounted for, not dictate a preferred design without analysis.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+A research cockpit or equivalent operating surface should expose:
+
+- the current research objective and scope;
+- active questions and their priority;
+- source inventory, identity, freshness, and access state;
+- findings separated from assumptions, recommendations, and unknowns;
+- conflicts, dissent, and missing perspectives;
+- blockers and safe work that may continue;
+- human decisions required;
+- evidence supporting each material finding;
+- privacy or data-handling constraints;
+- the next safe action and the condition for closing or reopening research.
+
+The surface must not present a source count, progress bar, confidence score, or polished summary as proof that the research question has been answered.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Minimum outputs, adapted to scope:
+
+- Research Brief
+- Objective and Question Register
+- Source Register
+- Source-to-Claim Map
+- Current-State Inventory
+- Stakeholder or Affected-Party Map where applicable
+- User or Owner Job and Journey Findings where applicable
+- Assumption and Unknown Register
+- Risk, Ethics, Privacy, and Consent Notes where applicable
+- Findings Ledger
+- Dissent and Contradiction Ledger
+- Resolution Experiment or Evidence Request Plan
+- Research Decision and Handoff Record
+- Continuity Update
+
+EVIDENCE REQUIREMENTS
+
+A material research claim should point to one or more of:
+
+- supplied source text or artifact location;
+- authoritative publication, standard, law, specification, dataset, repository, or record;
+- direct observation with date, environment, method, and observer;
+- interview or user-research record with consent and handling requirements;
+- system output, log, configuration, trace, test, or measured result;
+- reproducible search or retrieval method;
+- source hash, version, revision, timestamp, or other identity binding;
+- explicit limitation or unresolved uncertainty.
+
+Evidence must be sufficient for the bounded claim. A citation to a source does not prove that the source is correct, current, authoritative for the claim, or applicable to the present context.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Research is accepted for its declared scope when an independent reviewer can:
+
+- reconstruct the objective and research questions without chat memory;
+- identify the source supporting each material finding;
+- distinguish findings, assumptions, unknowns, recommendations, and decisions;
+- verify source identity, version, and freshness where material;
+- identify at least one deliberate attempt to find contradictory evidence for consequential claims;
+- trace major architecture or requirements implications back to findings;
+- confirm that blocked questions remain visible and have resolution conditions;
+- confirm that personal, private, controlled, or security-sensitive research data was handled within authority;
+- determine what may safely happen next.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Objective substitution: researching a more familiar problem than the human asked about.
+- Confirmation bias: collecting only evidence supporting the first idea.
+- Source laundering: repeating a claim across many derivative sources and presenting repetition as independent support.
+- Anonymous authority: accepting a source without establishing who produced it, when, and for what context.
+- Stale state: designing from outdated documentation while ignoring current behavior.
+- Search-result theater: treating quantity of results as research quality.
+- Unperformed observation: claiming interviews, tests, measurements, browsing, or repository inspection that did not occur.
+- Assumption collapse: converting an assumption or recommendation into a requirement.
+- User erasure: researching technical feasibility while ignoring the people who must operate, trust, recover, or live with the system.
+- Happy-path bias: studying ideal use without failure, misuse, degradation, or recovery.
+- Hidden conflict: deleting dissent to produce a clean conclusion.
+- Privacy extraction: collecting more personal or sensitive data than the research objective requires.
+- Endless research: continuing without a decision threshold, stop condition, or information-gain rationale.
+- Premature certainty: closing a question because the answer sounds plausible.
+
+RECOVERY AND RECONSIDERATION
+
+When research is incomplete or unreliable:
+
+- quarantine affected conclusions from downstream use;
+- identify which requirements, architecture decisions, or implementation tasks are contaminated;
+- restore the last source-grounded state;
+- correct source identity, scope, method, or data-handling defects;
+- request the minimum missing evidence;
+- rerun affected analysis and update downstream traceability;
+- preserve the prior conclusion and the evidence that reversed it rather than rewriting history;
+- reopen the research question when its stated reconsideration condition is met.
+
+COMPLETION CRITERIA
+
+Section 001 is complete for a declared research scope only when:
+
+- the objective and questions are explicit;
+- material sources are identified and bounded;
+- current state has been inspected where relevant;
+- assumptions, unknowns, conflicts, and limitations are visible;
+- affected humans and owner journeys have been addressed where applicable;
+- evidence supports the stated findings;
+- consequential claims received appropriate challenge;
+- blocked questions have resolution paths;
+- the human decision points are explicit;
+- the next safe action is known;
+- the research package and continuity record can be handed to another qualified actor without reconstruction from chat history.
+
+Completion of research does not mean every unknown is resolved. It means the remaining uncertainty is explicit, bounded, assigned, and compatible with the next authorized step.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+The handoff must include:
+
+- objective and scope;
+- research questions;
+- source identities and locations;
+- findings and evidence;
+- assumptions and unknowns;
+- dissent and contradictions;
+- privacy, consent, security, and authority constraints;
+- decisions made and decisions still required;
+- downstream implications;
+- blocked work and safe work;
+- next safe action;
+- exact boundary of what the research did not establish.
+
+RELATED CODEX SECTIONS
+
+002 Foresight / Futures
+011 Business Analysis
+012 Market Research
+013 Competitive Intelligence
+014 Stakeholder Management
+015 User Research
+016 Domain Analysis
+017 Feasibility Analysis
+018 Risk Management
+019 Requirements Engineering
+020 Systems Engineering
+043 Event-Driven Architecture and all later architecture sections as applicable
+106 User Validation
+163 Data Analysis
+164 Data Science
+165 Statistics
+208 Threat Modeling
+256 Verification
+257 Validation
+369 Experimentation
+372 Feedback Management
+402 Post-Implementation Review
+403 Postmortem Analysis
+404 Lessons Learned
+405 Lifecycle Governance
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+This draft applies the supplied requirements for objective preservation, unknown-means-unknown, evidence before claims, current-state inspection, continuity, hostile review, bounded roles, source identity, owner research, owner journeys, human authority, delegation, proof-carrying work, and prerequisite-aware resolution.
+
+Unresolved source gap: the supplied corpus does not yet contain a dedicated universal research standard spanning every field in the 406-section lifecycle. This section has been cross-linked with drafted Sections 012, 015, 016, and 017 at the first integration checkpoint. It must later receive full source reconciliation with those sections and with Sections 163, 164, 165, 208, 256, 257, and 369 as the remaining lifecycle coverage is authored.

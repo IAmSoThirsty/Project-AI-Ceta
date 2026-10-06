@@ -1,0 +1,100 @@
+SECTION 152 — Storage Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer storage systems and media so data is placed, protected, retrieved, replicated, retained, restored, migrated, and retired within declared authority and service boundaries.
+
+REQUIRED OUTCOME
+
+A storage design covering media, namespaces, capacity, performance, durability, availability, access, encryption, lifecycle, backup, restore, portability, and disposal with owners and evidence.
+
+WHY THIS MATTERS
+
+Storage loss, leakage, corruption, or exhaustion can invalidate every downstream function. Capacity and redundancy diagrams do not prove recoverability or lawful deletion.
+
+APPLICABILITY
+
+Apply when files, objects, blocks, volumes, caches, archives, backups, or physical media carry material data or service state.
+
+NON-APPLICABILITY CONDITIONS
+
+No material storage location, data class, access, lifecycle, capacity, recovery, or disposal behavior changes and an exact approved baseline covers the work. Record the determination and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Data architecture, classifications, workload, access, durability and recovery objectives, regions, suppliers, media constraints, retention, deletion, cost, environmental, security, and operational requirements.
+
+REQUIRED INPUTS
+
+Authorized scope; data volumes and growth; read/write patterns; latency; durability; availability; replication; backup; restore; encryption; users; regions; retention; disposal; assumptions and unknowns.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner approves storage classes, locations, risk, cost, residency, retention, deletion, recovery objectives, exceptions, and acceptance, and assigns data, security, operations, supplier, and disposal authorities.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized storage inventories, classifications, configurations, capacity and performance telemetry, replication state, backup and restore evidence, provider terms, and disposal records. It may compare storage options, identify capacity, durability, exposure, residency, portability, cost, lifecycle, and recovery risks, and propose designs, tests, controls, runbooks, and evidence requirements.
+
+AI must distinguish observed media or provider behavior from inference and recommendation. It must not select a region or provider as an authority decision, expose data or keys, change storage configuration, claim durability, residency, deletion, isolation, or restoration from incomplete evidence, or approve cost, legal, security, or recovery risk. A mutation-capable proposal must identify the authorized actor, exact scope, environment, copies and dependencies affected, validation, append-only audit evidence, and forward recovery or compensation path; missing authority, evidence, or disposal coverage requires stop and owner review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Observer, Critic, Optimizer, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Classify data and define storage, access, lifecycle, durability, recovery, and disposal objectives.
+2. Compare media and provider options against workload, portability, residency, security, capacity, and cost.
+3. Design namespaces, quotas, replication, encryption, backup, restore, monitoring, migration, and secure disposal.
+4. Exercise loss, corruption, provider outage, quota exhaustion, stale replica, restore, and deletion paths.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may compare authorized options and analyze telemetry, but must not choose regions, expose data, change storage, or claim durability. Recommendations must state workload, assumptions, provider, evidence, and owner decision.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Model storage classes, locations, copies, replicas, caches, backups, keys, quotas, lifecycle states, and evidence separately. Enforce identity, access, retention, deletion, integrity, portability, and recovery at storage boundaries.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show storage class, location, owner, capacity, utilization, copies, freshness, encryption, retention, incidents, cost, evidence, and authorized quota, isolate, restore, migrate, delete, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Storage landscape and classification; capacity and performance model; access and protection design; replication, backup, restore, migration, retention, disposal, test, risk, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify media, provider, region, configuration, dataset, time, workload, test method, result, and limitation. A redundant copy or vendor statement is not proof of restoration, isolation, or deletion.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authorized access, encryption, integrity, capacity thresholds, performance, replication lag, backup restoration, provider loss, portability, retention expiry, deletion, and residual-copy behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unbounded growth, hidden copies, public buckets, shared keys, untested backups, region assumptions, cache leakage, quota blindness, provider lock-in without decision, and deletion claims that omit replicas or archives.
+
+RECOVERY AND RECONSIDERATION
+
+On loss, corruption, exposure, exhaustion, or provider failure, restrict affected access, preserve evidence, and use approved restore, failover, substitution, quota, migration, or compensation paths. Reassess data and service impact before resuming.
+
+COMPLETION CRITERIA
+
+Storage scope, ownership, classification, capacity, access, durability, recovery, lifecycle, disposal, tests, evidence, and gaps are recorded for the exact environment. Status remains CONTENT-COMPLETE pending later gates.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off storage contracts, locations, quotas, keys, monitoring, backup, restore, migration, retention, disposal, and provider obligations to Data, Database, Infrastructure, Cloud, Security, Operations, Testing, and Retirement work.
+
+RELATED CODEX SECTIONS
+
+030 Information Architecture; 031 Data Architecture; 032 Application Architecture; 193 Infrastructure Security; 194 Cloud Security; 275 Infrastructure Engineering; 277 Cloud Engineering; 286 Storage Administration; 328-330 Backup, Restore, and Failover Engineering; 391-401 retention and disposal sections.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-032, Owner Cockpit Requirements, Status and Evidence Lexicon, and roadmap. Provider-specific durability, residency, environmental, legal, pricing, and disposal requirements remain unresolved.

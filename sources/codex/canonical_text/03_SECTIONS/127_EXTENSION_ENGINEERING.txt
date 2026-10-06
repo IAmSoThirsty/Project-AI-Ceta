@@ -1,0 +1,98 @@
+SECTION 127 - Extension Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of extensions that augment a host application, browser, editor, platform, or device through declared APIs, permissions, lifecycle, isolation, distribution, and user-controlled activation.
+
+REQUIRED OUTCOME
+
+An extension baseline with host contract, permissions, trust boundary, activation, compatibility, update, uninstall, evidence, owner, and recovery conditions.
+
+WHY THIS MATTERS
+
+Extensions inherit host privileges and user trust while depending on changing APIs. Weak permission or lifecycle design can create covert access, persistence, data leakage, or host instability.
+
+APPLICABILITY
+
+Applies to plugins, browser extensions, editor extensions, add-ons, modules, integrations, and package-based augmentations loaded by a host.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to a standalone artifact with no host loading, extension API, permission, distribution, or compatibility claim. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires host API and version policy, permission model, threat model, data and privacy rules, signing, packaging, review, sandboxing, compatibility matrix, update, support, and uninstall authority.
+
+REQUIRED INPUTS
+
+Provide extension capabilities, activation events, data flows, host permissions, user journeys, target hosts, versions, resource limits, telemetry, update, disablement, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve permissions, host trust, distribution, data collection, release, emergency disablement, and acceptance. The owner can revoke or quarantine an extension without requiring the extension itself.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft manifests, adapters, tests, and compatibility analysis. It must not broaden permissions, access secrets, publish packages, or imply host safety without evidence and delegated approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Security Auditor, Privacy Reviewer, Analyst, Implementer, Tester, Verifier, Governance Reviewer, User Experience Reviewer, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define host, extension, permissions, data, lifecycle, and authority boundaries.
+2. Review APIs, activation, isolation, resource use, compatibility, accessibility, and failure behavior.
+3. Build signed reproducible packages and test install, update, disablement, uninstall, and host failure.
+4. Stage distribution, monitor behavior, respond to incidents, and retire safely.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show extension identity, host, permissions, activation, version, evidence, and status. Human approval is required for privileged or user-impacting actions; host status and disable controls remain available if AI fails.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Isolate extension code and data, validate host messages, constrain permissions, define activation and shutdown, cap resources, protect secrets, version APIs, and preserve uninstall and rollback paths.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show host and extension versions, permissions, signing, activation, health, data access, rollout, incidents, and controls to approve, disable, revoke, quarantine, update, or uninstall.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Extension charter, host contract, manifest and permission record, threat and privacy assessment, compatibility matrix, signed build evidence, tests, release plan, support runbook, and retirement record.
+
+EVIDENCE REQUIREMENTS
+
+Identify host, extension version, permissions, package hash, signing identity, environment, test method, result, and limitations. Separate API, isolation, privacy, security, usability, performance, and uninstall evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify least privilege, host validation, activation, shutdown, isolation, data access, update, rollback, disablement, uninstall, host upgrade, offline, malformed input, and accessibility behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Overbroad permissions; hidden activation; host trust by name alone; persistent secrets; unbounded resource use; unsigned packages; update without rollback; and treating marketplace approval as runtime safety.
+
+RECOVERY AND RECONSIDERATION
+
+Disable or quarantine the extension, revoke permissions, preserve evidence, restore the host, use a prior package or manual path, compensate external effects, and reopen the trust and compatibility baseline.
+
+COMPLETION CRITERIA
+
+Host contract, permissions, lifecycle, evidence, controls, release, support, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve host and package identity, manifests, permissions, evidence, incidents, decisions, and next safe action. Hand off to Browser, API, Security, Privacy, Testing, Release, Operations, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+126 Browser Engineering; 128 API Engineering; 190 Application Security; 194 Cloud Security; 203 Cryptography; 248 Compatibility Testing; 260 Dependency Management; 287 Release Engineering; 389 Deprecation Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 107-126, Owner Cockpit Requirements, and Status and Evidence Lexicon. Host-specific permission systems, store rules, support lifetimes, user populations, and incident objectives remain unresolved until verified.

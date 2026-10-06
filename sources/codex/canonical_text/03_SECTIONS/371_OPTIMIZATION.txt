@@ -1,0 +1,95 @@
+SECTION 371 — Optimization
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Improve a defined outcome or constraint through measured change while protecting other required outcomes, uncertainty, safety, fairness, maintainability, and reversibility.
+
+REQUIRED OUTCOME
+
+An optimization model with objective, constraints, baseline, variables, method, tradeoffs, guardrails, evidence, experiment, decision, rollback, and monitoring.
+
+WHY THIS MATTERS
+
+Optimization can improve a proxy while worsening the actual goal or shifting cost and harm elsewhere. Local improvement is not system improvement without constraints and outcome evidence.
+
+APPLICABILITY
+
+Apply when a system, process, product, resource, model, or operation is deliberately tuned to improve performance, cost, quality, growth, reliability, or another outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no objective, variable, tradeoff, or measurable outcome changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use requirements, metrics, experiments, performance, cost, safety, privacy, ethics, quality, reliability, and change baselines.
+
+REQUIRED INPUTS
+
+Objective, constraints, baseline, variables, metric, data, method, alternatives, guardrails, evidence, owner, and rollback.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define objective and protected constraints; specialists assess domain, safety, security, and user impact; humans approve tradeoffs, deployment, and residual risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized data, propose candidates, simulate bounded changes, and identify tradeoffs. It must expose objective and limitations and must not alter production, optimize sensitive outcome, or accept collateral harm without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Optimizer, Analyst, Researcher, Architect, Experimenter, Performance Engineer, User Experience Reviewer, Safety Reviewer, Verifier, and Critic.
+
+REQUIRED ACTIVITIES
+
+Define objective and constraints; baseline; identify variables; propose options; test or experiment; assess tradeoffs and harm; select; deploy; monitor; rollback; and review.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show objective, constraint, baseline, metric, candidate, evidence, uncertainty, tradeoff, and limitation. Require human approval for high-impact optimization and production change.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use feature flags, experiment isolation, guardrails, rollback, multi-objective measurement, change traceability, safe bounds, and independent monitoring.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show objective, baseline, candidate, metric, constraints, harm signals, evidence freshness, owner, and authorized test, deploy, pause, rollback, constrain, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Optimization charter; objective and constraint; baseline and candidate; experiment and result; tradeoff and guardrail; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify objective, baseline, candidate, data, metric, method, period, result, tradeoff, uncertainty, and limitation. Local metric improvement proves neither global outcome nor no harm.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify baseline, constraints, metric, candidate, experiment, guardrails, user impact, security, privacy, cost, rollback, and outcome. Test adverse and boundary conditions.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Proxy optimization, goal drift, local maximum, harm externalized, metric gaming, no baseline, unbounded automation, and improvement without rollback.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or roll back, protect affected parties, preserve evidence, correct metric or objective, and reassess tradeoffs. Reopen on outcome, constraint, data, population, system, or risk change.
+
+COMPLETION CRITERIA
+
+Objective, constraints, baseline, variables, evidence, tradeoffs, guardrails, decision, owners, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve candidates, experiments, metrics, decisions, incidents, evidence, exceptions, and open gaps. Hand off to Growth, Product, Analytics, Performance, SRE, Quality, and Operations.
+
+RELATED CODEX SECTIONS
+
+229 Quality Engineering; 239 Performance; 321-324 Capacity, Availability, Performance, Reliability; 366-370 Analytics and Experiments; 368 Growth; 372 Feedback.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, optimization, metrics, experiments, user, quality, and operations context, and the integration roadmap. Exact objective, constraints, baselines, data, guardrails, tradeoffs, and acceptance authority remain unresolved.

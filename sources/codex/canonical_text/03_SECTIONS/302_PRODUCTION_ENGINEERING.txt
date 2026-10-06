@@ -1,0 +1,95 @@
+SECTION 302 — Production Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer production systems, workflows, controls, observability, capacity, release, incident, support, and recovery for safe and sustainable operation.
+
+REQUIRED OUTCOME
+
+A production-engineering model with service boundaries, environments, ownership, deployment, configuration, data, observability, performance, reliability, security, support, and recovery.
+
+WHY THIS MATTERS
+
+Production is where real users, data, commitments, and consequences meet. Production engineering turns design intent into controlled service behavior and must account for change, failure, people, and recovery.
+
+APPLICABILITY
+
+Apply when building, changing, operating, or improving a production or production-like service, system, environment, or workflow.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no production state, user, data, service, commitment, or operational control changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use operational architecture, release, deployment, configuration, platform, security, SRE, observability, incident, capacity, backup, and support baselines.
+
+REQUIRED INPUTS
+
+Service, users, environment, artifact, configuration, data, dependencies, SLO, telemetry, runbooks, staffing, support, incidents, capacity, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Production owners approve service, access, release, change, incident, communication, staffing, risk, recovery, and retirement. Humans retain control of consequential production action and user impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized production signals, summarize incidents, draft runbooks, identify drift, and recommend bounded actions. It must not change production, suppress alerts, access restricted data, communicate commitments, or close incidents without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Production Engineer, Site Reliability Engineer, Operations Engineer, Release Engineer, Security Auditor, Observer, Incident Responder, Capacity Engineer, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define production boundary and ownership; provision and secure; release; configure; observe; capacity-plan; support; respond; back up; recover; reduce toil; test; learn; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show service, environment, artifact, config, user impact, signal, action, authority, evidence, and uncertainty. Require human approval for production, data, security, recovery, and communication actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable artifacts, environment isolation, least privilege, progressive release, feature flags, telemetry, SLOs, graceful degradation, rollback, backup, restore, and independent control path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show production state, service health, changes, dependencies, incidents, capacity, cost, evidence freshness, owner, and authorized pause, rollback, scale, isolate, recover, communicate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Production charter; service and ownership map; release and change; configuration and environment; observability, support, capacity, incident, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, environment, version, config, data, user outcome, source, method, period, result, actor, and limitation. Production status or uptime proves neither correctness nor absence of harm.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify deployment, configuration, security, observability, SLO, capacity, support, backup, restore, rollback, incident, communication, and retirement. Exercise dependency, operator, and control-plane failure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Production as experiment without authority, alert suppression, shared admin, no rollback, support ignored, data recovery untested, and infrastructure health treated as user outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, preserve evidence, pause change, rollback or fail over, restore, communicate, support users, and reassess residual risk. Reopen on incident, service, dependency, data, owner, or commitment change.
+
+COMPLETION CRITERIA
+
+Service, environment, owners, changes, evidence, support, reliability, security, capacity, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve production baseline, runbooks, changes, telemetry, incidents, backups, decisions, evidence, exceptions, and open gaps. Hand off to SRE, Operations, Release, Support, Security, Data, and Governance.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 267-268 Delivery and Deployment; 288-301 Release, Change, Deployment, DNS, CDN, and SRE; 303-330 Observability, Incident, Capacity, Availability, Performance, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, production, operational, delivery, SRE, security, and owner-control context, and the integration roadmap. Exact services, environments, SLOs, staffing, data, recovery, and acceptance authority remain unresolved.

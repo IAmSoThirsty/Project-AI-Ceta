@@ -1,0 +1,95 @@
+SECTION 324 — Reliability Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Manage reliability as a sustained outcome through failure prevention, detection, response, recovery, maintenance, change, capacity, and learning.
+
+REQUIRED OUTCOME
+
+A reliability model with user and service outcomes, failure modes, indicators, objectives, error budget, dependencies, maintenance, incident, recovery, and improvement.
+
+WHY THIS MATTERS
+
+Reliability degrades through change, dependency, workload, aging, operator burden, and hidden failure. A clean period does not prove future reliability or that recovery works.
+
+APPLICABILITY
+
+Apply when service or system reliability, durability, correctness, continuity, or recovery is material.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no reliability, failure, maintenance, or recovery outcome changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use SRE, reliability testing, resilience, availability, performance, capacity, incident, problem, maintenance, and recovery baselines.
+
+REQUIRED INPUTS
+
+Service, user outcome, failure modes, indicators, objectives, budget, dependencies, maintenance, incidents, tests, recovery, and owner.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners set reliability objectives, budget, change, maintenance, staffing, incident, recovery, and risk. Humans decide tradeoffs and protect sustainable operation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized failures and indicators, identify patterns, and draft improvement. It must not suppress failure, alter service, close incident, or accept reliability without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Reliability Engineer, SRE, Architect, Problem Manager, Incident Responder, Capacity Engineer, Tester, Verifier, Analyst, and Critic.
+
+REQUIRED ACTIVITIES
+
+Define outcomes and modes; identify failure; set objectives; monitor; test; manage error budget; maintain; respond; recover; reduce toil; review incidents; and improve architecture and process.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show service, outcome, failure, indicator, objective, budget, evidence, action, owner, and limitation. Require human decision for change, risk, incident, recovery, and budget.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use redundancy, graceful degradation, health, recovery, rollback, dependency isolation, capacity, maintenance, and independent control and evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show reliability, failures, SLO, budget, dependencies, incidents, maintenance, evidence freshness, owner, and authorized pause, rollback, scale, recover, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Reliability charter; failure and dependency map; objectives and budget; test and maintenance; incident, recovery, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify service, outcome, failure, period, indicator, source, method, result, owner, uncertainty, and limitation. Reliability estimate requires workload, duration, and exposure context.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify objective, failure mode, indicators, tests, maintenance, dependency, error budget, recovery, incident learning, and operator workload. Exercise failure and degraded mode.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uptime-only, reliability as blame, no failure budget, untested recovery, dependency hidden, toil ignored, and green period treated as durable reliability.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, reduce change, fail over or restore, preserve evidence, communicate, and reassess objectives and architecture. Reopen on failure, workload, dependency, service, or recovery change.
+
+COMPLETION CRITERIA
+
+Outcomes, failure modes, objectives, budget, owners, dependencies, evidence, recovery, maintenance, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve reliability history, incidents, tests, maintenance, budgets, decisions, evidence, exceptions, and open gaps. Hand off to SRE, Availability, Performance, Capacity, Continuity, and Operations.
+
+RELATED CODEX SECTIONS
+
+243-245 Reliability, Resilience, and Chaos Testing; 301 SRE; 321-323 Capacity, Availability, and Performance; 325-330 Service Levels, Continuity, DR, Backup, Restore, and Failover.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, reliability, SRE, resilience, and operations context, and the integration roadmap. Exact outcomes, failure model, indicators, budgets, staffing, recovery, and acceptance authority remain unresolved.

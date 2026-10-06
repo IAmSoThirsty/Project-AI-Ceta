@@ -1,0 +1,95 @@
+SECTION 396 — Account Closure
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Close a user, customer, service, tenant, supplier, or organizational account safely while revoking access, resolving obligations, protecting data, and preserving required records.
+
+REQUIRED OUTCOME
+
+An account-closure model with authority, identity, entitlements, sessions, data, subscriptions, billing, dependencies, retention, export, deletion, support, appeal, and evidence.
+
+WHY THIS MATTERS
+
+Closing an account can strand data, leave credentials active, trigger financial or contractual error, or destroy evidence. Closure must balance user request, security, privacy, legal hold, and continuity.
+
+APPLICABILITY
+
+Apply when an account, identity, tenant, customer relationship, subscription, supplier access, or service account is suspended, closed, or terminated.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no account, identity, access, data, entitlement, billing, contract, or lifecycle state changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use IAM, privacy, records, retention, billing, payments, subscription, legal, support, security, data export, and service baselines.
+
+REQUIRED INPUTS
+
+Account, owner, authority, sessions, access, entitlements, subscriptions, billing, data, export, holds, dependencies, support, and closure reason.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Account owners approve closure, access revocation, export, retention, deletion, billing, contract, legal hold, exception, and appeal. Humans handle disputed or high-impact closure.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may check authorized closure prerequisites and draft communications. It must not infer identity, close, revoke, delete, refund, expose data, or override hold without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+IAM Engineer, Privacy Reviewer, Records Manager, Legal Advisor, Billing Engineer, Customer Support, Security Auditor, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Authenticate request; assess authority and hold; inventory access, data, subscriptions, billing, and dependencies; export or retain; revoke; close; notify; verify; and dispose later.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show account, requester, authority, access, data, hold, obligations, action, evidence, and limitation. Require human approval for closure, deletion, access revocation, refund, and disputed request.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use state machine, identity proof, session revocation, entitlement and billing linkage, export, hold, retention, deletion, audit, appeal, and recovery window.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show closure state, owner, access, sessions, data, subscriptions, billing, hold, evidence freshness, and authorized pause, export, revoke, close, restore, appeal, and delete controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Closure charter; authority and account; access and data; billing and subscription; export, revocation, communication, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify account, requester, authority, state, sessions, entitlements, data, hold, method, time, result, and limitation. Closure confirmation proves only recorded state and declared scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, authority, sessions, access, subscriptions, billing, export, hold, retention, deletion, dependencies, communication, appeal, and recovery window.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Close without authentication, active credentials, data lost, billing continues, subscription orphaned, hold bypassed, no appeal, and closure used to erase evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Pause closure, preserve state, restore or support account where authorized, revoke unsafe access, correct billing, communicate, and reassess rights and obligations. Reopen on dispute, hold, data, contract, or identity change.
+
+COMPLETION CRITERIA
+
+Account, authority, access, sessions, data, entitlement, billing, hold, export, retention, evidence, owners, appeal, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve closure, access, export, billing, subscriptions, communications, decisions, evidence, exceptions, and open gaps. Hand off to IAM, Privacy, Records, Billing, Payments, Support, Legal, Security, and Deletion.
+
+RELATED CODEX SECTIONS
+
+200-202 IAM; 218 Privacy; 225 Records; 358-361 Commerce, Billing, Payments, and Subscriptions; 395 Data Deletion; 397 Service Decommissioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, identity, privacy, finance, customer, legal, records, and lifecycle context, and the integration roadmap. Exact account types, authority, data, holds, billing, retention, appeal, and acceptance authority remain unresolved.

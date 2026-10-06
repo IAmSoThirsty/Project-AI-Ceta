@@ -1,0 +1,95 @@
+SECTION 376 — Preventive Maintenance
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Perform planned inspection, update, cleaning, calibration, replacement, testing, and adjustment to reduce foreseeable failure, degradation, risk, or obsolescence.
+
+REQUIRED OUTCOME
+
+A preventive-maintenance model with asset, condition, interval, trigger, procedure, resources, safety, evidence, effectiveness, deferral, and review.
+
+WHY THIS MATTERS
+
+Calendar work can waste resources or miss condition-based risk. Preventive maintenance must be tied to failure evidence and protected outcomes, not activity count alone.
+
+APPLICABILITY
+
+Apply when planned work can prevent failure, preserve quality, maintain safety, improve security, or extend useful life.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no preventable failure, condition, inspection, update, calibration, or lifecycle outcome changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use maintenance, reliability, safety, security, quality, asset, supplier, change, and operations baselines.
+
+REQUIRED INPUTS
+
+Asset, condition, failure history, interval, trigger, procedure, parts, skills, safety, window, evidence, and effectiveness measure.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve interval, procedure, safety, deferral, resources, and effectiveness. Qualified staff execute and record; humans decide when evidence warrants change.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized condition and failure history, draft schedules, and identify interval risk. It must not infer safety, schedule critical work, alter asset, or close maintenance without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Preventive Maintenance Engineer, Reliability Engineer, Hardware Engineer, Software Engineer, Safety Reviewer, Planner, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Identify failure and condition; define trigger or interval; plan; secure window; execute; inspect and test; record; measure effectiveness; adjust; manage deferral; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show asset, condition, failure basis, interval, procedure, safety, evidence, owner, and limitation. Require human approval for safety, production, access, and interval change.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use asset history, condition telemetry, maintenance mode, redundancy, calibration, update rollback, parts, work instruction, evidence, and safe return.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show due work, condition, risk, interval, backlog, safety, evidence freshness, owner, and authorized schedule, defer, execute, verify, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Preventive-maintenance charter; asset and failure basis; schedule and procedure; execution and test; effectiveness and deferral; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, condition, interval, source, procedure, method, time, operator, result, effectiveness, and limitation. Completion count proves only activity, not reduced failure.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify failure basis, interval, procedure, safety, execution, calibration, test, effectiveness, deferral, and return to service. Compare recurrence and condition evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Calendar theater, interval never reviewed, maintenance skipped, condition ignored, unsafe window, activity metric as reliability, and work without effectiveness evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Protect asset, perform corrective work, preserve evidence, revise interval, communicate, and reassess risk. Reopen on failure, condition, environment, asset, supplier, or design change.
+
+COMPLETION CRITERIA
+
+Asset, failure basis, interval, procedure, safety, evidence, effectiveness, owners, deferral, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve schedules, asset history, work, tests, effectiveness, deferrals, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Corrective, Adaptive, Reliability, Quality, Safety, and Operations.
+
+RELATED CODEX SECTIONS
+
+374 Maintenance; 375 Corrective; 377 Adaptive; 243 Reliability; 252 Safety; 378-381 Software, Firmware, Security, and Dependency Updates; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, maintenance, reliability, safety, quality, and lifecycle context, and the integration roadmap. Exact assets, failure evidence, intervals, skills, parts, safety, and acceptance authority remain unresolved.

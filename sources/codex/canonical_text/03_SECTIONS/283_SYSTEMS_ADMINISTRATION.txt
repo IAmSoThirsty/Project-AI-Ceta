@@ -1,0 +1,95 @@
+SECTION 283 — Systems Administration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate and maintain systems, accounts, services, endpoints, configurations, jobs, users, and records so they remain secure, available, supportable, and recoverable.
+
+REQUIRED OUTCOME
+
+A systems-administration model with inventory, ownership, access, routine work, change, patch, monitoring, support, incident, backup, recovery, and retirement procedures.
+
+WHY THIS MATTERS
+
+Routine administration is where drift and privilege accumulate. Unrecorded commands, shared accounts, stale jobs, and workarounds can become permanent control failures.
+
+APPLICABILITY
+
+Apply when people or automation administer servers, endpoints, services, accounts, configurations, jobs, or infrastructure.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no administrative action, account, service, configuration, or operational record changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use IAM, server, network, storage, database, configuration, patch, secrets, operations, incident, backup, and records baselines.
+
+REQUIRED INPUTS
+
+Assets, accounts, services, jobs, runbooks, permissions, changes, patches, alerts, logs, support, backups, recovery, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Administrators operate within assigned privilege and record changes; owners approve access, maintenance, exceptions, emergency work, and retirement. Humans review high-impact and destructive actions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized logs and inventory, draft runbooks, suggest diagnosis, and identify drift. It must not execute privileged commands, access secrets, disable controls, or alter systems without explicit delegated authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Systems Administrator, Operations Engineer, Security Auditor, Platform Engineer, Server Engineer, Network Engineer, Database Administrator, Storage Administrator, Tester, and Verifier.
+
+REQUIRED ACTIVITIES
+
+Inventory and access; perform routine maintenance; change and patch; monitor; back up; troubleshoot; support users; respond to incidents; recover; review privilege; document; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show asset, account, command or action, privilege, target, evidence, impact, and limitation. Require human approval for privileged, destructive, production, data, and emergency actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use just-in-time privilege, session audit, runbooks, automation with guardrails, configuration management, out-of-band recovery, logging, and separation of administration from approval.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show administrative activity, assets, access, changes, alerts, evidence freshness, owner, and authorized approve, execute, revoke, isolate, recover, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Administration charter; asset and account catalog; runbooks; access and change records; patch and incident; backup and recovery; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, administrator, account, privilege, action, command reference, time, method, result, and limitation. A command log proves activity, not authorization or correctness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify access, logging, runbook, change, patch, backup, restore, alert, support, recovery, and retirement. Test least privilege, emergency, and failed automation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared admin, undocumented manual fix, privilege never reviewed, secrets in commands, alert ignored, routine job without owner, and recovery dependent on the same account or system.
+
+RECOVERY AND RECONSIDERATION
+
+Stop unsafe action, preserve logs, revoke or rotate access, restore known-good state, communicate, and reassess downstream impact. Reopen on asset, admin, policy, tool, or environment change.
+
+COMPLETION CRITERIA
+
+Assets, accounts, privileges, procedures, changes, evidence, recovery, owners, exceptions, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve runbooks, inventories, sessions, changes, incidents, backups, decisions, evidence, exceptions, and open gaps. Hand off to Server, Network, Database, Storage, Security, Platform, Support, and Operations.
+
+RELATED CODEX SECTIONS
+
+200-205 IAM, Authentication, Authorization, Keys, and Secrets; 258 Configuration; 282 Servers; 284-286 Network, Database, and Storage; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, systems, security, administration, and operations context, and the integration roadmap. Exact assets, accounts, tools, privilege, runbooks, staffing, and acceptance authority remain unresolved.

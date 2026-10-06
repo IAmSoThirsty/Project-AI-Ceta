@@ -1,0 +1,95 @@
+SECTION 369 — Experimentation
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Run bounded, hypothesis-driven experiments that reduce uncertainty while protecting people, data, service, fairness, safety, and decision integrity.
+
+REQUIRED OUTCOME
+
+An experiment model with hypothesis, objective, population, intervention, control, metric, assignment, duration, power or uncertainty, guardrail, consent or authority, analysis, stop, and decision.
+
+WHY THIS MATTERS
+
+An experiment can produce a precise answer to the wrong question or create harm through spillover, biased sample, peeking, interference, or unmonitored guardrail failure.
+
+APPLICABILITY
+
+Apply when a controlled change or comparison is used to learn causal or comparative evidence about product, process, policy, system, or user outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no experiment, causal claim, intervention, population, or decision is planned and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use research, analytics, product, privacy, ethics, safety, statistics, feature, and governance baselines. Define experiment owner and stop authority.
+
+REQUIRED INPUTS
+
+Question, hypothesis, population, assignment, intervention, control, metric, sample, duration, guardrail, data, consent, analysis, and decision.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Experiment owners approve purpose, population, intervention, risk, consent, guardrails, stop, and interpretation. Humans judge ethical, practical, and customer meaning.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft hypotheses, design cases, analyze authorized aggregate results, and surface uncertainty. It must not assign sensitive participants, alter experiment, peek and conclude, expose data, or decide rollout without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Experimenter, Statistician, Researcher, Product Analyst, Product Manager, Privacy Reviewer, Ethics Reviewer, Tester, Verifier, and Critic.
+
+REQUIRED ACTIVITIES
+
+Define question and hypothesis; assess harm; design; assign; instrument; run; monitor guardrails; stop if needed; analyze; inspect limitations; decide; communicate; and preserve reproducibility.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show hypothesis, population, assignment, intervention, metric, guardrail, authority, evidence, uncertainty, and limitation. Require human review for sensitive population, harm, stop, and rollout decision.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use randomization or declared alternative, isolation, exposure control, feature flag, event integrity, privacy, guardrails, stopping rule, analysis version, and rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show experiment state, population, intervention, metric, guardrail, incidents, evidence freshness, owner, and authorized pause, stop, analyze, extend, rollout, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Experiment charter; hypothesis and design; population and assignment; metrics and guardrails; analysis and decision; evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify hypothesis, population, assignment, intervention, control, metric, period, method, result, uncertainty, and limitation. Statistical significance alone proves neither value nor safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify assignment, exposure, contamination, sample, metric, guardrail, consent, data quality, analysis, stopping, reproducibility, and decision. Test missing data and adverse subgroup.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Peeking, underpowered study, biased sample, metric substitution, control contamination, harm ignored, experiment without stop, and statistically significant proxy treated as success.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or narrow, protect users, preserve data, correct analysis, communicate, and reassess. Reopen on data, population, intervention, metric, guardrail, or external event change.
+
+COMPLETION CRITERIA
+
+Hypothesis, design, population, metrics, guardrails, evidence, analysis, decision, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve design, assignments, feature state, data, analysis, decisions, incidents, evidence, exceptions, and open gaps. Hand off to A/B Testing, Product Analytics, Growth, Optimization, Privacy, and Governance.
+
+RELATED CODEX SECTIONS
+
+001 Research; 366-368 Customer, Product, and Growth Analytics; 370 A/B Testing; 371 Optimization; 217-218 Trust and Privacy; 253 Model Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, experimentation, statistics, product, privacy, ethics, and evidence context, and the integration roadmap. Exact hypotheses, populations, metrics, power, guardrails, consent, and acceptance authority remain unresolved.

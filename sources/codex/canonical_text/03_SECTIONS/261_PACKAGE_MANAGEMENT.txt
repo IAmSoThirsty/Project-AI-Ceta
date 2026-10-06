@@ -1,0 +1,95 @@
+SECTION 261 — Package Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern the acquisition, storage, resolution, publication, promotion, integrity, vulnerability, licensing, and retirement of packages used to build or operate the system.
+
+REQUIRED OUTCOME
+
+A package-management model with registries, repositories, provenance, resolution, lock or pin policy, access, signing, scanning, retention, promotion, rollback, and owners.
+
+WHY THIS MATTERS
+
+Packages are executable supply-chain inputs. A mutable registry, malicious artifact, dependency confusion, unsigned package, or unreviewed resolution can alter behavior before local source review.
+
+APPLICABILITY
+
+Apply when packages, modules, libraries, plugins, containers, firmware bundles, datasets, models, or provider components are fetched, built, cached, promoted, or consumed.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no package or registry input is used and an approved exact baseline covers the artifact.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use dependency, source, artifact, security, license, secrets, build, release, and network baselines. Identify registries, trust, ownership, retention, and emergency authority.
+
+REQUIRED INPUTS
+
+Package graph, registry, namespace, version, digest, provenance, license, advisory, policy, credentials, cache, lockfile, promotion, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve registries, namespaces, packages, trust, publishing, promotion, exceptions, retention, and withdrawal. Humans resolve identity and license ambiguity and accept supply-chain risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized package metadata, graph, advisories, and lockfiles; draft updates and policies; and identify anomalies. It must not install, publish, promote, delete, or trust a package without authority and verification.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Package Manager, Supply Chain Analyst, Security Auditor, Dependency Manager, Build Engineer, Researcher, Tester, Verifier, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define approved sources; inventory and pin packages; verify provenance and integrity; scan license and vulnerability; isolate and cache; review and promote; monitor registry; withdraw or replace; retain evidence; and recover.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show package, registry, namespace, version, digest, provenance, policy, scan, evidence, and limitation. Require human approval for install, publish, promotion, exception, and withdrawal.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use trusted registries, namespace controls, digest or version pinning, signed provenance, isolated builders, cache integrity, allowlists, SBOM, quarantine, and rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show registry, package, version, digest, findings, provenance, consumers, evidence freshness, and authorized approve, quarantine, promote, withdraw, replace, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Package policy and inventory; registry and trust model; lock and provenance records; scan and promotion results; withdrawal and recovery; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify package, registry, namespace, version, digest, source, builder, scan, time, actor, result, and limitation. Name and version alone do not prove artifact identity or safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify source, namespace, integrity, provenance, license, vulnerability, resolution, cache, promotion, rollback, withdrawal, and consumer impact. Test unavailable, substituted, or malicious registry response.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Untrusted registry, dependency confusion, mutable tag, unsigned package, cache poisoning, package installed directly in production, and scan passed without exact digest.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine package and consumers, preserve provenance, rotate credentials, roll back or replace, notify owners, and assess downstream artifacts. Reopen on registry, package, advisory, policy, or build change.
+
+COMPLETION CRITERIA
+
+Packages, registries, trust, versions, digests, owners, scans, promotion, recovery, evidence, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve package and digest history, registry policy, provenance, scans, promotions, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Dependency, Build, Artifact, Security, Release, and Platform.
+
+RELATED CODEX SECTIONS
+
+259 Source Control; 260 Dependency Management; 262 Artifact Management; 264-271 Build, CI/CD, DevOps, DevSecOps, and GitOps; 209 Vulnerability Management; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, supply-chain, security, licensing, and delivery context, and the integration roadmap. Exact registries, provenance, package policy, signing, retention, providers, and acceptance authority remain unresolved.

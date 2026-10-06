@@ -1,0 +1,95 @@
+SECTION 370 — A/B Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Compare two or more controlled variants against a declared outcome using fair assignment, reliable measurement, guardrails, and accountable interpretation.
+
+REQUIRED OUTCOME
+
+An A/B-test model with variant, population, randomization, exposure, control, metric, sample, duration, guardrails, statistical method, stop rule, and rollout decision.
+
+WHY THIS MATTERS
+
+A/B testing can isolate effect but is vulnerable to biased assignment, interference, novelty, sample loss, repeated looks, and proxy optimization. A winner is not automatically a good product.
+
+APPLICABILITY
+
+Apply when variants of a product, interface, process, message, policy, or system are compared experimentally.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no variant comparison or causal claim is made and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use experimentation, product analytics, statistics, privacy, ethics, accessibility, feature, and governance baselines.
+
+REQUIRED INPUTS
+
+Variants, population, assignment, exposure, control, metric, sample, duration, guardrail, consent, analysis, and decision owner.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve variants, population, guardrails, stop, analysis, rollout, and interpretation. Humans review user, accessibility, safety, privacy, and ethical effect.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may validate authorized event data, compare variants, and draft analysis. It must not change assignment, infer causal winner, expose participants, or roll out a variant without human approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+A/B Test Engineer, Statistician, Product Analyst, Experimenter, Researcher, Privacy Reviewer, Accessibility Reviewer, Verifier, and Critic.
+
+REQUIRED ACTIVITIES
+
+Define hypothesis and variants; verify assignment; instrument; run; monitor guardrails; analyze without unsupported peeking; review segments; decide; roll out or revert; and preserve evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show variant, assignment, exposure, metric, guardrail, sample, period, evidence, uncertainty, and limitation. Require human approval for stop, winner, rollout, and subgroup action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use stable assignment, exclusion, feature flag, exposure event, metric lineage, privacy, guardrail, holdout, rollback, and analysis reproducibility.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show test, variants, population, exposure, metric, guardrails, evidence freshness, owner, and authorized pause, stop, analyze, rollout, revert, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+A/B charter; variant and assignment; metric and guardrail; analysis and decision; rollout and rollback; evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify variant, population, assignment, exposure, metric, source, period, method, result, uncertainty, and limitation. Statistical result proves only the declared design and sample.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify randomization, exposure, contamination, sample, metric, guardrail, privacy, accessibility, stopping, analysis, rollout, and rollback. Test assignment failure and missing event.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Assignment bias, sample ratio mismatch ignored, peeking, guardrail omission, winner by proxy, test pollution, and rollout without user or safety review.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or revert, preserve assignments and data, correct analysis, notify owners, and reassess affected users. Reopen on variant, metric, population, guardrail, or product change.
+
+COMPLETION CRITERIA
+
+Variants, assignment, exposure, metrics, guardrails, evidence, analysis, decision, owner, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve test config, assignments, variants, results, decisions, incidents, evidence, exceptions, and open gaps. Hand off to Experimentation, Product Analytics, Growth, Optimization, Privacy, and Release.
+
+RELATED CODEX SECTIONS
+
+369 Experimentation; 367 Product Analytics; 368 Growth; 371 Optimization; 217-218 Trust and Privacy; 296 Feature Management; 237 Acceptance Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, experimentation, product, statistics, privacy, accessibility, and release context, and the integration roadmap. Exact variants, populations, metrics, power, guardrails, consent, and acceptance authority remain unresolved.

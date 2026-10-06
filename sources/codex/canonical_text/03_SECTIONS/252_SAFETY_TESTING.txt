@@ -1,0 +1,95 @@
+SECTION 252 — Safety Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Verify that a system, product, process, or human-AI capability does not create unacceptable hazard under normal, foreseeable misuse, degraded, emergency, maintenance, and recovery conditions.
+
+REQUIRED OUTCOME
+
+A safety-test model with hazards, protected people, assumptions, operating modes, controls, test authority, safe limits, evidence, failures, recovery, and qualified acceptance.
+
+WHY THIS MATTERS
+
+Safety depends on interactions among technical behavior, humans, environment, procedures, maintenance, and failure. Simulation, certification, or ordinary operation cannot prove every hazardous condition is controlled.
+
+APPLICABILITY
+
+Apply when failure, misuse, automation, environment, or operation can cause injury, illness, unsafe condition, environmental harm, property damage, or loss of critical control.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when qualified safety analysis confirms no hazard or safety-relevant change for the exact scope, population, environment, and lifecycle.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use safety architecture, hazard analysis, requirements, hardware, software, human factors, operations, maintenance, emergency, legal, and incident baselines. Assign qualified safety authority and stop control.
+
+REQUIRED INPUTS
+
+Hazards, people, environment, modes, controls, assumptions, failure conditions, interfaces, procedures, equipment, data, test limits, emergency response, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Qualified safety owners define hazards and limits, authorize testing, stop unsafe work, review evidence, and accept residual risk. Operators and affected people receive clear procedures, training, protection, and reporting paths.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized safety artifacts, enumerate scenarios, draft tests, and identify inconsistencies. It must not infer safety, control hazardous equipment, suppress warnings, approve operation, or substitute simulated confidence for qualified human judgment.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Safety Engineer, Safety Reviewer, Test Engineer, Systems Engineer, Researcher, Observer, Analyst, Verifier, Critic, Governance Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Identify hazards and modes; define safe state and controls; authorize test; prepare protected environment and equipment; test normal, misuse, fault, emergency, maintenance, and recovery; record exposure; remediate; retest; and obtain qualified acceptance.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show hazard, protected person, condition, authority, limit, control, result, evidence, and stop state. Require qualified human supervision for all safety-relevant execution and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide independent safety functions, safe halt, interlocks, monitoring, redundancy, manual override, fault containment, clear alarms, recovery, and evidence independent of the failed component where required.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show hazard state, mode, safety control, affected people, test state, evidence freshness, owner, and authorized stop, isolate, safe-halt, recover, notify, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Safety-test charter; hazard and scenario set; authorization and protection plan; equipment and environment record; results and failures; recovery and acceptance; evidence, decision, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify hazard, mode, unit, environment, condition, method, observer, time, result, exposure, recovery, and limitation. Certification or simulation proves only its declared standard and scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify hazard coverage, safe limits, controls, alarms, human response, fault containment, emergency, maintenance, recovery, accessibility, evidence, and qualified review. Stop on unexpected hazard.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Testing without safety authority, unsafe setup, alarm ignored, safe state unverified, human error excluded, simulation treated as field proof, and residual hazard hidden as an exception.
+
+RECOVERY AND RECONSIDERATION
+
+Stop, protect people, enter safe state, preserve evidence, provide emergency response, notify authority, and investigate. Do not resume until qualified review confirms controls and residual risk. Reopen on hazard, mode, environment, population, or design change.
+
+COMPLETION CRITERIA
+
+Hazards, people, modes, controls, limits, authority, results, recovery, evidence, residual risk, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified safety acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve hazard and test records, safety decisions, incidents, evidence, exceptions, training, recovery, and open gaps. Hand off to Safety, Hardware, Embedded, Operations, Incident Response, Quality, Legal, and Governance.
+
+RELATED CODEX SECTIONS
+
+050 Safety Architecture; 198-199 Embedded and Hardware Security; 232 Hardware Testing; 243-245 Reliability, Resilience, and Chaos; 301-330 Operations and Recovery; 402-404 Review.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, safety and testing context, and the integration roadmap. Exact hazard standard, qualified authority, environment, population, emergency method, jurisdiction, and acceptance evidence remain unresolved.

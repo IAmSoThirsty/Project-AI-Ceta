@@ -1,0 +1,95 @@
+SECTION 231 — Software Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Evaluate software behavior against requirements, risks, contracts, quality characteristics, user needs, security, performance, operability, and recovery expectations.
+
+REQUIRED OUTCOME
+
+A software test strategy with scope, risks, levels, environments, data, oracles, automation, manual judgment, evidence, defects, coverage, exit criteria, and limitations.
+
+WHY THIS MATTERS
+
+Passing examples do not prove correct behavior across states, inputs, integrations, users, versions, or failures. Tests can also encode the wrong requirement, become stale, or pass while accessibility, security, performance, and recovery fail.
+
+APPLICABILITY
+
+Apply when software behavior, change, dependency, configuration, interface, model, or operational path can affect a declared outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only for a bounded, low-consequence, non-executable artifact or a no-behavior change covered by an approved exact baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use requirements, architecture, risk, quality, user, security, data, environment, release, operations, and recovery baselines. Define test authority, data handling, environment, and acceptance owner.
+
+REQUIRED INPUTS
+
+Requirements, risks, interfaces, code, configuration, dependencies, data, users, platforms, environments, test oracles, prior defects, observability, recovery, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Test owners define scope, risk, evidence, and exit criteria; domain owners judge meaning; humans approve test data, production testing, exceptions, and release. Testers report failures without changing them to achieve a target.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft tests, fixtures, assertions, coverage analysis, and defect summaries from authorized context. It must not claim execution, fabricate results, use sensitive data without authority, or infer acceptance from generated tests or a green pipeline.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Tester, Test Architect, Researcher, Analyst, Implementer, Verifier, Quality Assurance Reviewer, Security Auditor, User Experience Reviewer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define risks and levels; derive cases and oracles; prepare representative data and environments; execute and observe; record failures; analyze coverage and gaps; retest fixes; assess regression; report limitations; and preserve continuity.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show requirement, case, data, environment, version, execution, result, evidence, and limitation. Require human review for test oracle, exploratory interpretation, high-impact failure, data use, and exit decision.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Support deterministic fixtures, isolated environments, observability, fault injection, versioned tests, safe cleanup, reproducible execution, and separation of test and production authority.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show test scope, version, environment, coverage, failures, flaky state, evidence freshness, owner, exit criteria, and authorized run, pause, rerun, quarantine, accept, reject, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Test strategy and matrix; cases and fixtures; environment record; execution results; defect and coverage records; retest and exit decision; evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify requirement, case, version, data, environment, tool, execution, actor, time, result, evidence, coverage, and limitation. Test count or code coverage proves neither correctness nor absence of defect.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify traceability, representative data, oracle, environment, execution integrity, failure recording, retest, flaky analysis, coverage, accessibility, security, performance, and recovery paths.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Testing only the happy path, assertion tautology, unrepresentative fixtures, flaky tests hidden, coverage theater, test data leakage, and release based on count rather than risk.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve failing evidence, quarantine unreliable tests, reproduce in a controlled environment, correct code or test, and reassess exit criteria. Reopen on requirement, code, dependency, environment, data, or risk change.
+
+COMPLETION CRITERIA
+
+Scope, risks, cases, oracles, data, environments, evidence, defects, coverage, exit criteria, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending QA and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve test and environment versions, fixtures, results, defects, decisions, exceptions, and open gaps. Hand off to Unit, Integration, System, E2E, Acceptance, Performance, Release, Quality, and Operations owners.
+
+RELATED CODEX SECTIONS
+
+019 Requirements; 020 Systems Engineering; 228-230 Quality; 232-254 Test Levels and Specialized Testing; 301-330 Operations; 402-404 Review.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, requirements, quality, and evidence context, and the integration roadmap. Exact risk model, test environments, data, standards, exit authority, and acceptance evidence remain unresolved.

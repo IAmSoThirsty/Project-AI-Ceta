@@ -1,0 +1,103 @@
+SECTION 188 — Human-in-the-Loop Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how humans supervise, review, approve, correct, challenge, interrupt, appeal, and recover AI or automated work in live operations without reducing human involvement to decorative confirmation.
+
+REQUIRED OUTCOME
+
+- A human-control model with role, authority, workload, timing, information, training, escalation, and decision boundaries.
+- Review that is meaningful, accessible, attributable, and able to change the result before consequence.
+- Durable records linking AI output, human action, policy evaluation, decision, trace, and outcome.
+
+WHY THIS MATTERS
+
+Human review can fail through overload, automation bias, missing context, unclear authority, poor timing, inaccessible interfaces, or retaliation for dissent. A human in a workflow is not automatically human control.
+
+APPLICABILITY
+
+Applies when humans review, approve, monitor, label, correct, appeal, override, supervise, or recover AI and automated outputs. Depth increases with consequence, scale, speed, vulnerability, autonomy, or irreversible action.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable where no human-control claim exists and the system is bounded non-AI automation, or where a read-only analysis has no operational consequence. Record the exact boundary and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires AI and process contract, authority, policy evaluation, capability, decision, audit, trace, accessibility, staffing, training, privacy, security, safety, and incident context. Depends on Sections 006, 048, 182, 183, 185, and 214.
+
+REQUIRED INPUTS
+
+Decision or action; AI output; model and policy; evidence; human role; authority; capability token; workload; timing; review rubric; context; escalation; stop; appeal; compensation; and staffing and accessibility constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans exercise actual judgment, approve or deny, record rationale, challenge evidence, escalate, stop, revoke, and accept only delegated responsibility. Owners must staff, train, protect, and support reviewers and preserve independent appeal.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI must present relevant evidence, uncertainty, alternatives, provenance, and limits; wait for required approval; and expose review state. It must not pressure, manipulate, conceal dissent, pre-fill approval deceptively, or treat silence as consent.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Human-in-the-Loop Operator, Governance Reviewer, Decision Arbiter Advisory, Safety Auditor, Security Auditor, Privacy Reviewer, User Experience Reviewer, Accessibility Reviewer, Analyst, Observer, Critic, Verifier, Documentation Writer, and Memory Curator. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define human role, authority, consequence, review point, and prohibited delegation.
+2. Provide context, evidence, uncertainty, alternatives, time, and accessible controls.
+3. Review, approve, deny, correct, escalate, appeal, or stop according to policy.
+4. Record human identity, rationale, decision, dissent, and trace linkage.
+5. Monitor workload, speed, disagreement, override, error, fatigue, and retaliation risk.
+6. Test model, interface, staffing, accessibility, provider, and communication failure.
+7. Use compensation and reconsideration for affected prior actions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+The reviewer must know the AI identity, output status, evidence, uncertainty, policy result, capability, resource, and consequence. Review must occur before the relevant mutation and be able to change it. The system must expose stop, appeal, correction, and terminal state.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent human assignment, role, authority, capability token, review request, evidence, PolicyEvaluationResult, DecisionRecord, AuditDecision, trace, mutation binding, outcome, and compensation link. Enforce quorum and expiry; append audit rather than overwrite.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show queue, urgency, workload, context, AI output, evidence, policy, authority, reviewer, decision, dissent, trace, and unresolved state. Provide authorized approve, deny, defer, escalate, pause, revoke, correct, appeal, and compensate controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+HITL operating model; role and authority matrix; review rubric; queue and workload design; accessibility and training plan; decision and audit records; trace package; escalation and appeal runbook; incident and compensation plan; and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Each review identifies request, AI and policy versions, evidence, reviewer, authority, capability, timing, decision, rationale, dissent, trace, outcome, and limitation. A click, presence of a reviewer, or approval rate does not prove meaningful oversight.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test missing context, time pressure, overload, disagreement, inaccessible control, stale evidence, expired authority, policy mismatch, missing quorum, deceptive prefill, provider loss, interruption, appeal, and compensation. Verify humans can change outcomes.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Rubber-stamping; silence as approval; reviewer overload; automation bias; inaccessible review; hidden evidence; punitive dissent; approval after mutation; no appeal; and human review used to legitimize an ungoverned system.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or narrow actions when meaningful review is unavailable, authority expires, evidence is missing, workload is unsafe, or a control fails. Preserve decisions and traces, notify owners, provide appeal and compensation, staff qualified review, and resume only after fresh evaluation.
+
+COMPLETION CRITERIA
+
+Role, authority, evidence, timing, workload, accessibility, review, decision, audit, trace, stop, appeal, compensation, and lifecycle are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve review IDs, assignments, evidence, outputs, decisions, dissent, workload, incidents, appeals, traces, and gaps. Hand off to AI Governance, Safety, Security, Privacy, Model Operations, Incident Management, Training, and Audit.
+
+RELATED CODEX SECTIONS
+
+001 Human-AI Interaction Requirements; 006 Owner Cockpit Requirements; 048 Governance Architecture; 182 AI Safety; 183 AI Governance; 185 Model Operations; 214 Incident Response; 332 Command and Control.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Owner Cockpit Requirements, Status and Evidence Lexicon, AI Safety, and AI Governance. Actual staffing, authority, quorum, accessibility, workload, appeal, and compensation rules remain unresolved until supplied.

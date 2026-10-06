@@ -1,0 +1,95 @@
+SECTION 303 — Runtime Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate live runtime processes, services, jobs, workloads, and control paths within their intended state, performance, security, support, and recovery boundaries.
+
+REQUIRED OUTCOME
+
+A runtime-operations model with process ownership, modes, health, configuration, dependencies, resource, scheduling, access, signals, change, incident, restart, recovery, and retirement.
+
+WHY THIS MATTERS
+
+Runtime state changes continuously and can diverge from design. A process can be running while serving bad data, leaking access, exhausting resources, or failing a critical user outcome.
+
+APPLICABILITY
+
+Apply when a live service, job, process, workload, device, agent, or control plane is executed, scheduled, restarted, paused, or recovered.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no runtime state, process, service, resource, dependency, or operating action changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use operational architecture, application, platform, configuration, deployment, observability, SRE, security, incident, capacity, and recovery baselines.
+
+REQUIRED INPUTS
+
+Runtime, version, config, process, schedule, identity, resources, dependencies, health, signals, runbook, SLO, incidents, support, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Runtime owners approve start, stop, restart, scale, change, access, incident, recovery, and retirement. Operators retain safe manual control; humans accept service and data risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized runtime signals, summarize state, draft diagnosis and runbooks, and recommend bounded actions. It must not restart, kill, scale, alter, or access restricted runtime state without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Runtime Engineer, Operations Engineer, Site Reliability Engineer, Application Engineer, Platform Engineer, Observer, Incident Responder, Tester, Verifier, and Security Auditor.
+
+REQUIRED ACTIVITIES
+
+Baseline runtime; start and schedule; observe; manage resources and configuration; handle health and dependencies; respond; restart or fail over; validate; document; reduce toil; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show process, version, environment, identity, signal, action, authority, evidence, and limitation. Require human approval for destructive, production, data, security, and recovery actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use health and business checks, graceful shutdown, idempotence, bounded retries, resource limits, dependency visibility, safe restart, state preservation, and control-plane independence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show runtime state, health, resources, dependencies, config, incidents, evidence freshness, owner, and authorized pause, restart, scale, isolate, recover, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Runtime charter; process and service catalog; runbooks; health and signal; incident, change, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify process, version, environment, identity, resource, signal, method, time, result, actor, and limitation. Running state proves neither correct behavior nor user outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify start, stop, restart, health, dependency, resource, access, configuration, logging, alert, recovery, support, and retirement. Test hung, duplicate, stale, and failed process.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Restart as diagnosis, unbounded retry, process health without business outcome, shared admin, unowned job, stale config, and runtime change without history.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, preserve evidence, isolate or restart, restore state, fail over, communicate, and reassess user and data impact. Reopen on runtime, config, dependency, workload, or incident change.
+
+COMPLETION CRITERIA
+
+Runtime, owners, state, config, resources, dependencies, signals, runbooks, evidence, recovery, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve runtime baseline, schedules, configs, signals, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Application, Platform, SRE, Security, Incident, Capacity, and Support.
+
+RELATED CODEX SECTIONS
+
+039 Runtime Architecture; 258 Configuration; 290 Deployment; 301-302 SRE and Production; 313-317 Observability; 318-330 Incident, Capacity, Availability, Performance, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, runtime, application, platform, SRE, and operations context, and the integration roadmap. Exact runtimes, signals, owners, SLOs, staffing, recovery, and acceptance authority remain unresolved.

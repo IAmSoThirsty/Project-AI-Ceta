@@ -1,0 +1,95 @@
+SECTION 308 — AI Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate AI models, agents, prompts, tools, data, providers, policies, evaluations, human review, cost, safety, and recovery within explicit authority and use boundaries.
+
+REQUIRED OUTCOME
+
+An AI-operations model with identity, model and prompt versions, input and output data, tools, providers, policy, evaluation, monitoring, escalation, human control, rollback, and retirement.
+
+WHY THIS MATTERS
+
+AI behavior can drift with data, prompt, model, provider, tool, context, or policy changes. A successful request does not prove truth, safety, fairness, privacy, or suitability for a consequential decision.
+
+APPLICABILITY
+
+Apply when an AI model, agent, workflow, evaluator, retrieval system, tool call, or generated output operates for users, staff, systems, or decisions.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no AI model, agent, data, provider, prompt, tool, output, or human-impacting behavior is operated or changed and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use AI architecture, model testing, privacy, security, data, identity, policy, evaluation, incident, cost, platform, and operations baselines.
+
+REQUIRED INPUTS
+
+Model, provider, prompt, tool, data, policy, identity, use case, user, output, evaluation, latency, cost, safety, telemetry, fallback, and owner.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+AI owners approve intended use, model, provider, data, tools, authority, human review, thresholds, cost, incident, rollback, and retirement. Humans remain accountable for consequential decisions and user recourse.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may monitor authorized AI runs, identify drift or failures, summarize traces, and recommend bounded fallback. It must label generated content, preserve provenance, not self-authorize, access restricted data, conceal errors, or change model, prompt, policy, tool, or user authority without human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+AI Operations Engineer, AI Architect, Model Evaluator, Security Auditor, Privacy Reviewer, Data Engineer, SRE, Incident Responder, Tester, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Inventory model and provider; manage versions and prompts; secure data and tools; evaluate; deploy; monitor quality, safety, cost, and drift; review human escalation; respond; fallback; record; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show model, provider, prompt, data, tool, identity, output, confidence, human review, cost, evidence, and limitation. Require human approval for high-impact output, tool action, data access, policy, rollback, and closure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Trace model, prompt, retrieval, tool, policy, input, output, reviewer, and action. Provide guardrails, sandbox, rate limits, redaction, fallback, provider substitution, evaluation, kill switch, and durable audit.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show AI service, model, provider, version, health, drift, safety, cost, human-review rate, incidents, evidence freshness, owner, and authorized pause, restrict, fallback, rollback, revoke, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+AI operations charter; model and provider registry; prompt and tool records; evaluation and monitoring; incident and fallback; human-review, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify model, provider, prompt, input, data, tool, policy, output, reviewer, method, time, result, and limitation. Fluency, confidence, or request success proves neither truth nor safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify model and prompt version, data, privacy, security, tool authorization, output quality, safety, drift, cost, latency, human review, fallback, rollback, and incident handling.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+AI output as fact, prompt drift, hidden provider change, tool overreach, no human escalation, sensitive data leakage, evaluation on narrow examples, and cost or latency unbounded.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or narrow AI use, preserve traces, route to human or fallback, revoke tools, switch provider or model, correct affected decisions, notify owners, and reassess harm. Reopen on model, data, prompt, provider, policy, tool, or population change.
+
+COMPLETION CRITERIA
+
+Use, model, provider, prompt, tools, data, authority, evaluation, monitoring, human control, recovery, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve model and prompt versions, traces, evaluations, incidents, decisions, evidence, exceptions, cost, and open gaps. Hand off to AI Engineering, Data, Security, Privacy, SRE, Support, Governance, and Retirement.
+
+RELATED CODEX SECTIONS
+
+157-158 AI and ML Engineering; 200-205 IAM and Protection; 217-218 Trust and Privacy; 253 Model Testing; 301 SRE; 307 Data Operations; 369-371 Experimentation and Optimization.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, AI, data, privacy, security, evaluation, and operations context, and the integration roadmap. Exact models, providers, data, tools, authority, metrics, human review, and acceptance evidence remain unresolved.

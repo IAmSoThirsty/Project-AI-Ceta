@@ -1,0 +1,95 @@
+SECTION 199 — Hardware Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Protect hardware components, boards, manufacturing processes, physical interfaces, supply-chain integrity, device identity, and hardware-assisted trust across the lifecycle.
+
+REQUIRED OUTCOME
+
+A hardware-security baseline covering assets, suppliers, provenance, tamper resistance, debug and service access, trust roots, physical exposure, secure provisioning, monitoring, replacement, and disposal for the declared product and environment.
+
+WHY THIS MATTERS
+
+Hardware is difficult to patch after deployment and can expose secrets or bypass software controls. A trusted design can be undermined by counterfeit components, altered firmware, open debug ports, insecure manufacturing, untracked substitutions, or physical access that the threat model ignored.
+
+APPLICABILITY
+
+Apply when hardware, boards, chips, modules, peripherals, manufacturing, provisioning, service ports, physical enclosures, or component supply chains affect identity, confidentiality, integrity, availability, safety, or recovery.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no hardware asset, physical interface, component trust, supplier, manufacturing, device identity, or lifecycle behavior is affected and an approved exact baseline supports that conclusion.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use hardware, embedded, firmware, cryptography, key, identity, safety, supplier, vulnerability, testing, operations, and disposal baselines. Identify component owners, procurement controls, bill of materials, manufacturing and provisioning facilities, service authority, and physical threat assumptions.
+
+REQUIRED INPUTS
+
+Hardware inventory, schematics, layouts, bill of materials, component sources, substitutions, trust anchors, manufacturing steps, provisioning records, interfaces, enclosure, service access, threat model, safety constraints, and disposal requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve component sources, substitutions, physical access, debug and service policy, provisioning, residual risk, field response, replacement, and disposal. Hardware, manufacturing, supply-chain, security, safety, operations, and service authorities must be assigned.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized bills of materials, schematics, supplier records, configurations, test results, and provenance evidence; identify inconsistencies; and draft controls, inspections, and test plans. It must preserve component and revision identity and distinguish evidence from inference. It must not approve substitutions, alter provisioning, expose secrets, change device trust, or authorize physical intervention without delegation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Hardware Engineer, Embedded Engineer, Security Auditor, Supply Chain Analyst, Researcher, Observer, Implementer, Tester, Verifier, Governance Reviewer, Critic, Red Team, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Inventory components and revisions; classify trust and criticality; verify provenance and substitutions; secure manufacturing and provisioning; control debug and service interfaces; assess tamper and physical threats; test identity and trust roots; monitor field changes; define replacement and disposal; record exceptions and evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show component, revision, supplier, facility, device, environment, and evidence boundaries. Require human approval for source changes, substitutions, provisioning, debug access, field containment, or disposal. Do not turn a parts database, scan, or AI recommendation into a trust decision without owner review.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate component provenance, manufacturing, provisioning, device identity, firmware trust, service access, physical enclosure, and operational trust boundaries. Use tamper evidence or resistance where justified, protect trust roots, minimize exposed interfaces, and make component changes traceable and reversible where possible.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show hardware identity, revision, component provenance, supplier, posture, debug state, evidence freshness, open findings, field population, and authorized controls to quarantine, inspect, replace, recover, or retire. Explain physical and safety impact before action.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Hardware asset and component inventory; provenance and substitution record; threat model; secure manufacturing and provisioning design; interface and debug policy; inspection and test results; exception, incident, replacement, disposal, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify device or component, revision, supplier, facility, source, method, environment, timestamp, result, owner, coverage, and limitation. Provenance, inspection, scan, certification, or bench evidence must state what it does not establish.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify bill of materials, provenance, substitution approval, identity, trust anchors, debug control, interface exposure, tamper response, provisioning, service access, replacement, and disposal. Test representative variants and hostile physical conditions within authorized scope.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Counterfeit or untraceable parts, undocumented substitutions, shared manufacturing credentials, exposed debug ports, unprotected trust roots, trust based on appearance, and treating one inspected device as representative of an uncontrolled population.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine affected lots or devices, preserve component and manufacturing evidence, revoke compromised trust, stop unsafe deployment, and use approved inspection, replacement, re-provisioning, or retirement. Reopen on supplier, component, revision, facility, physical threat, or field-condition change.
+
+COMPLETION CRITERIA
+
+Hardware assets, components, suppliers, trust boundaries, provisioning, interfaces, threats, owners, evidence, tests, recovery, disposal, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve bill of materials, revision history, supplier decisions, provisioning records, findings, evidence, exceptions, field impact, recovery, replacement, and open gaps. Hand off to Embedded, Firmware, Supply Chain, Security Operations, Testing, Safety, Operations, and Disposal.
+
+RELATED CODEX SECTIONS
+
+058 Hardware Engineering; 059 Embedded Engineering; 060 Firmware Engineering; 198 Embedded Security; 203 Cryptography; 204 Key Management; 209 Vulnerability Management; 231-254 Testing; 350-357 Manufacturing and Logistics; 379 Firmware Updates; 398-400 Disposal.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, hardware and embedded architecture, and the integration roadmap. Exact hardware classes, supplier requirements, tamper standards, certification, jurisdiction, field exposure, and acceptance evidence remain unresolved.

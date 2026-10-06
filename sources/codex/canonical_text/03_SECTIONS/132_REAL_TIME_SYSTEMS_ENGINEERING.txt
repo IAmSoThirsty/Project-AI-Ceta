@@ -1,0 +1,98 @@
+SECTION 132 - Real-Time Systems Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of systems whose correctness depends on bounded response time, scheduling, deadlines, jitter, synchronization, or timely interaction with physical or operational processes.
+
+REQUIRED OUTCOME
+
+A real-time baseline with timing classes, workloads, clocks, scheduling, resource budgets, safety margins, evidence, degradation, and recovery ownership.
+
+WHY THIS MATTERS
+
+Late output can be wrong output. Average latency hides deadline misses, priority inversion, overload, clock drift, and unsafe degraded behavior.
+
+APPLICABILITY
+
+Applies to hard, firm, or soft real-time software, control, communications, trading, telemetry, interactive, embedded, or operational systems.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable where timing has no material correctness, safety, service, or user consequence and no deadline claim is made. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires timing requirements, clock and synchronization model, workload, hardware, scheduler, resource budgets, priority policy, safety and security constraints, measurement, and recovery authority.
+
+REQUIRED INPUTS
+
+Provide deadlines, periods, jitter, latency, load, clock, priority, resource, data, failure, safety, user, observability, and degraded-mode requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve timing class, risk, priority, overload policy, safety margin, release, and acceptance. Humans decide whether a missed deadline is tolerable and when to stop operation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze traces, schedules, workloads, and test scenarios. It must not infer safety from averages, alter priority, claim deadline compliance, or change live scheduling without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Observer, Safety Auditor, Security Auditor, Implementer, Tester, Verifier, Governance Reviewer, Optimizer, Documentation Writer, Coordinator, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Classify timing and define deadlines, clocks, workloads, resources, and failure modes.
+2. Design scheduling, synchronization, admission, overload, degradation, monitoring, and recovery.
+3. Measure distributions and worst cases under representative and adversarial load.
+4. Gate release, monitor deadlines, and retire obsolete timing assumptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show timing class, deadline, current load, clock, authority, evidence, and consequence. Human review is required for safety or material deadline exceptions; a status path remains available when automation fails.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Define clock source, synchronization, scheduling, priority, budget, admission, backpressure, timeout, safe state, and evidence capture. Keep control and observability paths bounded and independent.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show deadline distributions, misses, jitter, clock health, queue depth, CPU and memory, mode, evidence freshness, incidents, and controls to shed work, degrade, pause, or stop.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Timing model, workload and resource budget, scheduler design, measurement plan, deadline evidence, overload and recovery runbook, safety review, release record, and retirement assumptions.
+
+EVIDENCE REQUIREMENTS
+
+Identify hardware, OS, build, clock, workload, configuration, sampling, percentile and worst-case method, result, and limits. Average latency never replaces deadline and miss evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify clocks, scheduling, priority inversion, overload, queueing, jitter, deadline misses, resource exhaustion, dependency delay, fail-safe mode, recovery, and representative worst-case workload.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Using averages only; unbounded queues; priority inversion; synchronized timeouts; ignoring clock drift; overload without safe mode; and declaring timing correct from a lab run.
+
+RECOVERY AND RECONSIDERATION
+
+Reduce load, shed noncritical work, enter approved safe mode, preserve timing evidence, stop hazardous outputs, compensate effects where possible, and reopen budgets and acceptance.
+
+COMPLETION CRITERIA
+
+Timing classes, budgets, evidence, controls, safe mode, ownership, and recovery are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve timing baseline, workload, clock, build, traces, misses, decisions, evidence, and next safe action. Hand off to Runtime, Embedded, Control, Network, Performance, Safety, Reliability, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+044 Runtime Architecture; 059 Embedded Systems Architecture; 073 Control Systems Engineering; 132 Real-Time Systems Engineering; 239 Performance Testing; 252 Safety Testing; 323 Performance Management; 324 Reliability Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 044, 059, 073, and 107-131, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual deadline classes, hardware, workload, safety regimes, clock sources, and environmental conditions remain unresolved.

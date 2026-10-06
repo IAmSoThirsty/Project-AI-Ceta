@@ -1,0 +1,135 @@
+SECTION 053 — Accessibility Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how people with different abilities, devices, languages, contexts, and support needs can perceive, understand, navigate, operate, contribute to, correct, and recover from the system.
+
+REQUIRED OUTCOME
+
+- An accessibility model covering users, tasks, modalities, assistive technology, content, interaction, feedback, errors, alternatives, and evidence.
+- Accessibility controls are architectural properties across interfaces, data, communication, operations, support, and recovery, not a late visual check.
+
+WHY THIS MATTERS
+
+Inaccessible design can deny essential service, hide errors, remove agency, or make recovery impossible. Automated conformance signals do not capture real task completion, cognitive load, or support needs.
+
+APPLICABILITY
+
+- People interact with, are affected by, or must recover from a system, service, content, device, or process.
+- Accessibility, accommodation, language, device, environmental, or assistive-technology differences affect outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+- No human, affected-party, interface, content, communication, support, or recovery interaction changes.
+- An approved baseline covers exact population, modalities, environment, and change with no material impact.
+- The artifact is exploratory and not a conformance or usability claim.
+
+Record population, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-052 provide user, information, application, communication, safety, security, privacy, and operations context.
+- Affected users, accessibility specialists, legal, content, support, and product authorities are identified or gaps recorded.
+
+REQUIRED INPUTS
+
+- User populations, tasks, modalities, assistive technologies, content, controls, errors, alternatives, languages, environments, and lifecycle.
+- Accessibility, accommodation, testing, support, privacy, security, safety, procurement, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve accessibility outcomes, supported populations, accommodations, exceptions, residual burden, and acceptance. Affected users and qualified specialists must influence material decisions. Humans retain authority to block release, require remediation, and provide support or alternative access.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect content and interaction artifacts, identify likely barriers, draft alternatives and tests, and summarize user evidence. It must preserve population and context. It must not infer disability, declare access, speak for users, or remove human accommodation without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+	- User Experience Reviewer, Researcher, Analyst, Observer, Architect, Tester, Verifier, Critic, Governance Reviewer, Documentation Writer, Memory Curator, Planner, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Identify populations, tasks, modalities, assistive technologies, context, barriers, and owners.
+2. Define perceivable, operable, understandable, robust, alternative, error, status, and recovery behavior.
+3. Model keyboard, screen reader, voice, touch, visual, cognitive, motor, sensory, offline, and support paths as applicable.
+4. Allocate accessibility to content, APIs, data, runtime, communications, operations, and procurement.
+5. Validate with affected users and qualified accessibility, legal, design, content, security, and support authorities.
+6. Test real tasks, errors, dynamic updates, authentication, generated content, localization, degraded mode, and recovery.
+7. Baseline evidence, exceptions, decisions, dissent, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Provide accessible status, focus, error, explanation, correction, stop, appeal, and recovery paths.
+- Identify generated content, confidence, source, modality, and human contact when material.
+- Require human review for accessibility exceptions, accommodation changes, and high-impact decisions.
+- Never treat automated scanning or model fluency as proof of access.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Preserve semantic structure, alternative representations, input flexibility, status, timing, focus, localization, and assistive-technology contracts.
+- Ensure accessibility survives authentication, API, batch, event, admin, AI, offline, and recovery paths.
+- Design accessible evidence, support, export, audit, and owner controls.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show supported populations, modalities, known barriers, evidence, exceptions, owner, and lifecycle.
+- Expose remediation, accommodation, alternate path, support, stop, correction, and appeal actions.
+- Explain unavailable or degraded accessible paths and preserve alternatives.
+- Export findings, user evidence, decisions, dissent, accommodations, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Accessibility context, user and task model, modality and assistive-technology map, interaction and content requirements.
+- Accommodation, alternative, support, testing, evidence, exception, remediation, and lifecycle package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify population, task, modality, device, assistive technology, environment, method, date, result, and limitation.
+- Automated scan, checklist, demo, or conformance statement proves only its bounded coverage.
+- User research and task evidence states sample, support, barriers, and unresolved interpretation.
+- Missing, stale, or contradictory accessibility evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Complete representative tasks with keyboard, screen reader, voice, touch, zoom, reduced motion, alternative input, and support paths as applicable.
+- Exercise errors, timeouts, dynamic updates, authentication, generated content, localization, offline, denial, and recovery.
+- Verify status, focus, contrast, semantics, alternatives, captions, transcripts, plain language, and export behavior as relevant.
+- Reproduce claims from exact population and evidence package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating automated conformance, visual polish, or a single device as accessibility proof.
+- Hiding inaccessible errors, time limits, authentication, generated content, support, or recovery.
+- Treating accommodations as user burden or requiring disclosure beyond necessity.
+
+RECOVERY AND RECONSIDERATION
+
+- On inaccessible path, assistive-technology failure, or evidence gap, provide an equivalent supported path and preserve the issue record.
+- Identify affected users, owner, accommodation, evidence, support, and review condition.
+- Use manual support, alternate channel, correction, pause, remediation, or retirement.
+- Reopen on population, modality, content, device, provider, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Populations, tasks, modalities, barriers, alternatives, evidence, accommodations, support, recovery, and lifecycle are explicit.
+- Dynamic, generated, denied, degraded, localization, and retirement paths are addressed or justified.
+- Exact evidence limits and unresolved barriers are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve populations, tasks, findings, accommodations, evidence, decisions, dissent, incidents, and gaps.
+- Hand off to Content, Information, Application, API, Communication, Privacy, Security, Testing, Operations, and Compliance.
+- Record changes requiring reopening affected architecture and user evidence.
+
+RELATED CODEX SECTIONS
+
+- 001-052 governance, user, information, application, security, privacy, safety, and resilience architecture; 054-060 Content through Hardware.
+- 075-106 human-computer interaction, UX, accessibility, content, prototyping, and validation; 247 Accessibility Testing; 250 Localization Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 001-052, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal accessibility standard, population, legal scope, assistive-technology matrix, accommodation authority, or task evidence is supplied. Actual barriers and acceptance remain unresolved.

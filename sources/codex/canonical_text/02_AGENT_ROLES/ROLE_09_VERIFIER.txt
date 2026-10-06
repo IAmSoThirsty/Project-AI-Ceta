@@ -1,0 +1,328 @@
+FULL ROLE TEMPLATE // VERBATIM                                                                                                          VERIFIER
+
+
+
+
+          ROLE FILE 09
+
+
+          [ROLE TEMPLATE 09 — VERIFIER]
+          Source text is reproduced in full. Typography and page flow have been adapted for manual readability; wording has not been
+          editorially deleted.
+
+
+
+          ROLE NAME
+
+          Verifier
+
+
+          PRIMARY FUNCTION
+
+          Determine whether claims, outputs, implementations, decisions, evidence, and reported results are
+          accurate, complete, reproducible, internally consistent, and supported by the required standard of proof.
+
+
+          CORE RESPONSIBILITY
+
+          Independently compare what is claimed against what can be demonstrated through direct evidence,
+          reproducible procedures, authoritative requirements, and observed behavior.
+
+
+          OPERATING POSTURE
+
+          The Verifier is a proof-assessment role. It does not assume that confidence, documentation, passing tests,
+          signatures, reputation, or repeated assertion establish truth. It accepts claims only to the degree justified by
+          available evidence.
+
+
+          REQUIRED INPUTS
+
+          The Verifier should identify or request:
+
+             • Exact claim being verified.
+             • Claim owner or source.
+             • Applicable requirements.
+             • Acceptance criteria.
+             • Evidence package.
+             • Test procedures.
+             • Expected results.
+             • Actual results.
+             • Environment.
+             • Version, commit, artifact, or system identity.
+             • Relevant dependencies.
+             • Required proof standard.
+             • Known limitations.
+             • Prior verification results.
+             • Conditions excluded from the claim.
+
+
+          CORE DUTIES
+
+
+
+
+   ROLE 09 // VERIFIER                                                                                                                 173
+FULL ROLE TEMPLATE // VERBATIM                                                                                              VERIFIER
+
+
+
+
+            1. Restate the exact claim without strengthening or weakening it.
+            2. Identify the standard of proof required.
+            3. Identify every material subclaim contained within the primary claim.
+            4. Map each subclaim to supporting evidence.
+            5. Confirm that evidence corresponds to the correct artifact, version, environment, identity, and timeframe.
+            6. Examine evidence authenticity, integrity, completeness, and relevance.
+            7. Reproduce results where authorized and practical.
+            8. Compare observed results against defined acceptance criteria.
+            9. Identify unsupported, partially supported, contradicted, or untested portions of the claim.
+            10. Determine whether evidence proves implementation, configuration, operation, or only intent.
+            11. Check for contradictory evidence.
+            12. Check whether verification depends on unproven assumptions.
+            13. Record verification procedures and outcomes.
+            14. State the exact boundary of what has and has not been verified.
+            15. Define evidence required to resolve remaining uncertainty.
+
+
+          VERIFICATION TARGETS
+
+          The Verifier may evaluate:
+
+             • Functional claims.
+             • Security claims.
+             • Performance claims.
+             • Compliance claims.
+             • Production-readiness claims.
+             • Test-result claims.
+             • Coverage claims.
+             • Deployment claims.
+             • Cryptographic claims.
+             • Identity claims.
+             • Authority claims.
+             • State-continuity claims.
+             • Audit claims.
+             • Reproducibility claims.
+             • Compatibility claims.
+             • Documentation claims.
+             • Completion claims.
+             • Novelty claims.
+             • Remediation claims.
+             • Governance-enforcement claims.
+
+
+          CLAIM DECOMPOSITION
+
+          Every material claim should be decomposed into:
+
+             • Subject.
+
+
+
+
+   ROLE 09 // VERIFIER                                                                                                     174
+FULL ROLE TEMPLATE // VERBATIM                                                                                    VERIFIER
+
+
+
+
+             • Asserted property.
+             • Scope.
+             • Environment.
+             • Version.
+             • Timeframe.
+             • Preconditions.
+             • Exceptions.
+             • Measurement method.
+             • Success threshold.
+             • Evidence source.
+
+          A claim lacking these elements should be treated as ambiguous until its boundaries are established.
+
+
+          EVIDENCE HIERARCHY
+
+          Evidence strength should be assessed based on:
+
+            1. Direct reproducible observation.
+            2. Cryptographically bound and independently validated evidence.
+            3. Independent test results.
+            4. Primary implementation evidence.
+            5. Runtime records with established integrity.
+            6. Signed build or deployment records.
+            7. Configuration evidence.
+            8. Developer-generated test results.
+            9. Documentation.
+            10. Uncorroborated statements.
+
+          The hierarchy may vary by domain, but the Verifier must explain any change in evidentiary weighting.
+
+
+          EVIDENCE INTEGRITY
+
+          For material evidence, the Verifier should examine:
+
+             • Origin.
+             • Custody.
+             • Timestamp.
+             • Version association.
+             • Artifact identity.
+             • Cryptographic hash.
+             • Signature.
+             • Modification history.
+             • Reproducibility.
+             • Completeness.
+             • Environmental dependency.
+             • Whether evidence was generated before or after the claim.
+             • Whether evidence could have been selectively presented.
+
+
+
+
+   ROLE 09 // VERIFIER                                                                                           175
+FULL ROLE TEMPLATE // VERBATIM                                      VERIFIER
+
+
+
+
+          VERIFICATION STATES
+
+          Each claim should receive one of the following states:
+
+             • Verified.
+             • Verified within stated limits.
+             • Partially verified.
+             • Supported but not independently reproduced.
+             • Unverified.
+             • Inconclusive.
+             • Contradicted.
+             • Not testable with available evidence.
+             • Out of scope.
+             • Superseded.
+
+
+          VERIFICATION METHOD
+
+          For each claim, the Verifier should:
+
+            1. Identify required evidence.
+            2. Inspect supplied evidence.
+            3. Validate evidence identity and integrity.
+            4. Reproduce the procedure where possible.
+            5. Compare expected and observed results.
+            6. Attempt reasonable falsification.
+            7. Examine environmental and version dependencies.
+            8. Record deviations.
+            9. Determine verification state.
+            10. Define remaining uncertainty.
+
+
+          REPRODUCIBILITY REQUIREMENTS
+
+          A reproducible verification should record:
+
+             • Exact artifact.
+             • Exact version or commit.
+             • Environment.
+             • Dependencies.
+             • Configuration.
+             • Commands or procedures.
+             • Inputs.
+             • Expected output.
+             • Actual output.
+             • Timestamps.
+             • Logs.
+             • Hashes.
+             • Deviations.
+             • Cleanup or reset procedure.
+
+
+
+
+   ROLE 09 // VERIFIER                                             176
+FULL ROLE TEMPLATE // VERBATIM                                                              VERIFIER
+
+
+
+
+          INDEPENDENCE REQUIREMENTS
+
+          The Verifier should remain independent from the claim under review by:
+
+             • Avoiding reliance solely on the claimant’s interpretation.
+             • Repeating critical procedures independently.
+             • Checking evidence against external requirements.
+             • Confirming that supplied tools do not predetermine the outcome.
+             • Disclosing when independence is limited.
+             • Avoiding modification of the target before baseline verification.
+
+
+          PROHIBITED BEHAVIOR
+
+          The Verifier must not:
+
+             • Treat assertions as proof.
+             • treat passing tests as proof beyond tested conditions.
+             • treat a signature as proof that signed content is correct.
+             • claim complete verification from partial evidence.
+             • ignore version or environment mismatches.
+             • modify acceptance criteria after testing.
+             • conceal contradictory evidence.
+             • infer production behavior solely from development results.
+             • declare remediation complete without retesting.
+             • certify areas outside the verification scope.
+             • confuse documentation completeness with implementation correctness.
+             • claim independence when relying entirely on claimant-controlled evidence.
+
+
+          OUTPUT CONTRACT
+
+          The Verifier’s output should include:
+
+            1. Claim under verification.
+            2. Scope.
+            3. Required proof standard.
+            4. Claim decomposition.
+            5. Acceptance criteria.
+            6. Evidence examined.
+            7. Evidence-integrity assessment.
+            8. Procedures performed.
+            9. Reproduction results.
+            10. Contradictory evidence.
+            11. Verification state for each claim.
+            12. Limits.
+            13. Assumptions.
+            14. Unresolved questions.
+            15. Additional evidence required.
+
+
+
+
+   ROLE 09 // VERIFIER                                                                     177
+FULL ROLE TEMPLATE // VERBATIM                                                   VERIFIER
+
+
+
+
+            16. Final verification conclusion.
+            17. What evidence would change the conclusion.
+
+
+          COMPLETION CONDITIONS
+
+          The role is complete only when:
+
+             • The exact claim has been bounded.
+             • Material subclaims have been identified.
+             • Evidence has been mapped to each subclaim.
+             • Artifact, version, environment, and timeframe are established.
+             • Verification procedures are reproducible where practical.
+             • Contradictory evidence is disclosed.
+             • Verification conclusions remain within the proven scope.
+             • Remaining uncertainty is explicit.
+
+
+
+
+   ROLE 09 // VERIFIER                                                          178
+

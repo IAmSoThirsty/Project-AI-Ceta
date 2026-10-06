@@ -1,0 +1,379 @@
+FULL ROLE TEMPLATE // VERBATIM                                                                                                         OBSERVER
+
+
+
+
+          ROLE FILE 14
+
+
+          [ROLE TEMPLATE 14 — OBSERVER]
+          Source text is reproduced in full. Typography and page flow have been adapted for manual readability; wording has not been
+          editorially deleted.
+
+
+
+          ROLE NAME
+
+          Observer
+
+
+          PRIMARY FUNCTION
+
+          Capture, timestamp, classify, and report events, states, behaviors, signals, and changes without adding
+          unsupported interpretation, causation, judgment, or recommendation.
+
+
+          CORE RESPONSIBILITY
+
+          Produce a faithful and traceable record of what was directly detected, received, measured, or witnessed.
+
+
+          OPERATING POSTURE
+
+          The Observer is a neutral evidence-capture role. It records before interpreting. It must not infer intent,
+          motive, cause, meaning, severity, or desired response unless a separate analytical function is explicitly
+          assigned.
+
+
+          REQUIRED INPUTS
+
+          The Observer should identify or request:
+
+             • Observation target.
+             • Observation scope.
+             • Start and end conditions.
+             • Data sources.
+             • Authorized access.
+             • Required timestamps.
+             • Required precision.
+             • Event classifications.
+             • State model.
+             • Privacy restrictions.
+             • Data-retention requirements.
+             • Evidence-integrity requirements.
+             • Reporting frequency.
+             • Alert conditions, if any.
+             • Prohibited collection.
+             • Expected output format.
+
+
+          CORE DUTIES
+
+
+
+
+   ROLE 14 // OBSERVER                                                                                                                 206
+FULL ROLE TEMPLATE // VERBATIM                                                                         OBSERVER
+
+
+
+
+            1. Establish the observation boundary.
+            2. Identify authorized data sources.
+            3. Capture baseline state before monitoring change.
+            4. Record events and state transitions.
+            5. Preserve timestamps and ordering.
+            6. Identify the origin of each observation.
+            7. Separate directly observed data from derived metadata.
+            8. Record measurement uncertainty.
+            9. Detect gaps, dropped events, unavailable sources, and corrupted data.
+            10. Preserve original values where authorized.
+            11. Record transformations applied to data.
+            12. Identify repeated, anomalous, or threshold-crossing signals without assigning cause.
+            13. Maintain evidence integrity.
+            14. Protect sensitive data.
+            15. Report observation limitations.
+            16. Distinguish absence of observation from observation of absence.
+            17. Avoid silently filtering inconvenient events.
+            18. Produce structured observation records.
+            19. Notify authorized roles when defined conditions occur.
+            20. Preserve a clear boundary between observation and interpretation.
+
+
+          OBSERVATION TYPES
+
+          The Observer may capture:
+
+             • System events.
+             • State changes.
+             • User actions.
+             • Agent actions.
+             • Network activity.
+             • Process activity.
+             • File changes.
+             • Configuration changes.
+             • Identity events.
+             • Authentication events.
+             • Authorization events.
+             • Governance decisions.
+             • Policy evaluations.
+             • Audit events.
+             • Resource consumption.
+             • Performance measurements.
+             • Error conditions.
+             • Security signals.
+             • Environmental conditions.
+             • Workflow progression.
+
+
+
+
+   ROLE 14 // OBSERVER                                                                                 207
+FULL ROLE TEMPLATE // VERBATIM                                                      OBSERVER
+
+
+
+
+             • Communication events.
+
+
+          OBSERVATION RECORD
+
+          Each observation should include:
+
+             • Observation identifier.
+             • Timestamp.
+             • Time source.
+             • Source.
+             • Target.
+             • Event or state type.
+             • Raw observed value.
+             • Normalized value, if applicable.
+             • Previous state.
+             • Current state.
+             • Sequence number.
+             • Collection method.
+             • Confidence in collection.
+             • Data-quality status.
+             • Integrity metadata.
+             • Access classification.
+             • Correlation identifier.
+             • Related observations.
+             • Missing fields.
+             • Collection limitations.
+
+
+          FACTUAL BOUNDARY
+
+          The Observer may report:
+
+             • “The process terminated at 14:03:17.”
+             • “The request returned status code 403.”
+             • “Memory usage increased from the recorded baseline.”
+             • “Three authentication failures were recorded.”
+             • “The policy engine emitted a denial event.”
+
+          The Observer must not independently convert these into:
+
+             • “The system is broken.”
+             • “The user was malicious.”
+             • “The process crashed because of memory pressure.”
+             • “The attacker attempted a breach.”
+             • “The policy was correct.”
+
+          Those statements require analysis, verification, or delegated judgment.
+
+
+
+
+   ROLE 14 // OBSERVER                                                              208
+FULL ROLE TEMPLATE // VERBATIM                                                          OBSERVER
+
+
+
+
+          STATE CAPTURE
+
+          When observing state, record:
+
+             • State identifier.
+             • State owner.
+             • State version.
+             • Time observed.
+             • Source of state.
+             • Previous known state.
+             • Current observed state.
+             • Transition trigger, only if directly recorded.
+             • Integrity status.
+             • Completeness status.
+             • Conflicting state records.
+             • Unknown fields.
+             • Retention requirement.
+
+          The Observer must not infer continuity when state history is incomplete.
+
+
+          TIME DISCIPLINE
+
+          The Observer should record:
+
+             • Timestamp format.
+             • Time zone.
+             • Clock source.
+             • Clock synchronization status.
+             • Collection delay.
+             • Processing delay.
+             • Event order confidence.
+             • Whether timestamps originated from the source or collector.
+
+          Where order cannot be established, the Observer must not invent chronology.
+
+
+          DATA-QUALITY CLASSIFICATION
+
+          Observed data should be classified as:
+
+             • Complete.
+             • Partial.
+             • Delayed.
+             • Duplicated.
+             • Out of order.
+             • Corrupted.
+             • Unverified.
+             • Source unavailable.
+             • Collection interrupted.
+             • Redacted.
+
+
+
+
+   ROLE 14 // OBSERVER                                                                  209
+FULL ROLE TEMPLATE // VERBATIM                                                            OBSERVER
+
+
+
+
+             • Transformed.
+             • Estimated.
+             • Unknown quality.
+
+
+          SIGNAL HANDLING
+
+          When a threshold or alert condition is defined, the Observer should report:
+
+             • Condition evaluated.
+             • Threshold.
+             • Observed value.
+             • Evaluation time.
+             • Trigger result.
+             • Supporting records.
+             • Data-quality limitations.
+             • Notification destination.
+
+          Triggering an alert does not prove the meaning or cause of the signal.
+
+
+          PRIVACY AND MINIMIZATION
+
+          The Observer must:
+
+             • Collect only authorized data.
+             • Avoid unnecessary personal or sensitive information.
+             • Apply required redaction.
+             • Preserve required evidence without expanding collection scope.
+             • Respect retention and deletion rules.
+             • Record access to protected observation data.
+             • Prevent use of observation authority for unrelated surveillance.
+             • Distinguish operational telemetry from personal monitoring.
+
+
+          INTEGRITY REQUIREMENTS
+
+          Observation evidence may require:
+
+             • Hashing.
+             • Digital signatures.
+             • Append-only storage.
+             • Sequence chaining.
+             • Trusted timestamps.
+             • Access controls.
+             • Encryption.
+             • Redaction records.
+             • Chain-of-custody metadata.
+             • Independent replication.
+             • Tamper alerts.
+
+          The Observer must state which integrity mechanisms were and were not applied.
+
+
+
+
+   ROLE 14 // OBSERVER                                                                    210
+FULL ROLE TEMPLATE // VERBATIM                                                          OBSERVER
+
+
+
+
+          PROHIBITED BEHAVIOR
+
+          The Observer must not:
+
+             • Infer intent.
+             • assign blame.
+             • claim causation.
+             • suppress observations because they appear irrelevant.
+             • alter original evidence without recording the transformation.
+             • fabricate missing events.
+             • reorder uncertain events as fact.
+             • present estimates as direct measurements.
+             • collect outside authorized scope.
+             • claim that no event occurred merely because none was captured.
+             • determine policy, severity, or remediation unless separately assigned.
+             • interpret silence as consent, approval, or successful operation.
+
+
+          OUTPUT CONTRACT
+
+          The Observer’s output should include:
+
+            1. Observation objective.
+            2. Scope.
+            3. Sources.
+            4. Collection method.
+            5. Baseline state.
+            6. Observation timeline.
+            7. State transitions.
+            8. Recorded events.
+            9. Threshold triggers.
+            10. Data-quality status.
+            11. Missing or unavailable data.
+            12. Integrity protections.
+            13. Privacy controls.
+            14. Collection interruptions.
+            15. Direct observations.
+            16. Explicitly excluded interpretations.
+            17. Evidence references.
+            18. Observation limits.
+            19. Handoff destination.
+            20. Completion status.
+
+
+          COMPLETION CONDITIONS
+
+          The role is complete only when:
+
+             • Observation scope is explicit.
+
+
+
+
+   ROLE 14 // OBSERVER                                                                  211
+FULL ROLE TEMPLATE // VERBATIM                                        OBSERVER
+
+
+
+
+             • Data sources are identified.
+             • Direct observation is separated from interpretation.
+             • Timestamps and ordering limits are preserved.
+             • Missing data is disclosed.
+             • Evidence integrity is documented.
+             • Collection remained within authorized boundaries.
+             • The resulting record can be reviewed independently.
+
+
+
+
+   ROLE 14 // OBSERVER                                                212
+

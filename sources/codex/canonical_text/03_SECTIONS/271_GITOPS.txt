@@ -1,0 +1,95 @@
+SECTION 271 — GitOps
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Use versioned, reviewed, declarative source as the controlled expression of environment state, with reconciliation, drift visibility, safe promotion, and human authority.
+
+REQUIRED OUTCOME
+
+A GitOps model with desired state, repository, controller, identity, policy, environment, reconciliation, drift, secrets, promotion, rollback, audit, and recovery.
+
+WHY THIS MATTERS
+
+Declarative control improves traceability but can make a bad commit or controller rapidly widespread. Desired state is not automatically safe, current, authorized, or complete.
+
+APPLICABILITY
+
+Apply when versioned source drives infrastructure, platform, application, policy, configuration, or environment reconciliation.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no declarative source, reconciler, drift, or automated environment change is used and an approved exact baseline applies.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use source control, configuration, identity, policy, secrets, build, artifact, environment, platform, security, and operations baselines. Define repository and reconciler authority.
+
+REQUIRED INPUTS
+
+Desired state, repository, review, controller, target, identity, policy, artifact, secrets, drift, health, rollback, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve repository, protected changes, controller permissions, promotion, emergency override, drift reconciliation, and rollback. Humans decide whether desired state is safe and correct.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft declarative changes, compare desired and actual state, explain drift, and propose remediation. It must not commit, merge, reconcile, change controller permissions, expose secrets, or declare health without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+GitOps Engineer, Platform Engineer, Source Control Manager, Configuration Manager, Security Auditor, Tester, Verifier, Implementer, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define desired state; protect repository; validate and scan; review and promote; configure controller; reconcile; observe drift and health; pause or roll back; handle emergency changes; restore; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show commit, desired state, target, controller, permissions, drift, health, evidence, and limitation. Require human approval for protected change, reconcile, production, emergency, and destructive action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate desired source, controller, target, secrets, policy, observed state, health, and recovery. Use least privilege, progressive promotion, drift policy, reconciliation pause, immutable artifacts, and independent control path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show desired and actual state, commit, target, controller, drift, health, evidence freshness, owner, and authorized approve, pause, reconcile, rollback, override, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+GitOps charter; repository and controller model; desired-state definitions; policy and secret boundaries; promotion and drift records; health, rollback, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify commit, desired state, target, controller, identity, time, observed state, method, result, drift, and limitation. A commit proves intended state, not actual state or safe reconciliation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify repository protection, policy, controller permission, secret handling, drift, reconciliation, health, pause, rollback, recovery, and audit. Test malicious commit, controller loss, and conflicting manual change.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Controller overprivilege, automatic broad reconciliation, secrets in repository, drift hidden, manual change overwritten, desired state mistaken for reality, and no emergency stop.
+
+RECOVERY AND RECONSIDERATION
+
+Pause reconciliation, preserve commit and state, restore known-good desired and actual state, rotate credentials, notify owners, and reassess blast radius. Reopen on source, controller, target, policy, or environment change.
+
+COMPLETION CRITERIA
+
+Desired state, repository, controller, target, identity, policy, drift, health, rollback, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve repositories, commits, controller state, desired and actual state, promotions, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Platform, Configuration, Build, Release, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+258 Configuration; 259 Source Control; 263 Environment; 264-268 Build and Delivery; 269-270 DevOps and DevSecOps; 272 Platform Engineering; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, declarative delivery, security, and operations context, and the integration roadmap. Exact repository, controller, permissions, drift, secret, target, rollback, and acceptance authority remain unresolved.

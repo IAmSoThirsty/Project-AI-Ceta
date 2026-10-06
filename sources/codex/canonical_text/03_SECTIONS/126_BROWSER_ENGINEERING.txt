@@ -1,0 +1,99 @@
+SECTION 126 - Browser Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of browser-executed applications, pages, extensions, and client capabilities across browser engines, web standards, security boundaries, accessibility, storage, networking, and user-controlled execution.
+
+REQUIRED OUTCOME
+
+A browser engineering baseline with supported engines and versions, web contracts, progressive behavior, security and privacy controls, accessibility, performance, compatibility evidence, deployment identity, and recovery paths.
+
+WHY THIS MATTERS
+
+Browsers mediate execution, permissions, storage, rendering, isolation, caching, and network trust. Engine differences, blocked APIs, stale assets, or unsafe client assumptions can harm users and expose systems.
+
+APPLICABILITY
+
+Applies to web applications, browser clients, extensions, workers, WebAssembly, browser APIs, rendering, client storage, service workers, and browser-specific user or operator journeys.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to non-browser software with no web client, browser extension, browser API, rendered interface, or browser security consequence. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires web and API requirements, supported engines, standards policy, threat model, identity and session model, content and data rules, accessibility, performance, caching, deployment, telemetry, and support authority.
+
+REQUIRED INPUTS
+
+Provide journeys, browser and device matrix, standards and API use, CSP and origin rules, storage, cookies, workers, offline, localization, accessibility, performance, security, privacy, and rollback requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve security and privacy boundaries, permissions, third-party content, browser support, accessibility, release, incident response, and acceptance. Humans retain authority to disable features or withdraw content.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect compatibility, draft markup and tests, and identify security or accessibility gaps. It must not claim browser support without evidence, weaken origin or content controls, collect data, or deploy changes without authorization.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Security Auditor, Privacy and Governance Reviewer, User Experience Reviewer, Accessibility specialist, Implementer, Tester, Verifier, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define engines, versions, contexts, users, security origins, and lifecycle.
+2. Model navigation, rendering, identity, storage, network, workers, permissions, data, and failure paths.
+3. Implement standards-based progressive behavior with controlled dependencies and accessible interaction.
+4. Verify security, privacy, compatibility, performance, localization, offline, caching, deployment, and recovery.
+5. Stage, monitor, correct, and retire browser assets and capabilities.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose browser, engine, origin, permission, asset, cache, and evidence context. Human review is required for trust boundaries, data collection, third-party code, accessibility, and release. Preserve direct status and recovery paths when scripts fail.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate server authority from untrusted client execution. Model origins, CSP, cookies, storage, workers, service-worker cache, rendering, navigation, API, and third-party boundaries. Version assets and support cache invalidation and rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show deployment and asset identity, browser coverage, security headers, permission state, cache freshness, errors, performance, accessibility, incidents, and controls to disable, purge, roll back, or narrow behavior.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Browser baseline, compatibility matrix, standards and origin model, threat and privacy records, accessibility plan, asset and cache strategy, test evidence, deployment manifest, telemetry, support, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+Identify browser, engine, OS, device, build, asset, network, origin, configuration, test method, result, date, and limits. Separate rendering, interaction, accessibility, security, privacy, performance, cache, and user outcome evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify engines, keyboard and assistive access, navigation, focus, permissions, origin isolation, CSP, cookies, storage, offline and stale cache, malformed input, network loss, third-party failure, performance, localization, and rollback.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Assuming one engine; trusting client validation; unsafe inner HTML or third-party code; cache poisoning; inaccessible custom controls; hidden script dependency; leaking tokens to storage; and treating page load or analytics as task success.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze or purge affected assets, revoke sessions or permissions, disable risky client paths, preserve logs and prior versions, use server-side or manual fallback, compensate external effects, and reopen the browser and security baseline.
+
+COMPLETION CRITERIA
+
+Supported engines, standards, security, privacy, accessibility, performance, evidence, deployment, rollback, support, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve source revision, asset hashes, browser matrix, headers, decisions, evidence, incidents, open gaps, and next safe action. Hand off to Web, Frontend, API, Security, Privacy, Accessibility, Testing, CDN, Release, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+118 Frontend Engineering; 121 Web Engineering; 127 Extension Engineering; 128 API Engineering; 042 API Architecture; 053 Accessibility Architecture; 190 Application Security; 247 Accessibility Testing; 248 Compatibility Testing; 300 Content Delivery Networks.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 107-124, Owner Cockpit Requirements, and Status and Evidence Lexicon. Exact browser populations, standards support, third-party obligations, privacy regimes, accessibility criteria, and incident objectives remain unresolved until supplied and verified.

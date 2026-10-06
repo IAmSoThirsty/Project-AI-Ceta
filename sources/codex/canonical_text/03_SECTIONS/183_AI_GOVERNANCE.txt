@@ -1,0 +1,103 @@
+SECTION 183 — AI Governance
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the authority, policy, accountability, evidence, approval, monitoring, and lifecycle controls for AI systems and AI-enabled mutations.
+
+REQUIRED OUTCOME
+
+- A governed AI inventory with purpose, owner, impact, risk, capability, data, provider, lifecycle, and decision status.
+- Policy evaluation linked to immutable DecisionRecord and AuditDecision artifacts.
+- Complete mutation bindings for consequential model, prompt, tool, data, deployment, and policy changes.
+
+WHY THIS MATTERS
+
+Governance fails when a local check is mistaken for policy evaluation, a model capability becomes authority, or an approval cannot be replayed. Explicit records make decisions accountable, reviewable, and reversible only through compensation.
+
+APPLICABILITY
+
+Applies to AI design, procurement, training, evaluation, deployment, operation, tool use, data use, prompt changes, policy changes, and retirement. It applies more deeply with regulated use, autonomy, sensitive data, external effect, or mutation.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to non-AI work or read-only analysis with no AI claim, policy effect, or mutation. Record scope, controlling policy, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires authority model, policy sources, impact assessment, AI inventory, data and system context, evaluation, safety, privacy, security, and audit capability. Depends on Sections 048, 056, 180, 182, 184, 185, and 188.
+
+REQUIRED INPUTS
+
+Intent; actor; AI system; purpose; data; model; provider; capability; resource; mutation class; traceId; capability token; GovernanceContext; PolicyEvaluationRequest and Result; quorum; resolution policy; and compensation path.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans define policy, delegate authority, approve exceptions, provide quorum where required, accept risk, review evidence, and authorize or deny mutations. No operator override may erase a prior immutable decision or bypass policy evaluation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may prepare requests, summarize policy, identify gaps, and recommend decisions. It must not treat local validation as governance evaluation, self-issue capability, approve itself, or mutate without a complete binding and valid decision.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Governance Reviewer, Decision Arbiter Advisory, Architect, Security Auditor, Privacy Reviewer, Safety Auditor, Researcher, Analyst, Critic, Verifier, Documentation Writer, Memory Curator, and Human-in-the-Loop Operator.
+
+REQUIRED ACTIVITIES
+
+1. Register AI system, purpose, owner, impact, capabilities, dependencies, and lifecycle.
+2. Establish GovernanceContext and PolicyEvaluationRequest for each governed action.
+3. Obtain PolicyEvaluationResult, capability scope, quorum proof, and resolution policy.
+4. Create immutable DecisionRecord and AuditDecision linked to trace and evidence.
+5. Execute only the authorized mutation and emit append-only observability events.
+6. Monitor drift, violations, incidents, appeals, and policy changes.
+7. Compensate linked prior mutations and preserve replayable history.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show policy, evaluation, capability, decision, quorum, trace, resource, mutation, and outcome. Humans can deny, narrow, pause, revoke, appeal, or request reconsideration. Stream completion must include a terminal event and preserve audit linkage.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable DecisionRecord, GovernanceEvaluationBinding, MutationGovernanceBinding, PolicyEvaluationRequest and Result, ApprovalDecisionRequest, AuditDecision, trace, artifact, and compensation records. Enforce default-deny, precedence, expiry, and append-only audit at service boundaries.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show inventory, impact, policy result, binding completeness, decision, quorum, authority, traces, evidence, mutations, incidents, and compensations. Provide authorized approve, deny, revoke, pause, quarantine, reconsider, and compensate controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+AI inventory; impact record; policy catalog; evaluation requests and results; capability records; decision and audit records; mutation bindings; quorum proofs; trace and artifact links; exception register; incident record; and compensation plan.
+
+EVIDENCE REQUIREMENTS
+
+Every governance claim identifies policy, evaluation ID and result, traceId, actor, capability scope, resource, action, mutation class, decision, quorum, evidence, and validity. Local tests, approvals, or logs alone do not prove governed authorization.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Attempt missing trace, expired token, mismatched resource, local-only check, absent evaluation, insufficient quorum, conflicting policy, lifecycle regression, missing terminal event, and destructive rollback; verify default-deny and immutable audit.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Rubber-stamp approval; policy copied into prompt; local-only enforcement; self-approval; incomplete binding; hidden override; mutable decision; audit replacement; quorum bypass; and destructive reversal.
+
+RECOVERY AND RECONSIDERATION
+
+Deny or stop on binding, evaluation, capability, quorum, trace, or policy failure. Preserve records, identify safe read-only work, obtain fresh evaluation and approval, and use compensation transactions linked to prior decisions rather than destructive reversal.
+
+COMPLETION CRITERIA
+
+Authority, policy, evaluation, binding, decision, audit, trace, quorum, mutation, observability, compensation, and lifecycle are explicit. Status remains CONTENT-COMPLETE pending reconciliation and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve immutable IDs, policy versions, evaluations, decisions, bindings, quorum proofs, traces, artifacts, events, incidents, appeals, and gaps. Hand off to Safety, Security, Privacy, MLOps, Operations, Audit, and HITL.
+
+RELATED CODEX SECTIONS
+
+003 Authority Scope and Delegation; 004 Evidence Verification and Truth; 048 Governance Architecture; 056 AI Architecture; 180 Model Evaluation; 182 AI Safety; 184 MLOps; 188 Human-in-the-Loop Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Owner Cockpit Requirements, Status and Evidence Lexicon, and governing decision-binding requirements. Concrete policy registries, token issuer, quorum rules, retention, and authority assignments remain unresolved.

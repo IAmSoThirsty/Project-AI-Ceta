@@ -1,0 +1,139 @@
+SECTION 047 — Privacy Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define how personal, sensitive, inferred, linked, generated, and contextual information is collected, used, shared, protected, explained, corrected, retained, and deleted within authorized purposes.
+
+REQUIRED OUTCOME
+
+- A data-subject, purpose, processing, sharing, rights, risk, control, and lifecycle model.
+- Enforceable minimization, purpose limitation, transparency, access, correction, objection, portability, retention, deletion, and breach-response behavior as applicable.
+- Traceability from requirements through data, identity, applications, security, operations, evidence, and retirement.
+
+WHY THIS MATTERS
+
+Privacy harm can arise from inference, linkage, context, retention, or access even when a system has no obvious breach. Privacy Architecture makes purpose and human impact visible instead of treating consent text or masking as complete protection.
+
+APPLICABILITY
+
+- Data relates to identifiable people, households, devices, behavior, location, biometrics, sensitive attributes, or inferred interests.
+- Collection, use, generation, sharing, retention, or deletion affects rights, dignity, autonomy, safety, or trust.
+
+NON-APPLICABILITY CONDITIONS
+
+- No personal, sensitive, linked, inferred, or contextual data or privacy obligation is affected.
+- An approved baseline covers exact data, purpose, population, jurisdiction, and change with no material impact.
+- The artifact is synthetic or exploratory and makes no claim about lawful or privacy-safe processing.
+
+Record baseline, scope, owner, evidence date, assumptions, jurisdiction, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-046 provide requirements, data, identity, security, information, application, and operational context.
+- Legal, privacy, data, security, records, user, supplier, and rights authorities are known or marked open.
+
+REQUIRED INPUTS
+
+- Subjects, data, purposes, lawful basis or authority, populations, jurisdictions, recipients, processing, inference, models, retention, and rights.
+- Notices, consent, access, correction, objection, portability, deletion, security, breach, records, and evidence requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Privacy and accountable owners approve purposes, collection, sharing, sensitive processing, retention, rights handling, exceptions, transfers, risk, and acceptance. Humans resolve conflicts and retain authority to restrict, correct, withdraw, delete, notify, and stop processing.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory data uses, map flows, identify minimization or retention gaps, and draft privacy tests. It must preserve subject, purpose, jurisdiction, provenance, and uncertainty. It must not infer consent, approve new use, identify a person, deny rights, or expose personal data without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Privacy and Governance Reviewer, Security Auditor, Architect, Researcher, Analyst, Observer, Tester, Verifier, Critic, Documentation Writer, Memory Curator, Planner, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Inventory subjects, data, purposes, processing, recipients, jurisdictions, risks, owners, and lifecycle.
+2. Define minimization, purpose limitation, transparency, consent or authority, access, correction, objection, portability, retention, and deletion.
+3. Map source, transformation, inference, model, prompt, tool, sharing, storage, logs, backups, and evidence copies.
+4. Assess re-identification, linkage, discrimination, surveillance, disclosure, inference, and secondary-use risk.
+5. Validate with affected people, domain, privacy, legal, security, accessibility, records, and operations authorities.
+6. Test rights, access, correction, deletion, restricted processing, breach, model, cache, backup, and recovery paths.
+7. Baseline decisions, evidence, dissent, open gaps, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show subject, purpose, data, recipient, model, provider, authority, decision, and consequence.
+- Require human review for sensitive, rights-affecting, inferred, cross-border, or irreversible processing.
+- Let people obtain understandable notice, access, correction, objection, export, deletion, and human appeal as applicable.
+- Never let fluency, anonymization claims, or model confidence replace privacy analysis.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Bind data access to purpose, subject, authority, minimization, retention, and deletion.
+- Separate source, derived, inferred, generated, cached, logged, backed-up, archived, and evidence copies.
+- Propagate restrictions and deletion through indexes, replicas, logs, models, prompts, exports, vendors, and recovery media.
+- Preserve privacy-safe status and manual rights paths during provider or model failure.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show data, subject, purpose, recipient, jurisdiction, authority, retention, access, risk, and evidence freshness.
+- Expose inspect, correct, restrict, object, export, delete, withdraw, notify, and appeal actions within authority.
+- Explain collection, use, inference, sharing, denial, retention, and deletion state in accessible language.
+- Export processing records, decisions, evidence, dissent, rights requests, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Privacy context, data and purpose inventory, subject and rights model, processing and sharing map, risk assessment.
+- Minimization, notice, access, correction, retention, deletion, model, supplier, breach, and evidence designs.
+- Verification, decision, acceptance, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify subject, data, purpose, jurisdiction, processing, authority, recipient, method, date, and limitation.
+- Notice, consent, masking, access log, deletion job, assessment, or vendor claim proves only its declared scope.
+- Rights, minimization, inference, retention, and deletion evidence identifies population, copies, exceptions, and validity.
+- Missing, stale, contradictory, or inaccessible evidence constrains privacy status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace a subject's data from collection through use, sharing, inference, retention, access, correction, and deletion.
+- Exercise unauthorized use, purpose change, linkage, re-identification, sensitive inference, cross-border transfer, cache, backup, and model retention.
+- Verify rights, minimization, transparency, access, correction, deletion, audit, and appeal across all entry paths.
+- Disable privacy service, identity, model, provider, data catalog, and evidence store and verify safe restriction.
+- Reproduce representative privacy claims from exact records.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating consent text, masking, pseudonyms, or a deletion button as complete privacy protection.
+- Collecting first and finding purpose later; hiding inference, linkage, retention, or vendor copies.
+- Allowing AI to infer permission, deny rights, or make sensitive decisions without authority and review.
+
+RECOVERY AND RECONSIDERATION
+
+- On unauthorized use, rights failure, inference harm, retention uncertainty, or evidence loss, restrict processing and preserve records.
+- Identify subjects, owner, authority, notification, evidence, remedy, and review condition.
+- Use quarantine, access restriction, correction, withdrawal, deletion, notification, provider remediation, or retirement.
+- Reopen on purpose, population, law, jurisdiction, model, provider, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Subjects, purposes, data, authority, rights, risks, controls, evidence, retention, deletion, and lifecycle are explicit.
+- Inference, linkage, supplier, breach, rights, model, and recovery behavior is addressed or justified.
+- Exact validity, unresolved legal questions, and acceptance authority are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve processing, subject, purpose, rights, decision, evidence, request, incident, dissent, and gap identities.
+- Hand off to Data, Information, Identity, Security, Governance, Compliance, Records, AI, Testing, and Operations.
+- Record changes requiring reopening all affected data, identity, security, and governance sections.
+
+RELATED CODEX SECTIONS
+
+- 019-046 Requirements through Identity Architecture; 048-060 Governance through Hardware Architecture.
+- 155-158 data governance, quality, integration, and migration; 218 Privacy Engineering; 391-395 retention and deletion.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-046, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal privacy law, lawful basis, rights regime, anonymization standard, or cross-border rule is supplied. Actual populations, purposes, jurisdictions, data inventory, and legal determinations remain unresolved.

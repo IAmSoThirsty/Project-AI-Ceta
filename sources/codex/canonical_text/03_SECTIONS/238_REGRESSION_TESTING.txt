@@ -1,0 +1,95 @@
+SECTION 238 — Regression Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Detect unintended change to previously working behavior, protected characteristics, interfaces, data, security, performance, operations, and user outcomes after modification.
+
+REQUIRED OUTCOME
+
+A risk-based regression suite and review process tied to change impact, versions, environments, defects, coverage, exclusions, results, and owner decision.
+
+WHY THIS MATTERS
+
+Change can break behavior outside the edited area through shared dependencies, data, configuration, timing, policy, or user journeys. A large suite can still miss the changed risk or hide flaky and obsolete cases.
+
+APPLICABILITY
+
+Apply when code, hardware, data, configuration, dependency, policy, model, provider, environment, or operational change may affect existing behavior.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when impact analysis shows no behavior, contract, risk, user, or operational change and an approved exact baseline supports it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use change impact, requirements, architecture, defect history, unit, integration, system, E2E, performance, security, and acceptance baselines.
+
+REQUIRED INPUTS
+
+Change, affected paths, dependencies, prior defects, critical journeys, suite, fixtures, environment, versions, exclusions, risk, and exit criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Change and test owners define impact and scope; humans approve exclusions, quarantine, release, and residual risk. Domain owners decide whether behavior remains meaningful.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze diffs and dependency graphs, propose regression cases, prioritize suites, and summarize failures. It must not declare “no impact,” remove tests, hide flakiness, or approve release without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Tester, Test Analyst, Architect, Implementer, Quality Engineer, Verifier, Researcher, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Classify change; map affected risks and journeys; select and update cases; run representative suites; analyze new, missing, and flaky failures; retest fixes; review exclusions; and record decision and limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show change, impact evidence, selected cases, exclusions, versions, result, and limitation. Require human review for impact classification, test removal, exception, and release.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Make dependencies, contracts, versions, feature flags, migrations, configuration, and telemetry traceable. Support selective and full regression, deterministic reset, and safe rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show change, impact, suite, coverage, failures, flaky state, exclusions, evidence freshness, owner, and authorized run, quarantine, expand, accept, reject, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Impact analysis; regression selection; suite and fixture versions; results and defect record; exclusion and exception record; retest, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify change, baseline, case, version, environment, fixture, execution, result, time, method, owner, coverage, and limitation. A green rerun proves only the selected suite and conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify impact analysis, critical path coverage, prior defect coverage, changed dependency behavior, exclusions, flakiness, performance, security, recovery, and independent reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Run everything without impact reasoning, run nothing for a “small” change, obsolete cases, flaky tests ignored, exclusions hidden, and regression pass treated as full acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve failure, halt affected release, expand scope, correct code or test, and rerun. Reopen on further change, new defect, dependency drift, environment change, or user impact.
+
+COMPLETION CRITERIA
+
+Change, impact, cases, fixtures, results, failures, exclusions, coverage, owners, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baseline and suite versions, impact, results, defects, exceptions, decisions, evidence, and open gaps. Hand off to Release, Quality, Unit, Integration, System, E2E, Performance, and Operations.
+
+RELATED CODEX SECTIONS
+
+019 Requirements; 229 Quality Engineering; 231-237 Testing Levels; 239-242 Performance, Load, Stress, and Scalability; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, change and testing context, and the integration roadmap. Exact impact model, critical paths, environment, suite, exclusions, thresholds, and acceptance authority remain unresolved.

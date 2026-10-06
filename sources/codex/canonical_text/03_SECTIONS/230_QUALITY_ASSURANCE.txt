@@ -1,0 +1,95 @@
+SECTION 230 — Quality Assurance
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Provide independent confidence that quality processes, controls, evidence, and outcomes satisfy their declared criteria within a bounded scope.
+
+REQUIRED OUTCOME
+
+A quality-assurance plan with independence, criteria, reviews, test oversight, evidence, nonconformance, escalation, release or acceptance input, and follow-up.
+
+WHY THIS MATTERS
+
+Assurance is weakened when the people producing an artifact are the only people judging it, when evidence is selected to confirm a conclusion, or when a passing review is treated as permanent confidence.
+
+APPLICABILITY
+
+Apply when independent review or assurance is needed for quality, safety, security, privacy, compliance, user impact, release, or material operational claims.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when the consequence is low, the scope is reversible, and a documented peer or automated check provides sufficient bounded confidence.
+
+PREREQUISITES AND DEPENDENCIES
+
+Define criteria, scope, independence, evidence access, reviewers, confidentiality, sampling, decision authority, and escalation. Use quality management, engineering, testing, audit, and governance baselines.
+
+REQUIRED INPUTS
+
+Requirements, quality criteria, risks, designs, processes, controls, test results, defects, incidents, user evidence, owners, environments, and acceptance expectations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+QA owners protect independence, plan reviews, challenge evidence, report findings, and recommend acceptance. Accountable owners decide release, exception, remediation, or residual risk; reviewers do not silently accept on their behalf.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare evidence to criteria, identify omissions, draft review questions, and summarize bounded findings. It must preserve reviewer independence, source, scope, and uncertainty. It must not issue assurance, suppress findings, fabricate review, or sign approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Quality Assurance Reviewer, Quality Manager, Tester, Verifier, Auditor, Researcher, Analyst, Critic, Governance Reviewer, User Experience Reviewer, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Set criteria and scope; confirm independence; review plans and artifacts; sample evidence; observe tests and operations; record nonconformance; communicate findings; verify corrective action; provide bounded assurance; and reopen on change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show criterion, evidence, method, reviewer, scope, result, limitation, and decision authority. Require human judgment for findings, assurance, release, exception, and closure. Keep confidential evidence controlled.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Link requirements, controls, tests, observations, findings, decisions, and evidence. Preserve immutable review records, segregation, repeatable sampling, and traceable baselines.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show assurance scope, criteria, reviewer, evidence coverage, findings, exceptions, due dates, and authorized challenge, accept, remediate, escalate, reopen, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+QA charter; criteria and review plan; evidence and sampling record; findings and nonconformance; corrective-action follow-up; assurance statement; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify criterion, artifact, environment, sample, method, reviewer, time, result, limitation, and confidence. A review checklist or automated pipeline proves only its actual scope and operation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify independence, criteria, scope, evidence, sampling, test observation, finding traceability, corrective action, release input, and closure. Test contradictory evidence, stale baselines, and reviewer conflict.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Assurance by checkbox, self-approval, undisclosed conflict, selective evidence, green pipeline as release proof, and findings closed by assertion.
+
+RECOVERY AND RECONSIDERATION
+
+Withdraw unsupported assurance, preserve workpapers, obtain independent review, correct findings, and reassess release or acceptance. Reopen on changed evidence, scope, requirements, risk, or operation.
+
+COMPLETION CRITERIA
+
+Criteria, scope, independence, evidence, findings, decisions, limitations, follow-up, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent approval and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve reviews, evidence references, findings, decisions, exceptions, corrective actions, and open gaps. Hand off to Quality Management, Testing, Audit, Governance, Release, Operations, and Support.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 228 Quality Management; 229 Quality Engineering; 231-254 Testing; 226 Audit; 301-330 Operations; 402-404 Review.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, quality and evidence context, and the integration roadmap. Exact independence, criteria, sampling, assurance language, materiality, and acceptance authority remain unresolved.

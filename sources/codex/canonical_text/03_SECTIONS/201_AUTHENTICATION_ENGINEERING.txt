@@ -1,0 +1,95 @@
+SECTION 201 — Authentication Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer trustworthy authentication that establishes the assurance, binding, freshness, and session context required before an identity is allowed to request access.
+
+REQUIRED OUTCOME
+
+An authentication design covering assurance levels, authenticators, enrollment, recovery, phishing and replay resistance, federation, session management, step-up, failure handling, logging, user support, and retirement.
+
+WHY THIS MATTERS
+
+Authentication can fail through stolen credentials, weak recovery, session theft, phishing, replay, device compromise, clock or provider failure, and poor user comprehension. A successful challenge proves only what the challenge and binding actually establish.
+
+APPLICABILITY
+
+Apply whenever an identity must be established before access, transaction, administration, delegation, account recovery, or other consequential action.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no identity assertion, authenticator, session, recovery, federation, or protected action is affected and an approved exact baseline applies.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use identity, authorization, privacy, cryptography, key, device, application, platform, accessibility, support, and incident baselines. Define identity source, assurance target, user population, authenticators, provider, protected actions, and recovery authority.
+
+REQUIRED INPUTS
+
+Identity types, assurance levels, authenticators, enrollment, proofing, device binding, federation, session rules, step-up triggers, recovery, rate limits, telemetry, user journeys, accessibility needs, threats, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve assurance levels, acceptable authenticators, recovery risk, step-up, provider trust, lockout, support verification, exceptions, and user communication. Humans decide disputed identity, high-impact recovery, emergency access, and residual risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized authentication configuration, event records, test results, and user-flow evidence; identify patterns; draft controls, tests, and explanations; and propose bounded improvements. It must preserve subject, authenticator, provider, device, session, time, and source boundaries. It must not authenticate a person, reset credentials, bypass a challenge, approve recovery, or label a user fraudulent without delegated authority and human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Identity Engineer, Security Auditor, User Experience Reviewer, Accessibility Reviewer, Researcher, Tester, Verifier, Governance Reviewer, Observer, Critic, Implementer, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define assurance and threat scope; select authenticators; design enrollment, binding, federation, session, step-up, recovery, lockout, rate limiting, notification, logging, support, and retirement; test phishing, replay, credential theft, provider loss, offline use, accessibility, and user recovery; record evidence and exceptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show the claimed assurance, authenticator, provider, device, session, risk signal, evidence, and limitation. Require human review for high-impact recovery, emergency access, lockout reversal, provider change, and suspected fraud. Preserve accessible alternatives and appeal without weakening protected actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate identity proofing, authenticator enrollment, challenge, assertion, session, authorization, recovery, notification, and audit. Use replay resistance, secure binding, short-lived sessions, explicit reauthentication, rate limits, safe error messages, and fail-safe recovery that does not become an attack bypass.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show authentication methods, assurance, devices, sessions, provider state, recovery state, recent events, evidence freshness, lockouts, and active risks. Provide authorized revoke, reauthenticate, recover, report, appeal, and support controls with clear effect and audit.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Authentication assurance and threat model; authenticator and enrollment design; session and step-up rules; recovery and support procedures; user and accessibility flows; test, event, exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify subject, authenticator, provider, device, challenge, session, environment, policy version, method, timestamp, result, and limitation. A login event proves only that the declared mechanism accepted the declared assertion.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify enrollment, binding, phishing and replay resistance, session expiry, revocation, step-up, recovery, lockout, rate limits, federation, accessibility, logging, and provider failure. Test credential theft, device loss, clock skew, duplicate identity, and support social engineering within authorized scope.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Password-only high-risk access, shared authenticators, weak recovery, reusable sessions, silent provider trust, informative errors that aid guessing, lockout denial of service, and treating MFA presence as sufficient assurance for every action.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve events, narrow affected sessions, notify the owner and user as appropriate, and use approved reauthentication, recovery, provider failover, or manual review. Reassess identity, user harm, privacy, and authorization before restoring access. Reopen on authenticator, provider, population, threat, or assurance change.
+
+COMPLETION CRITERIA
+
+Assurance, authenticators, enrollment, sessions, step-up, recovery, support, accessibility, evidence, tests, owners, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve assurance and policy versions, authenticator inventory, provider agreements, event and recovery records, findings, evidence, exceptions, and open gaps. Hand off to IAM, Authorization, Cryptography, Key Management, Security Operations, Support, Testing, and Incident Response.
+
+RELATED CODEX SECTIONS
+
+046 Identity Architecture; 047 Privacy Architecture; 200 Identity and Access Management; 202 Authorization Engineering; 203 Cryptography; 204 Key Management; 206 Security Operations; 214 Incident Response; 231-254 Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, identity and security architecture, and the integration roadmap. Exact assurance levels, authenticators, provider contracts, recovery law, accessibility requirements, user population, and acceptance evidence remain unresolved.

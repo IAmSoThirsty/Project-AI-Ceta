@@ -1,0 +1,95 @@
+SECTION 313 — Observability Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Design signals that allow humans and systems to understand internal and user-relevant behavior, state, failure, performance, security, and recovery from observable outputs.
+
+REQUIRED OUTCOME
+
+An observability model with questions, signals, sources, context, cardinality, privacy, retention, correlation, dashboards, alerts, ownership, cost, and known blind spots.
+
+WHY THIS MATTERS
+
+Collecting more telemetry does not guarantee understanding. Uncontextualized, noisy, private, expensive, or unowned signals can hide the actual failure while increasing risk.
+
+APPLICABILITY
+
+Apply when operators, owners, users, auditors, or automated systems need evidence about runtime, user, data, security, performance, or recovery behavior.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no material state, outcome, failure, control, or operational question needs new or changed observability and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use operational architecture, service objectives, privacy, security, logging, tracing, metrics, incident, cost, and data-retention baselines.
+
+REQUIRED INPUTS
+
+Operational questions, user journeys, services, signals, sources, context, schema, privacy, retention, cost, alert, owners, and blind spots.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define questions and acceptable collection; privacy and security owners approve data handling; operators use signals; humans decide response and tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate authorized telemetry, identify gaps, draft dashboards and alerts, and summarize behavior. It must not infer certainty from missing signals, expose private data, suppress evidence, or execute response without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Observability Engineer, SRE, Operations Engineer, Security Auditor, Privacy Reviewer, Data Engineer, Analyst, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define questions and outcomes; select signals; instrument; add context and correlation; protect and retain; build views and alerts; validate coverage and cost; document gaps; and review after incidents and change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show question, signal, source, context, privacy, time, evidence, inference, and limitation. Require human review for collection, alert, retention, user impact, and response.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use consistent identity and time, correlation, sampling, cardinality controls, redaction, access, resilient telemetry, independent evidence path, and separation of operational and sensitive content.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show observability coverage, questions, signal health, gaps, cost, privacy, retention, evidence freshness, owner, and authorized instrument, restrict, tune, retain, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Observability charter; question and signal catalog; instrumentation and schema; dashboards and alert; privacy and retention; gap, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify question, signal, source, context, timestamp, method, actor, result, coverage, privacy, and limitation. Signal presence proves only observed output and collection health.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify coverage, context, identity, time, privacy, access, retention, cost, alert, correlation, missing signal, tamper, and recovery. Test whether a human can diagnose declared scenarios.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Telemetry volume as observability, no business context, high-cardinality cost, private data leakage, unowned dashboard, alert without action, and blind spot hidden.
+
+RECOVERY AND RECONSIDERATION
+
+Restore or substitute telemetry, preserve available evidence, reduce collection risk, notify owners, and reassess diagnosis. Reopen on service, question, signal, privacy, cost, or incident change.
+
+COMPLETION CRITERIA
+
+Questions, signals, context, privacy, owners, views, alerts, cost, retention, evidence, blind spots, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve instrumentation, schemas, dashboards, alerts, gaps, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Monitoring, Logging, Tracing, Metrics, SRE, Security, Data, and Operations.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 301-312 Operations; 314-317 Monitoring, Logging, Tracing, and Metrics; 323-330 Availability, Performance, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, operations, telemetry, privacy, security, and evidence context, and the integration roadmap. Exact questions, signals, cost, retention, owners, tools, and acceptance authority remain unresolved.

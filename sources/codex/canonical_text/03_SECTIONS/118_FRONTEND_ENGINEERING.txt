@@ -1,0 +1,98 @@
+SECTION 118 — Frontend Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the engineering of user-facing interfaces and client-side behavior that enables accessible, secure, understandable, resilient, and supportable interaction with a product or service.
+
+REQUIRED OUTCOME
+
+A versioned frontend contract covering journeys, state, rendering, input, accessibility, localization, permissions, performance, errors, telemetry, offline or degraded behavior, tests, and release evidence.
+
+WHY THIS MATTERS
+
+The frontend is a control surface, not decoration. A visually correct screen can still mislead, exclude, leak data, lose work, or make recovery impossible.
+
+APPLICABILITY
+
+Applies to web, client, mobile, embedded, terminal, and rendered user or operator interfaces, including state, interaction, accessibility, and client-side integration.
+
+NON-APPLICABILITY CONDITIONS
+
+An unchanged interface consumed without behavior, content, accessibility, permission, data, or evidence change is not frontend engineering; record the baseline.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires user and operator journeys, functional and content requirements, design system, API contracts, data and privacy rules, accessibility, localization, performance, security, and acceptance authority.
+
+REQUIRED INPUTS
+
+Personas and contexts, journeys, states, content, input and output, APIs, permissions, devices, browsers, languages, assistive technology, performance, errors, telemetry, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans own user outcomes, accessibility, content meaning, privacy, security, release, and acceptance. Affected users and accessibility specialists review material changes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft components, tests, content, and diagnostics. It must not invent user needs, claim accessibility, expose data, or release changes without human review and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Implementer, Refactorer, Tester, Verifier, User Experience Reviewer, Accessibility specialist through existing role contracts, Security Auditor, Governance Reviewer, Documentation Writer, Memory Curator, and Critic.
+
+REQUIRED ACTIVITIES
+
+1. Define journeys, contexts, states, content, devices, accessibility, security, and non-goals.
+2. Implement stable layout, semantic interaction, validation, permissions, loading, errors, empty, offline, and recovery states.
+3. Verify keyboard, screen reader, contrast, localization, responsive, performance, security, compatibility, and analytics behavior.
+4. Release, monitor, support, correct, and retire through controlled change.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show human, AI, client, service, and external actions. Require review for consent, permissions, data, denial, communication, and irreversible action; keep non-AI, status, correction, and recovery paths.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate design, content, client state, server state, cache, credentials, telemetry, and rendered output. Enforce authorization server-side, safe caching, progressive failure, and no data loss on refresh or reconnect.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show version, route, state, user context, permission, data freshness, device, accessibility, performance, errors, dependency, evidence, and authorized pause, rollback, and disable controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Frontend contract, component and state model, content and accessibility decisions, source, dependency and build records, visual and behavioral tests, performance, security, localization, release, and recovery artifacts.
+
+EVIDENCE REQUIREMENTS
+
+Identify browser or device, version, data, user context, assistive technology, viewport, method, expected and actual result, reviewer, and limitations. Screenshots alone do not prove accessibility or usability.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise keyboard and assistive technology, focus, semantics, responsive layout, localization, slow network, offline, stale data, denied permission, malformed input, script failure, reconnect, and destructive confirmation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Happy-path-only design, inaccessible custom controls, client-only authorization, hidden loading or error state, lost user input, misleading copy, unsafe cache, and analytics treated as comprehension.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve user input and evidence, degrade to status or manual support, disable unsafe action, restore prior client state, communicate impact, and reopen design or requirements after material accessibility or behavior failure.
+
+COMPLETION CRITERIA
+
+Journeys, states, content, accessibility, permissions, performance, evidence, support, recovery, and acceptance are explicit for declared devices, browsers, users, and release.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off journeys, components, content, contracts, tests, accessibility evidence, telemetry, incidents, decisions, support, and open gaps to UX, UI, Application, API, Security, Testing, and Operations sections.
+
+RELATED CODEX SECTIONS
+
+075-106 Human-Computer Interaction through User Validation; 117-121 Application through Web Engineering; 128 API Engineering; 103 Accessibility Design; 247 Accessibility Testing; 250 Localization Testing; 314-318 Monitoring and Alerting.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. Target users, devices, browsers, assistive technologies, localization, performance budgets, and accessibility acceptance thresholds remain unresolved until supplied.

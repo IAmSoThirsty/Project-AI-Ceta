@@ -1,0 +1,112 @@
+SECTION 069 — Embedded Software Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the disciplined engineering of software that executes within or directly controls embedded hardware, including real-time behavior, resource limits, device interfaces, updateability, safety, security, and lifecycle constraints. It preserves the distinction between a software design, a tested build, a flashed image, and verified behavior in the target device.
+
+REQUIRED OUTCOME
+
+ - A bounded embedded-software scope, hardware boundary, operating modes, timing model, resource budget, ownership, and lifecycle.
+ - Requirements, architecture, interfaces, state behavior, build provenance, configuration, tests, evidence, update, recovery, and retirement records.
+ - Explicit human authority for safety, security, release, field update, degraded operation, and acceptance.
+
+WHY THIS MATTERS
+
+Embedded software can control physical effects while operating with limited memory, power, bandwidth, timing margin, observability, and recovery options. A defect may persist in deployed devices, create unsafe state, corrupt data, or make later repair impossible. Engineering discipline makes timing, resource use, hardware assumptions, update authority, and evidence visible.
+
+APPLICABILITY
+
+Applies when software runs on a device, controller, appliance, instrument, vehicle, industrial asset, sensor, actuator, or constrained compute target, or when software depends materially on hardware timing, interrupts, peripherals, boot state, power, or physical environment.
+
+NON-APPLICABILITY CONDITIONS
+
+ - Purely conceptual software with no claim about a target device, timing, resource use, interface, deployment, or physical effect.
+ - A covered embedded baseline is unchanged by a reversible documentation correction and impact analysis confirms no material effect.
+ Record the exact baseline, target, evidence date, owner, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+ - Sections 019-020, 033, 045, 050-052, 059-068, and 231-252 as applicable.
+ - Hardware specifications, board support package, compiler and toolchain, device interfaces, timing and resource budgets, threat model, safety constraints, update mechanism, test fixtures, and accountable release authority.
+
+REQUIRED INPUTS
+
+ - Approved requirements, hazards, operating modes, hardware revisions, schematics or interface descriptions, memory and power budgets, timing constraints, data classifications, and lifecycle horizon.
+ - Source, dependencies, toolchain, build configuration, calibration, test equipment, field population, update inventory, support, and recovery constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner approves device purpose, hazards, acceptable risk, interface contracts, timing and resource margins, security posture, field deployment, update authority, exceptions, and acceptance. Humans assign competent reviewers, approve release and rollback plans, decide when evidence is sufficient, and retain stop, quarantine, recall, downgrade, and retirement authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect source and specifications, propose implementation or tests, analyze traces, identify timing and resource risks, and draft evidence records. AI must label inference and simulation, preserve build and hardware identity, and escalate unresolved safety, security, timing, licensing, or authority questions. It must not flash devices, approve release, change safety behavior, hide warnings, or infer target compatibility from compilation alone.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Analyst, Observer, Planner, Critic, Red Team, Documentation Writer, Memory Curator, Optimizer, and Decision Arbiter Advisory. Selection is proportional to physical consequence and must preserve independent verification.
+
+REQUIRED ACTIVITIES
+
+1. Establish target hardware, software boundary, operating modes, hazards, users, environments, and lifecycle.
+2. Derive and trace timing, resource, interface, data, safety, security, update, and recovery requirements.
+3. Define tasks, interrupts, scheduling, state machines, drivers, middleware, diagnostics, initialization, shutdown, and degraded modes.
+4. Control source, dependencies, compiler, flags, generated code, configuration, calibration, reproducible builds, signing, and artifact identity.
+5. Test normal, boundary, overload, power loss, reset, clock fault, communication loss, malformed input, update interruption, and recovery behavior.
+6. Baseline evidence and obtain authorized release and field-deployment decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+ - Identify human, AI, automation, and device authority at each consequential action.
+ - AI-generated code, tests, timing claims, and diagnostics remain proposals until review and target evidence exist.
+ - The owner must see assumptions, model or tool identity, source version, build, target hardware, test result, uncertainty, and unresolved defects.
+ - No conversational path may bypass signing, review, safety interlocks, update authorization, audit, or recovery controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use deterministic or bounded scheduling where required; define interrupt and concurrency rules, memory ownership, watchdog and reset semantics, hardware abstraction, versioned interfaces, diagnostic channels, secure boot and update boundaries, fail-safe states, and power-loss behavior. Preserve traceability from requirement to source, binary, device, test, field event, and retirement.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show device and image identity, hardware revision, boot state, software version, configuration, authority, health, resource margin, active update, alarms, evidence freshness, and available stop, isolate, downgrade, recover, and retire actions. Explain whether status is simulated, lab-tested, field-observed, or verified.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+ - Embedded software requirements and architecture baseline.
+ - Interface, timing, memory, power, safety, security, diagnostic, update, and recovery contracts.
+ - Reproducible build manifest, signed artifact record, test results, defect and waiver register, deployment inventory, and field handoff.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies source, commit, dependency, toolchain, flags, binary hash, hardware revision, configuration, fixture, environment, test method, operator, date, result, and limitation. Compilation, simulation, unit tests, and one device demonstration prove only their bounded claims.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify traceability, deterministic or bounded timing, resource margin, reset and watchdog behavior, peripheral and protocol handling, fault injection, power interruption, secure update, rollback, diagnostics, signed artifacts, hardware compatibility, and independent reproduction on representative targets.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+ - Treating a successful build, simulator, unit test, or nominal bench run as field acceptance.
+ - Unbounded timing, hidden shared state, unchecked integer or memory behavior, unsafe defaults, missing watchdog, undocumented hardware assumptions, unsigned updates, and recovery depending on the failed component.
+
+RECOVERY AND RECONSIDERATION
+
+On fault, uncertainty, resource exhaustion, corrupted image, lost communication, or authority conflict, enter the approved safe state, preserve diagnostics, isolate affected devices, and stop propagation. Reconsider only after hardware, image, configuration, evidence, user impact, security, safety, and rollback conditions are reviewed by the accountable authority.
+
+COMPLETION CRITERIA
+
+Scope, requirements, architecture, interfaces, resource and timing budgets, source and build identity, tests, evidence, field inventory, update and recovery procedures, open risks, and owner acceptance authority are recorded. Status remains CONTENT-COMPLETE until separate source reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve target, hardware revision, image, configuration, toolchain, dependencies, decisions, evidence, defects, waivers, field population, update state, and next safe action. Hand off to Application, Software, Hardware, Firmware, Security, Safety, Testing, Operations, Maintenance, Updates, and Retirement sections as applicable.
+
+RELATED CODEX SECTIONS
+
+059 Embedded Systems Architecture; 060 Hardware Architecture; 062 Electronics Engineering; 068 Firmware Engineering; 070 Internet of Things Engineering; 115 Driver Engineering; 231-252 Testing sections; 378-380 Updates and Security Patching; 406 System Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-068, Owner Cockpit Requirements, Status and Evidence Lexicon, and the Remaining-Section Integration Roadmap. Target hardware, regulated safety regime, timing class, field population, toolchain, update authority, and domain-specific standards remain unresolved until supplied and verified.

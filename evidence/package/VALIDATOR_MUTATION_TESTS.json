@@ -1,0 +1,151 @@
+{
+  "scope": "AUTHOR_SELF_TEST_OF_PACKAGE_VALIDATION_TOOL_ONLY",
+  "runtime_tests_executed": false,
+  "runtime_qualification": "NOT_RUN",
+  "results": [
+    {
+      "id": "QA-01",
+      "test": "Intact package passes structural and full example-schema checks",
+      "result": "PASS"
+    },
+    {
+      "id": "QA-02",
+      "test": "Missing entry document",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "entry:README.md: "
+      ]
+    },
+    {
+      "id": "QA-03",
+      "test": "Duplicate requirement ID",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "unique_requirement_group_ids: REQ-00-01",
+        "summary_count:requirement_groups: "
+      ]
+    },
+    {
+      "id": "QA-04",
+      "test": "Dangling acceptance reference",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "all_traceability_references_resolve: REQ-00-01:acceptance"
+      ]
+    },
+    {
+      "id": "QA-05",
+      "test": "Cyclic build dependency",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "work_package_graph_acyclic: Dependency cycle at WP-00"
+      ]
+    },
+    {
+      "id": "QA-06",
+      "test": "Fabricated runtime pass",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "initial_handoff_has_no_fabricated_runtime_success: This checker validates the initial delivered specification snapshot, not a later implementation registry."
+      ]
+    },
+    {
+      "id": "QA-07",
+      "test": "Missing original lifecycle section",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "all_406_original_lifecycle_ids: "
+      ]
+    },
+    {
+      "id": "QA-08",
+      "test": "Changed preserved source bytes",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "original_lifecycle_and_volume_digests: sources/codex/canonical_text/03_SECTIONS/001_RESEARCH.txt",
+        "original_text_witness_digests: sources/codex/canonical_text/03_SECTIONS/001_RESEARCH.txt"
+      ]
+    },
+    {
+      "id": "QA-09",
+      "test": "Duplicate JSON keys",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "authored_json_strict_parsing: config/design_defaults.json: Duplicate JSON key: same"
+      ]
+    },
+    {
+      "id": "QA-10",
+      "test": "Nonfinite JSON number",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "authored_json_strict_parsing: config/design_defaults.json: Non-finite JSON constant: NaN"
+      ]
+    },
+    {
+      "id": "QA-11",
+      "test": "Path traversal in registry",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "package_read_or_structure: ValueError: Unsafe package-relative path: '../../outside.txt'"
+      ]
+    },
+    {
+      "id": "QA-12",
+      "test": "Malformed expected-valid schema example",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "full_json_schema_example:observation_shape_valid.json: "
+      ]
+    },
+    {
+      "id": "QA-13",
+      "test": "Missing prewritten policy",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "policy_documents_exist: policies/POL-01_authority_and_consent.md",
+        "authored_markdown_file_links: PACKAGE_INDEX.md -> policies/POL-01_authority_and_consent.md"
+      ]
+    },
+    {
+      "id": "QA-14",
+      "test": "Broken authored file link",
+      "result": "PASS",
+      "expected_validator_result": "FAIL",
+      "actual_validator_result": "FAIL",
+      "detection": [
+        "authored_markdown_file_links: src/ceta/contracts/README.md -> ./missing-file.md"
+      ]
+    },
+    {
+      "id": "QA-15",
+      "test": "Restored package passes again after isolated mutation tests",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

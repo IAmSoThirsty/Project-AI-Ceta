@@ -1,0 +1,98 @@
+SECTION 129 - Integration Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of connections among systems, services, people, devices, data, organizations, and suppliers, including transformation, orchestration, synchronization, identity, failure, evidence, and lifecycle.
+
+REQUIRED OUTCOME
+
+An integration baseline with participants, contracts, mappings, ownership, ordering, reliability, security, observability, reconciliation, migration, and retirement conditions.
+
+WHY THIS MATTERS
+
+Integration defects cross boundaries and amplify quickly. Missing ownership or reconciliation can create duplicate effects, inconsistent records, silent loss, and impossible recovery.
+
+APPLICABILITY
+
+Applies whenever two or more systems, services, teams, suppliers, devices, data stores, or processes exchange information, commands, events, or responsibility.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to isolated computation with no boundary exchange or shared lifecycle consequence. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires participant inventory, domain and data contracts, identity, trust boundaries, mappings, timing, failure and reconciliation policy, ownership, tests, observability, and change authority.
+
+REQUIRED INPUTS
+
+Provide source and target, purpose, data and commands, schemas, transformations, frequency, ordering, duplicates, retries, security, privacy, reconciliation, recovery, and retirement needs.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve cross-boundary authority, data use, side effects, supplier commitments, risk, release, exceptions, and retirement. Humans decide reconciliation outcomes and material compensation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may map schemas, identify dependency gaps, draft adapters, analyze traces, and suggest reconciliation. It must not execute external mutations, approve mappings, or suppress mismatches without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Security Auditor, Privacy Reviewer, Implementer, Tester, Verifier, Governance Reviewer, Observer, Coordinator, Documentation Writer, Memory Curator, Critic, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Inventory participants, ownership, trust, data, commands, events, and boundaries.
+2. Define contracts, mappings, transformation, ordering, delivery, retry, idempotency, reconciliation, and evidence.
+3. Implement with isolation, observability, staged migration, and tested compensation.
+4. Reconcile, monitor, change, deprecate, and retire integrations with consumer notice.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source, target, identity, authority, payload, transformation, side effect, status, evidence, and reconciliation state. Human review is required for mappings and consequential writes; chat cannot bypass boundary controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Model synchronous and asynchronous paths, queues, schemas, adapters, identity, secrets, transactions, retries, deduplication, ordering, dead letters, reconciliation, tracing, and compensation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show integration health, lag, failures, duplicates, dead letters, mismatches, credentials, versions, data freshness, incidents, and controls to pause, replay, reconcile, isolate, or compensate.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Integration catalog, context and sequence models, contracts and mappings, trust and data-flow assessment, runbooks, reconciliation design, test evidence, migration plan, and retirement record.
+
+EVIDENCE REQUIREMENTS
+
+Identify participants, contract versions, message or request identity, data, transformation, environment, trace, result, date, and limitations. Preserve successful, failed, duplicate, delayed, and unmatched evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify delivery, ordering, duplicate and replay handling, partial failure, timeout, dead letter, schema change, credential loss, reconciliation, backfill, migration, audit, and compensation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Point-to-point sprawl; silent transformation; no reconciliation; retrying non-idempotent effects; shared credentials; ignoring dead letters; and treating message delivery as business completion.
+
+RECOVERY AND RECONSIDERATION
+
+Pause affected flow, preserve queues and evidence, isolate bad data, revoke credentials, reconcile against authoritative records, compensate external effects, and reopen mappings and contracts.
+
+COMPLETION CRITERIA
+
+Participants, contracts, mappings, controls, evidence, reconciliation, recovery, ownership, change, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve participant and contract identity, mapping versions, traces, queues, incidents, decisions, evidence, and next safe action. Hand off to Integration Architecture, API, Event, Data, Security, Testing, Operations, and Migration sections.
+
+RELATED CODEX SECTIONS
+
+041 Integration Architecture; 042 API Architecture; 043 Event-Driven Architecture; 128 API Engineering; 130 Microservices Engineering; 157 Data Integration; 234 Integration Testing; 382 Data Migration Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 041-043 and 107-128, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual supplier contracts, data authorities, reconciliation tolerances, recovery objectives, and jurisdictional obligations remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 391 — Data Retention
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Keep data for the minimum justified period needed for purpose, rights, evidence, operations, legal, regulatory, safety, or continuity obligations, then move it toward authorized disposition.
+
+REQUIRED OUTCOME
+
+A retention model with data class, purpose, owner, authority, period, trigger, location, copies, hold, access, review, extension, expiry, disposition, and evidence.
+
+WHY THIS MATTERS
+
+Retaining too little can destroy evidence or rights; retaining too much increases privacy, security, cost, discovery, and misuse risk. Retention is not the same as backup or indefinite preservation.
+
+APPLICABILITY
+
+Apply when data, records, logs, backups, artifacts, messages, evidence, or personal information is stored beyond immediate operational use.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no data or retention period, copy, hold, access, or disposition behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use privacy, legal, regulatory, records, security, data, backup, archive, deletion, and business continuity baselines.
+
+REQUIRED INPUTS
+
+Data class, purpose, source, owner, authority, period, trigger, locations, copies, holds, access, review, disposition, and exceptions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Data, records, privacy, legal, and business owners approve period, hold, extension, access, disposition, and exception. Humans resolve competing obligations and rights.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may classify authorized metadata, identify expired or inconsistent records, and draft review queues. It must not delete, extend, disclose, reclassify, or override hold without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Records Manager, Privacy Engineer, Legal Advisor, Data Governance Reviewer, Data Engineer, Security Auditor, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Classify data; define purpose and authority; set period and trigger; inventory copies; apply hold; control access; review; extend or expire; dispose; audit; and preserve continuity.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show data class, purpose, authority, period, trigger, hold, copies, action, evidence, and limitation. Require human approval for extension, deletion, hold, and exception.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use policy-bound retention, metadata, location and copy discovery, hold override, access, expiration, deletion propagation, audit, and separation of backup from record.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show data, class, purpose, age, period, hold, copies, access, evidence freshness, owner, and authorized preserve, restrict, extend, expire, archive, and delete controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Retention charter; data and record class; authority and schedule; hold and review; disposition and evidence; decision, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify data, class, source, purpose, authority, period, trigger, location, hold, method, time, result, owner, and limitation. Retention setting proves intended policy, not actual copies.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify classification, purpose, authority, period, trigger, copies, hold, access, expiration, deletion, backup, archive, audit, and rights. Test stale, duplicate, held, and replicated data.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Keep forever, delete on schedule despite hold, backup ignored, data class assumed, access after purpose ends, retention as preservation, and no evidence of actual enforcement.
+
+RECOVERY AND RECONSIDERATION
+
+Stop disposition, apply hold, preserve evidence, restore where lawful, correct metadata, notify owners, and reassess rights and obligations. Reopen on law, purpose, data, hold, or system change.
+
+COMPLETION CRITERIA
+
+Data, class, purpose, authority, period, trigger, copies, holds, access, evidence, owners, disposition, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve schedules, classes, holds, reviews, disposition, decisions, evidence, exceptions, and open gaps. Hand off to Records, Privacy, Legal, Data, Backup, Archive, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+218 Privacy; 219 Legal; 220 Compliance; 225 Records; 328 Backup; 392 Archive; 393 Preservation; 394-395 Disposal and Deletion; 402-406 Review and Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, privacy, legal, records, data, backup, and lifecycle context, and the integration roadmap. Exact data classes, jurisdictions, periods, holds, copies, rights, disposition, and acceptance authority remain unresolved.

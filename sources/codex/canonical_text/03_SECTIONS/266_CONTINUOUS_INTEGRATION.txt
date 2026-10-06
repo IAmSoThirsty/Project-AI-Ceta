@@ -1,0 +1,95 @@
+SECTION 266 — Continuous Integration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Integrate controlled changes frequently and provide fast, trustworthy feedback about build, test, quality, security, dependency, and contract health.
+
+REQUIRED OUTCOME
+
+A CI model with trigger, source, isolation, build, test, scan, artifact, evidence, feedback, gate, ownership, failure, and recovery behavior.
+
+WHY THIS MATTERS
+
+Fast feedback is valuable only when it is truthful, reproducible, relevant, and acted on. A green pipeline can hide skipped tests, stale dependencies, unsafe permissions, flaky checks, or environment mismatch.
+
+APPLICABILITY
+
+Apply when changes are integrated through automated or repeatable build and validation workflows before release or deployment.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no integration, build, test, security, artifact, or change feedback claim is made and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use source, build, package, dependency, test, security, artifact, configuration, environment, and governance baselines. Identify branch, trigger, gate, and owner.
+
+REQUIRED INPUTS
+
+Change, branch, source, dependencies, workflow, runner, tests, scans, artifact, gates, secrets, environment, results, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define required gates, flaky policy, bypass, merge, and remediation. Humans review important failures and retain authority for protected branch and release decisions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize runs, diagnose failures, draft tests, and propose fixes. It must not mark checks passed, suppress failures, bypass gates, merge, or change workflow permissions without human authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+CI Engineer, Build Engineer, Tester, Security Auditor, Dependency Manager, Quality Engineer, Verifier, Implementer, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Trigger on controlled change; build; test; scan; capture artifacts and evidence; report; triage; manage flaky or quarantined tests; enforce gate; allow controlled retry or bypass; restore; and improve.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show change, branch, workflow, runner, checks, failures, evidence, gate, actor, and limitation. Require human approval for bypass, merge, permission, quarantine, and release-impacting actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use isolated runners, repeatable toolchain, secure secrets, parallelism with resource limits, artifact identity, required checks, policy as code, and durable logs.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show run, change, checks, gate, failures, flakiness, artifacts, evidence freshness, owner, and authorized rerun, cancel, quarantine, bypass, merge, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+CI workflow and policy; run record; build and test results; scan and artifact; gate and bypass record; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify change, ref, workflow, runner, toolchain, check, result, artifact, time, actor, and limitation. Green status proves only completed checks and their coverage.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify trigger, isolation, required checks, failure visibility, secret handling, artifacts, reproducibility, flaky policy, bypass audit, and recovery. Test malicious change and runner loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Green with skipped checks, unbounded bypass, flaky retry theater, shared runner privilege, secrets in logs, CI as release approval, and no owner for failing pipeline.
+
+RECOVERY AND RECONSIDERATION
+
+Stop affected integration, preserve run, repair or rollback workflow or change, rotate secrets, rerun, and reassess gate. Reopen on tool, dependency, policy, source, or environment change.
+
+COMPLETION CRITERIA
+
+Triggers, changes, checks, runners, artifacts, gates, owners, evidence, bypass, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve workflow, runs, checks, artifacts, bypasses, findings, decisions, evidence, exceptions, and open gaps. Hand off to CD, Build, Release, Security, Platform, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+264-265 Build and Build Automation; 267-268 Continuous Delivery and Deployment; 270 DevSecOps; 271 GitOps; 231-255 Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, build, testing, security, and delivery context, and the integration roadmap. Exact workflow, gates, runner, bypass, artifact, secret, and acceptance authority remain unresolved.

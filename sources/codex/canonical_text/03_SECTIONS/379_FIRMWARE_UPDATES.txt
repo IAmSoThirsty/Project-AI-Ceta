@@ -1,0 +1,95 @@
+SECTION 379 — Firmware Updates
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Update firmware on devices and embedded systems securely, safely, recoverably, and with exact hardware, boot, identity, field, and lifecycle awareness.
+
+REQUIRED OUTCOME
+
+A firmware-update model with image provenance, hardware compatibility, signing, boot trust, target, power and connectivity, staged rollout, rollback, safe state, telemetry, and recovery.
+
+WHY THIS MATTERS
+
+Firmware can brick devices, change physical behavior, invalidate certification, expose keys, or remove recovery paths. Field conditions make interruption and partial rollout material.
+
+APPLICABILITY
+
+Apply when firmware, bootloader, device image, microcode, or embedded update mechanism changes on deployed or production hardware.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no firmware, hardware behavior, trust root, device population, or update path changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use embedded, hardware, security, key, certificate, device provisioning, manufacturing, safety, testing, logistics, and field operations baselines.
+
+REQUIRED INPUTS
+
+Device and hardware, current and target firmware, image, signature, keys, compatibility, power, connectivity, target population, rollout, rollback, and safety.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve image, hardware, rollout, safety, field window, rollback, certification, communications, exception, and retirement. Field operators retain safe local control.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized firmware metadata, compatibility, rollout, and telemetry; draft plans; and identify failures. It must not flash, change boot trust, widen fleet, extract keys, or declare recovery without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Firmware Engineer, Embedded Engineer, Hardware Security Auditor, Device Provisioning Engineer, Safety Reviewer, Tester, Verifier, Field Operations Engineer, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+Verify image and signing; inventory hardware; test; stage; back up or preserve recovery; update; monitor; pause or roll back; reconcile fleet; communicate; and retire old firmware.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show device, hardware, current and target image, signature reference, field state, authority, evidence, safety, and limitation. Require human approval for fleet, safety, boot, key, and rollback action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use signed image, anti-rollback, A/B slots or equivalent, power-fail safety, local recovery, staged fleet, hardware compatibility, telemetry, and secure provisioning.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show fleet, device, hardware, firmware, rollout, health, evidence freshness, safety, owner, and authorized pause, isolate, update, rollback, recover, replace, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Firmware-update charter; image and compatibility; signing and rollout; device and telemetry; recovery and field communication; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify device, hardware, current and target image, signature, method, time, power, connectivity, result, operator, and limitation. Successful boot proves neither fleet safety nor field recovery.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify signing, hardware, boot, anti-rollback, power loss, connectivity, safe state, local recovery, rollout, telemetry, rollback, certification, and fleet reconciliation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unsigned image, wrong hardware, bricked device, fleet-wide rollout, recovery dependent on network, key exposure, certification ignored, and boot success treated as safe operation.
+
+RECOVERY AND RECONSIDERATION
+
+Stop rollout, isolate, use known-good slot or replacement, preserve evidence, reconcile fleet, notify operators, and reassess safety and certification. Reopen on image, hardware, threat, field, or policy change.
+
+COMPLETION CRITERIA
+
+Image, hardware, signing, targets, safety, rollout, recovery, evidence, owners, certification, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve images, signatures, device inventory, rollout, failures, recovery, field communication, decisions, evidence, exceptions, and open gaps. Hand off to Embedded, Hardware, Provisioning, Security, Safety, Field Operations, and Disposal.
+
+RELATED CODEX SECTIONS
+
+198-199 Embedded and Hardware Security; 203-205 Cryptography, Keys, and Secrets; 232 Hardware Testing; 252 Safety; 354 Certification; 355 Provisioning; 378 Software Updates.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, firmware, hardware, security, safety, provisioning, field, and lifecycle context, and the integration roadmap. Exact devices, images, signing, hardware, rollout, recovery, certification, and acceptance authority remain unresolved.

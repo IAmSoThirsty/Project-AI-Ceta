@@ -1,0 +1,95 @@
+SECTION 255 — Test Automation
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Automate repeatable test execution, data preparation, observation, reporting, and cleanup while preserving truthful scope, maintainability, human judgment, and safe control.
+
+REQUIRED OUTCOME
+
+An automation model with target tests, framework, fixtures, environments, triggers, ownership, flakiness, artifacts, security, observability, maintenance, quarantine, and human exit decision.
+
+WHY THIS MATTERS
+
+Automation increases speed and repeatability but can hide stale tests, weak assertions, data leaks, environment drift, and false confidence. Automation is a tool for evidence, not evidence by itself.
+
+APPLICABILITY
+
+Apply when tests, checks, simulations, scans, or verification steps are executed automatically or are candidates for automation.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when automation adds no repeatability or safety value and manual or exploratory judgment is the declared appropriate method.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use test strategy, source control, CI or scheduler, environments, fixtures, secrets, data, observability, artifact storage, access, and maintenance ownership.
+
+REQUIRED INPUTS
+
+Tests, assertions, fixtures, target, framework, trigger, environment, data, dependencies, artifact policy, failure handling, owner, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve automation scope, credentials, data, triggers, quarantine, release gating, and maintenance. Humans interpret exploratory or ambiguous results and retain stop control.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft tests and harnesses, analyze failures, reduce duplication, and propose maintenance. It must not run with unauthorized access, inject uncontrolled data, weaken assertions, hide flakiness, or change release gates without approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Test Automation Engineer, Tester, Implementer, Quality Engineer, Security Auditor, Analyst, Verifier, Researcher, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Select stable and valuable cases; design fixtures and isolation; secure credentials; implement and review; execute; capture artifacts; detect flakiness; maintain; quarantine transparently; report coverage and limits; and periodically retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show test, assertion, fixture, environment, credential scope, trigger, result, flakiness, and limitation. Require human approval for generated code, credentials, gate changes, quarantine, and release.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide deterministic reset, artifact identity, secure secret injection, isolated runners, rate limits, cleanup, retry policy, reproducible environments, and clear distinction between test and production authority.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show suite, trigger, target, environment, pass or fail, flakiness, artifacts, owner, evidence freshness, and authorized run, pause, quarantine, repair, accept, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Automation strategy; test and fixture inventory; runner and environment record; artifact and retention policy; flakiness register; results, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify test, code version, fixture, runner, environment, dependency, execution, result, artifact, time, actor, and limitation. Automation completion or coverage proves only the recorded execution.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify assertions, isolation, credentials, data, cleanup, reproducibility, artifact integrity, retry, flakiness handling, failure visibility, access, and gate behavior.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Brittle automation, retries hiding failures, secrets in logs, test data leakage, assertions too weak, quarantine without owner, and pipeline green while critical tests are skipped.
+
+RECOVERY AND RECONSIDERATION
+
+Pause unsafe runner, rotate exposed credentials, preserve artifacts, quarantine and repair, rerun, and reassess release evidence. Reopen on target, framework, environment, test, data, or risk change.
+
+COMPLETION CRITERIA
+
+Scope, tests, assertions, fixtures, environment, credentials, artifacts, ownership, maintenance, flakiness, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve automation code, runner, fixture, environment, artifacts, failures, decisions, exceptions, and open gaps. Hand off to Testing, Quality, Release, Security, Platform, Operations, and Maintenance.
+
+RELATED CODEX SECTIONS
+
+231-254 Testing; 255 Test Automation; 388 Version Management; 301-330 Operations; 386 Technical Debt Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, testing and operations context, and the integration roadmap. Exact framework, runners, data, credentials, artifacts, maintenance, gate, and acceptance authority remain unresolved.

@@ -1,0 +1,388 @@
+SECTION 027 — Process Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed structure of how work, decisions, controls, information, evidence, exceptions, and recovery move through a bounded organization, system, service, product, or socio-technical capability.
+
+Process Architecture translates approved outcomes, capabilities, requirements, domain rules, operating concepts, and functional obligations into an intentional network of processes. It identifies triggers, actors, activities, decisions, states, handoffs, controls, inputs, outputs, evidence, measures, failure behavior, and lifecycle conditions without confusing a process with a capability, function, organization, application, procedure, or implementation.
+
+Process Architecture is concerned with how work is coordinated in context. It does not authorize objectives, create business policy, decide values, replace domain authority, or claim that a modeled process is implemented or effective. A process model is a design and governance artifact until current behavior and evidence establish more.
+
+REQUIRED OUTCOME
+
+- A declared process-architecture scope identifying the organization, system, value stream, product, service, capability, population, environment, jurisdiction, lifecycle horizon, and authority boundary covered.
+- A process taxonomy and catalog with stable identities, purposes, outcomes, triggers, owners, participants, boundaries, variants, states, dependencies, controls, evidence, measures, and lifecycle status.
+- A value-stream-to-process view connecting desired outcomes and stakeholder journeys to capabilities, processes, functions, information, decisions, products, services, and evidence.
+- Current-state process evidence that distinguishes observed behavior, documented procedure, policy expectation, informal workaround, proposed design, and unknown condition.
+- A target-state process architecture that preserves approved requirements, domain meaning, risk treatments, mandatory constraints, accessibility, security, privacy, safety, reliability, resilience, and owner-control obligations.
+- Process models showing start conditions, end conditions, activities, decisions, parallel work, synchronization, handoffs, waits, queues, exceptions, escalations, controls, evidence capture, and recovery paths as applicable.
+- Explicit process ownership and decision rights for each material step, including who may initiate, approve, execute, observe, verify, override, suspend, resume, or retire a process.
+- Process-to-function, process-to-capability, process-to-requirement, process-to-control, process-to-data, process-to-system, process-to-role, process-to-test, and process-to-evidence traceability.
+- A process variant model for environments, jurisdictions, user groups, operating modes, products, data classes, risk classes, and lifecycle stages without uncontrolled copying or drift.
+- A process performance and assurance model distinguishing activity completion, throughput, latency, quality, outcome, control effectiveness, user impact, resilience, recovery, and evidence freshness.
+- A process change, exception, escalation, rollback, migration, deprecation, and retirement model that can be handed to Functional Architecture, Operational Architecture, Information Architecture, delivery, testing, operations, maintenance, and lifecycle governance.
+
+WHY THIS MATTERS
+
+Capabilities and systems do not produce outcomes by existing alone. People and machines act through sequences of work, decision points, information exchanges, controls, waits, handoffs, and recovery paths. A process that appears simple in a diagram may conceal unowned decisions, inaccessible steps, undocumented manual work, circular approval, weak evidence, or a recovery path that depends on the failed activity.
+
+Process Architecture exposes the operating reality between strategy and implementation. It makes it possible to ask who performs each activity, what must be true before it begins, what evidence is created, who can decide, what happens when the normal path fails, and how a process changes without losing authority or continuity.
+
+For human-AI systems, process boundaries are where model suggestions become human decisions, tool calls become external consequences, and generated content becomes a record or commitment. A model may participate in a process without owning the process, its values, its authority, its risk, or its acceptance. Process Architecture keeps those distinctions visible.
+
+APPLICABILITY
+
+- A capability, value stream, product, service, system, organization, or human-AI workflow requires multiple activities, actors, decisions, handoffs, states, controls, or lifecycle stages.
+- Work crosses organizational, system, domain, supplier, partner, jurisdictional, physical, or data boundaries.
+- Current work includes undocumented manual steps, queues, workarounds, approvals, escalations, exceptions, or shadow systems.
+- A change may alter who performs work, which decisions are made, what evidence is created, how users or operators recover, or where authority is exercised.
+- The process carries material security, privacy, safety, accessibility, legal, financial, ethical, reliability, resilience, support, maintenance, or retirement consequences.
+- Automation, AI, agents, orchestration, or workflow tools are proposed to recommend, decide, route, transform, approve, execute, monitor, or recover work.
+- Requirements or architecture must be allocated to end-to-end journeys and accountable process steps rather than to abstract components alone.
+- Performance, quality, control effectiveness, user outcome, operational readiness, or benefit cannot be understood from component metrics alone.
+
+NON-APPLICABILITY CONDITIONS
+
+- The work is a bounded observation, text correction, or reversible change with no material effect on process sequence, decision rights, participants, controls, evidence, user journey, operating mode, or lifecycle state.
+- An approved and current process architecture already covers the exact scope, version, environment, population, variant, and change, and impact analysis shows no material process effect.
+- The work is exploratory and makes no claim that a process is approved, implemented, adopted, effective, compliant, or operational. The exploratory model must still record scope and limitations.
+- An active safety, security, privacy, integrity, legal, labor, or authority incident requires containment before normal process redesign can safely proceed.
+- Required current-state evidence is unavailable or unauthorized, making the process model speculative. Safe work may continue as a proposed model or evidence request, but not as an observed current-state claim.
+
+A non-applicability decision must identify the controlling process record, exact scope, version, evidence date, decision owner, assumptions, and reopening trigger. Small size, familiarity, a flowchart, or an AI-generated workflow is not by itself sufficient reason to omit material process analysis.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-018 provide objective, strategy, stakeholder, user, domain, feasibility, and risk context.
+- Section 019 provides the requirements baseline, acceptance boundaries, mandatory constraints, variants, and traceability obligations.
+- Section 020 provides system, operational-concept, lifecycle, allocation, interface, verification, validation, transition, and recovery context.
+- Sections 021-026 provide enterprise, solution, systems, domain, business, and capability architecture boundaries.
+- Process terminology must align with Domain Analysis, Domain Architecture, Business Architecture, and Capability Architecture or include explicit translation records.
+- Functional responsibilities, system elements, interfaces, information, data, authority, and control ownership must be known or visibly unresolved before a process is treated as a target design.
+- Current-state process evidence must distinguish direct observation from procedure, policy, interview, system telemetry, inference, and proposal.
+- Human owners and decision authorities for objectives, policy, risk, rights, staffing, commitments, exceptions, and acceptance must be attributable.
+
+REQUIRED INPUTS
+
+- Authorized process question, objective, scope, exclusions, decision owner, population, environment, jurisdiction, and lifecycle horizon.
+- Mission, strategy, value propositions, value streams, capabilities, products, services, operating-model decisions, and affected-party outcomes.
+- Requirements, acceptance criteria, risk treatments, feasibility conditions, domain rules, invariants, policies, contracts, standards, and architecture constraints.
+- Current process maps, procedures, work instructions, tickets, records, logs, queues, event histories, service measures, incident records, support records, audit findings, and user or operator research.
+- Actors, roles, organizations, systems, services, suppliers, partners, facilities, devices, data sources, authorities, and trust boundaries.
+- Current and target functions, information, data, applications, interfaces, controls, evidence stores, owner cockpit paths, and operational dependencies.
+- Accessibility, privacy, security, safety, reliability, resilience, continuity, workforce, training, support, maintenance, migration, deprecation, and retirement obligations.
+- Known assumptions, unknowns, dissent, exceptions, workarounds, bottlenecks, failure modes, recovery conditions, and evidence limitations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The authorized human owner retains authority over process purpose, protected outcomes, values, affected-party obligations, policy interpretation, decision rights, staffing or resource commitments, acceptable risk, exceptions, external commitments, automation boundaries, and final acceptance.
+
+- Confirm the process objective, scope, boundaries, non-goals, affected parties, environments, variants, and lifecycle stages.
+- Identify who legitimately owns the process outcome, each material decision, each control, each record, and each acceptance condition.
+- Decide conflicts involving rights, safety, privacy, accessibility, dignity, labor, public impact, cost, schedule, risk, and operational burden.
+- Approve target-state process changes, automation, delegation, outsourcing, role changes, policy changes, service commitments, and irreversible transitions.
+- Ensure users, operators, maintainers, support staff, affected non-users, domain experts, security, privacy, safety, accessibility, legal, and governance specialists participate when consequence requires.
+- Accept, reject, defer, constrain, waive, supersede, or reopen process architecture for the exact version, scope, evidence, environment, and unresolved conditions reviewed.
+- Retain the ability to pause, narrow, quarantine, roll back, restore, or retire process work when authority, evidence, safety, or mission conditions fail.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized process records, compare current and target flows, identify missing steps and handoffs, propose models, detect duplicate or conflicting activities, generate traceability, analyze queues and dependencies, draft evidence requests, simulate scenarios, and document decisions within an explicit assignment.
+
+AI must:
+
+- restate the accepted objective, process boundary, source state, assumptions, unknowns, and consequence limits before material modeling;
+- label observed behavior, supplied policy, interpreted meaning, inferred sequence, proposed design, simulation, recommendation, execution, and verified result separately;
+- preserve the identity, version, environment, date, method, and limitations of process evidence;
+- distinguish a participant's statement from a universal process fact and a model's suggestion from an authorized decision;
+- expose missing actors, hidden work, unowned decisions, circular handoffs, inaccessible paths, weak controls, stale evidence, and recovery gaps;
+- model AI participation as a bounded function or activity with identity, authority, tools, data, approval points, monitoring, fallback, revocation, and evidence;
+- stop or escalate when process meaning, authority, protected interests, mandatory constraints, or current-state evidence are unresolved;
+- preserve dissent and competing process interpretations rather than averaging them into a false consensus.
+
+AI must not:
+
+- invent process steps, policies, actors, approvals, service levels, staffing, system integrations, evidence, or current behavior;
+- treat a generated diagram, simulation, workflow configuration, or successful test stub as proof of an implemented or effective process;
+- assign ownership, accept risk, approve exceptions, create commitments, or change policy without delegated authority;
+- optimize throughput, cost, or model utilization while silently degrading rights, safety, accessibility, quality, privacy, security, resilience, recovery, or human control;
+- hide manual work, dissent, queueing, rework, denial, escalation, or failure to make the process appear simpler;
+- route around identity, authority, audit, evidence, or recovery controls through conversational convenience.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect: defines process boundaries, responsibilities, dependencies, interfaces, controls, failure, recovery, and implementation implications.
+- Researcher: gathers authoritative process, domain, user, operational, policy, legal, supplier, and current-state evidence.
+- Analyst: examines flows, bottlenecks, variants, dependencies, tradeoffs, causes, consequences, and outcome relationships.
+- Observer: records actual activities, states, events, waits, handoffs, workarounds, and exceptions without unsupported interpretation.
+- Planner: sequences process discovery, design, validation, transition, adoption, and review work with gates and evidence.
+- Coordinator: synchronizes bounded workstreams, participants, decisions, conflicts, and handoffs without redefining the objective.
+- Critic: challenges missing actors, hidden work, circular control, false simplicity, unsupported effectiveness, and recovery gaps.
+- Governance Reviewer: evaluates authority, policy, delegation, consent, exceptions, procedural compliance, and evidence admissibility.
+- Security Auditor: examines trust boundaries, privileged steps, data handling, abuse paths, evidence integrity, and secure recovery.
+- User Experience Reviewer: evaluates comprehension, accessibility, burden, denial, correction, recovery, dignity, and complete user or owner journeys.
+- Tester: converts process obligations and journeys into reproducible normal, boundary, failure, recovery, and compatibility tests.
+- Verifier: independently checks process claims against exact evidence, versions, environments, methods, and acceptance criteria.
+- Documentation Writer: maintains clear process models, definitions, procedures, decisions, limitations, and recovery instructions.
+- Memory Curator: preserves process identity, versions, decisions, evidence, dissent, supersession, and continuity.
+- Implementer: realizes an approved process in authorized procedures, configuration, automation, code, or operational change without changing the process contract unilaterally.
+- Optimizer: improves measured process performance while preserving protected outcomes, controls, authority, accessibility, and resilience.
+- Red Team: attempts authorized adversarial pressure against process controls, handoffs, identity, evidence, denial, recovery, and human oversight.
+- Decision Arbiter Advisory: compares process alternatives under authorized criteria while preserving final human authority.
+
+Role selection must remain proportional to consequence. Existing role contracts remain controlling and are not redefined here.
+
+REQUIRED ACTIVITIES
+
+1. Establish the process context: objective, outcome, owner, boundary, population, environment, jurisdiction, lifecycle, variants, non-goals, and acceptance authority.
+2. Identify the value stream, capability, product, service, system, or user journey the process supports.
+3. Establish terminology and distinguish process, capability, function, activity, task, decision, event, state, procedure, policy, control, record, evidence, and outcome.
+4. Inventory current-state sources and classify them as observation, policy, procedure, interview, telemetry, record, contract, inference, assumption, or proposal.
+5. Identify participants, actors, roles, organizations, systems, suppliers, partners, affected non-users, authorities, and accountable owners.
+6. Define process boundaries, triggers, entry conditions, exit conditions, terminal outcomes, handoff boundaries, and exclusions.
+7. Build a process taxonomy and catalog with stable IDs, parent-child relationships, ownership, versions, applicability, and lifecycle state.
+8. Map end-to-end value-stream and journey threads, including normal, denied, delayed, interrupted, degraded, emergency, maintenance, migration, and retirement paths.
+9. Model activities, decisions, parallelism, synchronization, queues, waits, dependencies, escalations, approvals, controls, evidence capture, and human intervention.
+10. Define process states and transitions, including actor, authority, trigger, precondition, guard, evidence, effect, failure, recovery, timeout, expiry, and resulting state.
+11. Identify inputs, outputs, information, data, credentials, resources, physical materials, commands, events, decisions, records, and evidence crossing each boundary.
+12. Allocate process activities and decisions to capabilities, functions, roles, people, systems, services, interfaces, facilities, suppliers, or enabling processes without creating authority by allocation.
+13. Define process variants by environment, jurisdiction, population, role, product, data class, risk, operating mode, feature state, and lifecycle phase.
+14. Identify controls, mandatory constraints, segregation of duties, approvals, audit points, evidence requirements, privacy, security, safety, accessibility, and human-control conditions.
+15. Measure process performance and outcome using authorized criteria for time, quality, throughput, queue, cost, resource, user outcome, harm, control effectiveness, resilience, and evidence freshness.
+16. Analyze failure modes, bottlenecks, rework, common-cause dependencies, single points of failure, unsafe defaults, bypasses, and circular recovery paths.
+17. Design target and transition process states, including adoption, training, communication, coexistence, migration, rollback, fallback, support, maintenance, deprecation, and retirement.
+18. Validate the model with accountable owners, participants, users, operators, maintainers, support, affected parties, and qualified specialists as applicable.
+19. Hostile-review process claims and test whether controls, evidence, authority, accessibility, privacy, security, recovery, and owner visibility work under realistic conditions.
+20. Baseline and hand off the process architecture with exact identity, open findings, dissent, evidence boundary, change authority, and next safe action.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- The human must be able to see whether each process element is observed, documented, proposed, approved, implemented, adopted, measured, effective, degraded, blocked, or retired.
+- AI-generated process maps, sequence proposals, variants, simulations, and optimizations must remain proposed until an authorized review records adoption.
+- The process surface must identify the acting human, AI, automation, rule engine, external service, or hybrid actor at each consequential step.
+- A human must be able to correct intent, terminology, affected parties, process boundaries, role assignments, and decision ownership without losing prior versions or dissent.
+- AI recommendations that alter rights, safety, privacy, accessibility, staffing, commitments, risk, cost, or external consequence must expose assumptions, alternatives, evidence, uncertainty, reversibility, and required approval.
+- Users and operators must receive understandable explanations for denial, delay, escalation, correction, fallback, and recovery where those explanations affect action or trust.
+- Model or provider failure must not remove essential stop, status, evidence, diagnosis, correction, or recovery paths.
+- Automated routing, prioritization, scheduling, or optimization must preserve mandatory constraints and must not conceal minority findings or affected-party burden.
+- No conversational path may bypass the identity, authority, policy, state, evidence, audit, accessibility, or recovery controls required by other process entry points.
+- Long-running or autonomous process execution must expose assignment, current state, authority expiry, resource use, evidence progress, stop condition, and safe interruption behavior.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Represent process definitions, process instances, activities, decisions, states, transitions, actors, roles, policies, controls, evidence, measures, variants, and lifecycle states as versioned attributable records or equivalent controlled artifacts.
+- Preserve explicit relationships among objective, outcome, value stream, capability, process, activity, function, requirement, control, information, data, system, interface, evidence, test, acceptance, incident, change, and retirement.
+- Keep process definition separate from process execution state. A modeled target path is not proof of current runtime behavior.
+- Define process states and transitions with guards, authority, idempotency, timeout, retry, compensation, cancellation, suspension, resumption, and audit semantics where applicable.
+- Treat each material handoff as a contract identifying sender, receiver, purpose, input, output, timing, ordering, identity, authority, data, evidence, error, retry, compatibility, and ownership.
+- Preserve human, AI, automated, and external actors as distinct identities with separate permissions, responsibility, evidence, and revocation paths.
+- Support process variants without uncontrolled copying. Variant selection must be explicit, testable, attributable, and bound to environment, jurisdiction, population, role, data, risk, or lifecycle conditions.
+- Make controls enforceable at the execution boundary where possible. A process diagram or procedure alone is not enforcement.
+- Instrument sufficient events, measures, records, and evidence to distinguish work started, work completed, outcome achieved, control effective, and recovery successful.
+- Design graceful degradation and safe halt for critical processes, including offline, stale data, unavailable actor, unavailable AI provider, expired authority, duplicate request, partial completion, and recovery conditions.
+- Preserve process identity across requirements, architecture, configuration, implementation, deployment, runtime, evidence, migration, versioning, deprecation, and retirement.
+- Ensure process changes trigger impact analysis for functions, data, interfaces, roles, training, support, controls, tests, evidence, approvals, commitments, and downstream lifecycle work.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show the process name, version, owner, authority state, scope, variant, environment, lifecycle state, and evidence freshness.
+- Show the current process instance or aggregate state separately from the target process definition and planned state.
+- Identify available, unavailable, prohibited, consequential, awaiting-approval, degraded, and recovery actions.
+- Expose the acting identity, role, authority, tools, data boundary, consequence boundary, and approval requirement for each consequential step.
+- Let the owner inspect triggers, participants, activities, decisions, queues, handoffs, controls, evidence, exceptions, risks, dependencies, and open findings.
+- Provide controls to pause, narrow, approve, deny, revoke, retry, compensate, roll back, quarantine, restore, supersede, or retire within delegated authority.
+- Explain what changed, why it changed, what is known, what is inferred, what is unknown, what failed, what remains unverified, and who must decide.
+- Preserve essential status, stop, evidence, correction, and recovery controls when nonessential systems, networks, models, or providers fail.
+- Allow export of the exact process definition, instance history, evidence, decisions, dissent, and continuity record without dependence on chat history.
+
+The cockpit must not present a flowchart, completion count, throughput metric, model confidence, or green status as proof of successful outcome.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Process Architecture charter with objective, scope, boundary, authority, owner, population, environments, variants, and lifecycle horizon.
+- Process taxonomy, catalog, glossary, identifiers, ownership, versions, applicability, and lifecycle state.
+- Current-state process inventory with source classification, observation method, evidence date, limitations, workarounds, and unknowns.
+- Value-stream, capability, process, journey, organization, role, system, function, information, data, and control relationships.
+- Process definition and instance models with triggers, states, activities, decisions, handoffs, queues, controls, evidence, and terminal outcomes.
+- Process variant, applicability, non-applicability, exception, waiver, and supersession records.
+- Process-to-requirement, process-to-function, process-to-capability, process-to-control, process-to-data, process-to-system, process-to-role, process-to-test, and process-to-evidence traceability.
+- Process measures, outcome measures, queue and capacity analysis, control-effectiveness measures, user-impact measures, and evidence-freshness rules.
+- Failure, degradation, denial, escalation, compensation, recovery, rollback, migration, deprecation, and retirement models.
+- Human-AI process participation model with identity, authority, tools, data, approval, monitoring, fallback, revocation, appeal, and incident behavior.
+- Target-state and transition process architecture with adoption, training, support, coexistence, migration, and operational readiness conditions.
+- Decision, dissent, assumption, unknown, risk, evidence, change, and reopening registers.
+- Validation, hostile-review, verification, owner-acceptance, and durable handoff package.
+
+EVIDENCE REQUIREMENTS
+
+- Every current-state process claim must identify the process, scope, version or observation period, environment, population, method, source, actor, evidence identity, and limitation.
+- A policy, procedure, diagram, interview, ticket, log, or system trace proves only the bounded claim it can support; none automatically proves effective or adopted operation.
+- Every process definition must identify its source, author, owner, version, applicability, assumptions, open findings, and approval state.
+- Every material activity and decision must link to its outcome, requirement, role or actor, authority, control, input, output, evidence, and verification method as applicable.
+- Every handoff claim must identify both parties, exact contract, data or resource exchanged, timing, identity, authority, error behavior, compatibility, and evidence.
+- Process performance evidence must distinguish activity volume from outcome, nominal performance from resilience, and current measured state from target design or simulation.
+- User and operator evidence must identify population, context, method, accessibility coverage, consent or handling limits, sample limitations, and unresolved interpretation.
+- AI or automation evidence must identify model or tool identity, version, configuration, data, prompt or policy context where permitted, authority, human review, environment, result, and limitations.
+- Control evidence must show implementation and effectiveness in the declared scope. Documentation presence alone is insufficient.
+- Failed, blocked, stale, contradictory, superseded, and partial evidence must remain visible and linked to the resulting process status.
+- Missing evidence must produce `UNKNOWN`, `NOT VERIFIED`, `BLOCKED`, `PROPOSED`, or another truthful bounded state; it must not be inferred as successful process operation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace a representative outcome from mission or value stream through capability, process, activity, function, actor, control, system, evidence, test, acceptance, operation, maintenance, and retirement.
+- Trace representative process steps and decisions backward to an authorized objective, requirement, domain rule, policy, or risk treatment.
+- Introduce an unowned activity, unowned decision, orphan handoff, missing control, stale variant, and orphan evidence record and confirm each is detected or explicitly marked unresolved.
+- Change a process definition, role, policy, interface, data source, authority rule, environment, or provider and confirm impacted functions, tests, evidence, training, approvals, commitments, and readiness states are flagged.
+- Exercise normal, boundary, denied, delayed, duplicate, out-of-order, interrupted, degraded, offline, unauthorized, partial-completion, recovery, rollback, migration, maintenance, and retirement paths.
+- Revoke authority during a long-running process and confirm new consequential actions stop, in-flight work is handled according to policy, evidence is preserved, and recovery remains possible.
+- Remove or corrupt a critical actor, dependency, data source, network, model, or evidence store and confirm the process fails safely or exposes an explicit human decision point.
+- Attempt to bypass a mandatory control through UI, API, agent, bulk operation, retry, administrative path, or recovery path and confirm consistent enforcement.
+- Compare observed, documented, proposed, simulated, implemented, and measured process states and confirm they are not conflated.
+- Validate complete user, owner, operator, maintainer, support, incident, and recovery journeys with appropriate accessibility and human-impact review.
+- Verify AI-generated routing, prioritization, or automation cannot become binding without authorized adoption and required evidence.
+- Independently reproduce a material process claim from the handoff package without relying on hidden conversation state.
+- Confirm a process can be paused, narrowed, corrected, restored, superseded, and retired without destroying prior evidence or decision history.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a process diagram as an implemented or effective process.
+- Defining the process around the preferred software, team, vendor, or current organization instead of the outcome and affected journey.
+- Confusing a capability, function, task, procedure, policy, workflow configuration, or organization chart with a process architecture.
+- Omitting manual work, queues, waits, rework, exceptions, denial, escalation, support, maintenance, or retirement.
+- Assigning an activity without assigning authority, accountability, resources, inputs, outputs, evidence, and recovery.
+- Making an approval step decorative, circular, unowned, or impossible to exercise in the real environment.
+- Using one process model for materially different jurisdictions, populations, risk classes, operating modes, or lifecycle states without explicit variants.
+- Optimizing throughput or cost while degrading user outcome, accessibility, safety, privacy, security, quality, resilience, or operator control.
+- Treating a successful happy-path demonstration as evidence for boundary, failure, recovery, or long-term operation.
+- Allowing AI to route, approve, commit, deny, or execute beyond its explicit authority and human-control boundary.
+- Hiding dissent, workarounds, rejected paths, exception volume, or contradictory evidence to make the process appear simple.
+- Claiming process compliance from procedure presence, or control effectiveness from configuration presence alone.
+- Making recovery depend on the failed actor, credential, network, model, data source, or evidence path.
+- Retiring a process without preserving capability continuity, records, user transition, support, obligations, evidence, and accountable ownership.
+
+RECOVERY AND RECONSIDERATION
+
+1. Quarantine the affected process claim, definition, variant, approval, evidence, or execution state while preserving the last trusted version.
+2. Identify whether the issue concerns objective, boundary, terminology, ownership, authority, participant, activity, decision, control, data, interface, evidence, performance, accessibility, security, safety, resilience, recovery, or lifecycle state.
+3. Downgrade the affected status to the truthful state and prevent unsupported readiness, compliance, effectiveness, or outcome claims.
+4. Preserve the failed process path, prior versions, evidence, dissent, incidents, and supersession history.
+5. Identify safe unaffected process work and any actions that must enter safe halt.
+6. Request the smallest missing observation, owner decision, participant review, specialist assessment, configuration correction, test, or recovery exercise needed to reconsider.
+7. Reassess affected capabilities, functions, requirements, roles, data, interfaces, controls, training, support, commitments, and downstream lifecycle obligations.
+8. Restore, roll back, compensate, narrow, partition, stage, or redesign the process as authorized.
+9. Record the new state, conditions, residual uncertainty, owner decision, review date, and reopening trigger.
+
+A blocked process record must name the exact blocker, consequence, safe work, minimum resolution, authority required, and evidence needed for reconsideration.
+
+COMPLETION CRITERIA
+
+Process Architecture is complete for its declared scope only when:
+
+- Objective, outcome, scope, boundary, owner, authority, population, environments, variants, non-goals, and lifecycle stages are explicit.
+- Process meaning is distinguished from capability, function, activity, task, procedure, policy, organization, system, and implementation.
+- Current-state evidence is classified and bounded, with observations, documentation, inference, assumptions, proposals, unknowns, and dissent visible.
+- Material processes, activities, decisions, handoffs, states, controls, actors, roles, inputs, outputs, evidence, exceptions, and recovery paths are defined at sufficient depth.
+- Every material process object has stable identity, version, owner, applicability, lifecycle status, authority, traceability, evidence, and change boundary.
+- Process and function, capability, requirement, control, information, data, system, role, test, and evidence relationships are explicit or intentionally unresolved.
+- Normal, boundary, denied, delayed, degraded, failure, recovery, rollback, migration, maintenance, deprecation, and retirement behavior is addressed where applicable.
+- Human-AI participation, authority, approval, monitoring, fallback, revocation, appeal, and evidence conditions are bounded and testable.
+- Performance and outcome measures do not silently substitute activity counts for user, mission, control, or benefit outcomes.
+- Applicable owners, affected participants, operators, maintainers, and qualified specialists have reviewed the exact scope or their absence is recorded as a blocker or limitation.
+- Verification, hostile review, acceptance, and reopening methods are defined; unresolved mandatory conditions block affected advancement.
+- Downstream roles can reconstruct the process architecture, assumptions, evidence, decisions, open findings, and next safe action without chat history.
+
+Completion does not mean the process is implemented, adopted, effective, compliant, verified in operation, or owner-accepted. It means the declared process architecture is sufficiently governed to control the next authorized step truthfully.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+The handoff must include:
+
+- Process architecture identity, version, scope, owner, authority state, environments, variants, lifecycle stage, evidence date, and safe-to-proceed determination.
+- Objective, outcomes, value streams, capabilities, journeys, boundaries, non-goals, terminology, affected parties, and decision rights.
+- Process taxonomy, catalog, definitions, current-state sources, observations, target-state models, variants, applicability, and non-applicability records.
+- Process instances or representative traces, states, activities, decisions, queues, handoffs, controls, inputs, outputs, data, evidence, and recovery behavior.
+- Mappings to requirements, functions, capabilities, roles, systems, interfaces, information, data, controls, tests, acceptance, operations, maintenance, migration, deprecation, and retirement.
+- Assumptions, unknowns, dissent, exceptions, risks, missing evidence, failed attempts, invalidated claims, and reopening triggers.
+- Change authority, impact-analysis method, versioning, rollback, compensation, restoration, migration, support, training, and retirement conditions.
+- Exact assignments and unresolved decisions for Functional Architecture, Operational Architecture, Information Architecture, Data Architecture, application and technology work, testing, operations, support, maintenance, and lifecycle governance.
+- Current status, evidence boundary, human decisions required, safe work that may continue, blocker if any, and one next safe action.
+
+Downstream workers must return impossible allocations, new dependencies, implementation deviations, control failures, user harm, failed tests, incidents, operational evidence, maintenance findings, migration effects, and retirement constraints to the controlled process record.
+
+RELATED CODEX SECTIONS
+
+001 Research
+011 Business Analysis
+014 Stakeholder Management
+015 User Research
+016 Domain Analysis
+017 Feasibility Analysis
+018 Risk Management
+019 Requirements Engineering
+020 Systems Engineering
+021 Enterprise Architecture
+022 Solution Architecture
+023 Systems Architecture
+024 Domain Architecture
+025 Business Architecture
+026 Capability Architecture
+028 Functional Architecture
+029 Operational Architecture
+030 Information Architecture
+031 Data Architecture
+032 Application Architecture
+041 Integration Architecture
+042 API Architecture
+043 Event-Driven Architecture
+045 Security Architecture
+047 Privacy Architecture
+048 Governance Architecture
+050 Safety Architecture
+051 Reliability Architecture
+052 Resilience Architecture
+053 Accessibility Architecture
+075 Human-Computer Interaction
+078 Service Design
+080 UX Research
+106 User Validation
+231 Software Testing
+234 Integration Testing
+235 System Testing
+237 Acceptance Testing
+249 Usability Testing
+256 Verification
+257 Validation
+289 Change Management
+301 Site Reliability Engineering
+311 Service Management
+319 Incident Management
+331 Operational Readiness
+332 Command and Control
+341 Documentation Engineering
+374 Maintenance Engineering
+389 Deprecation Management
+405 Lifecycle Governance
+406 System Retirement
+
+Reopen Process Architecture when outcome, value stream, capability, requirement, domain rule, actor, role, authority, activity, decision, control, data, interface, environment, evidence, user outcome, incident, recovery, or lifecycle obligation materially changes.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Source basis:
+
+- Thirsty's Standard v3 supplies the posture of truthful scope, current-state inspection, explicit unknowns, evidence before claims, independent verification, hostile review, continuity, recovery, and no fabricated completion.
+- Thirsty's Agents 101 supplies the preserved role contracts, authority boundaries, evidence obligations, independent challenge, and human final authority.
+- Thirsty's Owner's Cockpit Standard supplies owner visibility, action and evidence contracts, governed execution, state, recovery, versioning, and control requirements. It remains a candidate source for owner ratification rather than silently ratified universal authority.
+- The draft V4 design materials supply design input for typed claims, evidence contracts, role assembly, dissent preservation, rollback, reversal, and trusted transitions. They remain draft and unratified.
+- Sections 001-026 supply the current working-draft chain from research and strategy through requirements, systems engineering, enterprise, solution, systems, domain, business, and capability architecture.
+
+Unresolved source gaps:
+
+- The supplied corpus does not define one ratified universal process-architecture notation, taxonomy, process language, measurement model, workflow standard, or control framework for every organization, sector, jurisdiction, or system.
+- No complete crosswalk has yet been performed against current external process, business-process management, service-management, safety, accessibility, privacy, security, records, labor, legal, or sector-specific standards.
+- Process granularity, modeling notation, conformance thresholds, evidence freshness, participant protections, automation limits, and independent-review depth must be specialized according to consequence, domain, authority, and owner decision.
+- Later Functional, Operational, Information, Data, Security, Testing, Operations, Support, Maintenance, and Retirement sections may expose missing process boundaries, controls, handoffs, or recovery obligations and must be allowed to reopen this section.
+
+This section is CONTENT-COMPLETE. It is not yet source-reconciled, hostile-reviewed, owner-accepted, implemented, tested, or verified.

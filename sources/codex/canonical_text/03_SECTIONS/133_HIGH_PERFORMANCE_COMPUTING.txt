@@ -1,0 +1,98 @@
+SECTION 133 - High-Performance Computing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering for computation requiring substantial throughput, latency, memory, accelerator, energy, or scale optimization while preserving correctness, reproducibility, safety, and authorized resource use.
+
+REQUIRED OUTCOME
+
+An HPC baseline with workload, correctness, resource allocation, scaling, performance evidence, cost and energy limits, reproducibility, operations, and recovery.
+
+WHY THIS MATTERS
+
+Optimization can change numerical results, portability, cost, and fairness of resource access. A fast answer that cannot be reproduced or trusted is not an accepted outcome.
+
+APPLICABILITY
+
+Applies to clusters, supercomputers, accelerators, batch systems, large simulations, analytics, rendering, training, and throughput-critical services.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable where workload and resource demand are bounded and no performance, scaling, accelerator, or capacity claim is made. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires workload definition, correctness criteria, hardware, scheduler, data, algorithms, numerical tolerance, resource and cost policy, security, reproducibility, and operations authority.
+
+REQUIRED INPUTS
+
+Provide problem size, input data, baseline, target, hardware, parallelism, memory, I/O, energy, cost, precision, failure, checkpoint, and acceptance requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve workload priority, resource allocation, correctness tolerance, cost, energy, data, and acceptance. Humans decide tradeoffs between speed, fidelity, access, and impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may profile, propose algorithms, optimize code, and draft experiments. It must not trade correctness for speed silently, consume scarce resources, or claim reproducibility without captured evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Optimizer, Tester, Verifier, Security Auditor, Governance Reviewer, Observer, Documentation Writer, Coordinator, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define workload, correctness, resources, constraints, and baseline.
+2. Profile computation, memory, I/O, communication, energy, cost, and bottlenecks.
+3. Optimize with controlled experiments, reproducible environments, validation, and resource gates.
+4. Operate, checkpoint, recover, compare, and retire workloads and hardware assumptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose workload, code, compiler, hardware, allocation, data, method, result, and confidence. Human review is required for correctness and scarce-resource decisions; stop and checkpoint controls remain independent of AI.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent workload, scheduler, nodes, accelerators, memory, storage, network, checkpoint, result, and evidence boundaries. Isolate jobs, capture environment, and plan for node loss and partial output.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show job, owner, allocation, queue, progress, resource use, performance, cost, energy, checkpoint, evidence, and controls to cancel, suspend, requeue, recover, or release resources.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Workload specification, baseline profile, resource and cost plan, reproducible environment, optimization experiments, correctness evidence, checkpoint design, runbook, and retirement record.
+
+EVIDENCE REQUIREMENTS
+
+Identify code, compiler, hardware, input, seed, precision, scheduler, configuration, measurement, result, uncertainty, and limitations. Separate benchmark, correctness, scalability, energy, and outcome evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify correctness, numerical tolerance, reproducibility, scaling, resource limits, node loss, checkpoint, restart, data integrity, security isolation, cost, energy, and output acceptance.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Benchmarking unlike workloads; optimizing a proxy; nonreproducible environments; hidden precision loss; monopolizing resources; ignoring I/O; and treating throughput as useful outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or checkpoint jobs, preserve partial results and environment, requeue safely, validate outputs, release resources, compensate external effects, and reopen performance and correctness claims.
+
+COMPLETION CRITERIA
+
+Workload, correctness, resource, evidence, reproducibility, recovery, ownership, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve job and environment identity, inputs, seeds, profiles, outputs, decisions, evidence, incidents, and next safe action. Hand off to Parallel, Scientific, Simulation, Platform, Performance, Capacity, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+133 High Performance Computing; 134 Parallel Computing; 135 Scientific Computing; 161 Analytics Engineering; 239 Performance Testing; 242 Scalability Testing; 264 Build Engineering; 321 Capacity Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 107-132, Owner Cockpit Requirements, and Status and Evidence Lexicon. Actual workloads, hardware, scheduler policy, numerical tolerances, energy limits, data governance, and cost authority remain unresolved.

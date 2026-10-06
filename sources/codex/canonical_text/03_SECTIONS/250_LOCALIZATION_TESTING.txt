@@ -1,0 +1,95 @@
+SECTION 250 — Localization Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Verify that a capability remains understandable, functional, respectful, accessible, and safe across declared languages, regions, scripts, formats, cultural contexts, and legal settings.
+
+REQUIRED OUTCOME
+
+A localization-test model with locales, content, translators, formats, layout, input, data, legal or cultural constraints, accessibility, defects, evidence, and owner decision.
+
+WHY THIS MATTERS
+
+Translation can preserve words while breaking meaning, layout, dates, numbers, consent, safety, humor, or workflow. Locale support is not proven by string coverage alone.
+
+APPLICABILITY
+
+Apply when users, content, data, interfaces, communications, support, or obligations vary by language, locale, script, region, calendar, currency, or cultural context.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no user-facing content, locale, format, legal context, or regional behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use user research, content, accessibility, legal, privacy, data, design, platform, support, and release baselines. Identify locale owners, qualified reviewers, and sensitive terminology.
+
+REQUIRED INPUTS
+
+Locales, strings, content, terminology, formats, data, workflows, translators, devices, standards, legal notices, accessibility, test cases, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Locale and domain owners approve meaning, terminology, legal text, cultural risk, and acceptance. Qualified native or contextual reviewers identify harm, ambiguity, and exclusion; humans decide regional release.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft translations, identify missing strings, compare terminology, and generate locale test cases. It must not replace qualified review, invent legal or cultural meaning, expose private content, or publish localized material without human approval.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Localization Reviewer, User Experience Reviewer, Accessibility Reviewer, Researcher, Content Designer, Tester, Verifier, Legal Advisor, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory locale surfaces; define terminology; localize and review; test layout, input, sorting, dates, numbers, currency, time, plural, script, accessibility, legal, and support; record defects; remediate; retest; and monitor feedback.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show locale, source, translator or model, terminology, context, legal status, reviewer, result, and limitation. Require human native or domain review for sensitive, legal, safety, or culturally consequential content.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Externalize content, support locale-aware formats, plural and directionality, fallback, Unicode, collation, input, accessibility, versioning, and safe handling of untranslated or stale content.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show locale coverage, content version, missing or stale strings, defects, reviewer, evidence freshness, owner, and authorized hold, correct, fallback, publish, restrict, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Locale matrix; terminology and content register; translator and reviewer record; locale test results; legal and accessibility findings; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify locale, content version, source, context, format, platform, reviewer, method, result, impact, and limitation. String completion or machine translation score proves only its bounded metric.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify meaning, layout, direction, input, plural, date, number, currency, time, sorting, search, accessibility, legal, safety, support, and fallback. Test missing, long, malformed, and mixed-language content.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Machine translation without review, untranslated critical text, overflow, wrong units or dates, culturally harmful wording, legal notice drift, and locale pass based only on string count.
+
+RECOVERY AND RECONSIDERATION
+
+Hold or roll back affected locale, provide safe fallback, correct content, notify users where needed, and preserve findings. Reopen on content, locale, law, product, platform, or terminology change.
+
+COMPLETION CRITERIA
+
+Locales, content, terminology, reviewers, formats, accessibility, legal, results, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve locale and content versions, terminology, reviews, defects, decisions, evidence, exceptions, and open gaps. Hand off to UX, Content, Accessibility, Legal, Release, Support, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+001 User Research; 019 Requirements; 247 Accessibility Testing; 249 Usability Testing; 251 Compliance Testing; 237 Acceptance Testing; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, user, content, accessibility, and testing context, and the integration roadmap. Exact locales, reviewers, legal text, terminology, standards, and acceptance authority remain unresolved.

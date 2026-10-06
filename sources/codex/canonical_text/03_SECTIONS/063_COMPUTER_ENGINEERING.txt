@@ -1,0 +1,100 @@
+SECTION 063 — Computer Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed co-design of computing hardware, firmware boundaries, memory, buses, timing, processing, storage, I/O, accelerators, and software-visible behavior for a bounded system. Address hardware-software contracts, performance, safety, security, reliability, manufacturability, service, and lifecycle.
+
+REQUIRED OUTCOME
+
+A traceable computer design with allocated functions, hardware-software interfaces, resource budgets, timing, boot and update behavior, identity, protection, diagnostics, testability, manufacturing, recovery, and evidence for the declared workloads and environment.
+
+WHY THIS MATTERS
+
+Computing failures often arise at boundaries: reset, boot, memory, timing, buses, power, concurrency, updates, drivers, and thermal limits. A benchmark or successful boot does not prove safe behavior under faults, aging, malicious input, or resource exhaustion.
+
+APPLICABILITY
+
+Applies to processors, boards, memory, storage, buses, accelerators, controllers, computers, embedded compute, firmware interfaces, and hardware-software co-design.
+
+NON-APPLICABILITY CONDITIONS
+
+Non-applicability requires no material compute, memory, storage, timing, boot, bus, I/O, hardware-software contract, security, update, test, or lifecycle effect, with a recorded baseline and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Functional allocation, workload and timing, hardware and firmware constraints, memory and storage maps, bus and I/O contracts, power and thermal envelope, boot, update, identity, security, safety, diagnostics, manufacturing, service, and retirement requirements. Sections 019-062 provide upstream context.
+
+REQUIRED INPUTS
+
+System boundary, workloads, resource budgets, memory map, storage model, bus and I/O contracts, reset and boot conditions, update authority, trust boundaries, environmental limits, diagnostics, manufacturing, service, and evidence constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Human engineering authority approves architecture, criticality, resource margins, trusted boot or equivalent controls, update and recovery behavior, field changes, risk, and acceptance. Human operators retain authority to stop, isolate, recover, and retire equipment.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze architecture, resource traces, interface contracts, fault logs, and tests; propose allocations and test cases; and detect inconsistencies. It must not invent hardware behavior, approve trust claims, change boot or update controls, or treat benchmark performance as readiness.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, Implementer, Refactorer, Tester, Verifier, Security Auditor, Red Team, Critic, Planner, Coordinator, Observer, Governance Reviewer, Documentation Writer, Optimizer, and Memory Curator under the existing contracts.
+
+REQUIRED ACTIVITIES
+
+1. Establish system boundary, workloads, modes, criticality, users, operators, and lifecycle.
+2. Allocate functions across hardware, firmware, operating environment, software, people, and external services.
+3. Define memory, storage, bus, I/O, timing, interrupt, reset, boot, update, identity, and resource contracts.
+4. Analyze performance, capacity, concurrency, fault containment, thermal, power, security, safety, service, and manufacturing conditions.
+5. Define diagnostics, test access, logging, recovery, rollback, field update, replacement, and retirement.
+6. Validate hardware-software integration with qualified specialists and baseline deviations and evidence.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI recommendations must expose traces, workloads, configuration, assumptions, uncertainty, and alternatives. Human review is required for allocation, boot trust, privileged update, safety, security, resource margins, and release. Essential stop, recovery, and diagnosis must function without AI.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Represent compute elements, resource maps, buses, memories, boot states, update states, identities, trust boundaries, hardware-software contracts, configurations, evidence, and lifecycle states as versioned artifacts. Separate design, manufactured unit, deployed configuration, runtime state, and test evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show unit identity, hardware and firmware revisions, boot and update state, resource use, thermal and power condition, faults, trust status, evidence, and authorized isolation or recovery actions. Expose rollback, safe mode, replacement, and manual diagnosis.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Computer architecture; allocation matrix; memory and bus maps; hardware-software interface contracts; timing and resource budgets; threat and hazard analysis; boot and update design; diagnostics; manufacturing and service plans; integration and qualification evidence.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies unit, part and firmware revisions, workload, configuration, environment, instruments, stimulus, timing, result, operator, and limitations. Benchmarks, emulation, simulation, and field observations remain distinct.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify boot, reset, memory protection, storage integrity, bus behavior, timing, resource exhaustion, concurrency, update interruption, rollback, fault containment, thermal and power limits, security controls, diagnostics, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Hidden hardware-software assumptions; unbounded resource use; insecure boot or update; untested reset; shared fault domains; stale firmware; opaque diagnostics; benchmark-only claims; and recovery that requires the failed control path.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine the unit or function, preserve image, configuration, logs, and evidence, identify safe mode, and use approved rollback, replacement, reflash, restore, or manual recovery. Reopen after hardware, firmware, workload, security, supplier, or environment change.
+
+COMPLETION CRITERIA
+
+The co-design boundary, allocations, contracts, resources, trust, update, diagnostics, tests, recovery, evidence, and unresolved gaps are explicit; status is limited to the tested unit and environment.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve unit identity, hardware and firmware revisions, maps, contracts, traces, faults, updates, decisions, evidence, and next action. Hand off to Electronics, Computer Science, Firmware, Embedded Software, Operating Systems, Security, Testing, Operations, and Retirement.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 033 Software Architecture; 035 Infrastructure Architecture; 045 Security Architecture; 051 Reliability Architecture; 052 Resilience Architecture; 060 Hardware Architecture; 062 Electronics Engineering; 068 Firmware Engineering; 069 Embedded Software Engineering; 113 Operating Systems Engineering; 232 Hardware Testing; 264 Build Engineering; 379 Firmware Updates.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-060, and the integration roadmap. Processor, platform, certification, supply-chain, threat, workload, field-service, and owner-acceptance assumptions remain unresolved until supplied and verified.

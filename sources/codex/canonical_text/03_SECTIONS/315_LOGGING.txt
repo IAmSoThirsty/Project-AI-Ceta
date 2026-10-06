@@ -1,0 +1,95 @@
+SECTION 315 — Logging
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Record meaningful, structured, attributable, time-bound, privacy-aware events for operation, diagnosis, security, audit, compliance, and learning.
+
+REQUIRED OUTCOME
+
+A logging model with event taxonomy, fields, identity, time, correlation, severity, redaction, access, retention, integrity, transport, cost, and use.
+
+WHY THIS MATTERS
+
+Logs can be missing, misleading, excessive, sensitive, mutable, or impossible to correlate. More logging can increase privacy and cost while still failing to answer the operational question.
+
+APPLICABILITY
+
+Apply when event records support operation, security, audit, debugging, compliance, safety, user support, or forensic evidence.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no event evidence, operational question, audit, security, or user-support need changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use observability, privacy, security, records, incident, trace, metric, data, and operations baselines. Define log owner and retention authority.
+
+REQUIRED INPUTS
+
+Events, fields, identity, time, correlation, severity, source, data classification, redaction, destination, access, retention, integrity, and cost.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define required evidence and collection; privacy and security owners approve content and access; operators interpret logs; humans decide disclosure and retention.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize authorized logs, identify patterns, draft schemas and queries, and propose redaction. It must not expose sensitive content, delete evidence, infer certainty from silence, or alter retention without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Logging Engineer, Observability Engineer, Security Auditor, Privacy Reviewer, SRE, Data Engineer, Analyst, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define events and fields; instrument; normalize; timestamp; correlate; redact; transport and store; protect access and integrity; monitor collection; query; retain; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show log source, event, identity, time, data class, query, evidence, privacy, and limitation. Require human approval for sensitive query, disclosure, retention, and deletion.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use structured schema, time sync, correlation ID, resilient transport, encryption, access control, tamper evidence, redaction, sampling, retention tier, and independent evidence store.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show log coverage, source health, schema, privacy, retention, cost, incidents, evidence freshness, owner, and authorized query, restrict, preserve, redact, export, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Logging charter; event and schema catalog; redaction and access; pipeline and retention; integrity and query; incident, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, event, schema, identity, time basis, correlation, method, query, result, actor, and limitation. A log line proves only its recorded event and integrity context.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify event coverage, fields, identity, time, correlation, redaction, access, retention, integrity, transport, query, collector loss, and evidence recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Secrets in logs, personal data overcollection, no timestamp, uncorrelated events, mutable storage, log volume as observability, and log absence treated as no event.
+
+RECOVERY AND RECONSIDERATION
+
+Restore or substitute collection, preserve available records, rotate exposed secrets, restrict access, notify owners, and reassess blind period. Reopen on event, schema, privacy, incident, or retention change.
+
+COMPLETION CRITERIA
+
+Events, fields, source, identity, time, correlation, privacy, access, retention, integrity, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve schemas, configs, retention, queries, incidents, evidence, decisions, exceptions, and open gaps. Hand off to Observability, Security, Privacy, Tracing, Metrics, SRE, Records, and Operations.
+
+RELATED CODEX SECTIONS
+
+004 Evidence and Truth; 206 Security Operations; 213 Digital Forensics; 225 Records; 313-317 Observability, Monitoring, Tracing, and Metrics; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, evidence, privacy, security, observability, and operations context, and the integration roadmap. Exact events, fields, retention, tools, privacy, cost, and acceptance authority remain unresolved.

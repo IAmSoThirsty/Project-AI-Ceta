@@ -1,0 +1,95 @@
+SECTION 267 — Continuous Delivery
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Keep validated, identified artifacts ready for controlled release through promotion, approval, environment preparation, rollback, and evidence-preserving delivery.
+
+REQUIRED OUTCOME
+
+A delivery model with artifact identity, readiness gates, environments, approvals, configuration, data migration, communication, release strategy, rollback, and owner decision.
+
+WHY THIS MATTERS
+
+Delivery is not deployment. A ready artifact can still be unsuitable for an environment, user population, data migration, support capacity, or commitment. Automation must preserve human authority where consequence requires it.
+
+APPLICABILITY
+
+Apply when artifacts are promoted or prepared for release across environments, customers, operators, devices, or services.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no artifact, environment, user, data, support, or release readiness changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use build, artifact, configuration, environment, testing, acceptance, operations, support, data migration, security, and rollback baselines.
+
+REQUIRED INPUTS
+
+Artifact, provenance, tests, findings, environment, configuration, migration, readiness, approvals, support, communication, rollback, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Release owners approve readiness, risk, timing, communication, migration, exception, and rollback. Humans decide whether evidence and support capacity justify release.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may assemble readiness evidence, draft plans, identify gaps, and summarize changes. It must not declare ready, approve, promote, communicate commitments, or execute release without delegated authority and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Release Engineer, Delivery Engineer, Architect, Tester, Verifier, Operations Engineer, Security Auditor, Support Reviewer, Coordinator, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Validate artifact and evidence; assess impact; prepare environment and configuration; plan migration and communication; obtain approvals; promote; monitor; rollback or pause; record outcome; and hand off operations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show artifact, environment, change, evidence, readiness, approval, dependency, user impact, communication, and rollback. Require human approval for release, data migration, exception, and external commitment.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use immutable artifacts, promotion stages, gates, feature flags, canary or phased release, migration checkpoints, rollback, observability, support readiness, and access separation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show release candidate, readiness, environment, approvals, dependencies, incidents, evidence freshness, communication, rollback, and authorized promote, pause, rollback, restrict, notify, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Delivery plan; readiness checklist; artifact and environment record; migration and communication plan; approvals; monitoring and rollback; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify artifact, environment, configuration, test, approval, actor, time, method, result, impact, and limitation. Readiness evidence does not prove post-release outcome.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify artifact identity, gates, approvals, environment, data, support, communication, migration, monitoring, rollback, and recovery. Exercise failed promotion and partial rollout.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Deploy without readiness, artifact drift, approval theater, migration without backup, rollback that misses data, support unprepared, and delivery status treated as user success.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or roll back, preserve state and evidence, communicate, restore or compensate, and reassess users, data, commitments, and residual risk. Reopen on artifact, environment, data, or support change.
+
+COMPLETION CRITERIA
+
+Artifact, readiness, environment, approvals, migration, support, communication, rollback, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve release identity, artifacts, approvals, environment, telemetry, incidents, communications, decisions, evidence, exceptions, and open gaps. Hand off to Deployment, Operations, Support, Product, Security, and Governance.
+
+RELATED CODEX SECTIONS
+
+237 Acceptance Testing; 262 Artifacts; 263 Environments; 266 CI; 268 Continuous Deployment; 274 Release Engineering; 301-330 Operations; 373 Roadmap Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, delivery, operations, testing, and owner-control context, and the integration roadmap. Exact release authority, gates, environments, migration, support, rollback, and acceptance evidence remain unresolved.

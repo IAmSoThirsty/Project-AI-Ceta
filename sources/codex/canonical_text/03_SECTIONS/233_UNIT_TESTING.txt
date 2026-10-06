@@ -1,0 +1,95 @@
+SECTION 233 — Unit Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Verify isolated functions, modules, classes, components, or hardware units against explicit behavior, boundaries, invariants, errors, and contracts.
+
+REQUIRED OUTCOME
+
+Fast, deterministic unit tests with clear subject, fixture, oracle, boundary cases, failure evidence, ownership, maintenance, and known limits.
+
+WHY THIS MATTERS
+
+Unit tests give precise feedback but can pass while integration, environment, user, security, or performance behavior fails. Brittle or tautological tests create false confidence and slow useful change.
+
+APPLICABILITY
+
+Apply when an isolated unit has meaningful behavior, contract, risk, or defect history that can be tested independently.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when the unit has no independent behavior or an approved higher-level test is more truthful and sufficient for the declared risk.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use unit contract, requirements, code or hardware revision, dependencies, fixtures, mocks or stubs, test framework, and ownership. Avoid replacing meaningful integration with mocks.
+
+REQUIRED INPUTS
+
+Unit, contract, inputs, outputs, errors, invariants, boundaries, dependencies, fixture data, test environment, prior defects, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define behavior and risk; implementers maintain tests; reviewers challenge oracles and isolation; humans decide whether a unit-level result is enough for the larger claim.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft cases and fixtures, identify boundary gaps, and explain failures from authorized code and output. It must not claim execution, fabricate results, overuse mocks, or change the contract to make tests pass without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Tester, Implementer, Analyst, Verifier, Quality Engineer, Critic, Researcher, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define oracle; cover normal, boundary, invalid, error, and state paths; isolate dependencies honestly; execute deterministically; diagnose failures; remove flakiness; retest; review coverage and limits; and preserve results.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show unit, version, fixture, oracle, dependency substitution, execution, result, and limitation. Require human review for generated assertions, behavior interpretation, and test quarantine.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Expose stable contracts and deterministic seams without weakening encapsulation or production behavior. Keep fixtures versioned and prevent test-only paths from becoming security or operational bypasses.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show unit, suite, version, pass or fail, flakiness, coverage, owner, evidence freshness, and authorized run, quarantine, fix, rerun, and accept controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Unit-test matrix; fixtures; suite and environment record; results; failure and flakiness register; coverage and limitation report; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify unit, version, fixture, oracle, framework, environment, execution, result, time, actor, and limitation. Pass count or line coverage proves only its declared cases.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify oracle quality, boundary and error coverage, deterministic execution, honest dependency isolation, failure reproduction, flakiness handling, and traceability to risk or contract.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Tautological assertions, over-mocking, private implementation fixation, flaky tests hidden, no invalid input, and unit pass treated as system correctness.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve failure, isolate test or code cause, correct the contract or implementation, remove unsafe mock, and rerun. Reopen on unit, dependency, contract, or risk change.
+
+COMPLETION CRITERIA
+
+Unit, contract, fixtures, oracle, cases, results, failures, coverage, limits, owner, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve test and fixture versions, results, failures, decisions, exceptions, and open gaps. Hand off to Integration, System, Regression, Quality, Release, and Maintenance owners.
+
+RELATED CODEX SECTIONS
+
+019 Requirements; 229 Quality Engineering; 231 Software Testing; 234 Integration Testing; 238 Regression Testing; 386 Technical Debt Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, testing and quality context, and the integration roadmap. Exact framework, coverage, contract, fixture, flakiness, and acceptance rules remain unresolved.

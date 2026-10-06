@@ -1,0 +1,95 @@
+SECTION 305 — Network Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate network links, devices, routes, zones, DNS, access, policies, and connectivity while preserving service, security, evidence, and recovery.
+
+REQUIRED OUTCOME
+
+A network-operations model with inventory, health, configuration, change, access, capacity, incidents, provider, monitoring, failover, and runbook ownership.
+
+WHY THIS MATTERS
+
+Network operations handle high-blast-radius state. A route, firewall, DNS, or certificate change can silently redirect, isolate, expose, or degrade many systems.
+
+APPLICABILITY
+
+Apply when networks, links, devices, routes, policies, DNS, load balancers, wireless, or providers are monitored, changed, repaired, or recovered.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no network state, connectivity, trust, route, policy, or operational action changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use network architecture, identity, security, DNS, certificate, cloud, observability, change, incident, capacity, and recovery baselines.
+
+REQUIRED INPUTS
+
+Topology, devices, links, routes, zones, policies, identities, DNS, certificates, metrics, alerts, providers, changes, incidents, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Network owners approve access, route, firewall, DNS, maintenance, outage, failover, capture, exception, and recovery. Humans review high-blast-radius change.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized flow, telemetry, configuration, and incidents; draft diagnosis and runbooks; and recommend bounded actions. It must not change routes, ACLs, DNS, capture, or isolate without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Network Operations Engineer, Network Engineer, Security Auditor, Cloud Engineer, DNS Engineer, Observer, Tester, Verifier, and Incident Responder.
+
+REQUIRED ACTIVITIES
+
+Monitor; triage; maintain devices and links; change routes and policy; manage DNS and certificates; capacity-plan; fail over; troubleshoot; preserve evidence; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show device, link, route, zone, identity, action, authority, evidence, privacy boundary, and limitation. Require human approval for routing, firewall, capture, failover, and destructive action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use management isolation, segmentation, authenticated control, redundant paths, configuration audit, flow visibility, rate controls, and out-of-band recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show network health, topology, routes, zones, capacity, incidents, evidence freshness, owner, and authorized isolate, reroute, restore, fail over, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Network operations charter; inventory and topology; monitoring and alert; change and incident; capacity and failover; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify device, link, route, policy, zone, provider, method, time, result, actor, and limitation. Reachability or packet loss proves only the observed path and time.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify monitoring, access, route, policy, DNS, certificate, capacity, alert, failover, rollback, provider incident, and evidence. Test stale state and control-plane loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared admin, unmonitored change, flat trust, route drift, capture without authority, single provider, alert fatigue, and network health equated with service health.
+
+RECOVERY AND RECONSIDERATION
+
+Isolate, preserve configs and flows, restore or reroute, rotate access, communicate, and reassess affected services and data. Reopen on topology, provider, threat, or policy change.
+
+COMPLETION CRITERIA
+
+Assets, topology, health, routes, policies, owners, evidence, capacity, failover, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve configs, topology, changes, incidents, flow evidence, decisions, backups, exceptions, and open gaps. Hand off to Cloud, DNS, Certificates, Security, SRE, Platform, and Operations.
+
+RELATED CODEX SECTIONS
+
+284 Network Engineering; 299 DNS; 298 Certificates; 300 CDN; 304 Cloud; 313-317 Observability; 323-330 Availability, Performance, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, network, security, cloud, and operations context, and the integration roadmap. Exact topology, devices, providers, metrics, authority, privacy, recovery, and acceptance evidence remain unresolved.

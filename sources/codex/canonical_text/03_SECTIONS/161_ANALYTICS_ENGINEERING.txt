@@ -1,0 +1,99 @@
+SECTION 161 — Analytics Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer trustworthy analytical models, metrics, transformations, tests, documentation, and delivery practices that turn governed data into reproducible decision support.
+
+REQUIRED OUTCOME
+
+Versioned analytical models with metric definitions, lineage, tests, owners, freshness, access, documentation, deployment, monitoring, and recovery.
+
+WHY THIS MATTERS
+
+Analytics can encode business rules as hidden software. A polished metric may be stale, duplicated, biased, or semantically wrong.
+
+APPLICABILITY
+
+Apply when reusable transformations, metrics, analytical models, semantic layers, or decision datasets are built or changed.
+
+NON-APPLICABILITY CONDITIONS
+
+No material metric, transformation, lineage, consumer, access, quality, or lifecycle behavior changes and an exact analytical baseline covers the work.
+
+PREREQUISITES AND DEPENDENCIES
+
+Data contracts, business definitions, source lineage, consumers, tests, freshness, quality, access, deployment, ownership, and acceptance rules.
+
+REQUIRED INPUTS
+
+Models, metrics, SQL or code, dependencies, tests, samples, thresholds, reports, owners, environments, evidence, assumptions, and known gaps.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The owner approves metric meaning, thresholds, access, publication, exceptions, risk, and acceptance; assigns data, domain, analytics, privacy, security, and verification authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized model code, schemas, lineage, tests, metric catalogs, query plans, freshness signals, and bounded samples; draft transformations, tests, documentation, impact analyses, and explanations; and propose corrections or optimization experiments.
+
+AI must preserve metric definitions, grain, population, filters, time window, source and model versions, transformation lineage, freshness, uncertainty, and known exclusions. It must distinguish a syntactically valid query from a semantically valid measure and a useful analysis from a decision.
+
+AI must not redefine metrics, change business meaning, publish consequential results, modify production models, bypass review gates, infer authorization, or present correlation, forecast, or generated narrative as causation or verified fact without delegated authority and human acceptance.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Analyst, Data Engineer, Researcher, Architect, Implementer, Tester, Verifier, Governance Reviewer, Security Auditor, Critic, Optimizer, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define metrics and grain; build tested transformations; document lineage; validate freshness and quality; deploy controlled changes; monitor drift; notify consumers; preserve recovery.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+AI may draft transformations and tests from authorized sources. It must preserve metric definitions, disclose uncertainty, and never publish consequential analysis or infer business authority.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Treat analytical models as versioned software with contracts, tests, lineage, environments, dependencies, access, observability, rollback, and retirement semantics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show model version, metric owner, source freshness, tests, consumers, deployment, incidents, evidence, and controls to approve, pause, revert, correct, restrict, and retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Metric catalog; analytical models; lineage; tests; deployment and monitoring design; quality and access records; decisions, evidence, limitations, and handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, model, metric, version, population, query, environment, method, result, and limitation. A chart or passing test proves only its bounded claim.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify metric definitions, grain, joins, freshness, tests, access, reproducibility, change impact, deployment, failure, correction, and consumer understanding.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Metric duplication, hidden filters, untested transformations, stale dashboards, circular validation, manual edits, and treating engagement or correlation as causation.
+
+RECOVERY AND RECONSIDERATION
+
+Withdraw affected outputs, preserve versions and evidence, notify consumers, and use prior model, corrected data, restricted publication, or controlled reprocessing.
+
+COMPLETION CRITERIA
+
+Models, metrics, owners, tests, lineage, evidence, limitations, gaps, and review cadence are explicit. Status remains CONTENT-COMPLETE pending later gates.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off to BI, Data Analysis, Data Science, Data Quality, Data Engineering, Testing, Governance, Security, Operations, and Retirement.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 156 Data Quality; 159-160 Warehousing and Lake; 162 Business Intelligence; 163 Data Analysis; 164 Data Science; 254 Data Testing; 307 Data Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the canonical contract, shared governance, data architecture, and roadmap. Domain metric authority, statistical standards, access rules, and sector reporting obligations remain unresolved.

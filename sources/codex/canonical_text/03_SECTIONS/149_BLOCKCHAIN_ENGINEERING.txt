@@ -1,0 +1,98 @@
+SECTION 149 - Blockchain Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of shared ledgers, blockchain networks, wallets, nodes, consensus, transactions, cryptographic identity, data publication, and lifecycle without confusing immutability with correctness.
+
+REQUIRED OUTCOME
+
+A blockchain baseline with network purpose, consensus, assets, keys, transaction semantics, privacy, governance, observability, recovery, upgrade, and retirement controls.
+
+WHY THIS MATTERS
+
+An immutable record can preserve an error forever. Key loss, consensus failure, opaque fees, privacy leakage, and irreversible transactions require explicit authority and compensation planning.
+
+APPLICABILITY
+
+Applies to permissioned or public ledgers, blockchain infrastructure, wallets, nodes, tokens, proofs, on-chain records, and ledger-connected applications.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable where a conventional authoritative store satisfies the outcome and no consensus, shared ledger, token, or on-chain integrity claim exists. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires ledger purpose, participants, consensus, threat model, key authority, asset and data model, privacy, fees, finality, governance, legal, recovery, and retirement authority.
+
+REQUIRED INPUTS
+
+Provide transactions, identities, keys, assets, state, consensus, finality, fees, privacy, validators, off-chain links, upgrade, incident, and compensation requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve network purpose, validators, keys, assets, legal and privacy use, upgrades, fees, risk, and acceptance. Humans retain authority over irreversible transactions and governance changes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect transactions, model fees, draft code, and detect anomalies. It must not hold or request secrets, sign transactions, alter consensus, or declare finality without delegated authority and evidence.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Cryptography Engineer, Security Auditor, Privacy Reviewer, Analyst, Implementer, Tester, Verifier, Governance Reviewer, Observer, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define participants, ledger, assets, keys, consensus, finality, privacy, and authority.
+2. Design transaction, node, wallet, key recovery, monitoring, upgrade, and off-chain reconciliation paths.
+3. Test adversarial consensus, replay, key compromise, reorganization, fees, privacy, and recovery.
+4. Operate, govern, upgrade, compensate, and retire under explicit decisions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show network, transaction, signer, key scope, fee, finality, privacy, evidence, and consequence. Human approval is required for signing, upgrades, and material transfers; no conversational path bypasses wallet policy.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate wallet, key, transaction, mempool, consensus, ledger, oracle, off-chain store, and application boundaries. Define nonce, replay, finality, reorg, fee, privacy, audit, and compensation semantics.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show chain, height, node health, transaction, signer, finality, fees, alerts, evidence, and controls to pause signing, revoke keys, isolate nodes, reconcile, or migrate.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Ledger charter, participant and node catalog, asset and transaction model, key and wallet policy, threat and privacy assessment, contract and upgrade records, test evidence, runbook, and retirement plan.
+
+EVIDENCE REQUIREMENTS
+
+Identify chain, block, transaction, signer, key reference, code, node, input, result, finality, method, date, and limits. Preserve failed, replaced, reverted, and compensated evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify signatures, permissions, replay, nonce, consensus, reorg, finality, key rotation, node loss, privacy, oracle failure, fee exhaustion, upgrade, and compensation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Treating immutability as truth; exposed private data; unaudited contracts; hot keys; unclear finality; ignoring reorgs; and assuming transactions can be destructively undone.
+
+RECOVERY AND RECONSIDERATION
+
+Pause signing, revoke or rotate keys, isolate contracts or nodes, preserve ledger evidence, compensate through an authorized transaction, communicate limits, and reopen governance and security review.
+
+COMPLETION CRITERIA
+
+Purpose, authority, keys, consensus, evidence, privacy, upgrades, compensation, and retirement are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve chain, block, transaction, key references, code, decisions, incidents, evidence, and next safe action. Hand off to Blockchain Architecture, Cryptography, Security, Privacy, Smart Contracts, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+149 Blockchain Engineering; 150 Smart Contract Engineering; 203 Cryptography; 204 Key Management; 218 Privacy Engineering; 246 Security Testing; 258 Configuration Management; 289 Change Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 045, 047-050, 107-148, Owner Cockpit Requirements, and Status and Evidence Lexicon. Jurisdiction, consensus model, asset authority, privacy, custody, finality, fees, and recovery or compensation rules remain unresolved.

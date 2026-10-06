@@ -1,0 +1,95 @@
+SECTION 290 — Deployment Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer repeatable, observable, secure, and reversible mechanisms for placing exact artifacts and configuration into declared targets.
+
+REQUIRED OUTCOME
+
+A deployment mechanism with artifact, target, identity, strategy, configuration, migration, health, policy, rollback, audit, and recovery.
+
+WHY THIS MATTERS
+
+Deployment changes live state. A mechanism that cannot identify what changed, stop safely, observe user impact, or recover from partial execution cannot support trustworthy operations.
+
+APPLICABILITY
+
+Apply when software, firmware, infrastructure, configuration, data, models, or policies are placed or activated in an environment.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no target, artifact, configuration, data, or live state changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use artifact, environment, configuration, identity, testing, release, migration, backup, rollback, monitoring, and incident baselines.
+
+REQUIRED INPUTS
+
+Artifact, target, version, identity, strategy, configuration, migration, health, gate, telemetry, rollback, and authorization.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Deployment owners approve target, strategy, gate, identity, migration, rollback, exception, and stop. Humans decide production and destructive deployment.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft manifests, analyze deployment state, and recommend pause or rollback. It must not deploy, widen target, change gates, or claim completion without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Deployment Engineer, Release Engineer, Platform Engineer, Tester, Verifier, Operations Engineer, Security Auditor, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+Validate artifact and target; check permission and policy; stage; deploy; monitor; pause or roll back; reconcile configuration and data; record; and maintain the mechanism.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show artifact, target, identity, phase, health, evidence, impact, and rollback. Require human approval for production, migration, gate bypass, and destructive actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use progressive rollout, health and business metrics, immutable artifacts, idempotent steps, migration checkpoints, independent control, audit, and rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show deployment phase, target, artifact, health, incidents, evidence freshness, owner, and authorized start, pause, stop, rollback, promote, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Deployment specification; target and identity; rollout and health record; migration and rollback; logs, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify artifact, target, phase, identity, configuration, method, time, result, impact, and limitation. Execution completion proves neither readiness nor user success.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, target, artifact, health, gate, migration, rollback, audit, cleanup, and partial-failure behavior. Test stale health and control-plane loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+No target validation, broad rollout, health blind to user outcome, non-idempotent step, migration without rollback, and deployment success treated as acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Pause, roll back or restore, preserve state, communicate, repair data, and reassess impact. Reopen on artifact, target, config, dependency, or health change.
+
+COMPLETION CRITERIA
+
+Artifact, target, identity, strategy, health, migration, rollback, evidence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve manifests, logs, artifacts, rollout, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Release, Operations, Platform, Security, Support, and Incident Response.
+
+RELATED CODEX SECTIONS
+
+267-268 Continuous Delivery and Deployment; 288 Release Management; 295 Environment Promotion; 297 Configuration Delivery; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, deployment, release, security, and operations context, and the integration roadmap. Exact targets, strategies, health, migration, rollback, authority, and acceptance evidence remain unresolved.

@@ -1,0 +1,95 @@
+SECTION 389 — Deprecation Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Announce, support, monitor, migrate, restrict, and retire a version, feature, interface, dependency, policy, product, or service that will no longer be preferred or supported.
+
+REQUIRED OUTCOME
+
+A deprecation model with reason, scope, replacement, consumer, notice, support window, compatibility, migration, security, exception, deadline, and retirement.
+
+WHY THIS MATTERS
+
+Deprecation is a promise about future support. Without notice, replacement, migration, and owner, it creates stranded users and hidden operational risk; indefinite deprecation creates debt.
+
+APPLICABILITY
+
+Apply when a capability, version, interface, asset, provider, policy, or service is marked for reduced support or eventual removal.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no support, consumer, interface, version, or lifecycle status changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use version, compatibility, release, customer, support, legal, security, data, migration, records, and sunset baselines.
+
+REQUIRED INPUTS
+
+Target, reason, owner, consumers, replacement, date, support, notice, migration, exception, evidence, and retirement criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve reason, notice, support, migration, exception, date, security, customer impact, and retirement. Humans resolve contractual or vulnerable-user impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inventory consumers, draft notices and migration, and identify stale use. It must not deprecate, withdraw support, contact customers, or retire capability without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Deprecation Manager, Product Manager, Version Manager, Support Reviewer, Architect, Researcher, Analyst, Legal Advisor, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Identify reason and consumers; choose replacement; announce; support; migrate; monitor; manage exception; enforce deadline; verify no critical consumer remains; and retire or extend with decision.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show target, reason, consumers, replacement, support, date, evidence, authority, and limitation. Require human approval for public notice, breaking change, exception, and removal.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use compatibility, migration, alias, warning, telemetry, fallback, access and data transition, notice, deadline, and removal controls.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show deprecated item, consumers, replacement, dates, support, migration, evidence freshness, owner, and authorized notify, extend, restrict, migrate, remove, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Deprecation charter; target and reason; consumer and replacement; notice and support; migration and exception; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify item, version, consumer, source, reason, notice, date, method, result, migration, owner, and limitation. Notice or usage scan proves neither migration nor safe removal.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify consumers, notice, replacement, compatibility, migration, support, security, contract, data, exception expiry, and retirement. Test unresponsive and critical consumer.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Deprecation without replacement, silent breaking change, indefinite status, notice inaccessible, consumer inventory incomplete, exception permanent, and removal before migration.
+
+RECOVERY AND RECONSIDERATION
+
+Pause removal, restore support or compatibility, notify, preserve evidence, migrate, and reassess contract and user impact. Reopen on consumer, replacement, threat, law, or timeline change.
+
+COMPLETION CRITERIA
+
+Target, reason, consumers, replacement, support, notice, dates, migration, evidence, exceptions, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve notices, consumer inventory, migrations, support, exceptions, decisions, evidence, and open gaps. Hand off to Version, Compatibility, Release, Support, Product, Legal, Data, and Sunset.
+
+RELATED CODEX SECTIONS
+
+387 Compatibility; 388 Version; 390 Sunset; 373 Roadmap; 382-385 Migration, Modernization, and Refactoring; 391-397 Data and Service Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, version, compatibility, support, customer, legal, migration, and lifecycle context, and the integration roadmap. Exact targets, consumers, replacement, support, notice, deadlines, contracts, and acceptance authority remain unresolved.

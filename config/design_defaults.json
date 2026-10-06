@@ -1,0 +1,47 @@
+{
+  "configuration_kind": "ENGINEERING_BASELINE_PROPOSED",
+  "activation": "DISABLED_UNTIL_IMPLEMENTED_AND_QUALIFIED",
+  "product": "CETA",
+  "architecture_lineage": "Project-AI",
+  "platform": "Windows x64",
+  "model_path": "CETA-owned local GGUF",
+  "background_enabled": false,
+  "autostart_enabled": false,
+  "remote_inference_enabled": false,
+  "telemetry_upload_enabled": false,
+  "microphone_enabled": false,
+  "screen_capture_enabled": false,
+  "implicit_downloads_enabled": false,
+  "implicit_training_enabled": false,
+  "production_signing_enabled": false,
+  "initial_selected_workspaces": [],
+  "initial_positive_grants": [],
+  "proposed_resource_targets": {
+    "maximum_resident_models": 1,
+    "maximum_parallel_writers": 1,
+    "maximum_parallel_read_workers": 2,
+    "queue_item_limit": 256,
+    "reflection_model_call_limit_per_task": 4,
+    "default_effect_retry_limit": 0,
+    "ui_acknowledgment_p95_ms": 250,
+    "stop_admission_acknowledgment_p95_ms": 250,
+    "minimum_p95_timing_samples": 30,
+    "qualification_endurance_days": 7
+  },
+  "required_local_measurements": [
+    "RAM and commit pressure",
+    "runtime-supported devices",
+    "weights + KV + runtime + host + recovery budget",
+    "actual tokenization/template",
+    "actual contained worker access",
+    "termination limits"
+  ],
+  "unresolved_values": {
+    "production_release_number": null,
+    "accepted_native_toolchain": null,
+    "qualified_model_digest": null,
+    "qualified_runtime_digest": null,
+    "authority_domain_roster": null
+  },
+  "unresolved_value_semantics": "Missing real configuration is not invented. The dependent lane remains unqualified, and unrelated implementation continues."
+}

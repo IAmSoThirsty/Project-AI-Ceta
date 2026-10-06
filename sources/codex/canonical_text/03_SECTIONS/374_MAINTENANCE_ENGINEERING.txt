@@ -1,0 +1,95 @@
+SECTION 374 — Maintenance Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Keep systems, products, facilities, services, data, and processes safe, supported, reliable, secure, compliant, and useful throughout their operating life.
+
+REQUIRED OUTCOME
+
+A maintenance model with asset, condition, schedule, preventive and corrective work, dependencies, parts, skills, safety, evidence, backlog, change, and retirement.
+
+WHY THIS MATTERS
+
+Maintenance competes with delivery and can be deferred until failure. Hidden technical debt, unsupported components, unsafe work, and maintenance windows can accumulate operational risk.
+
+APPLICABILITY
+
+Apply when a system, product, infrastructure, device, service, data pipeline, or process requires planned or unplanned work to remain fit for use.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no ongoing support, repair, update, inspection, condition, or lifecycle obligation exists and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use operational, asset, quality, security, reliability, change, supply, safety, records, and retirement baselines.
+
+REQUIRED INPUTS
+
+Asset, condition, work, schedule, failure, parts, skills, dependencies, safety, window, evidence, backlog, and owner.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Maintenance owners prioritize work, protect safety, approve windows, parts, change, risk, backlog, and retirement. Humans decide when deferral is unacceptable.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized condition and work records, identify trends, and draft plans. It must not infer safety, schedule critical work, change equipment, or close maintenance without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Maintenance Engineer, Reliability Engineer, Operations Engineer, Hardware Engineer, Software Engineer, Safety Reviewer, Planner, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory assets; assess condition; plan preventive, corrective, and adaptive work; secure window; execute; test; document; manage backlog and parts; review; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show asset, condition, work, safety, dependency, window, evidence, owner, and limitation. Require human approval for safety, production, destructive, access, and retirement action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use maintenance state, asset history, service mode, redundancy, backup, rollback, spare or substitute, condition telemetry, and evidence linked to change.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show asset health, maintenance due, backlog, safety, dependency, evidence freshness, owner, and authorized schedule, defer, execute, verify, escalate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Maintenance charter; asset and condition; work plan; safety and window; execution and test; backlog, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify asset, condition, work, version, method, time, operator, result, safety, and limitation. Maintenance completion proves work occurred, not restored fitness.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify asset, condition, procedure, safety, parts, access, execution, test, rollback, evidence, backlog, and return to service. Test deferred and failed maintenance.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Maintenance deferred forever, work without safety, no asset history, completion by ticket, unsupported part, change untested, and maintenance burden hidden.
+
+RECOVERY AND RECONSIDERATION
+
+Protect asset and people, isolate, repair or substitute, preserve evidence, test, communicate, and reassess service and safety. Reopen on failure, condition, part, design, or lifecycle change.
+
+COMPLETION CRITERIA
+
+Assets, condition, work, schedules, owners, safety, evidence, backlog, verification, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve asset history, work, tests, parts, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Corrective, Preventive, Adaptive, Security, Operations, Quality, and Retirement.
+
+RELATED CODEX SECTIONS
+
+243-245 Reliability, Resilience, and Chaos; 378-389 Updates, Migration, Debt, Compatibility, Version, and Deprecation; 390-400 Sunset and Disposal; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, maintenance, reliability, safety, security, quality, and lifecycle context, and the integration roadmap. Exact assets, work, schedules, skills, parts, safety, backlog, and acceptance authority remain unresolved.

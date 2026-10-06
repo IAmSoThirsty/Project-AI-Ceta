@@ -1,0 +1,95 @@
+SECTION 213 — Digital Forensics
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Preserve, acquire, examine, analyze, and report digital evidence in a lawful, controlled, reproducible, and privacy-aware manner.
+
+REQUIRED OUTCOME
+
+A forensic plan and evidence package with authority, scope, preservation, acquisition, integrity, chain of custody, analysis, reporting, access control, retention, disclosure, and limitation records.
+
+WHY THIS MATTERS
+
+Digital evidence is volatile, duplicable, privacy-sensitive, and easy to alter. A technically plausible finding is not reliable if the source, acquisition method, time, integrity, analyst, or chain of custody cannot be reconstructed.
+
+APPLICABILITY
+
+Apply when system, device, cloud, application, network, identity, log, communication, or data artifacts may support incident response, legal action, safety review, fraud investigation, compliance, or learning.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no evidentiary question, preservation duty, incident, dispute, or consequential decision requires forensic handling and an approved exact baseline documents why ordinary operational records are sufficient.
+
+PREREQUISITES AND DEPENDENCIES
+
+Obtain authority, scope, legal and privacy guidance, preservation direction, evidence storage, trained personnel, time source, tooling, access, safety controls, and incident or records coordination.
+
+REQUIRED INPUTS
+
+Question, scope, systems, devices, accounts, time window, legal authority, preservation notice, source inventory, collection method, handling limits, hypotheses, known incidents, and reporting audience.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The case owner and qualified forensic lead approve scope, collection, access, privacy handling, analysis, disclosure, retention, and release. Counsel or designated authority controls legal strategy. Humans decide material conclusions and whether evidence may be shared.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may index authorized copies, summarize records, identify patterns, draft timelines, compare artifacts, and propose follow-up questions. It must preserve source identity, integrity, chain of custody, uncertainty, and privacy boundaries. It must not collect, alter, delete, expose, attribute, or declare evidence authentic without authorized human-controlled procedures.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Forensic Analyst, Incident Responder, Security Auditor, Researcher, Observer, Analyst, Verifier, Governance Reviewer, Legal Advisor, Critic, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Define authority and question; preserve sources; document volatile state; acquire minimally and reproducibly; hash and seal copies; maintain custody; analyze with validated tools; separate observation from inference; review alternatives; report limitations; retain or dispose under authority.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show case, source, copy, hash, analyst, method, time, access authority, finding, confidence, and limitation. Require human approval for collection, privacy-sensitive review, attribution, disclosure, retention, and destruction. Never place raw sensitive evidence into an uncontrolled AI context.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate source systems, acquisition workspace, evidence store, working copies, analysis, reporting, access audit, legal hold, and disposal. Use immutable or tamper-evident records, least privilege, time synchronization, secure transfer, and reproducible tooling.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show case state, authority, scope, sources, custody, integrity, analysts, findings, privacy limits, disclosure state, and evidence freshness. Provide authorized preserve, restrict, release, escalate, correct, and close controls with durable audit.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Forensic charter; authority and preservation record; source and custody register; acquisition and integrity record; analysis notes; timeline; findings and alternative explanations; report; disclosure, retention, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, original state, acquisition method, copy, hash or integrity method, time basis, analyst, tool and version, access, observation, inference, confidence, and limitation. A screenshot, log export, or AI summary is bounded evidence only.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify authority, preservation, acquisition integrity, custody, time, tool behavior, reproducibility, privacy controls, independent review, report traceability, disclosure, retention, and disposal. Test corrupted copy, missing metadata, conflicting clocks, and tool failure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Analyzing originals, undocumented access, broken custody, over-collection, unsupported attribution, altered timestamps, evidence in chat or tickets, and conclusions stated more strongly than the artifacts support.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine questionable evidence, preserve all known state, document the break, obtain independent review, reacquire where lawful, and downgrade or withdraw affected conclusions. Reassess privacy, legal, safety, and user impact before disclosure or closure.
+
+COMPLETION CRITERIA
+
+Authority, scope, preservation, custody, integrity, analysis, findings, limitations, owners, disclosure, retention, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve case identity, custody, hashes, methods, findings, decisions, disclosure, legal or privacy holds, and open gaps. Hand off to Incident Response, Legal, Records, Security Operations, Audit, Governance, and affected owners.
+
+RELATED CODEX SECTIONS
+
+004 Evidence and Truth; 018 Risk Management; 206 Security Operations; 214 Incident Response; 219 Legal; 225 Records Management; 226 Audit; 231-254 Testing; 402-404 Review and Postmortem.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, evidence requirements, security operations, and the integration roadmap. Exact jurisdiction, legal authority, forensic standards, retention, tooling, privacy limits, and acceptance authority remain unresolved.

@@ -1,0 +1,138 @@
+SECTION 050 — Safety Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define hazards, harms, safety constraints, protective functions, human oversight, operating limits, fail-safe behavior, evidence, and lifecycle controls for systems that can affect people, property, environment, or public safety.
+
+REQUIRED OUTCOME
+
+- A hazard and harm model with affected parties, operating conditions, controls, safe states, evidence, owners, and residual risk.
+- Explicit prevention, detection, mitigation, stop, emergency, recovery, and change-assurance behavior.
+- Traceability from mission and requirements through design, operation, incidents, testing, and retirement.
+
+WHY THIS MATTERS
+
+Safety failure can be physical, social, environmental, or cumulative. A passing nominal test does not establish safe behavior under uncertainty, misuse, degraded sensing, human fatigue, model drift, or recovery.
+
+APPLICABILITY
+
+- A system can affect health, bodily safety, property, environment, public services, rights, or high-consequence decisions.
+- Failure, misuse, delay, automation, or human interaction could create material harm.
+
+NON-APPLICABILITY CONDITIONS
+
+- No physical, human, environmental, rights, or high-consequence effect changes.
+- An approved safety baseline covers exact scope, population, environment, and change with no material impact.
+- The artifact is exploratory and not a safety-case or safe-operation claim.
+
+Record hazard scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-049 provide requirements, architecture, operations, security, privacy, compliance, and governance context.
+- Qualified safety, domain, user, accessibility, legal, security, operational, and emergency authorities are identified or gaps recorded.
+
+REQUIRED INPUTS
+
+- Hazards, harms, affected parties, use and misuse cases, operating modes, environment, human factors, controls, limits, and lifecycle.
+- Safety requirements, assurance levels, fail-safe behavior, alarms, stop authority, incident, recovery, evidence, and retirement obligations.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Safety authorities approve hazard analysis, risk, operating limits, safeguards, human oversight, emergency action, residual risk, and acceptance. Humans retain stop, override, evacuation, quarantine, investigation, and retirement authority. AI cannot accept safety risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may identify hazards, analyze scenarios, draft safety cases and tests, and summarize evidence. It must preserve assumptions, uncertainty, population, and operating context. It must not declare safe, suppress hazards, issue physical actions, or replace qualified judgment.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Safety Auditor, Red Team, Architect, Researcher, Analyst, Observer, Tester, Verifier, Governance Reviewer, Critic, Planner, Documentation Writer, Memory Curator, and User Experience Reviewer.
+
+REQUIRED ACTIVITIES
+
+1. Identify hazards, harms, affected parties, use, misuse, environments, and lifecycle.
+2. Analyze initiating conditions, severity, likelihood, uncertainty, common cause, human factors, and exposure.
+3. Define prevention, detection, mitigation, stop, alarm, interlock, manual fallback, emergency, and recovery controls.
+4. Allocate controls and evidence to functions, systems, people, AI, devices, operations, and suppliers.
+5. Validate with qualified specialists, users, operators, maintainers, emergency, accessibility, legal, and affected parties.
+6. Test nominal, boundary, misuse, degraded, sensor-loss, model-loss, human-error, emergency, and recovery scenarios.
+7. Baseline safety case, evidence, decisions, dissent, residual risk, and handoff.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show hazard, actor, model, data, authority, confidence limit, control, operating mode, and consequence.
+- Require human approval for safety decisions, autonomy, overrides, exceptions, emergency actions, and residual risk.
+- Preserve independent stop, alarm, manual, status, evidence, appeal, and recovery paths.
+- Treat uncertainty or model confidence as a reason for bounded action, not permission.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Separate hazard, risk, control, safe state, evidence, incident, and decision records.
+- Make safety constraints enforceable at the action boundary and independent of a nonessential model or provider.
+- Design fail-safe, graceful degradation, interlock, redundancy, isolation, and recovery semantics.
+- Preserve immutable decisions, append-only incident evidence, and compensation-only reversal.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show hazards, operating mode, safeguards, alerts, authority, affected parties, evidence, residual risk, and lifecycle.
+- Expose stop, isolate, alarm, override, evacuate, investigate, recover, and retire actions with approval and impact.
+- Explain uncertainty, unsafe condition, denial, and safe recovery in accessible terms.
+- Export safety case, decisions, evidence, incidents, dissent, and continuity state.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Hazard analysis, safety case, operating limits, control and safe-state model, human oversight, emergency, and recovery plans.
+- Assurance, test, evidence, incident, risk, decision, acceptance, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify hazard, control, population, environment, mode, configuration, method, date, result, and limitation.
+- Simulation, inspection, demonstration, test, incident, or certification evidence proves only its bounded conditions.
+- Safety evidence distinguishes hazard identified, control designed, control implemented, and risk accepted.
+- Missing, inconclusive, stale, or contradictory evidence constrains safety status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace hazards through requirements, controls, implementation, operation, evidence, incident, recovery, and retirement.
+- Exercise misuse, sensor loss, stale data, model failure, human error, communication loss, overload, emergency, and recovery.
+- Verify stop, interlock, safe state, manual control, alarm, audit, accessibility, and authority revocation.
+- Disable model, provider, network, sensor, operator, power, and evidence services and verify safe response.
+- Reproduce safety claims from exact safety case and evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Treating a risk score, certification, nominal demo, or model confidence as proof of safety.
+- Hiding uncertainty, near misses, human factors, unsafe overrides, inaccessible controls, or recovery dependency.
+- Allowing optimization or automation to weaken stop authority or safeguards.
+
+RECOVERY AND RECONSIDERATION
+
+- On hazard, near miss, control failure, uncertainty, or evidence loss, enter the approved safe state and preserve records.
+- Identify affected people, authority, communication, evidence, investigation, and review condition.
+- Use manual control, isolation, reduced mode, repair, restore, compensation, or retirement through authorized decisions.
+- Reopen on hazard, environment, population, model, control, policy, or lifecycle change.
+
+COMPLETION CRITERIA
+
+- Hazards, harms, controls, limits, authorities, evidence, safe states, recovery, and lifecycle are explicit.
+- Misuse, degraded, emergency, human, AI, supplier, and retirement behavior is addressed or justified.
+- Exact residual risk and unresolved evidence are recorded; CONTENT-COMPLETE does not imply safe operation.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve hazards, controls, safety case, incidents, decisions, evidence, dissent, residual risk, and gaps.
+- Hand off to Reliability, Resilience, Security, Privacy, Compliance, Operations, Testing, Robotics, Embedded, and Retirement.
+- Record changes requiring reopening all affected safety and architecture sections.
+
+RELATED CODEX SECTIONS
+
+- 019-049 Requirements through Compliance Architecture; 051-060 Reliability through Hardware.
+- 182 AI Safety; 208 Threat Modeling; 252 Safety Testing; 243-245 reliability, resilience, and chaos testing; 326-330 continuity and recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-049, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal hazard taxonomy, safety standard, assurance level, risk threshold, emergency regime, or qualified authority is supplied. Actual hazards, populations, operating conditions, and acceptance evidence remain unresolved.

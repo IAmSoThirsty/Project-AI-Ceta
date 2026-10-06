@@ -1,0 +1,95 @@
+SECTION 332 — Command and Control
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define who or what may observe, decide, direct, authorize, pause, stop, escalate, recover, and retire consequential operations across normal and emergency modes.
+
+REQUIRED OUTCOME
+
+A command-and-control model with authority, identity, scope, mode, decision rights, delegation, communication, status, override, evidence, audit, safety, and recovery.
+
+WHY THIS MATTERS
+
+Systems fail when authority is ambiguous, duplicated, unavailable, or silently transferred to automation. Command must be visible, bounded, revocable, and accountable under pressure.
+
+APPLICABILITY
+
+Apply when people, automation, AI, services, devices, or organizations can direct consequential operation, resource, safety, security, user, or recovery action.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no consequential decision, control, delegation, mode, escalation, or emergency action exists and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use authority, identity, operational, incident, continuity, safety, security, service, change, communication, and governance baselines.
+
+REQUIRED INPUTS
+
+Actors, roles, authority, resources, modes, decisions, delegation, escalation, communication, status, evidence, override, stop, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Accountable humans define authority, delegation, limits, escalation, emergency, stop, communication, and acceptance. Humans remain responsible for protected outcomes and can revoke automation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may surface state, summarize options, and recommend bounded action. It must identify its authority and never self-escalate, impersonate, hide dissent, execute consequential action, or block human override.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Coordinator, Incident Commander, Governance Reviewer, Architect, Operations Engineer, Security Auditor, Verifier, Planner, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Map authority and actors; define modes and decisions; bind identity; establish delegation and expiry; provide command channel; communicate; record; exercise stop and override; recover; audit; and review.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show actor, authority, scope, mode, evidence, recommendation, action, consequence, revocation, and limitation. Require human confirmation for protected, irreversible, emergency, safety, rights, and external actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate observe, advise, decide, authorize, execute, audit, and recover. Use least privilege, dual control, expiry, quorum where needed, independent stop, resilient communication, and immutable decision record.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show current commander, mode, authority, active delegations, decisions, evidence freshness, actions, conflicts, and authorized pause, stop, revoke, escalate, override, recover, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Command charter; authority and delegation matrix; mode and decision model; communication and escalation; stop and override; audit, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify actor, identity, authority, scope, mode, decision, source, time, action, result, reviewer, and limitation. Command presence proves neither legitimacy nor correctness without evidence and scope.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, authority, delegation, expiry, conflict, escalation, stop, override, communication, audit, unavailable commander, automation failure, and recovery. Test unauthorized and ambiguous command.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared command, hidden delegation, unrevocable automation, no stop path, authority by chat alone, multiple conflicting commanders, emergency exception permanent, and status without decision record.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze unsafe action, revoke authority, establish accountable commander, preserve records, communicate, restore safe mode, and reassess decisions. Reopen on authority, actor, mode, system, incident, or policy change.
+
+COMPLETION CRITERIA
+
+Actors, authority, modes, decisions, delegation, communication, stop, override, evidence, audit, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve authority matrix, delegations, command timeline, decisions, communications, incidents, evidence, exceptions, and open gaps. Hand off to Operations, Incident, Continuity, Safety, Security, Governance, and Retirement.
+
+RELATED CODEX SECTIONS
+
+003 Authority and Delegation; 029 Operational Architecture; 214 Incident Response; 319 Incident Management; 326-331 Continuity, DR, Restore, Failover, and Readiness; 402-406 Review and Retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, authority, operations, incident, continuity, safety, and human-control context, and the integration roadmap. Exact actors, authorities, modes, emergency, delegation, communication, and acceptance authority remain unresolved.

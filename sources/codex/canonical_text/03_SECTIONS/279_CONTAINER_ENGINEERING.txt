@@ -1,0 +1,95 @@
+SECTION 279 — Container Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Build, secure, configure, distribute, run, observe, update, and retire container images and workloads with explicit isolation, identity, resource, and provenance.
+
+REQUIRED OUTCOME
+
+A container model with image source, digest, build, dependencies, runtime identity, filesystem, network, resource limits, secrets, registry, vulnerability, lifecycle, and recovery.
+
+WHY THIS MATTERS
+
+Containers package application and supply-chain behavior but do not automatically provide isolation, security, or reproducibility. Mutable tags, root privileges, host access, and image drift can create broad exposure.
+
+APPLICABILITY
+
+Apply when containers package or run application, infrastructure, data, model, or tooling workloads.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no container image or runtime behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use package, dependency, build, artifact, platform, identity, network, storage, security, secrets, and operations baselines.
+
+REQUIRED INPUTS
+
+Image, digest, source, build, packages, runtime, identity, filesystem, network, resource, secrets, registry, policy, telemetry, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve image, registry, runtime privilege, resources, data, exceptions, deployment, and retirement. Humans accept isolation and host risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized image manifests, Dockerfiles or equivalent, scans, and runtime metadata; draft hardening and tests; and identify drift. It must not pull untrusted code into privileged context, change runtime, or promote images without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Container Engineer, Security Auditor, Build Engineer, Platform Engineer, Dependency Manager, Tester, Verifier, Implementer, Analyst, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define image and runtime policy; build and scan; pin digest; minimize image; secure identity and filesystem; limit resources and network; run; observe; update; rollback; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show image, digest, source, registry, runtime identity, privilege, resource, network, evidence, and limitation. Require human approval for privileged, host, data, registry, and production actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use non-root, read-only, minimal images, signed provenance, resource and network policy, secret injection, immutable digest, isolation, health, and graceful shutdown.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show image, digest, workload, runtime, privilege, resources, findings, evidence freshness, owner, and authorized deploy, restrict, restart, roll back, quarantine, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Container charter; image and registry policy; build and scan; runtime and resource model; deployment and recovery; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify image, digest, source, build, registry, runtime, host, identity, method, time, result, and limitation. Tag or process status proves neither exact image nor isolation.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify image provenance, vulnerabilities, privilege, filesystem, network, secrets, resources, health, shutdown, update, rollback, isolation, and recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Mutable tag, root, host socket, broad network, secrets in image, unbounded resources, image scan without runtime test, and restart used as recovery without state analysis.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine workload or image, preserve logs, roll back or replace, rotate credentials, restore state, and reassess host and downstream impact. Reopen on image, runtime, host, registry, or policy change.
+
+COMPLETION CRITERIA
+
+Image, runtime, identity, privilege, resources, registry, security, evidence, recovery, owners, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve images, digests, manifests, scans, runtime config, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Orchestration, Platform, Build, Security, Release, and Operations.
+
+RELATED CODEX SECTIONS
+
+260-262 Dependency, Package, and Artifact; 264-268 Build and Delivery; 280 Container Orchestration; 301-330 Operations; 380-381 Patching.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, container, supply-chain, security, and operations context, and the integration roadmap. Exact runtime, registry, host, policy, data, isolation, and acceptance authority remain unresolved.

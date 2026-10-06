@@ -1,0 +1,95 @@
+SECTION 375 — Corrective Maintenance
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Restore or correct a failed, degraded, defective, or nonconforming asset or service safely while preserving evidence, root-cause learning, and user or operational continuity.
+
+REQUIRED OUTCOME
+
+A corrective-maintenance model with failure, triage, safety, diagnosis, repair, replacement, rollback, test, verification, communication, and recurrence tracking.
+
+WHY THIS MATTERS
+
+Fast repair can hide the cause or create a second failure. Corrective work must balance restoration with safety, evidence, data integrity, and prevention.
+
+APPLICABILITY
+
+Apply after failure, defect, incident, nonconformance, degradation, vulnerability, or unsafe condition requires repair or correction.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no failure or corrective work exists and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use incident, problem, maintenance, safety, quality, change, security, backup, recovery, and operations baselines.
+
+REQUIRED INPUTS
+
+Failure, asset, impact, evidence, safety, owner, diagnosis, repair, part, change, test, rollback, communication, and recurrence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners triage, protect people, authorize repair, access, change, replacement, service reduction, and return. Qualified specialists judge safety and technical cause.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize authorized failure data, draft diagnosis and repair options, and identify patterns. It must not control equipment, apply repair, delete evidence, or declare safe return without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Corrective Maintenance Engineer, Incident Responder, Problem Manager, Hardware Engineer, Software Engineer, Safety Reviewer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Protect and triage; preserve evidence; diagnose; choose repair or substitute; obtain approval; execute; test; return or rollback; communicate; review recurrence; and update maintenance.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show failure, asset, impact, evidence, diagnosis, action, safety, authority, and limitation. Require human approval for repair, replacement, production, data, safety, and return.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use safe mode, isolation, backup, replacement, rollback, evidence, change, test, recovery, and known-good baseline. Separate emergency repair from permanent correction.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show failure, severity, asset, repair, safety, evidence freshness, owner, and authorized isolate, repair, replace, rollback, verify, communicate, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Corrective-maintenance record; failure and evidence; diagnosis and repair; test and return; recurrence and problem link; decision, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify failure, asset, source, method, time, action, operator, result, safety, and limitation. Repair completion proves action, not root cause or recurrence prevention.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify safety, repair, part, configuration, test, data integrity, rollback, return, user outcome, recurrence, and problem linkage. Test incomplete repair and repeat failure.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Repair before evidence, unsafe shortcut, symptom fix only, no test, no user notice, replacement without trace, and closure with recurrence ignored.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize, preserve evidence, use alternate, repair or replace, communicate, verify, and reassess. Reopen on repeat failure, new evidence, unsafe condition, or invalid diagnosis.
+
+COMPLETION CRITERIA
+
+Failure, impact, asset, evidence, safety, repair, test, authority, recurrence, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending qualified acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve failure, repair, test, parts, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Problem, Preventive, Adaptive, Quality, Safety, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+319-320 Incident and Problem; 374 Maintenance; 376-377 Preventive and Adaptive; 228 Quality; 252 Safety; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, maintenance, incident, quality, safety, and recovery context, and the integration roadmap. Exact assets, failures, repair authority, evidence, parts, safety, tests, and acceptance authority remain unresolved.

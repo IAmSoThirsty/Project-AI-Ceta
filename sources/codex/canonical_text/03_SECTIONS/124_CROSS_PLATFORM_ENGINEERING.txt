@@ -1,0 +1,99 @@
+SECTION 124 - Cross-Platform Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering for one product or capability delivered across multiple operating systems, form factors, runtimes, or device classes while preserving approved behavior, accessibility, security, performance, and platform-appropriate interaction.
+
+REQUIRED OUTCOME
+
+A cross-platform baseline with shared contracts, explicit platform variations, parity decisions, build reproducibility, compatibility evidence, ownership, release sequencing, and safe divergence rules.
+
+WHY THIS MATTERS
+
+Shared code reduces duplication but can hide platform differences, inaccessible defaults, lowest-common-denominator design, or a failure that affects every target simultaneously. Explicit variation prevents false parity.
+
+APPLICABILITY
+
+Applies when a shared codebase, framework, component system, generated client, shared service, or common release serves two or more platforms or device families.
+
+NON-APPLICABILITY CONDITIONS
+
+Non-applicability may be recorded for a single-platform implementation with no shared target contract or portability claim. Record the controlling scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires product requirements, platform inventory, supported versions, design and accessibility contracts, shared API and data contracts, build tooling, dependency policy, security model, test matrix, release authority, and support ownership.
+
+REQUIRED INPUTS
+
+Provide target platforms, capability map, parity requirements, allowed variations, performance and accessibility thresholds, localization, permissions, network, data, telemetry, packaging, rollout, and retirement constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The human owner decides which behavior must be equal, where platform variation is required, acceptable residual risk, support scope, release order, and acceptance. Humans approve exceptions and may stop a common release.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare implementations, find divergence, draft adapters and tests, and analyze compatibility. It must not equate compilation with parity, invent platform capabilities, or merge, release, or weaken controls without authorization.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Researcher, User Experience Reviewer, Accessibility specialist, Security Auditor, Implementer, Refactorer, Tester, Verifier, Governance Reviewer, Documentation Writer, Memory Curator, Coordinator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Declare targets, shared scope, platform boundaries, and parity obligations.
+2. Classify shared behavior, platform services, adapters, variations, and unsupported capabilities.
+3. Define common contracts, feature flags, compatibility rules, accessibility, security, performance, and release sequencing.
+4. Test each target and cross-target behavior, including divergence and failure containment.
+5. Baseline, release, monitor, correct, and retire with traceable exceptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose target platform, shared or native path, evidence, confidence, and unresolved differences. Human review is required for parity exceptions, permissions, user harm, security, accessibility, and rollout. AI failure must not remove native status or recovery controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate shared domain logic from platform adapters, UI, storage, identity, notifications, sensors, and lifecycle services. Version contracts and feature flags; isolate platform failures; prevent shared dependency defects from silently propagating.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show target matrix, parity state, known differences, build identity, rollout, failed targets, evidence freshness, and controls to pause a target, narrow scope, approve an exception, or roll back within authority.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Cross-platform charter, target matrix, capability and parity map, shared contracts, adapter design, variation register, build records, compatibility and accessibility evidence, release plan, exception register, and continuity handoff.
+
+EVIDENCE REQUIREMENTS
+
+Identify target, version, device, build, dependency, configuration, test path, result, and limitations. Parity claims require comparable scenarios and must separate behavioral, visual, performance, accessibility, and security evidence.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify shared and platform-specific behavior, feature flags, permissions, storage, networking, accessibility, localization, performance, upgrade, offline, failure isolation, packaging, rollout, rollback, and target-specific recovery.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Treating shared code as identical behavior; testing only one target; hiding native differences; coupling release timing unnecessarily; using incompatible defaults; common dependency single points of failure; and accepting the weakest platform as universal design.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine a failing target or shared dependency, preserve prior stable versions, disable affected capabilities, use platform-specific fallback, communicate scope, and reopen parity and risk decisions before restoring common rollout.
+
+COMPLETION CRITERIA
+
+Targets, contracts, variations, controls, evidence, test coverage, release authority, and fallback are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve target matrix, build graph, shared revision, exceptions, evidence, decisions, and next safe action. Hand off to Mobile, Native, Browser, Frontend, API, Testing, Security, Accessibility, Release, Operations, and Maintenance sections.
+
+RELATED CODEX SECTIONS
+
+118 Frontend Engineering; 121 Web Engineering; 123 Mobile Engineering; 125 Native Application Engineering; 126 Browser Engineering; 248 Compatibility Testing; 264 Build Engineering; 287 Release Engineering; 296 Feature Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 019-020, Sections 107-123, Owner Cockpit Requirements, and Status and Evidence Lexicon. Exact platform populations, framework support lifetimes, accessibility baselines, vendor constraints, and parity thresholds remain unresolved until supplied.

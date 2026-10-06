@@ -1,0 +1,95 @@
+SECTION 314 — Monitoring
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Continuously observe defined states, thresholds, outcomes, and signals and route meaningful deviations to accountable humans or controlled automation.
+
+REQUIRED OUTCOME
+
+A monitoring model with targets, signals, thresholds, frequency, source, owner, alert action, escalation, privacy, retention, cost, and blind spots.
+
+WHY THIS MATTERS
+
+Monitoring fails when signals are noisy, thresholds arbitrary, actions unowned, or dashboards disconnected from users. No alert can mean healthy, blind, broken, or unmonitored.
+
+APPLICABILITY
+
+Apply when ongoing observation supports operations, security, safety, capacity, quality, compliance, or user outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no ongoing state or outcome needs observation and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use observability, metrics, logs, traces, service levels, incident, privacy, security, cost, and operations baselines.
+
+REQUIRED INPUTS
+
+Target, outcome, signal, source, threshold, frequency, context, owner, alert, escalation, retention, privacy, and response.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define what matters and response; operators tune and act; privacy and security owners approve collection; humans decide severity and action.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize monitoring, identify anomalies, draft thresholds and alerts, and recommend investigation. It must not suppress, alter, attribute, or act on alerts beyond authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Monitoring Engineer, SRE, Operations Engineer, Security Auditor, Analyst, Observer, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define targets; instrument; set thresholds; collect; validate; alert; triage; tune; protect and retain; test false positives and misses; review after change; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show target, signal, threshold, source, owner, action, evidence, privacy, and limitation. Require human approval for alert action, threshold, retention, and response.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use multi-signal health, business context, resilient collectors, time alignment, access, redaction, alert routing, and safe behavior when monitoring fails.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show target, signal health, threshold, alerts, owner, evidence freshness, cost, and authorized acknowledge, tune, mute with expiry, escalate, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Monitoring charter; target and signal inventory; threshold and alert catalog; routing and escalation; test, incident, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify target, signal, source, threshold, period, method, result, owner, action, and limitation. Alert absence proves only the monitored signal and coverage.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify signal, threshold, route, escalation, latency, privacy, retention, cost, false positive, false negative, collector failure, and action. Test detection of known scenarios.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Alert fatigue, mute without expiry, threshold by habit, no owner, collector single point, metric without action, and monitoring health confused with target health.
+
+RECOVERY AND RECONSIDERATION
+
+Restore collector, preserve evidence, use alternate signal, notify owners, and reassess blind period and impact. Reopen on target, signal, threshold, service, or incident change.
+
+COMPLETION CRITERIA
+
+Targets, signals, thresholds, owners, alerts, actions, evidence, privacy, retention, cost, blind spots, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve monitoring configs, alerts, incidents, gaps, decisions, evidence, exceptions, and open gaps. Hand off to Observability, Logging, Tracing, Metrics, SRE, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+313 Observability; 315-317 Logging, Tracing, and Metrics; 301-312 Operations; 318-330 Incident, Capacity, Availability, Performance, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, monitoring, observability, security, and operations context, and the integration roadmap. Exact targets, signals, thresholds, tools, staffing, privacy, and acceptance authority remain unresolved.

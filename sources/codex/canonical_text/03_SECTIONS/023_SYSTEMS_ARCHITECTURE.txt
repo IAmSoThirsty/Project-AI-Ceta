@@ -1,0 +1,332 @@
+SECTION 023 — Systems Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed structural architecture of a system of interest so its elements, responsibilities, interfaces, dependencies, authority, state, data, control, evidence, trust, failure, recovery, deployment, operation, maintenance, and retirement can be understood and verified as one coherent whole.
+
+Systems Architecture converts the whole-system definition established through Requirements Engineering, Systems Engineering, Enterprise Architecture, and Solution Architecture into explicit architectural views and contracts. It identifies what the system is made of, how the parts interact, where truth and authority reside, how failures are contained, how critical journeys remain controllable, and how the architecture can evolve without losing evidence or owner command.
+
+This section does not treat diagrams as implementation, permit technology preference to replace requirements, or allow a model-generated architecture to become authoritative through fluency alone. It preserves the difference between proposed, approved, implemented, integrated, verified, validated, operational, and retired states.
+
+REQUIRED OUTCOME
+
+- A declared system-of-interest boundary with external actors, enabling systems, dependent systems, environments, jurisdictions, trust zones, lifecycle horizon, and excluded scope.
+- A set of architecture drivers traceable to requirements, risks, constraints, mission threads, owner journeys, operational concepts, enterprise principles, solution decisions, and lifecycle obligations.
+- Credible architecture alternatives evaluated against the same authorized criteria, mandatory constraints, evidence, assumptions, cost, complexity, human impact, reversibility, and operational burden.
+- A selected, conditionally selected, or advisory systems architecture with decision owner, authority state, rationale, dissent, conditions, rejected alternatives, and reopening triggers.
+- Logical, functional, behavioral, information, data, software, hardware, network, deployment, runtime, security, privacy, safety, reliability, resilience, observability, governance, and lifecycle views as applicable.
+- A decomposition into bounded system elements with purpose, responsibilities, inputs, outputs, state ownership, data handled, authority level, trust level, dependencies, interfaces, failure behavior, recovery behavior, operational owner, and verification method.
+- Explicit architectural invariants and forbidden states that cannot be traded away through local optimization or convenience.
+- Versioned interface contracts covering semantics, identifiers, protocol, timing, units, authentication, authorization, validation, compatibility, idempotency, timeout, retry, cancellation, reconciliation, errors, evidence, and audit behavior.
+- End-to-end mappings for critical owner, user, operator, safety, security, recovery, and evidence journeys across all participating elements.
+- Failure-domain, dependency, degradation, containment, recovery, rollback, backup, restore, and continuity architecture.
+- Deployment, configuration, secrets, environment, supply-chain, observability, support, maintenance, migration, modernization, deprecation, and retirement architecture.
+- An architecture-to-requirement and architecture-to-evidence trace that exposes unresolved allocations, unproven claims, and stale assumptions.
+- A durable handoff to specialist architecture and engineering sections without requiring downstream workers or agents to invent material structure, ownership, or authority.
+
+WHY THIS MATTERS
+
+A system may contain individually competent components and still fail as a system. Interfaces can disagree about meaning, timing, authority, state, or error handling. Multiple services can each believe they own the same truth. A local retry can duplicate an irreversible effect. A frontend can display completion while the governed operation remains unverified. A model can produce a valid-looking command outside its authority. Recovery can depend on the same failed dependency that caused the incident.
+
+Systems Architecture makes these whole-system relationships visible before they are hardened into code, infrastructure, hardware, procedures, prompts, contracts, and organizational dependencies. It creates a reviewable basis for asking whether every requirement is structurally possible, every critical interface has an owner and contract, every consequential action crosses a governed boundary, every failure has a bounded consequence, and every material claim can be connected to evidence.
+
+For human-AI systems, the architecture is also a relationship boundary. The architecture must keep proposal separate from authorization, capability separate from permission, orchestration separate from final authority, and conversational convenience separate from governed execution. Human control must remain available when models, providers, networks, or agents fail.
+
+APPLICABILITY
+
+- The system contains multiple components, services, devices, models, agents, repositories, data stores, networks, facilities, suppliers, environments, or operators.
+- The system crosses trust, authority, identity, organizational, jurisdictional, physical, safety, security, privacy, or evidence boundaries.
+- Requirements must be allocated across interacting elements and cannot be proven by one component alone.
+- Critical behavior depends on sequencing, state transitions, concurrency, timing, consistency, availability, recovery, or external dependencies.
+- The system includes AI-assisted decisions, agent delegation, autonomous behavior, tool execution, or model-generated action proposals.
+- Existing architecture is being changed through migration, modernization, decomposition, consolidation, replacement, integration, or retirement.
+- Failure could cause material harm, loss, deception, privilege escalation, data corruption, evidence loss, operational blindness, or loss of owner control.
+- Architecture must support multiple environments or modes without weakening authority, evidence, or recovery boundaries.
+
+NON-APPLICABILITY CONDITIONS
+
+- A small, isolated, reversible change is fully covered by a current approved architecture, changes no system boundary, requirement allocation, interface, state owner, authority, data, failure domain, dependency, environment, recovery path, or lifecycle obligation, and impact analysis confirms that conclusion.
+- The work is exploratory modeling or prototyping and makes no claim of implementation, integration, readiness, or operational suitability. The prototype must still identify its boundary and limitations.
+- An active safety, security, privacy, integrity, or authority incident requires containment before architecture work can proceed safely.
+- Required evidence or access is unavailable and the resulting architecture would be speculative. Such work may be retained only as a labeled hypothesis or option.
+- The requested architecture would require unauthorized access to protected systems, data, credentials, facilities, suppliers, or people.
+
+A non-applicability decision must identify the controlling architecture, exact version and environment, scope, evidence, authority, assumptions, and reopening trigger. Familiarity, low code volume, or generated diagrams are not sufficient.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 001-022 as applicable, especially the approved objective, requirements baseline, system context, operational concept, allocations, enterprise constraints, solution decisions, feasibility conditions, risk treatments, user journeys, domain model, and lifecycle obligations.
+- A legitimate human architecture decision owner and explicit authority for scope, standards, exceptions, risk acceptance, deployment, migration, and retirement decisions.
+- Current-state evidence for existing system elements, interfaces, data, state, software, hardware, infrastructure, environments, dependencies, providers, operations, incidents, and recovery.
+- Controlled terminology, identifiers, configuration items, versions, architecture decisions, interface records, evidence, and change history.
+- Access to relevant specialists and affected operators, users, maintainers, security, privacy, safety, reliability, accessibility, and governance reviewers.
+- A process for architectural review, exception, experiment, change control, invalidation, rollback, safe halt, and owner ratification.
+
+REQUIRED INPUTS
+
+- Authorized objective, system-of-interest boundary, non-goals, lifecycle horizon, environments, users, operators, affected parties, and decision owner.
+- Approved and proposed requirements, criticality, applicability, variants, waivers, acceptance criteria, verification methods, and unresolved conflicts.
+- Systems Engineering outputs: context, operational concept, mission threads, system elements, allocations, interfaces, measures, baselines, integration, verification, validation, transition, support, and retirement obligations.
+- Enterprise and Solution Architecture outputs: principles, standards, shared services, target and transition states, solution context, components, interface catalogue, deployment constraints, decisions, exceptions, and roadmaps.
+- Domain Analysis and Domain Architecture inputs: terminology, bounded contexts, domain rules, invariants, entities, value objects, events, states, source-of-truth ownership, translations, and external authorities.
+- Current code, repositories, schemas, APIs, events, data stores, hardware, network, identity, policy, configuration, secrets, build, deployment, runtime, observability, evidence, support, and incident records.
+- Known workloads, timing, scale, capacity, performance, availability, reliability, resilience, security, privacy, safety, accessibility, and compliance conditions.
+- External dependencies, supplier contracts, provider limits, service levels, jurisdictions, licenses, facilities, credentials, and continuity arrangements.
+- Assumptions, unknowns, technical debt, constraints, prior decisions, rejected alternatives, open findings, accepted risks, and evidence that would change the architecture.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The authorized human remains responsible for the objective, architecture boundary, value tradeoffs, mandatory constraints, standards, exceptions, risk acceptance, resource commitments, irreversible choices, and final architecture decision.
+
+- Confirm the system boundary, critical journeys, architecture drivers, mandatory constraints, and decision criteria.
+- Identify which decisions are advisory, conditionally delegated, or reserved for human determination.
+- Approve or reject material architecture decisions, exceptions, technology commitments, external dependencies, and transition plans.
+- Resolve conflicts involving mission, values, safety, privacy, security, accessibility, legal obligations, operational burden, cost, and affected-party impact.
+- Authorize experiments, prototypes, access, data use, provider evaluation, destructive testing, migration, and rollback.
+- Ensure operational owners, maintainers, support, incident responders, and retirement authorities are identified.
+- Accept residual risk only with visible evidence, scope, expiry, monitoring, and reopening conditions.
+- Ratify only the exact architecture scope and evidence actually reviewed.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect, extract, model, compare, trace, simulate, draft, challenge, and explain systems architecture within an explicit task and authority envelope. AI may not invent the objective, authority, implementation state, external dependency, performance result, risk acceptance, or final architecture decision.
+
+- Separate observed current state, inherited requirement, inference, assumption, option, recommendation, decision, implementation, and verified evidence.
+- Preserve exact source, version, environment, identity, provenance, freshness, and applicability for material architecture claims.
+- Generate candidate decompositions, views, contracts, alternatives, failure hypotheses, and test paths as proposals rather than established truth.
+- Detect missing owners, duplicated authority, conflicting sources of truth, circular dependencies, hidden coupling, weak interfaces, unbounded retries, single points of failure, stale evidence, and recovery paths that depend on failed components.
+- Trace every proposed element and interface to requirements, journeys, domain meaning, risks, and verification obligations.
+- Keep capability separate from permission. A model, agent, service, or tool may be technically capable while having no authority to act.
+- Never allow model output to bypass deterministic validation, authorization, policy, action state, evidence, or audit controls.
+- Preserve dissent and incompatible options instead of manufacturing one architecture for apparent completeness.
+- State when evidence is insufficient and identify the smallest safe experiment or owner decision needed.
+- Avoid selecting technologies solely because they are familiar, popular, available to the model, or convenient to generate.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Primary roles:
+
+- Architect
+- Analyst
+- Researcher
+
+Common supporting roles:
+
+- Planner
+- Coordinator
+- Security Auditor
+- Governance Reviewer
+- Observer
+- Documentation Writer
+- Memory Curator
+- User Experience Reviewer
+
+Challenge and assurance roles where consequence warrants:
+
+- Critic
+- Tester
+- Verifier
+- Red Team
+- Decision Arbiter
+
+Implementation remains separately authorized and belongs to the Implementer only when execution authority, scope, target, constraints, and evidence requirements are explicit. The role that proposes or implements an architecture must not be the sole independent verifier where consequence requires separation.
+
+REQUIRED ACTIVITIES
+
+1. Confirm architecture authority, scope, system boundary, environments, lifecycle horizon, and intended downstream use.
+2. Inspect the actual current state before proposing a target state.
+3. Identify architecture drivers from requirements, risks, journeys, operational concepts, enterprise principles, solution decisions, and lifecycle obligations.
+4. Classify each driver as mandatory constraint, measurable objective, preference, assumption, unknown, or proposal.
+5. Establish architecture evaluation criteria and the human authority behind any weighting or priority.
+6. Define credible architecture alternatives, including no-change, staged, reversible, and reduced-scope options where materially available.
+7. Decompose the system into bounded elements with single, explicit responsibilities and ownership.
+8. Define state ownership, sources of truth, data authority, evidence authority, and control authority.
+9. Define all critical interfaces and their contracts, including failure and recovery semantics.
+10. Map end-to-end user, owner, operator, security, safety, evidence, recovery, migration, and retirement journeys.
+11. Identify trust boundaries, privileged operations, external dependencies, failure domains, blast radius, and containment controls.
+12. Model normal, boundary, degraded, denied, partial, timeout, retry, cancellation, recovery, rollback, and safe-halt behavior.
+13. Define consistency, concurrency, ordering, idempotency, reconciliation, and duplicate-effect controls where state changes cross boundaries.
+14. Define identity continuity, authentication, authorization, delegation, revocation, approval binding, and separation of duties.
+15. Define evidence generation, correlation, provenance, integrity, freshness, supersession, export, and retention architecture.
+16. Define observability for both owner comprehension and engineering diagnosis, including dependencies and degraded state.
+17. Define deployment topology, environment separation, configuration, secrets, supply chain, build, release, migration, and rollback.
+18. Define capacity, performance, availability, reliability, resilience, maintainability, supportability, accessibility, portability, compatibility, and cost implications.
+19. Define verification, validation, hostile review, owner acceptance, and architecture conformance methods.
+20. Record decisions, alternatives, assumptions, unknowns, dissent, exceptions, risks, experiments, evidence, and reopening triggers.
+21. Create a dependency-aware implementation and transition sequence that preserves rollback and continuity.
+22. Produce a durable handoff and confirm that downstream sections can proceed without hidden conversational memory.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- The AI must identify itself and its assigned role when its output may be mistaken for human judgment or institutional authority.
+- Proposed architecture decisions must be labeled as proposals or recommendations until the legitimate decision owner acts.
+- Material assumptions and unknowns must appear next to the affected architecture view or decision, not be buried in a general caveat.
+- The human must be able to inspect alternatives, criteria, evidence, dissent, consequences, reversibility, and unresolved risks before authorization.
+- AI-generated diagrams, matrices, scores, and models must expose their source basis and limitations.
+- The AI must not pressure the owner to accept an option merely because it generated a complete-looking design.
+- Consequential execution must require a separate governed action with explicit target, scope, authority, inputs, expected effect, evidence, and recovery.
+- The human must be able to stop, defer, revoke, narrow, or supersede delegated architecture work.
+- Critical status, stop, recovery, and evidence access must remain usable when AI or external providers are unavailable.
+- Durable architecture records must preserve continuity outside the chat session.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+The systems architecture must preserve a coherent owner experience while enforcing separation of concerns. At minimum, it must distinguish:
+
+- Owner and user experience surfaces from authoritative state and permission.
+- Governed action gateway from presentation and conversational interfaces.
+- Orchestration and agent coordination from final human authority.
+- Domain services from duplicated frontend business logic.
+- Operational state from evidence, audit, and historical truth.
+- Observability from the authoritative state it describes.
+- Repository-controlled components from external infrastructure, credentials, providers, and jurisdictions.
+- Model-generated proposals from deterministic validation and governed execution.
+
+The architecture must define minimum trust boundaries between client and governed backend, identity and authorization, model proposal and action validation, internal system and external infrastructure, operational state and evidence ledger, and imported content and executable instruction.
+
+Every system element must have a bounded purpose, explicit owner, contract, failure behavior, recovery path, and verification method. Shared services and cross-cutting concerns must not become ownerless global state. Architecture views must remain mutually consistent or the artifact set must be classified as inconsistent until reconciled.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+The owner must be able to:
+
+- See the active system version, environment, mode, architecture baseline, current condition, degraded dependencies, and pending authority.
+- Navigate from a critical journey or action to participating elements, interfaces, decisions, evidence, risks, and recovery paths.
+- Distinguish current, proposed, approved, implemented, integrated, verified, validated, operational, deprecated, and retired architecture states.
+- Inspect which component owns state, data, policy, authority, execution, evidence, and recovery for a consequential action.
+- See assumptions, unknowns, exceptions, dissent, stale evidence, and unresolved architecture decisions.
+- Review the consequence and reversibility of a proposed architecture or transition decision before approval.
+- Stop, cancel, defer, revoke, quarantine, rollback, or request human review within defined authority.
+- Operate essential status, stop, evidence, backup, restore, and recovery controls without dependence on conversational AI.
+- Export architecture records, interface contracts, evidence, decisions, and continuity state in durable form.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Systems architecture charter and boundary statement.
+- Architecture driver and constraint register.
+- Current-state, target-state, and transition architecture views.
+- Architecture alternatives and tradeoff analysis.
+- Architecture decision and dissent records.
+- System element and responsibility catalogue.
+- Interface control catalogue and versioned contracts.
+- State ownership and source-of-truth model.
+- Data, control, authority, identity, event, evidence, and trust-flow models.
+- Critical journey and mission-thread maps.
+- Dependency, failure-domain, blast-radius, degradation, recovery, rollback, backup, and restore models.
+- Security, privacy, safety, reliability, resilience, accessibility, governance, and operational views.
+- Deployment, environment, configuration, secrets, supply-chain, and external-dependency model.
+- Observability, support, maintenance, migration, modernization, deprecation, and retirement model.
+- Requirements-to-architecture and architecture-to-evidence traceability matrices.
+- Verification, validation, hostile-review, and owner-acceptance plan.
+- Exception, assumption, unknown, risk, open-decision, and reopening registers.
+- Dependency-aware implementation and transition roadmap.
+- Durable architecture handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Evidence may include authoritative requirements and decisions, current architecture and configuration, source inspection, code, schemas, interface definitions, hardware records, deployment manifests, dependency and supplier records, runtime observations, traces, logs, metrics, incidents, tests, prototypes, benchmarks, failure exercises, recovery drills, security and privacy review, accessibility evaluation, owner journeys, support records, and operational history.
+
+Every material architecture claim must identify the exact source or artifact, version, environment, method, result, limitations, freshness, and relationship to the claim. A diagram, design pattern, vendor statement, model output, static analysis result, passing unit test, or demonstration cannot by itself prove whole-system behavior, production operation, security, accessibility, resilience, or owner usability.
+
+Evidence must be invalidated or reviewed when material requirements, architecture decisions, interfaces, policies, models, providers, environments, data flows, authority, or critical journeys change.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace every material requirement and risk treatment to one or more architecture elements, interfaces, controls, or visible unresolved states.
+- Enumerate every consequential command path and verify uniform authority, policy, action-state, evidence, and audit enforcement.
+- Tamper with client state and confirm it cannot create authority, approval, execution success, or verification success.
+- Trace one critical journey end to end through identity, gateway, orchestration, domain behavior, state, evidence, observability, and recovery.
+- Validate representative valid, invalid, stale, duplicate, unauthorized, and incompatible interface interactions.
+- Force dependency outage, timeout, partial response, replay, version mismatch, and corrupted evidence; inspect containment and owner-visible state.
+- Complete execution while independent verification fails and confirm those states remain distinct.
+- Revoke delegated authority during work and verify safe stop, reconciliation, evidence, and residual-state handling.
+- Disable AI and non-critical providers and confirm essential owner controls remain usable.
+- Exercise backup, restore, rollback, reconnection, migration reversal, and recovery from a clean restart.
+- Change a material architecture input after approval and confirm affected evidence, decisions, and downstream work are invalidated or reopened.
+- Have an owner or authorized operator complete critical journeys, inspect evidence, and recover from failure without hidden coaching.
+- Rebuild or reconstruct the architecture baseline from durable records without chat memory.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Diagram-as-proof or model-output-as-authority.
+- Technology-first decomposition that substitutes tools for requirements.
+- Frontend authority, local success flags, or browser-held source of truth.
+- Multiple owners for one authoritative state without reconciliation rules.
+- Ownerless shared state or cross-cutting service.
+- Implicit interface semantics, hidden retries, or unbounded fallback.
+- Direct UI, model, agent, or alternate-client bypass around governed action controls.
+- Capability treated as permission or role title treated as authority.
+- Circular hard dependencies and recovery paths that depend on failed components.
+- Split policy enforcement across inconsistent paths.
+- Conflated proposal, approval, execution, verification, validation, and acceptance.
+- Happy-path-only architecture with no degraded, denied, partial, or recovery states.
+- Stale evidence or approval surviving a material architecture change.
+- External provider, capacity, availability, or compliance assumed rather than evidenced.
+- Security, privacy, safety, accessibility, reliability, resilience, support, or retirement deferred without an explicit owner and condition.
+- Global architecture score that hides failed mandatory constraints.
+- Unreviewed generated implementation represented as architecture conformance.
+
+RECOVERY AND RECONSIDERATION
+
+When the systems architecture is blocked, contradicted, or disproven:
+
+1. Identify the exact requirement, decision, element, interface, dependency, assumption, authority, environment, or evidence affected.
+2. Preserve the prior architecture, failed evidence, dissent, incident record, and supersession chain.
+3. Classify the issue as source, scope, requirement, domain, architecture, interface, provider, environment, security, privacy, safety, reliability, resilience, governance, operation, or lifecycle related.
+4. Contain affected work and identify safe work that may continue without compromising truth or authority.
+5. Select the smallest admissible experiment, evidence request, architecture change, scope reduction, dependency replacement, rollback, or owner decision.
+6. Re-evaluate alternatives, mandatory constraints, tradeoffs, migration, recovery, and downstream effects.
+7. Update the architecture baseline, decision records, interface contracts, traceability, tests, and continuity map.
+8. Invalidate stale approvals, evidence, and downstream claims.
+9. Require renewed human authorization where scope, consequence, authority, risk, or irreversibility changes.
+
+COMPLETION CRITERIA
+
+Systems Architecture is DRAFT-complete only when:
+
+- Scope, system boundary, lifecycle, environments, authority, architecture drivers, and mandatory constraints are explicit.
+- Current-state evidence is separated from target and transition proposals.
+- Credible alternatives and tradeoffs are recorded.
+- Every major requirement maps to an architecture element or visible unresolved state.
+- Every critical element has a responsibility, owner, interfaces, state and data authority, failure behavior, recovery path, and verification method.
+- Every critical interface has a versioned contract and accountable owners.
+- Trust, identity, authority, control, evidence, and failure boundaries are explicit.
+- Critical journeys, degraded modes, safe halt, recovery, backup, restore, migration, rollback, support, maintenance, and retirement are addressed.
+- Human and AI authority boundaries are explicit and owner control remains architecturally possible.
+- Evidence, verification, validation, hostile review, and owner acceptance paths are defined.
+- Assumptions, unknowns, dissent, exceptions, risks, and reopening triggers remain visible.
+- The downstream handoff is durable and requires no invention of material structure or authority.
+
+CONTENT-COMPLETE does not mean source-reconciled, hostile-reviewed, owner-accepted, implemented, integrated, verified, validated, deployed, or production-ready.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+The handoff must include the exact objective, scope, architecture baseline, requirements and allocations, drivers, decisions, alternatives, elements, interfaces, contracts, state ownership, data and authority flows, trust boundaries, failure and recovery models, deployment, operations, support, risks, evidence, tests, exceptions, dissent, open decisions, versions, hashes, and next safe action.
+
+Section 024 and later specialist architecture and engineering sections must be able to continue from this durable record without hidden chat memory. Downstream discoveries that invalidate domain meaning, requirements, enterprise constraints, solution decisions, system allocations, or interface assumptions must reopen the affected upstream section through controlled change.
+
+RELATED CODEX SECTIONS
+
+Primary upstream: 001-022.
+
+Primary downstream: 024 Domain Architecture; 025 Business Architecture; 026 Capability Architecture; 027 Process Architecture; 028 Functional Architecture; 029 Operational Architecture; 030 Information Architecture; 031 Data Architecture; 032 Application Architecture; 033 Software Architecture; 034 Platform Architecture; 035 Infrastructure Architecture; 036 Cloud Architecture; 037 Edge Architecture; 038 Distributed Systems Architecture; 039 Network Architecture; 040 Communications Architecture; 041 Integration Architecture; 042 API Architecture; 043 Event-Driven Architecture; 044 Runtime Architecture; 045 Security Architecture; 046 Identity Architecture; 047 Privacy Architecture; 048 Governance Architecture; 049 Compliance Architecture; 050 Safety Architecture; 051 Reliability Architecture; 052 Resilience Architecture; 053 Accessibility Architecture; 054 Content Architecture; 055 Knowledge Architecture; 056 AI Architecture; 057 Machine Learning Architecture; 058 Robotics Architecture; 059 Embedded Systems Architecture; 060 Hardware Architecture; 107-230 engineering; 231-257 testing, verification, and validation; 258-300 delivery and infrastructure; 301-332 runtime and operations; 374-406 maintenance through retirement.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Primary supplied source basis:
+
+- Thirsty's Standard v3 provides truthful scope, current-state inspection, evidence before claims, bounded execution, independent verification, hostile review, continuity, and no fake completion.
+- Thirsty's Agents 101 supplies the unchanged role contracts. Its Architect role requires components, interfaces, dependencies, trust boundaries, data, authority, control, evidence, failure, recovery, alternatives, tradeoffs, implementation sequence, and verification plan.
+- Thirsty's Owner's Cockpit Standard provides reference architecture and separation of concerns, governed action boundaries, authoritative state, action contracts, state machines, versioned schemas, correlation, observability, configuration, delivery, resilience, backup, restore, verification, and owner ratification. It remains a candidate for owner ratification.
+- Thirsty's Standard V4 Design Blueprint contributes draft concepts for prerequisite-aware evidence, artifact consistency, bounded roles, constructive denial, dissent, and trusted transition. It remains draft and unratified.
+- Sections 001-022 provide the current Codex chain from evidence and strategy through requirements, Systems Engineering, Enterprise Architecture, and Solution Architecture.
+
+Unresolved source gaps:
+
+- The supplied corpus does not contain a complete ratified universal Systems Architecture standard for every software, hardware, embedded, cyber-physical, AI, cloud, edge, industrial, medical, financial, public, safety-critical, or regulated system.
+- This draft has not been reconciled against all current external systems, software, hardware, data, security, privacy, safety, reliability, resilience, accessibility, operations, or sector standards.
+- Required notation, architecture framework, assurance independence, performance margins, certification, and artifact depth must be specialized to the actual system and consequence.
+- Later specialist sections may expose missing elements, interfaces, constraints, or lifecycle obligations and must be permitted to reopen this section.
+- STATUS remains CONTENT-COMPLETE.

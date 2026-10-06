@@ -1,0 +1,96 @@
+SECTION 074 — Robotics Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define engineering of robots and autonomous physical agents that perceive, plan, decide, move, manipulate, communicate, and interact with people under bounded authority and safe operating conditions.
+
+REQUIRED OUTCOME
+
+ - A scoped robot, environment, mission, human, sensor, actuator, autonomy, safety, security, and lifecycle model.
+ - Traceable behavior, motion, task, interaction, update, recovery, verification, field, and acceptance evidence.
+
+WHY THIS MATTERS
+
+Robots couple uncertain perception and planning to physical action near people and assets. A successful demonstration can hide collision, localization, battery, communication, manipulation, recovery, or authority failures.
+
+APPLICABILITY
+
+Applies to mobile, stationary, collaborative, industrial, service, medical, aerial, marine, space, and simulated robots with material autonomy or physical effect.
+
+NON-APPLICABILITY CONDITIONS
+
+Concept art or simulation with no claim about physical embodiment, autonomy, safety, task success, or deployment; or an unchanged approved robot baseline with impact recorded. Record reopening conditions.
+
+PREREQUISITES AND DEPENDENCIES
+
+Robot and environment models, mission and task requirements, hardware, control, perception, maps, safety zones, human factors, communications, power, security, test facilities, field rules, and authority.
+
+REQUIRED INPUTS
+
+Robot and environment models, mission and task requirements, hardware, control, perception, maps, safety zones, human factors, communications, power, security, test facilities, field rules, and authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve mission, autonomy, workspace, safety envelope, interaction, data, emergency stop, remote control, fleet release, acceptable risk, and field acceptance. They retain override, isolation, recovery, recall, and retirement authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate plans, analyze logs, detect obstacles or drift, and propose tests. It must reveal uncertainty and authority boundaries; it must not select unapproved missions, enter unsafe space, alter limits, or command physical action without explicit delegation.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Analyst, Implementer, Tester, Verifier, Observer, Safety Auditor, Security Auditor, Governance Reviewer, User Experience Reviewer, Critic, Red Team, Planner, Coordinator, Documentation Writer, Memory Curator, Optimizer, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+Define mission, environment, embodiment, task, human interaction, autonomy modes, sensors, actuators, maps, localization, planning, control, communication, power, safety, security, diagnostics, update, and recovery. Test collision, loss, ambiguity, adversarial conditions, interruption, and recovery.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show robot identity, mission, location, map freshness, autonomy, operator authority, sensor confidence, plan, physical effect, battery, communications, alarms, and stop or teleoperation controls. AI plans remain proposals until authorized and tested.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate mission, perception, localization, planning, control, safety monitor, human interface, and physical actuation. Define bounded autonomy, geofencing, collision avoidance, safe stop, degraded navigation, loss of link, power failure, audit, and recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Expose fleet or robot identity, mode, workspace, task, plan, human authority, safety zones, telemetry, evidence, and controls to pause, stop, isolate, teleoperate, recover, recall, or retire.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Robot architecture and mission model; behavior and autonomy contracts; environment and safety model; perception, planning, control, interaction, update, security, recovery, test, field, incident, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify robot, hardware, software, model, map, environment, task, operator, time, sensors, configuration, method, result, uncertainty, and limitation. A demo, simulation, or average success rate proves only bounded conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify safe stop, geofence, collision response, localization, obstacle and human detection, plan bounds, link loss, power loss, sensor faults, adversarial input, manual control, update rollback, recovery, and independent field reproduction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Treating autonomy as authority; testing only open space; hiding recovery labor; unbounded exploration; stale maps; no independent safety monitor; remote control without latency limits; and measuring task completion while ignoring human or environmental harm.
+
+RECOVERY AND RECONSIDERATION
+
+Stop and isolate the robot, preserve physical and telemetry evidence, notify affected people, use approved teleoperation or recovery, and quarantine affected software or maps. Resume only after safety, security, authority, environment, and evidence review.
+
+COMPLETION CRITERIA
+
+Mission, environment, embodiment, autonomy, human authority, safety, behavior, evidence, tests, update, recovery, field limits, open risks, and acceptance are explicit. Remain CONTENT-COMPLETE pending reconciliation, hostile review, and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve robot and mission identity, maps, models, firmware, logs, plans, decisions, incidents, field population, evidence, and next safe action. Hand off to Embedded, Control, Signal, IoT, AI, Safety, Security, Operations, Testing, and Retirement.
+
+RELATED CODEX SECTIONS
+
+058 Robotics Architecture; 073 Control Systems Engineering; 074 Robotics Engineering; 090 Spatial Interface Design; 091 AR Design; 132 Real-Time Systems; 182 AI Safety; 252 Safety Testing; 355 Device Provisioning.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-073, and owner-control and evidence conventions. Robot class, workspace, autonomy level, human proximity, safety regime, mission, and field authority remain unresolved until supplied.

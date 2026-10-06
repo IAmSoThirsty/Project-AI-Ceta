@@ -1,0 +1,98 @@
+SECTION 147 - Recommendation Systems Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define governed engineering of systems that select, rank, personalize, or suggest items, actions, content, or opportunities under explicit relevance, user-control, fairness, privacy, safety, and evidence constraints.
+
+REQUIRED OUTCOME
+
+A recommendation baseline with objectives, candidates, ranking, feedback, permissions, explanations, evaluation, controls, drift, and lifecycle ownership.
+
+WHY THIS MATTERS
+
+Recommendations allocate attention and opportunity. Optimizing clicks or conversions can create manipulation, exclusion, unsafe exposure, feedback loops, and opaque consequential decisions.
+
+APPLICABILITY
+
+Applies to content, products, people, routes, actions, alerts, jobs, treatments, learning, personalization, and automated prioritization systems.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to explicit user lookup or deterministic navigation with no ranking, personalization, suggestion, feedback, or allocation effect. Record scope, owner, evidence, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires purpose, users, protected outcomes, candidate sources, permissions, ranking objective, feedback, privacy, safety, fairness, explanation, evaluation, and override authority.
+
+REQUIRED INPUTS
+
+Provide candidates, context, features, constraints, ranking, exploration, feedback, exposure, opt-out, fairness, safety, latency, and lifecycle requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve objectives, protected groups, data use, safety rules, explanations, overrides, experimentation, and acceptance. Humans retain authority over high-impact recommendations and appeals.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze candidates and draft ranking changes. It must expose proxy risks, uncertainty, feedback loops, and exclusions; it must not silently personalize consequential choices or suppress appeal.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Researcher, Analyst, Architect, User Experience Reviewer, Privacy Reviewer, Security Auditor, Governance Reviewer, Implementer, Tester, Verifier, Critic, Documentation Writer, Memory Curator, and Red Team. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define purpose, audience, candidates, permissions, constraints, and protected outcomes.
+2. Design retrieval, ranking, exploration, feedback, explanation, opt-out, override, and safety controls.
+3. Evaluate task success, relevance, diversity, fairness, calibration, harm, privacy, and drift.
+4. Monitor, audit, correct, and retire models and policies under approval.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show why an item was shown, source, user controls, context, model or policy, uncertainty, and consequence. Human review is required for high-impact use; nonpersonalized and appeal paths remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate candidate authority, features, ranker, policy filter, personalization, feedback, experiment, explanation, cache, and outcome. Enforce permission and safety before ranking and preserve opt-out.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show model and policy version, audience, exposure, explanation, metrics, drift, protected-group impact, incidents, and controls to pause, narrow, reset, or roll back recommendations.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Recommendation charter, objective and constraint record, candidate and feature catalog, privacy and fairness assessment, evaluation set, experiment record, explanation and appeal design, monitoring, and retirement package.
+
+EVIDENCE REQUIREMENTS
+
+Identify model, policy, data, context, candidate set, audience, exposure, method, result, uncertainty, and limits. Separate ranking metrics from user outcome, fairness, safety, and long-term effects.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify permissions, opt-out, explanation, adversarial inputs, feedback loops, cold start, drift, protected-group outcomes, unsafe content, exploration, caching, and human override.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Click-only objectives; hidden personalization; proxy discrimination; filter bubbles; unsafe exploration; no opt-out; experimentation without consent; and treating engagement as benefit.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or narrow ranking, restore prior policy, remove unsafe candidates, preserve exposure evidence, notify affected users, provide appeal or manual review, compensate decisions, and reopen evaluation.
+
+COMPLETION CRITERIA
+
+Objective, constraints, controls, evidence, user choice, fairness, safety, recovery, and lifecycle are explicit. Keep CONTENT-COMPLETE until independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve model, policy, features, candidate sources, exposures, decisions, evidence, incidents, dissent, and next safe action. Hand off to Search, AI, Data, Privacy, Safety, Testing, and Operations.
+
+RELATED CODEX SECTIONS
+
+146 Search Engineering; 147 Recommendation Systems Engineering; 168 Deep Learning Engineering; 180 Model Evaluation; 182 AI Safety; 188 Human-in-the-Loop Operations; 218 Privacy Engineering; 249 Usability Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 030, 055-057, 075-106 and 107-146, Owner Cockpit Requirements, and Status and Evidence Lexicon. Protected-group definitions, impact regimes, feedback data, consent, explanation, and intervention thresholds remain unresolved.

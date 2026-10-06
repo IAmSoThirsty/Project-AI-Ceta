@@ -1,0 +1,103 @@
+SECTION 167 — Machine Learning Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the engineering discipline for building, integrating, evaluating, deploying, and maintaining machine-learning systems with explicit data, model, interface, human-control, security, and lifecycle boundaries.
+
+REQUIRED OUTCOME
+
+- A traceable ML system from objective and data to model, service, decision, monitoring, and retirement.
+- Reproducible builds, versioned artifacts, evaluation evidence, deployment controls, and rollback-by-compensation paths.
+- Clear separation between technical capability, authorized use, and observed outcome.
+
+WHY THIS MATTERS
+
+ML behavior depends on data, training, code, configuration, environment, and context. Engineering discipline prevents a benchmark or successful deployment from being mistaken for reliable, fair, secure, or accepted operation.
+
+APPLICABILITY
+
+Applies when learned parameters or learned representations affect software, hardware, decisions, automation, ranking, prediction, or control. Depth increases with external impact, autonomy, sensitive data, drift, or hard-to-reverse actions.
+
+NON-APPLICABILITY CONDITIONS
+
+May be non-applicable to deterministic rules, documentation-only work, or isolated research with no model artifact or operational claim. Record scope, owner, evidence date, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires Sections 031, 164, 179, 180, 183, and 184 for data, science, training, evaluation, governance, and MLOps. Requirements, domain outcomes, safety, privacy, security, accessibility, and operating authority must be known or open.
+
+REQUIRED INPUTS
+
+Use case; prohibited uses; data and labels; model contract; baseline; metrics; error costs; environments; compute; dependencies; threat model; evaluation plan; deployment target; monitoring; human review; and retirement conditions.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve use, data purpose, model class, risk tolerance, evaluation gates, deployment, monitoring thresholds, exceptions, and retirement. Engineers report deviations and do not accept model risk or expand purpose by implementation convenience.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may generate code, configurations, tests, model comparisons, and diagnostics within scope. It must preserve artifact identity and cannot invent training results, certify security, authorize deployment, or conceal uncertainty and failure.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Refactorer, Researcher, Analyst, Tester, Verifier, Security Auditor, Privacy Reviewer, Governance Reviewer, Critic, Optimizer, Documentation Writer, Memory Curator, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define objective, contract, users, prohibited uses, and failure costs.
+2. Establish data, feature, label, lineage, split, and leakage controls.
+3. Build reproducibly and record dependencies, seeds, configuration, and hardware.
+4. Evaluate accuracy, calibration, robustness, subgroup, privacy, security, and operational behavior.
+5. Integrate identity, authorization, observability, fallback, and human review.
+6. Validate deployment, rollback, drift, incident, and retirement procedures.
+7. Baseline evidence and obtain owner acceptance.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Expose model, data, version, prompt or configuration, tool, authority, output, confidence limits, and review state. AI-generated engineering changes remain proposals until reviewed. Maintain manual fallback, correction, appeal, and stop controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Version data, features, code, model, weights, tokenizer, configuration, environment, image, endpoint, policy, evaluation, and deployment. Enforce contracts at serving boundaries. Record provenance, drift, access, latency, cost, errors, and compensation actions.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show model lineage, deployment, scope, health, drift, evaluation, incidents, authority, and evidence freshness. Allow authorized pause, traffic reduction, revoke, quarantine, rollback, fallback, retrain, replace, and retire actions. Do not equate service uptime with model validity.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+ML system charter; model and data cards; feature and label register; reproducible build; evaluation report; threat and privacy review; serving contract; deployment record; monitoring plan; incident and retirement plan; decision record; and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Each claim identifies artifact versions, data, split, environment, metric, subgroup, method, result, uncertainty, reviewer, and limitation. A benchmark, training run, or endpoint response proves only its bounded claim. Failed evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Rebuild from declared inputs; reproduce evaluation; test leakage, shift, malformed input, adversarial input, access, latency, resource, fallback, revocation, and rollback; compare baselines; and verify monitoring detects invalidation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Training-serving skew; leakage; undocumented features; benchmark overreach; silent retraining; insecure model artifacts; threshold tuning on test data; unmonitored drift; hidden human work; and deployment without approved evaluation.
+
+RECOVERY AND RECONSIDERATION
+
+Stop or narrow affected use on drift, unsafe error, data breach, artifact mismatch, authority loss, or evidence failure. Preserve the exact state, notify owners, use approved fallback or prior version, investigate, and requalify before resuming.
+
+COMPLETION CRITERIA
+
+Objective, contract, data, build, evaluation, deployment, monitoring, controls, recovery, lifecycle, and owner decision are explicit. Status remains CONTENT-COMPLETE until source reconciliation and acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve model, data, code, environment, dependencies, metrics, decisions, incidents, dissent, and gaps. Hand off to Deep Learning, AI Engineering, Training, Evaluation, MLOps, Model Operations, Security, and Governance.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 164 Data Science; 168 Deep Learning Engineering; 169 AI Engineering; 179 Model Training; 180 Model Evaluation; 184 MLOps; 185 Model Operations; 253 Model Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, Sections 030-032, and the evidence lexicon. Actual model classes, domain thresholds, data rights, threat environment, compute, support, and deployment authority remain unresolved until supplied.

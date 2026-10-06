@@ -1,0 +1,95 @@
+SECTION 318 — Alerting
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Turn meaningful deviations from protected service, security, safety, capacity, quality, or data conditions into attributable, actionable, and proportionate notification.
+
+REQUIRED OUTCOME
+
+An alerting model with signal, condition, threshold, owner, severity, deduplication, routing, escalation, suppression, expiry, action, privacy, evidence, and feedback.
+
+WHY THIS MATTERS
+
+An alert is a request for attention, not proof of incident. Noisy, duplicated, stale, unowned, or un-actionable alerts create fatigue and make true danger easier to miss.
+
+APPLICABILITY
+
+Apply when a signal should prompt a human or controlled automation to investigate, decide, communicate, or act.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no deviation, response, or operational decision requires notification and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use monitoring, metrics, logs, traces, service levels, incident, security, privacy, staffing, and operations baselines.
+
+REQUIRED INPUTS
+
+Signal, condition, threshold, context, owner, severity, route, escalation, suppression, action, evidence, schedule, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define actionable conditions, severity, recipients, escalation, mute authority, and response. Humans decide whether an alert represents incident, risk, or expected variation.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate authorized signals, group alerts, draft tuning, and recommend investigation. It must not suppress, close, escalate, or execute action without authority and must surface uncertainty and missing context.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Alert Engineer, SRE, Operations Engineer, Security Operations Analyst, Analyst, Observer, Incident Responder, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define outcome and action; configure; route; deduplicate; test; monitor delivery; tune; document runbook; review noise and misses; manage mute expiry; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show signal, condition, threshold, owner, severity, context, action, evidence, and limitation. Require human approval for mute, threshold, escalation, and consequential automation.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use multi-signal context, deduplication, rate limits, routing redundancy, escalation, expiry, audit, privacy, and safe behavior when alerting fails.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show alert, source, severity, owner, action, age, evidence freshness, mute, escalation, and authorized acknowledge, suppress with expiry, escalate, tune, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Alert charter; alert catalog; routing and escalation; runbook; noise and miss analysis; test, incident, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify signal, condition, threshold, source, context, time, route, actor, result, and limitation. Alert receipt proves delivery, not diagnosis or response.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify trigger, threshold, context, deduplication, routing, escalation, mute expiry, privacy, delivery, false positive, missed event, and response. Exercise notification outage.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Alert fatigue, no owner, permanent mute, severity inflation, no runbook, alert as incident verdict, and automation that acts on an unverified signal.
+
+RECOVERY AND RECONSIDERATION
+
+Restore notification, use alternate channel, preserve signal and blind period, notify owners, and reassess missed impact. Reopen on target, threshold, owner, route, or incident change.
+
+COMPLETION CRITERIA
+
+Signals, conditions, thresholds, owners, actions, routes, evidence, privacy, mute, escalation, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve alert definitions, routes, mutes, incidents, evidence, decisions, exceptions, and open gaps. Hand off to Monitoring, Incident, Security, SRE, Operations, and Support.
+
+RELATED CODEX SECTIONS
+
+314 Monitoring; 317 Metrics; 319 Incident Management; 306 Security Operations; 301 SRE; 323-330 Performance, Reliability, Continuity, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, monitoring, incident, operations, and owner-control context, and the integration roadmap. Exact signals, thresholds, staffing, routes, privacy, actions, and acceptance authority remain unresolved.

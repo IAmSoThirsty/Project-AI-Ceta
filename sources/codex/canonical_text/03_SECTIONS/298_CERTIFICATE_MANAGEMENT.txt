@@ -1,0 +1,95 @@
+SECTION 298 — Certificate Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern certificates, trust chains, identities, issuance, validation, renewal, revocation, deployment, monitoring, and retirement across their lifecycle.
+
+REQUIRED OUTCOME
+
+A certificate model with subject, purpose, authority, key reference, validity, issuance, storage, consumer, renewal, revocation, monitoring, evidence, and recovery.
+
+WHY THIS MATTERS
+
+Expired, misissued, untrusted, mismatched, or exposed certificates can interrupt services or undermine identity. Renewal automation can also create outages or hide a trust change.
+
+APPLICABILITY
+
+Apply when certificates, public keys, trust chains, TLS or equivalent identities, signing certificates, or certificate authorities secure a service, device, user, or artifact.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no certificate, trust chain, key reference, validation, renewal, or identity behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use cryptography, key, identity, secrets, DNS, network, application, device, release, monitoring, and incident baselines.
+
+REQUIRED INPUTS
+
+Certificate, subject, purpose, authority, key reference, validity, consumer, chain, policy, issuance, renewal, revocation, monitoring, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve authority, subject, issuance, renewal, revocation, trust, exception, and emergency replacement. Humans protect private key material and decide trust changes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized certificate metadata, expiry, chain, and usage; draft renewal plans and tests; and identify mismatches. It must not access private keys, issue, install, revoke, or trust certificates without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Certificate Manager, Cryptography Engineer, Key Manager, Network Engineer, Security Auditor, Platform Engineer, Tester, Verifier, and Operations Engineer.
+
+REQUIRED ACTIVITIES
+
+Inventory; classify and assign owner; issue; validate; deploy; monitor expiry and trust; renew; revoke; replace; test consumer; preserve evidence; and retire certificates and authorities.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show certificate identifier, subject, authority, consumer, expiry, chain, key reference, evidence, and limitation without exposing private key. Require human approval for issuance, trust, renewal, revocation, and replacement.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use automated discovery, short validity where appropriate, protected key storage, trust separation, renewal overlap, revocation or status, chain validation, and independent recovery.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show certificate health, subject, authority, expiry, consumer, chain, evidence freshness, owner, and authorized renew, replace, revoke, restrict, recover, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Certificate inventory; authority and trust model; issuance and renewal; consumer deployment; monitoring and revocation; incident, decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify certificate, subject, authority, key reference, chain, consumer, version, method, time, result, and limitation. Expiry scan proves only the scanned inventory and time.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify subject, chain, hostname or identity, key binding, expiry, renewal, deployment, revocation, trust, alerting, rollback, and recovery. Test clock skew, authority loss, and expired certificate.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Private key exposure, untracked certificates, last-minute renewal, trust-all validation, mismatched identity, expired chain, and renewal automation without rollback or alert owner.
+
+RECOVERY AND RECONSIDERATION
+
+Replace or revoke, preserve evidence, rotate related keys, restore trust, communicate, and reassess consumers and exposure. Reopen on authority, subject, key, DNS, provider, or policy change.
+
+COMPLETION CRITERIA
+
+Certificates, authorities, subjects, keys, consumers, validity, renewal, revocation, evidence, recovery, owners, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve metadata and lifecycle records, not private keys, along with deployments, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Keys, Cryptography, DNS, Network, Platform, Security, and Operations.
+
+RELATED CODEX SECTIONS
+
+203 Cryptography; 204 Key Management; 200-202 IAM and Authentication; 299 Domain and DNS; 284 Network; 301-330 Operations; 380 Security Patching.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, cryptography, identity, network, and operations context, and the integration roadmap. Exact authorities, certificate classes, validity, renewal, revocation, providers, and acceptance authority remain unresolved.

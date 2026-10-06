@@ -1,0 +1,95 @@
+SECTION 214 — Incident Response
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Prepare for, detect, analyze, contain, eradicate, recover from, communicate, and learn from incidents affecting security, safety, privacy, service, people, property, or trust.
+
+REQUIRED OUTCOME
+
+An incident-response model with classification, authority, roles, intake, triage, evidence, containment, communication, recovery, legal and privacy coordination, closure, and lessons-learned paths.
+
+WHY THIS MATTERS
+
+Incident response is a time-constrained authority problem as well as a technical process. Delayed escalation, unclear ownership, unsafe containment, lost evidence, or premature closure can increase harm and prevent learning.
+
+APPLICABILITY
+
+Apply when an actual or suspected event may violate security, privacy, safety, availability, policy, law, contract, user trust, or organizational control.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only for events with no material consequence, no protected asset or person, and a documented routine handling path that preserves evidence and escalation triggers.
+
+PREREQUISITES AND DEPENDENCIES
+
+Maintain contacts, severity model, authority, playbooks, telemetry, evidence storage, communication paths, legal and privacy guidance, continuity, backup, recovery, and support coverage.
+
+REQUIRED INPUTS
+
+Alert or report, affected assets and people, time, source, scope, severity criteria, evidence, dependencies, responders, authorities, communications, recovery objectives, and known constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+The incident commander owns coordination and can stop unsafe work. Accountable owners approve containment, service interruption, disclosure, user communication, legal escalation, recovery, and closure. Humans decide material severity, attribution, harm, and residual risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may correlate authorized signals, summarize timelines, draft hypotheses, identify affected scope, suggest playbook steps, and track actions. It must label evidence, inference, uncertainty, and recommendation; protect sensitive data; and preserve the incident record. It must not declare an incident, contain, delete evidence, notify external parties, attribute, or close without explicit authority and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Incident Responder, Incident Commander, Security Operations Analyst, Forensic Analyst, Researcher, Analyst, Coordinator, Architect, Security Auditor, Governance Reviewer, Legal Advisor, Privacy Reviewer, Tester, Verifier, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Prepare contacts and exercises; intake and record; validate and classify; preserve evidence; scope impact; contain safely; eradicate or remediate; communicate; recover and monitor; close with owner decision; perform postmortem; track actions and reopening.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show case, severity, asset, people, evidence, uncertainty, authority, action, impact, and next decision. Require human approval for containment, data access, user or external communication, legal notification, recovery, and closure. Keep manual response and emergency stop paths available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate intake, case record, evidence, analysis, action authority, communication, recovery, and postmortem. Design for degraded telemetry, provider loss, conflicting reports, clock differences, immutable timelines, privacy minimization, and safe rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show incident state, commander, severity, scope, affected people and assets, evidence freshness, actions, dependencies, communications, decisions, and residual risk. Provide authorized acknowledge, escalate, contain, release, preserve, notify, recover, reopen, and close controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Incident charter and severity record; case timeline; evidence and custody record; impact and communication plan; containment and recovery actions; legal and privacy assessment; remediation; postmortem; decisions, exceptions, and continuity record.
+
+EVIDENCE REQUIREMENTS
+
+Identify source, asset, person, event, time basis, method, actor, action, result, confidence, impact, and limitation. Preserve original references and distinguish confirmed, suspected, disproved, and unknown conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Exercise intake, classification, paging, command, evidence, containment, communication, legal and privacy escalation, recovery, backup, rollback, user support, and closure. Verify actions are attributable and can be reconstructed from the record.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unowned incidents, severity by volume alone, silent scope changes, destructive containment, lost evidence, premature closure, uncoordinated communication, and postmortems that blame people instead of improving controls.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve state and evidence, stabilize affected services, protect people, communicate truthfully, and use approved containment, restore, failover, or manual operation. Reassess harm and residual risk after new evidence. Reopen when impact, scope, root cause, or recovery claim changes.
+
+COMPLETION CRITERIA
+
+Authority, severity, scope, evidence, actions, communications, recovery, owners, residual risk, lessons, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve case identity, timeline, evidence references, decisions, communications, actions, postmortem, remediation, and open gaps. Hand off to Operations, Security, Privacy, Legal, Records, Support, Governance, Testing, and affected owners.
+
+RELATED CODEX SECTIONS
+
+004 Evidence and Truth; 005 Continuity and Recovery; 018 Risk Management; 206 Security Operations; 213 Digital Forensics; 215-218 Fraud, Abuse, Trust, and Privacy; 301-330 Operations; 402-404 Review and Postmortem.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, evidence and continuity requirements, and the integration roadmap. Exact severity, notification, legal, privacy, staffing, recovery, jurisdiction, and owner acceptance rules remain unresolved.

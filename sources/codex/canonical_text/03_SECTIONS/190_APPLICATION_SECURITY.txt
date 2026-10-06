@@ -1,0 +1,102 @@
+SECTION 190 — Application Security
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer security into application behavior, code, dependencies, interfaces, configuration, data handling, identity paths, and lifecycle workflows so applications resist misuse and fail safely.
+
+REQUIRED OUTCOME
+
+ - Application threat model, security requirements, secure design patterns, ownership, and trust boundaries.
+ - Verified protections for input, output, identity, authorization, secrets, dependencies, data, sessions, errors, logging, and recovery.
+ - Security evidence and remediation decisions linked to exact artifacts and runtime environments.
+
+WHY THIS MATTERS
+
+Application defects are often reachable through ordinary user and integration paths. A build can succeed while injection, privilege escalation, data leakage, insecure defaults, or unsafe recovery remains exploitable.
+
+APPLICABILITY
+
+Applies to web, mobile, desktop, service, API, batch, event, agent, plugin, and administrative applications, including code, configuration, libraries, pipelines, and runtime interfaces.
+
+NON-APPLICABILITY CONDITIONS
+
+Only where an approved application security baseline covers exact artifact, version, configuration, environment, data, interface, and change with no material effect. Prototypes remain proposed and cannot claim secure implementation.
+
+PREREQUISITES AND DEPENDENCIES
+
+Sections 019, 030-032, 045-048, 107-129, 246, 260, 270, and 301-309 provide requirements, information, application, identity, security, engineering, testing, dependency, delivery, and operations context.
+
+REQUIRED INPUTS
+
+Source and build artifacts, dependency inventory, data flows, identities, roles, endpoints, threat model, coding standards, security requirements, configurations, test results, vulnerabilities, incidents, and release boundaries.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve security requirements, risk, release, exceptions, disclosure, remediation deadlines, and acceptance. Owners must provide qualified review and retain authority to stop, isolate, roll back, or retire the application.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may review authorized code and artifacts, identify patterns, draft tests, and suggest remediation. It must not invent execution evidence, expose secrets, modify production, waive findings, or declare security from static analysis or generated code.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Implementer, Refactorer, Security Auditor, Tester, Verifier, Red Team, Analyst, Critic, Governance Reviewer, Observer, Documentation Writer, Memory Curator, and Planner.
+
+REQUIRED ACTIVITIES
+
+1. Map application assets, actors, data flows, privileges, entry points, dependencies, and trust boundaries.
+2. Model abuse cases and derive secure requirements.
+3. Apply secure design, coding, dependency, configuration, secret, and error-handling controls.
+4. Test authentication, authorization, validation, injection, session, upload, logging, privacy, resilience, and recovery paths.
+5. Triage findings by exploitability and impact, assign owners, and verify remediation.
+6. Baseline release evidence and hand off unresolved risk.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show code or runtime evidence separately from AI suggestions. Human review is required for privilege, data disclosure, release, exception, and destructive remediation. Preserve manual status, evidence, correction, and rollback paths; do not let chat bypass application controls.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use secure-by-default boundaries, least privilege, typed and validated interfaces, safe error handling, dependency pinning, secret isolation, tamper-evident logs, rate limits, abuse detection, and independent recovery. Keep source, build, deploy, and runtime identities distinct.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show artifact, version, environment, findings, exploitability, evidence freshness, remediation, approvals, and residual risk. Authorized controls include quarantine, revoke, block release, roll back, rotate, restore, accept, and reopen.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Threat model, secure design review, security requirements, dependency and secret inventory, code review, test results, findings, remediation records, release gate, exception, incident, and handoff package.
+
+EVIDENCE REQUIREMENTS
+
+Identify artifact, commit, build, environment, tool, rules, coverage, method, result, reviewer, date, and limits. A clean scan or passing test is not proof of absence of vulnerabilities.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test malicious input, authorization boundaries, session expiry, concurrency, error paths, dependency compromise, secret exposure, logging, rate limits, data minimization, rollback, and recovery. Reproduce material findings independently.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Relying on scanners alone; unvalidated input; client-only authorization; secrets in code or logs; unbounded uploads; verbose errors; ignored dependencies; shared admin paths; silent findings suppression; and release approval based on green CI alone.
+
+RECOVERY AND RECONSIDERATION
+
+Contain vulnerable behavior, preserve artifacts and logs, revoke or rotate affected credentials, patch or compensate through approved change, retest, reassess exposed data and downstream decisions, and reopen when code, dependency, interface, threat, or environment changes.
+
+COMPLETION CRITERIA
+
+Every material application path has owners, threats, requirements, controls, tests, evidence, remediation, recovery, and acceptance status. Gaps and expiry are visible; section remains CONTENT-COMPLETE until qualified review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve commit, build, dependency, configuration, findings, decisions, evidence, exceptions, incidents, and next action. Hand off to Product, Software, Platform, Identity, Privacy, Testing, DevSecOps, Operations, Incident Response, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 032 Application Architecture; 045 Security Architecture; 046 Identity; 047 Privacy; 107-129 software and application engineering; 246, 255, 260, 270, 301-309, 380-381, 405-406.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Uses the Canonical Section Contract and neighboring architecture, engineering, testing, and governance sections. Universal secure coding rules, supported stacks, threat coverage, vulnerability severity, and disclosure obligations remain unresolved until scope is supplied.

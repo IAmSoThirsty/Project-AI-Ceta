@@ -1,0 +1,95 @@
+SECTION 202 — Authorization Engineering
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Engineer decisions that allow, deny, limit, delegate, or review access to a resource or action using explicit identity, purpose, context, policy, and authority.
+
+REQUIRED OUTCOME
+
+An authorization model with resource ownership, actions, subjects, policy rules, context, delegation, separation of duties, enforcement points, denial behavior, decision evidence, review, and change control.
+
+WHY THIS MATTERS
+
+Authentication alone does not establish that a subject may perform a particular action on a particular resource. Authorization fails through broad roles, confused deputy behavior, stale context, client-side enforcement, default allow, missing tenant isolation, and unreviewed delegation.
+
+APPLICABILITY
+
+Apply whenever an identity, service, device, workload, agent, or user can read, create, change, execute, approve, share, delete, administer, or otherwise affect a resource or decision.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no protected resource, action, identity relationship, delegation, or policy decision is affected and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use IAM, authentication, privacy, data, application, platform, tenant, safety, governance, and audit baselines. Identify resources, owners, actions, policy source, enforcement points, context, emergency paths, and review authority.
+
+REQUIRED INPUTS
+
+Subjects, identities, resources, owners, actions, roles, attributes, purpose, context, tenants, environments, policy rules, obligations, delegation, exceptions, logs, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define resource ownership, protected actions, least privilege, separation of duties, delegation, emergency access, exception, review, and acceptance. Humans approve high-impact grants, policy meaning, cross-boundary access, break-glass use, and disputed outcomes.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized policies, access decisions, resource metadata, and review evidence; identify excessive or inconsistent privilege; draft policy tests and explanations; and propose bounded least-privilege changes. It must preserve subject, resource, action, context, policy, tenant, and time boundaries. It must not grant, deny, rewrite, or silently bypass policy for consequential access without explicit delegation and human control.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Identity Engineer, Security Auditor, Governance Reviewer, Analyst, Researcher, Observer, Implementer, Tester, Verifier, Critic, Red Team, Documentation Writer, and Memory Curator.
+
+REQUIRED ACTIVITIES
+
+Inventory resources and actions; assign owners; define subjects, roles, attributes, purpose, context, tenancy, and separation of duties; design decision and enforcement points; define deny, delegation, emergency, review, logging, recovery, and change behavior; test bypass and drift; record evidence and exceptions.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show the subject, resource, action, policy version, context, decision, authority, evidence, and consequence. Require human review for grants, policy changes, break-glass, cross-tenant access, high-impact denial, and appeals. Make decisions understandable and auditable without revealing protected policy details unnecessarily.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate policy administration, policy decision, policy enforcement, resource ownership, identity, audit, and appeal. Enforce server-side at every trust boundary, default deny protected actions, make context freshness explicit, prevent confused deputy behavior, and ensure failover cannot silently widen access.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show resource owner, subject, effective privileges, policy source, context, active delegation, decision history, evidence freshness, anomalies, and impact. Provide authorized grant, deny, revoke, simulate, review, appeal, emergency, and retire controls with durable audit.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Resource and action inventory; authorization model; policy and delegation catalog; enforcement and decision design; separation-of-duties and emergency model; test, review, exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify subject, resource, action, context, tenant, policy and version, decision point, enforcement result, actor, time, method, and limitation. A UI state or client-side check proves no server-side authorization.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify allow and deny, least privilege, tenant isolation, object and function checks, delegation, separation of duties, context expiry, emergency access, logging, revocation, and failover. Test tampered requests, stale roles, confused deputy, race conditions, and provider loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Default allow, client-only checks, wildcard roles, shared service identity, unowned resources, implicit inheritance, stale context, unbounded break-glass, and access decisions with no owner or evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze affected policy changes, revoke unsafe grants, preserve decisions and context, notify owners, and use prior validated policy or manual review. Reassess user harm, continuity, obligations, and downstream effects before restoring access. Reopen on resource, action, identity, tenant, policy, or threat change.
+
+COMPLETION CRITERIA
+
+Subjects, resources, actions, owners, policies, context, enforcement, delegation, review, evidence, recovery, exceptions, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve policy versions, resource ownership, decisions, delegations, reviews, events, exceptions, evidence, incidents, and open gaps. Hand off to IAM, Authentication, Application, Data, Platform, Security Operations, Governance, Testing, and Support.
+
+RELATED CODEX SECTIONS
+
+046 Identity Architecture; 047 Privacy Architecture; 200 Identity and Access Management; 201 Authentication Engineering; 205 Secrets Management; 206 Security Operations; 214 Incident Response; 231-254 Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, identity and security architecture, and the integration roadmap. Exact policy language, resource classification, tenant model, emergency authority, legal obligations, and acceptance evidence remain unresolved.

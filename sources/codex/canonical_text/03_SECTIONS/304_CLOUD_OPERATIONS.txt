@@ -1,0 +1,95 @@
+SECTION 304 — Cloud Operations
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate cloud accounts, services, resources, identities, data, networks, policies, costs, providers, and recovery within declared service and governance boundaries.
+
+REQUIRED OUTCOME
+
+A cloud-operations model with inventory, ownership, health, access, change, cost, quota, security, compliance, observability, incident, backup, recovery, and exit.
+
+WHY THIS MATTERS
+
+Cloud operations combine provider control planes, shared responsibility, dynamic resources, and billing. A healthy provider console can hide application, tenant, data, identity, or cost failure.
+
+APPLICABILITY
+
+Apply when cloud resources or managed services are provisioned, changed, monitored, secured, billed, recovered, or retired.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no cloud resource, account, provider, data, identity, cost, or operational behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use cloud architecture, IAM, security, data, configuration, infrastructure, cost, SRE, backup, recovery, and provider baselines.
+
+REQUIRED INPUTS
+
+Accounts, resources, regions, services, identity, policy, config, data, quotas, cost, telemetry, incidents, backup, recovery, and exit.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Cloud owners approve access, region, data, resource, cost, policy, outage, recovery, provider escalation, exception, and retirement. Humans accept shared responsibility and provider risk.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized cloud state, costs, metrics, and logs; draft runbooks and plans; and identify drift. It must not provision, modify, delete, access private data, or change policy without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Cloud Operations Engineer, Cloud Architect, FinOps Analyst, Security Auditor, Platform Engineer, Data Engineer, SRE, Tester, Verifier, and Incident Responder.
+
+REQUIRED ACTIVITIES
+
+Inventory and tag; secure accounts and identity; operate services; monitor; manage quota and cost; patch; respond; back up; restore or fail over; review provider changes; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show account, region, resource, service, identity, data, cost, action, authority, evidence, and limitation. Require human approval for privileged, destructive, data, cost, and regional actions.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use landing-zone controls, segmentation, least privilege, policy, budgets, quota, provider health, immutable artifacts, backup, restore, failover, and exit evidence.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show cloud health, resources, quota, cost, data region, identity, incidents, evidence freshness, owner, and authorized scale, restrict, isolate, restore, fail over, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Cloud operations charter; account and resource catalog; access and policy; cost and quota; observability; incident, backup, recovery, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify account, region, resource, service, identity, config, provider, method, time, result, cost, owner, and limitation. Provider health or billing data proves only its view.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify inventory, access, policy, quota, cost, health, data, backup, restore, failover, provider incident, audit, and exit. Test control-plane and region loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Cloud console as truth, admin everywhere, untagged resource, cost surprise, provider lock-in, shared account, backup untested, and provider status treated as application health.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict account or resource, preserve state and logs, fail over or restore, rotate access, communicate, and reassess data and cost. Reopen on provider, region, service, resource, or policy change.
+
+COMPLETION CRITERIA
+
+Accounts, resources, owners, identity, policy, cost, health, evidence, backup, recovery, exit, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve cloud state, policies, metrics, costs, incidents, backups, decisions, evidence, exceptions, and open gaps. Hand off to Platform, Security, FinOps, Data, SRE, Support, and Governance.
+
+RELATED CODEX SECTIONS
+
+277 Cloud Engineering; 258 Configuration; 263 Environment; 301 SRE; 305 Network; 307 Data; 310 Platform; 323-330 Capacity, Availability, Reliability, and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, cloud, infrastructure, security, cost, data, and operations context, and the integration roadmap. Exact providers, resources, regions, cost, staffing, recovery, exit, and acceptance authority remain unresolved.

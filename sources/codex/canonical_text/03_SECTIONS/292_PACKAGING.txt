@@ -1,0 +1,95 @@
+SECTION 292 — Packaging
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Assemble software, firmware, data, content, models, configuration, metadata, notices, and dependencies into an identifiable, installable, distributable, and recoverable package.
+
+REQUIRED OUTCOME
+
+A package specification with contents, manifest, version, digest, provenance, dependency, configuration, license, platform, installation, integrity, and rollback behavior.
+
+WHY THIS MATTERS
+
+Packaging can omit files, include secrets, resolve wrong dependencies, lose notices, or create ambiguity between source and shipped behavior. A package that installs is not necessarily complete or authorized.
+
+APPLICABILITY
+
+Apply when an artifact is assembled for installation, deployment, distribution, archival, or consumption.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no package boundary, contents, metadata, or consumer behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use artifact, build, dependency, license, source, security, platform, installation, distribution, and release baselines.
+
+REQUIRED INPUTS
+
+Contents, manifest, source, dependencies, versions, configuration, notices, platform, installer, digest, signing, owner, and rollback.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve contents, notices, license, platform, package format, signing, distribution, exceptions, and retirement. Humans verify that no secret or unauthorized material is included.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may draft manifests, inspect authorized package contents and metadata, and identify omissions. It must not include, expose, publish, sign, or approve package material without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Packaging Engineer, Build Engineer, Artifact Manager, License Analyst, Security Auditor, Tester, Verifier, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define package contract; assemble; verify contents and dependencies; scan secrets and licenses; generate metadata; sign; test installation and rollback; distribute; maintain; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show package, contents, manifest, source, digest, platform, findings, evidence, and limitation. Require human review for signing, license, secret, public, and production package.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use deterministic assembly, manifest and digest, provenance, dependency lock, secret exclusion, signature, platform metadata, atomic install, rollback, and safe cleanup.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show package identity, contents, findings, target platform, install state, evidence freshness, owner, and authorized approve, quarantine, publish, withdraw, replace, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Package specification; manifest and provenance; scan and signature; installation and rollback; license and notice; decision, evidence, exception, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify package, digest, contents, source, build, dependencies, platform, method, time, result, actor, and limitation. Package filename or archive creation proves neither completeness nor integrity.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify contents, manifest, digest, signature, dependency, secret, license, platform, install, upgrade, rollback, uninstall, and recovery. Test missing, extra, corrupt, and incompatible content.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Secrets packaged, mutable dependency, missing notice, undocumented file, non-atomic install, archive copied without digest, and install success treated as release acceptance.
+
+RECOVERY AND RECONSIDERATION
+
+Quarantine package, preserve evidence, withdraw or replace, rotate secrets, notify consumers, and reassess installed copies. Reopen on contents, dependency, platform, license, or installer change.
+
+COMPLETION CRITERIA
+
+Contents, manifest, source, dependencies, platform, integrity, signing, installation, rollback, owners, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve package and manifest versions, scans, signatures, installation results, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Build, Artifact, Distribution, Installation, Release, Security, and Support.
+
+RELATED CODEX SECTIONS
+
+261 Package Management; 262 Artifact Management; 264-268 Build and Delivery; 291 Distribution; 293 Installation; 388 Version Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, build, artifact, licensing, security, and delivery context, and the integration roadmap. Exact package, platforms, contents, signing, installer, providers, and acceptance authority remain unresolved.

@@ -1,0 +1,138 @@
+SECTION 038 — Distributed Systems Architecture
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the behavior and governance of cooperating components that communicate across time, space, failure, trust, and ownership boundaries.
+
+REQUIRED OUTCOME
+
+- Explicit node, service, data, message, time, consistency, failure, authority, and ownership models.
+- Contracts for ordering, delivery, duplication, partition, retry, idempotency, quorum, recovery, and evidence.
+- Traceability from requirements through distributed behavior, implementation, tests, operations, and retirement.
+
+WHY THIS MATTERS
+
+Distributed components cannot assume shared time, memory, availability, or truth. Hidden partitions, duplicate messages, stale reads, partial commits, and correlated failures create behavior that happy-path tests do not reveal.
+
+APPLICABILITY
+
+- Components communicate over process, machine, region, organizational, or provider boundaries.
+- Consistency, ordering, latency, partition, concurrency, or partial failure affects material outcomes.
+
+NON-APPLICABILITY CONDITIONS
+
+- No distributed boundary or material timing, consistency, failure, data, or authority effect changes.
+- An approved baseline covers exact topology, workload, and change with no material impact.
+- The artifact is exploratory and clearly not a correctness or resilience claim.
+
+Record baseline, scope, owner, evidence date, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+- Sections 019-037 provide requirements, process, function, application, software, network, cloud, data, and operational context.
+- Time, identity, message, storage, failure, observability, and recovery authorities are known or marked open.
+
+REQUIRED INPUTS
+
+- Nodes, services, actors, data, messages, events, clocks, partitions, workloads, consistency needs, failure domains, and recovery objectives.
+- Contracts, retries, limits, security, privacy, observability, deployment, migration, testing, and retirement requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve consistency, availability, quorum, data conflict, external effect, risk, and recovery tradeoffs. Humans approve autonomous behavior, change, incident response, and compensation and retain stop, isolate, and restore authority.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect traces and designs, identify race or failure scenarios, draft contracts and tests, and analyze bounded telemetry. It must preserve timing and topology context and cannot declare distributed correctness, resolve data conflict, or change live coordination without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+- Architect, Analyst, Researcher, Observer, Planner, Implementer, Tester, Verifier, Security Auditor, Governance Reviewer, Critic, Documentation Writer, Memory Curator, Optimizer, and Red Team.
+
+REQUIRED ACTIVITIES
+
+1. Define nodes, services, boundaries, actors, ownership, data, messages, clocks, and failure domains.
+2. State consistency, availability, ordering, delivery, retry, quorum, and authority assumptions.
+3. Model normal, concurrent, partitioned, delayed, duplicated, reordered, degraded, recovery, and retirement behavior.
+4. Define idempotency, deduplication, compensation, transaction, timeout, cancellation, and evidence semantics.
+5. Validate with domain, data, security, operations, reliability, and user authorities.
+6. Test partitions, clock drift, duplicate and lost messages, split brain, partial commit, overload, failover, and restore.
+7. Baseline and hand off exact models, evidence, decisions, dissent, and gaps.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+- Show component, message, time, data, authority, actor, and external-effect context for consequential actions.
+- Require review for conflict resolution, quorum changes, autonomous retries, cross-boundary writes, and irreversible effects.
+- Preserve stop, evidence, diagnosis, manual recovery, and compensation during partial failure.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+- Define explicit message identity, causality, ordering, delivery, replay, expiry, and idempotency.
+- Separate authoritative state, replica, cache, event, projection, log, and evidence.
+- Model partitions, correlated failure, split brain, backpressure, overload, and clock uncertainty.
+- Make compensation and audit append-only; do not treat destructive reversal as rollback.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+- Show topology, state, partition, lag, message health, authority, evidence freshness, and recovery mode.
+- Expose actions, blast radius, actor, approvals, conflict decisions, and compensation path.
+- Permit authorized pause, isolate, drain, fail over, reconcile, restore, compensate, and retire actions.
+- Export traces, messages, decisions, evidence, dissent, and continuity record.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+- Distributed context and topology, consistency and failure model, message and state contracts, timing assumptions, and recovery design.
+- Traceability, test and drill basis, observability model, decision, risk, evidence, and handoff registers.
+
+EVIDENCE REQUIREMENTS
+
+- Claims identify topology, workload, data, timing, configuration, failure injection, method, result, and limits.
+- A local test, simulation, trace, or successful transaction proves only its bounded schedule and conditions.
+- Evidence must distinguish no failure observed from failure impossible and nominal from partitioned behavior.
+- Missing clocks, traces, message history, or conflict evidence constrains status.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+- Trace representative outcomes across nodes, messages, state, evidence, recovery, and retirement.
+- Exercise delay, loss, duplication, reorder, partition, clock drift, stale read, split brain, overload, and partial commit.
+- Verify idempotency, deduplication, authority expiry, compensation, audit, and user-visible status.
+- Disable nodes, stores, networks, models, providers, and observability and verify safe behavior.
+- Reproduce claims from exact topology and trace package.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+- Assuming shared time, memory, availability, or exactly-once behavior without evidence.
+- Treating retry as recovery, replication as consistency, or eventual convergence as universal correctness.
+- Hiding partial commits, stale state, split brain, duplicate effects, or unbounded queues.
+- Allowing AI to resolve conflicts or issue repeated external effects without authority and idempotency.
+
+RECOVERY AND RECONSIDERATION
+
+- On partition, divergence, duplicate effect, lost evidence, or authority conflict, halt affected writes where safe and preserve history.
+- Identify safe reads and operations, owner, authority, affected actors, evidence, and review condition.
+- Use approved fencing, drain, reconciliation, compensation, restore, failover, or reduced mode.
+- Reopen when topology, timing, consistency, provider, data, or lifecycle assumptions change.
+
+COMPLETION CRITERIA
+
+- Topology, ownership, timing, contracts, consistency, failure, compensation, evidence, recovery, and lifecycle are explicit.
+- Partition, concurrency, overload, migration, and retirement behavior is addressed or justified.
+- Exact evidence limits and unresolved gaps are recorded.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+- Preserve node, message, state, trace, decision, compensation, evidence, dissent, and open-gap identities.
+- Hand off to Network, Communications, Integration, API, Event, Runtime, Data, Reliability, Resilience, Testing, and Operations.
+- Record changes requiring reopening Software, Platform, Cloud, Security, or Governance architecture.
+
+RELATED CODEX SECTIONS
+
+- 019-037 Requirements through Edge Architecture; 039-044 Network through Runtime Architecture.
+- 045-060 Security through Hardware Architecture; 130-145 distributed and real-time engineering; 301-406 operations and lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+- Based on the Canonical Section Contract, shared governance files, Sections 019-037, Owner Cockpit Requirements, Status and Evidence Lexicon, and local architecture baseline.
+- No universal consistency, clock, transaction, delivery, or failure model is supplied. Actual workloads, schedules, contracts, recovery objectives, and evidence remain unresolved.

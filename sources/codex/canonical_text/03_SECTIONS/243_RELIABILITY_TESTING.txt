@@ -1,0 +1,95 @@
+SECTION 243 — Reliability Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Measure whether a system performs its intended function consistently over time and under declared operating conditions, including faults, maintenance, recovery, and change.
+
+REQUIRED OUTCOME
+
+A reliability-test model with failure definition, workload, duration, environment, fault assumptions, service objectives, data integrity, repair or recovery behavior, evidence, and limits.
+
+WHY THIS MATTERS
+
+Reliability is time and condition dependent. A short successful test can miss wear, memory growth, intermittent faults, retry amplification, operator error, dependency loss, or recovery that does not restore the intended outcome.
+
+APPLICABILITY
+
+Apply when continuity, failure frequency, durability, correctness over time, maintenance, or recovery is material to people, service, equipment, data, or trust.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability only when no reliability or continuity claim changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use requirements, architecture, operational, resilience, performance, failure, maintenance, backup, restore, and service-level baselines. Define test authority, duration, environment, and stop conditions.
+
+REQUIRED INPUTS
+
+Reliability objective, failure definition, workload, duration, unit or service, environment, faults, maintenance, telemetry, repair, recovery, prior incidents, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define reliability and recovery outcomes; operators protect the environment; testers document faults and exposure; humans accept residual failure risk and service tradeoffs.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized failure and telemetry records, draft scenarios, identify trends, and propose experiments. It must not invent reliability statistics, continue unsafe tests, suppress intermittent failures, or declare a service reliable from uptime alone.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Reliability Engineer, Tester, Resilience Engineer, Architect, Operations Engineer, Analyst, Observer, Verifier, Quality Engineer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define objective and failure; select representative workload and duration; establish baseline; inject or observe faults; measure function, errors, repair, recovery, and data; analyze trends; remediate; rerun; and document confidence and limits.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show unit or service, version, workload, duration, fault, environment, metric, recovery, result, uncertainty, and limitation. Require human approval for fault injection, production-like testing, and acceptance.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Provide health signals, durable state, checkpointing, retry limits, graceful degradation, repair, failover, restore, maintenance, and evidence across long runs. Avoid recovery loops that hide failure or corrupt state.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show reliability objective, elapsed run, failures, fault state, recovery, service impact, evidence freshness, owner, and authorized pause, stop, repair, failover, restore, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Reliability charter; workload and fault model; environment and telemetry; run results; failure and recovery record; trend and confidence analysis; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify unit or service, version, workload, duration, condition, fault, method, time, result, recovery, sample, uncertainty, and limitation. Uptime or one long run proves only its observed conditions.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify failure definition, representative workload, duration, telemetry, repair, recovery, data integrity, maintenance, repeatability, and confidence. Compare with incidents and field evidence.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Uptime as reliability, short test, healthy-only workload, hidden intermittent failures, recovery not counted, data loss ignored, and statistics without exposure or sample context.
+
+RECOVERY AND RECONSIDERATION
+
+Stabilize service, preserve evidence, repair or fail over, restore state, and reassess user and data impact. Reopen on failure pattern, workload, dependency, version, maintenance, or recovery change.
+
+COMPLETION CRITERIA
+
+Objective, workload, duration, faults, recovery, evidence, result, confidence, owner, limits, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve runs, telemetry, failures, repairs, recovery, decisions, evidence, exceptions, and open gaps. Hand off to Resilience, Chaos, Capacity, Operations, Incident Response, and Quality.
+
+RELATED CODEX SECTIONS
+
+029 Operational Architecture; 228-230 Quality; 239-242 Performance, Load, Stress, and Scalability; 244-245 Resilience and Chaos; 301-330 Reliability and Recovery.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, reliability and operations context, and the integration roadmap. Exact failure model, duration, workload, service objective, recovery, field evidence, and acceptance authority remain unresolved.

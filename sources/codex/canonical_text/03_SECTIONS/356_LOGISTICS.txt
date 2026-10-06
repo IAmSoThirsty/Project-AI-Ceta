@@ -1,0 +1,95 @@
+SECTION 356 — Logistics
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Move materials, products, devices, documents, data, and equipment safely, traceably, timely, securely, and cost-effectively across locations and custody boundaries.
+
+REQUIRED OUTCOME
+
+A logistics model with item identity, packaging, custody, route, carrier, condition, timing, security, customs or jurisdiction, exception, receipt, damage, and recovery.
+
+WHY THIS MATTERS
+
+Movement introduces loss, tampering, delay, damage, misrouting, privacy, safety, and chain-of-custody risk. Shipment status is not proof of condition, receipt, or correct destination.
+
+APPLICABILITY
+
+Apply when physical or digital items are transported, staged, stored in transit, delivered, returned, or transferred between custodians.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no item, custody, route, delivery, storage-in-transit, or transport risk changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use supply chain, manufacturing, device, packaging, distribution, security, privacy, legal, customs, inventory, and customer baselines.
+
+REQUIRED INPUTS
+
+Item, identity, quantity, condition, packaging, origin, destination, custodian, carrier, route, timing, security, receipt, and exception.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Logistics owners approve route, carrier, custody, security, condition, cost, exception, and loss response. Humans verify receipt and resolve damage or claims.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized shipment metadata, forecast delay, draft routes, and identify anomalies. It must not expose customer data, change destination, certify condition, or accept delivery without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Logistics Manager, Supply Chain Manager, Device Provisioning Engineer, Security Auditor, Procurement Analyst, Analyst, Observer, Verifier, and Coordinator.
+
+REQUIRED ACTIVITIES
+
+Identify and package; assign custody; select route and carrier; ship; track; handle customs or jurisdiction; receive and inspect; reconcile inventory; address exception; return or dispose.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show item, custody, route, destination, condition, evidence, action, privacy, and limitation. Require human approval for high-value, sensitive, regulated, hazardous, or disputed shipment.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use serialization, chain of custody, tamper evidence, condition, tracking, access, privacy, route resilience, inventory reconciliation, and exception workflow.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show shipment, item, custody, location, condition, ETA, exception, evidence freshness, owner, and authorized hold, reroute, inspect, accept, return, and claim controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Logistics charter; item and custody; packaging and route; carrier and tracking; receipt and exception; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify item, serial or version, quantity, custodian, origin, destination, carrier, method, time, condition, result, and limitation. Tracking event proves location signal, not condition or receipt.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify identity, quantity, packaging, custody, route, condition, tracking, receipt, security, privacy, customs, damage, return, and inventory reconciliation.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Untracked transfer, wrong destination, custody gap, tamper ignored, sensitive data exposed, receipt assumed, carrier single point, and delivery speed over safety or condition.
+
+RECOVERY AND RECONSIDERATION
+
+Hold, investigate, preserve custody evidence, reroute or replace, notify owners and recipients, reconcile inventory, and reassess security and customer impact. Reopen on route, carrier, item, condition, or jurisdiction change.
+
+COMPLETION CRITERIA
+
+Items, custody, routes, carriers, condition, evidence, owners, exceptions, receipt, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve shipment, custody, tracking, receipt, damage, claims, decisions, evidence, exceptions, and open gaps. Hand off to Distribution, Manufacturing, Device Provisioning, Vendor, Support, Finance, and Operations.
+
+RELATED CODEX SECTIONS
+
+350 Supply Chain; 351 Manufacturing; 355 Device Provisioning; 357 Distribution; 399 Hardware Disposal; 348 Procurement; 334 Customer Support.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, supply, manufacturing, device, security, customer, and operations context, and the integration roadmap. Exact items, routes, carriers, jurisdictions, custody, condition, and acceptance authority remain unresolved.

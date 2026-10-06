@@ -1,0 +1,95 @@
+SECTION 248 — Compatibility Testing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Verify that a capability behaves acceptably across supported versions, platforms, devices, browsers, providers, configurations, interfaces, data formats, and neighboring systems.
+
+REQUIRED OUTCOME
+
+A compatibility matrix with supported combinations, assumptions, contracts, prioritized coverage, results, known incompatibilities, migration or fallback, and owner decision.
+
+WHY THIS MATTERS
+
+Compatibility failures are often conditional on version, configuration, locale, hardware, provider, or data. A successful test on one combination cannot justify a universal support claim.
+
+APPLICABILITY
+
+Apply when users, systems, devices, providers, formats, environments, or versions must interoperate or remain supported across change.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no supported combination, interface, version, or consumer behavior changes and an approved exact baseline covers the scope.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use support policy, architecture, contracts, version management, user population, platform, localization, data, release, and operations baselines.
+
+REQUIRED INPUTS
+
+Supported matrix, versions, configurations, devices, providers, interfaces, data formats, users, priorities, known limits, test environments, and acceptance criteria.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners define support and deprecation; testers prioritize combinations; domain and support owners judge user impact. Humans approve unsupported behavior, migration, fallback, and communication.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze compatibility metadata, propose matrix coverage, generate cases, and summarize failures. It must not infer support from similarity, silently drop combinations, or make compatibility commitments without human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Compatibility Tester, Architect, Release Engineer, Researcher, Analyst, Tester, Verifier, User Experience Reviewer, Support Reviewer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define support; inventory combinations; prioritize risk and population; prepare environments and data; execute functional, interface, performance, accessibility, security, and migration cases; record incompatibility; provide fallback or communication; retest.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show combination, support status, version, configuration, user, data, method, result, and limitation. Require human approval for support, deprecation, fallback, and customer communication.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use explicit compatibility contracts, feature detection, version negotiation, migration, graceful fallback, observability, configuration capture, and support boundaries. Avoid silent behavior changes.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show matrix, tested combinations, failures, support status, evidence freshness, owner, fallback, deprecation, and authorized support, restrict, migrate, accept, and reopen controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Compatibility matrix; support and deprecation policy; environment record; results and incompatibility register; migration and fallback plan; decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify combination, version, configuration, device or provider, data, user, method, result, time, and limitation. A passing combination proves only that combination.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify prioritized coverage, interfaces, data, performance, security, accessibility, migration, fallback, documentation, and support. Reproduce material incompatibilities and confirm boundaries.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Support by assumption, matrix explosion without prioritization, silent drop of old users, provider behavior assumed identical, fallback untested, and compatibility claim from one platform.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict unsupported combinations, provide fallback or migration, communicate, preserve failure evidence, and reassess user impact. Reopen on platform, provider, version, data, or support change.
+
+COMPLETION CRITERIA
+
+Support, combinations, cases, results, incompatibilities, fallback, owners, evidence, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve matrix and versions, results, support decisions, migrations, exceptions, evidence, and open gaps. Hand off to Release, Version Management, Deprecation, Support, Operations, UX, and Testing.
+
+RELATED CODEX SECTIONS
+
+019 Requirements; 020 Systems Engineering; 248 Compatibility Testing; 388 Version Management; 389 Deprecation Management; 378-381 Updates; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, support and version context, and the integration roadmap. Exact matrix, support population, platforms, providers, migration, deprecation, and acceptance authority remain unresolved.

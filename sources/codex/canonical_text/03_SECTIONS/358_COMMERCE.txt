@@ -1,0 +1,95 @@
+SECTION 358 — Commerce
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Govern the customer transaction lifecycle from offer, catalog, price, quote, order, entitlement, fulfillment, support, refund, dispute, and records.
+
+REQUIRED OUTCOME
+
+A commerce model with product, customer, price, tax or jurisdiction, offer, quote, order, entitlement, fulfillment, payment dependency, cancellation, refund, evidence, and ownership.
+
+WHY THIS MATTERS
+
+Commerce joins customer trust, money, product truth, legal terms, fulfillment, and accounting. A technically successful transaction can still be wrong, unauthorized, noncompliant, or impossible to unwind.
+
+APPLICABILITY
+
+Apply when a product or service is offered, priced, quoted, ordered, entitled, fulfilled, renewed, refunded, disputed, or retired commercially.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no commercial offer, customer, price, order, entitlement, fulfillment, or financial obligation changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use product, pricing, legal, tax, privacy, identity, payments, billing, subscription, distribution, support, and records baselines.
+
+REQUIRED INPUTS
+
+Product, customer, catalog, price, offer, terms, jurisdiction, quote, order, entitlement, fulfillment, payment, refund, dispute, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Commerce owners approve product and price, terms, discounts, customer, jurisdiction, exception, refund, dispute, and retirement. Finance and legal owners approve their obligations.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may summarize authorized catalog and order data, draft quote analysis, and identify inconsistency. It must not set price, make offer, infer customer eligibility, alter order, approve refund, or expose financial data without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Commerce Manager, Product Manager, Financial Analyst, Legal Advisor, Payments Engineer, Billing Engineer, Customer Support, Analyst, Verifier, and Governance Reviewer.
+
+REQUIRED ACTIVITIES
+
+Define catalog and offer; price and quote; validate customer and terms; order; authorize; fulfill; bill and pay; support; refund or dispute; reconcile; report; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show product, customer, price, terms, jurisdiction, order, entitlement, evidence, authority, and limitation. Require human approval for discount, high-value, exception, refund, dispute, and legal or tax action.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Link catalog, price, terms, customer, order, entitlement, payment, fulfillment, billing, refund, and ledger with immutable history, idempotence, authorization, and reconciliation.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show catalog, order, customer, entitlement, price, payment, fulfillment, disputes, evidence freshness, owner, and authorized approve, hold, refund, cancel, correct, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Commerce charter; catalog and pricing; offer and order; entitlement and fulfillment; billing, payment, refund, dispute, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify product, customer, price, terms, jurisdiction, order, actor, method, time, result, entitlement, and limitation. Order or payment status proves only its recorded transaction state.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify product, price, terms, customer, entitlement, authorization, fulfillment, payment, tax, refund, dispute, reconciliation, privacy, and support. Test duplicate, partial, failed, and reversed transaction.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Price drift, entitlement without payment, payment without fulfillment, duplicate order, refund without ledger, hidden terms, wrong jurisdiction, and transaction success treated as customer outcome.
+
+RECOVERY AND RECONSIDERATION
+
+Hold, reverse or refund, preserve records, reconcile, communicate, support customer, and reassess legal and financial impact. Reopen on product, price, terms, jurisdiction, payment, or fulfillment change.
+
+COMPLETION CRITERIA
+
+Product, customer, price, terms, order, entitlement, fulfillment, payment, billing, evidence, owners, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve catalog, prices, orders, entitlements, payments, billing, refunds, disputes, decisions, evidence, exceptions, and open gaps. Hand off to Billing, Payments, Subscriptions, Revenue, Support, Legal, Finance, and Operations.
+
+RELATED CODEX SECTIONS
+
+219 Legal; 348 Procurement; 357 Distribution; 359-362 Billing, Payments, Subscriptions, and Revenue Operations; 334 Customer Support; 225 Records.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, product, commerce, financial, legal, payment, customer, and evidence context, and the integration roadmap. Exact products, prices, jurisdictions, tax, terms, systems, refunds, and acceptance authority remain unresolved.

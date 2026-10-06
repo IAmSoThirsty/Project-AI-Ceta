@@ -1,0 +1,100 @@
+SECTION 108 — Computer Science
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the governed use of computational models, abstractions, theories, and methods to understand, design, analyze, and verify systems without confusing a mathematical result with an implemented or acceptable system.
+
+REQUIRED OUTCOME
+
+The result is a bounded computational question, model or proof basis, assumptions, complexity analysis, reproducible method, evidence, limitations, and handoff to engineering or architecture.
+
+WHY THIS MATTERS
+
+Computer science provides the abstractions used to reason about computation, information, algorithms, languages, systems, and limits. Unstated assumptions can make a formally valid result irrelevant to real users, data, resources, security, or lifecycle conditions.
+
+APPLICABILITY
+
+Applies when computational complexity, correctness, formal models, algorithms, data structures, languages, concurrency, distributed behavior, information representation, or theoretical limits affect a design or decision.
+
+NON-APPLICABILITY CONDITIONS
+
+Not applicable to a purely descriptive or bounded editorial change with no computational claim, model, method, requirement, implementation, or evidence consequence. Record the exact scope and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+Requires an authorized question, domain and requirements context, declared assumptions, relevant data or formal definitions, qualified review, and a reproducible method. Related architecture, security, privacy, safety, and performance constraints must be available or marked unresolved.
+
+REQUIRED INPUTS
+
+Question, definitions, inputs, constraints, model, proof or experiment method, expected properties, complexity target, resource limits, threat assumptions, evidence standard, and acceptance authority.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans set the question, acceptable abstraction, values, constraints, interpretation, risk, and acceptance. They approve claims that affect architecture, policy, safety, rights, or investment and ensure qualified independent review.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may explain concepts, propose models, derive examples, check reasoning, generate experiments, and identify counterexamples. It must label conjecture, proof, simulation, and empirical result separately; it must not invent a proof, hide assumptions, or approve consequential conclusions.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Architect, Researcher, Analyst, Critic, Verifier, Tester, Security Auditor, Governance Reviewer, Documentation Writer, Memory Curator, Planner, and Teacher. Existing role contracts remain controlling.
+
+REQUIRED ACTIVITIES
+
+1. Define the problem, abstraction, scope, assumptions, and non-goals.
+2. Select notation, models, data structures, computational resources, and correctness properties.
+3. Analyze feasibility, complexity, termination, determinism, concurrency, information loss, and adversarial conditions.
+4. Prove, model-check, simulate, implement a reference, or experimentally evaluate as appropriate.
+5. Seek counterexamples, boundary conditions, sensitivity, and independent review.
+6. Record results, limitations, unresolved gaps, and implications for implementation and operations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Human review is required for model selection, assumption acceptance, proof claims, security or safety conclusions, and decisions affecting people or resources. AI output remains advisory until independently checked.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Keep formal model, reference implementation, production implementation, data, experiment, and evidence separate. Record computational resource limits, nondeterminism, precision, reproducibility, and invalidation conditions. Preserve fallback and human interpretation for consequential results.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show question, model version, assumptions, method, proof or experiment status, evidence freshness, limitations, reviewer, and actions to reproduce or challenge the result. Provide controls to quarantine, supersede, or reopen claims.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Problem statement, formal definitions, model, proof or analysis, reference code, experiment record, complexity and resource analysis, counterexamples, review record, limitations, and engineering handoff.
+
+EVIDENCE REQUIREMENTS
+
+Evidence identifies definitions, model version, inputs, method, environment, seed or nondeterminism, resource limits, reviewer, result, and excluded claims. Missing or inconclusive evidence is not success.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Reproduce the proof or experiment; vary assumptions; test boundary and adversarial inputs; compare model and implementation; measure resource use; independently challenge the conclusion; verify handoff requirements and invalidation triggers.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Unstated assumptions, asymptotic claims treated as production performance, simulation treated as proof, proof treated as user acceptance, ignored resource limits, and AI-generated reasoning accepted without checking.
+
+RECOVERY AND RECONSIDERATION
+
+Preserve the prior claim and evidence when a counterexample, assumption change, or reproducibility failure appears. Narrow use, rerun analysis, obtain qualified review, or supersede through an attributable decision; do not erase the failed result.
+
+COMPLETION CRITERIA
+
+The question, model, assumptions, method, result, limits, review, acceptance authority, and engineering implications are explicit, reproducible within declared conditions, and free of unrecorded material gaps.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Hand off model identity, definitions, assumptions, results, counterexamples, evidence, decisions, dissent, open work, and reopening conditions to Algorithm, Software, Data, AI, Security, Testing, and Architecture sections.
+
+RELATED CODEX SECTIONS
+
+019 Requirements Engineering; 020 Systems Engineering; 028 Functional Architecture; 031 Data Architecture; 033 Software Architecture; 056 AI Architecture; 109 Algorithm Engineering; 111 Compiler Engineering; 132-135 Real-Time, High-Performance, Parallel, and Scientific Computing; 180 Model Evaluation.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract and shared governance conventions. The Codex does not select a universal formalism, proof assistant, computational model, curriculum, or domain-specific acceptance threshold; those remain system-specific gaps.

@@ -1,0 +1,95 @@
+SECTION 215 — Fraud Prevention
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Reduce fraud by identifying deceptive, unauthorized, manipulated, or abusive activity while protecting legitimate users from unjustified suspicion, denial, disclosure, or harm.
+
+REQUIRED OUTCOME
+
+A fraud-prevention model with protected outcomes, threat and abuse scenarios, signals, decision thresholds, human review, user communication, appeal, evidence, privacy, model monitoring, recovery, and accountability.
+
+WHY THIS MATTERS
+
+Fraud controls operate under uncertainty and can shift harm onto innocent people. A score, rule, anomaly, or AI prediction is not proof of fraud; opaque or unreviewable action can create financial, access, reputational, and discriminatory harm.
+
+APPLICABILITY
+
+Apply when systems detect, prevent, investigate, or respond to fraud involving accounts, payments, identity, transactions, content, suppliers, benefits, or organizational resources.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no fraud exposure, transaction, identity, protected outcome, or decision is affected and an approved exact baseline covers the scope. Keep ordinary security and privacy obligations separate.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use identity, authorization, privacy, security operations, threat, payment, legal, ethics, accessibility, support, and incident baselines. Define harm, protected users, decision owner, review, appeal, and notification authority.
+
+REQUIRED INPUTS
+
+Fraud scenarios, assets, transactions, identities, signals, features, rules, models, thresholds, labels, feedback, data sources, user journeys, false-positive cost, review capacity, appeals, and evidence.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve protected outcomes, signals, thresholds, actions, review, appeal, data use, notification, exceptions, and residual risk. Humans review high-impact denials, account closure, financial holds, vulnerable-user impact, and disputed decisions.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may analyze authorized signals, identify patterns, draft rules or review queues, and recommend investigation. It must expose features, uncertainty, data quality, drift, and limitations; avoid inferring sensitive traits without authority; and preserve an appeal path. It must not label a person fraudulent, deny service, freeze funds, close an account, or disclose an allegation without delegated authority and human review.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Fraud Analyst, Security Auditor, Researcher, Analyst, Data Scientist, User Experience Reviewer, Privacy Reviewer, Ethics Reviewer, Tester, Verifier, Governance Reviewer, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Define fraud and harm; map scenarios and users; inventory signals and provenance; design controls and thresholds; assess false positives and disparate impact; route human review; communicate and appeal; monitor drift; investigate; recover victims; test; record decisions and limitations.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show signal, source, time, threshold, confidence, action, user impact, reviewer, and appeal path. Require human review for high-impact action and allow correction. Do not expose detection logic in a way that enables abuse, but explain decisions sufficiently for fair review.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Separate signal collection, feature processing, decision, enforcement, review, appeal, case evidence, user support, and recovery. Minimize data, protect models and rules, monitor drift and feedback loops, and ensure fail-safe behavior does not permanently deny legitimate users.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show fraud-control version, affected outcome, signal health, queue, action, uncertainty, false-positive indicators, reviewer, appeals, evidence freshness, and authorized pause, narrow, reverse, notify, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Fraud charter; scenario and signal inventory; decision and review model; privacy and fairness assessment; rules or model documentation; case, appeal, recovery, test, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify subject or transaction, signal, source, feature or rule version, time, decision, reviewer, result, confidence, impact, and limitation. A score or pattern proves neither fraud nor justified action.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Test fraud and legitimate cases, adversarial adaptation, data drift, false positives, false negatives, missing signals, provider failure, review load, appeal, reversal, accessibility, and notification. Verify independent reproduction and outcome monitoring.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Score as verdict, opaque denial, sensitive-trait proxy, no appeal, feedback loop, unreviewed account closure, target-chasing metrics, and treating customer friction or complaints as fraud evidence.
+
+RECOVERY AND RECONSIDERATION
+
+Pause or narrow affected controls, preserve evidence, restore legitimate access or funds where appropriate, notify and support affected people, review bias and data quality, and correct downstream records. Reopen on drift, new harm, model or rule change, or disputed outcome.
+
+COMPLETION CRITERIA
+
+Scenarios, outcomes, signals, decisions, owners, review, appeal, privacy, evidence, tests, recovery, limitations, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending independent verification and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve rule or model versions, signal provenance, decisions, cases, appeals, corrections, incidents, evidence, exceptions, and open gaps. Hand off to Security, Privacy, Legal, Payments, Support, Data, Testing, Governance, and Operations.
+
+RELATED CODEX SECTIONS
+
+047 Privacy Architecture; 200-202 IAM, Authentication, and Authorization; 206 Security Operations; 208 Threat Modeling; 216 Abuse Prevention; 217 Trust and Safety; 218 Privacy Engineering; 231-254 Testing.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, security, privacy, ethics, and data context, and the integration roadmap. Exact fraud definitions, data authority, fairness method, legal duties, appeal standard, and acceptance evidence remain unresolved.

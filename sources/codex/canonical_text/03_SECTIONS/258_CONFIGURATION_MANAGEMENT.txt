@@ -1,0 +1,95 @@
+SECTION 258 — Configuration Management
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Identify, baseline, change, verify, deploy, observe, and retire configuration that affects system behavior, security, quality, cost, compliance, or recovery.
+
+REQUIRED OUTCOME
+
+A configuration model with items, owners, source of truth, versions, dependencies, environments, secrets boundary, approval, change history, drift detection, rollback, and evidence.
+
+WHY THIS MATTERS
+
+Configuration is executable behavior. Untracked flags, defaults, environment values, provider settings, and manual changes create drift that can defeat tests, controls, reproducibility, and recovery.
+
+APPLICABILITY
+
+Apply when settings, flags, policies, infrastructure, runtime values, schemas, device parameters, or environment-specific behavior can affect an outcome.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no configuration or behavior changes and an approved exact baseline covers the artifact and environment.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use architecture, source control, secrets, environment, release, operations, security, testing, and recovery baselines. Identify owners, source of truth, permissible variance, and emergency change authority.
+
+REQUIRED INPUTS
+
+Configuration items, schema, defaults, values, versions, environments, owners, dependencies, secrets references, flags, drift, change records, tests, and recovery.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Owners approve configuration meaning, secure values, change, emergency override, drift tolerance, rollback, and acceptance. Operators record manual intervention and cannot treat undocumented state as baseline.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may compare authorized configuration, identify drift, draft changes and tests, and explain impact. It must not expose secrets, change protected environments, infer safe defaults, or approve or deploy configuration without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Configuration Manager, Architect, Platform Engineer, Security Auditor, Tester, Verifier, Implementer, Analyst, Critic, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory items; define source and schema; baseline; classify sensitive values; review changes; test; deploy; detect drift; reconcile; handle emergency changes; roll back; archive; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show item, value reference, environment, version, owner, change, impact, evidence, and limitation without exposing secret material. Require human approval for protected, security, safety, cost, and production changes.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use declarative or versioned configuration, immutable references where appropriate, environment overlays, validation, policy gates, drift detection, safe defaults, rollback, and audit. Keep secret values outside ordinary configuration records.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show baseline, environment, drift, active changes, owner, evidence freshness, dependencies, and authorized approve, promote, reconcile, roll back, quarantine, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Configuration inventory and schema; baseline; change and approval records; drift report; validation and deployment results; rollback, exception, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify item, version, environment, source, change, actor, time, validation, result, and limitation. A file or dashboard snapshot proves only the captured state.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify source of truth, schema, defaults, secret boundary, environment promotion, drift, policy, rollback, audit, and recovery. Test missing, invalid, stale, conflicting, and emergency values.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Manual production edits, configuration in secrets or source without boundary, undocumented flags, environment drift, default allow, and rollback that restores code but not configuration.
+
+RECOVERY AND RECONSIDERATION
+
+Freeze drift, preserve state, compare to last valid baseline, roll back or reconcile, rotate exposed values, and reassess impact. Reopen on environment, provider, requirement, dependency, or policy change.
+
+COMPLETION CRITERIA
+
+Items, schemas, owners, versions, environments, secrets, changes, drift, tests, evidence, recovery, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve baselines, changes, approvals, drift, incidents, evidence, exceptions, and open gaps. Hand off to Source Control, Build, Release, Platform, Operations, Security, Testing, and Recovery.
+
+RELATED CODEX SECTIONS
+
+258 Configuration Management; 259 Source Control; 263 Environment Management; 264-268 Build and Delivery; 270 DevSecOps; 271 GitOps; 301-330 Operations.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, architecture, delivery, and operations context, and the integration roadmap. Exact configuration items, environments, secrets, approval, drift, and acceptance authority remain unresolved.

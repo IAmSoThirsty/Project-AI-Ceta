@@ -1,0 +1,106 @@
+SECTION 072 — Signal Processing
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Define the disciplined acquisition, conditioning, transformation, interpretation, and verification of signals from physical or digital sources while preserving timing, provenance, uncertainty, fidelity, and safe downstream use.
+
+REQUIRED OUTCOME
+
+ - A declared signal, sensor, sampling, processing, output, environment, latency, resource, and lifecycle scope.
+ - Versioned algorithms, calibration, transforms, models, thresholds, interfaces, evidence, failure, and recovery records.
+ - Human authority over interpretation, thresholds, physical action, and acceptance of signal-derived outcomes.
+
+WHY THIS MATTERS
+
+Signal processing can turn noise, aliasing, drift, bias, compression, or a misplaced threshold into a confident but wrong decision. Evidence must show the acquisition conditions and processing chain, not merely a plausible plot or model score.
+
+APPLICABILITY
+
+Applies to sensing, communications, audio, image, radar, biomedical, industrial, control, scientific, or machine-learning pipelines that acquire or transform signals into information or action.
+
+NON-APPLICABILITY CONDITIONS
+
+ - A conceptual mathematical example with no claim of calibrated acquisition, production inference, control, safety, or operational performance.
+ - A covered processing baseline is unchanged by a reversible documentation correction and impact is recorded.
+ Record exact signal scope, baseline, evidence, authority, assumptions, and reopening trigger.
+
+PREREQUISITES AND DEPENDENCIES
+
+ - Sensor or source specifications, sampling and timing, calibration, noise and environment, domain requirements, algorithms, models, thresholds, compute, interfaces, privacy, safety, security, and acceptance criteria.
+ - Representative labeled and unlabeled data, ground truth, fixtures, instrumentation, configuration, artifacts, and failure or drift history.
+
+REQUIRED INPUTS
+
+ - Approved signal purpose, source and sensor specifications, sampling and timing, calibration, noise and environment, domain requirements, algorithms, models, thresholds, compute, interfaces, privacy, safety, security, and acceptance criteria.
+ - Representative labeled and unlabeled data, ground truth, fixtures, instrumentation, configuration, artifacts, failure history, drift history, and lifecycle constraints.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+Humans approve signal purpose, collection, calibration, transformations, thresholds, acceptable uncertainty, privacy, safety, security, downstream action, and release. They decide ambiguous or conflicting interpretations, retain stop and quarantine authority, and approve changes to material processing or model behavior.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect traces, propose filters or features, compare algorithms, detect anomalies, generate test vectors, and summarize performance. It must preserve source, time, calibration, preprocessing, model, and uncertainty identity. It must not change thresholds, label ground truth, claim detection, or trigger physical or rights-affecting action without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Researcher, Analyst, Architect, Implementer, Tester, Verifier, Observer, Security Auditor, Governance Reviewer, User Experience Reviewer, Critic, Red Team, Planner, Documentation Writer, Memory Curator, Optimizer, and Decision Arbiter Advisory.
+
+REQUIRED ACTIVITIES
+
+1. Define source, signal semantics, sampling, timing, units, environment, target outputs, and consequence.
+2. Characterize calibration, noise, drift, aliasing, missingness, saturation, quantization, latency, and resource limits.
+3. Specify acquisition, filtering, transforms, feature extraction, inference, thresholds, outputs, provenance, and safe handling.
+4. Validate on representative, boundary, adversarial, shifted, missing, corrupted, and low-quality signals.
+5. Test timing, numerical stability, resource exhaustion, calibration loss, source failure, replay, and downstream recovery.
+6. Baseline algorithm, configuration, evidence, and owner decision.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show source and sensor identity, calibration, timestamp, sampling, processing version, model or filter, confidence limits, missingness, threshold, downstream consequence, and human approval. Generated or AI-derived interpretations remain proposals until verified; raw and non-AI inspection paths remain available.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Preserve acquisition-to-output lineage, units, clock behavior, calibration, numerical precision, windowing, state, resource budgets, real-time limits, versioned algorithms, model and feature identity, uncertainty, and safe output states. Do not conflate processed signal with ground truth.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Provide signal catalog, processing chain, calibration and quality records, algorithm and configuration manifest, interface and timing contract, test vectors, performance and uncertainty report, failure and recovery design, and decision and evidence register.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Identify source, sensor, calibration, time, location, sample rate, units, preprocessing, algorithm, model, threshold, ground truth, workload, method, result, uncertainty, and limitation. Plots, benchmark scores, and synthetic signals do not prove field validity.
+
+EVIDENCE REQUIREMENTS
+
+Verify calibration, sampling and alias control, timing, numerical behavior, noise and drift handling, missing and saturated inputs, adversarial signals, threshold sensitivity, representative generalization, resource and latency limits, safe outputs, and independent reproduction.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Filtering away inconvenient cases; treating correlation as detection; leakage from labels or future data; unreported preprocessing; uncalibrated sensors; threshold tuning on test data; synthetic-only evidence; hidden drift; and confidence treated as truth.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+On source, calibration, timing, quality, model, or provenance failure, mark outputs invalid, stop consequential use, preserve raw and processed evidence, and switch to approved fallback or human review. Reconsider after recalibration, reprocessing, validation, and downstream impact review.
+
+RECOVERY AND RECONSIDERATION
+
+Signal purpose, chain, assumptions, algorithms, calibration, interfaces, limits, tests, evidence, safe output, recovery, lifecycle, open risks, and acceptance authority are explicit. Remain CONTENT-COMPLETE until source reconciliation, hostile review, and owner acceptance.
+
+COMPLETION CRITERIA
+
+Preserve raw and processed artifacts, timestamps, calibration, source and algorithm versions, configurations, decisions, evidence, failures, affected outputs, and next safe action. Hand off to Embedded, Telecommunications, Control, Robotics, Data, AI, Testing, Operations, Safety, Security, and Retirement sections.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve raw and processed artifacts, timestamps, calibration, source and algorithm versions, configurations, decisions, evidence, failures, affected outputs, and next safe action. Hand off to Embedded, Telecommunications, Control, Robotics, Data, AI, Testing, Operations, Safety, Security, and Retirement sections.
+
+RELATED CODEX SECTIONS
+
+020 Systems Engineering; 040 Communications Architecture; 056-057 AI and Machine Learning Architecture; 061-069 Engineering sections; 073 Control Systems Engineering; 172 Computer Vision; 173 Speech Engineering; 254 Data Testing; 323 Performance Management.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance files, Sections 019-069, and evidence conventions. Signal modality, calibration regime, ground truth, acceptable error, operating environment, regulatory constraints, and downstream consequence remain unresolved until supplied.

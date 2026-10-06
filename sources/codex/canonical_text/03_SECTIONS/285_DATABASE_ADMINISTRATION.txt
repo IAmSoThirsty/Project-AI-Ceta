@@ -1,0 +1,95 @@
+SECTION 285 — Database Administration
+
+STATUS: CONTENT-COMPLETE
+
+PURPOSE
+
+Operate and protect databases, schemas, users, queries, storage, replication, backup, recovery, performance, and lifecycle so data remains available, correct, secure, and governed.
+
+REQUIRED OUTCOME
+
+A database-administration model with instances, schemas, owners, access, changes, capacity, performance, quality, backup, restore, replication, monitoring, retention, and retirement.
+
+WHY THIS MATTERS
+
+Database actions can affect large populations and irreversible data state. Privileged access, unsafe migration, untested backup, replication lag, and hidden queries create operational and evidentiary risk.
+
+APPLICABILITY
+
+Apply when a database or data service is provisioned, configured, queried, migrated, backed up, restored, replicated, secured, or retired.
+
+NON-APPLICABILITY CONDITIONS
+
+Record non-applicability when no database, schema, access, data, query, performance, backup, or lifecycle behavior changes and an approved exact baseline covers it.
+
+PREREQUISITES AND DEPENDENCIES
+
+Use data, database, identity, security, privacy, configuration, migration, backup, recovery, performance, records, and operations baselines.
+
+REQUIRED INPUTS
+
+Database, schema, data class, owner, users, roles, queries, migrations, indexes, replication, backup, restore, performance, retention, and deletion requirements.
+
+HUMAN RESPONSIBILITIES AND AUTHORITY
+
+DB owners approve schema, access, migration, destructive query, backup, restore, replication, retention, and retirement. Humans review data meaning, privacy, and recovery impact.
+
+AI RESPONSIBILITIES AND BOUNDARIES
+
+AI may inspect authorized metadata, query plans, logs, and bounded samples; draft queries, tests, and runbooks; and propose tuning. It must not access raw sensitive data, execute writes or DDL, change access, or delete data without authority.
+
+APPLICABLE EXISTING AGENT ROLES
+
+Database Administrator, Data Architect, Data Engineer, Security Auditor, Privacy Reviewer, Performance Engineer, Tester, Verifier, Analyst, and Documentation Writer.
+
+REQUIRED ACTIVITIES
+
+Inventory and classify; secure access; manage schemas and migrations; monitor; tune; back up; test restore; replicate; handle incidents; reconcile data; retain and delete; and retire.
+
+HUMAN-AI INTERACTION REQUIREMENTS
+
+Show database, schema, query, user, privilege, data scope, environment, action, evidence, and limitation. Require human approval for writes, DDL, privilege, migration, restore, deletion, and production tuning.
+
+ARCHITECTURE AND SYSTEM IMPLICATIONS
+
+Use least privilege, separation, transactions, migration rollback, replication, backups, encryption, audit, resource limits, query observability, and independent recovery path.
+
+OWNER COCKPIT AND USER-CONTROL REQUIREMENTS
+
+Show database health, schema, access, queries, replication, storage, backup, performance, evidence freshness, owner, and authorized restrict, migrate, restore, fail over, correct, and retire controls.
+
+REQUIRED OUTPUTS AND ARTIFACTS
+
+Database catalog; schema and access model; migration and query record; performance and quality; backup, restore, incident, decision, evidence, and continuity records.
+
+EVIDENCE REQUIREMENTS
+
+Identify database, schema, query, user, data class, version, environment, method, time, result, actor, and limitation. Query success or row count proves neither semantic correctness nor data safety.
+
+VERIFICATION AND ACCEPTANCE TESTS
+
+Verify access, schema, migration, transaction, query, backup, restore, replication, failover, performance, privacy, audit, retention, and deletion. Test unsafe query, lag, corruption, and provider loss.
+
+FAILURE STATES AND ANTI-PATTERNS
+
+Shared admin, schema drift, migration without rollback, backup not restored, replication assumed current, sensitive data in logs, and performance tuning without workload or user context.
+
+RECOVERY AND RECONSIDERATION
+
+Restrict writes, preserve logs and state, restore or fail over, reconcile, notify consumers, correct data, and reassess retention and user impact. Reopen on schema, data, workload, provider, or policy change.
+
+COMPLETION CRITERIA
+
+Database, schemas, owners, access, changes, data, performance, backup, recovery, evidence, retention, and reopening conditions are explicit. Status remains CONTENT-COMPLETE pending review and owner acceptance.
+
+HANDOFF AND CONTINUITY REQUIREMENTS
+
+Preserve schemas, migrations, access, queries, backups, incidents, decisions, evidence, exceptions, and open gaps. Hand off to Data, Storage, Security, Application, Platform, Testing, Records, and Operations.
+
+RELATED CODEX SECTIONS
+
+031 Data Architecture; 159-162 Warehouse, Lake, Analytics, and BI; 254 Data Testing; 286 Storage; 307 Data Operations; 391-395 Data Lifecycle.
+
+SOURCE BASIS AND UNRESOLVED SOURCE GAPS
+
+Based on the Canonical Section Contract, shared governance, data, database, security, and operations context, and the integration roadmap. Exact database, engine, schema, access, recovery, retention, workload, and acceptance authority remain unresolved.
