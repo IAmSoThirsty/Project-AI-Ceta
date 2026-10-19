@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/societal-reasoning/premise.v1.json",
+  "title": "Version 1 bounded evidence-to-premise check",
+  "description": "These assertions validate only evidence text and narrowly parseable source propositions, never the truth, motives, or social entailment of a proposed reading.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "text", "evidence_sha256", "start", "end"],
+      "properties": {
+        "kind": {"const": "verbatim_span"},
+        "text": {"type": "string", "minLength": 1, "maxLength": 512},
+        "evidence_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "start": {"type": "integer", "minimum": 0},
+        "end": {"type": "integer", "minimum": 1}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "text", "evidence_sha256"],
+      "properties": {
+        "kind": {"const": "literal_assertion"},
+        "text": {"type": "string", "minLength": 1, "maxLength": 512},
+        "evidence_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    }
+  ]
+}

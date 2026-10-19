@@ -1,0 +1,104 @@
+{
+  "scenario": {
+    "id": "literal-premise-evaluation",
+    "question": "Which source assertions can be used without presuming anything about the person?",
+    "evidence": [
+      {
+        "id": "reported",
+        "statement": "Alex will not attend the meeting.",
+        "origin": "user_report",
+        "source_ref": "participant-report"
+      },
+      {
+        "id": "conflict",
+        "statement": "Alex will attend the meeting.",
+        "origin": "external_record",
+        "source_ref": "meeting-note"
+      },
+      {
+        "id": "caption",
+        "statement": "The caption reads: AI coders cannot code.",
+        "origin": "quoted_material",
+        "source_ref": "caption"
+      },
+      {
+        "id": "guess",
+        "statement": "Alex secretly dislikes the team.",
+        "origin": "interpretation",
+        "source_ref": "unverified-guess"
+      }
+    ],
+    "unknowns": [
+      "What actually happened",
+      "Whether the sources refer to the same meeting or person",
+      "Why the person did or did not attend"
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "reported-nonattendance",
+      "reading": "A submitted report says Alex will not attend this meeting.",
+      "proposed_by": "caller",
+      "warrants": [
+        {
+          "evidence_id": "reported",
+          "role": "support",
+          "rationale": "The reported statement contains the claimed nonattendance wording, not proof of what happened.",
+          "premise": {
+            "kind": "literal_assertion",
+            "text": "Alex will not attend the meeting.",
+            "evidence_sha256": "7b5d70968a4f3e39834c306fa4bb6c27ffd82e177e74f2b78ccb5995266c60cf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reported-attendance",
+      "reading": "A second submitted record states that Alex will attend this meeting.",
+      "proposed_by": "caller",
+      "warrants": [
+        {
+          "evidence_id": "conflict",
+          "role": "support",
+          "rationale": "A second report makes an opposed textual statement; the reports remain unresolved.",
+          "premise": {
+            "kind": "literal_assertion",
+            "text": "Alex will attend the meeting.",
+            "evidence_sha256": "6dbc90b59644124a9a0eb277672fb6a92ce1c911d8ace397a08e126b44d5c75f"
+          }
+        }
+      ]
+    },
+    {
+      "id": "caption-wording",
+      "reading": "The supplied caption includes a group-level criticism, without proving its author believes that statement.",
+      "proposed_by": "model_proposal",
+      "warrants": [
+        {
+          "evidence_id": "caption",
+          "role": "support",
+          "rationale": "Only the literal span of caption text is established by this check, not social meaning.",
+          "premise": {
+            "kind": "verbatim_span",
+            "text": "AI coders cannot code",
+            "evidence_sha256": "e4be68ed3306e023d01ea792e89e97426356c28eed2a5915b1f673f33d6c062f",
+            "start": 19,
+            "end": 40
+          }
+        }
+      ]
+    },
+    {
+      "id": "unsupported-motive",
+      "reading": "Alex must have an undisclosed hostile motive.",
+      "proposed_by": "model_proposal",
+      "warrants": [
+        {
+          "evidence_id": "guess",
+          "role": "support",
+          "rationale": "An existing guess is not evidence establishing a private motive."
+        }
+      ]
+    }
+  ]
+}

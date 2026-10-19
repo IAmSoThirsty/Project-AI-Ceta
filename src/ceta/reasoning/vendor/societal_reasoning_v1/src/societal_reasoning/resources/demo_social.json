@@ -1,0 +1,30 @@
+{
+  "id": "public_meme_reception",
+  "question": "Is the visible social move criticism of a particular product or ridicule of people who use tools?",
+  "context": {
+    "setting": "public_professional_discussion",
+    "medium": "public_social_post",
+    "audience": "software_developers",
+    "relationship": "unestablished"
+  },
+  "evidence": [
+    {
+      "id": "e1",
+      "statement": "The speaker uses a caricature to mock people who use AI development tools.",
+      "origin": "user_report",
+      "cues": ["derisive_form", "people_or_group_targeted", "public_audience", "stereotyping"],
+      "source_ref": "example_user_description"
+    },
+    {
+      "id": "e2",
+      "statement": "The described post does not identify a concrete failed code artifact or reproducible defect.",
+      "origin": "user_report",
+      "cues": ["no_specific_failure"],
+      "source_ref": "example_user_description"
+    }
+  ],
+  "unknowns": [
+    "The poster's private intention is not established.",
+    "Whether additional technical evidence exists outside the supplied description is unknown."
+  ]
+}

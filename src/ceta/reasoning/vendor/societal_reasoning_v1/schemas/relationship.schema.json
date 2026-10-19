@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/societal-reasoning/relationship.schema.json",
+  "title": "Societal Reasoning Relationship v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source", "target", "type", "rationale"],
+  "properties": {
+    "source": {"type": "integer", "minimum": 1},
+    "target": {"type": "integer", "minimum": 1},
+    "type": {"enum": ["enables", "depends_on", "reinforces", "constrains", "contradicts", "contextualizes", "may_cause", "mitigates", "is_a", "influences"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "provenance": {"type": "string"}
+  }
+}
