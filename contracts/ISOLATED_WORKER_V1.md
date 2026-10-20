@@ -1,4 +1,4 @@
-# Isolated owned Windows worker — version1 / AC4 rejected-token diagnostics
+# Isolated owned Windows worker — version1 / AC7 token measurements candidate
 
 Canonical owner: CMP-05 supervisor. Mapped dependency slice: CETA-11.02.01,
 11.02.02 and11.02.03; RE-S3/T09–10/RE-03–08; SPEC-21/POL-13.
@@ -31,7 +31,8 @@ capabilities and a restricted-child creation policy, explicit permitted handles,
 atomic job membership, one active process and KILL_ON_JOB_CLOSE. Creation is
 suspended. Exact process creation time, job membership, image-file identity and
 actual token facts are verified before resume: AppContainer true, expected SID,
-zero capabilities, exact low-integrity RID4096 and restricted token.
+zero capabilities, exact low-integrity RID4096 and consistent measured
+restricting-SID information as specified by the AC7 candidate amendment below.
 
 The same pinned file's native volume-GUID path and pinned ordinary directory
 are used for restrictive creation. This does not map a new drive, copy resources
@@ -264,3 +265,76 @@ cleanup itself and observe native handle validity before and after recovery.
 The missing historical AC3 token values remain unknown. AC5 creates no profile,
 worker, native CPU effect or positive isolation qualification, and changes no
 runtime activation default.
+
+## AC7 candidate amendment: restricting-SID observations
+
+AC6 stopped before ResumeThread because the original value contract required
+IsTokenRestricted to be true. The preserved AC6 failure records false without
+immediate last-error or a restricting-SID count. Its underlying return condition
+remains unresolved; this amendment does not reinterpret that failed attempt.
+
+Microsoft defines IsTokenRestricted as a restricting-SID-list test. False also
+represents an API error; this is distinct from AppContainer access enforcement.
+[IsTokenRestricted](https://learn.microsoft.com/en-us/windows/win32/api/securitybaseapi/nf-securitybaseapi-istokenrestricted)
+and [TokenRestrictedSids](https://learn.microsoft.com/en-us/windows/win32/api/winnt/ne-winnt-token_information_class)
+provide the API basis for this correction.
+
+The parent and Rust worker query TokenRestrictedSids (class11) on the same token
+as their other measurements. Both retain the actual returned byte length, bound
+the TOKEN_GROUPS count/header/array extent, and never dereference its SID pointers
+to count entries. Both clear last-error immediately before IsTokenRestricted and
+capture its raw signed32 BOOL and immediate error before another native call.
+The copied fields are restricted, restricted_sid_count, restriction_raw_result
+and restriction_last_error. The Boolean must equal raw_result != 0 and
+count > 0. False additionally requires an immediate zero error. Missing,
+malformed, contradictory or failed measurements reject qualification. A measured
+false/error0/count0 records an empty list; it asserts no general isolation claim.
+
+IsolationTokenFacts preserves its first six constructor fields and adds these
+measurements. Absent new measurements default to unknown and are rejected;
+legacy shapes are never silently filled with assumed zero. Raw BOOL values are
+signed32 and error values are unsigned32. The parent diagnostic schema becomes
+ceta-rejected-isolation-token-v2; the worker token schema is
+ceta-isolation-token-v2. The bounded qualification oracle must compare both
+producers' typed measurements and retain every existing access-denial requirement.
+The supported x64 TOKEN_GROUPS header/array layout and 65,536-byte query bound
+allow at most 4,095 entries; the typed facts and oracle enforce that same maximum.
+
+Exact AppContainer SID, AppContainer flag, zero capabilities, low integrity,
+atomic job membership, child restrictions, handle/environment controls, asset
+access, protected-file/process/network denial and retirement remain mandatory.
+This private candidate and its compiled worker require independent review and a
+new explicit operator authorization before another profile qualification attempt.
+No activation, source publication, profile operation or positive runtime
+acceptance is granted by controlled parser tests or compilation.
+
+The AC7 qualification tool consumes an exact candidate352 native/hash cut, the
+separate accepted Source352 cut and captured, pinned native fixture dependencies.
+Its pure oracle requires typed agreement between the parent and worker while
+retaining every file, process, child, handle, environment, job and network probe.
+The wrapper and direct qualification entry both require the exact distinct review
+and actual operator record. An exclusive execution-claim file consumes the one
+attempt before profile creation. Failure or interruption retains that claim;
+neither the same CLI invocation nor the wrapper may automatically retry it.
+
+For the process-rights probes, a failed OpenProcess must carry the typed native
+ERROR_ACCESS_DENIED(5); missing errors, zero, other native failures and Boolean
+substitutions do not qualify. The exact owned ordinary target remains retained
+by its native process handle, PID and creation time. The driver polls that owner
+immediately before launch and after the bounded worker wait, records both
+liveness observations, and rejects an exited target before accepting its probe.
+
+## Current admission-source token port
+
+The current private source candidate carries the corrected Python and Rust
+measurement producers, their existing bounded oracle, and controlled tests into
+the retained native-admission source. The first six facts constructor fields keep
+their order; all three new observations must be supplied explicitly before a
+copied facts record can be accepted. A missing observation remains unavailable.
+
+The byte-exact Rust source is bound to the recorded build-r2 image
+`3df03778e1e2f6f707d38b0869e04e262926f2d4c375f1d3d10562d3456443cc`.
+Its actual AC7 attempt exited `0xC0000142`; the loader cause remains unresolved.
+Data-only parser/oracle checks and preserved historical Rust tests do not qualify
+that image, resume the failed attempt, or authorize another native launch.
+Joined source, destination, full native, and application acceptance remain open.

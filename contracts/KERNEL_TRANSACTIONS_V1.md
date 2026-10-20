@@ -133,8 +133,11 @@ after COMMIT before returning. A post-commit stale result denies but preserves
 the durable reservation or consumed permit; it must be resolved from history,
 never refunded or blindly retried. This does not atomically pin a physical
 clock during SQLite COMMIT or qualify the external irreversible boundary.
-Actual broker admission remains closed and requires its own current checks and
-retained protected-resource custody through the irreversible access interval.
+Default identity-only broker admission remains closed. The selected native CPU
+owner implements retained admission under OS6 in NATIVE_OWNER_SESSION_V1.md;
+its exact current checks and protected-resource custody remain required through
+the irreversible access interval. That implementation supplies no native
+qualification or general runtime activation.
 
 Budget, reservation, intent and projection values are internal versioned
 metadata, not additional admitted record types. Working event names are

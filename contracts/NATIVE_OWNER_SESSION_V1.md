@@ -199,6 +199,165 @@ permit, held budget and committed intent for existing read-only recovery.
 OS5 engineering tests run the actual canonical SQLite enrollment, approval and
 preparation transitions over explicitly CONTROLLED native/authentication/code/
 target observations. No genuine approval witness or live runtime qualification
-is inferred from those fixtures. Native dispatch, admission, revocation and
+is inferred from those fixtures. Those OS5 tests establish no native admission;
+the selected retained predicate is specified in OS6 below. Revocation and the
 default runtime remain closed. Full joined native tests, public composition,
 genuine Hello approval and real governed effects require their separate gates.
+
+## Retained CPU execution owner (RE-T15/16)
+
+The selected `NativeCpuOwnerSession` now supplies the two optional methods already
+captured by the existing kernel. Public constructors and kernel signatures are
+unchanged:
+
+```
+retain_owned_cpu_execution(request, prepared_permit, binding, capture,
+    proof, peer, original_context, coordinator) -> single-use context manager
+require_owned_cpu_outcome_current(phase, request, consumed_permit,
+    receipt_or_None, observation_or_None, native_proof, peer,
+    original_context) -> exactly None
+```
+
+The retainer resolves the one existing bound `KernelTransactions`, its exact
+`SqliteJournal`/codec/native database identity, the same coordinator's private
+active execution lease, and the original opaque request context/thread. It
+borrows the exact native binding, capture, target lifetime, retained code lease
+and registered genuine-approval witness. Equal data, another context, another
+kernel/store, a copied witness or another capture cannot reconstruct custody.
+No grant, permit, scheduler, authority registry or journal is created here.
+
+Two private capabilities are captured from that same `NativeOwnerView` at owner
+construction. Their absence is a concrete closed dependency:
+
+```
+view.retain_owned_cpu_outcome_capacity(request, prepared_permit,
+    original_context, coordinator) -> single-use manager
+    yielded.require_current(phase, request, consumed_permit_or_None,
+        original_context, coordinator) -> exactly None
+
+view.require_owned_cpu_outcome_provenance(request, consumed_permit,
+    receipt, observation_or_None, native_proof, peer, original_context,
+    retained_execution_owner) -> exactly None
+```
+
+The first capability must supply real reserved physical outcome/recovery
+capacity on this canonical store. Logical byte accounting, free-space estimates
+and test Booleans do not establish it. The second must authenticate the actual
+producer and independent observer's retained origin; typed receipts,
+observations and the observer's copied `last_evidence` do not establish origin.
+Neither provider is implemented by this cut. Default construction therefore
+refuses execution before consumption. OS6 below implements protected-resource
+admission only for the exact retained CPU lease; revocation and general public
+runtime defaults remain closed. A qualified
+composition must integrate those existing obligations explicitly.
+
+Capacity entry occurs outside a writer transaction and before consumption. Its
+manager spans consumption, attempt reservation, dispatch and outcome writing.
+Currentness checks for CAPACITY, CONSUMED, READY, DISPATCH, ATTEMPT and OUTCOME
+are repeatable pure decisions; writer guards may call them inside the short
+SQLite transaction. They must perform no SQL, native query/allocation, human
+wait or effect. The unchanged kernel measures the existing 50 ms entry/owner
+bounds and complete admission deadlines; it cannot preempt an arbitrary blocking
+provider. Pending consumed liability must retain required recovery capacity
+through the canonical provider rather than refunding or silently discarding it.
+
+The native context already retains owner/code custody. The new retainer borrows
+binding then target lifecycle RLocks nonblockingly, before the short writer
+transactions. The coordinator metadata lock spans no provider, native or SQL
+work. Original context membership, exact native/code/store owners and final
+cancellation are rechecked after the last provider returns. The existing trusted
+owner `request_stop()` now also latches the same coordinator's short final-decision
+lock. This is cancellation custody, not a new public or durable Stop authority.
+
+Before dispatch, the old policy/version, active approval, clock/resume and Stop
+state remain required. OUTCOME is a different phase: only after the original
+kernel lease has admitted/called its captured effect may bookkeeping use its
+retained proof and producer facts. A legitimate policy/version change and a
+later Stop do not invalidate that historical provenance. The original approval
+witness may remain inactive for bookkeeping; it is never reactivated, and the
+same lease cannot authorize another dispatch. Independent provenance and
+capacity still must pass, including when an observation is unavailable and the
+canonical outcome remains uncertain. Closed/replaced native lifetime custody
+requires separate recovery integration; this retainer does not adopt a PID or
+reconstruct a retired native owner.
+
+Only this retainer's capacity manager and borrowed lock entries retire on exit;
+worker, clock, native store and code owners are not closed here. Failed capacity
+entry or uncertain exit retains the exact manager/owner and original exception
+plus cleanup secondary. Exit is attempted once, with the actual exception triple;
+no cleanup or dispatch replay is authorized. Trusted BaseException dictionary
+operations bypass diagnostic hooks; total diagnostic-storage allocation failure
+remains a limitation and cannot replace the preferred original exception.
+
+Qualification uses real disposable canonical SQLite transactions and owned
+Python threads, with explicitly CONTROLLED native approval/capture, physical
+capacity and origin predicates. Injected post-dispatch facts exercise actual
+canonical bookkeeping only. There is no worker launch, Hello ceremony, profile,
+native CPU Set, physical-capacity guarantee or production activation in this cut.
+
+The OR-R1/OR-R2 repair makes retirement uncertainty visible through the existing
+canonical kernel caller. If the capacity manager's exit raises, that exact
+secondary is raised from the retainer's exit even when a body exception is
+already active. The kernel's existing `_finish` retains its exact body primary,
+records the cleanup secondary, and keeps its active lease pending and open.
+New admission therefore remains refused. Entry-failure cleanup has a separate
+guard so its retirement signal cannot replace the exact entry primary; a failed
+entry stays subject to the kernel's existing pending-manager rule.
+
+Each lifecycle RLock borrow is registered before acquisition together with its
+original thread and prior recursion depth. An interruption before acquisition,
+after the native acquisition but before its result is published, or before the
+diagnostic lock list is updated can therefore retire the exact acquired level.
+A false acquisition releases no level. Prior same-thread recursion and locks
+owned by another thread remain intact. A changed depth or an interruption that
+prevents proving retirement keeps custody pending; it never triggers a blanket
+unlock or another exit attempt. Capacity and lock retirement failures retain
+their actual exception objects in `cleanup_errors`, with the first failure also
+preserved as `cleanup_error` and exposed to the kernel.
+
+## Selected native CPU admission (OS6)
+
+`NativeCpuOwnerSession.require_admission(permit, basis_wire, peer)` now checks the
+original live `_NativeCpuExecutionRetainer` while the canonical kernel consumes
+its already prepared permit. Other `WindowsIdentityOwners` retain the closed
+default. A direct `kernel.consume` without this retained execution is denied.
+The kernel captures this concrete predicate at construction, as it already does
+for native preparation. An instance-level replacement cannot supply admission.
+
+The retainer reads the exact canonical PREPARED permit, committed intent and
+prepared basis before the short consume transaction. It binds those bytes to the
+same kernel, journal, grant, request, proposal, original peer/context/thread,
+native target/capture, genuine-approval witness, current source and environment.
+The canonical consume transition still validates policy, generation, grant,
+budget, dependencies, issuance history and one-use state in its original CAS.
+The predicate performs no SQL or fresh image/token/policy query inside a writer.
+It creates no grant, authority registry, scheduler or state store.
+
+Admission has a distinct `ADMISSION` capacity phase. At this boundary the kernel
+lease has `_consumption_attempted=True`, while its `_permit` and `_attempt` are
+still None. It therefore passes the exact original PREPARED permit to the same
+already held `_RetainedCpuOutcomeCapacity`; reusing pre-consumption CAPACITY
+would correctly fail. The existing reservation checks its cached native state
+without physical allocation or measurement. Missing or replaced capacity denies.
+CONSUMED and all later phases retain their original meaning.
+
+Original registry membership and native receiver thread, registered peer,
+operation/scope, transport deadline and original envelope expiry remain current.
+Independent elapsed time also charges the full retained admission against the
+enrollment, request and canonical intent deadlines and observation age. None of
+those windows renew during repeated predicates. The retained native/code/Stop
+fence follows capacity and time callbacks. The kernel repeats this captured
+predicate after its final peer/clock callbacks immediately before COMMIT and
+after COMMIT. Stop before COMMIT rolls back; Stop after COMMIT preserves the
+burned permit and charged liability while refusing a usable lease. No replay or
+refund is added. Consumed, dispatched, recovered, closed and foreign-thread
+leases cannot reuse this preparation predicate.
+
+The focused qualification executes canonical SQLite, kernel consume, attempt
+creation and the real capacity adapter on disposable repository-local files.
+Native identity, approval, observation and VFS state are explicitly CONTROLLED.
+The real pinned SQLite DLL and its ordinary path checks run; worker/native helper
+creation, Hello, AppContainer/profile operations and CPU policy effects do not.
+These results establish the port's controlled integration only. Genuine native
+approval, isolation qualification, effect/independent observation, installed
+runtime, full regression and product acceptance remain separate obligations.

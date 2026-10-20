@@ -28,7 +28,8 @@ class IsolationFactsContractTests(unittest.TestCase):
     """Synthetic value records qualify shapes only, never OS authentication."""
     def facts(self, **changes):
         value = dict(appcontainer_sid='S-1-15-2-1-2-3-4-5-6-7', is_appcontainer=True,
-                     capability_count=0, integrity_rid=4096, restricted=True, observed_monotonic_ns=10)
+                     capability_count=0, integrity_rid=4096, restricted=True, observed_monotonic_ns=10,
+                     restricted_sid_count=1, restriction_last_error=0, restriction_raw_result=1)
         value.update(changes)
         return IsolationTokenFacts(**value)
 
@@ -53,6 +54,18 @@ class IsolationFactsContractTests(unittest.TestCase):
 
     def test_restriction_and_observation_are_typed(self):
         for changes in ({'restricted': False}, {'restricted': 1}, {'observed_monotonic_ns': -1}, {'observed_monotonic_ns': True}):
+            with self.subTest(changes=changes), self.assertRaises(ContractError): self.facts(**changes)
+
+    def test_empty_restricting_sid_list_is_explicit_and_consistent(self):
+        facts = self.facts(restricted=False, restricted_sid_count=0, restriction_last_error=0, restriction_raw_result=0)
+        self.assertFalse(facts.restricted)
+        self.assertEqual(facts.restricted_sid_count, 0)
+        for changes in ({'restricted': False, 'restricted_sid_count': 0, 'restriction_last_error': 5},
+                        {'restricted_sid_count': 0}, {'restricted_sid_count': None},
+                        {'restriction_last_error': None}, {'restricted_sid_count': True},
+                        {'restriction_last_error': False}, {'restricted_sid_count': 4097},
+                        {'restriction_raw_result': None}, {'restriction_raw_result': True},
+                        {'restriction_raw_result': 0}, {'restriction_raw_result': 1 << 31}):
             with self.subTest(changes=changes), self.assertRaises(ContractError): self.facts(**changes)
 
     def test_value_record_is_frozen(self):

@@ -642,18 +642,19 @@ class CpuExecutionAdmissionTests(unittest.TestCase):
     def test_operation_wall_budget_bounds_total_admission_separately_from_native_duration(self):
         from ceta.kernel import cpu_execution as module
         f=self.fixture(wall_time_ms=5000)
-        with self.lease(f) as lease:
+        counter=[module.time.perf_counter_ns()]
+        def now():counter[0]+=100;return counter[0]
+        with patch.object(module.time,'perf_counter_ns',side_effect=now),self.lease(f) as lease:
             # RC2's maximum_duration_ns bounds a native call/check. The already
             # charged operation wall budget separately bounds total admission.
-            after_native_window=lease._admission_started+f.effect.maximum_duration_ns+1_000_000
-            with patch.object(module.time,'perf_counter_ns',return_value=after_native_window):
-                self.arm_domain_fence(lease)
+            counter[0]=lease._admission_started+f.effect.maximum_duration_ns+1_000_000
+            self.arm_domain_fence(lease)
             self.assertTrue(lease.inspection()['dispatch_admitted'])
         f=self.fixture(wall_time_ms=5000)
-        with self.lease(f) as lease:
-            after_wall_budget=lease._admission_started+5_000_000_000+1
-            with patch.object(module.time,'perf_counter_ns',return_value=after_wall_budget):
-                with self.assertRaisesRegex(ContractError,'ADMISSION_WINDOW_EXCEEDED'):self.arm_domain_fence(lease)
+        counter=[module.time.perf_counter_ns()]
+        with patch.object(module.time,'perf_counter_ns',side_effect=now),self.lease(f) as lease:
+            counter[0]=lease._admission_started+5_000_000_000+1
+            with self.assertRaisesRegex(ContractError,'ADMISSION_WINDOW_EXCEEDED'):self.arm_domain_fence(lease)
             self.assertFalse(lease.inspection()['dispatch_admitted'])
 
 

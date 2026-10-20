@@ -21,6 +21,7 @@ from ceta.contracts.wire import ContractError, MAX_INTEGER
 from ceta.contracts.resource_management import ProcessResourceIdentity
 from ceta.contracts.workload_throttling import CpuRateChange, CpuRateObservation
 from ceta.effects.native_cpu_binding import CpuDriverArguments, DRIVER_DOMAIN
+from ceta.identity.cpu_outcome_capacity import _RetainedCpuOutcomeCapacity
 from ceta.supervisor.windows_jobs import WindowsOwnedProcess
 from .effect_transactions import KernelEffectTransactions, outcome_key, task_outcome_key
 from .owner_authority import owned_cpu_proposal
@@ -368,6 +369,30 @@ class _CpuExecutionCoordinator:
                     del table[key]
             if self.active is lease: self.active = None
 
+    def claim_recovery_liveness(self, lease):
+        """Reacquire only the original completed invocation's bookkeeping."""
+        try:
+            with _LIVENESS_LOCK:
+                self._selected_locked()
+                require(type(lease) is _RetainedCpuExecution and lease._owner is self
+                    and lease._recovery is not None and lease._called and not lease._dispatching
+                    and lease._thread == threading.get_ident() and self.active is None
+                    and self.mutating == 0 and id(self.owners) not in _MUTATING_OWNERS
+                    and id(self.store) not in _MUTATING_STORES,
+                    'CPU_RECOVERY_LIVENESS_BUSY')
+                row = (self.owners, self.store, self, lease)
+                _ACTIVE_OWNERS[id(self.owners)] = row
+                _ACTIVE_STORES[id(self.store)] = row
+                self.active = lease
+        except BaseException as primary:
+            try:
+                self.release_liveness(lease)
+            except BaseException as secondary:
+                lease._pending_cleanup = True
+                lease._cleanup_failure = secondary
+                _registration_custody(primary, lease, secondary)
+            raise
+
 
 class _RetainedCpuExecution:
     """Identity-bound, single-entry kernel capability, never a data receipt."""
@@ -377,7 +402,8 @@ class _RetainedCpuExecution:
         '_closed', '_pending_cleanup', '_permit', '_attempt', '_consumption',
         '_cells', '_positions', '_generation', '_dispatch', '_outcome', '_native_arguments',
         '_effect', '_dispatching', '_called', '_change', '_argument_facts', '_consumption_attempted',
-        '_intent_deadline', '_admission_started', '_clock_anchor', '_cleanup_failure', '_selected_grant')
+        '_intent_deadline', '_admission_started', '_clock_anchor', '_cleanup_failure', '_selected_grant',
+        '_outcome_capacity', '_pending_transaction', '_denied_dispatch', '_recovery', '_recovery_history')
 
     def __init__(self, issuer, owner, request_wire, permit_wire, binding, capture, proof, context):
         require(issuer is _ISSUER, 'CPU_EXECUTION_KERNEL_ISSUER_REQUIRED')
@@ -410,6 +436,9 @@ class _RetainedCpuExecution:
         self._argument_facts = None
         self._consumption_attempted = False
         self._intent_deadline = self._admission_started = self._clock_anchor = self._cleanup_failure = self._selected_grant = None
+        self._outcome_capacity = None
+        self._pending_transaction = self._denied_dispatch = self._recovery = None
+        self._recovery_history = ()
 
     def __copy__(self):
         raise ContractError('CPU_EXECUTION_COPY_FORBIDDEN')
@@ -482,6 +511,7 @@ class _RetainedCpuExecution:
 
     def _check(self, phase):
         self._owned()
+        require(self._recovery is None, 'CPU_RECOVERY_BOOKKEEPING_ONLY')
         k = self._owner.kernel
         started = self._owner.elapsed()
         peer = k._peer(self._context)
@@ -504,13 +534,21 @@ class _RetainedCpuExecution:
             positions = (k._store.position(self._request.scope_id), k._store.store_position())
             require(cells == self._cells and positions == self._positions
                 and self._owner.generation == self._generation, 'CPU_EXECUTION_CANONICAL_CHANGED')
-        # Final external capability. The qualified owner retains its coordinated
-        # native/authority/capacity view through dispatch and observation. No
-        # independent owner/native/SQL callback follows this check.
+        # The qualified owner retains its native/authority/capacity view.
+        # Include the trusted capacity mark in this same measured interval;
+        # after it only elapsed accounting and the pure final decision remain.
         callback_started = self._owner.elapsed()
         require(self._current(phase, self._request, self._permit, self._attempt,
             self._binding, self._capture, self._proof, peer, self._context) is None,
             'CPU_EXECUTION_OWNER_DECISION_INVALID')
+        if phase == 'DISPATCH':
+            from ceta.identity.owner_session import NativeCpuOwnerSession
+            if (isinstance(self._owner.owners, NativeCpuOwnerSession)
+                    or self._outcome_capacity is not None
+                    or getattr(self._owner.store, '_capacity_active', None) is not None):
+                require(type(self._outcome_capacity) is _RetainedCpuOutcomeCapacity,
+                    'CPU_EXECUTION_PHYSICAL_CAPACITY_REQUIRED')
+                _RetainedCpuOutcomeCapacity.mark_dispatch(self._outcome_capacity, self)
         finished = self._owner.elapsed()
         elapsed = finished-started+2*self._owner.resolution
         try:
@@ -622,6 +660,7 @@ class _RetainedCpuExecution:
 
     def driver_arguments(self):
         self._owned()
+        require(self._recovery is None, 'CPU_RECOVERY_BOOKKEEPING_ONLY')
         require(not self._dispatch and self._native_arguments is not None, 'CPU_EXECUTION_ALREADY_ADMITTED')
         value = self._native_arguments
         require(_argument_key(value) == self._argument_facts, 'CPU_EXECUTION_DRIVER_ARGUMENTS_CHANGED')
@@ -676,6 +715,13 @@ class _RetainedCpuExecution:
                     and change.before == request.original_limit, 'CPU_EXECUTION_NATIVE_RESULT_CHANGED')
             return change
         except BaseException as primary:
+            if not self._dispatch:
+                try:
+                    from .cpu_outcome_recovery import capture_denial
+                    capture_denial(self, effect, primary)
+                except BaseException as origin_error:
+                    dict.__setitem__(BaseException.__dict__['__dict__'].__get__(primary),
+                        'cpu_denial_origin_error', origin_error)
             try:
                 data = BaseException.__dict__['__dict__'].__get__(primary)
                 pending = dict.get(data, 'cpu_rate_change', self._target._cpu_change)
@@ -692,12 +738,31 @@ class _RetainedCpuExecution:
 
     def record_outcome(self, receipt_wire, observation_wire, native_proof):
         self._owned()
-        require(self._dispatch, 'CPU_EXECUTION_DISPATCH_NOT_ADMITTED')
+        require(self._dispatch or (self._denied_dispatch is not None
+            and native_proof is self._denied_dispatch), 'CPU_EXECUTION_DISPATCH_NOT_ADMITTED')
         # Existing ET3 authenticates independent native outcome proof and
         # accounts cumulative evidence. Stop never refunds consumed liability.
         self._outcome = self._owner.call(self, 'record_owned_cpu_outcome', self._wire,
             self._permit.canonical_wire, receipt_wire, observation_wire, native_proof, self._context)
         return self._outcome
+
+    def record_denied_outcome(self):
+        """Record the retained original no-admission producer, never a caller flag."""
+        self._owned()
+        proof = self._denied_dispatch
+        require(proof is not None and not self._dispatch and not self._dispatching,
+            'CPU_RECOVERY_DENIAL_NOT_ESTABLISHED')
+        return self.record_outcome(proof.receipt_wire, None, proof)
+
+    def recover_outcome(self, original_context):
+        """Borrow original custody for outcome recording/retry; dispatch stays used."""
+        from .cpu_outcome_recovery import _CpuOutcomeRecovery
+        return _CpuOutcomeRecovery(self, original_context)
+
+    def retire_failed_entry(self, original_context):
+        """Retire only proven-empty failed entry; preserve its prepared permit."""
+        from .cpu_outcome_recovery import retire_failed_entry
+        return retire_failed_entry(self, original_context)
 
     def inspection(self):
         """Read-only custody/facts, not a replacement execution capability."""
@@ -705,6 +770,10 @@ class _RetainedCpuExecution:
             consumption=self._consumption,attempt=self._attempt,outcome=self._outcome,native_change=self._change,
             dispatch_admitted=self._dispatch,closed=self._closed,pending_cleanup=self._pending_cleanup,
             retained_native_owner=self._retained,entry_manager=self._manager,cleanup_failure=self._cleanup_failure,
+            outcome_capacity=self._outcome_capacity,
+            pending_outcome_transaction=self._pending_transaction,
+            denied_dispatch=self._denied_dispatch, recovery=self._recovery,
+            recovery_history=self._recovery_history,
             stopped=self._owner.stopped.is_set(),native_effect='UNESTABLISHED_BY_ADMISSION')
 
     def _finish(self, kind, primary, traceback):

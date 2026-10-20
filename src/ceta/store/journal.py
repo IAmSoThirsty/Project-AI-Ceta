@@ -66,7 +66,8 @@ class SqliteJournal:
     before_commit is an injected infrastructure fault hook, never wire data.
     """
 
-    def __init__(self, root, codec, scopes, *, create=False, before_commit=None, profile=_PROFILE, read_only=False):
+    def __init__(self, root, codec, scopes, *, create=False, before_commit=None, profile=_PROFILE, read_only=False,
+                 outcome_runtime=None):
         if type(codec) is not RecordCodec:
             raise ContractError("JOURNAL_RECORD_CODEC_REQUIRED")
         if (type(scopes) is not tuple or not 1 <= len(scopes) <= 1024
@@ -81,6 +82,10 @@ class SqliteJournal:
             raise ContractError("JOURNAL_PROFILE_UNSUPPORTED")
         if type(read_only) is not bool or (read_only and (create or before_commit is not None)):
             raise ContractError("JOURNAL_READ_ONLY_CONSTRUCTION_INVALID")
+        if outcome_runtime is not None:
+            from .outcome_capacity import OutcomeCapacityRuntime
+            if type(outcome_runtime) is not OutcomeCapacityRuntime or read_only:
+                raise ContractError("JOURNAL_OUTCOME_RUNTIME_INVALID")
         self._read_only = read_only
         self._profile = profile
         self._schema = {**_SCHEMA, **STATE_SCHEMA} if profile == STORE_PROFILE else _SCHEMA
@@ -95,6 +100,7 @@ class SqliteJournal:
         self._scopes = tuple(sorted(scopes))
         self._lock = threading.RLock()
         self._fault = before_commit
+        self._capacity_vfs = self._capacity_active = None
         self._connection = None
         self._constructor_close_state = "ABSENT"
         self._constructor_failed = False
@@ -114,7 +120,10 @@ class SqliteJournal:
         elif not self.path.is_file():
             raise ContractError("JOURNAL_MISSING_PRESERVED_RECOVERY_REQUIRED")
         try:
-            self._connection = self._sqlite.connect(self.path.as_uri() + ("?mode=rw" if create else "?mode=ro"), uri=True,
+            if outcome_runtime is not None:
+                self._capacity_vfs = outcome_runtime._prepare()
+                outcome_runtime._create(self._capacity_vfs)
+            self._connection = self._sqlite.connect(self._connection_uri("rw" if create else "ro"), uri=True,
                 timeout=5, isolation_level=None, check_same_thread=False)
             self._constructor_close_state = "OPEN"
             self._connection_close_state = "OPEN"
@@ -142,7 +151,7 @@ class SqliteJournal:
                 # Inspect unknown/corrupt history through a read-only connection
                 # before opening the owner writer. Recheck after acquiring it.
                 self._close_constructor_connection()
-                self._connection = self._sqlite.connect(self.path.as_uri() + "?mode=rw", uri=True,
+                self._connection = self._sqlite.connect(self._connection_uri("rw"), uri=True,
                     timeout=5, isolation_level=None, check_same_thread=False)
                 self._constructor_close_state = "OPEN"
                 self._connection_close_state = "OPEN"
@@ -169,8 +178,34 @@ class SqliteJournal:
             dict.update(data, journal_custody=self, journal_connection=self._connection,
                         journal_cleanup_state=self._constructor_close_state,
                         journal_cleanup_error=cleanup_error)
+            if self._capacity_vfs is not None:
+                dict.update(data, outcome_capacity_custody=self._capacity_vfs)
+            if self._capacity_vfs is not None and self._constructor_close_state in ("ABSENT", "CLOSED"):
+                try:
+                    self._capacity_vfs.close()
+                except BaseException as secondary:
+                    dict.update(data, outcome_capacity_cleanup_error=secondary,
+                                outcome_capacity_custody=self._capacity_vfs)
             self._retain_failure(primary)
             raise
+
+    def _connection_uri(self, mode):
+        if self._capacity_vfs is not None:
+            return self._capacity_vfs.uri(self.path, mode)
+        return self.path.as_uri() + "?mode=" + mode
+
+    def reserve_outcome_capacity(self, budget):
+        """Retain one measured allocation on this journal, before an effect."""
+        from .outcome_capacity import OutcomeCapacityLease
+        self._require_writable()
+        return OutcomeCapacityLease(self, budget)
+
+    def _capacity_commit(self, entries, result, retained):
+        # Capture the reservation under the writer lock. A later reservation
+        # must not acquire an earlier completed transaction's callback.
+        if retained is not None:
+            retained._after_commit(entries, result)
+        return result
 
     def _close_constructor_connection(self):
         # An invocation/response failure cannot prove that close did not happen.
@@ -244,6 +279,8 @@ class SqliteJournal:
         self._require_open()
         if self._read_only:
             raise ContractError("JOURNAL_READ_ONLY")
+        if self._capacity_active is not None:
+            self._capacity_active.require_current()
 
     def _require_scope(self, scope):
         if type(scope) is not str or scope not in self._scopes:
@@ -330,7 +367,8 @@ class SqliteJournal:
             result = self.commit((expected,), entries, checkpoints=checkpoints)
             return result.history[0]
         with self._lock:
-            self._require_open()
+            self._require_writable()
+            retained_capacity = self._capacity_active
             try:
                 self._connection.execute("BEGIN IMMEDIATE")
                 current = next(point for point in self._verify(checkpoints) if point.scope_id == expected.scope_id)
@@ -349,7 +387,8 @@ class SqliteJournal:
             except BaseException as primary:
                 self._rollback_after_error(primary)
                 raise
-        return JournalCommit(expected, after, tuple(event.record.record_id for _, event in prepared))
+        return self._capacity_commit(entries,
+            JournalCommit(expected, after, tuple(event.record.record_id for _, event in prepared)), retained_capacity)
 
     def commit(self, expected, entries, *, checks=(), changes=(), checkpoints=(), state_checkpoint=None, guard=None):
         self._require_writable()
@@ -389,7 +428,8 @@ class SqliteJournal:
         if any(not identifiers for identifiers in event_ids.values()):
             raise ContractError("STORE_EXPECTED_SCOPE_WITHOUT_EVENT")
         with self._lock:
-            self._require_open()
+            self._require_writable()
+            retained_capacity = self._capacity_active
             try:
                 self._connection.execute("BEGIN IMMEDIATE")
                 current = {point.scope_id: point for point in self._verify(checkpoints, state_checkpoint)}
@@ -412,8 +452,91 @@ class SqliteJournal:
             except BaseException as primary:
                 self._rollback_after_error(primary)
                 raise
-        return StoreCommit(tuple(JournalCommit(point, after[point.scope_id], tuple(event_ids[point.scope_id]))
-                                 for point in expected), position, cells)
+        return self._capacity_commit(entries,
+            StoreCommit(tuple(JournalCommit(point, after[point.scope_id], tuple(event_ids[point.scope_id]))
+                                 for point in expected), position, cells), retained_capacity)
+
+    def _recover_capacity_commit(self, retained, expected, entries, checks, changes, before_cells, before_position, guard):
+        """Acknowledge only exact, independently reconstructed same-store COMMIT.
+
+        This performs a read transaction. It writes no history, projection or
+        authority; the existing capacity notification follows verified readback.
+        """
+        from ceta.contracts.kernel_transactions import require
+        from ceta.contracts.store_transactions import StoreCell
+        from ceta.contracts.wire import canonical_bytes
+        from .outcome_capacity import OutcomeCapacityLease
+        from .state import digest, head
+        require(type(before_position) is StorePosition and type(expected) is tuple
+            and 1 <= len(expected) <= 128 and all(type(p) is StreamPosition for p in expected)
+            and type(entries) is tuple and 1 <= len(entries) <= 128
+            and all(type(e) is JournalEntry for e in entries)
+            and type(checks) is tuple and len(checks) <= 128
+            and all(type(c) is StoreExpectation for c in checks)
+            and type(changes) is tuple and 1 <= len(changes) <= 128
+            and all(type(c) is StoreChange for c in changes)
+            and type(before_cells) is tuple and len(before_cells) <= 128
+            and all(type(c) is StoreCell for c in before_cells) and callable(guard),
+            'JOURNAL_CAPACITY_RECOVERY_BASIS_INVALID')
+        require(type(retained) is OutcomeCapacityLease and retained.journal is self
+            and self._capacity_active is retained and not retained.release_attempted
+            and retained.retained_payloads() == tuple(e.payload_wire for e in entries),
+            'JOURNAL_CAPACITY_RECOVERY_OWNER_CHANGED')
+        before = {cell.key: cell for cell in before_cells}
+        require(len(before) == len(before_cells), 'JOURNAL_CAPACITY_RECOVERY_BASIS_INVALID')
+        after, ids, refs = {p.scope_id: p for p in expected}, {p.scope_id: [] for p in expected}, []
+        for entry in entries:
+            event = self._events.preimages(entry.event_wire).record
+            value = event.as_dict(); scope = value['scope_id']
+            require(scope in after, 'JOURNAL_CAPACITY_RECOVERY_SCOPE_INVALID')
+            successor = self._events.require_successor(entry.event_wire, after[scope])
+            self._events.require_payload(entry.event_wire, entry.payload_wire)
+            after[scope] = StreamPosition(scope, after[scope].next_sequence + 1, successor.head)
+            ids[scope].append(event.record_id)
+            refs.append(dict(scope_id=scope, sequence=value['sequence'], event_id=event.record_id,
+                event_sha256=digest(entry.event_wire), payload_sha256=digest(entry.payload_wire)))
+        checked = {}
+        for check in (*checks, *(change.expected for change in changes)):
+            require(check.key in before and before[check.key].revision == check.revision
+                and checked.get(check.key, check.revision) == check.revision,
+                'JOURNAL_CAPACITY_RECOVERY_EXPECTATION_CHANGED')
+            checked[check.key] = check.revision
+        new_cells = tuple(StoreCell(c.expected.key, before[c.expected.key].generation + 1, c.value_wire)
+            for c in changes)
+        changed = {c.expected.key for c in changes}
+        require(len(changed) == len(changes), 'JOURNAL_CAPACITY_RECOVERY_BASIS_INVALID')
+        metadata = [dict(**cell.key.as_dict(), before_revision=before[cell.key].revision,
+            generation=cell.generation, value_sha256=None if cell.value_wire is None else digest(cell.value_wire),
+            event_id=change.event_id) for cell, change in zip(new_cells, changes)]
+        wire = canonical_bytes(dict(profile=STORE_PROFILE, sequence=before_position.next_commit,
+            previous_head=before_position.head, events=refs,
+            checks=[dict(**key.as_dict(), revision=revision) for key, revision in sorted(checked.items())
+                if key not in changed], changes=metadata))
+        position = StorePosition(before_position.next_commit + 1, head(wire))
+        with self._lock:
+            self._require_writable()
+            try:
+                self._connection.execute('BEGIN')
+                current = {p.scope_id: p for p in self._verify(expected, before_position)}
+                require(self._state.position() == position and all(current[s] == p for s, p in after.items()),
+                    'JOURNAL_CAPACITY_RECOVERY_HEAD_MISMATCH')
+                actual = self._connection.execute('SELECT commit_wire,head FROM store_commits WHERE sequence=?',
+                    (before_position.next_commit,)).fetchone()
+                require(actual == (wire, position.head), 'JOURNAL_CAPACITY_RECOVERY_COMMIT_MISMATCH')
+                for ref, entry in zip(refs, entries):
+                    actual = self._connection.execute('SELECT event_wire,payload_wire FROM history_events WHERE scope_id=? AND sequence=?',
+                        (ref['scope_id'], ref['sequence'])).fetchone()
+                    require(actual == (entry.event_wire, entry.payload_wire), 'JOURNAL_CAPACITY_RECOVERY_EVENT_MISMATCH')
+                require(all(self._state.read(cell.key) == cell for cell in new_cells),
+                    'JOURNAL_CAPACITY_RECOVERY_PROJECTION_MISMATCH')
+                guard()
+                self._connection.execute('COMMIT')
+            except BaseException as primary:
+                self._rollback_after_error(primary)
+                raise
+        result = StoreCommit(tuple(JournalCommit(p, after[p.scope_id], tuple(ids[p.scope_id])) for p in expected),
+            position, new_cells)
+        return self._capacity_commit(entries, result, retained)
 
     def snapshot(self, keys, *, state_checkpoint=None):
         if self._state is None:
@@ -523,6 +646,11 @@ class SqliteJournal:
 
     def close(self):
         with self._lock:
+            if self._capacity_active is not None:
+                denied = ContractError("JOURNAL_OUTCOME_CAPACITY_RETAINED")
+                data = self._retain_failure(denied)
+                dict.update(data, outcome_capacity_custody=self._capacity_active)
+                raise denied
             if self._constructor_close_state == "UNCERTAIN":
                 raise ContractError("JOURNAL_CONSTRUCTOR_CLOSE_UNCERTAIN")
             if self._connection_close_state == "UNCERTAIN":
@@ -541,3 +669,9 @@ class SqliteJournal:
                     raise
                 self._connection_close_state = "CLOSED"
                 self._closed = True
+            if self._capacity_vfs is not None:
+                try:
+                    self._capacity_vfs.close()
+                except BaseException as primary:
+                    self._retain_failure(primary)
+                    raise

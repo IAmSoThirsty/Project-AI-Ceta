@@ -13,6 +13,7 @@ from .events import EventContract, StreamPosition
 from .evidence_admission import ConsumptionEvidence
 from .kernel_transactions import KernelResult, require
 from .local_ipc import LocalMessage, decode_message
+from .manual_effect import OPERATIONS as MANUAL_OPERATIONS, encode_result as encode_manual_result, decode_result as decode_manual_result
 from .task_drafts import TaskResult, TASK_OPERATIONS, validate_result
 from .task_meaning import MEANING_OPERATIONS, MEANING_RESULT_PROFILE, decode_proposal
 from .editor_recovery import EDITOR_OPERATIONS, EDITOR_MUTATIONS, EDITOR_RESULT_PROFILE, decode_editor_snapshot
@@ -40,6 +41,7 @@ class LocalResponse:
     prior_position: StreamPosition | None
     original_response: bytes
     task_result: TaskResult | None = None
+    manual_result_wire: bytes | None = None
 
 
 def _binding(request, codec):
@@ -231,6 +233,8 @@ def encode_response(message: LocalMessage,
                     result: KernelResult | ConsumptionEvidence | ParsedRecord | TaskResult | ContractError,
                     codec: RecordCodec) -> bytes:
     binding = _binding(message, codec)
+    if message.operation in MANUAL_OPERATIONS:
+        return encode_manual_result(binding, result)
     if message.operation in TASK_OPERATIONS:
         return _encode_task_response(message, result, codec)
     value = {"profile": RESULT_PROFILE, "version": 1, **binding,
@@ -263,6 +267,10 @@ def encode_response(message: LocalMessage,
 
 
 def decode_response(wire: bytes, request: LocalMessage, codec: RecordCodec) -> LocalResponse:
+    if request.operation in MANUAL_OPERATIONS:
+        value = decode_manual_result(wire, _binding(request, codec))
+        return LocalResponse(value['kind'], value['error_code'], None, None, None,
+            wire, manual_result_wire=wire)
     require(type(wire) is bytes and 1 <= len(wire) <= MAX_WIRE_BYTES, "RESULT_SIZE")
     value = strict_loads(wire)
     if request.operation in TASK_OPERATIONS:

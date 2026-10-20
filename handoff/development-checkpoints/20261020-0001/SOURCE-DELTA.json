@@ -1,0 +1,517 @@
+{
+  "vs_Q549": {
+    "comparison": "frozen_Q549",
+    "paths": {
+      "tools/isolated_worker_token_oracle.py": {
+        "role": "engineering_tool",
+        "before_sha256": null,
+        "after_sha256": "8f0791da2fa4879600a92f30617b79aeb3a271c89027b5a853ecb5853d5760d9",
+        "added_physical_lines": 121,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 102,
+        "removed_nonblank_lines": 0
+      },
+      "native/windows_broker/isolated_worker.rs": {
+        "role": "product_source",
+        "before_sha256": "56c68f251ca45b8d88d1f7efbce41822a785effb510e43ec3933ea1544709a03",
+        "after_sha256": "592d7e3630d2dae1f8df6c6e3b686eff7f9c4d31aa889bd03cd66cab9782676d",
+        "added_physical_lines": 101,
+        "removed_physical_lines": 8,
+        "added_nonblank_lines": 91,
+        "removed_nonblank_lines": 8
+      },
+      "src/ceta/supervisor/isolated_worker.py": {
+        "role": "product_source",
+        "before_sha256": "1c3c880e6f089e9629b56f84d85da48f6aee12e3e78cf84a1a448970bee8d0f3",
+        "after_sha256": "868ad9b53e793cd0a5b5eb92ad43939bcf4a0c103d2d95ee2ccef7d4a8d966a8",
+        "added_physical_lines": 42,
+        "removed_physical_lines": 5,
+        "added_nonblank_lines": 38,
+        "removed_nonblank_lines": 5
+      },
+      "tests/contract/test_isolated_worker.py": {
+        "role": "test",
+        "before_sha256": "df0e81962f34d200b52b09019335d9990f2954764c64d732067aa50c3dc67127",
+        "after_sha256": "e960476efc55a30a6d5e184af7c758c647b8014e2ea3fda943c348a302c64a7b",
+        "added_physical_lines": 14,
+        "removed_physical_lines": 1,
+        "added_nonblank_lines": 13,
+        "removed_nonblank_lines": 1
+      },
+      "tests/contract/test_isolation_qualification_oracle.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "f8f4ec32941e770830244410e9b3290316ba668d1b18c32ed7bdb4c83727805f",
+        "added_physical_lines": 169,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 147,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_isolation_token_diagnostics.py": {
+        "role": "test",
+        "before_sha256": "ef60e072374b5e640848ad93423c965951402a8e33dda6847228161b39a730bd",
+        "after_sha256": "7f2bbbf09836e1273fd75ba0f48d033552ac14d6f4ef59649c1d1e441071f534",
+        "added_physical_lines": 134,
+        "removed_physical_lines": 8,
+        "added_nonblank_lines": 126,
+        "removed_nonblank_lines": 8
+      },
+      "tests/contract/test_isolation_token_port.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "9e55dd56d66b8ba33e45c7444b50afe91bec15a68a480c70ba178224f21a0ebb",
+        "added_physical_lines": 44,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 38,
+        "removed_nonblank_lines": 0
+      }
+    },
+    "totals": {
+      "product_source": {
+        "added_physical_lines": 143,
+        "removed_physical_lines": 13,
+        "added_nonblank_lines": 129,
+        "removed_nonblank_lines": 13
+      },
+      "test": {
+        "added_physical_lines": 361,
+        "removed_physical_lines": 9,
+        "added_nonblank_lines": 324,
+        "removed_nonblank_lines": 9
+      },
+      "engineering_tool": {
+        "added_physical_lines": 121,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 102,
+        "removed_nonblank_lines": 0
+      }
+    }
+  },
+  "vs_canonical": {
+    "comparison": "current_canonical_working_files",
+    "paths": {
+      "tools/isolated_worker_token_oracle.py": {
+        "role": "engineering_tool",
+        "before_sha256": null,
+        "after_sha256": "8f0791da2fa4879600a92f30617b79aeb3a271c89027b5a853ecb5853d5760d9",
+        "added_physical_lines": 121,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 102,
+        "removed_nonblank_lines": 0
+      },
+      "native/sqlite_runtime/outcome_capacity.cpp": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "8f72f00f8a373b767ca60e52bf81a27a3c74193f6719e8c5e7df1a6bd48b7c1d",
+        "added_physical_lines": 411,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 409,
+        "removed_nonblank_lines": 0
+      },
+      "native/windows_broker/isolated_worker.rs": {
+        "role": "product_source",
+        "before_sha256": "56c68f251ca45b8d88d1f7efbce41822a785effb510e43ec3933ea1544709a03",
+        "after_sha256": "592d7e3630d2dae1f8df6c6e3b686eff7f9c4d31aa889bd03cd66cab9782676d",
+        "added_physical_lines": 101,
+        "removed_physical_lines": 8,
+        "added_nonblank_lines": 91,
+        "removed_nonblank_lines": 8
+      },
+      "src/ceta/composition/ipc_service.py": {
+        "role": "product_source",
+        "before_sha256": "9e6a6bdeec7eefc1e8dc756cf5b73e28468c3c604493dc0c06f4d19cb1917348",
+        "after_sha256": "0877f3303cb011dc06ceb878f23eda7664a9a76139e30a4ef68b06f8bbae2f98",
+        "added_physical_lines": 16,
+        "removed_physical_lines": 6,
+        "added_nonblank_lines": 14,
+        "removed_nonblank_lines": 6
+      },
+      "src/ceta/composition/native_cpu_outcome.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "446e81a8990b9ab197ff767a373567071844796968b81820069c3e17fc4b5aa8",
+        "added_physical_lines": 68,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 60,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/composition/native_cpu_runtime.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "39741b181eb5c7632c8b9db2b82d1bad3c03ffd4c174b51bd98783818ec8d276",
+        "added_physical_lines": 269,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 246,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/composition/real_effect_cli.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "dead2d6eb93523516d134fff98c3d968239981f37b29a95633c14a544c8d7c66",
+        "added_physical_lines": 98,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 86,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/composition/real_effect_client.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "b4c46d2b988b06fbaf2f606c4b59459d550b5cfe78db186a46900b447461bd46",
+        "added_physical_lines": 58,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 53,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/composition/real_effect_host.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "68804d6b0e52f09135c3b97546f5f8050410b48d3570043b4be4fcc84a950d30",
+        "added_physical_lines": 182,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 169,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/composition/real_effect_runtime.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "6c40837689a79aed77a5de5fe497eed74c6d15fa65b0292b99808efc32a906ba",
+        "added_physical_lines": 332,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 309,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/composition/real_effect_service.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "adb3c35f19c3f1da0274dccd460fb3a3d26f04a6e4d11797590c99638492b9dd",
+        "added_physical_lines": 492,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 465,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/composition/service_process.py": {
+        "role": "product_source",
+        "before_sha256": "d4a0134c5a35ddb0f2b31a1ab63cb5889e2f854a9ba934ae9afe4839984dd90f",
+        "after_sha256": "0fcad83f2ea223b1b9409299f720cca16a3a3aa326f098fa26016125239f0ea8",
+        "added_physical_lines": 115,
+        "removed_physical_lines": 7,
+        "added_nonblank_lines": 108,
+        "removed_nonblank_lines": 7
+      },
+      "src/ceta/contracts/local_ipc.py": {
+        "role": "product_source",
+        "before_sha256": "72d61e61ac18c362b0acd02d9a2e83e53b85bbcaec964a82890f5dd24791fa3d",
+        "after_sha256": "e271cd52e097c1cb2867794a9e0c1e2d345c2c5142ffc6273c11ef1129f926bf",
+        "added_physical_lines": 11,
+        "removed_physical_lines": 4,
+        "added_nonblank_lines": 11,
+        "removed_nonblank_lines": 4
+      },
+      "src/ceta/contracts/local_results.py": {
+        "role": "product_source",
+        "before_sha256": "9ac42e1a90fc6c8a186f7a1ada77c9cfbb344bce892d76c684e96e02e91028c5",
+        "after_sha256": "4b6a7e19c08b77e9f9dc09dc59bc4803a6f195ddf3c5bcf509fad22f91f78adc",
+        "added_physical_lines": 8,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 8,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/contracts/manual_effect.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "a5caf8d590af8202cccd3a36421b24cf5a90a340dccaf48c1a20c6253b01e754",
+        "added_physical_lines": 107,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 88,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/effects/native_observer.py": {
+        "role": "product_source",
+        "before_sha256": "21c20f5cc82cfe61ab725f02c6cc38244516afb498fb510c2276ccc00afe1595",
+        "after_sha256": "658cc277dcda70547150a39eb76de45ea4a2e0ec36652c94741cb59d290e6e7f",
+        "added_physical_lines": 79,
+        "removed_physical_lines": 24,
+        "added_nonblank_lines": 76,
+        "removed_nonblank_lines": 24
+      },
+      "src/ceta/identity/cpu_outcome_capacity.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "2bdd6b4e668aa196fa91d59faaadee1de6c35d99d7de4dbe711b00a3cb986ae4",
+        "added_physical_lines": 263,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 243,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/identity/native_cpu_outcome.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "dda8aa59ea88fb0f09a01b147c38459243a5979b1d47a5a35fcec464e9fd0690",
+        "added_physical_lines": 248,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 231,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/identity/native_owner_view.py": {
+        "role": "product_source",
+        "before_sha256": "d5b516aacc7fafcd8eefaaac0f15baa7015fd99ca34a2cab7c118341ae468b55",
+        "after_sha256": "139b089eb651eb8f52c5e101009e1f408043b64edceaca677ccb14eea7d7545e",
+        "added_physical_lines": 79,
+        "removed_physical_lines": 11,
+        "added_nonblank_lines": 76,
+        "removed_nonblank_lines": 11
+      },
+      "src/ceta/identity/owner_session.py": {
+        "role": "product_source",
+        "before_sha256": "00a66a3f8d61b253b4722dba35276b6d3a1516386f0bed03b97b614757090b09",
+        "after_sha256": "b1ac4d6a75388101a854b70ea6ffa7d5d0911cd7dcfcb54feebdf11752b1dcf6",
+        "added_physical_lines": 474,
+        "removed_physical_lines": 3,
+        "added_nonblank_lines": 451,
+        "removed_nonblank_lines": 3
+      },
+      "src/ceta/identity/windows_pipe.py": {
+        "role": "product_source",
+        "before_sha256": "40f6ea5461f8b2a7259affe2412710189e92e117f59ed28937f75d2b322dd69c",
+        "after_sha256": "4bb72373827fea7001d173061078cd3ab768400744079eb6b759290477958c1c",
+        "added_physical_lines": 60,
+        "removed_physical_lines": 17,
+        "added_nonblank_lines": 57,
+        "removed_nonblank_lines": 17
+      },
+      "src/ceta/kernel/cpu_execution.py": {
+        "role": "product_source",
+        "before_sha256": "a5163eee7b7bab9f60e8663df46624374bebd302d94646aea31a9e2744c68651",
+        "after_sha256": "5d1b386723a45a9bd9c9e21461ed04913df10145af0fd9d2ba2f730c23736004",
+        "added_physical_lines": 74,
+        "removed_physical_lines": 5,
+        "added_nonblank_lines": 70,
+        "removed_nonblank_lines": 5
+      },
+      "src/ceta/kernel/cpu_outcome_recovery.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "1003e03d26259071c847598ad0f7ad7290e0d5c8899fdd871ea185f2a362de60",
+        "added_physical_lines": 335,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 313,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/kernel/effect_transactions.py": {
+        "role": "product_source",
+        "before_sha256": "b7387b4ba55916048bf87b412c87f05222af2fd693fb275dce6df83ae28bc1c2",
+        "after_sha256": "ffff64f1135605827ca6607c3cb494e1580dd5aeebfab41b4ec8cccc741a4fbc",
+        "added_physical_lines": 27,
+        "removed_physical_lines": 3,
+        "added_nonblank_lines": 27,
+        "removed_nonblank_lines": 3
+      },
+      "src/ceta/kernel/transactions.py": {
+        "role": "product_source",
+        "before_sha256": "8c55cf2b8da987975ccb3a6d837386f8c5e7d904fd578717d6795d81aed377dd",
+        "after_sha256": "c1805cd3544c2e54a86a3721b1c484a4935cced05a00a33f3a08e69812b93892",
+        "added_physical_lines": 10,
+        "removed_physical_lines": 2,
+        "added_nonblank_lines": 10,
+        "removed_nonblank_lines": 2
+      },
+      "src/ceta/store/journal.py": {
+        "role": "product_source",
+        "before_sha256": "e0d68aa8d8b53e69bf007571a34ee5d663bc60d2a39f5e1b20d7a4d7d43adc7a",
+        "after_sha256": "c95ec091a7a5f9d3dc1d4213f599dde941cf83acc1998267b344e7e00332229c",
+        "added_physical_lines": 142,
+        "removed_physical_lines": 8,
+        "added_nonblank_lines": 137,
+        "removed_nonblank_lines": 8
+      },
+      "src/ceta/store/outcome_capacity.py": {
+        "role": "product_source",
+        "before_sha256": null,
+        "after_sha256": "3856b2fe6c2c5e5ed51c72e2935dd7a9a9fa30d4bf59d6d2213cccdf15ba3bb9",
+        "added_physical_lines": 379,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 337,
+        "removed_nonblank_lines": 0
+      },
+      "src/ceta/supervisor/isolated_worker.py": {
+        "role": "product_source",
+        "before_sha256": "1c3c880e6f089e9629b56f84d85da48f6aee12e3e78cf84a1a448970bee8d0f3",
+        "after_sha256": "868ad9b53e793cd0a5b5eb92ad43939bcf4a0c103d2d95ee2ccef7d4a8d966a8",
+        "added_physical_lines": 42,
+        "removed_physical_lines": 5,
+        "added_nonblank_lines": 38,
+        "removed_nonblank_lines": 5
+      },
+      "tests/contract/test_cpu_capacity_connection.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "79dc5fd9a2b47bf37f73a9d166514acd973bd233e71f95965f94ea208716a6f7",
+        "added_physical_lines": 407,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 373,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_cpu_execution_admission.py": {
+        "role": "test",
+        "before_sha256": "740f1beb67a5ba190f827ae9786c951f2b37af40bb4d8f4f638e301e636feb0b",
+        "after_sha256": "47383231d42a423de9cb465c7bceb2a8a3385e5fecb9083d08e5f297d6518c9c",
+        "added_physical_lines": 9,
+        "removed_physical_lines": 8,
+        "added_nonblank_lines": 9,
+        "removed_nonblank_lines": 8
+      },
+      "tests/contract/test_cpu_outcome_recovery.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "a300ccaa22c11b9d7c7e164f64798a18038b13a97542a65dc0770d320f53b5c6",
+        "added_physical_lines": 363,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 331,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_cpu_recovery_registration.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "af65f0fe287858b89b0a5a77bfd84684c067842318fa50d05ddd2fe8bbf93b0f",
+        "added_physical_lines": 132,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 115,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_isolated_worker.py": {
+        "role": "test",
+        "before_sha256": "df0e81962f34d200b52b09019335d9990f2954764c64d732067aa50c3dc67127",
+        "after_sha256": "e960476efc55a30a6d5e184af7c758c647b8014e2ea3fda943c348a302c64a7b",
+        "added_physical_lines": 14,
+        "removed_physical_lines": 1,
+        "added_nonblank_lines": 13,
+        "removed_nonblank_lines": 1
+      },
+      "tests/contract/test_isolation_qualification_oracle.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "f8f4ec32941e770830244410e9b3290316ba668d1b18c32ed7bdb4c83727805f",
+        "added_physical_lines": 169,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 147,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_isolation_token_diagnostics.py": {
+        "role": "test",
+        "before_sha256": "ef60e072374b5e640848ad93423c965951402a8e33dda6847228161b39a730bd",
+        "after_sha256": "7f2bbbf09836e1273fd75ba0f48d033552ac14d6f4ef59649c1d1e441071f534",
+        "added_physical_lines": 134,
+        "removed_physical_lines": 8,
+        "added_nonblank_lines": 126,
+        "removed_nonblank_lines": 8
+      },
+      "tests/contract/test_isolation_token_port.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "9e55dd56d66b8ba33e45c7444b50afe91bec15a68a480c70ba178224f21a0ebb",
+        "added_physical_lines": 44,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 38,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_native_cpu_outcome_provenance.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "b3d8ea47f72e20b2a54133f0de1ea4044a0830b92c06aa5963ba56c3c79a2a0c",
+        "added_physical_lines": 475,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 431,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_native_observer_origin.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "80c67236f335b80042e3913ab9882d98cfc4489aa9d6ec26651139fb5fa2365b",
+        "added_physical_lines": 508,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 453,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_native_owner_admission.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "17edb6484b8708fe8241d6d42154c4875ac16cc8d0a715d5a804a2eec03d1e83",
+        "added_physical_lines": 366,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 331,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_native_owner_execution.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "4c81b9c225cdc6e7ac97e3c8f3e10d711270097573f350c534b28a56e013dc2f",
+        "added_physical_lines": 589,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 544,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_native_owner_preparation.py": {
+        "role": "test",
+        "before_sha256": "13fdca53324d379755ccbfc64f4fa69c72a20f1984b09b83bd1ac0bfd8a62f6a",
+        "after_sha256": "bdd271bd9e280cd21ef22e863577e5f982a0d0106e412675a657de305b4f8211",
+        "added_physical_lines": 12,
+        "removed_physical_lines": 7,
+        "added_nonblank_lines": 12,
+        "removed_nonblank_lines": 7
+      },
+      "tests/contract/test_native_runtime_composition.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "1d5105f741e42e40a3f93d734266639bc8691a032f044df1672821eebd3c275f",
+        "added_physical_lines": 674,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 613,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_outcome_capacity.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "03c110805f32629d19d05a086299d5290d82a238fc908ffda9dea6befc30da1c",
+        "added_physical_lines": 565,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 520,
+        "removed_nonblank_lines": 0
+      },
+      "tests/contract/test_real_effect_entrypoint.py": {
+        "role": "test",
+        "before_sha256": null,
+        "after_sha256": "91d8b8e3b214ce5beea2b2593c557ace866a7b216f5e89f40c651415bae542a0",
+        "added_physical_lines": 632,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 589,
+        "removed_nonblank_lines": 0
+      }
+    },
+    "totals": {
+      "product_source": {
+        "added_physical_lines": 4480,
+        "removed_physical_lines": 103,
+        "added_nonblank_lines": 4183,
+        "removed_nonblank_lines": 103
+      },
+      "test": {
+        "added_physical_lines": 5093,
+        "removed_physical_lines": 24,
+        "added_nonblank_lines": 4645,
+        "removed_nonblank_lines": 24
+      },
+      "engineering_tool": {
+        "added_physical_lines": 121,
+        "removed_physical_lines": 0,
+        "added_nonblank_lines": 102,
+        "removed_nonblank_lines": 0
+      }
+    }
+  },
+  "newly_authored_product_source_lines": 0,
+  "existing_implementation_ported": true,
+  "new_test_path": "tests/contract/test_isolation_token_port.py",
+  "new_test_lines": 44,
+  "integrated_source_lines": 0,
+  "implementation_reuse_not_credited_as_new_original_code": true
+}

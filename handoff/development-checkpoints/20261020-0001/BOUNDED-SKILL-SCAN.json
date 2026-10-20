@@ -1,0 +1,2447 @@
+{
+  "canonical_sections": [
+    "196",
+    "198",
+    "202"
+  ],
+  "check_outcome": "WARN",
+  "checks": [
+    "source-integrity",
+    "secret-exposure",
+    "access-files"
+  ],
+  "dictionary_gate": {
+    "checked_at": "2026-10-20T18:19:06.954848Z",
+    "clarification": "DECIDE_WITH_CONTEXT",
+    "critical_terms_without_mw_verification": [],
+    "dictionary_authority": "Merriam-Webster",
+    "distinct_terms": 7,
+    "full_dictionary_coverage": false,
+    "merriam_webster_entry_checked_terms": [],
+    "merriam_webster_not_verified_terms": [
+      "and",
+      "commit",
+      "development",
+      "every",
+      "local",
+      "minutes",
+      "push"
+    ],
+    "mode": "OFFLINE_CACHED_ONLY",
+    "negation_terms": [],
+    "note": "Official entry presence is NOT automatic sense disambiguation. Unverified terms remain unverified. Named project terms use separate versioned definitions.",
+    "project_glossary_terms": [],
+    "prompt_sha256": "3bdbef083044ad1d88fb6bde26f4178ab77e8299ae2c937751bafb6fbbd3990d",
+    "prompt_word_count": 7,
+    "semantic_markers": []
+  },
+  "edition_volumes": [
+    7,
+    21
+  ],
+  "findings": [
+    {
+      "evidence": {
+        "expected_sha256": "25a72814a436f8025c80d1dab187e9608bc914245ff986dc271b0639058a3e19",
+        "observed_sha256": "25a72814a436f8025c80d1dab187e9608bc914245ff986dc271b0639058a3e19"
+      },
+      "path": "references/canonical-sections/196_ENDPOINT_SECURITY.txt",
+      "scanner": "source-integrity",
+      "status": "PASS",
+      "summary": "Source 196 hash matched"
+    },
+    {
+      "evidence": {
+        "expected_sha256": "91a2d8c3b9849d895fbb28e9fa2295193bfb60bdb65c643cf13d76d92e42d232",
+        "observed_sha256": "91a2d8c3b9849d895fbb28e9fa2295193bfb60bdb65c643cf13d76d92e42d232"
+      },
+      "path": "references/canonical-sections/198_EMBEDDED_SECURITY.txt",
+      "scanner": "source-integrity",
+      "status": "PASS",
+      "summary": "Source 198 hash matched"
+    },
+    {
+      "evidence": {
+        "expected_sha256": "abfe7af1174c7d18817f141cc91f1dd17b3570c8a6841d0cc2c3d94bd3980743",
+        "observed_sha256": "abfe7af1174c7d18817f141cc91f1dd17b3570c8a6841d0cc2c3d94bd3980743"
+      },
+      "path": "references/canonical-sections/202_AUTHORIZATION_ENGINEERING.txt",
+      "scanner": "source-integrity",
+      "status": "PASS",
+      "summary": "Source 202 hash matched"
+    },
+    {
+      "evidence": {
+        "expected_sha256": "12449aa40ceda0cf2fd8105e14270f4ba2dee9a5824fa69dff786b07f036685c",
+        "observed_sha256": "12449aa40ceda0cf2fd8105e14270f4ba2dee9a5824fa69dff786b07f036685c"
+      },
+      "path": "references/v21-controls/V21-TR-04.txt",
+      "scanner": "source-integrity",
+      "status": "PASS",
+      "summary": "Source V21-TR-04 hash matched"
+    },
+    {
+      "scanner": "secret-exposure",
+      "status": "PASS",
+      "summary": "No configured secret patterns detected"
+    },
+    {
+      "path": "PACKAGE_MANIFEST.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "requirements-contract-tests.txt",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": ".local-build-cache/restoration-proof/acceptance/scenarios.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": ".local-build-cache/restoration-proof/architecture/components.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": ".local-build-cache/restoration-proof/requirements/requirements.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "acceptance/scenarios.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "architecture/components.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/BUILD_MEASUREMENTS_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/CANONICAL_PROFILE_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/CONSTRUCTION_GATES_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/CPU_OUTCOME_CAPACITY_CONNECTION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/CPU_OUTCOME_RECOVERY_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/DEVELOPMENT_INVENTORY_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/DURABLE_HISTORY_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/EDITOR_RECOVERY_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/ERROR_SEMANTICS_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/EVENT_AND_TIME_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/EVIDENCE_ADMISSION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/FRAMING_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/HARDWARE_OBSERVATION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/ISOLATED_WORKER_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/KERNEL_TRANSACTIONS_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/LOCAL_IPC_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/MEMORY_LIFECYCLE_BINDING_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_CODE_BINDING_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_CPU_BINDING_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_CPU_OUTCOME_PROVENANCE_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_CPU_RUNTIME_COMPOSITION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_EFFECT_OBSERVER_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_OWNER_APPROVAL_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_OWNER_SESSION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_OWNER_VIEW_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/NATIVE_SESSION_CLOCK_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/OUTCOME_CAPACITY_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/OWNED_CPU_EXECUTION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/OWNED_CPU_OUTCOME_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/OWNED_SERVICE_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/OWNER_AUTHORITY_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/OWNER_ENROLLMENT_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/PREPARATION_VIEW_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/PROCESS_DIAGNOSTICS_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/PROCESS_PERFORMANCE_COMPARISON_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/REAL_EFFECT_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/REASONING_ADAPTER_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/RELEVANT_STATE_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/REQUEST_COMPILER_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/RESOURCE_MANAGEMENT_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/RESOURCE_RESERVATIONS_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/SEMANTIC_VALIDATION.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/SOURCE_REFERENCE_RESOLUTION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/SQLITE_RUNTIME_V1.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/STORE_TRANSACTION_V2.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/TASK_BUDGET_PLANNING_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/TASK_DRAFTS_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/TASK_MEANING_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/TRANSITION_MODEL_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/WORKLOAD_ADMISSION_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/WORKLOAD_THROTTLING_V1.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/error_catalog.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/operation_catalog.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/source_reference_map_v1.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/state_catalog.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/transition_rules.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/dependencies/native-operator.txt",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/examples/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/examples/duplicate_keys.wire.txt",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/examples/observation_hash_invalid.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/examples/observation_shape_valid.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/examples/observation_unknown_field_invalid.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/ActionProposal.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/CapabilityQualification.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/CompanionIdentity.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/ContextEnvelope.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/EffectObservation.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/ErrorEnvelope.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/EventRecord.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/ExecutionReceipt.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/MemoryLifecycleEvent.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/MemoryRecord.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/MigrationRecord.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/ObservationEnvelope.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/OperationPermit.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/PlanNode.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/PolicyDecision.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/ProtectedOperationRequest.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/QueueItem.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/RecoveryRecord.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/ReviewFinding.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/records/StandingGrant.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/reference_material/handoff_record.source.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/schemas/records.schema.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "contracts/vectors/event-preimage-v1.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "docs/specification/25_defensive_vault_custody.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "native/canonical_reference/Cargo.toml",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "native/canonical_reference/rust-toolchain.toml",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "native/canonical_reference/src/main.rs",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "native/sqlite_runtime/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "native/windows_broker/effect_observer.rs",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "native/windows_broker/isolated_worker.rs",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "requirements/requirements.json",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/01_architect_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/02_researcher_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/03_analyst_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/04_critic_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/05_security_auditor_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/06_implementer_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/07_refactorer_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/08_tester_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/09_verifier_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/10_documentation_writer_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/11_teacher_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/12_planner_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/13_coordinator_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/14_observer_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/15_memory_curator_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/16_governance_reviewer_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/17_red_team_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/18_optimizer_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/19_user_experience_reviewer_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/20_decision_arbiter_advisory_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/21_guidebook_architect_expected_output.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/application/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/application/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/application/ipc_service.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/application/lifecycle.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/application/operator.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/application/task_operator.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/application/use_cases.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/assets/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/cbcc/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/companion/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/client_process.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/ipc_service.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/kernel_service.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/native_cpu_outcome.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/native_cpu_runtime.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/owned_service.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/real_effect_cli.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/real_effect_client.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/real_effect_host.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/real_effect_runtime.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/real_effect_service.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/composition/service_process.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/context/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/context/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/context/compiler.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/construction.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/custody_protocol.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/editor_recovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/errors.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/events.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/evidence_admission.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/framing.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/graphs.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/history.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/kernel_transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/local_ipc.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/local_results.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/manual_effect.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/memory_lifecycle.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/owner_enrollment.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/provenance.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/read_sets.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/real_effect.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/request_compiler.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/resource_management.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/resource_reservations.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/runtime_records.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/source_references.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/store_transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/task_drafts.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/task_meaning.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/temporal.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/transitions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/wire.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/contracts/workload_throttling.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/custody/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/delivery/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/desktop/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/desktop/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/desktop/accessibility.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/desktop/meaning_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/desktop/operator_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/desktop/preparation_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/desktop/task_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/effects/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/effects/native_cpu_binding.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/effects/native_observer.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/evaluation/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/cpu_outcome_capacity.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/native_approval.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/native_clock.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/native_code_binding.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/native_cpu_outcome.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/native_owner_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/owner_session.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/owners.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/identity/windows_pipe.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/inference/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/integrity/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/cpu_execution.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/cpu_outcome_recovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/editor_recovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/effect_transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/owner_authority.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/resource_reservations.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/task_drafts.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/kernel/transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/memory/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/migration/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/modalities/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/observation/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/orchestration/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/orchestration/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/orchestration/graph.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/reasoning/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/reasoning/adapter.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/reasoning/assessment.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/reasoning/shadow.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/reasoning/source_loader.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/reflection/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/resource/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/resource/admission.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/resource/budget.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/resource/diagnostics.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/resource/hardware.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/resource/inference.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/resource/pressure.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/review/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/shadow/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/backups.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/journal.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/outcome_capacity.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/projections.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/sqlite_runtime.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/store/state.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/supervisor/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/supervisor/__init__.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/supervisor/isolated_worker.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/supervisor/service.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/supervisor/windows_jobs.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "src/ceta/verification/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/fixture_paths.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_accessibility.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_all_records.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_allocations.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_backups.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_boundaries.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_build_measurements.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_construction.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_context_intake.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_cpu_capacity_connection.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_cpu_execution_admission.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_cpu_execution_cross_kernel.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_cpu_execution_registration_interruptions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_cpu_execution_timing_diagnostics.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_cpu_outcome_recovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_cpu_recovery_registration.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_custody_protocol.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_destination_discovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_destination_long_paths.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_development_inventory.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_editor_recovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_editor_retention_queue.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_errors.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_events.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_evidence_admission.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_framing.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_fresh_observer_reconciliation.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_hardware_observation.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_history.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_isolated_worker.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_isolation_qualification_oracle.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_isolation_token_diagnostics.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_isolation_token_port.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_journal_constructor_cleanup.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_journal_postconstruction_cleanup.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_kernel_authority.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_kernel_initializer_publication.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_kernel_recovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_kernel_transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_launcher_custody_paths.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_local_ipc.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_local_results.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_memory_lifecycle.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_code_binding.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_cpu_binding.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_cpu_outcome_provenance.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_cpu_owner_approval.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_effect_observer.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_observer_origin.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_owner_admission.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_owner_approval.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_owner_execution.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_owner_preparation.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_owner_session.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_owner_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_runtime_composition.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_native_session_clock.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_operator_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_outcome_capacity.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_outer_process_child_retirement.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_outer_process_shutdown_handoff.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_owned_cpu_outcome_transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_owned_service.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_owner_authority_transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_owner_enrollment.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_owner_enrollment_guid.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_owner_session_cleanup.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_owner_session_context_boundary.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_preparation_recovery.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_preparation_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_preservation.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_pressure_lifecycle.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_process_diagnostics.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_process_observation_timing.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_process_observation_validation.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_process_performance_comparison.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_projections.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_provenance.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_read_sets.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_real_effect_contract.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_real_effect_entrypoint.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_request_compiler.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_resource_management.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_resource_reservations.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_runtime_records.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_shutdown_interruptions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_shutdown_lifecycle.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_shutdown_session_failures.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_source_coverage.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_source_references.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_sqlite_runtime.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_stop_dispatch.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_store_transactions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_task_ack_loss.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_task_budget_planning.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_task_drafts.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_task_meaning.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_task_meaning_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_task_view.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_temporal.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_termination_retry.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_toolchain_identity.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_transitions.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_windows_jobs.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_windows_pipe.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_windows_throttling.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_wire.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_wire_scanning.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_wire_schema_acceptance.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_workload_admission.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/test_workload_throttling.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/reasoning/test_reasoning_integration.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/contract/reasoning/test_reasoning_repairs.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/endurance/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/fault/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/installed/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/integration/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/migration/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/model/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/performance/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/security/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/ui/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tests/unit/README.md",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/build_measurements.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/build_native_reference.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/ceta_operator.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/check_contracts.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/compare_canonical_implementations.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/compile_graph.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/development_inventory.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/isolated_worker_token_oracle.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/preserve_ceta_baseline.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/probe_sqlite_runtime.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/run_source_tests.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/verify_allocations.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    },
+    {
+      "path": "tools/verify_source_coverage.py",
+      "scanner": "access-files",
+      "status": "WARN",
+      "summary": "World-writable tracked candidate"
+    }
+  ],
+  "operation": "read-only-profile-audit",
+  "profile": "codex-secret-exposure-auditor",
+  "repo": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\token-integration-r1\\work\\candidate",
+  "repo_sample_limit": 2000,
+  "repo_sampled_file_count": 391,
+  "scope_limit": "Only configured static checks; not full Codex compliance, independent verification, or proof of deployed behavior",
+  "timestamp": "2026-10-20T18:19:07.368571Z",
+  "tool": "codex-runtime",
+  "v21_controls": [
+    "V21-TR-04"
+  ],
+  "version": "1.0.0"
+}

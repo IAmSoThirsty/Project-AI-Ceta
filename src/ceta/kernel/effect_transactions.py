@@ -208,7 +208,7 @@ class KernelEffectTransactions:
         require(row['stored_bytes'] == row['prior_stored_bytes'] + size,
                 'OUTCOME_CUMULATIVE_ACCOUNTING_MISMATCH')
 
-    def _commit(self, records, kinds, peer, sample, cells, row, key, task_key, task_id, guard, evidence=None, settlement_inputs=None, attempt_inputs=None):
+    def _commit(self, records, kinds, peer, sample, cells, row, key, task_key, task_id, guard, evidence=None, settlement_inputs=None, attempt_inputs=None, recovery_inputs=None):
         point = self.k._store.position(row['scope_id']); initial = point
         fields = ('attempt_index',) if len(records) == 1 else (
                                        (('receipt_index', 'observation_index', 'settlement_index') if len(records) == 3 else
@@ -249,8 +249,21 @@ class KernelEffectTransactions:
                    StoreChange(self.k._expect(cells[task_key]), task_wire, cause))
         if evidence is not None:
             changes += (StoreChange(self.k._expect(cells[evidence[0]]), evidence[1], cause),)
-        self.k._store.commit((initial,), tuple(entries), checks=tuple(self.k._expect(c) for c in cells.values()),
+        entries = tuple(entries)
+        checks = tuple(self.k._expect(c) for c in cells.values())
+        pending = None
+        if settlement_inputs is not None:
+            from .cpu_outcome_recovery import retain_outcome_transaction
+            pending = retain_outcome_transaction(self.k, recovery_inputs, (initial,),
+                entries, checks, changes, cells, row['state'])
+            from ceta.identity.cpu_outcome_capacity import stage_owned_cpu_outcome
+            stage_owned_cpu_outcome(self.k, tuple(entry.payload_wire for entry in entries))
+        self.k._store.commit((initial,), entries, checks=checks,
             changes=changes, guard=guard)
+        if pending is not None:
+            require(pending.execution._outcome_capacity.lease.durable,
+                'CPU_RECOVERY_DURABLE_OUTCOME_REQUIRED')
+            pending.execution._pending_transaction = None
 
     def begin(self, request_wire, permit_wire, proof, context):
         request, permit, peer, cells, metadata, key, task_key = self._load(request_wire, permit_wire, context)
@@ -336,6 +349,16 @@ class KernelEffectTransactions:
                 and observation.identity == request.process_identity and observation.job_digest == request.job_digest
                 and observation.observer_commitment == request.observer_commitment, 'OUTCOME_OBSERVATION_BINDING_MISMATCH')
         sample = self._guard('OUTCOME', request, permit, receipt, observation, proof, peer, context)
+        execution = self.k._cpu_execution.active
+        pending = None if execution is None else execution._pending_transaction
+        inputs = (request_wire, permit_wire, receipt_wire, observation_wire)
+        if pending is not None:
+            def retry_guard():
+                fresh = self._guard('OUTCOME', request, permit, receipt, observation, proof, peer, context)
+                require(self._classify(request, observation, fresh, self.last_elapsed) == pending.state,
+                    'OUTCOME_CLASSIFICATION_CHANGED')
+            pending.retry(self.k, inputs, retry_guard)
+            return self.recover(request_wire, permit_wire, context)
         prior_receipt = None if row['receipt_index'] is None else self._resolve(row['receipt_index'], request.scope_id, 'kernel.owned-cpu.receipt', peer)
         if prior_receipt is not None:
             require(prior_receipt.canonical_wire == receipt.canonical_wire, 'OUTCOME_RECEIPT_CONFLICT')
@@ -378,7 +401,8 @@ class KernelEffectTransactions:
         def guard():
             fresh = self._guard('OUTCOME', request, permit, receipt, observation, proof, peer, context)
             require(self._classify(request, observation, fresh, self.last_elapsed) == state, 'OUTCOME_CLASSIFICATION_CHANGED')
-        self._commit(tuple(records), tuple(kinds), peer, sample, cells, row, key, task_key, request.task_id, guard, evidence, settlement_inputs)
+        self._commit(tuple(records), tuple(kinds), peer, sample, cells, row, key, task_key, request.task_id,
+            guard, evidence, settlement_inputs, recovery_inputs=inputs)
         guard()
         return self.recover(request_wire, permit_wire, context)
 

@@ -193,3 +193,31 @@ unchanged. A stored interpretation is always UNACCEPTED; later task changes yiel
 an explicitly STALE read. These routes confer neither task acceptance nor a grant.
 `TASK_MEANING_ABSENT` describes only coherent current absence. The complete wire,
 bounds, atomic persistence and recovery requirements are in `TASK_MEANING_V1.md`.
+
+## Selected manual real-effect commands
+
+The additive `ManualEffectCommand` data profile declares `manual.run`,
+`manual.restore`, `manual.inspect`, `manual.reconcile` and `manual.stop`. Its
+4096-byte canonical body contains only command/scope/run identifiers, operation
+kind, bounded CPU rate, original request selector and Stop reason. Unknown fields,
+proof/configuration inputs, Boolean rates and route/kind substitutions deny.
+It is a separate command profile like TaskCommand; the twenty RecordCodec
+records and their schemas are unchanged. Correlated manual-result-v1 responses
+bind the complete original envelope. A returned state or denial grants no
+authority and is not an independent native observation.
+
+Only the explicit `ManualRealEffectHost` routes these commands. The ordinary
+identity-only KernelIngress continues to deny them. Its registered native peer
+and scope checks, replay generation and 30-second envelope bound are unchanged.
+One RUN context spans genuine enrollment, exact per-effect ceremony, canonical
+prepare/consume/attempt, native dispatch, separate observation and settlement.
+RESTORE uses a fresh authenticated request and a separate genuine approval,
+retaining the same actual owned target and canonical cap-parent binding.
+
+An optional trusted receiver context-retainer can retain an unresolved original
+context and connected pipe. It cannot renew that envelope, change its thread,
+register a peer or grant authority. Pending custody denies another receive and
+ordinary receiver close. Explicit retirement requires the same captured owner
+to report no pending custody before invalidation/disconnect. An expired original
+context stays expired; this does not implement cross-process or renewed-context
+recovery. The original owner and receiver remain exposed on failure.

@@ -24,6 +24,7 @@ unsafe extern "system" {
     fn GetCurrentProcess() -> Handle;
     fn GetCurrentProcessId() -> u32;
     fn GetLastError() -> u32;
+    fn SetLastError(error: u32);
     fn CloseHandle(handle: Handle) -> i32;
     fn LocalFree(pointer: *mut c_void) -> *mut c_void;
     fn OpenProcess(access: u32, inherit: i32, pid: u32) -> Handle;
@@ -47,16 +48,47 @@ unsafe extern "system" {
 }
 
 fn code(error: std::io::Error) -> i32 { error.raw_os_error().unwrap_or(-1) }
-fn query(token: Handle, class: u32) -> Result<Vec<u64>, u32> {
+struct TokenData { storage: Vec<u64>, bytes: usize }
+impl TokenData {
+    fn as_ptr(&self) -> *const u64 { self.storage.as_ptr() }
+    fn require_bytes(&self, minimum: usize) -> Result<(), u32> {
+        if self.bytes >= minimum { Ok(()) } else { Err(13) }
+    }
+}
+
+fn query(token: Handle, class: u32) -> Result<TokenData, u32> {
     let mut bytes = 0u32;
-    unsafe { GetTokenInformation(token, class, std::ptr::null_mut(), 0, &mut bytes); }
-    if !(1..=65536).contains(&bytes) { return Err(unsafe { GetLastError() }); }
+    unsafe { SetLastError(0); }
+    let initial = unsafe { GetTokenInformation(token, class, std::ptr::null_mut(), 0, &mut bytes) };
+    let initial_error = unsafe { GetLastError() };
+    if initial != 0 || initial_error != 122 || !(1..=65536).contains(&bytes) {
+        return Err(if initial_error == 0 { 13 } else { initial_error });
+    }
     // u64 storage keeps pointer/SID-containing Windows structures aligned.
     let mut data = vec![0u64; (bytes as usize + 7) / 8];
     let mut returned = bytes;
     let ok = unsafe { GetTokenInformation(token, class, data.as_mut_ptr().cast(), bytes, &mut returned) };
-    if ok == 0 || returned != bytes { return Err(unsafe { GetLastError() }); }
-    Ok(data)
+    if ok == 0 { return Err(unsafe { GetLastError() }); }
+    if returned != bytes { return Err(13); }
+    Ok(TokenData { storage: data, bytes: bytes as usize })
+}
+
+fn restricted_sid_count(data: &TokenData) -> Result<u32, u32> {
+    if data.bytes > 65536 { return Err(13); }
+    data.require_bytes(std::mem::size_of::<u32>())?;
+    let count = unsafe { *(data.as_ptr().cast::<u32>()) };
+    if count > 4096 { return Err(13); }
+    if count != 0 {
+        // TOKEN_GROUPS aligns its first SID_AND_ATTRIBUTES after GroupCount.
+        let alignment = std::mem::align_of::<SidAndAttributes>();
+        let offset = (std::mem::size_of::<u32>() + alignment - 1) & !(alignment - 1);
+        data.require_bytes(offset + count as usize * std::mem::size_of::<SidAndAttributes>())?;
+    }
+    Ok(count)
+}
+
+fn restriction_consistent(raw: i32, last_error: u32, count: u32) -> bool {
+    (raw != 0) == (count > 0) && (raw != 0 || last_error == 0)
 }
 
 fn sid_text(sid: *mut c_void) -> Result<String, u32> {
@@ -78,13 +110,24 @@ fn token_json() -> Result<String, u32> {
         let capabilities = query(token, 30)?;
         let container = query(token, 31)?;
         let integrity = query(token, 25)?;
+        app.require_bytes(std::mem::size_of::<u32>())?;
+        capabilities.require_bytes(std::mem::size_of::<u32>())?;
+        container.require_bytes(std::mem::size_of::<*mut c_void>())?;
+        integrity.require_bytes(std::mem::size_of::<SidAndAttributes>())?;
         let app_value = unsafe { *(app.as_ptr().cast::<u32>()) };
         let count = unsafe { *(capabilities.as_ptr().cast::<u32>()) };
         let app_sid = unsafe { *(container.as_ptr().cast::<*mut c_void>()) };
         let integrity_sid = unsafe { (*(integrity.as_ptr().cast::<SidAndAttributes>())).sid };
-        let restricted = unsafe { IsTokenRestricted(token) } != 0;
-        Ok(format!("{{\"is_appcontainer\":{},\"capability_count\":{},\"appcontainer_sid\":\"{}\",\"integrity\":\"{}\",\"restricted\":{}}}",
-            app_value, count, sid_text(app_sid)?, sid_text(integrity_sid)?, restricted))
+        unsafe { SetLastError(0); }
+        let restriction_raw = unsafe { IsTokenRestricted(token) };
+        let restriction_error = unsafe { GetLastError() };
+        if restriction_raw == 0 && restriction_error != 0 { return Err(restriction_error); }
+        let restricting_sids = query(token, 11)?;
+        let restricted_count = restricted_sid_count(&restricting_sids)?;
+        if !restriction_consistent(restriction_raw, restriction_error, restricted_count) { return Err(13); }
+        Ok(format!("{{\"schema\":\"ceta-isolation-token-v2\",\"is_appcontainer\":{},\"capability_count\":{},\"appcontainer_sid\":\"{}\",\"integrity\":\"{}\",\"restricted\":{},\"restriction_raw_result\":{},\"restriction_last_error\":{},\"restricted_sid_count\":{}}}",
+            app_value, count, sid_text(app_sid)?, sid_text(integrity_sid)?, restriction_raw != 0,
+            restriction_raw, restriction_error, restricted_count))
     })();
     unsafe { CloseHandle(token); }
     result
@@ -219,4 +262,54 @@ fn main() {
         }
     } else { Err("OPERATION_REQUIRED".into()) };
     if let Err(error) = result { eprintln!("{}", error); std::process::exit(2); }
+}
+
+#[cfg(test)]
+mod token_measurement_tests {
+    use super::*;
+
+    fn buffer(count: u32, bytes: usize) -> TokenData {
+        let mut data = TokenData { storage: vec![0; (bytes + 7) / 8], bytes };
+        if bytes >= 4 { unsafe { *(data.storage.as_mut_ptr().cast::<u32>()) = count; } }
+        data
+    }
+
+    #[test]
+    fn empty_list_requires_a_measured_count_header() {
+        assert_eq!(restricted_sid_count(&buffer(0, 4)), Ok(0));
+        assert_eq!(restricted_sid_count(&buffer(0, 3)), Err(13));
+    }
+
+    #[test]
+    fn positive_count_requires_every_group_slot_in_returned_bytes() {
+        assert_eq!(restricted_sid_count(&buffer(1, 24)), Ok(1));
+        assert_eq!(restricted_sid_count(&buffer(1, 23)), Err(13));
+        assert_eq!(restricted_sid_count(&buffer(2, 24)), Err(13));
+    }
+
+    #[test]
+    fn excessive_count_is_rejected_before_size_arithmetic() {
+        assert_eq!(restricted_sid_count(&buffer(4097, 65536)), Err(13));
+        assert_eq!(restricted_sid_count(&buffer(u32::MAX, 8)), Err(13));
+        assert_eq!(restricted_sid_count(&buffer(0, 65537)), Err(13));
+        assert_eq!(restricted_sid_count(&buffer(4096, 65544)), Err(13));
+    }
+
+    #[test]
+    fn boolean_error_and_measured_presence_must_agree() {
+        assert!(restriction_consistent(0, 0, 0));
+        assert!(restriction_consistent(1, 0, 1));
+        assert!(restriction_consistent(2, 0, 1));
+        assert!(!restriction_consistent(0, 5, 0));
+        assert!(!restriction_consistent(0, 0, 1));
+        assert!(!restriction_consistent(1, 0, 0));
+    }
+
+    #[test]
+    fn token_structure_sizes_use_returned_byte_count() {
+        let data = buffer(0, 4);
+        assert_eq!(data.require_bytes(4), Ok(()));
+        assert_eq!(data.require_bytes(8), Err(13));
+        assert_eq!(std::mem::size_of::<SidAndAttributes>(), 16);
+    }
 }
