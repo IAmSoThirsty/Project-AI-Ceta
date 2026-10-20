@@ -1,0 +1,93 @@
+{
+  "author": "/root/implement",
+  "decision": "rejected",
+  "disposition": "R4_SEVEN_MEMBER_REPAIR_VERIFIED_OVERALL_ADMISSION_REJECTED",
+  "findings": [
+    {
+      "author_position": "Actual R4 implementation receipt explicitly declares this post-freeze finding blocking; frozen work remains unchanged.",
+      "blocking": true,
+      "classification": "blocking current task",
+      "evidence": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\review\\INHERITED-DEFAULT-BLOCKER.json",
+      "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\work\\caller_boundary.py",
+      "first_line": 138,
+      "id": "LOADER-R3-02",
+      "impact": "The exact-caller preflight can invoke substituted behavior and accept a function whose live default differs from pinned source before attempt/native admission.",
+      "issue": "validate_defaults uses ordinary tuple/dict equality on live defaults. A substituted object can run __eq__ and compare equal to the required None default.",
+      "last_line": 141,
+      "priority": "P1",
+      "proof": "data_value, validate_defaults, validate_definitions and full validate_prepared ASTs remain identical to R3. Retained R3 canonical _cpu_window reproduction passes full validate_prepared with a wrong default and records the equality hook. Fresh exact R4 predicate AST control reproduces acceptance and one NoneType equality-hook call.",
+      "repair": "Separate successor: strict type/identity-safe recursive positional and keyword-default validation. Reject unknown objects before equality, iteration, hashing or descriptor hooks; preserve legitimate pinned defaults.",
+      "required_regressions": "Real pinned WindowsOwnedProcess._cpu_window hostile default must be refused by full validate_prepared with zero hostile hook calls; cover keyword defaults/nested approved containers and preserve current88IDs/original28ASTs."
+    }
+  ],
+  "native_admission": false,
+  "preserved_dissent": "The verified CreateEventW repair is retained as useful work. Passing88 controls does not resolve the independently demonstrated default-validation blocker.",
+  "product_acceptance": false,
+  "recorded_at": "2026-10-20T19:22:12.159261+00:00",
+  "references": {
+    "control\\implement-receipt.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\control\\implement-receipt.json",
+      "sha256": "ee7fb390bbede2551e2f558f73d7674368b4bd1102a38d14caaed0dd2a708d3f"
+    },
+    "review\\INDEPENDENT-RESULT.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\review\\INDEPENDENT-RESULT.json",
+      "sha256": "6fe01fbfbdefa9494f87dd2175e27f9852828bfca45268c64b7e6b80e36d22bd"
+    },
+    "review\\INHERITED-DEFAULT-BLOCKER.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\review\\INHERITED-DEFAULT-BLOCKER.json",
+      "sha256": "7fca9b199dd428442131c5e2c9583d0f9614baaf7e64d1418f6db562e5fa9930"
+    },
+    "review\\controlled-88-COMMAND.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\review\\controlled-88-COMMAND.json",
+      "sha256": "2cf4e719aff376b30546471f080273dddea2386d26145f8a64e2ef46b4ff7cbc"
+    },
+    "review\\data-cut\\controls\\independent-review\\RESULT.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\review\\data-cut\\controls\\independent-review\\RESULT.json",
+      "sha256": "84f5a4284f75bcbf82f0e3a700c40608e95b8700d47a68bc2a8b2f03ef3860be"
+    },
+    "review\\frozen-verifier-COMMAND.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\review\\frozen-verifier-COMMAND.json",
+      "sha256": "0d36da156beaf2e0819bcdb135628ebc1a122402d489605803177df365c8aa3a"
+    },
+    "work\\CODE-MANIFEST.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\work\\CODE-MANIFEST.json",
+      "sha256": "492f4570c21a04ed4758f6aad045bae9588d3acc0a31855907df85289a6df53c"
+    },
+    "work\\FROZEN.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\work\\FROZEN.json",
+      "sha256": "24489889db30e6e19057306c3e6c41e6f329e55c9447e395c4de60a8d3c4fb5d"
+    },
+    "work\\caller_boundary.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r4\\work\\caller_boundary.py",
+      "sha256": "1f433e0b103fc74b9c015eefd913400eeba7f4330cde7ed4037e242574e6a582"
+    }
+  },
+  "reviewer": "/root/admission",
+  "run_id": "ceta-loader-capture-r4-20261020",
+  "schema_version": 1,
+  "unresolved": [
+    "LOADER-R3-02 requires a separately reviewed source repair before native admission.",
+    "No fresh native execution or full loader/product acceptance is established."
+  ],
+  "verification": {
+    "canonical_or_Git_mutation": false,
+    "controlled_cases_passed": 88,
+    "exact_author_case_order_preserved": true,
+    "frozen_verifier": "PASS",
+    "frozen_work_unchanged": true,
+    "native_execution": false,
+    "native_functions_called": false,
+    "native_providers_loaded": false,
+    "original_test_ASTs": 28,
+    "retained_R3_test_ASTs": 83
+  },
+  "verified_repairs": [
+    {
+      "behavior": "Exact seventh CreateEventW member and ABI admitted; missing, extra and altered ABI/name/flags rejected.",
+      "evidence": "Five new controls invoke the actual member guard; the adapter reaches the controlled stopped-attempt boundary.",
+      "id": "LOADER-R3-01",
+      "limitations": "Noncalled typed pointer data and controlled admission; no native integration acceptance.",
+      "status": "fixed now"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-20T19:15:51.468126+00:00",
+  "finding": "LOADER-R3-02",
+  "status": "UNEXPECTED_DEFAULT_ACCEPTED_AND_EQUALITY_HOOK_EXECUTED",
+  "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\caller_boundary.py",
+  "source_sha256": "269a4aba57b35ed2292d259c09c04a1104db0074c488de2c4a8c266a04fb5e34",
+  "lines": [
+    137,
+    138,
+    139,
+    140
+  ],
+  "expected_default_type": "NoneType",
+  "actual_default_type": "UnexpectedDefault",
+  "observed_calls": [
+    {
+      "operation": "UnexpectedDefault.__eq__",
+      "other_type": "NoneType"
+    }
+  ],
+  "validation_returned_without_error": true,
+  "method": "Frozen data_value/validate_defaults ASTs applied to a data-only function with unchanged code and replaced default; no native construction or calls.",
+  "native_effects_executed": false
+}

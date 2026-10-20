@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "kind": "INDEPENDENT_COLLABORATIVE_REVIEW_FINDINGS",
+  "reviewer": "/root/review",
+  "author": "/root/implement",
+  "decision": "rejected",
+  "scope": "Immutable loader R3 source construction and data-only evidence; no native action released.",
+  "subject": {
+    "schema_version": 1,
+    "checked_at": "2026-10-20T19:18:35.230229+00:00",
+    "frozen_manifest_sha256": "0e3d1e4b0d17cc9910028cefebedead4c1a75de0bc3f32fd1225291b1480a569",
+    "code_manifest_sha256": "c9b7f00825bffcfaee0f34ae728affa1120a03506d2c3d549a9d16bdd39a050e",
+    "inputs_sha256": "efd37de3ca81b856ac0c04bc464c2508c22074c5667de883e0bf0ab86b6c660d",
+    "frozen_payloads_unchanged": 245,
+    "actual_claim_baseline_files_unchanged": 246,
+    "work_source_changes": 0,
+    "reviewer_native_targets_created": 0
+  },
+  "findings": [
+    {
+      "id": "LOADER-R3-01",
+      "severity": "P1",
+      "classification": "blocking_current_candidate",
+      "title": "Canonical helper adds CreateEventW but exact native-control boundary forbids it",
+      "source": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\caller_boundary.py",
+        "line": 408
+      },
+      "related": [
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac1-20261014\\native_fixture_support.py",
+          "line": 121
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\caller_boundary.py",
+          "line": 297
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\isolated_adapter.py",
+          "line": 426
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\test_loader_caller.py",
+          "line": 129
+        }
+      ],
+      "observed": "Pinned helper adds the seventh field; declared transformation retains it. Exact real predicate returns CALLER_NATIVE_CONTROL_MEMBERS_CHANGED before attempt consumption/provider loading. Existing positive synthetic test replaces this predicate with a sentinel.",
+      "evidence": [
+        "CREATEEVENTW-REPRODUCTION.json",
+        "CANONICAL-BOUNDARY-REPRODUCTION.json"
+      ],
+      "required_repair": "Separate successor must explicitly reconcile the canonical seventh member and its actual ABI/ownership/release binding while preserving rejection of unknown members. Test the real predicate with the canonical field shape; do not replace it with a sentinel or weaken exact-set validation."
+    },
+    {
+      "id": "LOADER-R3-02",
+      "severity": "P1",
+      "classification": "blocking_current_candidate",
+      "title": "Default validation accepts an unknown object via overloaded equality and executes its hook",
+      "source": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\caller_boundary.py",
+        "line": 140
+      },
+      "related": [
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\caller_boundary.py",
+          "line": 137
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-token-contract-20261020\\src\\ceta\\supervisor\\windows_jobs.py",
+          "line": 523
+        }
+      ],
+      "observed": "Actual pinned WindowsOwnedProcess._cpu_window code is unchanged but its None default is replaced by UnexpectedDefault(__eq__=>True). Full validate_prepared accepts it and executes that equality hook. This is an actual validation bypass in controlled data state, not an observed native exploit.",
+      "evidence": [
+        "DEFAULT-EQUALITY-REPRODUCTION.json",
+        "CANONICAL-BOUNDARY-REPRODUCTION.json"
+      ],
+      "required_repair": "Separate successor must compare bounded default/keyword-default data by approved exact types and safe value/identity rules without invoking caller-defined equality. Add a real canonical-method negative test that rejects the object and proves its hook was never called; inspect adjacent default comparison paths."
+    }
+  ],
+  "unaffected_evidence": {
+    "independent_guarded_tests": 83,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "denied_native_process_network_calls": 0,
+    "remaining_threads": 0,
+    "source_hashes_stable": true,
+    "retained_r2_ids": 60,
+    "retained_order_unchanged": true,
+    "original_method_asts_unchanged": 28,
+    "legitimate_r2_symbol_method_updates": 2,
+    "preserved_actual_image_info_dbi_ages": [
+      1,
+      4,
+      1
+    ]
+  },
+  "pdb_rule_assessment": {
+    "primary_source": "https://raw.githubusercontent.com/microsoft/microsoft-pdb/master/PDB/dbi/pdb.cpp",
+    "lines": "762-815",
+    "assessment": "Modern branch requires matching GUID, information age >= image age, and nonzero DBI age equal image age. R3 additionally refuses legacy zero/unsupported headers; its actual1/4/1 parsing check passes as data.",
+    "actual_dbghelp_or_type_resolution_verified": false,
+    "V1_blocked_evidence_unchanged": true
+  },
+  "evidence_references": {
+    "CREATEEVENTW-REPRODUCTION.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\CREATEEVENTW-REPRODUCTION.json",
+      "sha256": "a11919e39ed90f84ac80a79ee8c510d0233caf2dfdea3d6cebc7fa5e8d4a46e2"
+    },
+    "DEFAULT-EQUALITY-REPRODUCTION.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\DEFAULT-EQUALITY-REPRODUCTION.json",
+      "sha256": "95801fb93f595af04c3a2dcad59942e301b8b6c5bd45ccbfe4d734d01e724804"
+    },
+    "CANONICAL-BOUNDARY-REPRODUCTION.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\CANONICAL-BOUNDARY-REPRODUCTION.json",
+      "sha256": "1c4b990312ce6274597160ce6371ca0fc8da30b039476659aee28f6fad0289de"
+    },
+    "CANONICAL-REPRODUCER-EXECUTION.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\CANONICAL-REPRODUCER-EXECUTION.json",
+      "sha256": "4804465c8fa094415ec7efa5139b1d6e9b96cdce1f050bafacde4b63abebd429"
+    },
+    "TEST-CONSERVATION.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\TEST-CONSERVATION.json",
+      "sha256": "3daf7c536e4c3c7bbd7cdd1ff620a0de3e20d9938a13359c1fff5500ac1c6561"
+    },
+    "FINAL-SUBJECT-READBACK.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\FINAL-SUBJECT-READBACK.json",
+      "sha256": "d2a1a0d3dd675d43aac7f141a614e3265b763b1229fa56fe6b7dd7e787d31b88"
+    },
+    "SKILL-CHECKS.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\SKILL-CHECKS.json",
+      "sha256": "546f27d36b04117e32b7a767fec51adea21885d98f2a93a5fbf6cf9089628e35"
+    },
+    "MEANING-AND-SCOPE.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\MEANING-AND-SCOPE.json",
+      "sha256": "8ed80db9538a09a02acd91a04e872aee08486cfa072b6c6a48cc89f54af6abea"
+    },
+    "GIT-READBACK.json": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\GIT-READBACK.json",
+      "sha256": "5d16a1692bd39021ca1bafd850ec8e41dd595692bb7ce2124b674f813ca9521d"
+    },
+    "controlled_suite": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\guarded-scratch\\controls\\review-r3-01\\RESULT.json",
+      "sha256": "8b40322c9314ffafc54755a7d332faeadc8782c222ac200be07ee1bfc286194f"
+    },
+    "controlled_suite_raw": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\guarded-scratch\\controls\\review-r3-01\\RAW.txt",
+      "sha256": "a4dacafe48020bbf62d0e2d778b124e3a284a73a061251e413f81718c30bfeb3"
+    }
+  },
+  "prior_reviewer_failures": [
+    {
+      "step": "initial_readback",
+      "tool_chunk": "5f9ea0",
+      "exit_status": 1,
+      "cause": "Reviewer requested FREEZE-MANIFEST.json rather than actual FROZEN.json; corrected read-only filename."
+    },
+    {
+      "step": "canonical_reproducer_attempt1",
+      "tool_chunk": "ba8f64",
+      "exit_status": 1,
+      "receipt_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\review\\REPRODUCER-ATTEMPT1-FAILURE.json",
+      "cause": "Reviewer guard ordering blocked late unittest.mock/asyncio class definition; fixed only review harness, original source before-image retained."
+    }
+  ],
+  "limits": [
+    "83 controlled Python tests are not native/debugger/profile qualification.",
+    "Caller reproduction uses actual pinned classes and predicates with controlled admission and data-only member placeholders; no native constructor or pointer created.",
+    "Preloaded-import/alias/ABI/closure/ownership negative tests pass only within their recorded fixtures; default-object bypass prevents a complete unknown-state rejection claim.",
+    "Review does not evaluate or independently accept the reviewer-authored NuGet trust job.",
+    "Static skill audit is scoped and reports WARN for three test-only exec sites; no universal security, secret absence or all-edition compliance claim.",
+    "The frozen candidate, all245 payload hashes and all246 claim baseline files remain unchanged."
+  ]
+}

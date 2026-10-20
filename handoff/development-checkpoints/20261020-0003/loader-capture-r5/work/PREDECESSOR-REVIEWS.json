@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "author": "/root/implement",
+  "purpose": "Full terminal predecessor reviews personally read before R5 freeze; no disposition relabeling",
+  "reviews": [
+    {
+      "predecessor": "r3",
+      "report": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r3/review/REVIEW.json",
+        "sha256": "a9c092ebc3e23573f17dc5bf95286946e2836091258eee24c0e59c5bf21559c8"
+      },
+      "state_reference": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r3/control/ceta-loader-capture-r3-20261020/state.json",
+        "sha256": "97be332f1ea72c47497e796614186c40d3a27d4799c615b2f6806ad99c279576"
+      },
+      "claims_reference": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r3/control/ceta-loader-capture-r3-20261020/claims.json",
+        "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+      },
+      "submitted_receipt": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r3/control/review-receipt.json",
+        "sha256": "b1c8141e3143d51520e62c68f2596c301808f428957af8354e6824692d0aba04"
+      },
+      "review_state": "FAILED",
+      "actual_reason": "Independent reviewer rejected the artifact",
+      "actual_failure_code": "REVIEW_REJECTED",
+      "actual_receipt_hash": "f27fb5764271586f4af6bb0cec82ee8a9fd9f348dacc2b6a25c02887b1141152",
+      "sequence": 10,
+      "ledger_head": "fe56881430c72826cfb093b96942e1ba7d42beaee0f734e27713ff8ff79fd9ed",
+      "findings": [
+        "LOADER-R3-01",
+        "LOADER-R3-02"
+      ],
+      "read_full_report": true,
+      "terminal": true
+    },
+    {
+      "predecessor": "r4",
+      "report": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r4/review/REVIEW.json",
+        "sha256": "df5b0ce0f4360196c04c4883ff74fd580e68bdb5e7eabbac2c1252c090cf5c87"
+      },
+      "state_reference": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r4/control/ceta-loader-capture-r4-20261020/state.json",
+        "sha256": "81accfe1b540b1f371d7baa99c90b064ec09e06fc06821df638450cab376b0b7"
+      },
+      "claims_reference": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r4/control/ceta-loader-capture-r4-20261020/claims.json",
+        "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+      },
+      "submitted_receipt": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r4/control/review-receipt.json",
+        "sha256": "b8f11ad61202cbbccaf9a1f845f73f902acad5e114e8efd6ffc2c8e6508bb86d"
+      },
+      "review_state": "FAILED",
+      "actual_reason": "Receipt records unsuccessful execution",
+      "actual_failure_code": "EXECUTION_FAILED",
+      "actual_receipt_hash": "bf1d9aeeae61a768203f23f3ad12a0cce0c1353486ff883cfc5a8b385f5b4c5e",
+      "sequence": 10,
+      "ledger_head": "35f1bbf2f51c3850f0e24fab08ac374cf8a6112e32bd1c06510ffa459ecf25fc",
+      "findings": [
+        "LOADER-R3-02"
+      ],
+      "read_full_report": true,
+      "terminal": true
+    }
+  ]
+}

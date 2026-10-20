@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-20T19:15:40.367980+00:00",
+  "scope": "Installed SDK signature-verification evidence for exact retained loader NuGet package",
+  "archive_pin": {
+    "bytes": 21999785,
+    "device": 154504856318070761,
+    "inode": 562949956619643,
+    "mtime_ns": 1792490938308369700,
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-dependency-20261020\\microsoft.debugging.platform.dbgeng.20260319.1511.0.nupkg",
+    "sha256": "875678516f9ceed4a1c8b9b106d165106fcaa38723ad7c584c47b95b231600de"
+  },
+  "signature_result": "SDK_VERIFIED_RETAINED_PACKAGE_UNDER_EXPLICIT_POLICY",
+  "sdk_exit_status": 0,
+  "author": {
+    "certificate_sha256": "566A31882BE208BE4422F7CFD66ED09F5D4524A5994F50CCC8B05EC0528C1353",
+    "required_log_fragments": [
+      "Signature type: Author",
+      "  Subject Name: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+      "  SHA256 hash: 566A31882BE208BE4422F7CFD66ED09F5D4524A5994F50CCC8B05EC0528C1353",
+      "Timestamp: 3/20/2026 2:20:35 PM",
+      "Verifying author primary signature's timestamp with timestamping service certificate:"
+    ],
+    "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+    "timestamp_raw_sdk_text": "3/20/2026 2:20:35 PM"
+  },
+  "repository": {
+    "certificate_sha256": "1F4B311D9ACC115C8DC8018B5A49E00FCE6DA8E2855F9F014CA6F34570BC482D",
+    "owners_observed": [
+      "Microsoft",
+      "WinDbg"
+    ],
+    "required_log_fragments": [
+      "Signature type: Repository",
+      "Service index: https://api.nuget.org/v3/index.json",
+      "Owners: Microsoft, WinDbg",
+      "  SHA256 hash: 1F4B311D9ACC115C8DC8018B5A49E00FCE6DA8E2855F9F014CA6F34570BC482D",
+      "Timestamp: 3/30/2026 4:06:51 PM",
+      "Verifying repository countersignature's timestamp with timestamping service certificate:"
+    ],
+    "service_index": "https://api.nuget.org/v3/index.json",
+    "subject": "CN=NuGet.org Repository by Microsoft, O=NuGet.org Repository by Microsoft, L=Redmond, S=Washington, C=US",
+    "timestamp_raw_sdk_text": "3/30/2026 4:06:51 PM"
+  },
+  "warnings_observed": [],
+  "errors_observed": [],
+  "independent_review_sha256": "eb030a95a658462db691b0cf49f31191d0dbe5e1d53fe801c7848ef22155c9e0",
+  "trust_result_sha256": "65d06621195448a25e0716094d75dec58933a9c3f1380a4228faacdf85206e24",
+  "work_freeze_sha256": "bf1d1ceb60fa5369f69efccbdb13b585c820031ceba10586f5689c91b5d844fe",
+  "limits": [
+    "Success is the installed SDK signature-verification result for these exact retained archive bytes and this explicit local policy at this run time.",
+    "Online revocation processing was requested. No network trace establishes a new CRL or OCSP transaction, freshness of cached revocation data or absence of future revocation.",
+    "The SDK used existing default .NET trust stores. No certificate/root-store change was requested, but OS-managed cache/root acquisition behavior was not independently traced or inventoried before/after.",
+    "SDK timestamp display strings omit the timezone. They are retained verbatim and not relabelled as UTC.",
+    "The original S1 blocked supplement, its NOT_RUN trust evidence, and original NU3034 failure are preserved rather than relabelled.",
+    "No acquired package payload was executed, and this is not native/product qualification or independent acceptance."
+  ],
+  "historical_S1_unchanged": true,
+  "protected_native_operation": false,
+  "native_qualification": false,
+  "canonical_source_promotion": false,
+  "product_acceptance": false
+}

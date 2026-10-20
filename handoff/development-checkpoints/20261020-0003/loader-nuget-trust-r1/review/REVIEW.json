@@ -1,0 +1,220 @@
+{
+  "author": "/root/review",
+  "decision": "approved",
+  "dictionary_basis": {
+    "full_dictionary_coverage": false,
+    "review": "Merriam-Webster noun sense1, critical examination",
+    "technical_identifiers": "Exact coordinator/JSON/SDK schema values; no invented dictionary definition.",
+    "url": "https://www.merriam-webster.com/dictionary/review"
+  },
+  "disposition": "EXACT_RETAINED_PACKAGE_SIGNATURE_EVIDENCE_APPROVED",
+  "findings": [],
+  "issue_classification": [
+    {
+      "detail": "Separate work-local repository policy succeeded; original failure preserved.",
+      "issue": "Original NU3034 empty trusted-signers configuration",
+      "status": "fixed now"
+    },
+    {
+      "detail": "Not blocking the exact archive-signature evidence review; native input acceptance remains blocked.",
+      "issue": "S1 CodeView age mismatch",
+      "status": "requires separate follow-up work"
+    },
+    {
+      "detail": "Explicit evidence limitations; no stronger online-freshness/zero-host-effect claim accepted.",
+      "issue": "Fresh revocation transaction and OS-managed effects unobserved",
+      "status": "not blocking current task"
+    }
+  ],
+  "native_acceptance": false,
+  "product_acceptance": false,
+  "reasonable_hypotheses": [],
+  "recorded_at": "2026-10-20T19:13:27.184460+00:00",
+  "references": {
+    "review\\ATTEMPT1-SOURCE-DERIVATION.diff": {
+      "bytes": 1320,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\ATTEMPT1-SOURCE-DERIVATION.diff",
+      "sha256": "682e7f5c31858c9768fcea7cf1f289285e5e32e67e4ada9e669c6a6569fbac1d"
+    },
+    "review\\INDEPENDENT-RESULT.json": {
+      "bytes": 6230,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\INDEPENDENT-RESULT.json",
+      "sha256": "a7dac3080a7db89261375a271ed11d7b42ed4270ffef7a11ef5bf4ce4edfb239"
+    },
+    "review\\S1-ALL-FROZEN-FILE-HASHES.json": {
+      "bytes": 8668,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\S1-ALL-FROZEN-FILE-HASHES.json",
+      "sha256": "bc97e186501aff6a9bf8bcf81c5c8e331ed314884a2b1f2a97d26dbab36c137b"
+    },
+    "review\\TASK.txt": {
+      "bytes": 1699,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\TASK.txt",
+      "sha256": "0e591df056a0745d04e26166fa51089c8e0e414c3fc8eaa30a83636f45e1c30b"
+    },
+    "review\\VERIFY-FROZEN-COMMAND.json": {
+      "bytes": 899,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\VERIFY-FROZEN-COMMAND.json",
+      "sha256": "e58d5241e1c7c284dfa956cc2f05382f31341dd1adbb3e9bf9f47da928c6232d"
+    },
+    "review\\verify-frozen.stdout.json": {
+      "bytes": 675,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\verify-frozen.stdout.json",
+      "sha256": "8fe319a3b5f13986ec1d4f571a5b3ff917e0539c1a61e807f51e9d108d4ffa41"
+    },
+    "work\\ENVIRONMENT-R2.json": {
+      "bytes": 7809,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\ENVIRONMENT-R2.json",
+      "sha256": "c3962ab0850f39aa141692aa3cf3809839bbcf2de55367ffa528395ca16d263b"
+    },
+    "work\\FINAL-VERIFY-EXECUTION.json": {
+      "bytes": 877,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\FINAL-VERIFY-EXECUTION.json",
+      "sha256": "1ad2b127e280030a47a975363c748d3ee8c31267b4092b75d614c4b5a9259727"
+    },
+    "work\\FREEZE-MANIFEST.json": {
+      "bytes": 5914,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\FREEZE-MANIFEST.json",
+      "sha256": "bf1d1ceb60fa5369f69efccbdb13b585c820031ceba10586f5689c91b5d844fe"
+    },
+    "work\\METADATA-ACQUISITION.json": {
+      "bytes": 2646,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\METADATA-ACQUISITION.json",
+      "sha256": "487c28e5f44938b5cab294b0ba2047830e9085fdf46b857fdcdf8fc2a44dbd44"
+    },
+    "work\\NuGet.Repository.Config": {
+      "bytes": 1218,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\NuGet.Repository.Config",
+      "sha256": "9b4b52a35b9c39835f86e5a1d78ff0e7c7f082a2643150ba9abb1517d37161fa"
+    },
+    "work\\OFFICIAL-REPOSITORY-SIGNATURES.json": {
+      "bytes": 2007,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\OFFICIAL-REPOSITORY-SIGNATURES.json",
+      "sha256": "5f45cbf2d7f8a4b57fea6e43bb603d29a0682058a71eb61d900db74860d210b0"
+    },
+    "work\\POLICY-REPAIR.json": {
+      "bytes": 2076,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\POLICY-REPAIR.json",
+      "sha256": "f0a0ec7c60bf734110abff6483ea8fca3fc9ae8c7b4cd0be429df2034dbcaff8"
+    },
+    "work\\TRUST-RESULT.json": {
+      "bytes": 7378,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\TRUST-RESULT.json",
+      "sha256": "65d06621195448a25e0716094d75dec58933a9c3f1380a4228faacdf85206e24"
+    },
+    "work\\nuget-verify-RESULT.json": {
+      "bytes": 2823,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\nuget-verify-RESULT.json",
+      "sha256": "008349341b159532b521dc23afceb5cf414e5d4f16a53acb80fea6945eb29994"
+    },
+    "work\\nuget-verify-r2-RESULT.json": {
+      "bytes": 2857,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\nuget-verify-r2-RESULT.json",
+      "sha256": "9d881ed31503c98636bb1394a93f4069dc7c62b99e1e19ab48a11becd84099ae"
+    },
+    "work\\nuget-verify-r2.stdout.log": {
+      "bytes": 7284,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\nuget-verify-r2.stdout.log",
+      "sha256": "5610121752252b941aa8d62c74e56205bb07fd614e29947e20ac687071a73385"
+    },
+    "work\\verify_frozen.py": {
+      "bytes": 9276,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\verify_frozen.py",
+      "sha256": "95e902f37b697f9467bb4717952dbd3699777c2160cd5e1156f397d28f5d4d49"
+    }
+  },
+  "reviewer": "/root/admission",
+  "reviewer_actions": {
+    "canonical_or_Git_mutation": false,
+    "dotnet_invocations": 0,
+    "network_requests": 0,
+    "package_payload_execution": 0,
+    "persistent_config_or_store_changes_requested": 0
+  },
+  "run_id": "ceta-loader-nuget-trust-r1-20261020",
+  "schema_version": 1,
+  "scope": "Independent inspection of retained command evidence and policy; exact data-only frozen-verifier execution.",
+  "unresolved_limits": [
+    "No fresh CRL/OCSP transaction or revocation-cache freshness is established; online mode is the recorded request.",
+    "Existing .NET/OS trust stores were used; OS-managed chain-cache/root-acquisition behavior was not traced before/after.",
+    "Reviewer checked retained HTTPS acquisition source/record/body, not an independent TLS transcript or new metadata fetch.",
+    "Installed dotnet executable identity and SDK console selection are pinned; this is not complete attestation of every installed SDK assembly.",
+    "Timestamp display strings omit timezone and remain verbatim. No UTC conversion is asserted.",
+    "The unchanged S1 PE/PDB age1/age4 mismatch remains a separate native-input blocker.",
+    "This evidence disposition confers no acquired-DLL execution, native qualification, full loader acceptance or product acceptance."
+  ],
+  "verified_findings": [
+    {
+      "evidence": [
+        "work/INPUT-PINS-BEFORE.json",
+        "work/nuget-verify-r2-RESULT.json",
+        "review/INDEPENDENT-RESULT.json"
+      ],
+      "finding": "Retained 21999785-byte archive identity and SHA256 unchanged before/after both author invocations and reviewer reads."
+    },
+    {
+      "evidence": [
+        "work/ENVIRONMENT-R2.json",
+        "work/global.json",
+        "work/sdk-version.stdout.log",
+        "review/INDEPENDENT-RESULT.json"
+      ],
+      "finding": "Installed tool pin, SDK 10.0.302 selection, exact argv/cwd/process environment and bounded logs agree."
+    },
+    {
+      "evidence": [
+        "work/repair_and_verify.py",
+        "work/METADATA-ACQUISITION.json",
+        "work/OFFICIAL-REPOSITORY-SIGNATURES.json",
+        "work/NuGet.Repository.Config"
+      ],
+      "finding": "Retained separate official HTTPS metadata body is exact2007bytes; its three SHA256 fingerprints derive the repository allowlist."
+    },
+    {
+      "evidence": [
+        "work/NuGet.Repository.Config",
+        "work/ENVIRONMENT-R2.json"
+      ],
+      "finding": "Policy retains require mode, Microsoft owner restriction, allowUntrustedRoot=false, no package sources and requested online revocation."
+    },
+    {
+      "evidence": [
+        "work/nuget-verify-r2-RESULT.json",
+        "work/nuget-verify-r2.stdout.log",
+        "work/nuget-verify-r2.stderr.log"
+      ],
+      "finding": "Actual author second SDK command exited0 in0.631547seconds, printed package verification success and no warning/error lines; stderr empty."
+    },
+    {
+      "evidence": [
+        "work/TRUST-RESULT.json",
+        "work/nuget-verify-r2.stdout.log",
+        "review/INDEPENDENT-RESULT.json"
+      ],
+      "finding": "Detailed Microsoft author, NuGet repository countersigner and both DigiCert timestamp chains agree with exact retained log line locators."
+    },
+    {
+      "evidence": [
+        "work/nuget-verify-RESULT.json",
+        "work/NuGet.Config",
+        "work/POLICY-REPAIR.json",
+        "review/ATTEMPT1-SOURCE-DERIVATION.diff"
+      ],
+      "finding": "Original NU3034 required-signature/empty-signer local-policy failure remains exit1; original source before-image and later policy repair remain distinct."
+    },
+    {
+      "evidence": [
+        "review/S1-ALL-FROZEN-FILE-HASHES.json",
+        "review/INDEPENDENT-RESULT.json"
+      ],
+      "finding": "All61 S1 manifest files remain byte-exact; old NOT_RUN package trust and BLOCKED_V1/CodeView age mismatch remain unchanged."
+    },
+    {
+      "evidence": [
+        "review/VERIFY-FROZEN-COMMAND.json",
+        "review/verify-frozen.stdout.json",
+        "review/INDEPENDENT-RESULT.json"
+      ],
+      "finding": "Frozen data verifier exits0; all41 work files unchanged during independent review."
+    }
+  ]
+}

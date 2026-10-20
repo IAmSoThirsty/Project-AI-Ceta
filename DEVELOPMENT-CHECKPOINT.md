@@ -1,34 +1,11 @@
-# Project-AI: CETA development checkpoint
+# Project-AI: CETA — development checkpoint 0003
 
-This branch contains the current reviewed development source in its normal
-repository paths. The local accepted checkout remains JS8 Source352 while the
-new candidate completes its required joined and native acceptance.
+The existing 552 product payloads remain unchanged. This checkpoint adds byte-exact reviewed executable engineering qualification source, controlled tests and completed evidence from loader-capture-r5 and loader-nuget-trust-r1.
 
-The 552-payload candidate includes native admission retention and Stop fencing,
-the real-effect entrypoint, and the AppContainer token-observation correction.
-Independent component reviews and the exact source manifest are preserved in
-`handoff/development-checkpoints/20261020-0001/`.
+R5 passed 96 guarded data cases with independent review. The retained NuGet archive signature was verified using the installed SDK and explicit policy. Those are scoped engineering results. The recorded child failure remains 0xC0000142 with module/phase UNKNOWN. Actual native symbol/debug/capture qualification, joined application acceptance and finished-product acceptance remain open.
 
-The token port passed 48 independently executed data-only controls. One real
-ordinary observer diagnostic rejected overlong output within a measured 563ms
-exchange under its original 1000ms limit and retired its owned handles.
+The tools retain host-bound paths, pins and omitted external inputs. This export does not claim a clean-clone executable product. ENGINEERING-LOC.json separates whole newly published engineering snapshots from prior authored deltas; new product and product-test LOC in this checkpoint are both zero.
 
-The restricted worker still exited with `0xC0000142`; its loader cause remains
-unknown and worker facts are null. Fresh joined full-suite and destination
-verification, positive governed execution, installation, offline operation,
-recovery, seven-day endurance and human acceptance remain outstanding.
+Three whitespace-bearing evidence files are preserved byte-exact in deterministic RAW-EVIDENCE.zip, with raw/archive credential scans and round-trip hashes. Rejected loader reviews and the original NuGet policy failure remain historical failures. Existing PDF transport and five immutable fixtures remain intact.
 
-`DEVELOPMENT-CHECKPOINT.json` records this checkpoint's evidence and limits.
-This development publication preserves work without promoting product completion.
-
-Checkpoint instruction: commit and push local development every 20 minutes.
-The scheduler attempts a checkpoint on that cadence, preserves stable reviewed
-bytes, reports concrete blockers, and creates no empty commits.
-
-The development tree also removes one extra EOF blank line from
-`tests/contract/test_native_owner_execution.py`; its AST is unchanged. The
-original reviewed candidate and its manifest are preserved. The five
-`.local-build-cache/restoration-proof/` JSON paths are immutable required
-registry fixtures used by source-coverage/allocation verification.
-
-Checkpoint 2 preserves the first publication's failed scope receipt and the separate completed independent verification. All 569 original exported payloads and five anonymous public samples were verified. GitHub recorded PR #1 merged at 18:46:50 UTC with the identical checkpoint tree. The active local source remains JS8 at d0ee29ce. This checkpoint adds publication evidence; product source, tests and acceptance are unchanged. See `handoff/development-checkpoints/20261020-0002/`.
+Publication is a distinct reviewed action. This status describes the prepared source/evidence scope and does not assert native or product completion.

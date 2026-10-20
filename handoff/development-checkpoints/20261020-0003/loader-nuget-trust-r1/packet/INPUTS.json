@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job": "Verify the retained official loader NuGet package signature with the already installed SDK",
+  "archive": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-dependency-20261020\\microsoft.debugging.platform.dbgeng.20260319.1511.0.nupkg",
+    "size": 21999785,
+    "sha256": "875678516f9ceed4a1c8b9b106d165106fcaa38723ad7c584c47b95b231600de"
+  },
+  "official_documentation": "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-verify",
+  "scope": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work",
+  "forbidden": [
+    "SDK/tool installation",
+    "persistent NuGet or host configuration change",
+    "certificate/root-store modification",
+    "acquired DLL execution or native qualification",
+    "package redownload",
+    "modification of the S1 frozen evidence",
+    "canonical source or Git mutation"
+  ],
+  "result_requires": [
+    "exact argv/environment changes and bounded start/end/exit/stdout/stderr",
+    "original archive before/after identity/hash",
+    "package signature/chain/timestamp disposition exactly as observed",
+    "uncertainties and current revocation limitations",
+    "frozen executable verifier for evidence integrity"
+  ],
+  "no_product_completion_claim": true
+}

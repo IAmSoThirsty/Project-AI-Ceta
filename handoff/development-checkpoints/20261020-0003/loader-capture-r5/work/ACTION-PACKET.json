@@ -1,0 +1,144 @@
+{
+  "schema_version": 5,
+  "kind": "CETA_LOADER_CAPTURE_DORMANT_ACTION_PACKET_V5",
+  "run_id": "ceta-loader-capture-r5-20261020",
+  "repository": "T:\\00-Active\\Project-AI-CETA",
+  "native_execution_authorized": false,
+  "native_release_created": false,
+  "code_manifest": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/CODE-MANIFEST.json",
+    "sha256": "b144bab280609bfe0530af2cdf94bf279f07048d0fae68ec8b4d4d09b6de88eb"
+  },
+  "inputs": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/INPUTS.json",
+    "sha256": "f1f92caf541544e35cda84841936fbaf6c88f4c0570b68e7224a3a84d495a19f"
+  },
+  "caller_interface": {
+    "function": "owned_caller.execute_prepared_capture",
+    "required_arguments": [
+      "release_path",
+      "release_sha256",
+      "launch_arguments",
+      "stdout_handle",
+      "stderr_handle",
+      "close_child_pipe_ends",
+      "caller_context"
+    ],
+    "context_type": "caller_boundary.PreparedCaller",
+    "closure_type": "caller_boundary.ChildPipeClosure",
+    "existing_source": "Pinned AC7 captured helper and qualification driver; preserve original objects",
+    "boundary": "An exact owner-reviewed bridge at the already-prepared canonical call site is required; do not invoke the full old profile/listener fixture or adopt old handles",
+    "binding": "Fresh creator-thread object IDs, exact parent/child/owned handle lists and native control pointer/ABI records; checked before consuming an attempt"
+  },
+  "required_release_kind": "CETA_AC7_OWNED_DEBUG_CAPTURE_V5",
+  "required_owner_approval_kind": "CETA_LOADER_CAPTURE_ACTION_OWNER_APPROVAL_V5",
+  "required_symbol_supplement": {
+    "schema_version": 2,
+    "kind": "CETA_OWNED_LOADER_SYMBOL_INPUTS_V2",
+    "input_pins": [
+      "ntdll",
+      "pdb",
+      "dbghelp",
+      "dbgcore"
+    ],
+    "identity_fields": [
+      "image_codeview",
+      "pdb_codeview",
+      "codeview_match"
+    ],
+    "identity_observations": {
+      "ntdll": {
+        "path": "C:\\WINDOWS\\System32\\ntdll.dll",
+        "bytes": 2558392,
+        "sha256": "651ac9041af8e6b5ebd331d53163244c0a27d36d1433f0f15cac1f28c5f2e82c",
+        "device": 8375675987628699060,
+        "inode": 562949955950131,
+        "mtime_ns": 1791951256235312300
+      },
+      "pdb": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-symbol-inputs-r1\\work\\symbols\\ntdll.pdb",
+        "bytes": 1912832,
+        "sha256": "c93f4614aa6f40fe370d40eb7ee9589ca0eda170ef2d704b5d278da71c02c249",
+        "device": 154504856318070761,
+        "inode": 562949956645268,
+        "mtime_ns": 1792521931852139500
+      },
+      "image_codeview": {
+        "guid_hex": "5bd431c0a10d6e8a74d06ed6ab2dd9e1",
+        "age": 1
+      },
+      "pdb_codeview": {
+        "guid_hex": "5bd431c0a10d6e8a74d06ed6ab2dd9e1",
+        "info_age": 4,
+        "dbi_age": 1,
+        "dbi_signature": -1,
+        "dbi_version": 19990903,
+        "dbi_machine": 34404
+      },
+      "codeview_match": {
+        "rule": "MICROSOFT_OPENVALIDATE4_REQUIRED_MODERN_DBI_V1",
+        "guid_hex": "5bd431c0a10d6e8a74d06ed6ab2dd9e1",
+        "image_age": 1,
+        "info_age": 4,
+        "dbi_age": 1,
+        "dbi_signature": -1,
+        "dbi_version": 19990903,
+        "dbi_machine": 34404
+      },
+      "historical_blocked_v1": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-symbol-inputs-r1/work/CETA_OWNED_LOADER_SYMBOL_INPUTS_V1.json",
+        "sha256": "4ff2ef0171010a72eea91c3dd943c3a86636db9209fee8f2eeea91e1480579b1"
+      }
+    },
+    "status": "PENDING_ROOT_DERIVATION_AND_DISTINCT_REVIEW_V1_DENIED"
+  },
+  "future_protected_effects": [
+    "Load only pinned System32 kernel providers and acquired project-local x64 DbgHelp/DbgCore/NTDLL after separate approval",
+    "Read-only handle-information/file-type observations on the already-owned pipe handles",
+    "Canonical AC7 CreateProcessW with only DEBUG_ONLY_THIS_PROCESS bit 0x2 added to existing flags",
+    "Consume debug events only for the exact own-created child and its retained creation identity; read bounded own-child debug strings",
+    "If separately released, resolve _PEB.NtGlobalFlag from the exact local matching PDB; query that same owned child; one four-byte read/OR2/write/readback at the verified create stop",
+    "Pump bounded captured stdout/stderr; close exactly the existing child pipe ends; explicit own-child/job/event retirement"
+  ],
+  "bounds": {
+    "seconds_max": 120,
+    "events_max": 4096,
+    "per_debug_string_max": 65534,
+    "remote_flag_write_bytes": 4,
+    "automatic_retry": false,
+    "attach_existing_pid": false,
+    "global_configuration": false,
+    "profile_creation": false,
+    "profile_deletion": false
+  },
+  "cleanup_ownership": {
+    "parent_pipe_handles": "Borrowed; canonical caller owns their lifetime",
+    "child_pipe_handles": "Exact ChildPipeClosure; close/remove once in canonical order",
+    "process_job_thread": "Pinned canonical owner and original constructor custody wrappers",
+    "debug_event_files": "Port owns exact returned hFile; does not adopt PID-selected resources",
+    "uncertain_calls": "Retain exact owner, event, pointer/handle collection and in-flight state; no automatic replay, raw-handle adoption, detach, close or replacement launch"
+  },
+  "execution_command": null,
+  "reason_no_execution_command": "A separate actual owner approval, approved V2 input reference and fresh exact prepared in-process context are not present; no live release exists",
+  "read_only_review_command": "\"T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe\" -B -X utf8 \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\verify_frozen.py\"",
+  "current_failed_module": "UNKNOWN",
+  "current_failed_phase": "UNKNOWN",
+  "limits": [
+    "No actual DbgHelp/type-offset/native loader-snaps behavior has been qualified",
+    "Diagnostic strings can support only their explicitly captured own-child attribution; last observed DLL is never a culprit",
+    "Binding checks assume the declared trusted Python/runtime; no hostile-interpreter security claim"
+  ],
+  "historical_r3_action_packet": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r3/work/ACTION-PACKET.json",
+    "sha256": "b28b0c2d817fdab00a080f1d3a57ddf691a567c99183e454a1bee89f65842d91"
+  },
+  "repair": "Strict bounded builtin normalization and explicitly source-referenced opaque identity for positional/keyword defaults; supplied hooks are not invoked. Retains R4 canonical seventh member repair.",
+  "historical_r4_action_packet": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r4/work/ACTION-PACKET.json",
+    "sha256": "8c84b0874ad6fdecd470eb34b53fa04527d51ee4087a973d32b1d605458b445f"
+  },
+  "predecessor_reviews": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/PREDECESSOR-REVIEWS.json",
+    "sha256": "bd2d04eff265b6c86bcfd4259b357e3b66e1f7510ea81b023226443c29c75483"
+  }
+}
