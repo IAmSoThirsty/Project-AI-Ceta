@@ -30,3 +30,5 @@ The development tree also removes one extra EOF blank line from
 original reviewed candidate and its manifest are preserved. The five
 `.local-build-cache/restoration-proof/` JSON paths are immutable required
 registry fixtures used by source-coverage/allocation verification.
+
+Checkpoint 2 preserves the first publication's failed scope receipt and the separate completed independent verification. All 569 original exported payloads and five anonymous public samples were verified. GitHub recorded PR #1 merged at 18:46:50 UTC with the identical checkpoint tree. The active local source remains JS8 at d0ee29ce. This checkpoint adds publication evidence; product source, tests and acceptance are unchanged. See `handoff/development-checkpoints/20261020-0002/`.
