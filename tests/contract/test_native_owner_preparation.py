@@ -123,11 +123,13 @@ class Fixture:
     def prepare(self):return self.kernel.prepare(self.proposal.canonical_wire,self.context)
 
     def close(self):
-        self.store.close()
-        FACTS.append(dict(root=str(self.root),closed=self.store._closed,
-            transaction_open=self.store._connection is not None and not self.store._closed,
-            kernel_invocation=getattr(self.kernel,'_preparation_invocation',None) is not None,
-            owner_invocation=self.owner._preparation_invocation is not None,
+        store=getattr(self,'store',None)
+        if store is None:return
+        store.close()
+        FACTS.append(dict(root=str(self.root),closed=store._closed,
+            transaction_open=store._connection is not None and not store._closed,
+            kernel_invocation=getattr(getattr(self,'kernel',None),'_preparation_invocation',None) is not None,
+            owner_invocation=getattr(getattr(self,'owner',None),'_preparation_invocation',None) is not None,
             native_observation_calls=list(self.native_calls),controlled_native_and_approval=True))
 
 
@@ -136,7 +138,10 @@ class NativeOwnerPreparationTests(unittest.TestCase):
     def setUpClass(cls):cls.schema=strict_loads((ROOT/'contracts/schemas/records.schema.json').read_bytes())
 
     def fixture(self):
-        value=Fixture(self.schema);self.addCleanup(value.close);return value
+        value=object.__new__(Fixture)
+        self.addCleanup(value.close)
+        Fixture.__init__(value,self.schema)
+        return value
 
     def retired(self,f):
         self.assertIsNone(f.kernel._preparation_invocation)
@@ -168,7 +173,7 @@ class NativeOwnerPreparationTests(unittest.TestCase):
         for method,args in ((f.owner.require_admission,(None,None,f.control.peer)),
             (f.owner.require_revocation,(None,f.control.peer,'reason:stop')),(f.kernel.require_runtime_admission,())):
             with self.assertRaises(ContractError):method(*args)
-        with self.assertRaisesRegex(ContractError,'PROTECTED_RESOURCE_OWNER_UNAVAILABLE'):
+        with self.assertRaisesRegex(ContractError,'OWNER_ADMISSION_RETAINED_EXECUTION_REQUIRED'):
             f.kernel.consume(result.record_wire,f.context)
         self.retired(f)
 

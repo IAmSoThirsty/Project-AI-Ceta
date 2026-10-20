@@ -22,6 +22,7 @@ from dataclasses import dataclass
 import hashlib
 import math
 import os
+import sys
 import re
 import secrets
 import struct
@@ -787,13 +788,17 @@ class WindowsServerBinding:
 
 class WindowsPipeServer:
     """Serial one-message receiver; return values stay local and confer no effects."""
-    def __init__(self, pipe_name, registry, handler, codec, *, response_encoder=None):
+    def __init__(self, pipe_name, registry, handler, codec, *, response_encoder=None,
+                 context_retainer=None):
         self._name = _pipe_name(pipe_name)
         require(type(registry) is WindowsPeerRegistry and callable(handler) and type(codec) is RecordCodec,
                 "WINDOWS_PIPE_DEPENDENCIES_REQUIRED")
         self._registry, self._handler, self._codec = registry, handler, codec
         require(response_encoder is None or callable(response_encoder), "WINDOWS_RESPONSE_ENCODER_REQUIRED")
         self._response_encoder = response_encoder
+        require(context_retainer is None or callable(context_retainer), 'WINDOWS_CONTEXT_RETAINER_REQUIRED')
+        self._context_retainer = context_retainer
+        self._retained_context = None
         # A reconstructed receiver cannot reuse a generation with an empty replay
         # set. This nonce is owned here, never selected by a caller or request.
         self._ingress = IngressState(secrets.token_hex(32))
@@ -828,6 +833,7 @@ class WindowsPipeServer:
         context = None
         connection_attempted = False
         try:
+            require(self._retained_context is None, 'WINDOWS_REQUEST_CONTEXT_RETAINED')
             require(not self._closed and self._pipe is not None, "WINDOWS_PIPE_SERVER_CLOSED")
             connection_attempted = True
             _io(self._api, "connect", self._pipe, deadline)
@@ -877,29 +883,66 @@ class WindowsPipeServer:
             return result
         finally:
             try:
-                self._registry._invalidate(context)
+                if self._retained_context is None:
+                    self._retire_dispatch_context(context, connection_attempted, sys.exception())
             finally:
-                try:
-                    if connection_attempted:
-                        if not self._api.DisconnectNamedPipe(self._pipe):
-                            error = C.get_last_error()
-                            # Reset even if a connect completed concurrently with
-                            # cancellation. No old connection is reused next time.
-                            if error not in (233, 232, 109):
-                                self._closed = True
-                                try:
-                                    self._api.close_handle(self._pipe)
-                                finally:
-                                    self._pipe = None
-                                _error("WINDOWS_PIPE_DISCONNECT_FAILED", error)
-                finally:
-                    self._lock.release()
+                self._lock.release()
+
+    def _retire_dispatch_context(self, context, connection_attempted, primary, *, retention_checked=False):
+        if not retention_checked and self._context_retainer is not None and context is not None:
+            try:
+                retained = self._context_retainer(context)
+                require(retained is None or not isinstance(retained, (bool, int, float, str, bytes)),
+                    'WINDOWS_CONTEXT_CUSTODY_REQUIRED')
+            except BaseException as error:
+                self._retained_context = (context, self._context_retainer)
+                if primary is None:
+                    BaseException.__dict__['__dict__'].__get__(error)['retained_ingress'] = self
+                    raise
+                data = BaseException.__dict__['__dict__'].__get__(primary)
+                dict.update(data, retained_ingress=self, ingress_retirement_error=error)
+                return
+            if retained is not None:
+                # This captured trusted callback can retain custody only. It
+                # cannot renew the original envelope or authorize another call.
+                self._retained_context = (context, retained)
+                return
+        try:
+            self._registry._invalidate(context)
+        finally:
+            if connection_attempted:
+                if not self._api.DisconnectNamedPipe(self._pipe):
+                    error = C.get_last_error()
+                    if error not in (233, 232, 109):
+                        self._closed = True
+                        try:
+                            self._api.close_handle(self._pipe)
+                        finally:
+                            self._pipe = None
+                        _error('WINDOWS_PIPE_DISCONNECT_FAILED', error)
+
+    def retire_retained_context(self):
+        """Explicit cleanup after the same trusted owner proves retirement.
+
+        This never extends a deadline, replaces a context, or dispatches a call.
+        """
+        require(self._lock.acquire(blocking=False), 'WINDOWS_PIPE_RECEIVER_BUSY')
+        try:
+            require(self._retained_context is not None and self._context_retainer is not None,
+                'WINDOWS_RETAINED_CONTEXT_REQUIRED')
+            context, owner = self._retained_context
+            require(self._context_retainer(context) is None, 'WINDOWS_REQUEST_CONTEXT_RETAINED')
+            self._retire_dispatch_context(context, True, None, retention_checked=True)
+            self._retained_context = None
+        finally:
+            self._lock.release()
 
     def close(self):
         # Active receives have a finite timeout. Never close a handle under pending
         # I/O or a callback; the supervisor must join that receive before closing.
         require(self._lock.acquire(blocking=False), "WINDOWS_PIPE_RECEIVER_BUSY")
         try:
+            require(self._retained_context is None, 'WINDOWS_REQUEST_CONTEXT_RETAINED')
             if not self._closed:
                 self._closed = True
                 self._api.close_handle(self._pipe)

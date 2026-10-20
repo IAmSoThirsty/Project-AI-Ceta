@@ -1,0 +1,182 @@
+{
+  "schema": "ceta.token-port-independent-local-review.v1",
+  "at": "2026-10-20T18:20:45.399665+00:00",
+  "reviewer": "/root/admission",
+  "author": "/root/review_admission",
+  "decision": "approved",
+  "disposition": "LOCAL_SOURCE_COMPONENT_APPROVED_FOR_JOIN_AND_DEVELOPMENT_PUBLICATION",
+  "manifest": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\token-integration-r1\\work\\MANIFEST.json",
+    "sha256": "9fb4a48d247ea70bc0c788d2f0fb681881a1981226a0c229e81514358876b802",
+    "payloads": 552
+  },
+  "exact_paths_checked": [
+    {
+      "path": "contracts/ISOLATED_WORKER_V1.md",
+      "sha256": "a12d632f29d6237995ad1883afdfcfb46edc25b127d0163627fe604fe35f758c"
+    },
+    {
+      "path": "native/windows_broker/isolated_worker.rs",
+      "sha256": "592d7e3630d2dae1f8df6c6e3b686eff7f9c4d31aa889bd03cd66cab9782676d"
+    },
+    {
+      "path": "src/ceta/supervisor/isolated_worker.py",
+      "sha256": "868ad9b53e793cd0a5b5eb92ad43939bcf4a0c103d2d95ee2ccef7d4a8d966a8"
+    },
+    {
+      "path": "tests/contract/test_isolated_worker.py",
+      "sha256": "e960476efc55a30a6d5e184af7c758c647b8014e2ea3fda943c348a302c64a7b"
+    },
+    {
+      "path": "tests/contract/test_isolation_qualification_oracle.py",
+      "sha256": "f8f4ec32941e770830244410e9b3290316ba668d1b18c32ed7bdb4c83727805f"
+    },
+    {
+      "path": "tests/contract/test_isolation_token_diagnostics.py",
+      "sha256": "7f2bbbf09836e1273fd75ba0f48d033552ac14d6f4ef59649c1d1e441071f534"
+    },
+    {
+      "path": "tests/contract/test_isolation_token_port.py",
+      "sha256": "9e55dd56d66b8ba33e45c7444b50afe91bec15a68a480c70ba178224f21a0ebb"
+    },
+    {
+      "path": "tools/isolated_worker_token_oracle.py",
+      "sha256": "8f0791da2fa4879600a92f30617b79aeb3a271c89027b5a853ecb5853d5760d9"
+    }
+  ],
+  "predecessor_payloads": 549,
+  "exact_changed_paths": 8,
+  "preserved_admission": {
+    "src/ceta/identity/owner_session.py": "b1ac4d6a75388101a854b70ea6ffa7d5d0911cd7dcfcb54feebdf11752b1dcf6",
+    "src/ceta/identity/cpu_outcome_capacity.py": "2bdd6b4e668aa196fa91d59faaadee1de6c35d99d7de4dbe711b00a3cb986ae4",
+    "src/ceta/kernel/transactions.py": "c1805cd3544c2e54a86a3721b1c484a4935cced05a00a33f3a08e69812b93892",
+    "tests/contract/test_native_owner_admission.py": "17edb6484b8708fe8241d6d42154c4875ac16cc8d0a715d5a804a2eec03d1e83"
+  },
+  "findings": [],
+  "blocking_component_findings": 0,
+  "verified_findings": [
+    {
+      "id": "TOKEN-REV-01",
+      "finding": "All 552 payloads match the frozen manifest. Exactly eight paths differ from the exact retained 549-payload base. All original admission production/test bytes remain unchanged.",
+      "evidence": "IDENTITY-AND-LINEAGE.json"
+    },
+    {
+      "id": "TOKEN-REV-02",
+      "finding": "Python and Rust production files are exact AC7 reuse. Existing updated tests and pure oracle retain exact provenance. Only the specifically declared current-source contract section and new port tests are additionally authored.",
+      "evidence": "IDENTITY-AND-LINEAGE.json"
+    },
+    {
+      "id": "TOKEN-REV-03",
+      "finding": "The x64 parser bounds returned bytes to 65536, requires the count header, computes the aligned array extent, and never dereferences group SID pointers. Although the helper preliminary count guard is 4096, extent plus 65536-byte bound make 4095 the effective maximum, matching typed facts and oracle.",
+      "evidence": "CONTROLLED.log; src/ceta/supervisor/isolated_worker.py:48-54; native/windows_broker/isolated_worker.rs:73-87"
+    },
+    {
+      "id": "TOKEN-REV-04",
+      "finding": "Raw signed32 BOOL, typed Boolean and independent measured SID presence must agree; zero additionally requires immediate zero error. Missing, failed, truncated and contradictory observations reject. Nonzero BOOLs are normalized to truth; last-error is not treated as an error for a successful nonzero native return.",
+      "evidence": "CONTROLLED.log; producer and oracle code; official API sources"
+    },
+    {
+      "id": "TOKEN-REV-05",
+      "finding": "Exact AppContainer SID, AppContainer flag, zero capabilities and exact low integrity remain required. The current runtime caller invokes token observation on the retained child before ResumeThread, after atomic job membership and before image-identity recheck. No fallback is introduced.",
+      "evidence": "src/ceta/supervisor/isolated_worker.py:306-384,599-609; src/ceta/composition/real_effect_runtime.py:251-278; IDENTITY-AND-LINEAGE.json caller list"
+    },
+    {
+      "id": "TOKEN-REV-06",
+      "finding": "The oracle retains every existing protected-file/process/network denial, process target identity/liveness, job, asset, scratch, handle, child and environment predicate. Data-only tests exercise rejection on missing/wrong values.",
+      "evidence": "tools/isolated_worker_token_oracle.py:78-121; CONTROLLED.log"
+    },
+    {
+      "id": "TOKEN-REV-07",
+      "finding": "Forty-three author case IDs rerun independently plus five reviewer cases passed: 48 total, zero failures/errors/skips. No prohibited boundary was attempted. Exact frozen verifier passed and candidate bytes remained unchanged.",
+      "evidence": "CONTROLLED-RESULT.json; EXACT-GATE.json"
+    },
+    {
+      "id": "TOKEN-REV-08",
+      "finding": "Historical Rust source/build/image/log identities were independently rehashed. The five Rust parser tests are retained historical results, not freshly executed tests. Actual image 3df03778e1e2f6f707d38b0869e04e262926f2d4c375f1d3d10562d3456443cc exited 0xC0000142 and worker facts are null.",
+      "evidence": "IDENTITY-AND-LINEAGE.json; PREDECESSOR-EVIDENCE.json"
+    },
+    {
+      "id": "TOKEN-REV-09",
+      "finding": "Earlier helper/compilation failures are preserved and accurately classified. Author compilation R3 and frozen evidence checks passed; this reviewer made no repairs to candidate or author evidence.",
+      "evidence": "work/PRIOR-ATTEMPTS.json; work/COMPILE-RESULT-R3.json; EXACT-GATE.json"
+    }
+  ],
+  "scoped_tests": {
+    "author": 43,
+    "reviewer": 5,
+    "total": 48,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "historical_rust_tests": 5,
+  "fresh_rust_build_or_test": false,
+  "data_only_native_constructor_substitution": true,
+  "native_loader_guard_limit": "Named native loaders/process/network/SQLite Python boundaries and audit hooks; not OS sandbox or complete Windows DLL trace",
+  "binary_extension_origins": {
+    "_ctypes": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_ctypes.pyd",
+    "_hashlib": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_hashlib.pyd",
+    "_socket": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_socket.pyd",
+    "select": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\select.pyd",
+    "_ssl": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_ssl.pyd",
+    "_asyncio": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_asyncio.pyd",
+    "_overlapped": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_overlapped.pyd",
+    "_bz2": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_bz2.pyd",
+    "_lzma": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_lzma.pyd",
+    "unicodedata": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\unicodedata.pyd",
+    "_uuid": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_uuid.pyd"
+  },
+  "zero_DLL_loading_claim": false,
+  "independent_claim_evidence_scan": "NOT_RUN_NO_SEPARATE_CLAIMS_REGISTER; task-specific evidence assessed manually and by exact gate",
+  "skill_static_checks": "Both self-tests and bounded scans returned PASS; scans are limited and do not establish runtime compliance",
+  "dictionary": {
+    "url": "https://www.merriam-webster.com/dictionary/review",
+    "selected_sense": "noun sense 1: careful examination of quality or condition",
+    "official_entry_observed": true,
+    "prompt_gate_full_dictionary_coverage": false,
+    "critical_unverified_terms": [],
+    "technical_terms": "Source schemas, identifiers and graph states are defined by the exact retained files; no dictionary schema is invented"
+  },
+  "api_sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/securitybaseapi/nf-securitybaseapi-istokenrestricted",
+      "observed_on": "2026-10-20",
+      "basis": "Nonzero indicates restricting SIDs; zero indicates no restricting SIDs or error. Function does not establish general AppContainer enforcement."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ne-winnt-token_information_class",
+      "observed_on": "2026-10-20",
+      "basis": "TokenRestrictedSids returns TOKEN_GROUPS and remains separate from AppContainer flag and SID information."
+    }
+  ],
+  "predecessor_acceptance": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\ROOT-PREPARATION-ACCEPTANCE-R4.json",
+    "sha256": "38cbfac867cfa42058a549f57a4e31946ab69820fb48cd7d9e36e4eea390b0bb",
+    "scope": "PREPARATION_ONLY_NATIVE_QUALIFICATION_FALSE"
+  },
+  "unresolved": [
+    {
+      "issue": "Actual AC7 worker DLL initialization failure 0xC0000142; exact failed module/cause and whether Rust main was reached remain unknown.",
+      "classification": "BLOCKING_POSITIVE_NATIVE_RUNTIME_ACCEPTANCE",
+      "next": "Obtain exact process-specific loader diagnostic under applicable fresh authority; no retry inferred."
+    },
+    {
+      "issue": "Combined runner/source/current full-suite and canonical destination receipts remain required.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "next": "Root joins this pinned source under reviewed integration scope and refreshes all runner/source/case pins before exact full/native gates."
+    },
+    {
+      "issue": "Installed/offline/authorization-to-effect/recovery/endurance/human acceptance remain unestablished by this component.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "next": "Execute established real product acceptance after source/destination/native dependencies are satisfied."
+    }
+  ],
+  "source_mutation": false,
+  "source_integration": false,
+  "native_execution": false,
+  "profile_operation": false,
+  "positive_native_acceptance": false,
+  "full_suite_acceptance": false,
+  "product_acceptance": false,
+  "allows_only": "Exact local source component joining and truthful development checkpoint publication, subject to Root actual graph gates and exact current write scope"
+}

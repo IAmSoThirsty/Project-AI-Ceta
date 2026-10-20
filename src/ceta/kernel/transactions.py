@@ -57,8 +57,10 @@ class KernelTransactions:
         self._preparation_lock = threading.Lock()
         from ceta.identity.owner_session import NativeCpuOwnerSession
         self._preparation_check = None
+        self._admission_check = None
         if type(owners) is NativeCpuOwnerSession:
             self._preparation_check = NativeCpuOwnerSession.require_prepared_basis.__get__(owners)
+            self._admission_check = NativeCpuOwnerSession.require_admission.__get__(owners)
             self._preparation_owner = owners
             # Publish only after every initializer allocation and binding.
             NativeCpuOwnerSession._bind_preparation_kernel(owners, self)
@@ -326,6 +328,8 @@ class KernelTransactions:
     @_coordinated
     def consume(self, permit_wire: bytes, request_context: object) -> KernelResult:
         peer = self._peer(request_context)
+        native_check = self._admission_check
+        check = native_check if native_check is not None else self._owners.require_admission
         supplied = self._decode(permit_wire, "OperationPermit")
         p = supplied.as_dict()
         permit_key = StoreKey("permit", p["scope_id"], p["record_id"])
@@ -362,7 +366,7 @@ class KernelTransactions:
                     "grant_commitment": grant_record.commitment, "reservation_ref": p["reservation_ref"], "issuance_ref": p["issuance_evidence_ref"],
                     "deadline": intention["deadline"], "dependencies": intention["dependencies"]}
         require(p["input_commitment"] == digest("operation-inputs", governed), "KERNEL_INPUT_BINDING_MISMATCH")
-        require(self._owners.require_admission(record, basis_wire, peer) is None, "KERNEL_OWNER_DECISION_INVALID")
+        require(check(record, basis_wire, peer) is None, "KERNEL_OWNER_DECISION_INVALID")
         issued_value = object_value(self._present(cells, issued), ("scope_id", "proposal_id", "permit_id", "issuance_event_ref", "sequence", "previous_head"))
         require({k: v for k, v in issued_value.items() if k not in {"sequence", "previous_head"}} ==
                 {"profile": KERNEL_PROFILE, "scope_id": p["scope_id"], "proposal_id": p["proposal_ref"],
@@ -397,10 +401,14 @@ class KernelTransactions:
                   budget_key(grant_key): budget_wire(grant_key.scope_id, grant_key.record_id, limit, recovery, held.subtract(cost), charged.add(cost))}
         def guard():
             require(self._peer(request_context) == peer, "KERNEL_PEER_BINDING_MISMATCH")
-            require(self._owners.require_admission(record, basis_wire, peer) is None, "KERNEL_OWNER_DECISION_INVALID")
+            require(check(record, basis_wire, peer) is None, "KERNEL_OWNER_DECISION_INVALID")
             require_deadline_current(deadline, *self._clock())
             require(self._peer(request_context) == peer, "KERNEL_PEER_BINDING_MISMATCH")
             require_deadline_current(deadline, *self._clock())
+            if native_check is not None:
+                # Concrete native custody must still hold after every fallible
+                # peer/clock callback, including at pre/post-COMMIT guards.
+                require(check(record, basis_wire, peer) is None, "KERNEL_OWNER_DECISION_INVALID")
         result = self._commit(consumed, event_id, "kernel.permit.consumed", peer, sample, cells, values, prepared.policy_commitment, _point=point, _guard=guard)
         # A final stale identity/authority/time check after durable COMMIT must not return a
         # usable command result. The permit remains burned; no refund/replay.

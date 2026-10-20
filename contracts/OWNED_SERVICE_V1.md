@@ -90,8 +90,8 @@ authenticated router also accepts four typed task routes documented below:
 
 | Route | Original input type | Observation/result boundary |
 | --- | --- | --- |
-| `kernel.prepare` | `ActionProposal` | Prepared result requires real current owners; concrete preparation owner is unavailable. |
-| `kernel.consume` | `OperationPermit` | Consumption requires current admission owners; concrete protected-resource owner is unavailable. |
+| `kernel.prepare` | `ActionProposal` | Default identity-only owners deny; the explicitly selected native CPU owner requires its current canonical preparation invocation. |
+| `kernel.consume` | `OperationPermit` | Default identity-only owners deny; selected native CPU consumption requires its exact original retained execution and ADMISSION capacity phase (OS6). |
 | `kernel.revoke` | `StandingGrant` | Exactly one `reason_ref` argument; concrete revocation owner is unavailable. |
 | `kernel.resolve_consumption` | `OperationPermit` | Authenticated public lookup of committed consumption evidence, without executing an effect. |
 | `kernel.recover_permit` | `OperationPermit` | Authenticated read-only lookup of the current matching PREPARED or CONSUMED record. |

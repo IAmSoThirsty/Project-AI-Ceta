@@ -264,6 +264,16 @@ def _decode(payload):
     require(facts.state == 1 or facts.flags == facts.value == 0, 'OBSERVER_UNAVAILABLE_HAS_POLICY_BITS')
     return facts
 
+@dataclass(frozen=True, slots=True)
+class _ObservationOrigin:
+    owner: object
+    target: WindowsOwnedProcess
+    request_wire: bytes
+    observation: CpuEffectObservation
+    observation_wire: bytes
+    sequence: int
+
+
 class NativeCpuEffectObserver:
     def __init__(self, executable, expected_image_sha256, observer_commitment, *, clock):
         require(type(clock) is NativeSessionClock, 'OBSERVER_NATIVE_CLOCK_REQUIRED')
@@ -277,9 +287,28 @@ class NativeCpuEffectObserver:
                 'OBSERVER_CODE_COMMITMENT_MISMATCH')
         self._lock, self._sequence = threading.Lock(), 0
         self._custody, self._last_evidence = None, None
+        self._origin = None
 
     @property
     def last_evidence(self): return copy.deepcopy(self._last_evidence)
+
+    def require_observation_origin(self, request, target, observation):
+        """Check retained local provenance; permission, freshness and outcome are separate."""
+        require(type(request) is OwnedCpuRequest and type(observation) is CpuEffectObservation,
+                'OBSERVER_ORIGIN_INPUT_REQUIRED')
+        require(self._lock.acquire(blocking=False), 'OBSERVER_BUSY')
+        try:
+            origin = self._origin
+            require(origin is not None and origin.owner is self, 'OBSERVER_ORIGIN_UNAVAILABLE')
+            require(target is origin.target and observation is origin.observation
+                and self._sequence == origin.sequence == observation.sequence,
+                'OBSERVER_ORIGIN_BINDING_MISMATCH')
+            require(request.canonical_wire == origin.request_wire
+                and observation.canonical_wire == origin.observation_wire,
+                'OBSERVER_ORIGIN_BYTES_CHANGED')
+            return None
+        finally:
+            self._lock.release()
 
     def close_cleanup(self):
         require(self._lock.acquire(blocking=False), 'OBSERVER_BUSY')
@@ -357,11 +386,15 @@ class NativeCpuEffectObserver:
         request.__post_init__()
         require(cancelled is None or type(cancelled) is threading.Event, 'OBSERVER_CANCEL_EVENT_REQUIRED')
         require(request.observer_commitment == self._commitment, 'OBSERVER_REQUEST_CODE_MISMATCH')
+        custody, primary, value, origin = None, None, None, None
+        evidence = {}
         require(self._lock.acquire(blocking=False), 'OBSERVER_BUSY')
-        custody, primary, value = None, None, None
-        evidence = {'request_commitment':request.input_commitment,'operation_id':request.request_id,
-            'observer_commitment':self._commitment,'native_image_sha256':self._image,'python_sha256':self._driver_sha}
         try:
+            # Admission to this attempt retires the prior origin, including on failure.
+            self._origin = None
+            request_wire = request.canonical_wire
+            evidence = {'request_commitment':request.input_commitment,'operation_id':request.request_id,
+                'observer_commitment':self._commitment,'native_image_sha256':self._image,'python_sha256':self._driver_sha}
             require(self._custody is None, 'OBSERVER_UNRESOLVED_CUSTODY')
             require(_source_hash() == self._driver_sha, 'OBSERVER_DRIVER_CHANGED')
             require(self._sequence < MAX_INTEGER, 'OBSERVER_SEQUENCE_EXHAUSTED')
@@ -432,6 +465,8 @@ class NativeCpuEffectObserver:
             require(cancelled is None or not cancelled.is_set(), 'OBSERVER_CANCELLED')
             value = CpuEffectObservation(request.input_commitment,request.request_id,request.process_identity,
                 request.job_digest,identity,self._commitment,sequence,started,state,limit,target_state,reason)
+            require(request.canonical_wire == request_wire, 'OBSERVER_REQUEST_CHANGED')
+            origin = _ObservationOrigin(self,target,request_wire,value,value.canonical_wire,sequence)
             return value
         except BaseException as error:
             primary = error
@@ -439,24 +474,44 @@ class NativeCpuEffectObserver:
         finally:
             cleanup_error = diagnostic_error = None
             try:
-                if custody is not None:
-                    try: custody.close()
-                    except BaseException as error: cleanup_error = error
-                    if custody.closed: self._custody = None
-                    try: evidence['cleanup'] = custody.evidence()
-                    except BaseException as error: diagnostic_error = error
-                evidence['accepted'] = value is not None and cleanup_error is None and diagnostic_error is None
-                evidence['failure'] = _failure_kind(primary if primary is not None else cleanup_error
-                    if cleanup_error is not None else diagnostic_error)
-                if diagnostic_error is not None: evidence['diagnostic_failure'] = _failure_kind(diagnostic_error)
-                self._last_evidence = evidence
-            finally:
-                self._lock.release()
-            if primary is not None:
-                if custody is not None and (cleanup_error is not None or diagnostic_error is not None):
-                    _expose_observer_custody(primary,custody,diagnostic_error)
-            elif cleanup_error is not None:
-                raise NativeObserverError('OBSERVER_CUSTODY_UNRESOLVED',custody,cleanup_error) from cleanup_error
-            elif diagnostic_error is not None:
-                _expose_observer_custody(diagnostic_error,custody,diagnostic_error)
-                raise diagnostic_error
+                try:
+                    if custody is not None:
+                        try: custody.close()
+                        except BaseException as error: cleanup_error = error
+                        if custody.closed: self._custody = None
+                        elif cleanup_error is None:
+                            cleanup_error = ContractError('OBSERVER_CUSTODY_UNRESOLVED')
+                        try: evidence['cleanup'] = custody.evidence()
+                        except BaseException as error: diagnostic_error = error
+                    evidence['accepted'] = primary is None and value is not None and cleanup_error is None and diagnostic_error is None
+                    evidence['failure'] = _failure_kind(primary if primary is not None else cleanup_error
+                        if cleanup_error is not None else diagnostic_error)
+                    if diagnostic_error is not None: evidence['diagnostic_failure'] = _failure_kind(diagnostic_error)
+                    try: self._last_evidence = evidence
+                    except BaseException as error:
+                        if primary is None: raise
+                        BaseException.__dict__['__dict__'].__get__(primary)['observer_evidence_assignment_error'] = error
+                        if diagnostic_error is None: diagnostic_error = error
+                    if primary is None and origin is not None and cleanup_error is None and diagnostic_error is None:
+                        require(origin is not None and custody is not None and custody.closed and self._custody is None,
+                                'OBSERVER_ORIGIN_CUSTODY_PENDING')
+                        require(request.canonical_wire == origin.request_wire
+                            and value.canonical_wire == origin.observation_wire
+                            and self._sequence == origin.sequence, 'OBSERVER_ORIGIN_CHANGED')
+                        # Diagnostics are complete; mutable last_evidence is never proof.
+                        self._origin = origin
+                finally:
+                    self._lock.release()
+                if primary is not None:
+                    if custody is not None and (cleanup_error is not None or diagnostic_error is not None):
+                        _expose_observer_custody(primary,custody,diagnostic_error)
+                elif cleanup_error is not None:
+                    raise NativeObserverError('OBSERVER_CUSTODY_UNRESOLVED',custody,cleanup_error) from cleanup_error
+                elif diagnostic_error is not None:
+                    _expose_observer_custody(diagnostic_error,custody,diagnostic_error)
+                    raise diagnostic_error
+            except BaseException as error:
+                evidence['accepted'] = False
+                evidence['failure'] = _failure_kind(primary if primary is not None else error)
+                if self._origin is origin: self._origin = None
+                raise

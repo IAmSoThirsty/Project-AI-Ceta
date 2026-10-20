@@ -1,0 +1,53 @@
+{
+  "schema": "ceta.checkpoint-prompt-senses.v1",
+  "observed_on": "2026-10-20",
+  "prompt_sha256": "3bdbef083044ad1d88fb6bde26f4178ab77e8299ae2c937751bafb6fbbd3990d",
+  "entries": [
+    {
+      "term": "and",
+      "url": "https://www.merriam-webster.com/dictionary/and",
+      "sense": "conjunction1; joins the two required actions"
+    },
+    {
+      "term": "commit",
+      "url": "https://www.merriam-webster.com/dictionary/commit",
+      "sense": "Technical Git operation; general dictionary meaning does not define Git object/ref semantics"
+    },
+    {
+      "term": "push",
+      "url": "https://www.merriam-webster.com/dictionary/push",
+      "sense": "Technical Git operation; general dictionary meaning does not define Git transport/ref semantics"
+    },
+    {
+      "term": "development",
+      "url": "https://www.merriam-webster.com/dictionary/development",
+      "sense": "noun1; process/results of developing the product"
+    },
+    {
+      "term": "every",
+      "url": "https://www.merriam-webster.com/dictionary/every",
+      "sense": "adjective1b; each in a series or succession"
+    },
+    {
+      "term": "local",
+      "url": "https://www.merriam-webster.com/dictionary/local",
+      "sense": "adjective2a; development at this machine and named repository"
+    },
+    {
+      "term": "minutes",
+      "url": "https://www.merriam-webster.com/dictionary/minute",
+      "sense": "noun1a; sixty seconds per minute; cadence1200seconds"
+    }
+  ],
+  "technical": {
+    "version": "git version 2.54.0.windows.1",
+    "commit": "git commit-tree records the exact staged tree with its parent and message; update-ref is a separate reviewed action",
+    "push": "git push origin exact-commit:refs/heads/development/checkpoints; normal fast-forward rules and pre-push hook apply",
+    "sources": [
+      "https://git-scm.com/docs/git-commit-tree",
+      "https://git-scm.com/docs/git-update-ref",
+      "https://git-scm.com/docs/git-push"
+    ]
+  },
+  "scope": "Only T:/00-Active/Project-AI-CETA and existing public origin; existing product acceptance obligations preserved"
+}

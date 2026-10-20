@@ -1,7 +1,8 @@
 """Native request-owner and private-store observations for trusted composition.
 
 Observations are data. This module never enrolls an owner, consumes a challenge,
-issues a grant or changes the journal. Retained ordinary file objects prevent
+or issues a grant. Its optional capacity port borrows the canonical journal's
+physical reservation. Retained ordinary file objects prevent
 normal replacement while SQLite may continue writing its existing database.
 Unrestricted same-account/admin modification is outside this observation claim.
 """
@@ -127,19 +128,30 @@ class NativeStoreBinding:
     def __init__(self, private_root, *, expected_root=None, expected_database=None):
         self._lock = threading.RLock()
         self._closed = False
-        self._api = _ViewAPI()
+        self._api = None
         self._pins = []
-        self._root_path = Path(_path(str(private_root), directory=True))
-        self._database_path = self._root_path / 'history.sqlite3'
         try:
+            # These API constructors bind exports and initialize empty cleanup
+            # queues. File handles are acquired only after this publication.
+            self._api = _ViewAPI()
+            self._root_path = Path(_path(str(private_root), directory=True))
+            self._database_path = self._root_path / 'history.sqlite3'
             ancestors = tuple(reversed(self._root_path.parents)) + (self._root_path, self._database_path)
             for path in ancestors:
-                handle = self._api.CreateFileW(str(path), 0x80, 3, None, 3,
-                    0x00200000 | 0x02000000, None)
-                require(handle not in (None, 0, INVALID_HANDLE), 'OWNER_VIEW_NATIVE_OPEN_FAILED')
-                self._api.queue_handle(handle)
-                row = {'path': path, 'handle': handle, 'identity': None}
+                # Publish storage before acquisition, including the case where
+                # the native return is interrupted before Python receives it.
+                row = {'path': path, 'handle': None, 'identity': None,
+                    'open_state': 'PREPARED', 'enrolled': False}
                 self._pins.append(row)
+                row['open_state'] = 'UNCERTAIN'
+                row['handle'] = self._api.CreateFileW(str(path), 0x80, 3, None, 3,
+                    0x00200000 | 0x02000000, None)
+                row['open_state'] = 'RETURNED'
+                require(row['handle'] not in (None, 0, INVALID_HANDLE), 'OWNER_VIEW_NATIVE_OPEN_FAILED')
+                # queue_handle allocates its guarded cleanup row. Retain the
+                # returned value above if that allocation/publication fails.
+                self._api.queue_handle(row['handle'])
+                row['enrolled'] = True
                 row['identity'] = self._read(row)
             self.private_root = self._pins[-2]['identity']
             self.database = self._pins[-1]['identity']
@@ -183,7 +195,19 @@ class NativeStoreBinding:
 
     @property
     def pending_native_resources(self):
-        return self._api.pending_native_resources()
+        with self._lock:
+            if self._api is None:
+                require(not self._pins, 'OWNER_VIEW_API_CUSTODY_UNAVAILABLE')
+                return ()
+            pending = list(self._api.pending_native_resources())
+            for row in self._pins:
+                if row['handle'] not in (None, 0, INVALID_HANDLE) and not row['enrolled']:
+                    pending.append({'kind': 'unregistered_file_handle', 'path': str(row['path']),
+                        'handle': row['handle'], 'retry': 'PENDING'})
+                elif row['open_state'] == 'UNCERTAIN' and row['handle'] in (None, 0, INVALID_HANDLE):
+                    pending.append({'kind': 'file_open', 'path': str(row['path']),
+                        'handle': row['handle'], 'retry': 'UNCERTAIN'})
+            return tuple(pending)
 
     @property
     def closed(self):
@@ -201,7 +225,24 @@ class NativeStoreBinding:
     def close(self):
         with self._lock:
             if self._closed: return
+            if self._api is None:
+                # API construction failed before the first file acquisition.
+                # A contradictory retained pin cannot be labelled retired.
+                require(not self._pins, 'OWNER_VIEW_API_CUSTODY_UNAVAILABLE')
+                self._closed = True
+                return
             try:
+                for row in self._pins:
+                    if row['handle'] not in (None, 0, INVALID_HANDLE):
+                        if not row['enrolled']:
+                            # The original API deduplicates a row that was
+                            # appended before an exception. Do not release any
+                            # handles until every known return is enrolled, so
+                            # a retry never registers an already closed value.
+                            self._api.queue_handle(row['handle'])
+                            row['enrolled'] = True
+                    else:
+                        require(row['open_state'] != 'UNCERTAIN', 'OWNER_VIEW_OPEN_CUSTODY_UNCERTAIN')
                 self._api.retry_cleanup(kinds=('handles',))
                 require(not self.pending_native_resources, 'OWNER_VIEW_CLEANUP_PENDING')
             except BaseException as primary:
@@ -234,11 +275,38 @@ class NativeOwnerObservation:
 
 class NativeOwnerView:
     """Fresh original-context observation on the existing concrete peer owner."""
-    def __init__(self, registry, clock_owner, store_binding):
+    def __init__(self, registry, clock_owner, store_binding, *, outcome_budget=None, cpu_outcome_observer=None):
         require(type(registry) is WindowsPeerRegistry, 'OWNER_VIEW_NATIVE_REGISTRY_REQUIRED')
         require(type(clock_owner) is NativeSessionClock, 'OWNER_VIEW_NATIVE_CLOCK_REQUIRED')
         require(type(store_binding) is NativeStoreBinding, 'OWNER_VIEW_NATIVE_STORE_REQUIRED')
+        if outcome_budget is not None:
+            from ceta.store.outcome_capacity import OutcomeCapacityBudget
+            require(type(outcome_budget) is OutcomeCapacityBudget, 'CPU_CAPACITY_CONFIGURATION_REQUIRED')
+            outcome_budget.__post_init__()
         self._registry, self._clock, self._store = registry, clock_owner, store_binding
+        self._outcome_budget = outcome_budget
+        self._cpu_outcome = None
+        if cpu_outcome_observer is not None:
+            from .native_cpu_outcome import NativeCpuOutcomeProvenance
+            self._cpu_outcome = NativeCpuOutcomeProvenance(self, cpu_outcome_observer)
+
+    @property
+    def require_owned_cpu_outcome_provenance(self):
+        return None if self._cpu_outcome is None else self._require_owned_cpu_outcome_provenance
+
+    def _require_owned_cpu_outcome_provenance(self, request, permit, receipt, observation,
+                                            proof, peer, context, retained):
+        from .native_cpu_outcome import NativeCpuOutcomeProvenance
+        producer = self._cpu_outcome
+        require(type(producer) is NativeCpuOutcomeProvenance and producer._view is self,
+                'CPU_OUTCOME_VIEW_PRODUCER_CHANGED')
+        return producer.require_current(self, request, permit, receipt, observation,
+                                        proof, peer, context, retained)
+
+    def retain_owned_cpu_outcome_capacity(self, request, prepared, original_context, coordinator):
+        """Reserve this invocation's exact canonical writer before consumption."""
+        from .cpu_outcome_capacity import _RetainedCpuOutcomeCapacity
+        return _RetainedCpuOutcomeCapacity(self, request, prepared, original_context, coordinator)
 
     def observe(self, original_context):
         started = _stopwatch_start()

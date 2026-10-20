@@ -2,8 +2,8 @@
 
 The canonical kernel issues authority. This owner binds its enrollment ports to
 one measured native session and an opaque, locally retained ceremony witness.
-The selected CPU subclass bridges preparation to committed canonical approval;
-execution admission and revocation retain their closed defaults.
+The selected CPU subclass bridges preparation and retained admission to committed
+canonical approval. Other owners and revocation retain their closed defaults.
 """
 from contextlib import contextmanager
 from functools import wraps
@@ -492,8 +492,437 @@ class _NativeEffectWitness:
         self.wire,self.transcript_wire,self.active = designation.wire,transcript_wire,True
 
 
+def _expose_execution(primary, retained, secondary=None):
+    try:
+        data = BaseException.__dict__['__dict__'].__get__(primary)
+        dict.update(data, native_owner_execution=retained, native_owner_session=retained.owner)
+        if secondary is not None:
+            dict.__setitem__(data, 'native_owner_execution_cleanup_error', secondary)
+    except BaseException:
+        pass  # Even failed diagnostics may not replace the original exception.
+
+
+class _NativeLifecycleBorrow:
+    """One nonblocking recursive-lock level, registered before acquisition."""
+    def __init__(self, lock, thread):
+        require(type(lock) is type(threading.RLock()), 'OWNER_EXECUTION_NATIVE_LOCK_REQUIRED')
+        require(threading.get_ident() == thread, 'OWNER_EXECUTION_ORIGINAL_THREAD_REQUIRED')
+        self.lock, self.thread, self.before = lock, thread, lock._recursion_count()
+        self.attempted, self.acquired = False, None
+        self.retirement_attempted, self.retired = False, False
+
+    def acquire(self):
+        require(not self.attempted, 'OWNER_EXECUTION_LOCK_ACQUIRE_ONCE_REQUIRED')
+        require(threading.get_ident() == self.thread, 'OWNER_EXECUTION_ORIGINAL_THREAD_REQUIRED')
+        self.attempted = True
+        acquired = self.lock.acquire(blocking=False)
+        self.acquired = acquired
+        return acquired
+
+    def retire(self):
+        require(threading.get_ident() == self.thread, 'OWNER_EXECUTION_ORIGINAL_THREAD_REQUIRED')
+        require(not self.retirement_attempted, 'OWNER_EXECUTION_LOCK_RETIRE_ONCE_REQUIRED')
+        self.retirement_attempted = True
+        depth = self.lock._recursion_count()
+        if not self.attempted or self.acquired is False:
+            require(depth == self.before, 'OWNER_EXECUTION_LOCK_DEPTH_CHANGED')
+        elif self.acquired is None and depth == self.before:
+            pass  # Interrupted before acquisition completed; no new level exists.
+        else:
+            require(depth == self.before + 1, 'OWNER_EXECUTION_LOCK_DEPTH_CHANGED')
+            self.lock.release()
+            require(self.lock._recursion_count() == self.before, 'OWNER_EXECUTION_LOCK_RETIRE_UNPROVED')
+        self.retired = True
+
+
+class _NativeCpuExecutionRetainer:
+    """Borrow one existing kernel/native lifetime; never create permission."""
+    def __init__(self, owner, request, prepared, binding, capture, proof, peer, context, coordinator):
+        self.owner, self.request, self.prepared = owner, request, prepared
+        self.binding, self.capture, self.proof = binding, capture, proof
+        self.peer, self.context, self.coordinator = peer, context, coordinator
+        self.kernel, self.thread = coordinator.kernel, threading.get_ident()
+        self.view, self.registry = owner._view, owner._registry
+        self.native_store, self.native_clock, self.code = owner._view._store, owner._native_clock, owner._code
+        self.lease = coordinator.active
+        self.wire, self.prepared_wire = request.canonical_wire, prepared.canonical_wire
+        self.designation, self.dispatch = owner._effect, owner._dispatch
+        self.proof_session, self.transcript_wire = proof.session, proof.transcript_wire
+        self.approval_result = proof.session._result
+        self.configuration = (owner._expected.canonical_wire, owner._policy, owner._worker_commitment,
+            owner._code.source_commitment, owner._code.environment_commitment)
+        self.target, self.lifetime = binding._target, binding._lifetime
+        self.capacity_factory = owner._execution_capacity
+        self.provenance = owner._execution_provenance
+        self.state, self.pending, self.cleanup_error = 'NEW', False, None
+        self.capacity_manager = self.capacity = self.capacity_current = self.capacity_exit = None
+        self.capacity_entry_attempted = self.capacity_entered = self.exit_attempted = False
+        self.locks, self._lock_borrows, self.cleanup_errors = [], [], []
+        self.registry_entry = None
+        self.admission_basis = self.admission_observed = self.admission_last_tick = None
+
+    def _selected(self):
+        from ceta.kernel.transactions import KernelTransactions
+        from ceta.kernel.cpu_execution import _CpuExecutionCoordinator, _RetainedCpuExecution
+        from ceta.store.journal import SqliteJournal
+        owner, kernel, coordinator, lease = self.owner, self.kernel, self.coordinator, self.lease
+        require(threading.get_ident() == self.thread, 'OWNER_EXECUTION_ORIGINAL_THREAD_REQUIRED')
+        require(type(owner) is NativeCpuOwnerSession and type(kernel) is KernelTransactions
+            and owner._preparation_kernel is kernel and kernel._owners is owner
+            and type(coordinator) is _CpuExecutionCoordinator and kernel._cpu_execution is coordinator
+            and coordinator.owners is owner and coordinator.store is kernel._store
+            and type(lease) is _RetainedCpuExecution and coordinator.active is lease
+            and lease._owner is coordinator and not lease._closed and lease._thread == self.thread
+            and lease._context is self.context and lease._binding is self.binding and lease._target is self.target
+            and lease._capture is self.capture and lease._proof is self.proof
+            and lease._wire == self.wire and lease._supplied.canonical_wire == self.prepared_wire,
+            'OWNER_EXECUTION_CANONICAL_CUSTODY_CHANGED')
+        require(owner._view is self.view and owner._registry is self.registry
+            and self.view._registry is self.registry and self.view._store is self.native_store
+            and owner._native_clock is self.native_clock and self.view._clock is self.native_clock
+            and owner._code is self.code, 'OWNER_EXECUTION_NATIVE_OWNER_CHANGED')
+        store = kernel._store
+        require(type(store) is SqliteJournal and not store._closed and not store._read_only
+            and store._codec is kernel._codec and store.path == owner._view._store._database_path
+            and not owner._view._store.closed and coordinator.stop_lock is store._lock,
+            'OWNER_EXECUTION_STORE_CHANGED')
+        require(owner._dispatch is self.dispatch and self.dispatch is not None
+            and self.dispatch[0] is self.context and self.dispatch[1] == self.thread
+            and owner._effect is self.designation and self.designation.context is self.context
+            and self.designation.wire == self.wire and self.designation.binding is self.binding
+            and self.designation.capture is self.capture and self.designation.target is self.target
+            and self.designation.serial == owner._effect_serial and self.designation.thread == self.thread,
+            'OWNER_EXECUTION_ORIGINAL_BINDING_CHANGED')
+        require(owner._execution_capacity is self.capacity_factory
+            and owner._execution_provenance is self.provenance,
+            'OWNER_EXECUTION_DEPENDENCY_CHANGED')
+
+    def _pure(self, *, bookkeeping=False):
+        self._selected()
+        owner, binding, target, proof = self.owner, self.binding, self.target, self.proof
+        require(not owner._closed and owner._execution is self and self.state in ('ENTERING', 'ACTIVE')
+            and type(proof) is _NativeEffectWitness and owner._effect_proof is proof
+            and proof.designation is self.designation and proof.context is self.context
+            and proof.wire == self.wire and proof.session is self.proof_session
+            and proof.transcript_wire == self.transcript_wire
+            and self.configuration == (owner._expected.canonical_wire, owner._policy, owner._worker_commitment,
+                owner._code.source_commitment, owner._code.environment_commitment),
+            'OWNER_EXECUTION_APPROVAL_CUSTODY_CHANGED')
+        require(type(proof.session) is NativeApprovalSession
+            and proof.session is owner._approval._active and proof.session._owner is owner._approval
+            and proof.session._bound_context is self.context
+            and proof.session._bound_request_wire == self.wire
+            and not proof.session._enrollment and proof.session.mode == 'interactive'
+            and not proof.session._closed and proof.session._native_exited
+            and type(proof.session._result) is NativeApprovalResult and proof.session._result is self.approval_result
+            and proof.session._result.reported_verified
+            and proof.session.native_facts.get('empty_job') is True
+            and proof.session.native_facts.get('exit_code') == 0,
+            'OWNER_EXECUTION_GENUINE_APPROVAL_CHANGED')
+        record = binding._current
+        require(not binding._closed and binding._target is target and binding._clock is owner._native_clock
+            and binding._target_fields() == self.lifetime and record is not None
+            and record.public is self.capture and self.capture is self.designation.capture
+            and not target._closed and target._process is not None and target._job is not None,
+            'OWNER_EXECUTION_NATIVE_LIFETIME_CHANGED')
+        registry = owner._registry
+        require(registry._lock.acquire(blocking=False), 'OWNER_EXECUTION_CONTEXT_BUSY')
+        try:
+            require(not registry._closed and registry._active.get(self.context) is self.registry_entry
+                and self.registry_entry is not None, 'OWNER_EXECUTION_CONTEXT_CHANGED')
+        finally: registry._lock.release()
+        self.dispatch[2].require_current()  # Existing pure same-thread code lease.
+        if not bookkeeping:
+            owner._effect_fence(self.designation, proof.session)
+            require(proof.active and not self.coordinator.stopped._flag,
+                'OWNER_EXECUTION_STOPPED')
+        # Bookkeeping deliberately does not compare the old policy/version or
+        # revive the inactive approval proof after Set/Stop. Its opaque producer
+        # and observer origins must still pass the separately captured predicate.
+
+    def _capture_admission_basis(self):
+        """Read the selected canonical preparation before the short writer call."""
+        from ceta.contracts.kernel_transactions import basis_key, intent_key, read_basis, read_intent
+        from ceta.contracts.store_transactions import StoreKey
+        from ceta.kernel.owner_authority import owned_cpu_proposal
+        from ceta.store.journal import SqliteJournal
+        kernel, lease = self.kernel, self.lease
+        require(not kernel._store._connection.in_transaction,
+            'OWNER_ADMISSION_WRITER_REENTRY')
+        require(all(getattr(getattr(kernel._store, name, None), '__func__', None)
+            is getattr(SqliteJournal, name) for name in ('snapshot', 'commit', 'position', 'replay')),
+            'OWNER_ADMISSION_STORE_METHOD_CHANGED')
+        permit = self.prepared.as_dict()
+        key = StoreKey('permit', permit['scope_id'], permit['record_id'])
+        intent = intent_key(permit['scope_id'], permit['record_id'])
+        prepared = basis_key(permit['scope_id'], permit['proposal_ref'])
+        cells = kernel._snapshot((key, intent, prepared))
+        metadata = read_intent(kernel._present(cells, intent))
+        require(kernel._present(cells, key) == self.prepared_wire
+            and metadata['scope_id'] == self.request.scope_id
+            and metadata['permit_id'] == permit['record_id']
+            and metadata['state'] == 'INTENT_COMMITTED' and metadata['consumption'] is None,
+            'OWNER_ADMISSION_PREPARATION_CHANGED')
+        wire = metadata['basis_wire'].encode('utf8')
+        basis, grant, read_set = read_basis(wire, kernel._codec)
+        proposal = owned_cpu_proposal(kernel._codec, self.request)
+        require(kernel._present(cells, prepared) == wire
+            and basis['proposal_wire'].encode('utf8') == proposal.canonical_wire
+            and basis['owner_input_commitment'] == self.request.input_commitment
+            and (basis['principal_id'], basis['actor_session']) ==
+                (self.peer.principal_id, self.peer.session_id)
+            and basis['adapter_commitment'] == self.request.adapter_commitment
+            and basis['task_revision'] == self.request.task_revision
+            and read_set.scope_id == self.request.scope_id
+            and read_set.policy_commitment == self.request.policy_commitment
+            and read_set.environment_commitment == self.request.environment_commitment
+            and grant == lease._selected_grant
+            and grant.as_dict() == metadata['grant_key']
+            and grant.record_id == permit['grant_ref']
+            and kernel._cpu_execution.active is lease,
+            'OWNER_ADMISSION_BASIS_CHANGED')
+        self.admission_basis = wire
+
+    def require_admission(self, permit, basis_wire, peer):
+        """Repeatable pre/post-COMMIT check over this one consuming lease.
+
+        The kernel alone validates and changes its durable canonical rows. This
+        check reads retained facts and the existing reservation's cached native
+        state, performs no SQL or fresh OS query, and creates no authority.
+        """
+        from ceta.contracts.kernel_transactions import PeerIdentity
+        from ceta.contracts.local_ipc import LocalMessage
+        from ceta.contracts.wire import ParsedRecord
+        from ceta.identity.cpu_outcome_capacity import _RetainedCpuOutcomeCapacity
+        from ceta.identity.windows_pipe import WindowsPeerRegistry, _Active, WindowsPeerRegistration
+        self._pure()
+        lease, owner, kernel = self.lease, self.owner, self.kernel
+        require(self.state == 'ACTIVE' and lease._entered and lease._manager is self
+            and lease._retained is self and not lease._pending_cleanup
+            and lease._consumption_attempted and lease._permit is None
+            and lease._attempt is None and not lease._dispatch and not lease._dispatching
+            and not lease._called and lease._recovery is None
+            and getattr(kernel._admission_check, '__self__', None) is owner
+            and getattr(kernel._admission_check, '__func__', None) is NativeCpuOwnerSession.require_admission,
+            'OWNER_ADMISSION_CONSUMING_LEASE_REQUIRED')
+        require(type(permit) is ParsedRecord and permit.record_type == 'OperationPermit'
+            and permit.canonical_wire == self.prepared_wire == lease._supplied.canonical_wire
+            and permit.as_dict()['status'] == 'PREPARED'
+            and type(basis_wire) is bytes and basis_wire == self.admission_basis
+            and type(peer) is PeerIdentity and peer == self.peer
+            and (peer.principal_id, peer.session_id) ==
+                (self.request.principal_id, self.request.actor_session),
+            'OWNER_ADMISSION_INPUT_CHANGED')
+        registry, active = owner._registry, self.registry_entry
+        require(type(registry) is WindowsPeerRegistry and registry is owner._view._registry
+            and type(active) is _Active and type(active.entry.registration) is WindowsPeerRegistration
+            and type(active.message) is LocalMessage
+            and active.thread_id == threading.get_native_id()
+            and (active.entry.registration.principal_id, active.entry.registration.session_id) ==
+                (peer.principal_id, peer.session_id)
+            and active.message.sender_session == peer.session_id
+            and active.message.scope_id == self.request.scope_id
+            and active.message.operation in active.entry.registration.allowed_operations
+            and active.message.scope_id in active.entry.registration.allowed_scopes,
+            'OWNER_ADMISSION_ORIGINAL_CONTEXT_REQUIRED')
+        require(type(self.capacity) is _RetainedCpuOutcomeCapacity
+            and self.capacity is self.capacity_manager
+            and getattr(self.capacity_current, '__self__', None) is self.capacity
+            and getattr(self.capacity_current, '__func__', None)
+                is _RetainedCpuOutcomeCapacity.require_current,
+            'OWNER_ADMISSION_RETAINED_CAPACITY_REQUIRED')
+        require(self.capacity_current('ADMISSION', self.request, permit, self.context,
+            self.coordinator) is None, 'OWNER_ADMISSION_CAPACITY_DECISION_INVALID')
+        # No native peer/image/token query, journal read or human callback is
+        # made in this predicate. The kernel reauthenticates the real peer.
+        monotonic, wall = time.monotonic(), time.time_ns()
+        tick = time.perf_counter_ns()
+        require(type(monotonic) is float and math.isfinite(monotonic)
+            and type(wall) is int and type(tick) is int
+            and self.admission_last_tick is not None
+            and self.admission_last_tick <= tick, 'OWNER_ADMISSION_TIMER_INVALID')
+        self.admission_last_tick = tick
+        require(monotonic < active.monotonic_deadline, 'WINDOWS_REQUEST_CONTEXT_EXPIRED')
+        require(active.message.issued_at_ms <= wall//1_000_000 < active.message.expires_at_ms,
+            'IPC_MESSAGE_EXPIRED_OR_FUTURE')
+        elapsed = tick-lease._admission_started+2*self.coordinator.resolution
+        require(elapsed >= 0, 'OWNER_ADMISSION_TIMER_INVALID')
+        observed = self.admission_observed.current_clock
+        monotonic_bound = observed.monotonic_ns+elapsed
+        wall_bound = observed.latest_wall_ns+elapsed
+        for deadline in (owner._expected.deadline, self.request.deadline, lease._intent_deadline):
+            require(deadline is not None and deadline.boot_id == observed.boot_id
+                and deadline.durable_epoch == observed.durable_epoch
+                and deadline.resume_generation == observed.resume_generation
+                and monotonic_bound < deadline.expires_monotonic_ns
+                and wall_bound < deadline.expires_wall_ns, 'OWNER_ADMISSION_DEADLINE_ELAPSED')
+        require(0 <= monotonic_bound-self.request.expected_limit.observed_monotonic_ns
+            <= self.request.maximum_observation_age_ns, 'OWNER_ADMISSION_OBSERVATION_STALE')
+        # The final pure fence follows the capacity and independent timer reads.
+        _RetainedCpuOutcomeCapacity._active(self.capacity)
+        self._pure()
+        require(not owner._closed and not owner._stopped._flag
+            and not self.coordinator.stopped._flag, 'OWNER_ADMISSION_STOPPED')
+        return None
+
+    def __enter__(self):
+        require(self.state == 'NEW', 'OWNER_EXECUTION_SINGLE_USE')
+        self._selected()
+        require(self.owner._execution is None and not self.owner._effect_busy
+            and not self.owner._effect_retaining, 'OWNER_EXECUTION_BUSY')
+        require(not self.kernel._store._connection.in_transaction,
+            'OWNER_EXECUTION_WRITER_REENTRY')
+        self.state, self.owner._execution, self.owner._effect_busy = 'ENTERING', self, True
+        try:
+            for lock in (self.binding._lock, self.target._lock):
+                borrow = _NativeLifecycleBorrow(lock, self.thread)
+                self._lock_borrows.append(borrow)
+                require(borrow.acquire(), 'OWNER_EXECUTION_NATIVE_BUSY')
+                self.locks.append(lock)
+            self.admission_last_tick = self.lease._admission_started
+            _, self.admission_observed = self.owner._require_effect(self.designation, self.context)
+            self._capture_admission_basis()
+            registry = self.owner._registry
+            require(registry._lock.acquire(blocking=False), 'OWNER_EXECUTION_CONTEXT_BUSY')
+            try:
+                require(not registry._closed, 'OWNER_EXECUTION_CONTEXT_CHANGED')
+                self.registry_entry = registry._active.get(self.context)
+                require(self.registry_entry is not None, 'OWNER_EXECUTION_CONTEXT_CHANGED')
+            finally: registry._lock.release()
+            self._pure()
+            self.capacity_manager = self.capacity_factory(self.request, self.prepared,
+                self.context, self.coordinator)
+            enter = getattr(self.capacity_manager, '__enter__', None)
+            self.capacity_exit = getattr(self.capacity_manager, '__exit__', None)
+            require(callable(enter) and callable(self.capacity_exit), 'OWNER_EXECUTION_CAPACITY_RETAINER_REQUIRED')
+            self.capacity_entry_attempted = True
+            self.capacity = enter()
+            self.capacity_entered = True
+            self.capacity_current = getattr(self.capacity, 'require_current', None)
+            require(callable(self.capacity_current), 'OWNER_EXECUTION_CAPACITY_CAPABILITY_REQUIRED')
+            self.state = 'ACTIVE'
+            self.require_current('CAPACITY', self.request, None, None, self.binding,
+                self.capture, self.proof, self.peer, self.context)
+            return self
+        except BaseException as primary:
+            try:
+                self._retire(type(primary), primary, BaseException.__dict__['__traceback__'].__get__(primary))
+            except BaseException as secondary:
+                # Failed entry already makes the kernel retain this manager.
+                # Retirement must not replace its exact original exception.
+                _expose_execution(primary, self, secondary)
+            _expose_execution(primary, self, self.cleanup_error)
+            raise
+
+    def require_current(self, phase, request, permit, attempt, binding, capture, proof, peer, context):
+        require(self.lease._recovery is None, 'CPU_RECOVERY_BOOKKEEPING_ONLY')
+        require(type(phase) is str and phase in ('CAPACITY', 'CONSUMED', 'READY', 'DISPATCH')
+            and self.state == 'ACTIVE' and request is self.lease._request
+            and request.canonical_wire == self.wire and binding is self.binding and capture is self.capture
+            and proof is self.proof and peer == self.peer and context is self.context,
+            'OWNER_EXECUTION_INPUT_CHANGED')
+        require(not self.lease._dispatch and permit is self.lease._permit and attempt is self.lease._attempt,
+            'OWNER_EXECUTION_PHASE_CHANGED')
+        if phase == 'CAPACITY':
+            require(permit is None and attempt is None and not self.lease._consumption_attempted,
+                'OWNER_EXECUTION_PHASE_CHANGED')
+        else:
+            require(permit is not None and permit.as_dict()['status'] == 'CONSUMED',
+                'OWNER_EXECUTION_CONSUMPTION_REQUIRED')
+            require((attempt is None) == (phase == 'CONSUMED'), 'OWNER_EXECUTION_PHASE_CHANGED')
+        if phase == 'DISPATCH':
+            require(self.lease._dispatching, 'OWNER_EXECUTION_DISPATCH_NOT_ARMED')
+        self._pure()
+        require(self.capacity_current(phase, request, permit, context, self.coordinator) is None,
+            'OWNER_EXECUTION_CAPACITY_DECISION_INVALID')
+        self._pure()  # No fresh authentication/native query or SQL after the capability.
+        return None
+
+    def require_outcome_current(self, phase, request, permit, receipt, observation, proof, peer, context):
+        require(type(phase) is str and phase in ('ATTEMPT', 'OUTCOME')
+            and self.state == 'ACTIVE' and request.canonical_wire == self.wire
+            and self.lease._permit is not None and permit.canonical_wire == self.lease._permit.canonical_wire
+            and permit.as_dict()['status'] == 'CONSUMED' and context is self.context and peer == self.peer,
+            'OWNER_EXECUTION_OUTCOME_BINDING_CHANGED')
+        bookkeeping = phase == 'OUTCOME'
+        if bookkeeping:
+            require((self.lease._dispatch or self.lease._denied_dispatch is not None)
+                and self.lease._called and not self.lease._dispatching
+                and self.lease._attempt is not None and receipt is not None,
+                'OWNER_EXECUTION_PRODUCER_NOT_DISPATCHED')
+        else:
+            require(proof is self.proof and not self.lease._dispatch and receipt is None and observation is None,
+                'OWNER_EXECUTION_ATTEMPT_BINDING_CHANGED')
+        self._pure(bookkeeping=bookkeeping)
+        require(self.capacity_current(phase, request, permit, context, self.coordinator) is None,
+            'OWNER_EXECUTION_CAPACITY_DECISION_INVALID')
+        if bookkeeping:
+            if self.lease._dispatch:
+                require(self.provenance(request, permit, receipt, observation, proof, peer,
+                    context, self) is None, 'OWNER_EXECUTION_PROVENANCE_DECISION_INVALID')
+            else:
+                from ceta.kernel.cpu_outcome_recovery import _DeniedDispatch
+                origin = self.lease._denied_dispatch
+                require(type(origin) is _DeniedDispatch, 'CPU_RECOVERY_DENIAL_NOT_ESTABLISHED')
+                origin.require_current(self.lease, receipt, observation, proof, context, self)
+        self._pure(bookkeeping=bookkeeping)
+        return None
+
+    def _retirement_failure(self, error):
+        self.pending = True
+        if self.cleanup_error is None: self.cleanup_error = error
+        self.cleanup_errors.append(error)
+
+    def _retire(self, kind, primary, trace):
+        if self.exit_attempted:
+            error = ContractError('OWNER_EXECUTION_EXIT_ONCE_REQUIRED')
+            _expose_execution(primary if primary is not None else error, self, error)
+            raise error
+        self.exit_attempted = True
+        if self.capacity_entry_attempted and not self.capacity_entered:
+            self.pending = True  # The provider owns an uncertain failed entry.
+        try:
+            if self.capacity_entered:
+                self.capacity_entered = False
+                require(self.capacity_exit(kind, primary, trace) is None,
+                    'OWNER_EXECUTION_CAPACITY_EXIT_INVALID')
+        except BaseException as secondary:
+            self._retirement_failure(secondary)
+        finally:
+            for borrow in reversed(self._lock_borrows):
+                try:
+                    borrow.retire()
+                except BaseException as secondary:
+                    self._retirement_failure(secondary)
+            if all(borrow.retired for borrow in self._lock_borrows): self.locks.clear()
+            self.state = 'FAILED' if self.pending else 'CLOSED'
+            if not self.pending and self.owner._execution is self:
+                self.owner._execution = None
+                self.owner._effect_busy = False
+        if primary is not None:
+            _expose_execution(primary, self, self.cleanup_error)
+        if self.cleanup_error is not None:
+            # The canonical kernel preserves its body primary and marks its
+            # lease pending only when this exit reports uncertain retirement.
+            _expose_execution(self.cleanup_error, self, self.cleanup_error)
+            raise self.cleanup_error
+
+    def __exit__(self, kind, primary, trace):
+        require(threading.get_ident() == self.thread, 'OWNER_EXECUTION_ORIGINAL_THREAD_REQUIRED')
+        require((primary is None and kind is None and trace is None)
+            or (isinstance(primary, BaseException) and kind is type(primary)
+                and (trace is None or type(trace) is TracebackType)),
+            'OWNER_EXECUTION_EXCEPTION_ARGUMENTS_INVALID')
+        self._retire(kind, primary, trace)
+        return None
+
+    def __copy__(self): raise ContractError('OWNER_EXECUTION_COPY_FORBIDDEN')
+    def __deepcopy__(self, memo): raise ContractError('OWNER_EXECUTION_COPY_FORBIDDEN')
+    def __reduce_ex__(self, protocol): raise ContractError('OWNER_EXECUTION_SERIALIZATION_FORBIDDEN')
+
+
 class NativeCpuOwnerSession(NativeOwnerSession):
-    """Selected approval/preparation owner; native admission stays closed.
+    """Selected approval/preparation and retained CPU admission owner.
 
     The canonical kernel alone consumes ceremonies and issues authority. This
     class borrows CPB1/WT4 custody and retains actual NA2 evidence. Its objects
@@ -503,7 +932,44 @@ class NativeCpuOwnerSession(NativeOwnerSession):
         self._effect = self._effect_lease = self._effect_proof = None
         self._effect_busy,self._effect_retaining,self._effect_serial = False,False,0
         self._preparation_kernel = self._preparation_invocation = None
+        self._execution = None
         super().__init__(*args,**kwargs)
+        self._execution_capacity = getattr(self._view, 'retain_owned_cpu_outcome_capacity', None)
+        self._execution_provenance = getattr(self._view, 'require_owned_cpu_outcome_provenance', None)
+
+    def retain_owned_cpu_execution(self, request, prepared_permit, binding, capture, proof,
+                                   peer, original_context, coordinator):
+        from ceta.contracts.real_effect import OwnedCpuRequest
+        from ceta.effects.native_cpu_binding import NativeCpuBinding
+        capacity = getattr(self, '_execution_capacity', None)
+        provenance = getattr(self, '_execution_provenance', None)
+        require(callable(capacity) and getattr(capacity, '__self__', None) is self._view,
+            'OWNER_EXECUTION_PHYSICAL_CAPACITY_UNAVAILABLE')
+        require(callable(provenance) and getattr(provenance, '__self__', None) is self._view,
+            'OWNER_EXECUTION_PROVENANCE_UNAVAILABLE')
+        require(type(request) is OwnedCpuRequest and type(binding) is NativeCpuBinding
+            and self._preparation_kernel is coordinator.kernel and coordinator.owners is self
+            and coordinator.store is self._preparation_kernel._store
+            and self._effect is not None and self._effect.wire == request.canonical_wire
+            and self._effect.binding is binding and self._effect.capture is capture
+            and self._effect_proof is proof and type(proof) is _NativeEffectWitness,
+            'OWNER_EXECUTION_NATIVE_APPROVAL_REQUIRED')
+        return _NativeCpuExecutionRetainer(self, request, prepared_permit, binding, capture,
+            proof, peer, original_context, coordinator)
+
+    def require_owned_cpu_outcome_current(self, phase, request, consumed_permit, receipt,
+                                          observation, native_proof, peer, original_context):
+        retained = getattr(self, '_execution', None)
+        require(type(retained) is _NativeCpuExecutionRetainer and retained.owner is self,
+            'OWNER_EXECUTION_RETAINED_OUTCOME_REQUIRED')
+        return retained.require_outcome_current(phase, request, consumed_permit, receipt,
+            observation, native_proof, peer, original_context)
+
+    def require_admission(self, permit, basis_wire, peer):
+        retained = getattr(self, '_execution', None)
+        require(type(retained) is _NativeCpuExecutionRetainer and retained.owner is self,
+            'OWNER_ADMISSION_RETAINED_EXECUTION_REQUIRED')
+        return _NativeCpuExecutionRetainer.require_admission(retained, permit, basis_wire, peer)
 
     def _bind_preparation_kernel(self, kernel):
         """Bind once to the actual existing writer, never to a supplied verdict."""
@@ -891,4 +1357,9 @@ class NativeCpuOwnerSession(NativeOwnerSession):
     def request_stop(self):
         self._stopped.set()
         self._invalidate_effect()
+        kernel = getattr(self, '_preparation_kernel', None)
+        if kernel is not None and kernel._cpu_execution.owners is self:
+            # Same short final-decision lane as the kernel lease. This trusted
+            # cancellation capability grants no durable/public Stop authority.
+            kernel._cpu_execution.cancel()
         return super().request_stop()

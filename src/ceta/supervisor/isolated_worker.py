@@ -41,6 +41,19 @@ class SID_AND_ATTRIBUTES(C.Structure):
     _fields_ = [('sid', C.c_void_p), ('attributes', DWORD)]
 
 
+class TOKEN_GROUPS(C.Structure):
+    _fields_ = [('count', DWORD), ('groups', SID_AND_ATTRIBUTES * 1)]
+
+
+def _restricted_sid_count(storage):
+    """Read only a bounded TOKEN_GROUPS count; never dereference SID pointers."""
+    _require(C.sizeof(DWORD) <= len(storage) <= 65536, 'ISOLATION_RESTRICTION_QUERY_SIZE_INVALID')
+    count = DWORD.from_buffer(storage).value
+    required = TOKEN_GROUPS.groups.offset + count * C.sizeof(SID_AND_ATTRIBUTES) if count else C.sizeof(DWORD)
+    _require(count <= 4096 and required <= len(storage), 'ISOLATION_RESTRICTION_QUERY_SIZE_INVALID')
+    return count
+
+
 class _KnownFolderId(C.Structure):
     _fields_ = [('data1', DWORD), ('data2', C.c_uint16), ('data3', C.c_uint16),
                 ('data4', C.c_ubyte * 8)]
@@ -54,6 +67,9 @@ class IsolationTokenFacts:
     integrity_rid: int
     restricted: bool
     observed_monotonic_ns: int
+    restricted_sid_count: int | None = None
+    restriction_last_error: int | None = None
+    restriction_raw_result: int | None = None
 
     def __post_init__(self):
         _require(type(self.appcontainer_sid) is str and
@@ -62,7 +78,14 @@ class IsolationTokenFacts:
         _require(type(self.is_appcontainer) is bool and self.is_appcontainer
                  and type(self.capability_count) is int and self.capability_count == 0
                  and type(self.integrity_rid) is int and self.integrity_rid == 4096
-                 and type(self.restricted) is bool and self.restricted
+                 and type(self.restricted) is bool
+                 and type(self.restriction_raw_result) is int
+                 and -(1 << 31) <= self.restriction_raw_result < (1 << 31)
+                 and self.restricted == bool(self.restriction_raw_result)
+                 and type(self.restricted_sid_count) is int and 0 <= self.restricted_sid_count <= 4095
+                 and self.restricted == (self.restricted_sid_count > 0)
+                 and type(self.restriction_last_error) is int and 0 <= self.restriction_last_error <= 0xffffffff
+                 and (self.restricted or self.restriction_last_error == 0)
                  and type(self.observed_monotonic_ns) is int and self.observed_monotonic_ns >= 0,
                  'ISOLATION_TOKEN_NOT_QUALIFIED')
 
@@ -70,7 +93,8 @@ class IsolationTokenFacts:
 class _IsolationAPI(_API):
     def __init__(self):
         super().__init__()
-        _require(C.sizeof(SECURITY_CAPABILITIES) == 24 and C.sizeof(SID_AND_ATTRIBUTES) == 16,
+        _require(C.sizeof(SECURITY_CAPABILITIES) == 24 and C.sizeof(SID_AND_ATTRIBUTES) == 16
+                 and TOKEN_GROUPS.groups.offset == 8,
                  'ISOLATION_X64_LAYOUT_UNSUPPORTED')
         self.security = C.WinDLL('advapi32', use_last_error=True, winmode=0x800)
         self.userenv = C.WinDLL('userenv', use_last_error=True, winmode=0x800)
@@ -283,7 +307,7 @@ class _IsolationAPI(_API):
         token = HANDLE()
         self._pending_token_outputs.append(token)
         primary, known = None, False
-        observed = {'schema': 'ceta-rejected-isolation-token-v1',
+        observed = {'schema': 'ceta-rejected-isolation-token-v2',
                     'classification': 'REJECTED_NATIVE_OBSERVATION', 'stage': 'OPEN_PROCESS_TOKEN'}
         try:
             if not self.OpenProcessToken(process, 8, C.byref(token)):
@@ -322,14 +346,27 @@ class _IsolationAPI(_API):
             integrity_rid = int(integrity_text.rsplit('-', 1)[1])
             observed['integrity_rid'] = integrity_rid
             observed['stage'] = 'IS_TOKEN_RESTRICTED'
-            restricted = bool(self.IsTokenRestricted(token))
+            C.set_last_error(0)
+            restriction_raw = int(self.IsTokenRestricted(token))
+            restriction_error = C.get_last_error()
+            restricted = bool(restriction_raw)
+            observed['restriction_raw_result'] = restriction_raw
             observed['is_token_restricted'] = restricted
+            observed['restriction_last_error'] = restriction_error
+            _require(restricted or restriction_error == 0, 'ISOLATION_RESTRICTION_QUERY_FAILED')
+            observed['stage'] = 'QUERY_RESTRICTED_SIDS'
+            restricting_sids = self.token_data(token, 11)
+            restricted_count = _restricted_sid_count(restricting_sids)
+            observed['restricted_sid_count'] = restricted_count
+            observed['restriction_query_bytes'] = len(restricting_sids)
+            observed['stage'] = 'COMPARE_RESTRICTION_OBSERVATIONS'
+            _require(restricted == (restricted_count > 0), 'ISOLATION_RESTRICTION_OBSERVATIONS_DISAGREE')
             observed['stage'] = 'OBSERVATION_TIME'
             observed_ns = time.monotonic_ns()
             observed['observed_monotonic_ns'] = observed_ns
             observed['stage'] = 'QUALIFY_TOKEN_FACTS'
             facts = IsolationTokenFacts(appcontainer_sid_text, is_app == 1, count,
-                integrity_rid, restricted, observed_ns)
+                integrity_rid, restricted, observed_ns, restricted_count, restriction_error, restriction_raw)
             return facts
         except BaseException as error:
             primary = error

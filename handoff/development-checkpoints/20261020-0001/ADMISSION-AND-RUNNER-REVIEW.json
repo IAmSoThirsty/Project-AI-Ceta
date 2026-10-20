@@ -1,0 +1,239 @@
+{
+  "schema": "ceta.independent-admission-reporting-review.v1",
+  "reviewer": "/root/review_admission",
+  "authors": [
+    "/root",
+    "/root/admission"
+  ],
+  "finished_at": "2026-10-20T17:42:28.796353+00:00",
+  "decision": "rejected",
+  "exit_status": 0,
+  "run_id": "ceta-operational-resume-20261020",
+  "candidate_manifest": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\admission\\MANIFEST.json",
+    "sha256": "c714aa1ad01c3daf854b917bd6435dd1e55cb76636314a4489ff17065fd32387"
+  },
+  "reporting_artifact": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\packet\\REPORTING-ARTIFACT.json",
+    "sha256": "c7671c2f7b0ac5a0ed4c6cdbe170cf487748971f0a78ac36fb3b4a0380bab400"
+  },
+  "source_checkpoint": {
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "branch": "candidate/societal-reasoning-v1",
+    "status": ""
+  },
+  "component_dispositions": {
+    "admission": {
+      "disposition": "CONTROLLED_COMPONENT_REVIEW_APPROVED",
+      "material_code_findings": [],
+      "payload_count": 549,
+      "delta_paths": [
+        "contracts/CPU_OUTCOME_CAPACITY_CONNECTION_V1.md",
+        "contracts/KERNEL_TRANSACTIONS_V1.md",
+        "contracts/NATIVE_CPU_RUNTIME_COMPOSITION_V1.md",
+        "contracts/NATIVE_OWNER_SESSION_V1.md",
+        "contracts/OWNED_SERVICE_V1.md",
+        "src/ceta/identity/cpu_outcome_capacity.py",
+        "src/ceta/identity/owner_session.py",
+        "src/ceta/kernel/transactions.py",
+        "tests/contract/test_native_owner_admission.py",
+        "tests/contract/test_native_owner_execution.py",
+        "tests/contract/test_native_owner_preparation.py",
+        "tests/contract/test_real_effect_entrypoint.py"
+      ],
+      "new_admission_cases_independently_passed": 20,
+      "broader_independent_run": {
+        "tests_run": 126,
+        "passed": 125,
+        "assertion_failures": 0,
+        "errors": 1,
+        "skips": 0,
+        "error": "Reviewer fixture-root guard prevented generic-owner fixture mkdir outside review",
+        "classified_as": "FIXED_IN_REVIEW_HARNESS_ONLY",
+        "record_preserved": true
+      },
+      "exact_error_case_rerun": {
+        "tests_run": 1,
+        "passed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      },
+      "fixture_adaptation": "Only in-memory preparation.FIXTURES and, for the corrected single-case rerun, authority.ROOT point into review. Candidate methods and assertions are unchanged.",
+      "accepted_behavior": [
+        "Concrete captured native predicate binds one exact retained kernel lease and canonical PREPARED basis, grant and request.",
+        "ADMISSION requires consumption attempted and no returned consumed permit/attempt; later phases reject reuse.",
+        "Default owners and unretained native consume remain denied.",
+        "Original registry, peer/context/thread, native/code/approval/capacity owner identities and elapsed deadlines remain fenced.",
+        "The native admission predicate performs no SQL; canonical CAS remains the sole authority transition.",
+        "Final captured predicate follows the last peer/clock callback at pre/post-COMMIT.",
+        "Pre-COMMIT Stop rolls back; post-COMMIT Stop refuses a lease and preserves charged/consumed liability.",
+        "Wrong permit/basis/peer, stale context/time, Stop, registry replacement, fake capacity responses, replay, foreign thread and competing lease are denied."
+      ],
+      "source_integration_accepted": false
+    },
+    "custody_aggregation": {
+      "disposition": "CONTROLLED_COMPONENT_REVIEW_APPROVED",
+      "tests_run": 13,
+      "passed": 13,
+      "old_actual_producer_shape_keyerror_reproduced": true,
+      "no_acquisition_case_exact_fields_and_zero_create_calls_required": true,
+      "native_retirement_still_requires_exact_integer_CLOSED_and_false_registration": true,
+      "malformed_missing_rows_fail_closed": true,
+      "original_receipts_preserved": true,
+      "independent_physical_proof_saved_before_native_aggregation": true
+    },
+    "full_runner": {
+      "disposition": "REJECTED_PENDING_SEPARATE_BINDING_REPAIR",
+      "findings": [
+        {
+          "id": "R4-NATIVE-GATE-STALE-RUN-AND-PATH",
+          "priority": "P1",
+          "classification": "BLOCKING_CURRENT_COMBINED_HANDOFF",
+          "location": ".agents/runtime/operational-resume-20261020/successor-r4/native_case_gate.py",
+          "lines": [
+            20,
+            21,
+            93,
+            103,
+            115,
+            224
+          ],
+          "caller": ".agents/runtime/operational-resume-20261020/successor-r4/js9_support.py:317-324",
+          "evidence": "RUNNER-BINDING-DEFECT.json",
+          "observed": {
+            "hardcoded_run": "js9-runtime-20261020",
+            "hardcoded_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3",
+            "required_run": "ceta-operational-resume-20261020",
+            "required_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\successor-r4",
+            "denials": [
+              {
+                "operation": "pure_validate_release",
+                "observed_denial": "TEST_AUTHORITY_BASIS"
+              },
+              {
+                "operation": "capture_pre_reader_path_check",
+                "observed_denial": "JS8_RELEASE_PATH"
+              }
+            ]
+          },
+          "consequence": "A fresh current-run release cannot enter the dormant full qualification path. The helper repair alone does not make that runner executable.",
+          "repair": "Create a separate successor with exact current-run/current-directory native gate bindings, explicit source/fixture/release subjects, negative binding tests and refreshed script/packet hashes. Obtain another distinct review before any native release.",
+          "author_response": "Root acknowledged the finding and will repair in a separate successor/run. Frozen reviewed files remain unchanged."
+        }
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "R4-NATIVE-GATE-STALE-RUN-AND-PATH",
+      "priority": "P1",
+      "classification": "BLOCKING_CURRENT_COMBINED_HANDOFF",
+      "location": ".agents/runtime/operational-resume-20261020/successor-r4/native_case_gate.py",
+      "lines": [
+        20,
+        21,
+        93,
+        103,
+        115,
+        224
+      ],
+      "caller": ".agents/runtime/operational-resume-20261020/successor-r4/js9_support.py:317-324",
+      "evidence": "RUNNER-BINDING-DEFECT.json",
+      "observed": {
+        "hardcoded_run": "js9-runtime-20261020",
+        "hardcoded_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3",
+        "required_run": "ceta-operational-resume-20261020",
+        "required_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\successor-r4",
+        "denials": [
+          {
+            "operation": "pure_validate_release",
+            "observed_denial": "TEST_AUTHORITY_BASIS"
+          },
+          {
+            "operation": "capture_pre_reader_path_check",
+            "observed_denial": "JS8_RELEASE_PATH"
+          }
+        ]
+      },
+      "consequence": "A fresh current-run release cannot enter the dormant full qualification path. The helper repair alone does not make that runner executable.",
+      "repair": "Create a separate successor with exact current-run/current-directory native gate bindings, explicit source/fixture/release subjects, negative binding tests and refreshed script/packet hashes. Obtain another distinct review before any native release.",
+      "author_response": "Root acknowledged the finding and will repair in a separate successor/run. Frozen reviewed files remain unchanged."
+    }
+  ],
+  "static_scans": {
+    "sampled_source_files": 132,
+    "source_reference_hashes": "PASS",
+    "configured_secret_pattern_scan": "PASS",
+    "claim_evidence": "NOT_RUN_NO_CLAIMS_REGISTER_SUPPLIED",
+    "git_scan": "NOT_RUN_ON_SRC_SUBDIRECTORY_SEPARATE_CANONICAL_GIT_CHECK_PASS",
+    "warnings": [
+      {
+        "path": "src/ceta/desktop/task_view.py",
+        "lines": [
+          145,
+          227
+        ],
+        "disposition": "NOT_BLOCKING_CURRENT_TASK",
+        "reason": "Qt dialog exec methods, not Python dynamic code; files unchanged by candidate"
+      },
+      {
+        "path": "src/ceta/reasoning/source_loader.py",
+        "lines": [
+          176
+        ],
+        "disposition": "NOT_BLOCKING_CURRENT_TASK",
+        "reason": "Intentional pinned-vendor module execution path; file unchanged by candidate; no broad loader security requalification claimed"
+      }
+    ]
+  },
+  "actual_commands": [
+    {
+      "command": "verify_sources.py",
+      "exit_status": 0
+    },
+    {
+      "command": "codex-independent-verifier and codex-hostile-review self-test/prompt-check/scan",
+      "exit_status": 0
+    },
+    {
+      "command": "run_controlled.py reporting",
+      "exit_status": 0
+    },
+    {
+      "command": "run_controlled.py admission",
+      "exit_status": 1,
+      "disposition": "125 pass; 1 blocked reviewer fixture-root error, retained"
+    },
+    {
+      "command": "run_controlled_scope_repair.py admission",
+      "exit_status": 0,
+      "disposition": "Only the exact previously blocked case, 1 pass"
+    },
+    {
+      "command": "reproduce_runner_binding.py",
+      "exit_status": 0,
+      "disposition": "Actual pure current-run/path denial reproduced; no native operation"
+    }
+  ],
+  "evidence": {
+    "SOURCE-VERIFICATION.json": "4086dfcc0eae1acdd52f9f9f1e5f7be433745f29d62b628dafa692196019f5db",
+    "ACTUAL-CANDIDATE-DIFF.patch": "eecf0d0c4913306b36cc790779373821723e82a2e7609237faa07ccf3b2353ad",
+    "REPORTING-DELTA.patch": "add51256f8a2e03f59f155fa2eecaf620e65d0747f5f0c9d1c126b938bf5609c",
+    "RUNNER-BINDING-DEFECT.json": "c1d3f2dddf6b4e99ac4011083162b0920817cdcc68f5577b020f9e7849256fe0",
+    "reporting-CONTROLLED-RESULT.json": "0243e5b37301ad36d59b7ff569372db64eea1ba1380ad05dab5acbadbb49d6e8",
+    "independent-controlled-regression/RESULT.json": "7ca5ed76b9a1fb14b03dbdaa7b0adf98c7a720b683fd7664e19e78d34266f7c7",
+    "independent-controlled-scope-repair/RESULT.json": "890200ee1ac820fcc3d1711562888f444d8c6051e8c07c5575551af4e98f5a39"
+  },
+  "limits": [
+    "Reviewer is distinct from both authors but shares host, model family and libraries; this is not independent hardware/native trust.",
+    "Real pinned SQLite and its ordinary Windows path-resolution calls executed against disposable repository-local files.",
+    "Identity, approval, native observation and capacity-VFS state are explicitly CONTROLLED.",
+    "No worker/helper launch, AppContainer/profile operation, Hello ceremony, listener, CPU effect, debugger or source integration occurred.",
+    "Python/API guards record their stated coverage; they are not an OS sandbox or proof that every possible native API is intercepted.",
+    "Full native, joined-suite, destination, installed/offline/endurance/human and product acceptance remain unverified.",
+    "Current integrate graph omits cpu_outcome_capacity.py, kernel/transactions.py and changed contracts; exact expanded scopes require a lawful successor graph before copy.",
+    "All 548 predecessor payloads,549 candidate payloads and25 bound reporting files were rehashed unchanged at review completion."
+  ],
+  "safe_next_action": "Preserve the combined rejection; repair the R4 binding in a separately scoped successor, rerun pure binding controls and obtain distinct review. Carry the approved admission component forward by exact hash, then perform required joined/destination/native gates under their actual authority."
+}

@@ -7,13 +7,16 @@ from .store_transactions import identifier
 from .wire import ContractError, MAX_WIRE_BYTES, RecordCodec, ParsedRecord, canonical_bytes, strict_loads
 
 from .task_drafts import TaskCommand, TASK_OPERATIONS, decode_command
+from .manual_effect import (ManualEffectCommand, OPERATIONS as MANUAL_OPERATIONS,
+    decode_command as decode_manual_command)
 
 IPC_PROFILE = "ceta-local-ingress-v1"
 MAX_MESSAGE_TTL_MS = 30_000
 MAX_REPLAY_ENTRIES = 4096
 OPERATIONS = {"kernel.prepare": "ActionProposal", "kernel.consume": "OperationPermit",
               "kernel.revoke": "StandingGrant", "kernel.resolve_consumption": "OperationPermit",
-              "kernel.recover_permit": "OperationPermit", "kernel.recover_preparation": "ActionProposal", **{op: "TaskCommand" for op in TASK_OPERATIONS}}
+              "kernel.recover_permit": "OperationPermit", "kernel.recover_preparation": "ActionProposal", **{op: "TaskCommand" for op in TASK_OPERATIONS},
+              **{op: "ManualEffectCommand" for op in MANUAL_OPERATIONS}}
 FIELDS = {"profile", "version", "message_id", "correlation_ref", "causation_ref",
           "sender_session", "receiver_generation", "operation", "scope_id", "issued_at_ms",
           "expires_at_ms", "record_commitment", "original_record_sha256", "record_wire", "arguments"}
@@ -41,7 +44,7 @@ class LocalMessage:
     scope_id: str
     issued_at_ms: int
     expires_at_ms: int
-    record: ParsedRecord | TaskCommand
+    record: ParsedRecord | TaskCommand | ManualEffectCommand
     reason_ref: str | None
     original_message: bytes
 
@@ -50,7 +53,8 @@ def encode_message(record_wire, codec, *, message_id, sender_session, receiver_g
                    operation, issued_at_ms, expires_at_ms, correlation_ref=None,
                    causation_ref=None, reason_ref=None):
     require(type(record_wire) is bytes and type(codec) is RecordCodec, "IPC_RECORD_REQUIRED")
-    record = decode_command(record_wire) if operation in TASK_OPERATIONS else codec.decode(record_wire)
+    record = (decode_manual_command(record_wire) if operation in MANUAL_OPERATIONS else
+        decode_command(record_wire) if operation in TASK_OPERATIONS else codec.decode(record_wire))
     value = {"profile": IPC_PROFILE, "version": 1, "message_id": message_id,
              "correlation_ref": correlation_ref, "causation_ref": causation_ref,
              "sender_session": sender_session, "receiver_generation": receiver_generation,
@@ -85,11 +89,14 @@ def decode_message(wire, codec):
             and end - start <= MAX_MESSAGE_TTL_MS, "IPC_VALIDITY_SHAPE")
     require(type(value["record_wire"]) is str, "IPC_RECORD_REQUIRED")
     original = value["record_wire"].encode("utf8")
-    record = decode_command(original) if operation in TASK_OPERATIONS else codec.decode(original)
+    record = (decode_manual_command(original) if operation in MANUAL_OPERATIONS else
+        decode_command(original) if operation in TASK_OPERATIONS else codec.decode(original))
     require(record.record_type == OPERATIONS[operation]
             and record.as_dict()["scope_id"] == value["scope_id"], "IPC_OPERATION_SCOPE_BINDING")
     if operation in TASK_OPERATIONS:
         require(record.as_dict()["kind"] == TASK_OPERATIONS[operation], "TASK_ROUTE_BINDING")
+    if operation in MANUAL_OPERATIONS:
+        require(record.as_dict()['kind'] == MANUAL_OPERATIONS[operation], 'MANUAL_ROUTE_BINDING')
     require(record.commitment == value["record_commitment"]
             and hashlib.sha256(original).hexdigest() == value["original_record_sha256"], "IPC_RECORD_BINDING")
     args = value["arguments"]

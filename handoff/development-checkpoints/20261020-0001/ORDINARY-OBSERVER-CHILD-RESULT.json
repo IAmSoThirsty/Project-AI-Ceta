@@ -1,0 +1,2851 @@
+{
+  "started_at": "2026-10-20T17:52:25.513300+00:00",
+  "finished_at": "2026-10-20T17:52:36.182973+00:00",
+  "manifest": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/runner-repair-r1/work/observer/MANIFEST.json",
+    "sha256": "9eac0e2a4d902a5bd561bb8dc5ca7908bca499ea51d1c4174e366a1225c017d8"
+  },
+  "nonce": "2320f14575a74725c8f31ff5e0a2686c",
+  "expected_ids": [
+    "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired"
+  ],
+  "executed_ids": [
+    "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired"
+  ],
+  "stopped_ids": [
+    "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired"
+  ],
+  "tests_run": 1,
+  "failures": [],
+  "errors": [],
+  "skips": [],
+  "primary_error": null,
+  "original_errors": [
+    {
+      "stage": "exchange",
+      "error_id": 1842213726016,
+      "error": {
+        "type": "ContractError",
+        "message": "OBSERVER_OUTPUT_OVERLONG at $",
+        "traceback": "ceta.contracts.wire.ContractError: OBSERVER_OUTPUT_OVERLONG at $\n"
+      }
+    }
+  ],
+  "original_method_AST_unchanged": true,
+  "maximum_duration_unchanged": true,
+  "exchanges": [
+    {
+      "deadline_ns": 220235093000000,
+      "entry_ns": 220234093000000,
+      "maximum_frame_bytes": 240,
+      "original_error_type": "ContractError",
+      "original_error_id": 1842213726016,
+      "return_or_raise_ns": 220234656000000,
+      "pre_cleanup_transport_state": {
+        "stdout_bytes": 0,
+        "stderr_bytes": 0,
+        "stdout_available": 289,
+        "stderr_available": 0,
+        "exit_code": null,
+        "poll_count": 94
+      }
+    }
+  ],
+  "launches": [
+    {
+      "image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac1-20261014\\build-r2\\isolated_worker.exe",
+      "arguments": [
+        "hold",
+        "30000"
+      ],
+      "launch_entry_ns": 220233468000000,
+      "launch_return_ns": 220234093000000,
+      "returned": true,
+      "pid": 2044,
+      "creation_time": 134369923456815315,
+      "last_error": 0
+    },
+    {
+      "image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\overlong.exe",
+      "arguments": [
+        "observe-v1"
+      ],
+      "launch_entry_ns": 220234093000000,
+      "launch_return_ns": 220234484000000,
+      "returned": true,
+      "pid": 27000,
+      "creation_time": 134369923463172271,
+      "last_error": 0
+    }
+  ],
+  "pipe_events": [
+    {
+      "event": "exchange_enter",
+      "monotonic_ns": 220234093000000,
+      "deadline_ns": 220235093000000
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234484000000,
+      "operation": "WriteFile",
+      "handle": 676
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "WriteFile",
+      "monotonic_ns": 220234484000000,
+      "returned": 1,
+      "last_error": 0,
+      "transferred": 240
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234484000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234484000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234484000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234484000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234515000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234515000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234531000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234531000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234546000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234546000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234562000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234562000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234578000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234578000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234593000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234593000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234609000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234609000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234625000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234625000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234640000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234640000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 688
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 0
+    },
+    {
+      "event": "pipe_api_enter",
+      "monotonic_ns": 220234656000000,
+      "operation": "PeekNamedPipe",
+      "handle": 704
+    },
+    {
+      "event": "pipe_api_return",
+      "operation": "PeekNamedPipe",
+      "monotonic_ns": 220234656000000,
+      "returned": 1,
+      "last_error": 0,
+      "available": 289
+    },
+    {
+      "event": "exchange_leave_before_source_cleanup",
+      "monotonic_ns": 220234656000000
+    }
+  ],
+  "custody": [
+    {
+      "pid": 2044,
+      "creation_time": 134369923456815315,
+      "lifetime_closed": true,
+      "process_closed": true,
+      "thread_closed": true,
+      "job_closed": true,
+      "remaining_query_exports": 0
+    },
+    {
+      "pid": 27000,
+      "creation_time": 134369923463172271,
+      "lifetime_closed": true,
+      "process_closed": true,
+      "thread_closed": true,
+      "job_closed": true,
+      "remaining_query_exports": 0
+    }
+  ],
+  "clock": {
+    "state": "CLOSED",
+    "registered": false,
+    "sampler_alive": false
+  },
+  "new_threads_remaining": [],
+  "original_fixture_receipts": [
+    {
+      "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+      "fixture": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\runner-repair-r1\\work\\observer\\run-once\\child\\fixtures\\.agents\\fixtures\\ob1-4643b51d74c04d909f825bf126b73e2d",
+      "observations": [
+        {
+          "request_commitment": "sha256:fdcde314eb656b6adfb94c980002fffbb88da5067f69bb52591ff76f468e7a3f",
+          "operation_id": "controlled:effect",
+          "observer_commitment": "sha256:f75c86f3f2ff823351f21f74d11ba26e535009c9901820d2845e9990a331d3dd",
+          "native_image_sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+          "python_sha256": "658cc277dcda70547150a39eb76de45ea4a2e0ec36652c94741cb59d290e6e7f",
+          "cleanup": {
+            "observer_identity": {
+              "pid": 27000,
+              "creation_time": 134369923463172271,
+              "image_sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856"
+            },
+            "observer_lifetime_closed": true,
+            "pending_channel_handles": [],
+            "uncertain_channel_handles": [],
+            "pending_query_handles": [],
+            "query_lease_closed": true,
+            "closed": true,
+            "retirement_active_process_samples": [
+              0
+            ],
+            "transport_state": {
+              "stdout_bytes": 0,
+              "stderr_bytes": 0,
+              "stdout_available": 289,
+              "stderr_available": 0,
+              "exit_code": null,
+              "poll_count": 94
+            },
+            "cleanup_errors": []
+          },
+          "accepted": false,
+          "failure": "ContractError"
+        }
+      ],
+      "controls": [
+        {
+          "controlled_negative_native_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\overlong.exe",
+          "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+          "production_registered": false
+        }
+      ],
+      "closed_targets": [
+        {
+          "pid": 2044,
+          "creation_time": 134369923456815315,
+          "lifetime_closed": true,
+          "remaining_query_exports": 0
+        }
+      ],
+      "clock_closed": true,
+      "cleanup_failures": []
+    }
+  ],
+  "capture_errors": [],
+  "forbidden_events": [],
+  "capture_complete": true,
+  "original_case_passed": true,
+  "exit_status": 0,
+  "raw": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/runner-repair-r1/work/observer/run-once/child/RAW.txt",
+    "sha256": "37608d2488e17cbfe0196bc1a52d5186753d107966fec209e988761cb6a0fe27"
+  },
+  "automatic_retry": false,
+  "profiles": false,
+  "Source_publication": false,
+  "product_acceptance": false,
+  "interpretation_limit": "Read-only wrappers add measurement overhead. A repeat alone does not establish the cause of the earlier run."
+}

@@ -18,9 +18,11 @@ NATIVE_TOKEN_DIAGNOSTIC_RECEIPTS = []
 class _ControlledBuffers:
     """DATA_ONLY parser fixture: numeric handles here are never native handles."""
     def __init__(self, *, app=1, capabilities=0, integrity='S-1-16-4096',
-                 restricted=True, sid=SID, matches=True):
+                 restricted=True, sid=SID, matches=True, restricted_count=None, restriction_error_code=0):
         self.app, self.capabilities = app, capabilities
         self.integrity, self.restricted, self.sid, self.matches = integrity, restricted, sid, matches
+        self.restricted_count = int(restricted) if restricted_count is None else restricted_count
+        self.restriction_error_code = restriction_error_code
         self._pending_token_outputs, self._pending_handles = [], []
         self.calls, self.closed, self.storage = [], [], []
         self.query_error, self.query_failure, self.short_class = None, None, None
@@ -41,6 +43,12 @@ class _ControlledBuffers:
         elif information_class == 31: value = C.c_void_p(101)
         elif information_class == 30: value = module.DWORD(self.capabilities)
         elif information_class == 25: value = module.SID_AND_ATTRIBUTES(202, 0)
+        elif information_class == 11:
+            size = module.TOKEN_GROUPS.groups.offset + self.restricted_count * C.sizeof(module.SID_AND_ATTRIBUTES)
+            storage = C.create_string_buffer(max(4, size))
+            module.DWORD.from_buffer(storage).value = self.restricted_count
+            self.storage.append(storage)
+            return storage
         else: raise AssertionError('undeclared token class')
         storage = C.create_string_buffer(C.string_at(C.byref(value), C.sizeof(value)), C.sizeof(value))
         self.storage.append(storage)
@@ -58,6 +66,7 @@ class _ControlledBuffers:
     def IsTokenRestricted(self, token):
         self.calls.append(('restricted',))
         if self.restriction_error is not None: raise self.restriction_error
+        C.set_last_error(self.restriction_error_code)
         return self.restricted
 
     def queue_handle(self, handle):
@@ -86,13 +95,12 @@ class IsolationTokenDiagnosticTests(unittest.TestCase):
         self.assertLess(len(json.dumps(result, sort_keys=True)), 2048)
         return result
 
-    def test_each_existing_qualification_predicate_keeps_rejecting_measured_value(self):
+    def test_appcontainer_capability_integrity_predicates_keep_rejecting_measured_value(self):
         for changes, key, value in (({'app': 0}, 'is_appcontainer_dword', 0),
             ({'app': 2}, 'is_appcontainer_dword', 2),
             ({'capabilities': 1}, 'capability_count', 1),
             ({'integrity': 'S-1-16-0'}, 'integrity_rid', 0),
-            ({'integrity': 'S-1-16-8192'}, 'integrity_rid', 8192),
-            ({'restricted': False}, 'is_token_restricted', False)):
+            ({'integrity': 'S-1-16-8192'}, 'integrity_rid', 8192)):
             with self.subTest(changes=changes):
                 result = self.rejected(_ControlledBuffers(**changes))
                 self.assertEqual(result[key], value)
@@ -106,10 +114,10 @@ class IsolationTokenDiagnosticTests(unittest.TestCase):
     def test_qualified_controlled_shape_preserves_query_order_and_is_data_only(self):
         api = _ControlledBuffers()
         facts = self.observe(api)
-        self.assertEqual(facts, module.IsolationTokenFacts(SID, True, 0, 4096, True, 11))
+        self.assertEqual(facts, module.IsolationTokenFacts(SID, True, 0, 4096, True, 11, 1, 0, 1))
         self.assertEqual(api.calls, [('open', 55, 8), ('query', 29), ('query', 31),
             ('equal_sid', 101, 303), ('query', 30), ('query', 25), ('sid_text', 202),
-            ('sid_text', 101), ('restricted',), ('cleanup', ('handles',))])
+            ('sid_text', 101), ('restricted',), ('query', 11), ('cleanup', ('handles',))])
         self.assertEqual(api.closed, [7701])
 
     def test_partial_query_failure_omits_unobserved_values_and_preserves_primary(self):
@@ -221,7 +229,7 @@ class IsolationTokenDiagnosticTests(unittest.TestCase):
         self.assertNotIn('observed_monotonic_ns', result)
 
     def test_snapshot_is_copied_and_contains_no_native_buffers_or_addresses(self):
-        api = _ControlledBuffers(restricted=False)
+        api = _ControlledBuffers(app=0)
         result = self.rejected(api)
         for storage in api.storage: C.memset(storage, 255, len(storage))
         self.assertEqual(result['capability_count'], 0)
@@ -229,10 +237,128 @@ class IsolationTokenDiagnosticTests(unittest.TestCase):
         self.assertTrue(all(type(value) in (str, int, bool) for value in result.values()))
         self.assertEqual(set(result), {'schema', 'classification', 'stage', 'is_appcontainer_dword',
             'appcontainer_sid_matches_expected', 'capability_count', 'integrity_sid', 'appcontainer_sid',
-            'integrity_rid', 'is_token_restricted', 'observed_monotonic_ns'})
+            'integrity_rid', 'is_token_restricted', 'observed_monotonic_ns',
+            'restriction_raw_result', 'restriction_last_error', 'restricted_sid_count', 'restriction_query_bytes'})
+
+    def test_false_with_successful_empty_sid_list_is_measured_not_assumed(self):
+        api = _ControlledBuffers(restricted=False, restricted_count=0)
+        facts = self.observe(api)
+        self.assertFalse(facts.restricted)
+        self.assertEqual((facts.restricted_sid_count, facts.restriction_last_error), (0, 0))
+        self.assertIn(('query', 11), api.calls)
+        self.assertEqual(api.closed, [7701])
+
+    def test_false_api_error_is_unavailable_and_never_qualified(self):
+        api = _ControlledBuffers(restricted=False, restriction_error_code=5)
+        result = self.rejected(api, code='ISOLATION_RESTRICTION_QUERY_FAILED')
+        self.assertEqual(result['restriction_last_error'], 5)
+        self.assertNotIn('restricted_sid_count', result)
+        self.assertNotIn(('query', 11), api.calls)
+
+    def test_restricting_list_and_boolean_must_agree(self):
+        for changes in ({'restricted': False, 'restricted_count': 1},
+                        {'restricted': True, 'restricted_count': 0}):
+            result = self.rejected(_ControlledBuffers(**changes), code='ISOLATION_RESTRICTION_OBSERVATIONS_DISAGREE')
+            self.assertEqual(result['stage'], 'COMPARE_RESTRICTION_OBSERVATIONS')
+            self.assertNotIn('observed_monotonic_ns', result)
+
+    def test_restricting_list_query_failure_and_truncation_keep_cleanup(self):
+        api, primary = _ControlledBuffers(restricted=False), SystemExit(75)
+        api.query_failure, api.query_error = 11, primary
+        with self.assertRaises(SystemExit) as caught: self.observe(api)
+        self.assertIs(caught.exception, primary)
+        result = primary.native_isolation_token_observation
+        self.assertEqual(result['stage'], 'QUERY_RESTRICTED_SIDS')
+        self.assertEqual(result['restriction_last_error'], 0)
+        self.assertNotIn('restricted_sid_count', result)
+        self.assertEqual(api.closed, [7701])
+        api = _ControlledBuffers(); api.short_class = 11
+        self.rejected(api, code='ISOLATION_RESTRICTION_QUERY_SIZE_INVALID')
+
+    def test_group_count_is_bounded_without_dereferencing_any_sid(self):
+        for count, size in ((1, 4), (4097, 65536), (0xffffffff, 8), (0, 65537), (4096, 65544)):
+            storage = C.create_string_buffer(size)
+            module.DWORD.from_buffer(storage).value = count
+            with self.subTest(count=count), self.assertRaises(ContractError): module._restricted_sid_count(storage)
+        zero = C.create_string_buffer(4)
+        self.assertEqual(module._restricted_sid_count(zero), 0)
+
+
+class DiagnosticTestCustodyControls(unittest.TestCase):
+    """Execute the new diagnostic test body with DATA_ONLY API substitutions."""
+    def test_exact_body_preserves_control_primary_receipt_and_recovery_custody(self):
+        class Controlled(_ControlledBuffers):
+            def GetCurrentProcess(self): return 55
+            def pending_native_resources(self):
+                return tuple({'kind': 'CONTROLLED_HANDLE', 'handle': row['handle']}
+                             for row in self._pending_handles)
+        for primary_kind, fail_cleanup in ((None, False), (KeyboardInterrupt, True),
+                                           (SystemExit, True), (None, True)):
+            api = Controlled(restricted=False, restricted_count=0)
+            primary = None if primary_kind is None else primary_kind('DATA_ONLY primary')
+            if primary is not None:
+                api.query_failure, api.query_error = 11, primary
+            secondary = RuntimeError('DATA_ONLY cleanup') if fail_cleanup else None
+            api.cleanup_error = secondary
+            receipts, caught = [], None
+            case = NativeCurrentTokenDiagnosticTests('test_actual_current_token_restricting_list_and_immediate_error_agree')
+            with patch.object(module, '_IsolationAPI', return_value=api), \
+                    patch.dict(globals(), NATIVE_TOKEN_DIAGNOSTIC_RECEIPTS=receipts):
+                try: case.test_actual_current_token_restricting_list_and_immediate_error_agree()
+                except BaseException as error: caught = error
+            with self.subTest(primary=primary_kind, cleanup_failure=fail_cleanup):
+                self.assertEqual(len(receipts), 1)
+                self.assertFalse(receipts[0]['isolation_qualified'])
+                if primary is not None:
+                    self.assertIs(caught, primary)
+                elif fail_cleanup:
+                    self.assertIsInstance(caught, module.IsolatedLaunchError)
+                    self.assertIs(caught.__cause__, secondary)
+                else:
+                    self.assertIsNone(caught)
+                if fail_cleanup:
+                    raw = BaseException.__dict__['__dict__'].__get__(caught)
+                    cleanup = raw.get('isolation_cleanup', caught)
+                    self.assertIs(cleanup.isolation_api, api)
+                    self.assertEqual(receipts[0]['pending_resources'],
+                                     [{'kind': 'CONTROLLED_HANDLE', 'handle': 7701}])
+                    api.cleanup_error = None
+                    cleanup.close_cleanup()
+                self.assertEqual(api.pending_native_resources(), ())
+                self.assertEqual(api.closed, [7701])
 
 
 class NativeCurrentTokenDiagnosticTests(unittest.TestCase):
+    def test_actual_current_token_restricting_list_and_immediate_error_agree(self):
+        api, token = module._IsolationAPI(), module.HANDLE()
+        observation = primary = None
+        try:
+            self.assertTrue(api.OpenProcessToken(api.GetCurrentProcess(), 8, C.byref(token)))
+            C.set_last_error(0)
+            raw = int(api.IsTokenRestricted(token))
+            error = C.get_last_error()
+            data = api.token_data(token, 11)
+            count = module._restricted_sid_count(data)
+            observation = {'restriction_raw_result': raw, 'restriction_last_error': error,
+                'restricted_sid_count': count, 'restriction_query_bytes': len(data)}
+            if raw == 0: self.assertEqual(error, 0)
+            self.assertEqual(bool(raw), count > 0)
+        except BaseException as error:
+            primary = error
+            raise
+        finally:
+            if token.value: api.queue_handle(token.value)
+            try:
+                module._finish_cleanup(api, primary)
+            finally:
+                NATIVE_TOKEN_DIAGNOSTIC_RECEIPTS.append({'test_id': self.id(),
+                    'operation': 'CURRENT_PROCESS_TOKEN_QUERY_ONLY', 'observation': observation,
+                    'profile_operations': [], 'worker_launches': [],
+                    'primary_type': None if primary is None else type(primary).__name__,
+                    'pending_resources': list(api.pending_native_resources()),
+                    'isolation_qualified': False})
+        self.assertEqual(api.pending_native_resources(), ())
+
     def test_actual_current_process_rejection_and_token_sid_allocation_retirement(self):
         api = module._IsolationAPI()
         calls, real_close = [], api.CloseHandle
