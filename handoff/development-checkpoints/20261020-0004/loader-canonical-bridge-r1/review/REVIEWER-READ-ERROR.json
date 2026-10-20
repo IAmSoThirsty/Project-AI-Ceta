@@ -1,0 +1,8 @@
+{
+  "actual_error": "IndexError: list index out of range",
+  "classification": "Reviewer read-range mistake; source read-only",
+  "correction": "Relevant pending()/continue_current source was already displayed; subsequent reads used bounded ranges.",
+  "operation": "Read fixed source line range beyond file end",
+  "source_or_host_mutation": false,
+  "tool_chunk": "78c04a"
+}

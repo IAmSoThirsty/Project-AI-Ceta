@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "run",
+    "verify",
+    "ceta-development-checkpoint-0003-20261020",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\development-checkpoint-20261020\\checkpoint-0003\\control"
+  ],
+  "exit_status": 0,
+  "response": {
+    "allowed": true,
+    "event_count": 15,
+    "graph_fingerprint": "2b6d309d463f542d6a08d93c5a6e18444ed92cd8e3d0db1bde752971e9df490f",
+    "ledger_head": "5cbaf10b4fd5b9662dec1b0579bf6aa2c6ee4dec3a07b7353aaa94830f07f0f9",
+    "receipts_valid": true,
+    "run_id": "ceta-development-checkpoint-0003-20261020",
+    "states": {
+      "discover": "SUCCEEDED",
+      "implement": "SUCCEEDED",
+      "integrate": "SUCCEEDED",
+      "plan": "SUCCEEDED",
+      "review": "SUCCEEDED",
+      "validate": "SUCCEEDED"
+    },
+    "terminal_success": true
+  }
+}

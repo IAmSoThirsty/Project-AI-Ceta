@@ -1,0 +1,489 @@
+{
+  "at": "2026-10-20T19:56:44.677816+00:00",
+  "scope": "Read-only exact source/dependency byte readback",
+  "canonical_callers": [
+    {
+      "role": "helper",
+      "repository_relative_path": ".agents/runtime/ac1-20261014/native_fixture_support.py",
+      "sha256": "a7247426deee70890107b9d826c7cda9209015edd5f1192f93ee3bd1e5a4314f",
+      "units": [
+        {
+          "name": "security_api",
+          "first_line": 13,
+          "last_line": 23
+        },
+        {
+          "name": "owner_sid",
+          "first_line": 26,
+          "last_line": 32
+        },
+        {
+          "name": "process_integrity",
+          "first_line": 35,
+          "last_line": 41
+        },
+        {
+          "name": "assign_security",
+          "first_line": 44,
+          "last_line": 63
+        },
+        {
+          "name": "prepare_fixture",
+          "first_line": 66,
+          "last_line": 101
+        },
+        {
+          "name": "read_pipe",
+          "first_line": 104,
+          "last_line": 115
+        },
+        {
+          "name": "run_native_probe",
+          "first_line": 118,
+          "last_line": 195
+        }
+      ]
+    },
+    {
+      "role": "support",
+      "repository_relative_path": ".agents/runtime/ac3-20261014/ac3_support.py",
+      "sha256": "cb44b9f5d4cc50764b486181ad01c41bfee970e91af64338481134c42640096b",
+      "units": [
+        {
+          "name": "utc",
+          "first_line": 17,
+          "last_line": 17
+        },
+        {
+          "name": "digest",
+          "first_line": 18,
+          "last_line": 18
+        },
+        {
+          "name": "sha",
+          "first_line": 19,
+          "last_line": 19
+        },
+        {
+          "name": "reference",
+          "first_line": 20,
+          "last_line": 20
+        },
+        {
+          "name": "write_new",
+          "first_line": 22,
+          "last_line": 25
+        },
+        {
+          "name": "ordinary",
+          "first_line": 31,
+          "last_line": 36
+        },
+        {
+          "name": "invoke",
+          "first_line": 38,
+          "last_line": 50
+        },
+        {
+          "name": "claim",
+          "first_line": 52,
+          "last_line": 53
+        },
+        {
+          "name": "complete",
+          "first_line": 55,
+          "last_line": 71
+        }
+      ]
+    },
+    {
+      "role": "driver",
+      "repository_relative_path": ".agents/ac7-token-contract-20261020/tools/qualify_isolated_worker.py",
+      "sha256": "79da07922e6a7f56cca0ae9d90a2498c3d6f28a58dcb6bd3144ab56a87b5bd84",
+      "units": [
+        {
+          "name": "require",
+          "first_line": 31,
+          "last_line": 32
+        },
+        {
+          "name": "capture",
+          "first_line": 42,
+          "last_line": 54
+        },
+        {
+          "name": "observed",
+          "first_line": 56,
+          "last_line": 56
+        },
+        {
+          "name": "read",
+          "first_line": 57,
+          "last_line": 57
+        },
+        {
+          "name": "sha",
+          "first_line": 58,
+          "last_line": 58
+        },
+        {
+          "name": "save",
+          "first_line": 59,
+          "last_line": 65
+        },
+        {
+          "name": "write_payload",
+          "first_line": 67,
+          "last_line": 73
+        },
+        {
+          "name": "source_cut",
+          "first_line": 97,
+          "last_line": 101
+        },
+        {
+          "name": "candidate_cut",
+          "first_line": 103,
+          "last_line": 106
+        },
+        {
+          "name": "folder",
+          "first_line": 108,
+          "last_line": 145
+        },
+        {
+          "name": "user_sid",
+          "first_line": 147,
+          "last_line": 165
+        },
+        {
+          "name": "inspect",
+          "first_line": 167,
+          "last_line": 173
+        },
+        {
+          "name": "_native_path",
+          "first_line": 176,
+          "last_line": 194
+        },
+        {
+          "name": "check_launch_paths",
+          "first_line": 196,
+          "last_line": 207
+        },
+        {
+          "name": "prepare_probe",
+          "first_line": 209,
+          "last_line": 280
+        },
+        {
+          "name": "assert_isolation",
+          "first_line": 282,
+          "last_line": 283
+        },
+        {
+          "name": "describe",
+          "first_line": 285,
+          "last_line": 305
+        },
+        {
+          "name": "_QualificationRun",
+          "first_line": 307,
+          "last_line": 544
+        },
+        {
+          "name": "validate_operator_record",
+          "first_line": 546,
+          "last_line": 556
+        },
+        {
+          "name": "qualify",
+          "first_line": 558,
+          "last_line": 575
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "repository_relative_path": ".agents/pr4-20261014/preserve_ceta_complete.py",
+      "sha256": "2ccbca31973ead308e1cdcc6676bbd7371cdec29a0f16178f3f55a4ab4130618",
+      "units": [
+        {
+          "name": "PreservationError",
+          "first_line": 43,
+          "last_line": 44
+        },
+        {
+          "name": "require",
+          "first_line": 47,
+          "last_line": 49
+        },
+        {
+          "name": "utc",
+          "first_line": 52,
+          "last_line": 53
+        },
+        {
+          "name": "sha",
+          "first_line": 56,
+          "last_line": 57
+        },
+        {
+          "name": "io_path",
+          "first_line": 60,
+          "last_line": 67
+        },
+        {
+          "name": "lstat",
+          "first_line": 70,
+          "last_line": 71
+        },
+        {
+          "name": "exists",
+          "first_line": 74,
+          "last_line": 79
+        },
+        {
+          "name": "reparse",
+          "first_line": 82,
+          "last_line": 83
+        },
+        {
+          "name": "safe_components",
+          "first_line": 86,
+          "last_line": 101
+        },
+        {
+          "name": "same_path",
+          "first_line": 104,
+          "last_line": 105
+        },
+        {
+          "name": "inside",
+          "first_line": 108,
+          "last_line": 112
+        },
+        {
+          "name": "relative_name",
+          "first_line": 115,
+          "last_line": 126
+        },
+        {
+          "name": "child",
+          "first_line": 129,
+          "last_line": 130
+        },
+        {
+          "name": "write_new",
+          "first_line": 133,
+          "last_line": 135
+        },
+        {
+          "name": "write_json",
+          "first_line": 138,
+          "last_line": 139
+        },
+        {
+          "name": "read_bytes",
+          "first_line": 142,
+          "last_line": 144
+        },
+        {
+          "name": "open_source",
+          "first_line": 148,
+          "last_line": 185
+        },
+        {
+          "name": "ProtectionScanner",
+          "first_line": 188,
+          "last_line": 228
+        },
+        {
+          "name": "hash_and_protection",
+          "first_line": 231,
+          "last_line": 238
+        },
+        {
+          "name": "hash_file",
+          "first_line": 241,
+          "last_line": 243
+        },
+        {
+          "name": "file_identity",
+          "first_line": 246,
+          "last_line": 249
+        },
+        {
+          "name": "Policy",
+          "first_line": 252,
+          "last_line": 295
+        },
+        {
+          "name": "potential_sensitive",
+          "first_line": 298,
+          "last_line": 302
+        },
+        {
+          "name": "validate_public_certificate",
+          "first_line": 305,
+          "last_line": 319
+        },
+        {
+          "name": "validate_fixture_marker",
+          "first_line": 322,
+          "last_line": 336
+        },
+        {
+          "name": "assess_file",
+          "first_line": 339,
+          "last_line": 373
+        },
+        {
+          "name": "reparse_descriptor",
+          "first_line": 376,
+          "last_line": 400
+        },
+        {
+          "name": "tree_inventory",
+          "first_line": 403,
+          "last_line": 433
+        },
+        {
+          "name": "git_environment",
+          "first_line": 436,
+          "last_line": 440
+        },
+        {
+          "name": "git",
+          "first_line": 443,
+          "last_line": 449
+        },
+        {
+          "name": "text_git",
+          "first_line": 452,
+          "last_line": 453
+        },
+        {
+          "name": "discover_git_dirs",
+          "first_line": 456,
+          "last_line": 482
+        },
+        {
+          "name": "git_metadata_preflight",
+          "first_line": 485,
+          "last_line": 495
+        },
+        {
+          "name": "observation_bytes",
+          "first_line": 498,
+          "last_line": 507
+        },
+        {
+          "name": "create_read_view",
+          "first_line": 510,
+          "last_line": 554
+        },
+        {
+          "name": "view_git",
+          "first_line": 557,
+          "last_line": 567
+        },
+        {
+          "name": "validate_active_exclusion",
+          "first_line": 570,
+          "last_line": 585
+        },
+        {
+          "name": "git_object_paths",
+          "first_line": 588,
+          "last_line": 651
+        },
+        {
+          "name": "git_state",
+          "first_line": 654,
+          "last_line": 710
+        },
+        {
+          "name": "snapshot",
+          "first_line": 713,
+          "last_line": 716
+        },
+        {
+          "name": "stream_objects",
+          "first_line": 719,
+          "last_line": 750
+        },
+        {
+          "name": "stream_object_blobs",
+          "first_line": 753,
+          "last_line": 757
+        },
+        {
+          "name": "git_sensitive",
+          "first_line": 760,
+          "last_line": 802
+        },
+        {
+          "name": "add_file",
+          "first_line": 805,
+          "last_line": 826
+        },
+        {
+          "name": "archive_tree",
+          "first_line": 829,
+          "last_line": 839
+        },
+        {
+          "name": "export_objects",
+          "first_line": 842,
+          "last_line": 847
+        },
+        {
+          "name": "capture",
+          "first_line": 850,
+          "last_line": 928
+        },
+        {
+          "name": "load_json",
+          "first_line": 931,
+          "last_line": 938
+        },
+        {
+          "name": "verify_archive",
+          "first_line": 941,
+          "last_line": 959
+        },
+        {
+          "name": "verify_checkpoint",
+          "first_line": 962,
+          "last_line": 1000
+        },
+        {
+          "name": "extract_tree",
+          "first_line": 1003,
+          "last_line": 1016
+        },
+        {
+          "name": "publish_new",
+          "first_line": 1019,
+          "last_line": 1029
+        },
+        {
+          "name": "restore",
+          "first_line": 1032,
+          "last_line": 1124
+        },
+        {
+          "name": "main",
+          "first_line": 1127,
+          "last_line": 1158
+        }
+      ]
+    }
+  ],
+  "r5_frozen_payloads": 148,
+  "all_r5_frozen_bytes_match": true,
+  "accepted_dependency_records_match": true,
+  "native_execution": false,
+  "actual_api_or_pointer_calls": false
+}

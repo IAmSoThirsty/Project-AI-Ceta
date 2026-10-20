@@ -1,11 +1,9 @@
-# Project-AI: CETA — development checkpoint 0003
+# Project-AI: CETA — development checkpoint 0004
 
-The existing 552 product payloads remain unchanged. This checkpoint adds byte-exact reviewed executable engineering qualification source, controlled tests and completed evidence from loader-capture-r5 and loader-nuget-trust-r1.
+The 552 product payloads and all prior exports remain unchanged except for this truthful root status update. This checkpoint adds exact reviewed V2 symbol-data derivation and canonical bridge construction source/tests/evidence. V2 passed 11 guarded data cases. The bridge passed 57 guarded cases and five independent unpatched boundary observations; these establish scoped source construction. Its trusted owner ingress remains null and native admission remains refused.
 
-R5 passed 96 guarded data cases with independent review. The retained NuGet archive signature was verified using the installed SDK and explicit policy. Those are scoped engineering results. The recorded child failure remains 0xC0000142 with module/phase UNKNOWN. Actual native symbol/debug/capture qualification, joined application acceptance and finished-product acceptance remain open.
+The recorded child failure remains 0xC0000142 with module/phase UNKNOWN. Actual DbgHelp/type-offset/PEB/debug/capture/retirement, full application and finished-product acceptance remain open. Original host-bound source cuts, acquired dependencies and installed tools are required and explicitly omitted. The unreviewed outer supervisor is excluded.
 
-The tools retain host-bound paths, pins and omitted external inputs. This export does not claim a clean-clone executable product. ENGINEERING-LOC.json separates whole newly published engineering snapshots from prior authored deltas; new product and product-test LOC in this checkpoint are both zero.
+Whole newly published engineering snapshots and actual prior author deltas are counted separately. New product source and product-test LOC in this preparation are zero. Two whitespace-bearing exact bridge diffs are stored reversibly in RAW-EVIDENCE.zip with original/archive scans and byte roundtrip. Previous historical failures, five registry fixtures and PDF transport remain preserved.
 
-Three whitespace-bearing evidence files are preserved byte-exact in deterministic RAW-EVIDENCE.zip, with raw/archive credential scans and round-trip hashes. Rejected loader reviews and the original NuGet policy failure remain historical failures. Existing PDF transport and five immutable fixtures remain intact.
-
-Publication is a distinct reviewed action. This status describes the prepared source/evidence scope and does not assert native or product completion.
+Checkpoint 0003 completed ordinary publication and seven anonymous public byte samples; its post-publication normal-index bytes/native identity/mtime match its original baseline. These are retained historical receipts. Checkpoint 0004 publication remains a separate reviewed operation; this status grants no native effect authority or product completion.
