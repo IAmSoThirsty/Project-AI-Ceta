@@ -1,0 +1,2171 @@
+{
+  "schema_version": "ceta.joined-source-application.v1",
+  "source_root": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package",
+  "candidate_root": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\app3-20261014",
+  "created_at": "2026-10-14T07:11:00.395087+00:00",
+  "bindings": [
+    {
+      "run_id": "rs2-20261014",
+      "manifest": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rs2-20261014\\TRANSFER-MANIFEST.json",
+      "manifest_sha256": "cf76d204965d54eea8af3c226aa5b02d5b37cca4bf642e4d7fbb53fe5c3c1cce",
+      "integration_state": "FAILED_DESTINATION_FULL_SUITE_WITH_147_PUBLICATIONS_PRESERVED",
+      "failure_receipt": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\rs2-20261014\\integrate.json",
+      "failure_receipt_sha256": "7f75b4d9621855d38a8da811198ae20a1aebcf412ab5af309623ab7d224693bb"
+    },
+    {
+      "run_id": "rs3-20261014",
+      "manifest": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rs3-20261014\\TRANSFER-MANIFEST.json",
+      "manifest_sha256": "864d9ab2842af8544ab69d44881ddc22a6f2ff3ec494aa3584c472ab3720e825",
+      "review": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\rs3-20261014\\independent-review\\review.json",
+      "review_sha256": "c5f13e277cd8201dbf98ef82d4d928109cb8cdba9c46bd7017546d06398f1590",
+      "changed_paths": [
+        "tests/contract/test_task_meaning_view.py",
+        "tests/contract/test_source_coverage.py"
+      ]
+    },
+    {
+      "run_id": "rd2-20261014",
+      "manifest": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rd2-20261014\\TRANSFER-MANIFEST.json",
+      "manifest_sha256": "2458ce59407e121e092c3acf0b71a2afc71ac5d1d712875ac6762603abcaa8b0",
+      "review": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\rd2-20261014\\independent-review\\review.json",
+      "review_sha256": "42a5acaa5f0761586faf6ceb3d4147879203a43a313fdc16f70cf59affdd9671",
+      "changed_paths": [
+        "src/ceta/resource/diagnostics.py",
+        "src/ceta/supervisor/windows_jobs.py",
+        "src/ceta/contracts/resource_management.py",
+        "contracts/PROCESS_DIAGNOSTICS_V1.md",
+        "tests/contract/test_process_diagnostics.py"
+      ]
+    }
+  ],
+  "payloads": [
+    {
+      "relative_path": "contracts/CANONICAL_PROFILE_V1.md",
+      "candidate_sha256": "10436b7ed2d2c71cec15cfa26c272bb9408b845487eaff9b3890a0079f136dcb",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\CANONICAL_PROFILE_V1.md",
+      "active_before_sha256": "10436b7ed2d2c71cec15cfa26c272bb9408b845487eaff9b3890a0079f136dcb",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/CANONICAL_PROFILE_V1.md",
+      "active_target_relative_to_repository": "contracts/CANONICAL_PROFILE_V1.md"
+    },
+    {
+      "relative_path": "contracts/EVENT_AND_TIME_V1.md",
+      "candidate_sha256": "f01d5d37be5bd1bac634f1510eea6b419ac58f9110c66f83d9f8c84fb292c772",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\EVENT_AND_TIME_V1.md",
+      "active_before_sha256": "f01d5d37be5bd1bac634f1510eea6b419ac58f9110c66f83d9f8c84fb292c772",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/EVENT_AND_TIME_V1.md",
+      "active_target_relative_to_repository": "contracts/EVENT_AND_TIME_V1.md"
+    },
+    {
+      "relative_path": "contracts/FRAMING_V1.md",
+      "candidate_sha256": "9f0ba379a661d26f01e2acd165f13058af6a6a884589d2a5bde6adf207b9bd6f",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\FRAMING_V1.md",
+      "active_before_sha256": "9f0ba379a661d26f01e2acd165f13058af6a6a884589d2a5bde6adf207b9bd6f",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/FRAMING_V1.md",
+      "active_target_relative_to_repository": "contracts/FRAMING_V1.md"
+    },
+    {
+      "relative_path": "contracts/MEMORY_LIFECYCLE_BINDING_V1.md",
+      "candidate_sha256": "f0e4f950a46eb54b29156a7d02ba47154d744b004af6094b75f42153fff4af50",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\MEMORY_LIFECYCLE_BINDING_V1.md",
+      "active_before_sha256": "f0e4f950a46eb54b29156a7d02ba47154d744b004af6094b75f42153fff4af50",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/MEMORY_LIFECYCLE_BINDING_V1.md",
+      "active_target_relative_to_repository": "contracts/MEMORY_LIFECYCLE_BINDING_V1.md"
+    },
+    {
+      "relative_path": "contracts/README.md",
+      "candidate_sha256": "d60c2180a06f26404d2377430c83258995ba44c0c2ae5e8a68b965046eeb1bb9",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\README.md",
+      "active_before_sha256": "d60c2180a06f26404d2377430c83258995ba44c0c2ae5e8a68b965046eeb1bb9",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/README.md",
+      "active_target_relative_to_repository": "contracts/README.md"
+    },
+    {
+      "relative_path": "contracts/examples/README.md",
+      "candidate_sha256": "eb9625ede4cee72aa8ff3d33b63e9712441cadf29d51772b597b428587f1ac07",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\examples\\README.md",
+      "active_before_sha256": "eb9625ede4cee72aa8ff3d33b63e9712441cadf29d51772b597b428587f1ac07",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/examples/README.md",
+      "active_target_relative_to_repository": "contracts/examples/README.md"
+    },
+    {
+      "relative_path": "contracts/examples/duplicate_keys.wire.txt",
+      "candidate_sha256": "c8db9364bfda31aaa7a4d460bb5996f87ab27513baacf8307eca4c28b94c362d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\examples\\duplicate_keys.wire.txt",
+      "active_before_sha256": "c8db9364bfda31aaa7a4d460bb5996f87ab27513baacf8307eca4c28b94c362d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/examples/duplicate_keys.wire.txt",
+      "active_target_relative_to_repository": "contracts/examples/duplicate_keys.wire.txt"
+    },
+    {
+      "relative_path": "contracts/examples/observation_hash_invalid.json",
+      "candidate_sha256": "7c9ce7997edb2566026e24fa10bc6f17002b73139c6c0c6139d7f93c0adf962c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\examples\\observation_hash_invalid.json",
+      "active_before_sha256": "7c9ce7997edb2566026e24fa10bc6f17002b73139c6c0c6139d7f93c0adf962c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/examples/observation_hash_invalid.json",
+      "active_target_relative_to_repository": "contracts/examples/observation_hash_invalid.json"
+    },
+    {
+      "relative_path": "contracts/examples/observation_shape_valid.json",
+      "candidate_sha256": "b967f52b38dbdc284b33a8217f84f04a86e8c41a680115958b655b09045d936f",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\examples\\observation_shape_valid.json",
+      "active_before_sha256": "b967f52b38dbdc284b33a8217f84f04a86e8c41a680115958b655b09045d936f",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/examples/observation_shape_valid.json",
+      "active_target_relative_to_repository": "contracts/examples/observation_shape_valid.json"
+    },
+    {
+      "relative_path": "contracts/examples/observation_unknown_field_invalid.json",
+      "candidate_sha256": "cc7c3a19c39e5496643dadb5ade7270a1c8a00b1014c7020944d9a00be60d063",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\examples\\observation_unknown_field_invalid.json",
+      "active_before_sha256": "cc7c3a19c39e5496643dadb5ade7270a1c8a00b1014c7020944d9a00be60d063",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/examples/observation_unknown_field_invalid.json",
+      "active_target_relative_to_repository": "contracts/examples/observation_unknown_field_invalid.json"
+    },
+    {
+      "relative_path": "contracts/schemas/records.schema.json",
+      "candidate_sha256": "f83f8a1116492266aa9ffbbf85c4e4677218e99d8771f0de61a3affef8313f79",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\schemas\\records.schema.json",
+      "active_before_sha256": "f83f8a1116492266aa9ffbbf85c4e4677218e99d8771f0de61a3affef8313f79",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/schemas/records.schema.json",
+      "active_target_relative_to_repository": "contracts/schemas/records.schema.json"
+    },
+    {
+      "relative_path": "contracts/vectors/event-preimage-v1.json",
+      "candidate_sha256": "16e0ad4ef0974dc94dfac81d0ec252d8f017de526c204784b28a9f82fd408840",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\vectors\\event-preimage-v1.json",
+      "active_before_sha256": "16e0ad4ef0974dc94dfac81d0ec252d8f017de526c204784b28a9f82fd408840",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/vectors/event-preimage-v1.json",
+      "active_target_relative_to_repository": "contracts/vectors/event-preimage-v1.json"
+    },
+    {
+      "relative_path": "native/canonical_reference/Cargo.lock",
+      "candidate_sha256": "4724b58ec90985c7c942ae34a8274fd672a70e8df6d12bb662803123b5b7ceeb",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\native\\canonical_reference\\Cargo.lock",
+      "active_before_sha256": "4724b58ec90985c7c942ae34a8274fd672a70e8df6d12bb662803123b5b7ceeb",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/native/canonical_reference/Cargo.lock",
+      "active_target_relative_to_repository": "native/canonical_reference/Cargo.lock"
+    },
+    {
+      "relative_path": "native/canonical_reference/Cargo.toml",
+      "candidate_sha256": "36ca542ca6ce5bb601933c9b827b0ae3497d25cbbc754bd3f6c648ed27d40807",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\native\\canonical_reference\\Cargo.toml",
+      "active_before_sha256": "36ca542ca6ce5bb601933c9b827b0ae3497d25cbbc754bd3f6c648ed27d40807",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/native/canonical_reference/Cargo.toml",
+      "active_target_relative_to_repository": "native/canonical_reference/Cargo.toml"
+    },
+    {
+      "relative_path": "native/canonical_reference/rust-toolchain.toml",
+      "candidate_sha256": "0c9dcfc03e6af2306f8cdf3d59623827cb2027fb174e35fc1d3187917b06ac5b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\native\\canonical_reference\\rust-toolchain.toml",
+      "active_before_sha256": "0c9dcfc03e6af2306f8cdf3d59623827cb2027fb174e35fc1d3187917b06ac5b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/native/canonical_reference/rust-toolchain.toml",
+      "active_target_relative_to_repository": "native/canonical_reference/rust-toolchain.toml"
+    },
+    {
+      "relative_path": "native/canonical_reference/src/main.rs",
+      "candidate_sha256": "228db1793a35cfca30cfc7a779ad05891a76b096368259560d403230e91deafc",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\native\\canonical_reference\\src\\main.rs",
+      "active_before_sha256": "228db1793a35cfca30cfc7a779ad05891a76b096368259560d403230e91deafc",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/native/canonical_reference/src/main.rs",
+      "active_target_relative_to_repository": "native/canonical_reference/src/main.rs"
+    },
+    {
+      "relative_path": "requirements-contract-tests.lock",
+      "candidate_sha256": "38bb3e30f38af1f9bf30c0fdb63a05c16c4338e1e2913f27c90197b135c54386",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\requirements-contract-tests.lock",
+      "active_before_sha256": "38bb3e30f38af1f9bf30c0fdb63a05c16c4338e1e2913f27c90197b135c54386",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/requirements-contract-tests.lock",
+      "active_target_relative_to_repository": "requirements-contract-tests.lock"
+    },
+    {
+      "relative_path": "requirements-contract-tests.txt",
+      "candidate_sha256": "8f875bd16b4bea3d68e3d62846e3ad0abc2d3591946b9c0af146fcac8455b4e0",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\requirements-contract-tests.txt",
+      "active_before_sha256": "8f875bd16b4bea3d68e3d62846e3ad0abc2d3591946b9c0af146fcac8455b4e0",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/requirements-contract-tests.txt",
+      "active_target_relative_to_repository": "requirements-contract-tests.txt"
+    },
+    {
+      "relative_path": "src/ceta/__init__.py",
+      "candidate_sha256": "09ebb86780abd7a9c66ad952bcfcdeff3929142e11032fcb398f03c655fe70b5",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\__init__.py",
+      "active_before_sha256": "09ebb86780abd7a9c66ad952bcfcdeff3929142e11032fcb398f03c655fe70b5",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/__init__.py",
+      "candidate_sha256": "3c3f815d0e9f143ecfcf4b5b67c25778cbe7a6c0b8aa7cac05d45fb6a1d34568",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\__init__.py",
+      "active_before_sha256": "3c3f815d0e9f143ecfcf4b5b67c25778cbe7a6c0b8aa7cac05d45fb6a1d34568",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/events.py",
+      "candidate_sha256": "e58c332a9214335b93baa0ec9fef05892ef9f8e9c8f42739c18ffa35df25c6fa",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\events.py",
+      "active_before_sha256": "e58c332a9214335b93baa0ec9fef05892ef9f8e9c8f42739c18ffa35df25c6fa",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/events.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/events.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/framing.py",
+      "candidate_sha256": "4a63d85fca04592276c8c9f7c0a9ad53c5b3629a5190b6042071bdb0dc48a71d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\framing.py",
+      "active_before_sha256": "4a63d85fca04592276c8c9f7c0a9ad53c5b3629a5190b6042071bdb0dc48a71d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/framing.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/framing.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/memory_lifecycle.py",
+      "candidate_sha256": "d666da5890a425c6e3c9e845a07f83512c8910945ac04a5d82f36c190b56e5c1",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\memory_lifecycle.py",
+      "active_before_sha256": "d666da5890a425c6e3c9e845a07f83512c8910945ac04a5d82f36c190b56e5c1",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/memory_lifecycle.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/memory_lifecycle.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/temporal.py",
+      "candidate_sha256": "df3a3c2e28945bf75c998521b3d717cdf3b2218b2947052c07e5709bf0e6631d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\temporal.py",
+      "active_before_sha256": "df3a3c2e28945bf75c998521b3d717cdf3b2218b2947052c07e5709bf0e6631d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/temporal.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/temporal.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/wire.py",
+      "candidate_sha256": "23d6e827972cd577ff86feffca50b99902f07b274cc99344ead9653efe9b1279",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\wire.py",
+      "active_before_sha256": "23d6e827972cd577ff86feffca50b99902f07b274cc99344ead9653efe9b1279",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/wire.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/wire.py"
+    },
+    {
+      "relative_path": "tests/contract/test_all_records.py",
+      "candidate_sha256": "d59723fc6c001a7b8ca74488cc7f728c2f840fd67c5a0380a039e1fdc4cda0ea",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_all_records.py",
+      "active_before_sha256": "d59723fc6c001a7b8ca74488cc7f728c2f840fd67c5a0380a039e1fdc4cda0ea",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_all_records.py",
+      "active_target_relative_to_repository": "tests/contract/test_all_records.py"
+    },
+    {
+      "relative_path": "tests/contract/test_events.py",
+      "candidate_sha256": "b08c56ae4eeffd260906ba96fd27399932d654e0af59824033aceaafbddc7597",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_events.py",
+      "active_before_sha256": "b08c56ae4eeffd260906ba96fd27399932d654e0af59824033aceaafbddc7597",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_events.py",
+      "active_target_relative_to_repository": "tests/contract/test_events.py"
+    },
+    {
+      "relative_path": "tests/contract/test_framing.py",
+      "candidate_sha256": "6dc949823e4b9c7188b9ee108d028b683766b170449dc00006346ed0334f9adc",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_framing.py",
+      "active_before_sha256": "6dc949823e4b9c7188b9ee108d028b683766b170449dc00006346ed0334f9adc",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_framing.py",
+      "active_target_relative_to_repository": "tests/contract/test_framing.py"
+    },
+    {
+      "relative_path": "tests/contract/test_memory_lifecycle.py",
+      "candidate_sha256": "c549048eec99ba98665f2cff8bb5dca0c9d7d035b8c1b14fab42540ef482fb78",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_memory_lifecycle.py",
+      "active_before_sha256": "c549048eec99ba98665f2cff8bb5dca0c9d7d035b8c1b14fab42540ef482fb78",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_memory_lifecycle.py",
+      "active_target_relative_to_repository": "tests/contract/test_memory_lifecycle.py"
+    },
+    {
+      "relative_path": "tests/contract/test_temporal.py",
+      "candidate_sha256": "ea514810418087d632c770d770d36d368ccdfd65c98484fbc902c8c517a24c98",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_temporal.py",
+      "active_before_sha256": "ea514810418087d632c770d770d36d368ccdfd65c98484fbc902c8c517a24c98",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_temporal.py",
+      "active_target_relative_to_repository": "tests/contract/test_temporal.py"
+    },
+    {
+      "relative_path": "tests/contract/test_wire.py",
+      "candidate_sha256": "02943b6e323af85424bb07fc90b1d03d1fcf1db1d2aae079bc2df2ca4c3d30fe",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_wire.py",
+      "active_before_sha256": "02943b6e323af85424bb07fc90b1d03d1fcf1db1d2aae079bc2df2ca4c3d30fe",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_wire.py",
+      "active_target_relative_to_repository": "tests/contract/test_wire.py"
+    },
+    {
+      "relative_path": "tools/build_native_reference.py",
+      "candidate_sha256": "905f4ac9fe457e066be39cec44f4524174f4e6de90e3c9ec9570e84abaac16e5",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\build_native_reference.py",
+      "active_before_sha256": "905f4ac9fe457e066be39cec44f4524174f4e6de90e3c9ec9570e84abaac16e5",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/build_native_reference.py",
+      "active_target_relative_to_repository": "tools/build_native_reference.py"
+    },
+    {
+      "relative_path": "tools/check_contracts.py",
+      "candidate_sha256": "6592f575ba31cf85ea43f1cceaa0c4dfc51c5536989c6cd509e4006a5bf9a205",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\check_contracts.py",
+      "active_before_sha256": "6592f575ba31cf85ea43f1cceaa0c4dfc51c5536989c6cd509e4006a5bf9a205",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/check_contracts.py",
+      "active_target_relative_to_repository": "tools/check_contracts.py"
+    },
+    {
+      "relative_path": "tools/compare_canonical_implementations.py",
+      "candidate_sha256": "ae0c12749b410a1227d64e352b5225ee312c58ca11a3765c1a539f64703f3b9a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\compare_canonical_implementations.py",
+      "active_before_sha256": "ae0c12749b410a1227d64e352b5225ee312c58ca11a3765c1a539f64703f3b9a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/compare_canonical_implementations.py",
+      "active_target_relative_to_repository": "tools/compare_canonical_implementations.py"
+    },
+    {
+      "relative_path": "tests/contract/test_wire_schema_acceptance.py",
+      "candidate_sha256": "e0a3afd7bde16bf899d3b19a7d2bafe9d3503a01451475b519a2f2005a4eb4c7",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_wire_schema_acceptance.py",
+      "active_before_sha256": "e0a3afd7bde16bf899d3b19a7d2bafe9d3503a01451475b519a2f2005a4eb4c7",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_wire_schema_acceptance.py",
+      "active_target_relative_to_repository": "tests/contract/test_wire_schema_acceptance.py"
+    },
+    {
+      "relative_path": "src/ceta/application/__init__.py",
+      "candidate_sha256": "7c369261895a6eda3b91a9c8984eaed0556352ad95acf0ebf23a24d17e429ee0",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\application\\__init__.py",
+      "active_before_sha256": "7c369261895a6eda3b91a9c8984eaed0556352ad95acf0ebf23a24d17e429ee0",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/application/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/application/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/application/ipc_service.py",
+      "candidate_sha256": "ce7e395fc2dff7519b3a92440ebd95bbe2bd577c3b42a5f6b4ec65094b86cb64",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\application\\ipc_service.py",
+      "active_before_sha256": "ce7e395fc2dff7519b3a92440ebd95bbe2bd577c3b42a5f6b4ec65094b86cb64",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/application/ipc_service.py",
+      "active_target_relative_to_repository": "src/ceta/application/ipc_service.py"
+    },
+    {
+      "relative_path": "src/ceta/application/lifecycle.py",
+      "candidate_sha256": "cc7c33a5f3289bc9de85720b3a4d63fcd0c4453c7f4f1c6051c70201c42a2f86",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\application\\lifecycle.py",
+      "active_before_sha256": "cc7c33a5f3289bc9de85720b3a4d63fcd0c4453c7f4f1c6051c70201c42a2f86",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/application/lifecycle.py",
+      "active_target_relative_to_repository": "src/ceta/application/lifecycle.py"
+    },
+    {
+      "relative_path": "src/ceta/application/operator.py",
+      "candidate_sha256": "3d78312eb8f46c2dfb51f2a511d2b346f646a79e26d8828b244e7879982a0ed3",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\application\\operator.py",
+      "active_before_sha256": "3d78312eb8f46c2dfb51f2a511d2b346f646a79e26d8828b244e7879982a0ed3",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/application/operator.py",
+      "active_target_relative_to_repository": "src/ceta/application/operator.py"
+    },
+    {
+      "relative_path": "src/ceta/application/task_operator.py",
+      "candidate_sha256": "b34cbe3442abfc040bf1946ea257b5201aeebbc0f6018a9f643569095f01cbf8",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\application\\task_operator.py",
+      "active_before_sha256": "b34cbe3442abfc040bf1946ea257b5201aeebbc0f6018a9f643569095f01cbf8",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/application/task_operator.py",
+      "active_target_relative_to_repository": "src/ceta/application/task_operator.py"
+    },
+    {
+      "relative_path": "src/ceta/application/use_cases.py",
+      "candidate_sha256": "7cd8674eb6cb14aab966ebf3c92d9514d2484b524d7ce4a2166f6b4494cc82d8",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\application\\use_cases.py",
+      "active_before_sha256": "7cd8674eb6cb14aab966ebf3c92d9514d2484b524d7ce4a2166f6b4494cc82d8",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/application/use_cases.py",
+      "active_target_relative_to_repository": "src/ceta/application/use_cases.py"
+    },
+    {
+      "relative_path": "src/ceta/composition/__init__.py",
+      "candidate_sha256": "9f32c5524363e677e310befaac5adbf7a0c98429f79866c67d136066579af0be",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\composition\\__init__.py",
+      "active_before_sha256": "9f32c5524363e677e310befaac5adbf7a0c98429f79866c67d136066579af0be",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/composition/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/composition/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/composition/client_process.py",
+      "candidate_sha256": "6ebe58e849e8b7a560b1604ab42cbb4b18d7739d2315f6413bea0d947f5a9516",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\composition\\client_process.py",
+      "active_before_sha256": "6ebe58e849e8b7a560b1604ab42cbb4b18d7739d2315f6413bea0d947f5a9516",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/composition/client_process.py",
+      "active_target_relative_to_repository": "src/ceta/composition/client_process.py"
+    },
+    {
+      "relative_path": "src/ceta/composition/ipc_service.py",
+      "candidate_sha256": "9e6a6bdeec7eefc1e8dc756cf5b73e28468c3c604493dc0c06f4d19cb1917348",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\composition\\ipc_service.py",
+      "active_before_sha256": "9e6a6bdeec7eefc1e8dc756cf5b73e28468c3c604493dc0c06f4d19cb1917348",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/composition/ipc_service.py",
+      "active_target_relative_to_repository": "src/ceta/composition/ipc_service.py"
+    },
+    {
+      "relative_path": "src/ceta/composition/kernel_service.py",
+      "candidate_sha256": "a695721b458c3b4b84fbe0d009fb0e0eaf4273da6f6248f40b83d86f9b723244",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\composition\\kernel_service.py",
+      "active_before_sha256": "a695721b458c3b4b84fbe0d009fb0e0eaf4273da6f6248f40b83d86f9b723244",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/composition/kernel_service.py",
+      "active_target_relative_to_repository": "src/ceta/composition/kernel_service.py"
+    },
+    {
+      "relative_path": "src/ceta/composition/owned_service.py",
+      "candidate_sha256": "ec40c3fa87ff9e52c160788f09c2cf3fa2ff7bd7c680d63f6e0812519446ae8b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\composition\\owned_service.py",
+      "active_before_sha256": "ec40c3fa87ff9e52c160788f09c2cf3fa2ff7bd7c680d63f6e0812519446ae8b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/composition/owned_service.py",
+      "active_target_relative_to_repository": "src/ceta/composition/owned_service.py"
+    },
+    {
+      "relative_path": "src/ceta/composition/service_process.py",
+      "candidate_sha256": "d4a0134c5a35ddb0f2b31a1ab63cb5889e2f854a9ba934ae9afe4839984dd90f",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\composition\\service_process.py",
+      "active_before_sha256": "d4a0134c5a35ddb0f2b31a1ab63cb5889e2f854a9ba934ae9afe4839984dd90f",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/composition/service_process.py",
+      "active_target_relative_to_repository": "src/ceta/composition/service_process.py"
+    },
+    {
+      "relative_path": "src/ceta/context/__init__.py",
+      "candidate_sha256": "1f9c1069298218a6cb4c80c59e3c5d1f9800d07368cbec262538c1fd73b6b850",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\context\\__init__.py",
+      "active_before_sha256": "1f9c1069298218a6cb4c80c59e3c5d1f9800d07368cbec262538c1fd73b6b850",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/context/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/context/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/context/compiler.py",
+      "candidate_sha256": "aacb0351ac210bd308de78cb3d29ecf407d011d61810bebf719acc2fb2721f3b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\context\\compiler.py",
+      "active_before_sha256": "aacb0351ac210bd308de78cb3d29ecf407d011d61810bebf719acc2fb2721f3b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/context/compiler.py",
+      "active_target_relative_to_repository": "src/ceta/context/compiler.py"
+    },
+    {
+      "relative_path": "src/ceta/desktop/__init__.py",
+      "candidate_sha256": "0f2a6ed3dfaf224c37c2b4bcf02ae2c4f5c067e6fc6937f4f5a98f03626e46cd",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\desktop\\__init__.py",
+      "active_before_sha256": "0f2a6ed3dfaf224c37c2b4bcf02ae2c4f5c067e6fc6937f4f5a98f03626e46cd",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/desktop/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/desktop/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/desktop/accessibility.py",
+      "candidate_sha256": "2d4e3b04aefd9e5b2d9efd2a00b2d84ba0e5fc87230baf66ff3f5dfa5208c030",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\desktop\\accessibility.py",
+      "active_before_sha256": "2d4e3b04aefd9e5b2d9efd2a00b2d84ba0e5fc87230baf66ff3f5dfa5208c030",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/desktop/accessibility.py",
+      "active_target_relative_to_repository": "src/ceta/desktop/accessibility.py"
+    },
+    {
+      "relative_path": "src/ceta/desktop/meaning_view.py",
+      "candidate_sha256": "447b6b0810847f823dc63f6b1156d886b0f55cd07461a78711852847b8df5183",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\desktop\\meaning_view.py",
+      "active_before_sha256": "447b6b0810847f823dc63f6b1156d886b0f55cd07461a78711852847b8df5183",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/desktop/meaning_view.py",
+      "active_target_relative_to_repository": "src/ceta/desktop/meaning_view.py"
+    },
+    {
+      "relative_path": "src/ceta/desktop/operator_view.py",
+      "candidate_sha256": "b89044a8298b5ab10c6ee203b7d061171e620663a30b4799017785d512437359",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\desktop\\operator_view.py",
+      "active_before_sha256": "b89044a8298b5ab10c6ee203b7d061171e620663a30b4799017785d512437359",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/desktop/operator_view.py",
+      "active_target_relative_to_repository": "src/ceta/desktop/operator_view.py"
+    },
+    {
+      "relative_path": "src/ceta/desktop/preparation_view.py",
+      "candidate_sha256": "6f562c6c31c276ab24d2c798aec3051064c62ba34e407bdabaac63ce3574023a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\desktop\\preparation_view.py",
+      "active_before_sha256": "6f562c6c31c276ab24d2c798aec3051064c62ba34e407bdabaac63ce3574023a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/desktop/preparation_view.py",
+      "active_target_relative_to_repository": "src/ceta/desktop/preparation_view.py"
+    },
+    {
+      "relative_path": "src/ceta/desktop/task_view.py",
+      "candidate_sha256": "d43d655beb4eef5351af4984ce24d79aa75c0ab8dd87038105e7248667b19ad4",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\desktop\\task_view.py",
+      "active_before_sha256": "d43d655beb4eef5351af4984ce24d79aa75c0ab8dd87038105e7248667b19ad4",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/desktop/task_view.py",
+      "active_target_relative_to_repository": "src/ceta/desktop/task_view.py"
+    },
+    {
+      "relative_path": "src/ceta/identity/__init__.py",
+      "candidate_sha256": "ed69e2c43a11331febb88fbf5dc9f02b127067918078e02681ad49ef4b3711ce",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\identity\\__init__.py",
+      "active_before_sha256": "ed69e2c43a11331febb88fbf5dc9f02b127067918078e02681ad49ef4b3711ce",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/identity/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/identity/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/identity/owners.py",
+      "candidate_sha256": "c53bea224f4bba9f409ecf71d56bb43b80fb49b3ca32541f33486e20d85fdc43",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\identity\\owners.py",
+      "active_before_sha256": "c53bea224f4bba9f409ecf71d56bb43b80fb49b3ca32541f33486e20d85fdc43",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/identity/owners.py",
+      "active_target_relative_to_repository": "src/ceta/identity/owners.py"
+    },
+    {
+      "relative_path": "src/ceta/identity/windows_pipe.py",
+      "candidate_sha256": "40f6ea5461f8b2a7259affe2412710189e92e117f59ed28937f75d2b322dd69c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\identity\\windows_pipe.py",
+      "active_before_sha256": "40f6ea5461f8b2a7259affe2412710189e92e117f59ed28937f75d2b322dd69c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/identity/windows_pipe.py",
+      "active_target_relative_to_repository": "src/ceta/identity/windows_pipe.py"
+    },
+    {
+      "relative_path": "src/ceta/kernel/__init__.py",
+      "candidate_sha256": "a2827036371c8f93fb6aca456cf1628c104e72ac9268f0d5356427a0bed80548",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\kernel\\__init__.py",
+      "active_before_sha256": "a2827036371c8f93fb6aca456cf1628c104e72ac9268f0d5356427a0bed80548",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/kernel/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/kernel/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/kernel/editor_recovery.py",
+      "candidate_sha256": "2f3abb9196c836d1ba36c32af066df8b3bca032d36aee3f5438f4c3202bd90d6",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\kernel\\editor_recovery.py",
+      "active_before_sha256": "2f3abb9196c836d1ba36c32af066df8b3bca032d36aee3f5438f4c3202bd90d6",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/kernel/editor_recovery.py",
+      "active_target_relative_to_repository": "src/ceta/kernel/editor_recovery.py"
+    },
+    {
+      "relative_path": "src/ceta/kernel/task_drafts.py",
+      "candidate_sha256": "756cea6e41a4fc7f0b0cda41854ae6d46a3a31d247bada735f8a4fd8fa3cd8dd",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\kernel\\task_drafts.py",
+      "active_before_sha256": "756cea6e41a4fc7f0b0cda41854ae6d46a3a31d247bada735f8a4fd8fa3cd8dd",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/kernel/task_drafts.py",
+      "active_target_relative_to_repository": "src/ceta/kernel/task_drafts.py"
+    },
+    {
+      "relative_path": "src/ceta/kernel/transactions.py",
+      "candidate_sha256": "001903a1c6b4355b730963941a57680f48a534e105571d17af3ff4103c899659",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\kernel\\transactions.py",
+      "active_before_sha256": "001903a1c6b4355b730963941a57680f48a534e105571d17af3ff4103c899659",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/kernel/transactions.py",
+      "active_target_relative_to_repository": "src/ceta/kernel/transactions.py"
+    },
+    {
+      "relative_path": "src/ceta/orchestration/__init__.py",
+      "candidate_sha256": "06bf84f58ca62d820311b06b056dc8d4280941db8f006f9edc88cf724721588d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\orchestration\\__init__.py",
+      "active_before_sha256": "06bf84f58ca62d820311b06b056dc8d4280941db8f006f9edc88cf724721588d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/orchestration/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/orchestration/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/orchestration/graph.py",
+      "candidate_sha256": "c2d465330e48d95c071d7ba158637bd87d93eda146181b8be6b76323e0455a02",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\orchestration\\graph.py",
+      "active_before_sha256": "c2d465330e48d95c071d7ba158637bd87d93eda146181b8be6b76323e0455a02",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/orchestration/graph.py",
+      "active_target_relative_to_repository": "src/ceta/orchestration/graph.py"
+    },
+    {
+      "relative_path": "src/ceta/resource/__init__.py",
+      "candidate_sha256": "e441933948b8b1eaf89e20907de86ed4e6022a1f3d87583ed3f0b1b189cc9158",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\resource\\__init__.py",
+      "active_before_sha256": "e441933948b8b1eaf89e20907de86ed4e6022a1f3d87583ed3f0b1b189cc9158",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/resource/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/resource/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/resource/admission.py",
+      "candidate_sha256": "a888e5e1a9667fa3408a9eda89e032674ad450e7a04c6b0a52558a065424c158",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\resource\\admission.py",
+      "active_before_sha256": "a888e5e1a9667fa3408a9eda89e032674ad450e7a04c6b0a52558a065424c158",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/resource/admission.py",
+      "active_target_relative_to_repository": "src/ceta/resource/admission.py"
+    },
+    {
+      "relative_path": "src/ceta/resource/budget.py",
+      "candidate_sha256": "9f2b471c3b5874fee22d8a49c8a3491042f7fc196756c2d35eb9db0b1a644953",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\resource\\budget.py",
+      "active_before_sha256": "9f2b471c3b5874fee22d8a49c8a3491042f7fc196756c2d35eb9db0b1a644953",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/resource/budget.py",
+      "active_target_relative_to_repository": "src/ceta/resource/budget.py"
+    },
+    {
+      "relative_path": "src/ceta/resource/diagnostics.py",
+      "candidate_sha256": "43db2dd7d6a258f7324908dc491877b710a4f2e726c8a05bd9e20b3e14aa7cbc",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rd2-20261014\\src\\ceta\\resource\\diagnostics.py",
+      "active_before_sha256": "82905f19fd526c394198249f0d850a6b09f3f17c48faca366fc5d00e28ffafdd",
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/resource/diagnostics.py",
+      "active_target_relative_to_repository": "src/ceta/resource/diagnostics.py"
+    },
+    {
+      "relative_path": "src/ceta/resource/hardware.py",
+      "candidate_sha256": "dbf1f71055c23c6fffb6aabfc84b0291b2820f0924b6686397e837d12572866b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\resource\\hardware.py",
+      "active_before_sha256": "dbf1f71055c23c6fffb6aabfc84b0291b2820f0924b6686397e837d12572866b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/resource/hardware.py",
+      "active_target_relative_to_repository": "src/ceta/resource/hardware.py"
+    },
+    {
+      "relative_path": "src/ceta/resource/inference.py",
+      "candidate_sha256": "b3343de3515556e3f9543fea2d5d3f480ed5f2a6741726799473daf708aa8711",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\resource\\inference.py",
+      "active_before_sha256": "b3343de3515556e3f9543fea2d5d3f480ed5f2a6741726799473daf708aa8711",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/resource/inference.py",
+      "active_target_relative_to_repository": "src/ceta/resource/inference.py"
+    },
+    {
+      "relative_path": "src/ceta/resource/pressure.py",
+      "candidate_sha256": "112cc5735e22b4f3e41f5a79ae4ed0e65ad663645efea987f10b7eea19409f96",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\resource\\pressure.py",
+      "active_before_sha256": "112cc5735e22b4f3e41f5a79ae4ed0e65ad663645efea987f10b7eea19409f96",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/resource/pressure.py",
+      "active_target_relative_to_repository": "src/ceta/resource/pressure.py"
+    },
+    {
+      "relative_path": "src/ceta/store/__init__.py",
+      "candidate_sha256": "30bdf88cbc70b141540007cff9c735da94c9a343f258543e9f74d461722e3e4b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\store\\__init__.py",
+      "active_before_sha256": "30bdf88cbc70b141540007cff9c735da94c9a343f258543e9f74d461722e3e4b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/store/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/store/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/store/backups.py",
+      "candidate_sha256": "bd099754f8c82785e4d6d601e4aa002d4ecdba040b82729ef0c311d3e35b5e1a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\store\\backups.py",
+      "active_before_sha256": "bd099754f8c82785e4d6d601e4aa002d4ecdba040b82729ef0c311d3e35b5e1a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/store/backups.py",
+      "active_target_relative_to_repository": "src/ceta/store/backups.py"
+    },
+    {
+      "relative_path": "src/ceta/store/journal.py",
+      "candidate_sha256": "19e1e865fbbeb970e894d0267d9d107e89ac68727b1767b708ec51e83c8389f3",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\store\\journal.py",
+      "active_before_sha256": "19e1e865fbbeb970e894d0267d9d107e89ac68727b1767b708ec51e83c8389f3",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/store/journal.py",
+      "active_target_relative_to_repository": "src/ceta/store/journal.py"
+    },
+    {
+      "relative_path": "src/ceta/store/projections.py",
+      "candidate_sha256": "f453cea4226e00dc4770b69231d717e6bf1800bc16296023075c57ba6206418f",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\store\\projections.py",
+      "active_before_sha256": "f453cea4226e00dc4770b69231d717e6bf1800bc16296023075c57ba6206418f",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/store/projections.py",
+      "active_target_relative_to_repository": "src/ceta/store/projections.py"
+    },
+    {
+      "relative_path": "src/ceta/store/sqlite_runtime.py",
+      "candidate_sha256": "e8720d9567440cc0dced5b6c84821321ae2a046e942d3f02156a3164bad7bc47",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\store\\sqlite_runtime.py",
+      "active_before_sha256": "e8720d9567440cc0dced5b6c84821321ae2a046e942d3f02156a3164bad7bc47",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/store/sqlite_runtime.py",
+      "active_target_relative_to_repository": "src/ceta/store/sqlite_runtime.py"
+    },
+    {
+      "relative_path": "src/ceta/store/state.py",
+      "candidate_sha256": "117172514d904dfc7ec50b46cfbf71972feecbcfafd3c1e5cf3917863604510a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\store\\state.py",
+      "active_before_sha256": "117172514d904dfc7ec50b46cfbf71972feecbcfafd3c1e5cf3917863604510a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/store/state.py",
+      "active_target_relative_to_repository": "src/ceta/store/state.py"
+    },
+    {
+      "relative_path": "src/ceta/supervisor/__init__.py",
+      "candidate_sha256": "9303aa2127cbc0e3bce69bcf2802c8b0ad5204725fb14a2d52d498903af45f99",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\supervisor\\__init__.py",
+      "active_before_sha256": "9303aa2127cbc0e3bce69bcf2802c8b0ad5204725fb14a2d52d498903af45f99",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/supervisor/__init__.py",
+      "active_target_relative_to_repository": "src/ceta/supervisor/__init__.py"
+    },
+    {
+      "relative_path": "src/ceta/supervisor/service.py",
+      "candidate_sha256": "95a7b3c4d8ce7b3ea0a5367f391dffc1d423be65b183dd3ef604a240595daf5a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\supervisor\\service.py",
+      "active_before_sha256": "95a7b3c4d8ce7b3ea0a5367f391dffc1d423be65b183dd3ef604a240595daf5a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/supervisor/service.py",
+      "active_target_relative_to_repository": "src/ceta/supervisor/service.py"
+    },
+    {
+      "relative_path": "src/ceta/supervisor/windows_jobs.py",
+      "candidate_sha256": "02b6306c3ea32bebf887e19c3ba24367d4f041a77d52add62ac4da8719926f0e",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rd2-20261014\\src\\ceta\\supervisor\\windows_jobs.py",
+      "active_before_sha256": "821e2615799a66e4b0c519b4f98434cd71b375c2e47bf496d834edb0ee1a8ec7",
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/supervisor/windows_jobs.py",
+      "active_target_relative_to_repository": "src/ceta/supervisor/windows_jobs.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/construction.py",
+      "candidate_sha256": "8fc9ffde80d241bf583970e99f805e9c47b94dd1bfc4da5139166344338420f9",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\construction.py",
+      "active_before_sha256": "8fc9ffde80d241bf583970e99f805e9c47b94dd1bfc4da5139166344338420f9",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/construction.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/construction.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/custody_protocol.py",
+      "candidate_sha256": "2e4a40449f655d38612c326e55b713cb11c04f64d950488a2a036ed4b543d4f9",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\custody_protocol.py",
+      "active_before_sha256": "2e4a40449f655d38612c326e55b713cb11c04f64d950488a2a036ed4b543d4f9",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/custody_protocol.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/custody_protocol.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/editor_recovery.py",
+      "candidate_sha256": "1cf3a5fc070eb9d0119ee666cc59bcbdaa0934ae9ad297da7c639b5bc1e12121",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\editor_recovery.py",
+      "active_before_sha256": "1cf3a5fc070eb9d0119ee666cc59bcbdaa0934ae9ad297da7c639b5bc1e12121",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/editor_recovery.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/editor_recovery.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/errors.py",
+      "candidate_sha256": "9a8b672c4730d98996448c13c9f798bd20ae3b5c82b24f06f0354d849e228b5c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\errors.py",
+      "active_before_sha256": "9a8b672c4730d98996448c13c9f798bd20ae3b5c82b24f06f0354d849e228b5c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/errors.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/errors.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/evidence_admission.py",
+      "candidate_sha256": "ff22392ca43ae011bf0891742cf3edb39ffd46a1bb56f219e59c80e1143d0904",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\evidence_admission.py",
+      "active_before_sha256": "ff22392ca43ae011bf0891742cf3edb39ffd46a1bb56f219e59c80e1143d0904",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/evidence_admission.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/evidence_admission.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/graphs.py",
+      "candidate_sha256": "61506bd896ea4260559ae3f499d5c32d38f5d2673c87cbaac0b91652b19e3532",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\graphs.py",
+      "active_before_sha256": "61506bd896ea4260559ae3f499d5c32d38f5d2673c87cbaac0b91652b19e3532",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/graphs.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/graphs.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/history.py",
+      "candidate_sha256": "bea39b6fe7a9e1ece83ec491091fd55e7eaaa5689457ab3cb73cb618d7c89525",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\history.py",
+      "active_before_sha256": "bea39b6fe7a9e1ece83ec491091fd55e7eaaa5689457ab3cb73cb618d7c89525",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/history.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/history.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/kernel_transactions.py",
+      "candidate_sha256": "cdc812a1ae0c545fc31b4a75466a8f942eafe63b4bf41a8576225f354f944a8c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\kernel_transactions.py",
+      "active_before_sha256": "cdc812a1ae0c545fc31b4a75466a8f942eafe63b4bf41a8576225f354f944a8c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/kernel_transactions.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/kernel_transactions.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/local_ipc.py",
+      "candidate_sha256": "72d61e61ac18c362b0acd02d9a2e83e53b85bbcaec964a82890f5dd24791fa3d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\local_ipc.py",
+      "active_before_sha256": "72d61e61ac18c362b0acd02d9a2e83e53b85bbcaec964a82890f5dd24791fa3d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/local_ipc.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/local_ipc.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/local_results.py",
+      "candidate_sha256": "9ac42e1a90fc6c8a186f7a1ada77c9cfbb344bce892d76c684e96e02e91028c5",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\local_results.py",
+      "active_before_sha256": "9ac42e1a90fc6c8a186f7a1ada77c9cfbb344bce892d76c684e96e02e91028c5",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/local_results.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/local_results.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/provenance.py",
+      "candidate_sha256": "c3995e022b7c44f18e8bb21d818781050654ed0f4674f4e650966eb93142c1e4",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\provenance.py",
+      "active_before_sha256": "c3995e022b7c44f18e8bb21d818781050654ed0f4674f4e650966eb93142c1e4",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/provenance.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/provenance.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/read_sets.py",
+      "candidate_sha256": "eb4b0f0cecc48908556a5163f6ab040d60109192feb5c5b13634f269a26bba7c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\read_sets.py",
+      "active_before_sha256": "eb4b0f0cecc48908556a5163f6ab040d60109192feb5c5b13634f269a26bba7c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/read_sets.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/read_sets.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/request_compiler.py",
+      "candidate_sha256": "2d1496d633560a2908d231bffd12ccdcdfa3cd45f89acbe61d016729711af2ee",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\request_compiler.py",
+      "active_before_sha256": "2d1496d633560a2908d231bffd12ccdcdfa3cd45f89acbe61d016729711af2ee",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/request_compiler.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/request_compiler.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/resource_management.py",
+      "candidate_sha256": "88ccb6ffbd2eb58eef856a8cbec42f710648413002b19a1bf317cf2433aeb14d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rd2-20261014\\src\\ceta\\contracts\\resource_management.py",
+      "active_before_sha256": "dfca9d99887b90ac72973abb851a1723e6d85c7c1f0c97d5fb54ee3bc5cb829d",
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/resource_management.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/resource_management.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/runtime_records.py",
+      "candidate_sha256": "140f5c54450a66705e042905c781a89adf16507233307d2c024bec8ab7f11c9d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\runtime_records.py",
+      "active_before_sha256": "140f5c54450a66705e042905c781a89adf16507233307d2c024bec8ab7f11c9d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/runtime_records.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/runtime_records.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/source_references.py",
+      "candidate_sha256": "66cbe118f9bbd4281b521c59bf847080d37663f71bcd7c046b0f9f7472e6fdfe",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\source_references.py",
+      "active_before_sha256": "66cbe118f9bbd4281b521c59bf847080d37663f71bcd7c046b0f9f7472e6fdfe",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/source_references.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/source_references.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/store_transactions.py",
+      "candidate_sha256": "8531ead603b354ded7ce5341d28cd7d2a23a77f18198d39c74985768012b9bb1",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\store_transactions.py",
+      "active_before_sha256": "8531ead603b354ded7ce5341d28cd7d2a23a77f18198d39c74985768012b9bb1",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/store_transactions.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/store_transactions.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/task_drafts.py",
+      "candidate_sha256": "aef8f7ddd7694f859a2c9177ffd47ee73bb262770f9033077cf90307381a7b4b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\task_drafts.py",
+      "active_before_sha256": "aef8f7ddd7694f859a2c9177ffd47ee73bb262770f9033077cf90307381a7b4b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/task_drafts.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/task_drafts.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/task_meaning.py",
+      "candidate_sha256": "27dfffaa25502e246f8c7d8fbc3c41fe173a22a16a4eaf24a2f57fc184aee673",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\task_meaning.py",
+      "active_before_sha256": "27dfffaa25502e246f8c7d8fbc3c41fe173a22a16a4eaf24a2f57fc184aee673",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/task_meaning.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/task_meaning.py"
+    },
+    {
+      "relative_path": "src/ceta/contracts/transitions.py",
+      "candidate_sha256": "42bea4d2929aecf1640361e51f71bca077ce5c17e10970de7e2cce9c98a31cff",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\src\\ceta\\contracts\\transitions.py",
+      "active_before_sha256": "42bea4d2929aecf1640361e51f71bca077ce5c17e10970de7e2cce9c98a31cff",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/src/ceta/contracts/transitions.py",
+      "active_target_relative_to_repository": "src/ceta/contracts/transitions.py"
+    },
+    {
+      "relative_path": "tests/contract/test_accessibility.py",
+      "candidate_sha256": "3a77b8cb1aaef414dcf0d7aa5be0128f37d1579c254bcb97e1bfb4c3c3751770",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_accessibility.py",
+      "active_before_sha256": "3a77b8cb1aaef414dcf0d7aa5be0128f37d1579c254bcb97e1bfb4c3c3751770",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_accessibility.py",
+      "active_target_relative_to_repository": "tests/contract/test_accessibility.py"
+    },
+    {
+      "relative_path": "tests/contract/test_backups.py",
+      "candidate_sha256": "84bfc8336be030508c06340d433ce577761f1c0b55052729d8ef3ab45da76462",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_backups.py",
+      "active_before_sha256": "84bfc8336be030508c06340d433ce577761f1c0b55052729d8ef3ab45da76462",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_backups.py",
+      "active_target_relative_to_repository": "tests/contract/test_backups.py"
+    },
+    {
+      "relative_path": "tests/contract/test_boundaries.py",
+      "candidate_sha256": "5fb7d72bd9429137843639250f4b136ae7b1d329761f77baf348c6690c94c528",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_boundaries.py",
+      "active_before_sha256": "5fb7d72bd9429137843639250f4b136ae7b1d329761f77baf348c6690c94c528",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_boundaries.py",
+      "active_target_relative_to_repository": "tests/contract/test_boundaries.py"
+    },
+    {
+      "relative_path": "tests/contract/test_build_measurements.py",
+      "candidate_sha256": "1aeaeea639776d102d6429667ad2ba86f21136cfbe6a8b69d0a0b71f0933423a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_build_measurements.py",
+      "active_before_sha256": "1aeaeea639776d102d6429667ad2ba86f21136cfbe6a8b69d0a0b71f0933423a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_build_measurements.py",
+      "active_target_relative_to_repository": "tests/contract/test_build_measurements.py"
+    },
+    {
+      "relative_path": "tests/contract/test_construction.py",
+      "candidate_sha256": "4ac6e50d2a51982f691752b3e9fca8b984938b2afff091120b3482b2bbf28f48",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_construction.py",
+      "active_before_sha256": "4ac6e50d2a51982f691752b3e9fca8b984938b2afff091120b3482b2bbf28f48",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_construction.py",
+      "active_target_relative_to_repository": "tests/contract/test_construction.py"
+    },
+    {
+      "relative_path": "tests/contract/test_context_intake.py",
+      "candidate_sha256": "86e711c7f297798bf4c5d2e1b38abed63067347431b48552eb71fb2dd5962b00",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_context_intake.py",
+      "active_before_sha256": "86e711c7f297798bf4c5d2e1b38abed63067347431b48552eb71fb2dd5962b00",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_context_intake.py",
+      "active_target_relative_to_repository": "tests/contract/test_context_intake.py"
+    },
+    {
+      "relative_path": "tests/contract/test_custody_protocol.py",
+      "candidate_sha256": "84305697c06ad92a32839f387201f250c95c82066cb42302a2d12b386f706a36",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_custody_protocol.py",
+      "active_before_sha256": "84305697c06ad92a32839f387201f250c95c82066cb42302a2d12b386f706a36",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_custody_protocol.py",
+      "active_target_relative_to_repository": "tests/contract/test_custody_protocol.py"
+    },
+    {
+      "relative_path": "tests/contract/test_development_inventory.py",
+      "candidate_sha256": "003d0b46abccd16e764c3117e8745d532fb8b89d9e69a1c745b618101de2b322",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_development_inventory.py",
+      "active_before_sha256": "003d0b46abccd16e764c3117e8745d532fb8b89d9e69a1c745b618101de2b322",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_development_inventory.py",
+      "active_target_relative_to_repository": "tests/contract/test_development_inventory.py"
+    },
+    {
+      "relative_path": "tests/contract/test_editor_recovery.py",
+      "candidate_sha256": "25a0a8b602237181e109537be6000a78bbe1239a1ae094440a12d43a094c237d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_editor_recovery.py",
+      "active_before_sha256": "25a0a8b602237181e109537be6000a78bbe1239a1ae094440a12d43a094c237d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_editor_recovery.py",
+      "active_target_relative_to_repository": "tests/contract/test_editor_recovery.py"
+    },
+    {
+      "relative_path": "tests/contract/test_errors.py",
+      "candidate_sha256": "29d1f77398764c4b76e6e1216aec3150552d0ed0b946f678182e25591e026adc",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_errors.py",
+      "active_before_sha256": "29d1f77398764c4b76e6e1216aec3150552d0ed0b946f678182e25591e026adc",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_errors.py",
+      "active_target_relative_to_repository": "tests/contract/test_errors.py"
+    },
+    {
+      "relative_path": "tests/contract/test_evidence_admission.py",
+      "candidate_sha256": "3ec8cad89464f1025d611f54cb9349a87e48d0be759f212fc01cdbfc8b106111",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_evidence_admission.py",
+      "active_before_sha256": "3ec8cad89464f1025d611f54cb9349a87e48d0be759f212fc01cdbfc8b106111",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_evidence_admission.py",
+      "active_target_relative_to_repository": "tests/contract/test_evidence_admission.py"
+    },
+    {
+      "relative_path": "tests/contract/test_history.py",
+      "candidate_sha256": "47361c53549628e7472214b3b7c001637400a7eeaaa1e6e671f8a44e32a15189",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_history.py",
+      "active_before_sha256": "47361c53549628e7472214b3b7c001637400a7eeaaa1e6e671f8a44e32a15189",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_history.py",
+      "active_target_relative_to_repository": "tests/contract/test_history.py"
+    },
+    {
+      "relative_path": "tests/contract/test_kernel_authority.py",
+      "candidate_sha256": "a4cd6cc4621c51b30268d6b92f2094dfeea7392bcfd980c7aae27c93607c3d5e",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_kernel_authority.py",
+      "active_before_sha256": "a4cd6cc4621c51b30268d6b92f2094dfeea7392bcfd980c7aae27c93607c3d5e",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_kernel_authority.py",
+      "active_target_relative_to_repository": "tests/contract/test_kernel_authority.py"
+    },
+    {
+      "relative_path": "tests/contract/test_kernel_recovery.py",
+      "candidate_sha256": "0e164750f16e12ef5e2735a553ad4eb9eff7de199f6c2bc595ecec0008b543e5",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_kernel_recovery.py",
+      "active_before_sha256": "0e164750f16e12ef5e2735a553ad4eb9eff7de199f6c2bc595ecec0008b543e5",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_kernel_recovery.py",
+      "active_target_relative_to_repository": "tests/contract/test_kernel_recovery.py"
+    },
+    {
+      "relative_path": "tests/contract/test_kernel_transactions.py",
+      "candidate_sha256": "3fa2c716fc7507e93cb94e6063f2c68d7bdc75829c478da0095271259699d02d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_kernel_transactions.py",
+      "active_before_sha256": "3fa2c716fc7507e93cb94e6063f2c68d7bdc75829c478da0095271259699d02d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_kernel_transactions.py",
+      "active_target_relative_to_repository": "tests/contract/test_kernel_transactions.py"
+    },
+    {
+      "relative_path": "tests/contract/test_local_ipc.py",
+      "candidate_sha256": "23009c7d9c13ab0bff45d50a994be851da1501ec47b36fee9ed342a2041ae83a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_local_ipc.py",
+      "active_before_sha256": "23009c7d9c13ab0bff45d50a994be851da1501ec47b36fee9ed342a2041ae83a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_local_ipc.py",
+      "active_target_relative_to_repository": "tests/contract/test_local_ipc.py"
+    },
+    {
+      "relative_path": "tests/contract/test_local_results.py",
+      "candidate_sha256": "2b6ba5c72d5752a63e8f72f708df88a4cdcda7eb141c6f6675229bb05da14965",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_local_results.py",
+      "active_before_sha256": "2b6ba5c72d5752a63e8f72f708df88a4cdcda7eb141c6f6675229bb05da14965",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_local_results.py",
+      "active_target_relative_to_repository": "tests/contract/test_local_results.py"
+    },
+    {
+      "relative_path": "tests/contract/test_operator_view.py",
+      "candidate_sha256": "a24949fdfa2b6501096ab7f3fb46ce3d5fc61d86fb764a5bf5a9de4c70084043",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_operator_view.py",
+      "active_before_sha256": "a24949fdfa2b6501096ab7f3fb46ce3d5fc61d86fb764a5bf5a9de4c70084043",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_operator_view.py",
+      "active_target_relative_to_repository": "tests/contract/test_operator_view.py"
+    },
+    {
+      "relative_path": "tests/contract/test_outer_process_child_retirement.py",
+      "candidate_sha256": "bd1fe9377e515e5017a89c459337106992b866dba06837aea45e00e21011a425",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_outer_process_child_retirement.py",
+      "active_before_sha256": "bd1fe9377e515e5017a89c459337106992b866dba06837aea45e00e21011a425",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_outer_process_child_retirement.py",
+      "active_target_relative_to_repository": "tests/contract/test_outer_process_child_retirement.py"
+    },
+    {
+      "relative_path": "tests/contract/test_outer_process_shutdown_handoff.py",
+      "candidate_sha256": "10d6429cda90063e492aa27ac4b9a1daa1f905fb23ac9f8112c3f77972217c63",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_outer_process_shutdown_handoff.py",
+      "active_before_sha256": "10d6429cda90063e492aa27ac4b9a1daa1f905fb23ac9f8112c3f77972217c63",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_outer_process_shutdown_handoff.py",
+      "active_target_relative_to_repository": "tests/contract/test_outer_process_shutdown_handoff.py"
+    },
+    {
+      "relative_path": "tests/contract/test_owned_service.py",
+      "candidate_sha256": "f77eea8c15d3d043704e1485662d69e969019dbcf0486d21e9085874d7be659d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_owned_service.py",
+      "active_before_sha256": "f77eea8c15d3d043704e1485662d69e969019dbcf0486d21e9085874d7be659d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_owned_service.py",
+      "active_target_relative_to_repository": "tests/contract/test_owned_service.py"
+    },
+    {
+      "relative_path": "tests/contract/test_preparation_recovery.py",
+      "candidate_sha256": "70a45acc858e97756e43165a8ad02924e22db5661bccf90b964cd7825021bc48",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_preparation_recovery.py",
+      "active_before_sha256": "70a45acc858e97756e43165a8ad02924e22db5661bccf90b964cd7825021bc48",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_preparation_recovery.py",
+      "active_target_relative_to_repository": "tests/contract/test_preparation_recovery.py"
+    },
+    {
+      "relative_path": "tests/contract/test_preparation_view.py",
+      "candidate_sha256": "5dfde41851aeb3066c535ff312bb424bfa25fa20ba7485967c5f751f38b253c3",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_preparation_view.py",
+      "active_before_sha256": "5dfde41851aeb3066c535ff312bb424bfa25fa20ba7485967c5f751f38b253c3",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_preparation_view.py",
+      "active_target_relative_to_repository": "tests/contract/test_preparation_view.py"
+    },
+    {
+      "relative_path": "tests/contract/test_projections.py",
+      "candidate_sha256": "f5514b1143dfd89aa35c9d176f05bf6497a493f7c4b4ebf6f7e522b3db6d1b27",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_projections.py",
+      "active_before_sha256": "f5514b1143dfd89aa35c9d176f05bf6497a493f7c4b4ebf6f7e522b3db6d1b27",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_projections.py",
+      "active_target_relative_to_repository": "tests/contract/test_projections.py"
+    },
+    {
+      "relative_path": "tests/contract/test_provenance.py",
+      "candidate_sha256": "66ce3f1753380620169c916c96123cfbdab61fc20db3003e63bc0fd28dfab53e",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_provenance.py",
+      "active_before_sha256": "66ce3f1753380620169c916c96123cfbdab61fc20db3003e63bc0fd28dfab53e",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_provenance.py",
+      "active_target_relative_to_repository": "tests/contract/test_provenance.py"
+    },
+    {
+      "relative_path": "tests/contract/test_read_sets.py",
+      "candidate_sha256": "3f697764e275eaf49b589585e9e95d565ba1b0af9534df45707ae3c43264b0a3",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_read_sets.py",
+      "active_before_sha256": "3f697764e275eaf49b589585e9e95d565ba1b0af9534df45707ae3c43264b0a3",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_read_sets.py",
+      "active_target_relative_to_repository": "tests/contract/test_read_sets.py"
+    },
+    {
+      "relative_path": "tests/contract/test_request_compiler.py",
+      "candidate_sha256": "05b7c7161558a500e8fa905b0a14884d584a7721d8bedb4180eedeb965f92b5e",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_request_compiler.py",
+      "active_before_sha256": "05b7c7161558a500e8fa905b0a14884d584a7721d8bedb4180eedeb965f92b5e",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_request_compiler.py",
+      "active_target_relative_to_repository": "tests/contract/test_request_compiler.py"
+    },
+    {
+      "relative_path": "tests/contract/test_resource_management.py",
+      "candidate_sha256": "522beda2980a341308862dcdea868db73ce736bbd2b03a8575ad0cf7dcf4960a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_resource_management.py",
+      "active_before_sha256": "522beda2980a341308862dcdea868db73ce736bbd2b03a8575ad0cf7dcf4960a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_resource_management.py",
+      "active_target_relative_to_repository": "tests/contract/test_resource_management.py"
+    },
+    {
+      "relative_path": "tests/contract/test_runtime_records.py",
+      "candidate_sha256": "766b6b99b59c63b324d3921c06d5327f2417a7d3070cace0255060a6b3feb1aa",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_runtime_records.py",
+      "active_before_sha256": "766b6b99b59c63b324d3921c06d5327f2417a7d3070cace0255060a6b3feb1aa",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_runtime_records.py",
+      "active_target_relative_to_repository": "tests/contract/test_runtime_records.py"
+    },
+    {
+      "relative_path": "tests/contract/test_shutdown_interruptions.py",
+      "candidate_sha256": "1233f0f57c297ef061c8bdde59996231150a71a113da4551e5c832af509ca83c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_shutdown_interruptions.py",
+      "active_before_sha256": "1233f0f57c297ef061c8bdde59996231150a71a113da4551e5c832af509ca83c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_shutdown_interruptions.py",
+      "active_target_relative_to_repository": "tests/contract/test_shutdown_interruptions.py"
+    },
+    {
+      "relative_path": "tests/contract/test_shutdown_lifecycle.py",
+      "candidate_sha256": "e19943ea0f24f53c0799a349d638243a4723de29c971e43ff18e96d705572bdb",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_shutdown_lifecycle.py",
+      "active_before_sha256": "e19943ea0f24f53c0799a349d638243a4723de29c971e43ff18e96d705572bdb",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_shutdown_lifecycle.py",
+      "active_target_relative_to_repository": "tests/contract/test_shutdown_lifecycle.py"
+    },
+    {
+      "relative_path": "tests/contract/test_shutdown_session_failures.py",
+      "candidate_sha256": "8e16dce5d056782a3480b3bdd4c800e791e5799c295481ed3c343898cc1dfe7c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_shutdown_session_failures.py",
+      "active_before_sha256": "8e16dce5d056782a3480b3bdd4c800e791e5799c295481ed3c343898cc1dfe7c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_shutdown_session_failures.py",
+      "active_target_relative_to_repository": "tests/contract/test_shutdown_session_failures.py"
+    },
+    {
+      "relative_path": "tests/contract/test_source_references.py",
+      "candidate_sha256": "a248c0b43e05e0d48a6f3c77f4531761ff2a7884e9ea2b21d7325470fc5a674d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_source_references.py",
+      "active_before_sha256": "a248c0b43e05e0d48a6f3c77f4531761ff2a7884e9ea2b21d7325470fc5a674d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_source_references.py",
+      "active_target_relative_to_repository": "tests/contract/test_source_references.py"
+    },
+    {
+      "relative_path": "tests/contract/test_sqlite_runtime.py",
+      "candidate_sha256": "12720686f04828667565dae97d104049724e98cb64df9bd5f0be7b42732a9171",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_sqlite_runtime.py",
+      "active_before_sha256": "12720686f04828667565dae97d104049724e98cb64df9bd5f0be7b42732a9171",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_sqlite_runtime.py",
+      "active_target_relative_to_repository": "tests/contract/test_sqlite_runtime.py"
+    },
+    {
+      "relative_path": "tests/contract/test_stop_dispatch.py",
+      "candidate_sha256": "a3b20b57665db954025220a662686166410740ec62c51d7efdb18ddc8d1b74f5",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_stop_dispatch.py",
+      "active_before_sha256": "a3b20b57665db954025220a662686166410740ec62c51d7efdb18ddc8d1b74f5",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_stop_dispatch.py",
+      "active_target_relative_to_repository": "tests/contract/test_stop_dispatch.py"
+    },
+    {
+      "relative_path": "tests/contract/test_store_transactions.py",
+      "candidate_sha256": "9da1d9245dc48558ce44da3ee6abf86f192bc28e1c61ede2de53e8fe43f79510",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_store_transactions.py",
+      "active_before_sha256": "9da1d9245dc48558ce44da3ee6abf86f192bc28e1c61ede2de53e8fe43f79510",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_store_transactions.py",
+      "active_target_relative_to_repository": "tests/contract/test_store_transactions.py"
+    },
+    {
+      "relative_path": "tests/contract/test_task_ack_loss.py",
+      "candidate_sha256": "96b8e5d366ff8676f34ca3bebabc47334d14985e9915e0af19e2ac862e576d0f",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_task_ack_loss.py",
+      "active_before_sha256": "96b8e5d366ff8676f34ca3bebabc47334d14985e9915e0af19e2ac862e576d0f",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_task_ack_loss.py",
+      "active_target_relative_to_repository": "tests/contract/test_task_ack_loss.py"
+    },
+    {
+      "relative_path": "tests/contract/test_task_drafts.py",
+      "candidate_sha256": "24d2cdeb1db97999d94d9b2f796f005cfb89de6652539c1b7a48527409bb8e8c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_task_drafts.py",
+      "active_before_sha256": "24d2cdeb1db97999d94d9b2f796f005cfb89de6652539c1b7a48527409bb8e8c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_task_drafts.py",
+      "active_target_relative_to_repository": "tests/contract/test_task_drafts.py"
+    },
+    {
+      "relative_path": "tests/contract/test_task_meaning.py",
+      "candidate_sha256": "e29019cd63cf178e0d14d395f49ea8f94e1d40cfc8bdf5e89a71c9ad24bdf262",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_task_meaning.py",
+      "active_before_sha256": "e29019cd63cf178e0d14d395f49ea8f94e1d40cfc8bdf5e89a71c9ad24bdf262",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_task_meaning.py",
+      "active_target_relative_to_repository": "tests/contract/test_task_meaning.py"
+    },
+    {
+      "relative_path": "tests/contract/test_task_meaning_view.py",
+      "candidate_sha256": "c0e6c3af2f47a9a91186760c1275c289a235a053d2a09b6098319275314d0638",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rs3-20261014\\tests\\contract\\test_task_meaning_view.py",
+      "active_before_sha256": "447aef95b8bf0ec99d15956653441f133bee2eb676525e0bac434f7801e675a5",
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_task_meaning_view.py",
+      "active_target_relative_to_repository": "tests/contract/test_task_meaning_view.py"
+    },
+    {
+      "relative_path": "tests/contract/test_task_view.py",
+      "candidate_sha256": "1c3dd1d3c66aec7a99128ca668944c284488e08adb0ce69390db90ac083d7e7d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_task_view.py",
+      "active_before_sha256": "1c3dd1d3c66aec7a99128ca668944c284488e08adb0ce69390db90ac083d7e7d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_task_view.py",
+      "active_target_relative_to_repository": "tests/contract/test_task_view.py"
+    },
+    {
+      "relative_path": "tests/contract/test_termination_retry.py",
+      "candidate_sha256": "ecd464d6cb7761c8a4453da500fc00164c739642e4acead3449fdf7f07c2f264",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_termination_retry.py",
+      "active_before_sha256": "ecd464d6cb7761c8a4453da500fc00164c739642e4acead3449fdf7f07c2f264",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_termination_retry.py",
+      "active_target_relative_to_repository": "tests/contract/test_termination_retry.py"
+    },
+    {
+      "relative_path": "tests/contract/test_toolchain_identity.py",
+      "candidate_sha256": "9cc71815d05ab93e73ccfb5a5ea5ddfc82136050daec3f2825a864e8ee7256ef",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_toolchain_identity.py",
+      "active_before_sha256": "9cc71815d05ab93e73ccfb5a5ea5ddfc82136050daec3f2825a864e8ee7256ef",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_toolchain_identity.py",
+      "active_target_relative_to_repository": "tests/contract/test_toolchain_identity.py"
+    },
+    {
+      "relative_path": "tests/contract/test_transitions.py",
+      "candidate_sha256": "b002504e43b1e9d4d2d688210ec3642757e1cbe50a8d86ae822410ab709b896d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_transitions.py",
+      "active_before_sha256": "b002504e43b1e9d4d2d688210ec3642757e1cbe50a8d86ae822410ab709b896d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_transitions.py",
+      "active_target_relative_to_repository": "tests/contract/test_transitions.py"
+    },
+    {
+      "relative_path": "tests/contract/test_windows_jobs.py",
+      "candidate_sha256": "6f215f512197b8876c1a086b3f88bd586e171a9d8d99b8788ecdda32c8185453",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_windows_jobs.py",
+      "active_before_sha256": "6f215f512197b8876c1a086b3f88bd586e171a9d8d99b8788ecdda32c8185453",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_windows_jobs.py",
+      "active_target_relative_to_repository": "tests/contract/test_windows_jobs.py"
+    },
+    {
+      "relative_path": "tests/contract/test_windows_pipe.py",
+      "candidate_sha256": "84625abde9ae2631413169a4b5388e7ea1b2cc02ad0c2ae5dfaa5e7ee4a4f980",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_windows_pipe.py",
+      "active_before_sha256": "84625abde9ae2631413169a4b5388e7ea1b2cc02ad0c2ae5dfaa5e7ee4a4f980",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_windows_pipe.py",
+      "active_target_relative_to_repository": "tests/contract/test_windows_pipe.py"
+    },
+    {
+      "relative_path": "tools/build_measurements.py",
+      "candidate_sha256": "00ddac391dc546d1232365ac3f0bd3e821b73037cc7beb08a938e931c0d1dd26",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\build_measurements.py",
+      "active_before_sha256": "00ddac391dc546d1232365ac3f0bd3e821b73037cc7beb08a938e931c0d1dd26",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/build_measurements.py",
+      "active_target_relative_to_repository": "tools/build_measurements.py"
+    },
+    {
+      "relative_path": "tools/ceta_operator.py",
+      "candidate_sha256": "645f83c7be399d729b5ae2bce7eda8248778a4afeb06bc8e03af9c5be33639dd",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\ceta_operator.py",
+      "active_before_sha256": "645f83c7be399d729b5ae2bce7eda8248778a4afeb06bc8e03af9c5be33639dd",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/ceta_operator.py",
+      "active_target_relative_to_repository": "tools/ceta_operator.py"
+    },
+    {
+      "relative_path": "tools/compile_graph.py",
+      "candidate_sha256": "f8934ea2c8b42ef1552437b698062feb48904b2ce2071131dcc7b06811204b01",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\compile_graph.py",
+      "active_before_sha256": "f8934ea2c8b42ef1552437b698062feb48904b2ce2071131dcc7b06811204b01",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/compile_graph.py",
+      "active_target_relative_to_repository": "tools/compile_graph.py"
+    },
+    {
+      "relative_path": "tools/development_inventory.py",
+      "candidate_sha256": "58c2dd084c128ffe70a0d54ce8d314ca4c5712bcc0d2e53cf865988212cb00be",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\development_inventory.py",
+      "active_before_sha256": "58c2dd084c128ffe70a0d54ce8d314ca4c5712bcc0d2e53cf865988212cb00be",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/development_inventory.py",
+      "active_target_relative_to_repository": "tools/development_inventory.py"
+    },
+    {
+      "relative_path": "tools/probe_sqlite_runtime.py",
+      "candidate_sha256": "e3a1fe5a6161084d4aa8e45afd08de898d4b2f6764178185319ddec26f265e5d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\probe_sqlite_runtime.py",
+      "active_before_sha256": "e3a1fe5a6161084d4aa8e45afd08de898d4b2f6764178185319ddec26f265e5d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/probe_sqlite_runtime.py",
+      "active_target_relative_to_repository": "tools/probe_sqlite_runtime.py"
+    },
+    {
+      "relative_path": "tools/run_source_tests.py",
+      "candidate_sha256": "5d0d0955b90dd26f04fe166e2c1bb7e2c3c611e72670011bf22e0156bcef69df",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\run_source_tests.py",
+      "active_before_sha256": "5d0d0955b90dd26f04fe166e2c1bb7e2c3c611e72670011bf22e0156bcef69df",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/run_source_tests.py",
+      "active_target_relative_to_repository": "tools/run_source_tests.py"
+    },
+    {
+      "relative_path": "contracts/BUILD_MEASUREMENTS_V1.md",
+      "candidate_sha256": "1ff9f0be7e9a56585a49ba9095fb60fba9fa2644c23aa378cb7a0a8984d503c9",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\BUILD_MEASUREMENTS_V1.md",
+      "active_before_sha256": "1ff9f0be7e9a56585a49ba9095fb60fba9fa2644c23aa378cb7a0a8984d503c9",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/BUILD_MEASUREMENTS_V1.md",
+      "active_target_relative_to_repository": "contracts/BUILD_MEASUREMENTS_V1.md"
+    },
+    {
+      "relative_path": "contracts/CONSTRUCTION_GATES_V1.md",
+      "candidate_sha256": "b7051474b933e17a7e3826de98cd249fac36bee03696d9430618b429c907ef96",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\CONSTRUCTION_GATES_V1.md",
+      "active_before_sha256": "b7051474b933e17a7e3826de98cd249fac36bee03696d9430618b429c907ef96",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/CONSTRUCTION_GATES_V1.md",
+      "active_target_relative_to_repository": "contracts/CONSTRUCTION_GATES_V1.md"
+    },
+    {
+      "relative_path": "contracts/dependencies/native-operator.lock",
+      "candidate_sha256": "191f0de31ee4af2e6d9a79dd06bdbe929909b0966f881f2af3d1d21a594c1c67",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\dependencies\\native-operator.lock",
+      "active_before_sha256": "191f0de31ee4af2e6d9a79dd06bdbe929909b0966f881f2af3d1d21a594c1c67",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/dependencies/native-operator.lock",
+      "active_target_relative_to_repository": "contracts/dependencies/native-operator.lock"
+    },
+    {
+      "relative_path": "contracts/dependencies/native-operator.txt",
+      "candidate_sha256": "49560713ab708cdfeb46a0ab9ab466950f59eac738bde67718bc2099d2b769bf",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\dependencies\\native-operator.txt",
+      "active_before_sha256": "49560713ab708cdfeb46a0ab9ab466950f59eac738bde67718bc2099d2b769bf",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/dependencies/native-operator.txt",
+      "active_target_relative_to_repository": "contracts/dependencies/native-operator.txt"
+    },
+    {
+      "relative_path": "contracts/DEVELOPMENT_INVENTORY_V1.md",
+      "candidate_sha256": "9dbfa936a0311617e9566ba313dfa241ac4068542ec7886c9040659d6b1d7ff4",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\DEVELOPMENT_INVENTORY_V1.md",
+      "active_before_sha256": "9dbfa936a0311617e9566ba313dfa241ac4068542ec7886c9040659d6b1d7ff4",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/DEVELOPMENT_INVENTORY_V1.md",
+      "active_target_relative_to_repository": "contracts/DEVELOPMENT_INVENTORY_V1.md"
+    },
+    {
+      "relative_path": "contracts/DURABLE_HISTORY_V1.md",
+      "candidate_sha256": "62b0fdf44e3f9e721b02e88437f39589919874041263841426511e8544123bef",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\DURABLE_HISTORY_V1.md",
+      "active_before_sha256": "62b0fdf44e3f9e721b02e88437f39589919874041263841426511e8544123bef",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/DURABLE_HISTORY_V1.md",
+      "active_target_relative_to_repository": "contracts/DURABLE_HISTORY_V1.md"
+    },
+    {
+      "relative_path": "contracts/EDITOR_RECOVERY_V1.md",
+      "candidate_sha256": "d8d5614ee8403cdfaef80c8ad813518359fde771481eaf9e2fda329898499c2a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\EDITOR_RECOVERY_V1.md",
+      "active_before_sha256": "d8d5614ee8403cdfaef80c8ad813518359fde771481eaf9e2fda329898499c2a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/EDITOR_RECOVERY_V1.md",
+      "active_target_relative_to_repository": "contracts/EDITOR_RECOVERY_V1.md"
+    },
+    {
+      "relative_path": "contracts/error_catalog.json",
+      "candidate_sha256": "8f1dc3a71b73c67f1f5938ccab53a94ceaec52204ae277a5d1d9107aa51cabbf",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\error_catalog.json",
+      "active_before_sha256": "8f1dc3a71b73c67f1f5938ccab53a94ceaec52204ae277a5d1d9107aa51cabbf",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/error_catalog.json",
+      "active_target_relative_to_repository": "contracts/error_catalog.json"
+    },
+    {
+      "relative_path": "contracts/ERROR_SEMANTICS_V1.md",
+      "candidate_sha256": "6341c318191688cc1e56bd6fa4fd428d9c23dcf2517592d7b103f07fad6c6826",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\ERROR_SEMANTICS_V1.md",
+      "active_before_sha256": "6341c318191688cc1e56bd6fa4fd428d9c23dcf2517592d7b103f07fad6c6826",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/ERROR_SEMANTICS_V1.md",
+      "active_target_relative_to_repository": "contracts/ERROR_SEMANTICS_V1.md"
+    },
+    {
+      "relative_path": "contracts/EVIDENCE_ADMISSION_V1.md",
+      "candidate_sha256": "dbbd7f047da272b73ac74af68f59d53724048dcf439fff29d953cb32bf1f6cae",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\EVIDENCE_ADMISSION_V1.md",
+      "active_before_sha256": "dbbd7f047da272b73ac74af68f59d53724048dcf439fff29d953cb32bf1f6cae",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/EVIDENCE_ADMISSION_V1.md",
+      "active_target_relative_to_repository": "contracts/EVIDENCE_ADMISSION_V1.md"
+    },
+    {
+      "relative_path": "contracts/KERNEL_TRANSACTIONS_V1.md",
+      "candidate_sha256": "9ef24bfb4a10bf88ac25dd91ee5f55764c7388c9eb0ce5118df3fac28deb31b6",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\KERNEL_TRANSACTIONS_V1.md",
+      "active_before_sha256": "9ef24bfb4a10bf88ac25dd91ee5f55764c7388c9eb0ce5118df3fac28deb31b6",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/KERNEL_TRANSACTIONS_V1.md",
+      "active_target_relative_to_repository": "contracts/KERNEL_TRANSACTIONS_V1.md"
+    },
+    {
+      "relative_path": "contracts/LOCAL_IPC_V1.md",
+      "candidate_sha256": "34cd50cab8d1b442880ca8902c699ad223b7fe2b8db7e2faa97f7c28ab111833",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\LOCAL_IPC_V1.md",
+      "active_before_sha256": "34cd50cab8d1b442880ca8902c699ad223b7fe2b8db7e2faa97f7c28ab111833",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/LOCAL_IPC_V1.md",
+      "active_target_relative_to_repository": "contracts/LOCAL_IPC_V1.md"
+    },
+    {
+      "relative_path": "contracts/operation_catalog.json",
+      "candidate_sha256": "0ee7f7ebb3508db9bc6a6c0a7b4230822d20399e1258251edfdb298e00cbc844",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\operation_catalog.json",
+      "active_before_sha256": "0ee7f7ebb3508db9bc6a6c0a7b4230822d20399e1258251edfdb298e00cbc844",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/operation_catalog.json",
+      "active_target_relative_to_repository": "contracts/operation_catalog.json"
+    },
+    {
+      "relative_path": "contracts/OWNED_SERVICE_V1.md",
+      "candidate_sha256": "45dd1735d54fe42619d7539ae2e1a9ef8d39f59a6e18d4f29f4bd722f85b0921",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\OWNED_SERVICE_V1.md",
+      "active_before_sha256": "45dd1735d54fe42619d7539ae2e1a9ef8d39f59a6e18d4f29f4bd722f85b0921",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/OWNED_SERVICE_V1.md",
+      "active_target_relative_to_repository": "contracts/OWNED_SERVICE_V1.md"
+    },
+    {
+      "relative_path": "contracts/PREPARATION_VIEW_V1.md",
+      "candidate_sha256": "6d832da1ab4f4e5c19c12d85ab1a7c76eed44b3127e21f1e2a58e1c4976c7ab6",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\PREPARATION_VIEW_V1.md",
+      "active_before_sha256": "6d832da1ab4f4e5c19c12d85ab1a7c76eed44b3127e21f1e2a58e1c4976c7ab6",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/PREPARATION_VIEW_V1.md",
+      "active_target_relative_to_repository": "contracts/PREPARATION_VIEW_V1.md"
+    },
+    {
+      "relative_path": "contracts/records/ActionProposal.md",
+      "candidate_sha256": "548adcc7116de7d38d97d85f42c693f9d2070b4cdefc504c839159826c1d22f1",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\ActionProposal.md",
+      "active_before_sha256": "548adcc7116de7d38d97d85f42c693f9d2070b4cdefc504c839159826c1d22f1",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/ActionProposal.md",
+      "active_target_relative_to_repository": "contracts/records/ActionProposal.md"
+    },
+    {
+      "relative_path": "contracts/records/CapabilityQualification.md",
+      "candidate_sha256": "094d6dc0cbd277a16a550b439eddffa2d24ab3d223fc6f8ecb95c8e8b38fc646",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\CapabilityQualification.md",
+      "active_before_sha256": "094d6dc0cbd277a16a550b439eddffa2d24ab3d223fc6f8ecb95c8e8b38fc646",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/CapabilityQualification.md",
+      "active_target_relative_to_repository": "contracts/records/CapabilityQualification.md"
+    },
+    {
+      "relative_path": "contracts/records/CompanionIdentity.md",
+      "candidate_sha256": "4d06d04209b5e1b202207cdc4048cd043a44fd03bd1fedc25a90b13f2e3c4eac",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\CompanionIdentity.md",
+      "active_before_sha256": "4d06d04209b5e1b202207cdc4048cd043a44fd03bd1fedc25a90b13f2e3c4eac",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/CompanionIdentity.md",
+      "active_target_relative_to_repository": "contracts/records/CompanionIdentity.md"
+    },
+    {
+      "relative_path": "contracts/records/ContextEnvelope.md",
+      "candidate_sha256": "9bb5b448c1dc6088b12f7c49734bb7724007ac5e18506e5104f244a73675a735",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\ContextEnvelope.md",
+      "active_before_sha256": "9bb5b448c1dc6088b12f7c49734bb7724007ac5e18506e5104f244a73675a735",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/ContextEnvelope.md",
+      "active_target_relative_to_repository": "contracts/records/ContextEnvelope.md"
+    },
+    {
+      "relative_path": "contracts/records/EffectObservation.md",
+      "candidate_sha256": "64750e87aeee7ec7468de7c3273d06eac84f5643d8def8d3c06df48eadb11cc7",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\EffectObservation.md",
+      "active_before_sha256": "64750e87aeee7ec7468de7c3273d06eac84f5643d8def8d3c06df48eadb11cc7",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/EffectObservation.md",
+      "active_target_relative_to_repository": "contracts/records/EffectObservation.md"
+    },
+    {
+      "relative_path": "contracts/records/ErrorEnvelope.md",
+      "candidate_sha256": "80c477a2e1d2d237e1adade8bc3b47eea8829f4684ea83b52065a77613ef47f0",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\ErrorEnvelope.md",
+      "active_before_sha256": "80c477a2e1d2d237e1adade8bc3b47eea8829f4684ea83b52065a77613ef47f0",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/ErrorEnvelope.md",
+      "active_target_relative_to_repository": "contracts/records/ErrorEnvelope.md"
+    },
+    {
+      "relative_path": "contracts/records/EventRecord.md",
+      "candidate_sha256": "8722ac161687cfaed51f02c53645fd0fa9598e15afbd6bba5e5d896323a48d72",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\EventRecord.md",
+      "active_before_sha256": "8722ac161687cfaed51f02c53645fd0fa9598e15afbd6bba5e5d896323a48d72",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/EventRecord.md",
+      "active_target_relative_to_repository": "contracts/records/EventRecord.md"
+    },
+    {
+      "relative_path": "contracts/records/ExecutionReceipt.md",
+      "candidate_sha256": "b4ed4535fd971aed890416862d3856dd1ccf4496118ef80a3c7998a72ea1eb4b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\ExecutionReceipt.md",
+      "active_before_sha256": "b4ed4535fd971aed890416862d3856dd1ccf4496118ef80a3c7998a72ea1eb4b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/ExecutionReceipt.md",
+      "active_target_relative_to_repository": "contracts/records/ExecutionReceipt.md"
+    },
+    {
+      "relative_path": "contracts/records/MemoryLifecycleEvent.md",
+      "candidate_sha256": "93e11317a329ddd7b9bf4c48aeb643266e42cdb5b3eb7e3f0dacd99a26cdd053",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\MemoryLifecycleEvent.md",
+      "active_before_sha256": "93e11317a329ddd7b9bf4c48aeb643266e42cdb5b3eb7e3f0dacd99a26cdd053",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/MemoryLifecycleEvent.md",
+      "active_target_relative_to_repository": "contracts/records/MemoryLifecycleEvent.md"
+    },
+    {
+      "relative_path": "contracts/records/MemoryRecord.md",
+      "candidate_sha256": "491b2bf2956b099f44844c8ed77bc27ff649a50332f956af6bff68ad31fd81df",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\MemoryRecord.md",
+      "active_before_sha256": "491b2bf2956b099f44844c8ed77bc27ff649a50332f956af6bff68ad31fd81df",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/MemoryRecord.md",
+      "active_target_relative_to_repository": "contracts/records/MemoryRecord.md"
+    },
+    {
+      "relative_path": "contracts/records/MigrationRecord.md",
+      "candidate_sha256": "71bab10b3e3436c8867fe7719ad66393beb6dc54c666f028ef4d764d386cd0fe",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\MigrationRecord.md",
+      "active_before_sha256": "71bab10b3e3436c8867fe7719ad66393beb6dc54c666f028ef4d764d386cd0fe",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/MigrationRecord.md",
+      "active_target_relative_to_repository": "contracts/records/MigrationRecord.md"
+    },
+    {
+      "relative_path": "contracts/records/ObservationEnvelope.md",
+      "candidate_sha256": "4c0a31dae3973857a45322f8b343df90edf6393a902109b0fd58ab55ec266591",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\ObservationEnvelope.md",
+      "active_before_sha256": "4c0a31dae3973857a45322f8b343df90edf6393a902109b0fd58ab55ec266591",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/ObservationEnvelope.md",
+      "active_target_relative_to_repository": "contracts/records/ObservationEnvelope.md"
+    },
+    {
+      "relative_path": "contracts/records/OperationPermit.md",
+      "candidate_sha256": "992dd5d267d3e0661b13210806d08c8d2d556475fcf6031c061e4496927f25e3",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\OperationPermit.md",
+      "active_before_sha256": "992dd5d267d3e0661b13210806d08c8d2d556475fcf6031c061e4496927f25e3",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/OperationPermit.md",
+      "active_target_relative_to_repository": "contracts/records/OperationPermit.md"
+    },
+    {
+      "relative_path": "contracts/records/PlanNode.md",
+      "candidate_sha256": "1b2e3251d7b9214d46317002bf2023defc42e585d593837a2656fbca1d9dde6d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\PlanNode.md",
+      "active_before_sha256": "1b2e3251d7b9214d46317002bf2023defc42e585d593837a2656fbca1d9dde6d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/PlanNode.md",
+      "active_target_relative_to_repository": "contracts/records/PlanNode.md"
+    },
+    {
+      "relative_path": "contracts/records/PolicyDecision.md",
+      "candidate_sha256": "acbee123ad92dddd980a149cbc10579a13be3b6456713861ecfb87ec4ca9e18d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\PolicyDecision.md",
+      "active_before_sha256": "acbee123ad92dddd980a149cbc10579a13be3b6456713861ecfb87ec4ca9e18d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/PolicyDecision.md",
+      "active_target_relative_to_repository": "contracts/records/PolicyDecision.md"
+    },
+    {
+      "relative_path": "contracts/records/ProtectedOperationRequest.md",
+      "candidate_sha256": "d0d768953f477a42d5dc62d71c68b9e10856f36f9366c7ba6467a6ab87e85b8f",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\ProtectedOperationRequest.md",
+      "active_before_sha256": "d0d768953f477a42d5dc62d71c68b9e10856f36f9366c7ba6467a6ab87e85b8f",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/ProtectedOperationRequest.md",
+      "active_target_relative_to_repository": "contracts/records/ProtectedOperationRequest.md"
+    },
+    {
+      "relative_path": "contracts/records/QueueItem.md",
+      "candidate_sha256": "0d8867722751b2f8354b543786e2f5c431bcdd9ca717a3c35c93ba0b4483e513",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\QueueItem.md",
+      "active_before_sha256": "0d8867722751b2f8354b543786e2f5c431bcdd9ca717a3c35c93ba0b4483e513",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/QueueItem.md",
+      "active_target_relative_to_repository": "contracts/records/QueueItem.md"
+    },
+    {
+      "relative_path": "contracts/records/RecoveryRecord.md",
+      "candidate_sha256": "5548600f89d3173e45ff98483a453127a7b0844a664fbea8635bdee004bf8f4e",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\RecoveryRecord.md",
+      "active_before_sha256": "5548600f89d3173e45ff98483a453127a7b0844a664fbea8635bdee004bf8f4e",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/RecoveryRecord.md",
+      "active_target_relative_to_repository": "contracts/records/RecoveryRecord.md"
+    },
+    {
+      "relative_path": "contracts/records/ReviewFinding.md",
+      "candidate_sha256": "7b7e35d1c064d934b8b27a708fbdd9cabf609ddc135af5e43f100f77e74e87ce",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\ReviewFinding.md",
+      "active_before_sha256": "7b7e35d1c064d934b8b27a708fbdd9cabf609ddc135af5e43f100f77e74e87ce",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/ReviewFinding.md",
+      "active_target_relative_to_repository": "contracts/records/ReviewFinding.md"
+    },
+    {
+      "relative_path": "contracts/records/StandingGrant.md",
+      "candidate_sha256": "f5401764d5aa0a840aea925564aaf71fc94c89b74f0b06f828016ded4c37cfb4",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\records\\StandingGrant.md",
+      "active_before_sha256": "f5401764d5aa0a840aea925564aaf71fc94c89b74f0b06f828016ded4c37cfb4",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/records/StandingGrant.md",
+      "active_target_relative_to_repository": "contracts/records/StandingGrant.md"
+    },
+    {
+      "relative_path": "contracts/reference_material/handoff_record.source.md",
+      "candidate_sha256": "036909b7fec542b60ecc7bb5c472bf7779ed612b8f869dbd60c02b759de84fda",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\reference_material\\handoff_record.source.md",
+      "active_before_sha256": "036909b7fec542b60ecc7bb5c472bf7779ed612b8f869dbd60c02b759de84fda",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/reference_material/handoff_record.source.md",
+      "active_target_relative_to_repository": "contracts/reference_material/handoff_record.source.md"
+    },
+    {
+      "relative_path": "contracts/RELEVANT_STATE_V1.md",
+      "candidate_sha256": "158c8e579ac571fa7002bf1976219da81cb18cae22b3f2833a34de96a2d10750",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\RELEVANT_STATE_V1.md",
+      "active_before_sha256": "158c8e579ac571fa7002bf1976219da81cb18cae22b3f2833a34de96a2d10750",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/RELEVANT_STATE_V1.md",
+      "active_target_relative_to_repository": "contracts/RELEVANT_STATE_V1.md"
+    },
+    {
+      "relative_path": "contracts/REQUEST_COMPILER_V1.md",
+      "candidate_sha256": "9f755c546821b3e4457498a2b515e674a86db8bcce80564e2f1491150e259032",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\REQUEST_COMPILER_V1.md",
+      "active_before_sha256": "9f755c546821b3e4457498a2b515e674a86db8bcce80564e2f1491150e259032",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/REQUEST_COMPILER_V1.md",
+      "active_target_relative_to_repository": "contracts/REQUEST_COMPILER_V1.md"
+    },
+    {
+      "relative_path": "contracts/SEMANTIC_VALIDATION.md",
+      "candidate_sha256": "fcefa9011339ef3a7b0b712ef25a0fc1cf3eb3761444f2b667ecf17341b49136",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\SEMANTIC_VALIDATION.md",
+      "active_before_sha256": "fcefa9011339ef3a7b0b712ef25a0fc1cf3eb3761444f2b667ecf17341b49136",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/SEMANTIC_VALIDATION.md",
+      "active_target_relative_to_repository": "contracts/SEMANTIC_VALIDATION.md"
+    },
+    {
+      "relative_path": "contracts/source_reference_map_v1.json",
+      "candidate_sha256": "7311708cdd0a8e32a7ddb648e214be6bc91fe3ccd4c770331c727b3484523e99",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\source_reference_map_v1.json",
+      "active_before_sha256": "7311708cdd0a8e32a7ddb648e214be6bc91fe3ccd4c770331c727b3484523e99",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/source_reference_map_v1.json",
+      "active_target_relative_to_repository": "contracts/source_reference_map_v1.json"
+    },
+    {
+      "relative_path": "contracts/SOURCE_REFERENCE_RESOLUTION_V1.md",
+      "candidate_sha256": "d713388243a0b5b4049285c618de3986f2f9b590f845d8d983d7c057cef9f28a",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\SOURCE_REFERENCE_RESOLUTION_V1.md",
+      "active_before_sha256": "d713388243a0b5b4049285c618de3986f2f9b590f845d8d983d7c057cef9f28a",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/SOURCE_REFERENCE_RESOLUTION_V1.md",
+      "active_target_relative_to_repository": "contracts/SOURCE_REFERENCE_RESOLUTION_V1.md"
+    },
+    {
+      "relative_path": "contracts/SQLITE_RUNTIME_V1.json",
+      "candidate_sha256": "22f43c6b8389742eb18daf312100101bed177c9fa8350be55395ac739d6c8109",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\SQLITE_RUNTIME_V1.json",
+      "active_before_sha256": "22f43c6b8389742eb18daf312100101bed177c9fa8350be55395ac739d6c8109",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/SQLITE_RUNTIME_V1.json",
+      "active_target_relative_to_repository": "contracts/SQLITE_RUNTIME_V1.json"
+    },
+    {
+      "relative_path": "contracts/state_catalog.json",
+      "candidate_sha256": "232807fa439247ebc9a3da669710f9badf38ac5166549e3f58c6f2448aba45ca",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\state_catalog.json",
+      "active_before_sha256": "232807fa439247ebc9a3da669710f9badf38ac5166549e3f58c6f2448aba45ca",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/state_catalog.json",
+      "active_target_relative_to_repository": "contracts/state_catalog.json"
+    },
+    {
+      "relative_path": "contracts/STORE_TRANSACTION_V2.md",
+      "candidate_sha256": "1ac02ddc87383e4ac2592875e86e1cfbffa6c7c7d00351d1784f9008d4f0f30b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\STORE_TRANSACTION_V2.md",
+      "active_before_sha256": "1ac02ddc87383e4ac2592875e86e1cfbffa6c7c7d00351d1784f9008d4f0f30b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/STORE_TRANSACTION_V2.md",
+      "active_target_relative_to_repository": "contracts/STORE_TRANSACTION_V2.md"
+    },
+    {
+      "relative_path": "contracts/TASK_DRAFTS_V1.md",
+      "candidate_sha256": "ec5b24d652d8cd634028ee3d8efd84243434b57eb1ab6ff85e19718230bf1444",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\TASK_DRAFTS_V1.md",
+      "active_before_sha256": "ec5b24d652d8cd634028ee3d8efd84243434b57eb1ab6ff85e19718230bf1444",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/TASK_DRAFTS_V1.md",
+      "active_target_relative_to_repository": "contracts/TASK_DRAFTS_V1.md"
+    },
+    {
+      "relative_path": "contracts/TASK_MEANING_V1.md",
+      "candidate_sha256": "18bcd4525bc0dfeccc2ce7bd43d1dfe2fbc65ce026432c9df1a2e0012a13b595",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\TASK_MEANING_V1.md",
+      "active_before_sha256": "18bcd4525bc0dfeccc2ce7bd43d1dfe2fbc65ce026432c9df1a2e0012a13b595",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/TASK_MEANING_V1.md",
+      "active_target_relative_to_repository": "contracts/TASK_MEANING_V1.md"
+    },
+    {
+      "relative_path": "contracts/TRANSITION_MODEL_V1.md",
+      "candidate_sha256": "486e4be2d9f6060d4dfa2bfc624d122441eba2f6286cbd13b95f59e00c79a381",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\TRANSITION_MODEL_V1.md",
+      "active_before_sha256": "486e4be2d9f6060d4dfa2bfc624d122441eba2f6286cbd13b95f59e00c79a381",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/TRANSITION_MODEL_V1.md",
+      "active_target_relative_to_repository": "contracts/TRANSITION_MODEL_V1.md"
+    },
+    {
+      "relative_path": "contracts/transition_rules.json",
+      "candidate_sha256": "f36239d7a0d7f21829b88f529ff1b5a4a92ea37eb927afe526203376b955467c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\transition_rules.json",
+      "active_before_sha256": "f36239d7a0d7f21829b88f529ff1b5a4a92ea37eb927afe526203376b955467c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/transition_rules.json",
+      "active_target_relative_to_repository": "contracts/transition_rules.json"
+    },
+    {
+      "relative_path": "native/sqlite_runtime/README.md",
+      "candidate_sha256": "6a765ca6a4b08ed25f4a6d3b77c88d86adebdee429e32ddc5a0f6ace25396420",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\native\\sqlite_runtime\\README.md",
+      "active_before_sha256": "6a765ca6a4b08ed25f4a6d3b77c88d86adebdee429e32ddc5a0f6ace25396420",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/native/sqlite_runtime/README.md",
+      "active_target_relative_to_repository": "native/sqlite_runtime/README.md"
+    },
+    {
+      "relative_path": "native/sqlite_runtime/win-x64/sqlite3.def",
+      "candidate_sha256": "a93b7867cc1fdb4e1dd0d4eef727cf910fe9f2bb6cd612d933744add1fa7f11b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\native\\sqlite_runtime\\win-x64\\sqlite3.def",
+      "active_before_sha256": "a93b7867cc1fdb4e1dd0d4eef727cf910fe9f2bb6cd612d933744add1fa7f11b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/native/sqlite_runtime/win-x64/sqlite3.def",
+      "active_target_relative_to_repository": "native/sqlite_runtime/win-x64/sqlite3.def"
+    },
+    {
+      "relative_path": "native/sqlite_runtime/win-x64/sqlite3.dll",
+      "candidate_sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\native\\sqlite_runtime\\win-x64\\sqlite3.dll",
+      "active_before_sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/native/sqlite_runtime/win-x64/sqlite3.dll",
+      "active_target_relative_to_repository": "native/sqlite_runtime/win-x64/sqlite3.dll"
+    },
+    {
+      "relative_path": "tests/contract/test_destination_long_paths.py",
+      "candidate_sha256": "d6d55bd45000540bfa7e3848bc1aace2cb9250fb89c889592aff21c378ca44fc",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_destination_long_paths.py",
+      "active_before_sha256": "d6d55bd45000540bfa7e3848bc1aace2cb9250fb89c889592aff21c378ca44fc",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_destination_long_paths.py",
+      "active_target_relative_to_repository": "tests/contract/test_destination_long_paths.py"
+    },
+    {
+      "relative_path": "tests/contract/test_destination_discovery.py",
+      "candidate_sha256": "4bdca89fa498e86d7ff2b03a0c6f759e2f9f712afb503937a3ad6b745a819e32",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_destination_discovery.py",
+      "active_before_sha256": "4bdca89fa498e86d7ff2b03a0c6f759e2f9f712afb503937a3ad6b745a819e32",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_destination_discovery.py",
+      "active_target_relative_to_repository": "tests/contract/test_destination_discovery.py"
+    },
+    {
+      "relative_path": "tests/contract/fixture_paths.py",
+      "candidate_sha256": "a2edef024d480c573c32bbe5eeb96f308f216f8a6ceacc0d46b8d87b88783166",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\fixture_paths.py",
+      "active_before_sha256": "a2edef024d480c573c32bbe5eeb96f308f216f8a6ceacc0d46b8d87b88783166",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/fixture_paths.py",
+      "active_target_relative_to_repository": "tests/contract/fixture_paths.py"
+    },
+    {
+      "relative_path": "build/work_packages.json",
+      "candidate_sha256": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\build\\work_packages.json",
+      "active_before_sha256": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/build/work_packages.json",
+      "active_target_relative_to_repository": "build/work_packages.json"
+    },
+    {
+      "relative_path": "build/gates.json",
+      "candidate_sha256": "04afba11afa8a707ac70651d2ef26efed65d75b0d6d6edde44c2399c2a36848b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\build\\gates.json",
+      "active_before_sha256": "04afba11afa8a707ac70651d2ef26efed65d75b0d6d6edde44c2399c2a36848b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/build/gates.json",
+      "active_target_relative_to_repository": "build/gates.json"
+    },
+    {
+      "relative_path": "docs/specification/25_defensive_vault_custody.md",
+      "candidate_sha256": "35f785363a731ee2c88ec88048ef9f7c4d9b4cca6e132582876a3276d2f8c703",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\docs\\specification\\25_defensive_vault_custody.md",
+      "active_before_sha256": "35f785363a731ee2c88ec88048ef9f7c4d9b4cca6e132582876a3276d2f8c703",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/docs/specification/25_defensive_vault_custody.md",
+      "active_target_relative_to_repository": "docs/specification/25_defensive_vault_custody.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/01_architect_expected_output.md",
+      "candidate_sha256": "ca9f0f896d74d51020a4041f3ca0379c43a32b4cd4c69c2bc4123bf4d8c38a0b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\01_architect_expected_output.md",
+      "active_before_sha256": "ca9f0f896d74d51020a4041f3ca0379c43a32b4cd4c69c2bc4123bf4d8c38a0b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/01_architect_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/01_architect_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/02_researcher_expected_output.md",
+      "candidate_sha256": "910211d63fbaf964162aa090c38cd8d6096cdbde44a2ed991a548b1f240d1cf6",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\02_researcher_expected_output.md",
+      "active_before_sha256": "910211d63fbaf964162aa090c38cd8d6096cdbde44a2ed991a548b1f240d1cf6",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/02_researcher_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/02_researcher_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/03_analyst_expected_output.md",
+      "candidate_sha256": "7a2be7c9d15dc10142634acc74212d7844b3c588a899abd992f1d13af80e25fb",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\03_analyst_expected_output.md",
+      "active_before_sha256": "7a2be7c9d15dc10142634acc74212d7844b3c588a899abd992f1d13af80e25fb",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/03_analyst_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/03_analyst_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/04_critic_expected_output.md",
+      "candidate_sha256": "1604e5b2cb4b5561eb89270b98fdc9d6dbd4e0e473160a0d4d5d0be32613f271",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\04_critic_expected_output.md",
+      "active_before_sha256": "1604e5b2cb4b5561eb89270b98fdc9d6dbd4e0e473160a0d4d5d0be32613f271",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/04_critic_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/04_critic_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/05_security_auditor_expected_output.md",
+      "candidate_sha256": "66a71dbb4ebbb6e49b613081362d00dd56c7ccc182168e2ae57fef59368b98db",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\05_security_auditor_expected_output.md",
+      "active_before_sha256": "66a71dbb4ebbb6e49b613081362d00dd56c7ccc182168e2ae57fef59368b98db",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/05_security_auditor_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/05_security_auditor_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/06_implementer_expected_output.md",
+      "candidate_sha256": "1386f9a2b2f01e0724a0ba30ae281a0c7a0c0e8c10b60550bb0a563fe7bb4205",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\06_implementer_expected_output.md",
+      "active_before_sha256": "1386f9a2b2f01e0724a0ba30ae281a0c7a0c0e8c10b60550bb0a563fe7bb4205",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/06_implementer_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/06_implementer_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/07_refactorer_expected_output.md",
+      "candidate_sha256": "6874f3c4c577090e5d7232d8bc301452f36d5ba26705292582f0bc123e355232",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\07_refactorer_expected_output.md",
+      "active_before_sha256": "6874f3c4c577090e5d7232d8bc301452f36d5ba26705292582f0bc123e355232",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/07_refactorer_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/07_refactorer_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/08_tester_expected_output.md",
+      "candidate_sha256": "99c7f70bcd727fb914d13e8166b003085e4bec5a4ae0219a69fe2ecce67733cd",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\08_tester_expected_output.md",
+      "active_before_sha256": "99c7f70bcd727fb914d13e8166b003085e4bec5a4ae0219a69fe2ecce67733cd",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/08_tester_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/08_tester_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/09_verifier_expected_output.md",
+      "candidate_sha256": "6c63844ca3f01d1cd1e39d6a950e4c16a137fac6d58e13eae35bb1ef84d78b06",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\09_verifier_expected_output.md",
+      "active_before_sha256": "6c63844ca3f01d1cd1e39d6a950e4c16a137fac6d58e13eae35bb1ef84d78b06",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/09_verifier_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/09_verifier_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/10_documentation_writer_expected_output.md",
+      "candidate_sha256": "1d4fdd5ce74aefc61b9c45b2a8c64680375e861c951890c2b8cc6a5f9e6f970d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\10_documentation_writer_expected_output.md",
+      "active_before_sha256": "1d4fdd5ce74aefc61b9c45b2a8c64680375e861c951890c2b8cc6a5f9e6f970d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/10_documentation_writer_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/10_documentation_writer_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/11_teacher_expected_output.md",
+      "candidate_sha256": "c71dac7b0c46c9c6b7e9b76584426fc10bd1f2d7942001804c98172376ee4121",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\11_teacher_expected_output.md",
+      "active_before_sha256": "c71dac7b0c46c9c6b7e9b76584426fc10bd1f2d7942001804c98172376ee4121",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/11_teacher_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/11_teacher_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/12_planner_expected_output.md",
+      "candidate_sha256": "fe32f24c1f56fa0dd20f39eca2b2ac76c8384703f41d02677f311bd2e260f17c",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\12_planner_expected_output.md",
+      "active_before_sha256": "fe32f24c1f56fa0dd20f39eca2b2ac76c8384703f41d02677f311bd2e260f17c",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/12_planner_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/12_planner_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/13_coordinator_expected_output.md",
+      "candidate_sha256": "30e998ccc7647c49d14bce5d66c3fbdea0a7c5feef73449b90e28342a6ccae0d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\13_coordinator_expected_output.md",
+      "active_before_sha256": "30e998ccc7647c49d14bce5d66c3fbdea0a7c5feef73449b90e28342a6ccae0d",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/13_coordinator_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/13_coordinator_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/14_observer_expected_output.md",
+      "candidate_sha256": "d5c21e22e625ad7c92d71e0df6767037584c48cab32bb286dba16c4735b4f935",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\14_observer_expected_output.md",
+      "active_before_sha256": "d5c21e22e625ad7c92d71e0df6767037584c48cab32bb286dba16c4735b4f935",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/14_observer_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/14_observer_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/15_memory_curator_expected_output.md",
+      "candidate_sha256": "21e8c16177a7da539f2c3bc5e115b50906392aca5784fcdedf008a1a17ffee54",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\15_memory_curator_expected_output.md",
+      "active_before_sha256": "21e8c16177a7da539f2c3bc5e115b50906392aca5784fcdedf008a1a17ffee54",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/15_memory_curator_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/15_memory_curator_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/16_governance_reviewer_expected_output.md",
+      "candidate_sha256": "b5c2b842880ef17a9c1f35aebd21d1cc5ab28439ea5b5f0990178b2f2196be4b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\16_governance_reviewer_expected_output.md",
+      "active_before_sha256": "b5c2b842880ef17a9c1f35aebd21d1cc5ab28439ea5b5f0990178b2f2196be4b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/16_governance_reviewer_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/16_governance_reviewer_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/17_red_team_expected_output.md",
+      "candidate_sha256": "fdb1a1b6737fbb5508cd5d5a7c2a65aac6aaf9a0af4bb46eab4755ef7eb41a2b",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\17_red_team_expected_output.md",
+      "active_before_sha256": "fdb1a1b6737fbb5508cd5d5a7c2a65aac6aaf9a0af4bb46eab4755ef7eb41a2b",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/17_red_team_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/17_red_team_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/18_optimizer_expected_output.md",
+      "candidate_sha256": "7a5789bb8157c767b8aa3e9e371ddb2905910160eec5d84ea8a136920ead33f8",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\18_optimizer_expected_output.md",
+      "active_before_sha256": "7a5789bb8157c767b8aa3e9e371ddb2905910160eec5d84ea8a136920ead33f8",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/18_optimizer_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/18_optimizer_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/19_user_experience_reviewer_expected_output.md",
+      "candidate_sha256": "194eda2d4b0569458f7ceb714dda5a8b33fadb7fa5161f74972ed665e8a2ca32",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\19_user_experience_reviewer_expected_output.md",
+      "active_before_sha256": "194eda2d4b0569458f7ceb714dda5a8b33fadb7fa5161f74972ed665e8a2ca32",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/19_user_experience_reviewer_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/19_user_experience_reviewer_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/20_decision_arbiter_advisory_expected_output.md",
+      "candidate_sha256": "7fafc938c1850cbea103b836fead263b766f34a61180ffb2d4f076d9c14d6b57",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\20_decision_arbiter_advisory_expected_output.md",
+      "active_before_sha256": "7fafc938c1850cbea103b836fead263b766f34a61180ffb2d4f076d9c14d6b57",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/20_decision_arbiter_advisory_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/20_decision_arbiter_advisory_expected_output.md"
+    },
+    {
+      "relative_path": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/21_guidebook_architect_expected_output.md",
+      "candidate_sha256": "ba2988f625e25f519cb0000b9a11f6f61a5e9b8d546c682f0dc5868287091bac",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\sources\\codex\\canonical_text\\02_AGENT_ROLES\\EXPECTED_OUTPUT_CONTRACTS\\21_guidebook_architect_expected_output.md",
+      "active_before_sha256": "ba2988f625e25f519cb0000b9a11f6f61a5e9b8d546c682f0dc5868287091bac",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/21_guidebook_architect_expected_output.md",
+      "active_target_relative_to_repository": "sources/codex/canonical_text/02_AGENT_ROLES/EXPECTED_OUTPUT_CONTRACTS/21_guidebook_architect_expected_output.md"
+    },
+    {
+      "relative_path": "contracts/RESOURCE_MANAGEMENT_V1.md",
+      "candidate_sha256": "c325051399259335ecd61e743214a7a3a5cefdc3a34fbaa245f3bdb4e4821484",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\contracts\\RESOURCE_MANAGEMENT_V1.md",
+      "active_before_sha256": "c325051399259335ecd61e743214a7a3a5cefdc3a34fbaa245f3bdb4e4821484",
+      "application_action": "IDENTICAL_RETAINED",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/RESOURCE_MANAGEMENT_V1.md",
+      "active_target_relative_to_repository": "contracts/RESOURCE_MANAGEMENT_V1.md"
+    },
+    {
+      "relative_path": "tests/contract/test_source_coverage.py",
+      "candidate_sha256": "255fcbf558a66d5091caea06d29aaef24cfe86712b1991657b2cf700e9e4d6bc",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rs3-20261014\\tests\\contract\\test_source_coverage.py",
+      "active_before_sha256": "9a6027cec788a0293f736b6b3a7ac272edfa668090cc07f16530335340f445d7",
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_source_coverage.py",
+      "active_target_relative_to_repository": "tests/contract/test_source_coverage.py"
+    },
+    {
+      "relative_path": "tools/verify_source_coverage.py",
+      "candidate_sha256": "e32eb1171d258f5dd65373b9094831ccdd8302f604e06fe86ece488561ae120d",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rs3-20261014\\tools\\verify_source_coverage.py",
+      "active_before_sha256": "e32eb1171d258f5dd65373b9094831ccdd8302f604e06fe86ece488561ae120d",
+      "application_action": "IDENTICAL_RETAINED",
+      "role": "READ_ONLY_CONNECTED_DEPENDENCY",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tools/verify_source_coverage.py",
+      "active_target_relative_to_repository": "tools/verify_source_coverage.py"
+    },
+    {
+      "relative_path": "contracts/PROCESS_DIAGNOSTICS_V1.md",
+      "candidate_sha256": "ed40ea60095384027b2dc9000e6d34612840ab696a287d065589ad5d80d778b0",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rd2-20261014\\contracts\\PROCESS_DIAGNOSTICS_V1.md",
+      "active_before_sha256": null,
+      "application_action": "CREATE",
+      "candidate_relative_to_repository": ".agents/app3-20261014/contracts/PROCESS_DIAGNOSTICS_V1.md",
+      "active_target_relative_to_repository": "contracts/PROCESS_DIAGNOSTICS_V1.md"
+    },
+    {
+      "relative_path": "tests/contract/test_process_diagnostics.py",
+      "candidate_sha256": "e40b190696acd80f886aeddef1fb165fe17342e198424896f9cc72f0f9e07607",
+      "input_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\rd2-20261014\\tests\\contract\\test_process_diagnostics.py",
+      "active_before_sha256": null,
+      "application_action": "CREATE",
+      "candidate_relative_to_repository": ".agents/app3-20261014/tests/contract/test_process_diagnostics.py",
+      "active_target_relative_to_repository": "tests/contract/test_process_diagnostics.py"
+    }
+  ],
+  "application_paths": [
+    "contracts/PROCESS_DIAGNOSTICS_V1.md",
+    "src/ceta/contracts/resource_management.py",
+    "src/ceta/resource/diagnostics.py",
+    "src/ceta/supervisor/windows_jobs.py",
+    "tests/contract/test_process_diagnostics.py",
+    "tests/contract/test_source_coverage.py",
+    "tests/contract/test_task_meaning_view.py"
+  ],
+  "state": "JOINED_EXACT_REVIEWED_PRODUCER_BYTES_AWAITING_INDEPENDENT_JOIN_REVIEW",
+  "code_changes_authored_by_coordinator": 0,
+  "operation": "Same-source nonoverlapping byte join; no new planning requirements"
+}

@@ -1,0 +1,146 @@
+{
+  "scope": "IDENTITY_AUTHORITY_ENTRY_DOCUMENT_CANDIDATE_ONLY",
+  "recorded_at": "2026-10-14T03:45:29.295763+00:00",
+  "writer": "/root/implement",
+  "display_identity": "Project-AI: CETA",
+  "current_root": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package",
+  "planned_renamed_root": "T:\\00-Active\\Project-AI-CETA",
+  "application_condition": "APPLY_AFTER_VERIFIED_RENAME",
+  "rename_performed": false,
+  "candidate_applied": false,
+  "formal_product_states_changed": false,
+  "core_acceptance_reference": {
+    "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\active-contract-application-20261014T015000Z\\integrate-reconciliation.json",
+    "sha256": "8a989bfba40f297321f37b3078bc40bcb27b9d8c33a0f7b24e5b503996a11ff8",
+    "scope": "CURRENT_APPLIED35_PATH_SOURCE_AND_EVIDENCE_RECONCILIATION",
+    "changed_payload_files": 28,
+    "retained_payload_files": 7,
+    "tests": {
+      "focused": 103,
+      "skips": 0,
+      "regression": 143,
+      "Rust": 4,
+      "comparison_vectors": 27513
+    },
+    "product_completion": false,
+    "relative_to_repository": ".agents/runtime/active-contract-application-20261014T015000Z/integrate-reconciliation.json",
+    "runtime_receipt": {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\active-contract-application-20261014T015000Z\\active-contract-application-20261014T015000Z\\receipts\\integrate.json",
+      "relative_to_repository": ".agents/runtime/active-contract-application-20261014T015000Z/active-contract-application-20261014T015000Z/receipts/integrate.json",
+      "sha256": "e453a10b613de3bb1d379b8fad92b3e39c1a3a4007961b2d4959d3a603b7c0c7",
+      "receipt_identity": "6ddc9c9e725e36cb31677150a1517df0265b2f7ac383feacff8e5b2c3e978617"
+    },
+    "runtime_state": {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\active-contract-application-20261014T015000Z\\active-contract-application-20261014T015000Z\\state.json",
+      "relative_to_repository": ".agents/runtime/active-contract-application-20261014T015000Z/active-contract-application-20261014T015000Z/state.json",
+      "sha256": "6db802c4cc20587a81944d3c02fe1457d0a60a9937db0572dbd16002edc5c5c3",
+      "sequence": 21,
+      "node_states": {
+        "discover": "SUCCEEDED",
+        "implement": "SUCCEEDED",
+        "integrate": "SUCCEEDED",
+        "plan": "SUCCEEDED",
+        "review": "SUCCEEDED",
+        "validate": "SUCCEEDED"
+      }
+    },
+    "reconciliation_payload_writes": 0,
+    "tests_executed_by_identity_candidate": false
+  },
+  "historical_application_journal": {
+    "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\consolidation_contract_application_20261014.json",
+    "sha256": "bd0060214ba79ab5f0ac6a0e02dae251469b7d2bf926ec1242e401425c6e6c4d",
+    "reference_freshness": "CURRENT_RECONCILIATION_JOURNAL_OBSERVED; HISTORICAL_PRE_RECONCILIATION_HASH_NOT_ACCEPTANCE_PROOF",
+    "current_metadata_append": "Source journal records reconciliation_payload_writes=0; this candidate did not modify it and makes no new test claim.",
+    "relative_to_repository": "handoff/consolidation_contract_application_20261014.json",
+    "historical_pre_reconciliation_cut_sha256": "63fec86bf5fdf86674d103e41a3373d190556fec22dfb462cf9ee9df6bc3f105"
+  },
+  "continuity_note": "This scoped continuation is separate from the historical continuity ledger. Preserve all historical hashes, evidence fields, states and outcome counts; do not promote them to this identity-candidate cut.",
+  "remaining": "Separate Collaborative Review; input CAS checks; verified rename and guarded identity application; broader product qualification remains open.",
+  "initial_continuation_preserved": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\id2-20261014\\retained-candidate-versions\\SCOPED-CONTINUATION.json.initial",
+  "historical_unsuccessful_submission": {
+    "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\active-contract-application-20261014T015000Z\\integrate.json",
+    "relative_to_repository": ".agents/runtime/active-contract-application-20261014T015000Z/integrate.json",
+    "sha256": "cd5e93ed834e2dec9a73b8b10fc20c14113d1b2b4c447e552817388bdabb8ba4",
+    "status": "HISTORICAL_UNSUCCESSFUL_SUBMISSION_NOT_ACCEPTED",
+    "numerical_test_results_retained": true,
+    "artifact_invalidation": {
+      "events": {
+        "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\active-contract-application-20261014T015000Z\\active-contract-application-20261014T015000Z\\events.jsonl",
+        "relative_to_repository": ".agents/runtime/active-contract-application-20261014T015000Z/active-contract-application-20261014T015000Z/events.jsonl",
+        "sha256": "42deee45a09afbec9382137578bdf688522451bd7b68a71891d15695629af884"
+      },
+      "event": {
+        "details": {
+          "affected_nodes": [
+            "implement",
+            "integrate",
+            "review",
+            "validate"
+          ],
+          "current_artifact_hash": "9ae94cbb70bed829efb5fcd434157796c5209dcc88a138f12271ede3180b51dc",
+          "previous_artifact_hash": "ee4022044fd4bbbb9009ad7e999f0fdf481087110728907de09f23c010b06b55",
+          "ready_changes": [
+            {
+              "new_state": "READY",
+              "node_id": "implement",
+              "previous_state": "PENDING",
+              "reason": "all hard predecessor requirements satisfied"
+            },
+            {
+              "new_state": "PENDING",
+              "node_id": "integrate",
+              "previous_state": "PENDING",
+              "reason": "validate: predecessor state is PENDING"
+            },
+            {
+              "new_state": "PENDING",
+              "node_id": "review",
+              "previous_state": "PENDING",
+              "reason": "implement: predecessor state is READY"
+            },
+            {
+              "new_state": "PENDING",
+              "node_id": "validate",
+              "previous_state": "PENDING",
+              "reason": "review: predecessor state is PENDING"
+            }
+          ]
+        },
+        "event_hash": "50e589041bfeaef4c179428b7176d01c8e8a0c3812322101e11fa86c40288a24",
+        "event_type": "artifact_invalidated",
+        "executor_id": "orchestration-runtime",
+        "new_state": "READY",
+        "node_id": "implement",
+        "previous_hash": "dc4c5c5cb1597a874fbd04fe8afb1dc70ed29cf89988f5df1d1bcd5e4c9d520c",
+        "previous_state": "SUCCEEDED",
+        "reason": "Observed artifact hash differs from reviewed/completed artifact",
+        "receipt_ref": null,
+        "run_id": "active-contract-application-20261014T015000Z",
+        "sequence": 13,
+        "timestamp": "2026-10-14T02:37:17.792200+00:00"
+      }
+    }
+  },
+  "prior_rejected_identity_candidate": {
+    "cut": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\identity-consolidation-20261014T024400Z",
+    "review": {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\identity-consolidation-20261014T024400Z\\review.json",
+      "relative_to_repository": ".agents/runtime/identity-consolidation-20261014T024400Z/review.json",
+      "sha256": "3a98c236081373ccd334bdfa1183a3216394138878325b3e10314cbd45680f69",
+      "decision": "rejected"
+    },
+    "report": {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\identity-consolidation-20261014T024400Z\\collaborative-review.md",
+      "relative_to_repository": ".agents/runtime/identity-consolidation-20261014T024400Z/collaborative-review.md",
+      "sha256": "d18e7d79a8407fdb5df4ce6de8f02866fcdd3a9c9cd53b47ffac0765db39e68c"
+    },
+    "runtime_state": {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.agents\\runtime\\identity-consolidation-20261014T024400Z\\identity-consolidation-20261014T024400Z\\state.json",
+      "relative_to_repository": ".agents/runtime/identity-consolidation-20261014T024400Z/identity-consolidation-20261014T024400Z/state.json",
+      "sha256": "f9f5b34d4ccc7505db8afdf299917082a0e07a9b81c055149a9b5666fd3a268d",
+      "review_state": "FAILED"
+    }
+  },
+  "retained_initial_version_status": "HISTORICAL_INPUT_VERSION_NOT_CURRENT_ACCEPTANCE"
+}

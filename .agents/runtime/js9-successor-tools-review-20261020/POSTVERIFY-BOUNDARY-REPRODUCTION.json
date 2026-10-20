@@ -1,0 +1,70 @@
+{
+  "status": "REPRODUCED",
+  "finding": "JS9-TOOLS-01",
+  "scope": "DATA_ONLY actual verify/git/text_git/audit AST functions; synthetic subprocess event; no child, DLL, worker, profile, listener, DB or tool import",
+  "cases": [
+    {
+      "script": "run_native_store.py",
+      "type": "RuntimeError",
+      "message": "JS9_NATIVE_STORE_BOUNDARY",
+      "synthetic_dispatches": [
+        {
+          "executable": "git",
+          "argv": [
+            "git",
+            "--no-optional-locks",
+            "-c",
+            "core.longpaths=true",
+            "-c",
+            "core.fsmonitor=false",
+            "-c",
+            "submodule.recurse=false",
+            "-C",
+            "T:\\00-Active\\Project-AI-CETA",
+            "rev-parse",
+            "HEAD"
+          ]
+        }
+      ],
+      "recorded_boundary_violations": [
+        {
+          "event": "subprocess.Popen",
+          "details": "('git', ['git', '--no-optional-locks', '-c', 'core.longpaths=true', '-c', 'core.fsmonitor=false', '-c', 'submodule.recurse=false', '-C', 'T:\\\\00-Active\\\\Project-AI-CETA', 'rev-parse', 'HEAD'], None, {})"
+        }
+      ]
+    },
+    {
+      "script": "run_native_observer.py",
+      "type": "AssertionError",
+      "message": "NATIVE_REVIEW_FORBIDS_subprocess.Popen",
+      "synthetic_dispatches": [
+        {
+          "executable": "git",
+          "argv": [
+            "git",
+            "--no-optional-locks",
+            "-c",
+            "core.longpaths=true",
+            "-c",
+            "core.fsmonitor=false",
+            "-c",
+            "submodule.recurse=false",
+            "-C",
+            "T:\\00-Active\\Project-AI-CETA",
+            "rev-parse",
+            "HEAD"
+          ]
+        }
+      ],
+      "recorded_boundary_violations": [
+        "subprocess.Popen"
+      ]
+    }
+  ],
+  "sources": {
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\pr4-20261014\\preserve_ceta_complete.py": "2ccbca31973ead308e1cdcc6676bbd7371cdec29a0f16178f3f55a4ab4130618",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r1\\js9_support.py": "d7d14925c45a47bcd16210ec6586e8ed5a5c4e3a8d0b87b9156115451384858a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r1\\run_native_store.py": "bd58d103cd74134af17158a2d40e47f8ec90f1772531e7e127bd1575daa4389f",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r1\\run_native_observer.py": "2ea66926c5fad8164201ef8f169b12b9e085264d6362b6d16bbb5ea60447b734"
+  }
+}

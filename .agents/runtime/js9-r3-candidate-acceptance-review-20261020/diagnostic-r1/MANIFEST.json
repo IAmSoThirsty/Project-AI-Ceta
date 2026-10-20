@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "at": "2026-10-20T11:32:03.228404+00:00",
+  "state": "DORMANT_PENDING_ROOT_PERSONAL_REVIEW",
+  "author": "/root/recovery_join_review20",
+  "tool_sha256": "7261e7896ceac93c30946a8a3209ab1e1603d7dc192b368d29a540dde9bd7453",
+  "case": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+  "original_method_ast_sha256": "d4dca1d89dfea542931cb048adb27bd2eb24bf99414e368725e97cfc2256ae69",
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET.json",
+    "sha256": "32575147e478c63ead51c6269af9e22eebe06ccdc74619cdb04e46231fe9ac82"
+  },
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/MANIFEST-Q5.json",
+    "sha256": "cce2c8e2c3a31fbedf5c2d83b2d15d499a93030c38ebe0c1e4545b868ef99acf"
+  },
+  "environment": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/ENVIRONMENT.json",
+    "sha256": "748a6364912c0f2873ee5628cee46d90eb1fb421f198e30544ce9e602fd11e39"
+  },
+  "Source_before": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/SOURCE-BEFORE.json",
+    "sha256": "70f0b3f8005153f752f3d2619e791d047c84e25d3a7ebee879873f8c17cf003e"
+  },
+  "bounded_custody": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/bounded_custody.py",
+    "sha256": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4"
+  },
+  "worker": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac1-20261014\\build-r2\\isolated_worker.exe",
+    "bytes": 4872045,
+    "sha256": "527518104fb84c430e3e9e0be61982c533b0c6fbb13e1a85e959ba1a3866ad0f",
+    "native_identity": {
+      "bytes": 4872045,
+      "mtime_ns": 1792013561672587700,
+      "mode": 511,
+      "device": 154504856318070761,
+      "inode": 562949956302187,
+      "attributes": 32
+    }
+  },
+  "observer": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\build-reuse\\effect_observer.exe",
+    "bytes": 4849229,
+    "sha256": "2cb69daab94b1225be228db19ce17393f1972a24ee5aa37d7b035bd30d1917f0",
+    "native_identity": {
+      "bytes": 4849229,
+      "mtime_ns": 1792023894108231800,
+      "mode": 511,
+      "device": 154504856318070761,
+      "inode": 1407374886493358,
+      "attributes": 32
+    }
+  },
+  "negative_images": {
+    "overlong.exe": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\overlong.exe",
+      "bytes": 4840819,
+      "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+      "native_identity": {
+        "bytes": 4840819,
+        "mtime_ns": 1792023894400776100,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979650738,
+        "attributes": 32
+      }
+    },
+    "rights.exe": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\rights.exe",
+      "bytes": 4840819,
+      "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+      "native_identity": {
+        "bytes": 4840819,
+        "mtime_ns": 1792023894259448400,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979650737,
+        "attributes": 32
+      }
+    },
+    "silent.exe": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\silent.exe",
+      "bytes": 4840819,
+      "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+      "native_identity": {
+        "bytes": 4840819,
+        "mtime_ns": 1792023894542283100,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979650739,
+        "attributes": 32
+      }
+    }
+  },
+  "negative_reuse": {
+    "repository_relative_path": ".agents/runtime/ob2-20261014/negative-reuse/REUSE.json",
+    "sha256": "7b7e5bee287026e6ef11bf156ea380ff8550a06514eaac29334dc38b178b4c1e"
+  },
+  "negative_build": {
+    "repository_relative_path": ".agents/runtime/ob1-20261014/native-negative-r2/build.json",
+    "sha256": "4f23565b90f53fded995de5d51e417fed0400a521841d218b866eec9d0223fb8"
+  },
+  "negative_source": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob1-20261014\\native-negative-r2\\negative_helpers.rs",
+    "bytes": 1842,
+    "sha256": "0c50af3eb01cc01f051c9f5c4bb20ae7ae8d44af4d01e9f64a0c9aa3b0b5396e",
+    "native_identity": {
+      "bytes": 1842,
+      "mtime_ns": 1792020700403939900,
+      "mode": 438,
+      "device": 154504856318070761,
+      "inode": 281474979615581,
+      "attributes": 32
+    }
+  },
+  "output_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-r3-candidate-acceptance-review-20261020\\diagnostic-r1\\run-once",
+  "max_attempts": 1,
+  "ordinary_processes_max": 2,
+  "profiles": false,
+  "no_profile_grant_consumed": false,
+  "controlled_changes": [
+    "Original tests.ROOT fixture path selects new output descendants.",
+    "Transparent wrappers around original exchange/launch/pipe methods record values and restore ctypes last error.",
+    "No original case/request/deadline/method body or production source is changed."
+  ],
+  "measurement_limits": [
+    "Added observations cost time. A repeat does not by itself prove the cause of the earlier timeout."
+  ],
+  "authorization": "Root will personally review and execute once after the main full run retires, under existing ordinary native-observer authority. This manifest issues no permission."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "specific_code_review",
+  "question": "Is this substantive engineering criticism or personal ridicule?",
+  "context": {"setting": "engineering_review", "medium": "pull_request"},
+  "evidence": [
+    {"id": "e1", "statement": "Reviewer cites a failing test in a specified patch.", "origin": "direct_observation", "cues": ["specific_work_product", "verifiable_defect", "reproducible_evidence"], "source_ref": "local_pull_request_fixture"},
+    {"id": "e2", "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.", "origin": "direct_observation", "cues": ["evaluation_criteria", "professional_review"]}
+  ],
+  "unknowns": ["Whether the patch author intended the defect."]
+}

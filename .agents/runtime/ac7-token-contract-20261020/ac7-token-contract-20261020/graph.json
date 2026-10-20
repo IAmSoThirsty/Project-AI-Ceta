@@ -1,0 +1,96 @@
+{
+  "fingerprint": "18cdbaaf99341c4b6670211253cca3ed4350fc8f17315f479c2697843139000e",
+  "graph": {
+    "edges": [
+      {
+        "from": "discover",
+        "id": "d_p",
+        "to": "plan",
+        "type": "depends_on"
+      },
+      {
+        "from": "implement",
+        "id": "i_r",
+        "to": "review",
+        "type": "requires_review"
+      },
+      {
+        "from": "plan",
+        "id": "p_i",
+        "to": "implement",
+        "type": "delegates_to"
+      },
+      {
+        "from": "review",
+        "id": "r_v",
+        "to": "validate",
+        "type": "authorizes"
+      },
+      {
+        "from": "validate",
+        "id": "v_i",
+        "to": "integrate",
+        "type": "gates"
+      }
+    ],
+    "id": "ceta_ac7_token_contract20",
+    "nodes": {
+      "discover": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "explorer"
+      },
+      "implement": {
+        "access": "write_scoped",
+        "kind": "agent",
+        "role": "worker",
+        "write_scope": [
+          ".agents/ac7-token-contract-20261020/**",
+          ".agents/runtime/ac7-token-contract-20261020/**"
+        ]
+      },
+      "integrate": {
+        "access": "write_scoped",
+        "kind": "integration",
+        "role": "integrator",
+        "write_scope": [
+          ".agents/ac7-token-contract-20261020/**",
+          ".agents/runtime/ac7-token-contract-20261020/**"
+        ]
+      },
+      "plan": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "architect"
+      },
+      "review": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "reviewer"
+      },
+      "validate": {
+        "access": "read_only",
+        "commands": [
+          "git -C \"{workspace}\" diff --check"
+        ],
+        "kind": "gate"
+      }
+    },
+    "policy": {
+      "fail_closed": true,
+      "max_parallel": 4,
+      "prohibit_scope_overlap": true,
+      "prohibit_self_review": true,
+      "require_receipts": true
+    }
+  },
+  "root": "T:\\00-Active\\Project-AI-CETA",
+  "scope": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020",
+  "sources": [
+    {
+      "digest": "0ebce24f8177db7c2f90facb023b5c30144e1dcfe2421c6751561adb0c7847a6",
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\AGENTS.md"
+    }
+  ],
+  "version": 1
+}

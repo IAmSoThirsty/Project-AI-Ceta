@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "run_id": "js9-composition-repair-r1-20261020",
+  "node_id": "implement",
+  "executor_id": "/root/recovery_regression20",
+  "started_at": "2026-10-20T09:15:46.832370+00:00",
+  "finished_at": "2026-10-20T09:18:50.442236+00:00",
+  "input_hash": "bba19022cadc558eac77ce7a1000f2401437d3ab105ebec2ce40d0547693ad66",
+  "changed_files": [
+    ".agents/js9-runtime-20261020/src/ceta/identity/native_owner_view.py",
+    ".agents/js9-runtime-20261020/tests/contract/test_native_runtime_composition.py"
+  ],
+  "result": {
+    "manifest": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\MANIFEST-R2.json",
+    "manifest_sha256": "5d4960418383bc048218fee01326503c807e89618307a3ec1ad32571a2006152",
+    "controlled_result_sha256": "0c9d832a432594dc3d6ee0f80bf9ef206c723247f309a3a9ee2d4455deead65f",
+    "narrow_repair": {
+      "src/ceta/identity/native_owner_view.py": {
+        "before": "6bc03e13d0191417dcfe711f986e7e8fbce4a7f424614f32f613155d03110b9c",
+        "after": "e3574b1381fc2cf22ee0a051be833e6577b9762641400c2b304489c5255f10ca",
+        "diff_sha256": "9cda60432d2fec3f393fdca99f00109d2120124d004ee51670c85aa29a722f7e"
+      },
+      "tests/contract/test_native_runtime_composition.py": {
+        "before": "86448cb7aeb839625edfc63d53cffda9fae1cc349f90bede1a8fcbca786d0acc",
+        "after": "3b056f153128358c1ee6a51a2b4d9abd501ec1d7ba87ad85ecece1beec7f1b32",
+        "diff_sha256": "a16dee0eaf0d2b44e0305a054e01e8fa24b9bbc505811bdc317ddd6851fee661"
+      }
+    },
+    "independent_review": "PENDING",
+    "native_execution": false,
+    "Source_publication": false
+  },
+  "commands": [
+    {
+      "command": "& 'T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe' '-B' '-X' 'utf8' 'T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\run_controlled_composition.py' '--attempt' 'controlled_r2' '--manifest' 'MANIFEST-PRETEST-R3.json' '--cases' 'CONTROLLED-CASESET-R3.json'",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "40_controlled_cases_including_partial_no_acquisition_and_published_queued_handle_cleanup",
+      "passed": true
+    },
+    {
+      "name": "all40_actual_SQLite_journals_closed_zero_native_attempts_or_residual_threads",
+      "passed": true
+    },
+    {
+      "name": "all_other528_candidate_pins_and_Source352_preserved",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

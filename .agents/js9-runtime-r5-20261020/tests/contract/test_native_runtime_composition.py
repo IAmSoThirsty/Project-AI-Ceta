@@ -1,0 +1,674 @@
+"""Real kernel/journal composition with explicitly controlled native origins.
+
+No native VFS, process, profile, pipe listener, approval ceremony or CPU Set is
+executed. The real view, native owner initializer, kernel and SQLite journal
+are used. Native file observations and clock samples are controlled here.
+"""
+from dataclasses import replace
+import base64
+import copy
+import hashlib
+import os
+from pathlib import Path
+import pickle
+import sys
+import threading
+from types import MethodType, SimpleNamespace
+import unittest
+import uuid
+from unittest.mock import patch
+
+from ceta.composition import ipc_service, native_cpu_runtime as runtime, service_process
+from ceta.composition.native_cpu_outcome import NativeCpuOutcomeAdapter
+from ceta.contracts.store_transactions import STORE_PROFILE
+from ceta.contracts.wire import ContractError, RecordCodec, canonical_bytes, strict_loads
+from ceta.effects.native_observer import NativeCpuEffectObserver
+from ceta.identity.native_clock import NativeSessionClock
+from ceta.identity.native_code_binding import NativeCodeBinding
+from ceta.identity.native_owner_view import NativeOwnerView, NativeStoreBinding
+from ceta.identity.owner_session import NativeCpuOwnerSession
+from ceta.identity.windows_pipe import WindowsPeerRegistry
+from ceta.kernel.cpu_execution import _RetainedCpuExecution
+from ceta.store.journal import SqliteJournal
+from ceta.store.outcome_capacity import OutcomeCapacityBudget, OutcomeCapacityRuntime, _CapacityVfs
+import ceta.effects.native_observer as observer_module
+import test_owner_authority_transactions as data
+
+ROOT = Path(__file__).resolve().parents[2]
+FACTS = []
+raw = lambda error: BaseException.__dict__['__dict__'].__get__(error)
+_NATIVE_STORE_INIT = NativeStoreBinding.__init__
+_NATIVE_STORE_CLOSE = NativeStoreBinding.close
+
+
+class NativeRuntimeCompositionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.codec = RecordCodec(strict_loads((ROOT / 'contracts/schemas/records.schema.json').read_bytes()))
+
+    def setUp(self):
+        self.root = Path(os.environ['CETA_JS9_FIXTURE_ROOT']) / uuid.uuid4().hex
+        self.root.mkdir(parents=True, exist_ok=False)
+        self.store = SqliteJournal(self.root, self.codec, (data.INSTALLATION, data.PROJECT),
+            create=True, profile=STORE_PROFILE)
+        self.controls = []
+        self.addCleanup(self.stop_controls)
+        self.addCleanup(self.retire)
+        self.events, self.compositions = [], []
+        self.registry = object.__new__(WindowsPeerRegistry)
+        self.clock = object.__new__(NativeSessionClock)
+        self.code = object.__new__(NativeCodeBinding)
+        self.code._closed = False
+        self.code._closing = threading.Event()
+        self.code.source_commitment = self.code.environment_commitment = data.H
+        self.capacity = object.__new__(OutcomeCapacityRuntime)
+        self.capacity.path, self.capacity.sha256 = self.root/'capacity-not-loaded.dll', '1'*64
+        self.observer = object.__new__(NativeCpuEffectObserver)
+        self.observer._clock = self.clock
+        self.observer._executable = str(self.root/'observer-not-launched.exe')
+        self.observer._image, self.observer._commitment = '2'*64, data.H
+        self.observer._driver_sha = hashlib.sha256(Path(observer_module.__file__).read_bytes()).hexdigest()
+        self.observer._custody = None
+        self.observer._sequence = 0
+        self.observer._lock = threading.Lock()
+        helper = self.root/'approval-not-launched.exe'
+        helper.write_bytes(b'CONTROLLED FILE ONLY; NEVER EXECUTED')
+        self.code._files = [dict(group=group, logical_name=name, path=str(path), sha256=pin)
+            for group,name,path,pin in (
+                ('environment','approval',helper,'3'*64),
+                ('source','approval-source',ROOT/'native/windows_broker/owner_approval.cpp','4'*64),
+                ('environment','worker',self.root/'worker-not-launched.exe','5'*64),
+                ('environment','observer',Path(self.observer._executable),self.observer._image),
+                ('source','observer-source',Path(observer_module.__file__).resolve(),self.observer._driver_sha),
+                ('environment','capacity',self.capacity.path,self.capacity.sha256))]
+        self.configuration = runtime.NativeCpuConfiguration(self.clock, self.code, self.capacity,
+            OutcomeCapacityBudget(8*1024*1024,8*1024*1024,65536,32768), self.observer,
+            data.PROJECT, data.H, 'approval','approval-source','worker','observer','observer-source','capacity')
+        self.vfs = self.store._capacity_vfs = _CapacityVfs(self.capacity, 'controlled_composition', 1)
+        self.controls = [
+            patch.object(NativeCodeBinding, 'snapshot', lambda owner:self.snapshot(owner)),
+            patch.object(NativeSessionClock, 'clock', lambda owner:
+                (data.clock(1_000_000_000), data.clock(1_001_000_000))),
+            patch.object(NativeStoreBinding, '__init__', self.binding_init),
+            patch.object(NativeStoreBinding, 'close', self.binding_close),
+            patch.object(NativeCpuEffectObserver, 'close_cleanup', self.observer_close)]
+        for control in self.controls:
+            control.start()
+
+    def stop_controls(self):
+        for control in reversed(self.controls):
+            control.stop()
+
+    def snapshot(self, owner):
+        self.assertIs(owner, self.code)
+        return tuple((r['group'],r['logical_name'],r['sha256'],1,()) for r in owner._files)
+
+    def binding_init(self, binding, directory):
+        self.events.append('binding-create')
+        binding._root_path = Path(directory).resolve()
+        binding._database_path = binding._root_path/'history.sqlite3'
+        binding._closed = False
+
+    def binding_close(self, binding):
+        self.events.append('binding-close')
+        binding._closed = True
+
+    def observer_close(self, observer):
+        self.assertIs(observer, self.observer)
+        self.events.append('observer-close')
+
+    def compose(self):
+        value = runtime.NativeCpuRuntime(self.store,self.codec,data.INSTALLATION,
+            self.registry,self.configuration)
+        self.compositions.append(value)
+        return value
+
+    def retire(self):
+        for composition in getattr(self,'compositions',()):
+            kernel = composition.kernel
+            if kernel is not None:
+                kernel._kernel._cpu_execution.active = None
+            if composition._owner is not None:
+                composition._owner._execution = None
+            composition.close()
+        # This controlled VFS was never registered and made no allocation. It
+        # is fixture state, not an actual reservation or product reconciliation.
+        self.store._capacity_vfs = None
+        self.store.close()
+        FACTS.append(dict(test_id=self.id(),root=str(self.root),sqlite_closed=self.store._closed,
+            connection_close_state=self.store._connection_close_state,
+            native_processes=0,native_VFS_calls=0,native_CPU_Set_calls=0,
+            origins='CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS'))
+
+    def assert_denied(self, code, call):
+        with self.assertRaises(ContractError) as caught:
+            call()
+        self.assertEqual(caught.exception.code,code)
+
+    def test_real_owner_captures_capacity_and_provenance_before_same_kernel_binding(self):
+        value=self.compose();kernel,owner=value.select(self.store,self.codec,data.INSTALLATION,self.registry)
+        self.assertIs(kernel._kernel._store,self.store)
+        self.assertIs(kernel._kernel._owners,owner)
+        self.assertIs(owner._preparation_kernel,kernel._kernel)
+        self.assertIs(owner._execution_capacity.__self__,value._view)
+        self.assertIs(owner._execution_provenance.__self__,value._view)
+        self.assertIs(value._view._cpu_outcome,value.outcome_adapter._producer)
+        self.assertIs(value._view._cpu_outcome._observer,self.observer)
+        self.assertIs(self.store._capacity_vfs.runtime,self.capacity)
+        self.assert_denied('RUNTIME_AUTHORITY_OWNERS_UNAVAILABLE',kernel.require_runtime_admission)
+
+    def test_unqualified_configuration_is_denied_before_native_binding(self):
+        self.assert_denied('NATIVE_CPU_CONFIGURATION_REQUIRED',lambda:
+            runtime.NativeCpuRuntime(self.store,self.codec,data.INSTALLATION,self.registry,object()))
+        self.assertEqual(self.events,[])
+
+    def test_configuration_rejects_nonconcrete_runtime(self):
+        self.assert_denied('NATIVE_CPU_CONCRETE_DEPENDENCIES_REQUIRED',lambda:
+            replace(self.configuration,outcome_runtime=object()))
+
+    def test_configuration_rejects_different_observer_clock(self):
+        self.assert_denied('NATIVE_CPU_CLOCK_BINDING_REQUIRED',lambda:
+            replace(self.configuration,clock=object.__new__(NativeSessionClock)))
+
+    def test_configuration_rejects_duplicate_manifest_names(self):
+        self.assert_denied('NATIVE_CPU_MANIFEST_NAMES_REQUIRED',lambda:
+            replace(self.configuration,worker_name='observer'))
+
+    def test_configuration_requires_each_retained_manifest_entry(self):
+        self.code._files=self.code._files[:-1]
+        self.assert_denied('NATIVE_CPU_RETAINED_MANIFEST_ENTRY_REQUIRED',self.compose)
+        self.assertEqual(self.events,[])
+
+    def test_configuration_rejects_another_observer_image(self):
+        self.observer._image='a'*64
+        self.assert_denied('NATIVE_CPU_OBSERVER_MANIFEST_MISMATCH',self.compose)
+
+    def test_configuration_rejects_another_driver_source_path(self):
+        self.code._files[-2]['path']=str(self.root/'same-bytes-different-source.py')
+        self.assert_denied('NATIVE_CPU_OBSERVER_MANIFEST_MISMATCH',self.compose)
+
+    def test_configuration_rejects_another_capacity_helper(self):
+        self.capacity.sha256='a'*64
+        self.assert_denied('NATIVE_CPU_CAPACITY_MANIFEST_MISMATCH',self.compose)
+
+    def test_configuration_currentness_failure_acquires_no_owner_or_file_binding(self):
+        failure=KeyboardInterrupt('controlled clock currentness failure')
+        with patch.object(NativeSessionClock,'clock',side_effect=failure):
+            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
+        self.assertIs(caught.exception,failure)
+        self.assertEqual(self.events,[])
+        self.assertNotIn('native_cpu_runtime',raw(failure))
+        self.assertFalse(self.store._closed)
+
+    def test_journal_without_selected_capacity_is_denied(self):
+        self.store._capacity_vfs=None
+        self.assert_denied('NATIVE_CPU_JOURNAL_CAPACITY_REQUIRED',self.compose)
+
+    def test_journal_capacity_from_another_runtime_is_denied(self):
+        self.vfs.runtime=object.__new__(OutcomeCapacityRuntime)
+        self.assert_denied('NATIVE_CPU_JOURNAL_CAPACITY_REQUIRED',self.compose)
+
+    def test_configuration_cannot_select_an_unregistered_scope(self):
+        self.configuration=replace(self.configuration,scope_id='project:unregistered')
+        self.assert_denied('NATIVE_CPU_CANONICAL_JOURNAL_REQUIRED',self.compose)
+
+    def test_different_registry_store_codec_or_installation_denies_ingress(self):
+        value=self.compose()
+        cases=[(self.store,self.codec,data.INSTALLATION,object.__new__(WindowsPeerRegistry)),
+            (object.__new__(SqliteJournal),self.codec,data.INSTALLATION,self.registry),
+            (self.store,object(),data.INSTALLATION,self.registry),
+            (self.store,self.codec,'installation:another',self.registry)]
+        for args in cases:
+            with self.subTest(identity=args):
+                self.assert_denied('NATIVE_CPU_SERVICE_COMPOSITION_CHANGED',lambda:value.select(*args))
+
+    def test_replaced_capacity_port_on_same_view_is_denied(self):
+        value=self.compose()
+        value._owner._execution_capacity=MethodType(lambda view,*args:None,value._view)
+        self.assert_denied('NATIVE_CPU_OWNER_COMPOSITION_CHANGED',lambda:
+            value.select(self.store,self.codec,data.INSTALLATION,self.registry))
+
+    def test_selected_configuration_does_not_create_authority_records(self):
+        before=tuple(self.store.position(s) for s in (data.INSTALLATION,data.PROJECT))
+        value=self.compose()
+        after=tuple(self.store.position(s) for s in (data.INSTALLATION,data.PROJECT))
+        self.assertEqual(before,after)
+        self.assertIsNone(value._owner._approval._active)
+        self.assertIsNone(self.store._capacity_active)
+
+    def test_existing_ingress_captures_the_selected_kernel_and_identity(self):
+        value=self.compose()
+        observed=[]
+        def server(name,registry,handler,codec,**kwargs):
+            observed.append((name,registry,handler,codec,kwargs));return object()
+        with patch.object(ipc_service,'WindowsPipeServer',server):
+            ipc_service.compose_duplex_kernel_service(self.store,self.codec,data.INSTALLATION,
+                self.registry,'pipe:controlled-not-opened',native_runtime=value)
+        ingress=observed[0][2]
+        self.assertIs(ingress._kernel,value.kernel)
+        self.assertIs(ingress._identity,value._owner)
+        self.assertIs(ingress._task_drafts._store,self.store)
+
+    def test_existing_five_argument_ingress_retains_closed_default(self):
+        observed=[]
+        with patch.object(ipc_service,'WindowsPipeServer',lambda name,registry,handler,codec,**kw:
+                observed.append(handler)):
+            ipc_service.compose_duplex_kernel_service(self.store,self.codec,data.INSTALLATION,
+                self.registry,'pipe:controlled-not-opened')
+        self.assert_denied('RUNTIME_AUTHORITY_OWNERS_UNAVAILABLE',observed[0]._kernel.require_runtime_admission)
+        self.assertIs(observed[0]._identity._registry,self.registry)
+
+    def test_ingress_rejects_a_request_supplied_runtime_object(self):
+        self.assert_denied('NATIVE_CPU_RUNTIME_REQUIRED',lambda:
+            ipc_service.compose_duplex_kernel_service(self.store,self.codec,data.INSTALLATION,
+                self.registry,'pipe:never-opened',native_runtime=object()))
+
+    def test_execute_requires_original_kernel_lease(self):
+        value=self.compose()
+        self.assert_denied('NATIVE_CPU_ORIGINAL_KERNEL_LEASE_REQUIRED',lambda:value.execute(object()))
+        lease=object.__new__(_RetainedCpuExecution);lease._owner=object()
+        self.assert_denied('NATIVE_CPU_ORIGINAL_KERNEL_LEASE_REQUIRED',lambda:value.execute(lease))
+
+    def test_original_lease_delegates_to_existing_adapter_only(self):
+        value=self.compose();lease=object.__new__(_RetainedCpuExecution)
+        lease._owner=value.kernel._kernel._cpu_execution
+        result=object()
+        with patch.object(NativeCpuOutcomeAdapter,'execute',return_value=result) as execute:
+            self.assertIs(value.execute(lease),result)
+        execute.assert_called_once_with(lease)
+
+    def test_close_keeps_borrowed_journal_registry_clock_and_code(self):
+        value=self.compose();value.close();value.close()
+        self.assertTrue(value.closed);self.assertTrue(value._owner.closed)
+        self.assertTrue(value._binding.closed);self.assertFalse(self.store._closed)
+        self.assertEqual(self.events,['binding-create','observer-close','binding-close'])
+        self.assertFalse(self.code._closed)
+
+    def test_active_execution_retains_all_dependencies_and_allows_bookkeeping(self):
+        value=self.compose();lease=object.__new__(_RetainedCpuExecution)
+        lease._owner=value.kernel._kernel._cpu_execution
+        lease._owner.active=lease;value._owner._execution=object()
+        self.assert_denied('NATIVE_CPU_EXECUTION_CUSTODY_PENDING',value.close)
+        self.assertFalse(value._binding.closed);self.assertFalse(value._owner.closed)
+        self.assertFalse(self.store._closed);self.assertTrue(value._owner._stopped.is_set())
+        self.assert_denied('NATIVE_CPU_SERVICE_COMPOSITION_CHANGED',lambda:
+            value.select(self.store,self.codec,data.INSTALLATION,self.registry))
+        with patch.object(NativeCpuOutcomeAdapter,'reconcile',return_value='controlled-bookkeeping'):
+            self.assertEqual(value.reconcile(lease),'controlled-bookkeeping')
+        self.assert_denied('NATIVE_CPU_SERVICE_COMPOSITION_CHANGED',lambda:value.execute(lease))
+
+    def test_observer_retirement_failure_retains_owner_and_file_pins(self):
+        value=self.compose();failure=MemoryError('controlled observer close failure')
+        with patch.object(NativeCpuEffectObserver,'close_cleanup',side_effect=failure):
+            with self.assertRaises(MemoryError) as caught:value.close()
+        self.assertIs(caught.exception,failure);self.assertIs(raw(failure)['native_cpu_runtime'],value)
+        self.assertFalse(value._owner.closed);self.assertFalse(value._binding.closed)
+        value.close();self.assertTrue(value.closed)
+
+    def test_kernel_construction_interrupt_preserves_primary_and_retires_owned_pins(self):
+        failure=KeyboardInterrupt('controlled kernel construction interruption')
+        with patch.object(runtime,'compose_kernel',side_effect=failure):
+            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
+        self.assertIs(caught.exception,failure)
+        value=raw(failure)['native_cpu_runtime']
+        self.assertTrue(value.closed);self.assertTrue(value._owner.closed)
+        self.assertTrue(value._binding.closed);self.assertFalse(self.store._closed)
+
+    def test_interrupt_after_owner_initializer_still_retires_published_owner(self):
+        original=NativeCpuOwnerSession.__init__;failure=MemoryError('after owner initializer')
+        def initialized(owner,*args,**kwargs):
+            original(owner,*args,**kwargs);raise failure
+        with patch.object(NativeCpuOwnerSession,'__init__',initialized):
+            with self.assertRaises(MemoryError) as caught:self.compose()
+        self.assertIs(caught.exception,failure)
+        value=raw(failure)['native_cpu_runtime']
+        self.assertTrue(value.closed);self.assertTrue(value._owner.closed)
+        self.assertTrue(value._binding.closed)
+
+    def test_partial_native_binding_failure_preserves_primary_and_cleanup_custody(self):
+        primary=KeyboardInterrupt('controlled partial file observation')
+        cleanup=OSError('controlled file close uncertainty')
+        with patch.object(NativeStoreBinding,'__init__',side_effect=primary), \
+                patch.object(NativeStoreBinding,'close',side_effect=cleanup):
+            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
+        self.assertIs(caught.exception,primary)
+        value=raw(primary)['native_cpu_runtime']
+        self.assertFalse(value.closed)
+        self.assertEqual(raw(primary)['native_cpu_runtime_cleanup_errors'],(cleanup,))
+        self.assertFalse(self.store._closed)
+
+    def test_native_binding_initializer_failure_before_api_publication_retains_partial_owner(self):
+        import ceta.identity.native_owner_view as view_module
+        failure=KeyboardInterrupt('before native API publication')
+        with patch.object(NativeStoreBinding,'__init__',_NATIVE_STORE_INIT), \
+                patch.object(view_module,'_ViewAPI',side_effect=failure), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
+            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
+        self.assertIs(caught.exception,failure)
+        value=raw(failure)['native_cpu_runtime']
+        self.assertIsNotNone(value._binding)
+        self.assertIsNone(value._binding._api)
+        self.assertIsNone(value._owner)
+        self.assertTrue(value._binding.closed)
+        self.assertEqual(value._binding.pending_native_resources,())
+        self.assertTrue(value.closed)
+        self.assertNotIn('native_cpu_runtime_cleanup_errors',raw(failure))
+        self.assertFalse(self.store._closed)
+        # This fixture VFS was never registered. Retire that controlled marker
+        # before checking actual dependent SQLite/service closure.
+        self.store._capacity_vfs=None
+        retired=[]
+        service_process.retire_service(None,value,SimpleNamespace(close=lambda:retired.append('registry')),
+            self.store,failure)
+        self.assertEqual(retired,['registry'])
+        self.assertTrue(self.store._closed)
+
+    def test_published_api_without_file_opens_uses_original_cleanup_once(self):
+        import ceta.identity.native_owner_view as view_module
+        failure=KeyboardInterrupt('path validation before file acquisition')
+        calls=[]
+        api=SimpleNamespace(retry_cleanup=lambda **kw:calls.append(kw),pending_native_resources=lambda:())
+        with patch.object(NativeStoreBinding,'__init__',_NATIVE_STORE_INIT), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
+                patch.object(view_module,'_ViewAPI',return_value=api), \
+                patch.object(view_module,'_path',side_effect=failure):
+            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
+        self.assertIs(caught.exception,failure)
+        value=raw(failure)['native_cpu_runtime']
+        self.assertTrue(value.closed);self.assertTrue(value._binding.closed)
+        self.assertIs(value._binding._api,api)
+        self.assertEqual(value._binding._pins,[])
+        self.assertEqual(calls,[dict(kinds=('handles',))])
+
+    def controlled_queued_api(self, primary, cleanup_failures=0):
+        queued=[];released=[];calls=[]
+        def queue(handle):
+            if handle not in queued:
+                queued.append(handle)
+                raise primary
+        def retry(**kwargs):
+            calls.append(kwargs)
+            if len(calls)<=cleanup_failures:raise OSError('controlled pending close')
+            released.extend(queued);queued.clear()
+        api=SimpleNamespace(CreateFileW=lambda *args:405,queue_handle=queue,
+            retry_cleanup=retry,pending_native_resources=lambda:tuple(queued))
+        return api,queued,released,calls
+
+    def test_published_api_queue_is_retired_with_preregistered_pin_row(self):
+        import ceta.identity.native_owner_view as view_module
+        failure=KeyboardInterrupt('queued controlled handle before pin row')
+        api,queued,released,calls=self.controlled_queued_api(failure)
+        with patch.object(NativeStoreBinding,'__init__',_NATIVE_STORE_INIT), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
+                patch.object(view_module,'_ViewAPI',return_value=api), \
+                patch.object(view_module,'_path',return_value=str(self.root)):
+            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
+        self.assertIs(caught.exception,failure)
+        value=raw(failure)['native_cpu_runtime']
+        self.assertTrue(value.closed);self.assertTrue(value._binding.closed)
+        self.assertEqual(len(value._binding._pins),1)
+        self.assertEqual(value._binding._pins[0]['handle'],405)
+        self.assertTrue(value._binding._pins[0]['enrolled'])
+        self.assertEqual(queued,[]);self.assertEqual(released,[405])
+        self.assertEqual(calls,[dict(kinds=('handles',))])
+
+    def test_published_api_pending_queue_retains_primary_and_allows_explicit_close_retry(self):
+        import ceta.identity.native_owner_view as view_module
+        failure=KeyboardInterrupt('queued controlled handle with failed cleanup')
+        api,queued,released,calls=self.controlled_queued_api(failure,cleanup_failures=1)
+        binding=object.__new__(NativeStoreBinding)
+        with patch.object(view_module,'_ViewAPI',return_value=api), \
+                patch.object(view_module,'_path',return_value=str(self.root)), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
+            with self.assertRaises(KeyboardInterrupt) as caught:_NATIVE_STORE_INIT(binding,self.root)
+            self.assertIs(caught.exception,failure)
+            self.assertIs(raw(failure)['native_owner_view'],binding)
+            self.assertFalse(binding.closed);self.assertEqual(binding.pending_native_resources,(405,))
+            _NATIVE_STORE_CLOSE(binding)
+            self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
+        self.assertEqual(queued,[]);self.assertEqual(released,[405]);self.assertEqual(len(calls),2)
+
+    def actual_queue_control(self, binding):
+        """Actual queue/pending methods; only Python markers, no native calls."""
+        import ceta.supervisor.isolated_worker as isolation
+        api=SimpleNamespace(_cleanup_lock=threading.RLock(),_pending_handles=[],
+            pending_sids=[],_uncertain_sids=set(),_pending_strings=[],_pending_attributes=[],
+            _pending_token_outputs=[],_pending_known_folders=[])
+        api.queue_handle=MethodType(isolation._IsolationAPI.queue_handle,api)
+        api.pending_native_resources=MethodType(isolation._IsolationAPI.pending_native_resources,api)
+        released=[];calls=[]
+        def opened(*args):
+            self.assertEqual(len(binding._pins),1)
+            self.assertIsNone(binding._pins[0]['handle'])
+            self.assertEqual(binding._pins[0]['open_state'],'UNCERTAIN')
+            return 405
+        def retry(**kwargs):
+            calls.append(kwargs)
+            released.extend(row['handle'] for row in api._pending_handles)
+            api._pending_handles.clear()
+        api.CreateFileW=opened
+        api.retry_cleanup=retry
+        return isolation,api,released,calls
+
+    def test_actual_queue_handle_preappend_failure_keeps_known_return_and_retires_once(self):
+        import ceta.identity.native_owner_view as view_module
+        binding=object.__new__(NativeStoreBinding)
+        isolation,api,released,calls=self.actual_queue_control(binding)
+        failure=MemoryError('actual HANDLE allocation before queue append')
+        original=isolation.HANDLE
+        with patch.object(view_module,'_ViewAPI',return_value=api), \
+                patch.object(view_module,'_path',return_value=str(self.root)), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
+                patch.object(isolation,'HANDLE',side_effect=[failure,original()]):
+            with self.assertRaises(MemoryError) as caught:_NATIVE_STORE_INIT(binding,self.root)
+        self.assertIs(caught.exception,failure)
+        self.assertIs(raw(failure)['native_owner_view'],binding)
+        self.assertTrue(binding.closed)
+        self.assertEqual(binding._pins[0]['handle'],405)
+        self.assertTrue(binding._pins[0]['enrolled'])
+        self.assertEqual(binding.pending_native_resources,())
+        _NATIVE_STORE_CLOSE(binding)
+        self.assertEqual(released,[405]);self.assertEqual(len(calls),1)
+
+    def test_actual_queue_handle_registration_retry_failure_remains_pending_then_recovers(self):
+        import ceta.identity.native_owner_view as view_module
+        binding=object.__new__(NativeStoreBinding)
+        isolation,api,released,calls=self.actual_queue_control(binding)
+        primary=MemoryError('initial actual HANDLE allocation')
+        retry_failure=MemoryError('close actual HANDLE allocation')
+        with patch.object(view_module,'_ViewAPI',return_value=api), \
+                patch.object(view_module,'_path',return_value=str(self.root)), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
+                patch.object(isolation,'HANDLE',side_effect=[primary,retry_failure]):
+            with self.assertRaises(MemoryError) as caught:_NATIVE_STORE_INIT(binding,self.root)
+        self.assertIs(caught.exception,primary)
+        self.assertFalse(binding.closed)
+        self.assertEqual(api._pending_handles,[])
+        self.assertEqual(released,[]);self.assertEqual(calls,[])
+        self.assertEqual(binding.pending_native_resources,
+            (dict(kind='unregistered_file_handle',path=str(binding._pins[0]['path']),
+                  handle=405,retry='PENDING'),))
+        with patch.object(api,'queue_handle',side_effect=retry_failure):
+            with self.assertRaises(MemoryError) as again:_NATIVE_STORE_CLOSE(binding)
+        self.assertIs(again.exception,retry_failure)
+        self.assertIs(raw(retry_failure)['native_owner_view'],binding)
+        self.assertFalse(binding.closed);self.assertEqual(calls,[])
+        _NATIVE_STORE_CLOSE(binding)
+        self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
+        self.assertEqual(released,[405]);self.assertEqual(len(calls),1)
+
+    def test_actual_queue_append_then_raise_is_deduplicated_before_cleanup(self):
+        import ceta.identity.native_owner_view as view_module
+        binding=object.__new__(NativeStoreBinding)
+        isolation,api,released,calls=self.actual_queue_control(binding)
+        primary=KeyboardInterrupt('after actual queue append')
+        original=api.queue_handle;queued=[]
+        def interrupted(handle):
+            original(handle)
+            queued.append(len(api._pending_handles))
+            if len(queued)==1:raise primary
+        api.queue_handle=interrupted
+        with patch.object(view_module,'_ViewAPI',return_value=api), \
+                patch.object(view_module,'_path',return_value=str(self.root)), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
+            with self.assertRaises(KeyboardInterrupt) as caught:_NATIVE_STORE_INIT(binding,self.root)
+        self.assertIs(caught.exception,primary)
+        self.assertEqual(queued,[1,1])
+        self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
+        self.assertEqual(released,[405]);self.assertEqual(len(calls),1)
+
+    def test_invalid_native_open_returns_are_known_no_acquisition_states(self):
+        import ceta.identity.native_owner_view as view_module
+        for invalid in (None,0,view_module.INVALID_HANDLE):
+            with self.subTest(invalid=invalid):
+                binding=object.__new__(NativeStoreBinding)
+                isolation,api,released,calls=self.actual_queue_control(binding)
+                api.CreateFileW=lambda *args:invalid
+                with patch.object(view_module,'_ViewAPI',return_value=api), \
+                        patch.object(view_module,'_path',return_value=str(self.root)), \
+                        patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
+                    with self.assertRaises(ContractError) as caught:_NATIVE_STORE_INIT(binding,self.root)
+                self.assertEqual(caught.exception.code,'OWNER_VIEW_NATIVE_OPEN_FAILED')
+                self.assertIs(raw(caught.exception)['native_owner_view'],binding)
+                self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
+                self.assertEqual(binding._pins[0]['open_state'],'RETURNED')
+                self.assertFalse(binding._pins[0]['enrolled'])
+                self.assertEqual(api._pending_handles,[]);self.assertEqual(released,[])
+                self.assertEqual(len(calls),1)
+
+    def test_interrupted_native_open_preserves_unknown_output_without_false_closure(self):
+        import ceta.identity.native_owner_view as view_module
+        binding=object.__new__(NativeStoreBinding)
+        isolation,api,released,calls=self.actual_queue_control(binding)
+        primary=KeyboardInterrupt('controlled native call did not return a value')
+        api.CreateFileW=lambda *args:(_ for _ in ()).throw(primary)
+        with patch.object(view_module,'_ViewAPI',return_value=api), \
+                patch.object(view_module,'_path',return_value=str(self.root)), \
+                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
+            with self.assertRaises(KeyboardInterrupt) as caught:_NATIVE_STORE_INIT(binding,self.root)
+        self.assertIs(caught.exception,primary)
+        self.assertIs(raw(primary)['native_owner_view'],binding)
+        self.assertFalse(binding.closed)
+        self.assertEqual(binding.pending_native_resources,
+            (dict(kind='file_open',path=str(binding._pins[0]['path']),
+                  handle=None,retry='UNCERTAIN'),))
+        self.assert_denied('OWNER_VIEW_OPEN_CUSTODY_UNCERTAIN',lambda:_NATIVE_STORE_CLOSE(binding))
+        self.assertFalse(binding.closed)
+        self.assertEqual(api._pending_handles,[]);self.assertEqual(released,[]);self.assertEqual(calls,[])
+
+    def test_no_api_with_contradictory_pin_state_is_preserved_and_denied(self):
+        binding=object.__new__(NativeStoreBinding)
+        binding._lock=threading.RLock();binding._closed=False
+        binding._api=None;binding._pins=[dict(handle=405)]
+        self.assert_denied('OWNER_VIEW_API_CUSTODY_UNAVAILABLE',lambda:_NATIVE_STORE_CLOSE(binding))
+        self.assertFalse(binding.closed)
+        self.assert_denied('OWNER_VIEW_API_CUSTODY_UNAVAILABLE',lambda:binding.pending_native_resources)
+
+    def test_runtime_rejects_other_thread_and_serialization(self):
+        value=self.compose();errors=[]
+        def work():
+            try:value.select(self.store,self.codec,data.INSTALLATION,self.registry)
+            except BaseException as error:errors.append(error)
+        thread=threading.Thread(target=work);thread.start();thread.join(1)
+        self.assertFalse(thread.is_alive())
+        self.assertEqual([error.code for error in errors],['NATIVE_CPU_COMPOSITION_ORIGINAL_THREAD_REQUIRED'])
+        for operation,code in [(copy.copy,'NATIVE_CPU_RUNTIME_COPY_FORBIDDEN'),
+                (copy.deepcopy,'NATIVE_CPU_RUNTIME_COPY_FORBIDDEN'),
+                (pickle.dumps,'NATIVE_CPU_RUNTIME_SERIALIZATION_FORBIDDEN')]:
+            self.assert_denied(code,lambda:operation(value))
+
+    def test_service_journal_selects_exact_configured_runtime(self):
+        sentinel=object()
+        with patch.object(service_process,'SqliteJournal',return_value=sentinel) as opened:
+            self.assertIs(service_process.open_service_journal(self.root,self.codec,
+                (data.INSTALLATION,data.PROJECT),create=True,native_configuration=self.configuration),sentinel)
+        self.assertIs(opened.call_args.kwargs['outcome_runtime'],self.capacity)
+        self.assertEqual(opened.call_args.kwargs['profile'],STORE_PROFILE)
+
+    def test_service_denies_scope_or_unqualified_config_before_opening_journal(self):
+        with patch.object(service_process,'SqliteJournal') as opened:
+            self.assert_denied('NATIVE_CPU_CONFIGURATION_REQUIRED',lambda:
+                service_process.open_service_journal(self.root,self.codec,(data.INSTALLATION,),
+                    native_configuration=object()))
+            self.assert_denied('NATIVE_CPU_SCOPE_CONFIGURATION_REQUIRED',lambda:
+                service_process.open_service_journal(self.root,self.codec,(data.INSTALLATION,),
+                    native_configuration=self.configuration))
+        opened.assert_not_called()
+
+    def test_service_control_message_cannot_select_native_dependencies(self):
+        config=dict(profile='ceta-owned-service-v1',root=str(self.root),installation=data.INSTALLATION,
+            scopes=[data.INSTALLATION,data.PROJECT],create=False,pipe='pipe:never-opened',client_pid=1,
+            client_creation=1,client_image='1'*64,principal='owner:controlled',session='session:controlled',
+            native_configuration={'qualified':True})
+        argument=base64.b64encode(canonical_bytes(config)).decode('ascii')
+        with patch.object(sys,'argv',['service_process.py',argument]):
+            self.assert_denied('SERVICE_CONFIGURATION_INVALID',service_process.main)
+
+    def test_service_retirement_stops_at_pending_runtime_and_preserves_primary(self):
+        calls=[];primary=KeyboardInterrupt('primary');failure=OSError('pending')
+        def close_runtime():calls.append('runtime');raise failure
+        receiver=SimpleNamespace(close=lambda:calls.append('receiver'))
+        owned=SimpleNamespace(close=close_runtime)
+        registry=SimpleNamespace(close=lambda:calls.append('registry'))
+        store=SimpleNamespace(close=lambda:calls.append('store'))
+        with self.assertRaises(KeyboardInterrupt) as caught:
+            service_process.retire_service(receiver,owned,registry,store,primary)
+        self.assertIs(caught.exception,primary)
+        self.assertEqual(calls,['receiver','runtime'])
+        self.assertIs(raw(primary)['service_cleanup_error'],failure)
+        self.assertIs(raw(primary)['service_native_runtime_custody'],owned)
+        self.assertIs(raw(primary)['service_journal_custody'],store)
+
+    def test_service_preserves_completed_constructor_cleanup_without_automatic_retry(self):
+        calls=[];primary=KeyboardInterrupt('primary');failure=OSError('uncertain constructor cleanup')
+        owned=SimpleNamespace(close=lambda:calls.append('replayed'),closed=False)
+        raw(primary).update(native_cpu_runtime=owned,native_cpu_runtime_cleanup_errors=(failure,))
+        registry=SimpleNamespace(close=lambda:calls.append('registry'))
+        store=SimpleNamespace(close=lambda:calls.append('store'))
+        with self.assertRaises(KeyboardInterrupt) as caught:
+            service_process.retire_service(None,owned,registry,store,primary)
+        self.assertIs(caught.exception,primary)
+        self.assertEqual(calls,[])
+        self.assertIs(raw(primary)['service_cleanup_error'],failure)
+
+    def test_service_retirement_without_primary_raises_exact_cleanup_error(self):
+        failure=SystemExit(19)
+        receiver=SimpleNamespace(close=lambda:(_ for _ in ()).throw(failure))
+        with self.assertRaises(SystemExit) as caught:
+            service_process.retire_service(receiver,None,None,self.store)
+        self.assertIs(caught.exception,failure)
+        self.assertIs(raw(failure)['service_journal_custody'],self.store)
+        self.assertFalse(self.store._closed)
+
+    def test_main_propagates_primary_contract_error_with_actionable_receiver_custody(self):
+        application=self.root/'application';profile=application/'.agents/fixtures/profile'
+        profile.mkdir(parents=True)
+        schema=application/'contracts/schemas/records.schema.json';schema.parent.mkdir(parents=True)
+        schema.write_bytes((ROOT/'contracts/schemas/records.schema.json').read_bytes())
+        config=dict(profile='ceta-owned-service-v1',root=str(profile),installation=data.INSTALLATION,
+            scopes=[data.INSTALLATION,data.PROJECT],create=False,pipe='pipe:never-opened',client_pid=1,
+            client_creation=1,client_image='1'*64,principal='owner:controlled',session='session:controlled')
+        argument=base64.b64encode(canonical_bytes(config)).decode('ascii')
+        primary=ContractError('CONTROLLED_READY_PUBLICATION_FAILED')
+        cleanup=OSError('controlled receiver close uncertainty')
+        receiver=SimpleNamespace(receiver_generation='controlled-generation',
+            close=lambda:(_ for _ in ()).throw(cleanup))
+        registry=SimpleNamespace(register=lambda *args,**kw:None,close=lambda:None)
+        emitted=[]
+        def emit(value):
+            emitted.append(value)
+            if value['event']=='ready':raise primary
+        with patch.object(service_process,'ROOT',application), \
+                patch.object(sys,'argv',['service_process.py',argument]), \
+                patch.object(service_process,'open_service_journal',return_value=self.store), \
+                patch.object(service_process,'WindowsPeerRegistry',return_value=registry), \
+                patch.object(service_process,'compose_duplex_kernel_service',return_value=receiver), \
+                patch.object(service_process,'emit',emit):
+            with self.assertRaises(ContractError) as caught:service_process.main()
+        self.assertIs(caught.exception,primary)
+        self.assertIs(raw(primary)['service_receiver_custody'],receiver)
+        self.assertIs(raw(primary)['service_registry_custody'],registry)
+        self.assertIs(raw(primary)['service_journal_custody'],self.store)
+        self.assertIs(raw(primary)['service_cleanup_error'],cleanup)
+        self.assertFalse(self.store._closed)
+        self.assertEqual([v['event'] for v in emitted],['ready','startup_denied'])

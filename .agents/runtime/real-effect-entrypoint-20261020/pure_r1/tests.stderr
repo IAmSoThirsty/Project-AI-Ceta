@@ -1,0 +1,152 @@
+test_approval_origin_rejection_never_calls_canonical_approve (test_real_effect_entrypoint.ManualEntrypointPureTests.test_approval_origin_rejection_never_calls_canonical_approve) ... ERROR
+test_approval_uses_owner_ceremony_witness_and_canonical_prepare_record_wire (test_real_effect_entrypoint.ManualEntrypointPureTests.test_approval_uses_owner_ceremony_witness_and_canonical_prepare_record_wire) ... ERROR
+test_context_cleanup_failure_is_retained_once_without_primary_replacement (test_real_effect_entrypoint.ManualEntrypointPureTests.test_context_cleanup_failure_is_retained_once_without_primary_replacement) ... ERROR
+test_interrupted_admission_is_not_replayed_and_retains_exact_primary (test_real_effect_entrypoint.ManualEntrypointPureTests.test_interrupted_admission_is_not_replayed_and_retains_exact_primary) ... ERROR
+test_invalid_limits_deny_before_native_construction (test_real_effect_entrypoint.ManualEntrypointPureTests.test_invalid_limits_deny_before_native_construction) ... ok
+test_original_thread_required_before_any_admission (test_real_effect_entrypoint.ManualEntrypointPureTests.test_original_thread_required_before_any_admission) ... ERROR
+test_pending_execution_preserves_context_guard_and_primary (test_real_effect_entrypoint.ManualEntrypointPureTests.test_pending_execution_preserves_context_guard_and_primary) ... ERROR
+test_reconciliation_uses_original_recovery_borrow_and_never_execute (test_real_effect_entrypoint.ManualEntrypointPureTests.test_reconciliation_uses_original_recovery_borrow_and_never_execute) ... ERROR
+test_run_id_never_substitutes_for_live_original_context (test_real_effect_entrypoint.ManualEntrypointPureTests.test_run_id_never_substitutes_for_live_original_context) ... ERROR
+test_selection_is_typed_and_no_cli_configuration_or_proof_flag_exists (test_real_effect_entrypoint.ManualEntrypointPureTests.test_selection_is_typed_and_no_cli_configuration_or_proof_flag_exists) ... ok
+test_single_execution_uses_exact_retained_original_kernel_lease (test_real_effect_entrypoint.ManualEntrypointPureTests.test_single_execution_uses_exact_retained_original_kernel_lease) ... ERROR
+test_standalone_command_denies_without_constructing_native_owners (test_real_effect_entrypoint.ManualEntrypointPureTests.test_standalone_command_denies_without_constructing_native_owners) ... ok
+
+======================================================================
+ERROR: test_approval_origin_rejection_never_calls_canonical_approve (test_real_effect_entrypoint.ManualEntrypointPureTests.test_approval_origin_rejection_never_calls_canonical_approve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 306, in test_approval_origin_rejection_never_calls_canonical_approve
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_approval_uses_owner_ceremony_witness_and_canonical_prepare_record_wire (test_real_effect_entrypoint.ManualEntrypointPureTests.test_approval_uses_owner_ceremony_witness_and_canonical_prepare_record_wire)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 276, in test_approval_uses_owner_ceremony_witness_and_canonical_prepare_record_wire
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_context_cleanup_failure_is_retained_once_without_primary_replacement (test_real_effect_entrypoint.ManualEntrypointPureTests.test_context_cleanup_failure_is_retained_once_without_primary_replacement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 263, in test_context_cleanup_failure_is_retained_once_without_primary_replacement
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_interrupted_admission_is_not_replayed_and_retains_exact_primary (test_real_effect_entrypoint.ManualEntrypointPureTests.test_interrupted_admission_is_not_replayed_and_retains_exact_primary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 225, in test_interrupted_admission_is_not_replayed_and_retains_exact_primary
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_original_thread_required_before_any_admission (test_real_effect_entrypoint.ManualEntrypointPureTests.test_original_thread_required_before_any_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 208, in test_original_thread_required_before_any_admission
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_pending_execution_preserves_context_guard_and_primary (test_real_effect_entrypoint.ManualEntrypointPureTests.test_pending_execution_preserves_context_guard_and_primary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 252, in test_pending_execution_preserves_context_guard_and_primary
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_reconciliation_uses_original_recovery_borrow_and_never_execute (test_real_effect_entrypoint.ManualEntrypointPureTests.test_reconciliation_uses_original_recovery_borrow_and_never_execute)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 240, in test_reconciliation_uses_original_recovery_borrow_and_never_execute
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_run_id_never_substitutes_for_live_original_context (test_real_effect_entrypoint.ManualEntrypointPureTests.test_run_id_never_substitutes_for_live_original_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 197, in test_run_id_never_substitutes_for_live_original_context
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+======================================================================
+ERROR: test_single_execution_uses_exact_retained_original_kernel_lease (test_real_effect_entrypoint.ManualEntrypointPureTests.test_single_execution_uses_exact_retained_original_kernel_lease)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 215, in test_single_execution_uses_exact_retained_original_kernel_lease
+    f = _Fixture()
+        ^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\tests\contract\test_real_effect_entrypoint.py", line 117, in __init__
+    self.session = self.profile.command_session(self.context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\real-effect-entrypoint-20261020\src\ceta\composition\real_effect_runtime.py", line 172, in command_session
+    self.registry.authenticate(original_context)
+    ^^^^^^^^^^^^^
+AttributeError: 'ManualRealEffectProfile' object has no attribute 'registry'
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.072s
+
+FAILED (errors=9)

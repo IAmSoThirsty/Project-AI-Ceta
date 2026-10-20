@@ -1,0 +1,88 @@
+{
+  "result": "PASS_EXACT_BYTE_AND_INDEX_JOINS_PARTIAL_SEMANTIC_REVIEW",
+  "started_at_utc": "2026-10-08T11:06:05.597635+00:00",
+  "observed_at_utc": "2026-10-08T11:06:05.630146+00:00",
+  "command": [
+    "C:\\Users\\Quencher\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\verify_checkpoint.py"
+  ],
+  "checker_sha256": "bf70ea7077a2eb8db14a62811ed42b753504224e460d2785c166da522bd5d91e",
+  "verified_input_sha256": {
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-001-proposal.json": "ca62c2b84e7ba779295d701b9a36b45f4a7b8287b4b0545a2cd5bf76f1c96a16",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-001-read-receipt.json": "dedc470b5a1e2773ac7391ca20ad59649b49fdf78093afe802d0bcf396472589",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-001-input-proposal.json": "b62141181afe065edf913bf06e10cd3d906ee6ba836bd0bb86cd3bd7c8c2bedf",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-002-proposal.json": "c04a94c73f25e705677f9389de84f2b634045717488b77f4b779e4e03a40a7a8",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-002-read-receipt.json": "9ff271f90dfdcbd0d39ccacf01d2285badeed40dcf9f4bf042fb7387753b4464",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-002-input-proposal.json": "925ec74ca43b9ef020facf176fad1bfa0b30f8b4c0360d42c19cdd3e8d562651",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-003-proposal.json": "3675f30bafea6359ab3ba09621953cd3cc6faae0f8ec736d2a7aded11ec7913f",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-003-read-receipt.json": "a8f0e721d94a1b162311c30546d4d09ed649c6dca7c72cbb97c772d8fb857694",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-003-input-proposal.json": "bd0421e74108db7177ce8224b460fe732f43a1aacc53ff1383fd6c9573ba8140",
+    ".local-build-cache/volume19-semantic-continuation-20261008/checkpoint-label-correction-001.json": "225830b074cf66c1f6c554a2d18800f23ff7344c38f5b193b23935f18d3c036a",
+    "sources/codex/Thirstys_Codex_Standards_Edition_Volume_20_Repository_Evidence_and_Integrity_Ledger.pdf": "4c486b0a1c6b053dbfa1e14f422b05584a824ed9114715394c59b5d521834228"
+  },
+  "raw_source_sha256": "a2c286a52f0409d8bb885f17c317cc0fba1f0cfcad1599ed599bf6974ecc2aa4",
+  "raw_source_bytes": 1437332,
+  "new_complete_bodies": 122,
+  "prior_complete_bodies": 10,
+  "partial_cumulative_complete_bodies": 132,
+  "remaining_bodies": 499,
+  "checkpoint_cuts": [
+    {
+      "checkpoint": 1,
+      "proposal_sha256": "ca62c2b84e7ba779295d701b9a36b45f4a7b8287b4b0545a2cd5bf76f1c96a16",
+      "receipt_sha256": "dedc470b5a1e2773ac7391ca20ad59649b49fdf78093afe802d0bcf396472589",
+      "receipt_checkpoint_literal": 1,
+      "new_bodies": 57,
+      "cumulative_count": 67,
+      "remaining": 564
+    },
+    {
+      "checkpoint": 2,
+      "proposal_sha256": "c04a94c73f25e705677f9389de84f2b634045717488b77f4b779e4e03a40a7a8",
+      "receipt_sha256": "9ff271f90dfdcbd0d39ccacf01d2285badeed40dcf9f4bf042fb7387753b4464",
+      "receipt_checkpoint_literal": 1,
+      "new_bodies": 27,
+      "cumulative_count": 94,
+      "remaining": 537
+    },
+    {
+      "checkpoint": 3,
+      "proposal_sha256": "3675f30bafea6359ab3ba09621953cd3cc6faae0f8ec736d2a7aded11ec7913f",
+      "receipt_sha256": "a8f0e721d94a1b162311c30546d4d09ed649c6dca7c72cbb97c772d8fb857694",
+      "receipt_checkpoint_literal": 1,
+      "new_bodies": 38,
+      "cumulative_count": 132,
+      "remaining": 499
+    }
+  ],
+  "metadata_correction": "RECEIPTS002/003_LITERAL1_CORRECTED_BY_SEPARATE_RECEIPT;ORIGINAL_BYTES_PRESERVED",
+  "semantic_reader": "MODEL_DELEGATE;ROOT_PERSONAL_REVIEW_OF_SELECTED_FINDINGS_SEPARATE",
+  "machine_check_limits": "BYTE/INDEX_JOINS_ONLY;DOES_NOT_ESTABLISH_SEMANTIC_READING_OR_ANALYZER_CONFORMANCE",
+  "embedded_code_executed": false,
+  "source_adoption": "NOT_EVALUATED",
+  "analyzer_execution": "NOT_RUN",
+  "personal_review_samples": [
+    {
+      "catalog_index": 89,
+      "proposal_interpretation": "Java-rule message suggests Sequelize; suitability is unverified. Logging context or ORM names do not establish safe queries.",
+      "raw_lines": [
+        3367,
+        3428
+      ],
+      "raw_body_for_personal_review": "    - id: java.aws-lambda.security.tainted-sql-string.tainted-sql-string\n      languages:\n        - java\n      message: Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injection to steal or modify contents of the database. Instead, use a parameterized query which is available by default in most database engines. Alternatively, consider using an object-relational mapper (ORM) such as Sequelize which will protect your queries.\n      metadata:\n        category: security\n        confidence: MEDIUM\n        cwe:\n            - 'CWE-89: Improper Neutralization of Special Elements used in an SQL Command (''SQL Injection'')'\n        cwe2021-top25: true\n        cwe2022-top25: true\n        impact: HIGH\n        interfile: true\n        likelihood: MEDIUM\n        owasp:\n            - A01:2017 - Injection\n            - A03:2021 - Injection\n        references:\n            - https://owasp.org/www-community/attacks/SQL_Injection\n        subcategory:\n            - vuln\n        technology:\n            - aws-lambda\n      mode: taint\n      options:\n        interfile: true\n      pattern-sinks:\n        - patterns:\n            - pattern-either:\n                - pattern: |\n                    \"$SQLSTR\" + ...\n                - pattern: |\n                    \"$SQLSTR\".concat(...)\n                - patterns:\n                    - pattern-inside: |\n                        StringBuilder $SB = new StringBuilder(\"$SQLSTR\");\n                        ...\n                    - pattern: $SB.append(...)\n                - patterns:\n                    - pattern-inside: |\n                        $VAR = \"$SQLSTR\";\n                        ...\n                    - pattern: $VAR += ...\n                - pattern: String.format(\"$SQLSTR\", ...)\n            - metavariable-regex:\n                metavariable: $SQLSTR\n                regex: (?i)(select|delete|insert|create|update|alter|drop)\\b\n            - pattern-not-inside: |\n                System.out.$PRINTLN(...)\n      pattern-sources:\n        - patterns:\n            - focus-metavariable: $EVENT\n            - pattern-either:\n                - pattern: |\n                    $HANDLERTYPE $HANDLER($TYPE $EVENT, com.amazonaws.services.lambda.runtime.Context $CONTEXT) {\n                      ...\n                    }\n                - pattern: |\n                    $HANDLERTYPE $HANDLER(InputStream $EVENT, OutputStream $OUT, com.amazonaws.services.lambda.runtime.Context $CONTEXT) {\n                      ...\n                    }\n      severity: ERROR\n"
+    },
+    {
+      "catalog_index": 116,
+      "proposal_interpretation": "HttpServletRequest source branch binds $REQ while the shared focus names $INPUT; engine binding must be qualified. Broad sanitizer/TABLE exclusions do not prove safe SQL.",
+      "raw_lines": [
+        4418,
+        4501
+      ],
+      "raw_body_for_personal_review": "    - id: java.lang.security.audit.formatted-sql-string.formatted-sql-string\n      languages:\n        - java\n      message: Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement) instead. You can obtain a PreparedStatement using 'connection.prepareStatement'.\n      metadata:\n        asvs:\n            control_id: 5.3.5 Injection\n            control_url: https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements\n            section: 'V5: Validation, Sanitization and Encoding Verification Requirements'\n            version: \"4\"\n        category: security\n        confidence: MEDIUM\n        cwe:\n            - 'CWE-89: Improper Neutralization of Special Elements used in an SQL Command (''SQL Injection'')'\n        cwe2021-top25: true\n        cwe2022-top25: true\n        impact: MEDIUM\n        likelihood: HIGH\n        owasp:\n            - A01:2017 - Injection\n            - A03:2021 - Injection\n        references:\n            - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html\n            - https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps\n            - https://software-security.sans.org/developer-how-to/fix-sql-injection-in-java-using-prepared-callable-statement\n        source-rule-url: https://find-sec-bugs.github.io/bugs.htm#SQL_INJECTION\n        subcategory:\n            - vuln\n        technology:\n            - java\n      mode: taint\n      options:\n        taint_assume_safe_booleans: true\n        taint_assume_safe_numbers: true\n      pattern-propagators:\n        - from: $X\n          pattern: (StringBuffer $S).append($X)\n          to: $S\n        - from: $X\n          pattern: (StringBuilder $S).append($X)\n          to: $S\n      pattern-sanitizers:\n        - patterns:\n            - pattern: (CriteriaBuilder $CB).$ANY(...)\n      pattern-sinks:\n        - patterns:\n            - pattern-not: $S.$SQLFUNC(<... \"=~/.*TABLE *$/\" ...>)\n            - pattern-not: $S.$SQLFUNC(<... \"=~/.*TABLE %s$/\" ...>)\n            - pattern-either:\n                - pattern: (Statement $S).$SQLFUNC(...)\n                - pattern: (PreparedStatement $P).$SQLFUNC(...)\n                - pattern: (Connection $C).createStatement(...).$SQLFUNC(...)\n                - pattern: (Connection $C).prepareStatement(...).$SQLFUNC(...)\n                - pattern: (EntityManager $EM).$SQLFUNC(...)\n            - metavariable-regex:\n                metavariable: $SQLFUNC\n                regex: execute|executeQuery|createQuery|query|addBatch|nativeSQL|create|prepare\n          requires: CONCAT\n      pattern-sources:\n        - label: INPUT\n          patterns:\n            - pattern-either:\n                - pattern: |\n                    (HttpServletRequest $REQ)\n                - patterns:\n                    - pattern-inside: |\n                        $ANNOT $FUNC (..., $INPUT, ...) {\n                          ...\n                        }\n                    - pattern: (String $INPUT)\n            - focus-metavariable: $INPUT\n        - label: CONCAT\n          patterns:\n            - pattern-either:\n                - pattern: $X + $INPUT\n                - pattern: $X += $INPUT\n                - pattern: $STRB.append($INPUT)\n                - pattern: String.format(..., $INPUT, ...)\n                - pattern: String.join(..., $INPUT, ...)\n                - pattern: (String $STR).concat($INPUT)\n                - pattern: $INPUT.concat(...)\n                - pattern: new $STRB(..., $INPUT, ...)\n          requires: INPUT\n      severity: ERROR\n"
+    }
+  ],
+  "gate_a": "OPEN"
+}

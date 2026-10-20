@@ -1,0 +1,27 @@
+{
+  "fixture_class": "SYNTHETIC_PREIMAGE_ONLY_NO_AUTHORITY",
+  "vector_id": "ceta:event-preimage:v1:genesis-keyed",
+  "hash_oracle": "System.Security.Cryptography.SHA256 over manually specified ASCII domain, zero byte and expected_body; no signature or key used",
+  "instance": {
+    "record_type": "EventRecord",
+    "schema_version": "1",
+    "record_id": "event:0",
+    "scope_id": "project:1",
+    "causation_ref": null,
+    "sequence": 0,
+    "event_type": "fixture.event",
+    "actor_id": "actor:1",
+    "actor_session": "session:1",
+    "recorded_at": "2026-10-06T00:00:00Z",
+    "previous_head": null,
+    "payload_ref": "payload:1",
+    "payload_commitment": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "canonicalization_profile": "ceta-json-integer-nfc-v1",
+    "signer_key_ref": "key:1",
+    "signature_ref": null
+  },
+  "expected_body": "{\"actor_id\":\"actor:1\",\"actor_session\":\"session:1\",\"canonicalization_profile\":\"ceta-json-integer-nfc-v1\",\"causation_ref\":null,\"event_type\":\"fixture.event\",\"payload_commitment\":\"sha256:0000000000000000000000000000000000000000000000000000000000000000\",\"payload_ref\":\"payload:1\",\"previous_head\":null,\"record_id\":\"event:0\",\"record_type\":\"EventRecord\",\"recorded_at\":\"2026-10-06T00:00:00Z\",\"schema_version\":\"1\",\"scope_id\":\"project:1\",\"sequence\":0,\"signer_key_ref\":\"key:1\"}",
+  "expected_head": "sha256:c249a38d74f6f30c4a29e4dab5b4395a50dfd2ce1c263565122fba09c7bf9d2c",
+  "expected_head_domain": "CETA:event-head:ceta-json-integer-nfc-v1\u0000",
+  "expected_signature_domain": "CETA:event-signature:ceta-json-integer-nfc-v1\u0000"
+}

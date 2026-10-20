@@ -1,0 +1,15 @@
+{
+  "scenario": {
+    "id": "opposed-proposed-conclusion",
+    "question": "Can a proposed current attendance statement be supported by the submitted report?",
+    "evidence": [
+      {"id": "report", "statement": "Alex will not attend the meeting.", "origin": "user_report", "source_ref": "speaker-report"}
+    ],
+    "unknowns": ["Whether the report describes actual attendance"]
+  },
+  "hypotheses": [
+    {"id": "proposed-attendance", "reading": "Alex will attend the meeting.", "proposed_by": "caller", "warrants": [
+      {"evidence_id": "report", "role": "support", "rationale": "A caller may incorrectly assert that this report supports attendance."}
+    ]}
+  ]
+}

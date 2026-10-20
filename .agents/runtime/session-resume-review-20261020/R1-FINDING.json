@@ -1,0 +1,19 @@
+{
+  "finding_id": "RESUME-STATUS-P3-001",
+  "author": "/root",
+  "reviewer": "/root/ac7_native_artifact_review20",
+  "severity": "P3",
+  "scope": "Current worker-assignment wording only",
+  "prepared_sha256": "0332bac7e3213c05bc59049979d06dbb7ef4dc02847fb475ff9839b712bb56c4",
+  "progress_candidate_sha256": "8257f739a2f16f9acb4361bebaf0f81b14675f6a12e780d8eac677cf8b4594d0",
+  "continuity_candidate_sha256": "94471db5866994d55961bed8866ca579b8ee9c3e18a160849e722ccaab7225cf",
+  "file": "T:/00-Active/Project-AI-CETA/.agents/runtime/session-resume-20261020/continuity.json.candidate",
+  "start_line": 13,
+  "end_line": 25,
+  "issue": "active_workers presents assignments without snapshot/currentness qualification; by review, the previous tool review had completed and the loader inventory assignment had completed.",
+  "evidence": "Platform agent-status snapshot and this reviewer's completed frozen loader-inventory handoff; no host process inspection",
+  "root_response": "Accepted. Preserve R1 and prepare a timestamped observed assignment snapshot with observed_at and observation_basis; Root reports successor assignments for the tool reviewer and this metadata reviewer.",
+  "R1_disposition": "Progress approved; continuity assignment wording changes requested",
+  "substantive_checks": "All pins, Git, unchanged historical objects and limited JS9/AC7 acceptance claims passed",
+  "canonical_writes": false
+}

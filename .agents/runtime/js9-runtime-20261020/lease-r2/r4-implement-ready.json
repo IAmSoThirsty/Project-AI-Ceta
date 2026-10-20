@@ -1,0 +1,147 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "run",
+    "ready",
+    "js9-runtime-r4-20261020",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\lease-r2"
+  ],
+  "exit_status": 0,
+  "response": {
+    "allowed": true,
+    "blocked": {
+      "integrate": "validate: predecessor state is PENDING",
+      "review": "evidence: predecessor state is READY; implement: predecessor state is READY",
+      "validate": "review: predecessor state is PENDING"
+    },
+    "fingerprint_matches": true,
+    "graph_fingerprint": "72d2a71fc6c0c49ead2a39df87e634a4fd48ebf04087073db5dfaa46407643f3",
+    "graph_id": "ceta_js9_private_runtime_construction",
+    "nodes": {
+      "discover": {
+        "artifact_hash": "4c31914cd06b0134cea17ae73d33f9fa4cd49843e30aa49fa16c9480217e3118",
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T08:58:14.572549+00:00",
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": "/root/recovery_regression20",
+        "reason": "receipt and observed execution evidence validated",
+        "receipt_hash": "14c41cf795a16bb5bce1e070ec3f20fc23e439eaab572e8d1408b7cd1d5e3797",
+        "receipt_ref": "receipts/discover.json",
+        "state": "SUCCEEDED",
+        "validation_passed": true,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-20261020"
+      },
+      "evidence": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "all hard predecessor requirements satisfied",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "READY",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "implement": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "all hard predecessor requirements satisfied",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "READY",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "integrate": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "validate: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "plan": {
+        "artifact_hash": "c2407429f8d419e60eef07d5a49dd93335dabc75694c9f6fc26a9ede89bdeae1",
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T08:58:17.759775+00:00",
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": "/root/recovery_regression20",
+        "reason": "receipt and observed execution evidence validated",
+        "receipt_hash": "62aed189cb9a0346a62769e6d7bf0cb25f8648a0507729e0e0dabbe3c7e85a9b",
+        "receipt_ref": "receipts/plan.json",
+        "state": "SUCCEEDED",
+        "validation_passed": true,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-20261020"
+      },
+      "review": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "evidence: predecessor state is READY; implement: predecessor state is READY",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "validate": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "review: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      }
+    },
+    "ready_now": [
+      "evidence",
+      "implement"
+    ],
+    "run_id": "js9-runtime-r4-20261020",
+    "sequence": 6,
+    "states": {
+      "discover": "SUCCEEDED",
+      "evidence": "READY",
+      "implement": "READY",
+      "integrate": "PENDING",
+      "plan": "SUCCEEDED",
+      "review": "PENDING",
+      "validate": "PENDING"
+    }
+  }
+}

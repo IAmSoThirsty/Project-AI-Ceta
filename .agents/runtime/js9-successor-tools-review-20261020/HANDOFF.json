@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "at": "2026-10-20T10:07:26.365629+00:00",
+  "reviewer": "/root/recovery_join_review20",
+  "decision": "rejected",
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r1/PACKET.json",
+    "sha256": "455efb4d1d30ecd05f7076f32648a44b71f7fc383882945e233f1e2c126810c5"
+  },
+  "review_sha256": "e4e72f0be08b771d282d4031b19e6c2ac85753143e1172734c206fbf6a357d41",
+  "finding_ids": [
+    "JS9-TOOLS-01"
+  ],
+  "artifacts": {
+    "FROZEN-CUT-RESULT.json": "153ee370e768062f390f3353a4cbc259a6d9f893356f042519235172769417ba",
+    "POSTVERIFY-BOUNDARY-REPRODUCTION.json": "e9a30b807d7acb17c53363b3fddff9c1ac9db2c98ec788842129b2a5455b9348",
+    "PURE-RECEIPT-CONTROLS.json": "3d78d80923cc124296c0f815c81a09f6c2a496d2e0fd8fa64e03c1671d15a98f",
+    "pure_receipt_controls.py": "3a2720a94480366c7d871a79a1b67b2db90daa1b7df93b5f3ad91f12ff2da636",
+    "reproduce_postverify_boundary.py": "dd7be46a17c7e1ccd16291cb273604cd5c208ee370f63629128619d8690e3311",
+    "reproduce_postverify_boundary_v2.py": "b488568162cbc8521371937e3d405dc9795ef3887ae7f38e3104b93da8d3c46c",
+    "review.json": "e4e72f0be08b771d282d4031b19e6c2ac85753143e1172734c206fbf6a357d41",
+    "REVIEW.md": "a751c4817863f2e6043ba48a0efdc62c9889d641b744519c588118bca0e2eae4",
+    "REVIEWER-EXTRACTOR-FAILURE.json": "052305f2cebc7a279311ecaf04840e0f681fcd9113172950cd1c1c8ae0c2942e",
+    "verify_frozen_cut.py": "411b1c757238c7bd098ec121b58b3e6624a2d198e95554e1a6900fc044b08a71"
+  },
+  "no_host_execution_approval": true,
+  "frozen_inputs_rechecked_stable": true,
+  "next_action": "Freeze separate R2 repair with mandatory parent corroboration; obtain distinct bounded successor tool review. Native/full/publication remain dormant until applicable gates and authority are established."
+}

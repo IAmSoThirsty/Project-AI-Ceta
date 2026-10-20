@@ -1,0 +1,2268 @@
+--- Q5/contracts/LOCAL_IPC_V1.md
++++ entrypoint/contracts/LOCAL_IPC_V1.md
+@@ -193,3 +193,31 @@
+ an explicitly STALE read. These routes confer neither task acceptance nor a grant.
+ `TASK_MEANING_ABSENT` describes only coherent current absence. The complete wire,
+ bounds, atomic persistence and recovery requirements are in `TASK_MEANING_V1.md`.
++
++## Selected manual real-effect commands
++
++The additive `ManualEffectCommand` data profile declares `manual.run`,
++`manual.restore`, `manual.inspect`, `manual.reconcile` and `manual.stop`. Its
++4096-byte canonical body contains only command/scope/run identifiers, operation
++kind, bounded CPU rate, original request selector and Stop reason. Unknown fields,
++proof/configuration inputs, Boolean rates and route/kind substitutions deny.
++It is a separate command profile like TaskCommand; the twenty RecordCodec
++records and their schemas are unchanged. Correlated manual-result-v1 responses
++bind the complete original envelope. A returned state or denial grants no
++authority and is not an independent native observation.
++
++Only the explicit `ManualRealEffectHost` routes these commands. The ordinary
++identity-only KernelIngress continues to deny them. Its registered native peer
++and scope checks, replay generation and 30-second envelope bound are unchanged.
++One RUN context spans genuine enrollment, exact per-effect ceremony, canonical
++prepare/consume/attempt, native dispatch, separate observation and settlement.
++RESTORE uses a fresh authenticated request and a separate genuine approval,
++retaining the same actual owned target and canonical cap-parent binding.
++
++An optional trusted receiver context-retainer can retain an unresolved original
++context and connected pipe. It cannot renew that envelope, change its thread,
++register a peer or grant authority. Pending custody denies another receive and
++ordinary receiver close. Explicit retirement requires the same captured owner
++to report no pending custody before invalidation/disconnect. An expired original
++context stays expired; this does not implement cross-process or renewed-context
++recovery. The original owner and receiver remain exposed on failure.
+--- Q5/contracts/NATIVE_CPU_RUNTIME_COMPOSITION_V1.md
++++ entrypoint/contracts/NATIVE_CPU_RUNTIME_COMPOSITION_V1.md
+@@ -64,3 +64,31 @@
+ integration work. The kernel's existing general runtime-admission method stays
+ closed. Positive native/full/destination verification requires the exact joined
+ source and case pins plus the coordinator's separate execution release.
++
++## Manual profile entrypoint candidate
++
++`ManualRealEffectProfile` constructs the existing concrete retained code binding,
++native session clock, physical-capacity runtime, independent observer, one
++SqliteJournal, WindowsPeerRegistry and NativeCpuRuntime. Its trusted-process
++`ManualRuntimeSelection` supplies reviewed exact pins and the canonical owner's
++actual epoch; no command or environment field supplies that selection. It creates
++no host profile, ACL change, credential, epoch transition or alternate writer.
++The only worker launch uses IsolatedWindowsWorker; launch failure is retained
++and never retried with ordinary WindowsOwnedProcess.
++
++`ManualRealEffectHost` registers only the trusted parent's selected peer lifetime
++and hosts the strict manual commands on the existing WindowsPipeServer. Genuine
++NativeApprovalOwner sessions produce the only accepted enrollment/effect witness;
++the kernel alone consumes those nonces and issues authority. Inspection and
++canonical readback use the captured kernel. Advancing pending reconciliation
++requires the original session/context/thread and retained kernel recovery borrow.
++New-context RECONCILE reports durable history; it cannot reconstruct that borrow.
++
++The client pins its server with the existing WindowsServerBinding and sends the
++strict command through send_pipe_request. CLI `run` and `restore` select that
++already composed client; native proof, lease, manifest and policy fields are
++unavailable to CLI data. No installed selected parent/deployment is discovered
++or fabricated by standalone invocation. Deployment selection, canonical epoch
++provisioning, worker asset/scratch qualification, positive restricted launch,
++actual genuine ceremonies and the complete public/native acceptance remain
++unqualified. Pure controls establish code paths and custody only.
+--- Q5/src/ceta/composition/real_effect_cli.py
++++ entrypoint/src/ceta/composition/real_effect_cli.py
+@@ -0,0 +1,98 @@
++"""Strict commands for an already selected, live trusted manual CPU session.
++
++The host supplies the concrete session on the authenticated receiver's original
++thread. Standalone invocation has no installed selected host and fails closed.
++No CLI flag imports configuration, credentials, proof or a deployment factory.
++"""
++import argparse
++import sys
++
++from ceta.contracts.real_effect import REAL_EFFECT_PROFILE
++from ceta.contracts.wire import ContractError, canonical_bytes
++
++
++def parser():
++    result = argparse.ArgumentParser(description=__doc__, allow_abbrev=False)
++    commands = result.add_subparsers(dest='command', required=True)
++    start = commands.add_parser('start', allow_abbrev=False)
++    start.add_argument('--profile', choices=(REAL_EFFECT_PROFILE,), required=True)
++    for name in ('run', 'restore', 'enroll', 'prepare', 'prepare-restore', 'inspect', 'approve', 'execute', 'reconcile', 'stop'):
++        command = commands.add_parser(name, allow_abbrev=False)
++        command.add_argument('--run-id', required=True)
++        if name in ('prepare', 'run'):
++            if name == 'prepare':
++                command.add_argument('--operation', choices=('owned-worker.cpu-cap',), required=True)
++            command.add_argument('--cpu-rate', type=int, required=True)
++        if name in ('restore', 'approve', 'execute', 'reconcile'):
++            command.add_argument('--request-id', required=True)
++        if name == 'stop':
++            command.add_argument('--reason-ref', default='reason:manual-owner-stop')
++    return result
++
++
++def dispatch(arguments, session):
++    from ceta.composition.real_effect_service import ManualRealEffectSession
++    if type(session) is not ManualRealEffectSession:
++        raise ContractError('MANUAL_PROFILE_SELECTED_AUTHENTICATED_HOST_UNAVAILABLE')
++    # The selected owner verifies the actual opaque context; run IDs do not.
++    session._selected(getattr(arguments, 'run_id', None),
++        bookkeeping=arguments.command in ('inspect', 'reconcile', 'stop'))
++    if arguments.command == 'start':
++        return session.inspect()
++    if arguments.command == 'enroll':
++        return session.enroll()
++    if arguments.command == 'prepare':
++        return session.prepare(cpu_rate=arguments.cpu_rate)
++    if arguments.command == 'prepare-restore':
++        return session.prepare(restoration=True)
++    if arguments.command == 'approve':
++        return session.approve(arguments.request_id)
++    if arguments.command == 'execute':
++        return session.execute(arguments.request_id)
++    if arguments.command == 'reconcile':
++        return session.reconcile(arguments.request_id)
++    if arguments.command == 'stop':
++        return session.stop(arguments.reason_ref)
++    if arguments.command == 'inspect':
++        return session.inspect()
++    raise ContractError('MANUAL_PROFILE_COMMAND_UNAVAILABLE')
++
++
++def dispatch_client(arguments, client):
++    from ceta.composition.real_effect_client import ManualEffectClient
++    if type(client) is not ManualEffectClient:
++        raise ContractError('MANUAL_PROFILE_SELECTED_AUTHENTICATED_HOST_UNAVAILABLE')
++    if getattr(arguments, 'run_id', None) != client.run_id:
++        raise ContractError('MANUAL_PROFILE_RUN_ID_MISMATCH')
++    kinds = {'run': 'RUN', 'restore': 'RESTORE', 'inspect': 'INSPECT',
++        'reconcile': 'RECONCILE', 'stop': 'STOP'}
++    if arguments.command not in kinds:
++        raise ContractError('MANUAL_PROFILE_ONE_AUTHENTICATED_OPERATION_REQUIRED')
++    return client.call(kinds[arguments.command], cpu_rate=getattr(arguments, 'cpu_rate', None),
++        request_id=getattr(arguments, 'request_id', None), reason_ref=getattr(arguments, 'reason_ref', None))
++
++
++def main(argv=None, *, session=None, client=None, output=None):
++    arguments = parser().parse_args(argv)
++    destination = sys.stdout.buffer if output is None else output
++    try:
++        if session is not None and client is not None:
++            raise ContractError('MANUAL_PROFILE_AMBIGUOUS_COMPOSITION')
++        result = dispatch_client(arguments, client) if client is not None else dispatch(arguments, session)
++        wire = canonical_bytes(result)
++        if len(wire) > 262144:
++            raise ContractError('MANUAL_PROFILE_RESPONSE_BOUND')
++        destination.write(wire + b'\n')
++        destination.flush()
++        return 2 if result.get('kind') == 'DENIED_RECONCILE' else 0
++    except ContractError as error:
++        # A denial can follow COMMIT or effect. It is never a no-effect receipt.
++        wire = canonical_bytes(dict(profile=REAL_EFFECT_PROFILE, kind='DENIED',
++            code=error.code, transition_or_effect='UNESTABLISHED_BY_RESPONSE'))
++        destination.write(wire + b'\n')
++        destination.flush()
++        return 2
++
++
++if __name__ == '__main__':
++    raise SystemExit(main())
+--- Q5/src/ceta/composition/real_effect_client.py
++++ entrypoint/src/ceta/composition/real_effect_client.py
+@@ -0,0 +1,58 @@
++"""Concrete client of the selected native manual-profile pipe.
++
++The trusted launcher supplies its measured server binding and registered actor.
++The client never registers itself, chooses code, or sends an approval witness.
++"""
++import secrets
++import time
++
++from ceta.contracts.kernel_transactions import identifier, require
++from ceta.contracts.local_ipc import encode_message
++from ceta.contracts.manual_effect import OPERATIONS, command_wire
++from ceta.contracts.wire import RecordCodec, strict_loads
++from ceta.identity.windows_pipe import WindowsServerBinding, send_pipe_request
++
++
++class ManualEffectClient:
++    def __init__(self, codec, server_binding, pipe_name, *, run_id, scope_id,
++                 actor_session, receiver_generation):
++        require(type(codec) is RecordCodec and type(server_binding) is WindowsServerBinding,
++            'MANUAL_CLIENT_SELECTED_SERVER_REQUIRED')
++        for value in (run_id, scope_id, actor_session, receiver_generation):
++            identifier(value)
++        self._codec, self._server, self._pipe = codec, server_binding, pipe_name
++        self.run_id, self.scope_id = run_id, scope_id
++        self._actor, self._generation = actor_session, receiver_generation
++        self._uncertain_effect = None
++        self._in_flight = None
++
++    def call(self, kind, *, cpu_rate=None, request_id=None, reason_ref=None):
++        require(type(kind) is str and kind in OPERATIONS.values(), 'MANUAL_CLIENT_COMMAND_REQUIRED')
++        require(self._in_flight is None, 'MANUAL_CLIENT_CALL_PENDING')
++        require(kind not in ('RUN', 'RESTORE') or self._uncertain_effect is None,
++            'MANUAL_CLIENT_EFFECT_RECONCILIATION_REQUIRED')
++        operation = next(name for name, value in OPERATIONS.items() if value == kind)
++        command_id = 'command:' + secrets.token_hex(16)
++        body = command_wire(command_id, self.scope_id, self.run_id, kind,
++            cpu_rate=cpu_rate, request_id=request_id, reason_ref=reason_ref)
++        now = time.time_ns() // 1000000
++        wire = encode_message(body, self._codec, message_id='message:' + secrets.token_hex(16),
++            sender_session=self._actor, receiver_generation=self._generation,
++            operation=operation, issued_at_ms=now, expires_at_ms=now + 30000)
++        self._in_flight = wire  # Publish exact submitted bytes before native entry.
++        try:
++            response = send_pipe_request(self._pipe, wire, self._codec, 30.0,
++                expected_server=self._server)
++            require(response.manual_result_wire is not None, 'MANUAL_CLIENT_CORRELATED_RESULT_REQUIRED')
++            value = strict_loads(response.manual_result_wire)
++            if value['kind'] == 'DENIED_RECONCILE' and kind in ('RUN', 'RESTORE'):
++                self._uncertain_effect = wire
++            return value
++        except BaseException as primary:
++            if kind in ('RUN', 'RESTORE'):
++                self._uncertain_effect = wire
++            dict.update(BaseException.__dict__['__dict__'].__get__(primary),
++                manual_effect_client=self, manual_effect_request_wire=wire)
++            raise
++        finally:
++            self._in_flight = None
+--- Q5/src/ceta/composition/real_effect_host.py
++++ entrypoint/src/ceta/composition/real_effect_host.py
+@@ -0,0 +1,182 @@
++"""Selected Windows ingress for one bounded genuine manual CPU operation.
++
++The trusted parent supplies deployment and peer registrations, never the wire
++caller. A RUN request holds its original native pipe context across enrollment,
++exact display/approval, canonical preparation, dispatch, observation and settlement.
++RESTORE uses a fresh command context and genuine approval over the original cap.
++"""
++import secrets
++import threading
++
++from ceta.composition.real_effect_runtime import ManualRealEffectProfile, ManualRuntimeSelection
++from ceta.contracts.kernel_transactions import require
++from ceta.contracts.local_ipc import LocalMessage
++from ceta.contracts.local_results import encode_response
++from ceta.contracts.manual_effect import OPERATIONS
++from ceta.contracts.wire import ContractError, RecordCodec
++from ceta.identity.windows_pipe import WindowsPipeServer
++
++
++class ManualRealEffectHost:
++    def __init__(self, selection, codec, pipe_name, *, peer_pid, peer_creation_time,
++                 peer_image_sha256, principal_id, actor_session):
++        require(type(selection) is ManualRuntimeSelection and type(codec) is RecordCodec,
++            'MANUAL_HOST_TRUSTED_SELECTION_REQUIRED')
++        self._thread, self.run_id = threading.get_ident(), 'run:' + secrets.token_hex(16)
++        self.profile = self.receiver = None
++        self._cap_session = self._last_session = None
++        self._pending = None
++        self._stopped = False
++        try:
++            self.profile = object.__new__(ManualRealEffectProfile)
++            ManualRealEffectProfile.__init__(self.profile, selection, codec)
++            self.profile.registry.register(peer_pid, principal_id, actor_session,
++                allowed_operations=tuple(OPERATIONS), allowed_scopes=(selection.scope_id,),
++                expected_creation_time=peer_creation_time, expected_image_sha256=peer_image_sha256)
++            self.receiver = object.__new__(WindowsPipeServer)
++            WindowsPipeServer.__init__(self.receiver, pipe_name, self.profile.registry, self, codec,
++                response_encoder=encode_response, context_retainer=self.retain_context)
++        except BaseException as primary:
++            self._expose(primary)
++            raise
++
++    def _expose(self, primary):
++        dict.__setitem__(BaseException.__dict__['__dict__'].__get__(primary),
++            'manual_real_effect_host', self)
++
++    def _current(self):
++        require(threading.get_ident() == self._thread, 'MANUAL_HOST_ORIGINAL_THREAD_REQUIRED')
++
++    def ready(self):
++        self._current()
++        return dict(profile='ceta-owned-real-effect-v1', run_id=self.run_id,
++            receiver_generation=self.receiver.receiver_generation,
++            scope_id=self.profile.selection.scope_id,
++            authority='REQUIRES_GENUINE_ENROLLMENT_AND_EXACT_APPROVAL')
++
++    def retain_context(self, original_context):
++        """Pure custody lookup, captured by the receiver before dispatch."""
++        self._current()
++        session = self.profile._session
++        if session is not None and session._context is original_context and not session.closed:
++            self._pending = session
++            return session
++        return None
++
++    def __call__(self, message, original_context):
++        self._current()
++        require(type(message) is LocalMessage and message.operation in OPERATIONS,
++            'MANUAL_HOST_OPERATION_UNAVAILABLE')
++        self.profile.registry.require_message(original_context, message)
++        value = message.record.as_dict()
++        require(value['kind'] == OPERATIONS[message.operation]
++            and value['run_id'] == self.run_id
++            and message.scope_id == self.profile.selection.scope_id,
++            'MANUAL_HOST_COMMAND_BINDING')
++        require(self._pending is None, 'MANUAL_HOST_ORIGINAL_INVOCATION_PENDING')
++        kind = value['kind']
++        if kind in ('INSPECT', 'STOP'):
++            return self._historical(original_context, stop_reason=value['reason_ref'] if kind == 'STOP' else None)
++        if kind == 'RECONCILE':
++            # New messages may inspect canonical outcome, but cannot reconstruct
++            # a private pending execution lease from serialized request IDs.
++            require(self._last_session is not None
++                and value['request_id'] == self._last_session._request.request_id,
++                'MANUAL_HOST_REQUEST_ID_MISMATCH')
++            return self._historical(original_context)
++        require(not self._stopped, 'MANUAL_HOST_STOPPED')
++        if kind == 'RUN':
++            require(self._cap_session is None and self._last_session is None,
++                'MANUAL_HOST_CAP_SINGLE_ATTEMPT')
++        else:
++            require(self._cap_session is not None
++                and value['request_id'] == self._cap_session._cap_request.request_id
++                and self._last_session is self._cap_session,
++                'MANUAL_HOST_ORIGINAL_CAP_REQUIRED')
++        session = self.profile.command_session(original_context)
++        self._last_session = session  # Publish before context/helper/worker work.
++        try:
++            with session:
++                if kind == 'RUN':
++                    session.enroll()
++                    session.prepare(cpu_rate=value['cpu_rate'])
++                else:
++                    original = self._cap_session._cap_request
++                    enrollment = session._owner.owner_enrollment_expected(original_context)
++                    state = session._kernel.recover_owner_enrollment(enrollment.request_id,
++                        original_context).as_dict()
++                    require(state['state'] == 'ENROLLED'
++                        and state['cap_approval']['request_wire'] == original.canonical_wire.decode('utf8'),
++                        'MANUAL_HOST_CANONICAL_CAP_CHANGED')
++                    session._enrollment, session._enrollment_stage = enrollment, 'ENROLLED'
++                    session._cap_request, session._task_id = original, original.task_id
++                    session.prepare(restoration=True)
++                request_id = session._request.request_id
++                session.approve(request_id)
++                # A pending/rejected ceremony cannot reach this state predicate.
++                result = session.execute(request_id)
++                result['run_id'] = self.run_id
++            if kind == 'RUN':
++                self._cap_session = session
++            return result
++        except BaseException as primary:
++            self.retain_context(original_context)
++            self._expose(primary)
++            raise
++
++    def _historical(self, original_context, *, stop_reason=None):
++        owner = self.profile.runtime._owner
++        kernel = self.profile.runtime.kernel._kernel
++        with owner.native_context(original_context):
++            session = self._last_session
++            enrollment = None if session is None else session._enrollment
++            state = None if enrollment is None else kernel.recover_owner_enrollment(
++                enrollment.request_id, original_context).as_dict()
++            outcome = None
++            if session is not None and session._execution is not None:
++                permit = session._execution.inspection()['consumed_permit']
++                if permit is not None:
++                    outcome = kernel.recover_owned_cpu_outcome(session._request.canonical_wire,
++                        permit, original_context).as_dict()
++            if stop_reason is not None:
++                if enrollment is not None:
++                    kernel.stop_owner_authority(enrollment.request_id, original_context, stop_reason)
++                owner.request_stop()
++                self._stopped = True
++            return dict(profile='ceta-owned-real-effect-v1', run_id=self.run_id,
++                state='STOPPED' if self._stopped else 'HISTORICAL_READBACK',
++                enrollment=state, outcome=outcome,
++                active_native_context_reconstructed=False)
++
++    def reconcile_pending(self):
++        """Trusted original-thread recovery while the SAME context remains live."""
++        self._current()
++        require(self._pending is not None, 'MANUAL_HOST_NO_PENDING_INVOCATION')
++        session = self._pending
++        request = session._request if session._request is not None else session._enrollment
++        require(request is not None, 'MANUAL_HOST_PRECOMMAND_CUSTODY_PENDING')
++        result = session.reconcile(request.request_id)
++        session.close()
++        require(session.closed, 'MANUAL_HOST_ORIGINAL_INVOCATION_PENDING')
++        self.receiver.retire_retained_context()
++        self._pending = None
++        return result
++
++    def receive_once(self, timeout_seconds=30.0):
++        self._current()
++        require(type(timeout_seconds) in (int, float) and 0 < timeout_seconds <= 30,
++            'MANUAL_HOST_RECEIVE_BOUND')
++        return self.receiver.receive_once(timeout_seconds)
++
++    def close(self):
++        self._current()
++        try:
++            require(self._pending is None and (self.profile is None or self.profile._session is None),
++                'MANUAL_HOST_ORIGINAL_INVOCATION_PENDING')
++            if self.receiver is not None:
++                self.receiver.close()
++            if self.profile is not None:
++                self.profile.close()
++        except BaseException as primary:
++            self._expose(primary)
++            raise
+--- Q5/src/ceta/composition/real_effect_runtime.py
++++ entrypoint/src/ceta/composition/real_effect_runtime.py
+@@ -0,0 +1,332 @@
++"""Concrete, explicitly selected native owners for the manual CPU profile.
++
++Selections are trusted-process inputs. No selection is loaded from CLI fields,
++environment discovery, a receipt, or an untrusted configuration file. This owner
++does not create an AppContainer profile or change host/filesystem policy.
++"""
++from dataclasses import dataclass
++from pathlib import Path
++import threading
++
++from ceta.composition.native_cpu_runtime import NativeCpuConfiguration, NativeCpuRuntime
++from ceta.composition.real_effect_service import ManualEffectLimits, ManualRealEffectSession
++from ceta.contracts.kernel_transactions import commitment, identifier, require
++from ceta.contracts.store_transactions import STORE_PROFILE
++from ceta.contracts.wire import ContractError, RecordCodec
++from ceta.effects.native_cpu_binding import NativeCpuBinding
++from ceta.effects.native_observer import NativeCpuEffectObserver, observer_code_commitment
++from ceta.identity.native_clock import NativeSessionClock
++from ceta.identity.native_code_binding import CodePin, NativeCodeBinding
++from ceta.identity.windows_pipe import WindowsPeerRegistry
++from ceta.store.journal import SqliteJournal
++from ceta.store.outcome_capacity import OutcomeCapacityBudget, OutcomeCapacityRuntime
++from ceta.supervisor.isolated_worker import IsolatedWindowsWorker, IsolatedLaunchError
++
++
++@dataclass(frozen=True)
++class ManualRuntimeSelection:
++    """Reviewed deployment inputs supplied only by the trusted composition root.
++
++    The canonical owner must supply its actual durable epoch; this value does not
++    create or advance an epoch. Code pins identify the complete selected surface.
++    Constructing this record establishes no native or profile qualification.
++    """
++    private_root: Path
++    scratch_root: Path
++    installation_scope_id: str
++    scope_id: str
++    durable_epoch: int
++    code_pins: tuple[CodePin, ...]
++    policy_commitment: str
++    adapter_commitment: str
++    helper_name: str
++    helper_source_name: str
++    worker_name: str
++    observer_name: str
++    observer_source_name: str
++    capacity_helper_name: str
++    appcontainer_name: str
++    capacity_budget: OutcomeCapacityBudget
++    limits: ManualEffectLimits
++    create: bool = False
++    work_duration_ms: int = 30000
++
++    def __post_init__(self):
++        require(type(self.private_root) is type(Path()) and self.private_root.is_absolute()
++            and type(self.scratch_root) is type(Path()) and self.scratch_root.is_absolute()
++            and self.private_root != self.scratch_root, 'MANUAL_PROFILE_ABSOLUTE_ROOTS_REQUIRED')
++        identifier(self.installation_scope_id)
++        identifier(self.scope_id)
++        require(self.installation_scope_id != self.scope_id,
++            'MANUAL_PROFILE_DISTINCT_SCOPES_REQUIRED')
++        require(type(self.durable_epoch) is int and 0 <= self.durable_epoch <= 2**63 - 1,
++            'MANUAL_PROFILE_CANONICAL_EPOCH_REQUIRED')
++        require(type(self.code_pins) is tuple and self.code_pins
++            and all(type(pin) is CodePin for pin in self.code_pins),
++            'MANUAL_PROFILE_REVIEWED_MANIFEST_REQUIRED')
++        for pin in self.code_pins:
++            pin.__post_init__()
++        commitment(self.policy_commitment)
++        commitment(self.adapter_commitment)
++        names = (self.helper_name, self.helper_source_name, self.worker_name,
++            self.observer_name, self.observer_source_name, self.capacity_helper_name)
++        require(all(type(n) is str and 0 < len(n) <= 512 for n in names)
++            and len(set(names)) == len(names), 'MANUAL_PROFILE_MANIFEST_NAMES_REQUIRED')
++        for group, name in (('environment', self.helper_name), ('source', self.helper_source_name),
++            ('environment', self.worker_name), ('environment', self.observer_name),
++            ('source', self.observer_source_name), ('environment', self.capacity_helper_name)):
++            require(sum(pin.group == group and pin.logical_name == name
++                for pin in self.code_pins) == 1, 'MANUAL_PROFILE_NAMED_PIN_REQUIRED')
++        require(type(self.appcontainer_name) is str
++            and self.appcontainer_name.startswith('CETA.')
++            and 6 <= len(self.appcontainer_name) <= 64
++            and all(c.isascii() and (c.isalnum() or c in '._-') for c in self.appcontainer_name),
++            'MANUAL_PROFILE_CONTAINER_SELECTION_REQUIRED')
++        require(type(self.capacity_budget) is OutcomeCapacityBudget
++            and type(self.limits) is ManualEffectLimits and type(self.create) is bool,
++            'MANUAL_PROFILE_TYPED_CONFIGURATION_REQUIRED')
++        self.capacity_budget.__post_init__()
++        self.limits.__post_init__()
++        require(type(self.work_duration_ms) is int and 1 <= self.work_duration_ms <= 30000,
++            'MANUAL_PROFILE_WORK_DURATION_BOUND')
++
++
++def _retain(primary, profile, secondary=None):
++    data = BaseException.__dict__['__dict__'].__get__(primary)
++    dict.__setitem__(data, 'manual_real_effect_profile', profile)
++    if secondary is not None:
++        previous = dict.get(data, 'manual_real_effect_profile_cleanup_errors', ())
++        dict.__setitem__(data, 'manual_real_effect_profile_cleanup_errors', previous + (secondary,))
++
++
++class ManualRealEffectProfile:
++    """Own the concrete runtime dependencies; native effects are explicit methods.
++
++    Construction loads native clock/VFS owners and may create a selected journal.
++    It must therefore be called only by an explicitly released trusted host, never
++    merely because a command declares a profile. Worker launch is a separate step.
++    """
++    def __init__(self, selection, codec):
++        require(type(selection) is ManualRuntimeSelection and type(codec) is RecordCodec,
++            'MANUAL_PROFILE_TRUSTED_SELECTION_REQUIRED')
++        selection.__post_init__()
++        self.selection, self.limits = selection, selection.limits
++        self.adapter_commitment = selection.adapter_commitment
++        self._thread, self._state = threading.get_ident(), 'BUILDING'
++        self.code = self.clock = self.observer = self.store = self.registry = self.runtime = None
++        self.capacity = None
++        self.worker = self._binding = None
++        self._worker_launch_attempted = False
++        self._worker_launch_error = None
++        self._session = None
++        self._initialized = []
++        self._failed_constructor = None
++        self._constructor_history = []
++        try:
++            # Publish each partial native owner before its fallible initializer.
++            self._construct('code', NativeCodeBinding, selection.code_pins)
++            self._construct('clock', NativeSessionClock, selection.durable_epoch)
++            capacity = self._pin('environment', selection.capacity_helper_name)
++            self._construct('capacity', OutcomeCapacityRuntime, capacity.path, capacity.sha256)
++            observer = self._pin('environment', selection.observer_name)
++            driver = self._pin('source', selection.observer_source_name)
++            observed_code = observer_code_commitment(observer.sha256, driver.sha256)
++            self._construct('observer', NativeCpuEffectObserver, observer.path,
++                observer.sha256, observed_code, clock=self.clock)
++            self._construct('registry', WindowsPeerRegistry)
++            self._construct('store', SqliteJournal, selection.private_root, codec,
++                (selection.installation_scope_id, selection.scope_id), create=selection.create,
++                profile=STORE_PROFILE, outcome_runtime=self.capacity)
++            configuration = NativeCpuConfiguration(self.clock, self.code, self.capacity,
++                selection.capacity_budget, self.observer, selection.scope_id,
++                selection.policy_commitment, selection.helper_name, selection.helper_source_name,
++                selection.worker_name, selection.observer_name, selection.observer_source_name,
++                selection.capacity_helper_name)
++            self._construct('runtime', NativeCpuRuntime, self.store, codec,
++                selection.installation_scope_id, self.registry, configuration)
++            self._state = 'ACTIVE'
++        except BaseException as primary:
++            # Constructors already own their partial cleanup. Do not replay it.
++            self._state = 'PENDING'
++            _retain(primary, self)
++            raise
++
++    def _construct(self, name, kind, *args, **kwargs):
++        owner = object.__new__(kind)
++        setattr(self, name, owner)
++        try:
++            kind.__init__(owner, *args, **kwargs)
++        except BaseException as primary:
++            self._failed_constructor = (name, owner, primary)
++            raise
++        self._initialized.append(name)
++
++    def retire_failed_constructor(self):
++        """Explicit partial-owner retirement; never replay an initializer.
++
++        Pre-API branches below are the concrete constructors' no-acquisition
++        states. Unknown connection/API cleanup still refuses in those owners.
++        Loaded DLLs follow the existing runtime's process lifetime; this does
++        not unload libraries or report their handles retired.
++        """
++        require(threading.get_ident() == self._thread and self._state == 'PENDING'
++            and self._failed_constructor is not None and self._session is None,
++            'MANUAL_PROFILE_FAILED_CONSTRUCTOR_REQUIRED')
++        name, owner, original = self._failed_constructor
++        require(getattr(self, name) is owner and name not in self._initialized,
++            'MANUAL_PROFILE_PARTIAL_OWNER_CHANGED')
++        data = object.__getattribute__(owner, '__dict__')
++        try:
++            if name == 'code':
++                # NativeCodeBinding publishes _api/_files/_ancestors together,
++                # before its first _retain/open. API binding acquires no files.
++                if '_api' in data:
++                    NativeCodeBinding.close(owner)
++                else:
++                    require('_files' not in data and '_ancestors' not in data,
++                        'MANUAL_PROFILE_PARTIAL_CODE_CUSTODY_UNKNOWN')
++            elif name == 'clock':
++                if '_registration' in data:
++                    NativeSessionClock.close(owner)
++                else:
++                    require('_api' not in data and '_thread' not in data,
++                        'MANUAL_PROFILE_PARTIAL_CLOCK_CUSTODY_UNKNOWN')
++            elif name == 'runtime':
++                NativeCpuRuntime.close(owner)
++            elif name == 'store':
++                if '_connection' in data:
++                    SqliteJournal.close(owner)
++                # The current initializer publishes this field before file
++                # creation or SQLite connection acquisition.
++            elif name == 'registry':
++                if '_lock' in data:
++                    WindowsPeerRegistry.close(owner)
++                else:
++                    require(not data.get('_entries'), 'MANUAL_PROFILE_PARTIAL_REGISTRY_PENDING')
++                # Before _entries publication only export binding has occurred.
++            elif name == 'observer':
++                custody = dict.get(BaseException.__dict__['__dict__'].__get__(original),
++                    'source_hash_custody')
++                if custody is not None:
++                    custody.close()
++                    require(custody.closed, 'MANUAL_PROFILE_PARTIAL_SOURCE_PIN_PENDING')
++                require('_custody' not in data or data['_custody'] is None,
++                    'MANUAL_PROFILE_PARTIAL_OBSERVER_PENDING')
++            elif name == 'capacity':
++                require(self.store is None, 'MANUAL_PROFILE_PARTIAL_VFS_PENDING')
++                # This initializer loads/binds the helper. VFS registration
++                # starts only in SqliteJournal, which has not been called.
++            else:
++                raise ContractError('MANUAL_PROFILE_PARTIAL_CONSTRUCTOR_UNKNOWN')
++            self._constructor_history.append(self._failed_constructor)
++            setattr(self, name, None)
++            self._failed_constructor = None
++        except BaseException as cleanup:
++            _retain(cleanup, self)
++            _retain(original, self, cleanup)
++            raise
++
++    def _pin(self, group, name):
++        entries = [p for p in self.selection.code_pins if p.group == group and p.logical_name == name]
++        require(len(entries) == 1, 'MANUAL_PROFILE_NAMED_PIN_REQUIRED')
++        return entries[0]
++
++    def require_session(self, session):
++        require(threading.get_ident() == self._thread and self._state in ('ACTIVE', 'PENDING')
++            and self._session is session and session.profile is self
++            and session.runtime is self.runtime, 'MANUAL_PROFILE_ORIGINAL_SESSION_REQUIRED')
++
++    def command_session(self, original_context):
++        require(threading.get_ident() == self._thread and self._state == 'ACTIVE'
++            and self._session is None, 'MANUAL_PROFILE_SESSION_ALREADY_OWNED')
++        # Authentication precedes all command-session publication and native work.
++        self.registry.authenticate(original_context)
++        session = ManualRealEffectSession(self, original_context)
++        self._session = session
++        return session
++
++    def retire_session(self, session):
++        self.require_session(session)
++        require(session.closed, 'MANUAL_PROFILE_SESSION_RETIREMENT_UNPROVED')
++        self._session = None
++
++    def cpu_binding(self):
++        require(threading.get_ident() == self._thread and self._state == 'ACTIVE'
++            and self._session is not None, 'MANUAL_PROFILE_ORIGINAL_SESSION_REQUIRED')
++        if not self._worker_launch_attempted:
++            self._worker_launch_attempted = True
++            pin = self._pin('environment', self.selection.worker_name)
++            try:
++                self.worker = IsolatedWindowsWorker.launch(pin.path,
++                    ('cpu', str(self.selection.work_duration_ms)),
++                    cwd=str(Path(pin.path).parent), scratch_root=str(self.selection.scratch_root),
++                    expected_image_sha256=pin.sha256,
++                    appcontainer_name=self.selection.appcontainer_name)
++            except BaseException as primary:
++                # A returned partial owner stays attached even if launch raised.
++                self._worker_launch_error = primary
++                data = BaseException.__dict__['__dict__'].__get__(primary)
++                self.worker = dict.get(data, 'owned_process')
++                _retain(primary, self)
++                raise
++        require(self._worker_launch_error is None and type(self.worker) is IsolatedWindowsWorker,
++            'MANUAL_PROFILE_RESTRICTED_WORKER_UNAVAILABLE')
++        if self._binding is None or self._binding._closed:
++            self._binding = NativeCpuBinding(self.worker, self.clock,
++                cancel_event=self.runtime._owner._stopped)
++        return self._binding
++
++    @property
++    def closed(self):
++        return self._state == 'CLOSED'
++
++    def close(self):
++        require(threading.get_ident() == self._thread, 'MANUAL_PROFILE_ORIGINAL_THREAD_REQUIRED')
++        if self.closed:
++            return
++        self._state = 'PENDING'
++        try:
++            require(self._session is None, 'MANUAL_PROFILE_COMMAND_CUSTODY_PENDING')
++            # Unknown partial constructor state needs its exact exposed recovery;
++            # it cannot be guessed safe by calling an uninitialized close method.
++            expected = ('code', 'clock', 'capacity', 'observer', 'registry', 'store', 'runtime')
++            require(all(getattr(self, name) is None or name in self._initialized for name in expected),
++                'MANUAL_PROFILE_PARTIAL_CONSTRUCTOR_CUSTODY_PENDING')
++            if self.runtime is not None:
++                self.runtime.close()
++            if self._binding is not None:
++                self._binding.close()
++            if self.worker is not None and not self.worker.lifetime_closed:
++                if self.worker.poll() is None:
++                    self.worker.terminate(125)
++                require(self.worker.wait(2) and self.worker.active_process_count() == 0,
++                    'MANUAL_PROFILE_WORKER_RETIREMENT_UNOBSERVED')
++                self.worker.close()
++            if self._worker_launch_error is not None:
++                error = self._worker_launch_error
++                cleanup = dict.get(BaseException.__dict__['__dict__'].__get__(error), 'isolation_cleanup')
++                if type(error) is IsolatedLaunchError:
++                    IsolatedLaunchError.close_cleanup(error)
++                elif type(cleanup) is IsolatedLaunchError:
++                    IsolatedLaunchError.close_cleanup(cleanup)
++                self._worker_launch_error = None
++            if self.observer is not None:
++                self.observer.close_cleanup()
++            if self.store is not None:
++                self.store.close()
++            if self.registry is not None:
++                self.registry.close()
++            if self.clock is not None:
++                self.clock.close()
++            if self.code is not None:
++                self.code.close()
++            self._state = 'CLOSED'
++        except BaseException as primary:
++            _retain(primary, self)
++            raise
++
++    def __copy__(self):
++        raise ContractError('MANUAL_PROFILE_COPY_FORBIDDEN')
++
++    def __reduce_ex__(self, protocol):
++        raise ContractError('MANUAL_PROFILE_SERIALIZATION_FORBIDDEN')
+--- Q5/src/ceta/composition/real_effect_service.py
++++ entrypoint/src/ceta/composition/real_effect_service.py
+@@ -0,0 +1,492 @@
++"""Manual CPU journey on the original native runtime and authenticated context.
++
++The trusted host retains a command session on its receiver thread. No context,
++native proof, deployment selection, worker or permit is accepted from command
++data. This module does not extend the ordinary development IPC profile.
++"""
++from dataclasses import dataclass
++from functools import wraps
++import secrets
++import threading
++
++from ceta.composition.native_cpu_runtime import NativeCpuRuntime
++from ceta.contracts.kernel_transactions import BudgetVector, digest, identifier, require
++from ceta.contracts.owner_enrollment import EnrollmentRequest, enrollment_transcript_bytes
++from ceta.contracts.real_effect import (CAP_OPERATION, RESTORE_OPERATION, OwnedCpuRequest,
++    approval_display_bytes, require_restoration_link)
++from ceta.contracts.resource_management import ResourceVector
++from ceta.contracts.temporal import Deadline, require_clock_progress
++from ceta.contracts.wire import ContractError
++from ceta.contracts.workload_throttling import CpuRateLimit
++from ceta.effects.native_cpu_binding import NativeCpuBinding
++from ceta.kernel.owner_authority import owned_cpu_proposal
++
++
++def _retain(primary, session, secondary=None):
++    data = BaseException.__dict__['__dict__'].__get__(primary)
++    dict.__setitem__(data, 'manual_real_effect_session', session)
++    if secondary is not None:
++        previous = dict.get(data, 'manual_real_effect_cleanup_errors', ())
++        dict.__setitem__(data, 'manual_real_effect_cleanup_errors', previous + (secondary,))
++
++
++def _custody(method):
++    @wraps(method)
++    def call(self, *args, **kwargs):
++        try:
++            return method(self, *args, **kwargs)
++        except BaseException as primary:
++            _retain(primary, self)
++            raise
++    return call
++
++
++@dataclass(frozen=True)
++class ManualEffectLimits:
++    """Trusted profile declarations; native and canonical owners still decide."""
++    authority_budget: BudgetVector
++    recovery_budget: BudgetVector
++    resource_limit: ResourceVector
++    evidence_reserve_bytes: int
++    required_outcome_bytes: int
++    maximum_session_ns: int = 30_000_000_000
++    maximum_effect_duration_ns: int = 1_000_000_000
++    maximum_observation_age_ns: int = 5_000_000_000
++    ceremony_timeout_ms: int = 20_000
++
++    def __post_init__(self):
++        require(type(self.authority_budget) is BudgetVector
++            and type(self.recovery_budget) is BudgetVector
++            and type(self.resource_limit) is ResourceVector,
++            'MANUAL_PROFILE_TYPED_LIMITS_REQUIRED')
++        self.authority_budget.__post_init__()
++        self.recovery_budget.__post_init__()
++        self.resource_limit.__post_init__()
++        require(type(self.maximum_session_ns) is int
++            and 1_000_000 <= self.maximum_session_ns <= 300_000_000_000,
++            'MANUAL_PROFILE_SESSION_BOUND')
++        require(type(self.ceremony_timeout_ms) is int
++            and 20 <= self.ceremony_timeout_ms <= 20_000,
++            'MANUAL_PROFILE_CEREMONY_BOUND')
++        require(type(self.maximum_effect_duration_ns) is int
++            and 1 <= self.maximum_effect_duration_ns <= 1_000_000_000,
++            'MANUAL_PROFILE_EFFECT_BOUND')
++        require(type(self.maximum_observation_age_ns) is int
++            and 1 <= self.maximum_observation_age_ns <= 5_000_000_000,
++            'MANUAL_PROFILE_OBSERVATION_BOUND')
++        require(type(self.evidence_reserve_bytes) is int
++            and 8192 <= self.evidence_reserve_bytes <= 1048576
++            and type(self.required_outcome_bytes) is int
++            and 4096 <= self.required_outcome_bytes <= 1048576,
++            'MANUAL_PROFILE_EVIDENCE_BOUND')
++        require(self.authority_budget.contains(self.recovery_budget),
++            'MANUAL_PROFILE_RECOVERY_BUDGET')
++        duration_ms = (self.maximum_effect_duration_ns + 999999) // 1000000
++        for budget, effects, count in ((self.authority_budget, 2, 2), (self.recovery_budget, 1, 1)):
++            values = budget.as_dict()
++            require(values['max_effects'] == effects
++                and values['max_model_calls'] == values['max_input_tokens'] == values['max_output_tokens'] == 0
++                and count * duration_ms <= values['wall_time_ms'] <= self.maximum_session_ns // 1000000
++                and values['max_bytes_read'] <= 16 * 1024 * 1024
++                and values['max_bytes_written'] <= 1048576,
++                'MANUAL_PROFILE_BUDGET_BOUND')
++        available = self.authority_budget.subtract(self.recovery_budget).as_dict()
++        require(self.authority_budget.as_dict()['max_bytes_written'] >= self.evidence_reserve_bytes
++            and self.recovery_budget.as_dict()['max_bytes_written'] >= self.required_outcome_bytes
++            and available['max_bytes_written'] >= self.required_outcome_bytes
++            and available['wall_time_ms'] >= duration_ms,
++            'MANUAL_PROFILE_OUTCOME_BUDGET')
++        resource = self.resource_limit
++        require(1 <= resource.cpu_milli <= 1000 and 1 <= resource.memory_bytes <= 64 * 1024 * 1024
++            and max(8192, self.evidence_reserve_bytes) <= resource.storage_bytes <= 16 * 1024 * 1024
++            and 2 * duration_ms <= resource.wall_time_ms <= self.maximum_session_ns // 1000000,
++            'MANUAL_PROFILE_RESOURCE_BOUND')
++
++
++class ManualRealEffectSession:
++    """One live same-thread conversation; run ID is lookup data, never authority.
++
++    ``profile`` is the concrete composition owner, not a command-supplied port.
++    The receiver must keep its actual authenticated context live until close.
++    Pending execution keeps this session and its original context guard owned.
++    """
++    def __init__(self, profile, original_context):
++        from ceta.composition.real_effect_runtime import ManualRealEffectProfile
++        require(type(profile) is ManualRealEffectProfile
++            and type(profile.runtime) is NativeCpuRuntime,
++            'MANUAL_PROFILE_CONCRETE_RUNTIME_REQUIRED')
++        require(original_context is not None, 'MANUAL_PROFILE_CONTEXT_REQUIRED')
++        self.profile, self.runtime = profile, profile.runtime
++        self._context, self._thread = original_context, threading.get_ident()
++        self._owner = self.runtime._owner
++        self._kernel = self.runtime.kernel._kernel
++        self._run_id = 'run:' + secrets.token_hex(16)
++        self._task_id = 'task:' + secrets.token_hex(16)
++        self._state = 'NEW'
++        self._context_manager = None
++        self._context_history = []
++        self._context_entered = self._context_exit_attempted = False
++        self._context_entry_attempted = False
++        self._enrollment = self._enrollment_session = None
++        self._enrollment_stage = 'NEW'
++        self._enrollment_result = None
++        self._binding = self._capture = None
++        self._request = self._proposal = self._permit = self._proof = None
++        self._approval_session = self._approval_result = None
++        self._transcript_wire = None
++        self._approval_stage = 'NEW'
++        self._execution = self._outcome = None
++        self._execution_attempted = False
++        self._cap_request = None
++
++    @property
++    def run_id(self):
++        return self._run_id
++
++    @property
++    def closed(self):
++        return self._state == 'CLOSED'
++
++    def _selected(self, run_id=None, *, bookkeeping=False):
++        require(threading.get_ident() == self._thread,
++            'MANUAL_PROFILE_ORIGINAL_THREAD_REQUIRED')
++        require(self._context_entered and not self._context_exit_attempted
++            and self._state in (('ACTIVE', 'PENDING', 'STOPPED') if bookkeeping else ('ACTIVE',)),
++            'MANUAL_PROFILE_SESSION_UNAVAILABLE')
++        require(run_id is None or type(run_id) is str and run_id == self._run_id,
++            'MANUAL_PROFILE_RUN_ID_MISMATCH')
++        self.profile.require_session(self)
++        self.runtime._selected(self.runtime._store, self.runtime._codec,
++            self.runtime._installation, self.runtime._registry, bookkeeping=bookkeeping)
++        # The real registry rejects foreign threads, expired envelopes and peers.
++        self.runtime._registry.authenticate(self._context)
++
++    def __enter__(self):
++        require(self._state == 'NEW' and threading.get_ident() == self._thread,
++            'MANUAL_PROFILE_SESSION_SINGLE_ENTRY')
++        self._state = 'ENTERING'
++        self._context_manager = self._owner.native_context(self._context)
++        self._context_entry_attempted = True
++        try:
++            self._context_manager.__enter__()
++            self._context_entered = True
++            self._state = 'ACTIVE'
++            self._selected()
++            return self
++        except BaseException as primary:
++            self._state = 'PENDING'
++            _retain(primary, self)
++            raise
++
++    def _deadline(self, sample):
++        span = self.profile.limits.maximum_session_ns
++        return Deadline(sample.boot_id, sample.durable_epoch, sample.resume_generation,
++            sample.monotonic_ns, sample.monotonic_ns + span,
++            sample.earliest_wall_ns, sample.latest_wall_ns + span)
++
++    def _new_enrollment(self, prepared):
++        observed = self.runtime._view.observe(self._context)
++        native = prepared.enrollment_binding
++        previous, current = self._owner.clock()
++        require_clock_progress(previous, current)
++        limits, configuration = self.profile.limits, self.runtime._configuration
++        nonce = current.boot_id.rsplit(':session:', 1)[-1]
++        return EnrollmentRequest(
++            request_id='enrollment:' + secrets.token_hex(16),
++            installation_id=self.runtime._installation, scope_id=configuration.scope_id,
++            principal_id=observed.peer.principal_id, actor_session=observed.peer.session_id,
++            owner_session_nonce=secrets.token_hex(16), clock_session_nonce=nonce,
++            challenge_id=native.challenge_id, ceremony_nonce=native.ceremony_nonce,
++            private_root=observed.private_root, database=observed.database,
++            owner_facts=observed.owner_facts, helper_identity=native.helper.identity,
++            ui_identity=native.ui_identity, policy_generation=0, authority_generation=0,
++            policy_commitment=configuration.policy_commitment,
++            source_commitment=configuration.code_binding.source_commitment,
++            environment_commitment=configuration.code_binding.environment_commitment,
++            helper_commitment=native.helper_commitment, ui_commitment=native.ui_commitment,
++            adapter_commitment=self.profile.adapter_commitment,
++            worker_image_commitment=self._owner._worker_commitment,
++            authority_budget=limits.authority_budget, recovery_budget=limits.recovery_budget,
++            resource_limit=limits.resource_limit, evidence_reserve_bytes=limits.evidence_reserve_bytes,
++            maximum_session_ns=limits.maximum_session_ns,
++            maximum_effect_duration_ns=limits.maximum_effect_duration_ns,
++            maximum_observation_age_ns=limits.maximum_observation_age_ns,
++            deadline=self._deadline(current))
++
++    def enroll(self):
++        self._selected()
++        require(self._enrollment_stage in ('NEW', 'WAITING'),
++            'MANUAL_PROFILE_ENROLLMENT_RECOVERY_REQUIRED')
++        try:
++            if self._enrollment_stage == 'NEW':
++                self._enrollment_stage = 'PREPARATION_ATTEMPTED'
++                prepared = self._owner.approval_owner.prepare_enrollment(
++                    timeout_ms=self.profile.limits.ceremony_timeout_ms)
++                self._enrollment_session = prepared
++                self._enrollment = self._new_enrollment(prepared)
++                self._owner.designate_enrollment(self._enrollment, prepared, self._context)
++                self._enrollment_stage = 'CHALLENGE_ATTEMPTED'
++                self._kernel.begin_owner_enrollment(self._enrollment.canonical_wire, self._context)
++                prepared.begin_enrollment(self._enrollment, original_context=self._context)
++                self._enrollment_stage = 'WAITING'
++            completed = self._enrollment_session.wait(
++                self.profile.limits.ceremony_timeout_ms / 1000)
++            if completed is None:
++                return self.inspect()
++            transcript, proof = self._owner.retain_verified_enrollment(
++                self._enrollment_session, self._context)
++            self._enrollment_stage = 'COMMIT_ATTEMPTED'
++            self._enrollment_result = self._kernel.enroll_owner(self._enrollment.canonical_wire,
++                enrollment_transcript_bytes(transcript), proof, self._context)
++            self._enrollment_stage = 'ENROLLED'
++            self._enrollment_session.close()
++            return self.inspect()
++        except BaseException as primary:
++            _retain(primary, self)
++            raise
++
++    @_custody
++    def prepare(self, *, cpu_rate=None, restoration=False):
++        self._selected()
++        require(self._enrollment_stage == 'ENROLLED', 'MANUAL_PROFILE_ENROLLMENT_REQUIRED')
++        require(self._request is None or self._execution is not None
++            and self._execution.inspection()['closed'], 'MANUAL_PROFILE_REQUEST_STILL_OWNED')
++        require(type(restoration) is bool, 'MANUAL_PROFILE_OPERATION_REQUIRED')
++        require((restoration and cpu_rate is None and self._cap_request is not None)
++            or (not restoration and self._cap_request is None and type(cpu_rate) is int
++                and 1 <= cpu_rate <= 10000), 'MANUAL_PROFILE_CAP_OR_RESTORE_REQUIRED')
++        if self._request is not None:
++            # Retire the previous ceremony/designation through the existing
++            # native-context boundary. Reenter only the SAME live receiver
++            # context; no proof or request context is reconstructed.
++            self._binding.close()
++            self._context_exit_attempted = True
++            previous = self._context_manager
++            result = previous.__exit__(None, None, None)
++            require(result is None or result is False, 'MANUAL_PROFILE_CONTEXT_SUPPRESSION_DENIED')
++            self._context_history.append(previous)
++            self._context_entered = False
++            self._context_manager = self._owner.native_context(self._context)
++            self._context_exit_attempted = False
++            self._context_entry_attempted = True
++            self._context_manager.__enter__()
++            self._context_entered = True
++        self._binding = self.profile.cpu_binding()
++        self._capture = self._binding.capture()
++        captured = self._capture.observation
++        enrollment, limits = self._enrollment, self.profile.limits
++        if restoration:
++            original = self._cap_request.original_limit
++            target = original
++            budget = enrollment.recovery_budget
++        else:
++            original = captured.limit
++            target = CpuRateLimit(5 | (captured.limit.control_flags & 8), cpu_rate)
++            budget = enrollment.authority_budget.subtract(enrollment.recovery_budget)
++        request = OwnedCpuRequest(
++            request_id='request:' + secrets.token_hex(16), scope_id=enrollment.scope_id,
++            task_id=self._task_id, proposal_id='proposal:' + secrets.token_hex(16),
++            principal_id=enrollment.principal_id, actor_session=enrollment.actor_session,
++            owner_session_nonce=enrollment.owner_session_nonce,
++            operation=RESTORE_OPERATION if restoration else CAP_OPERATION,
++            process_identity=captured.identity, job_digest=captured.job_digest,
++            expected_limit=captured, target_limit=target, original_limit=original,
++            task_revision=digest('manual-owned-cpu-task-v1', dict(task_id=self._task_id,
++                scope_id=enrollment.scope_id, worker=enrollment.worker_image_commitment)),
++            policy_commitment=enrollment.policy_commitment,
++            adapter_commitment=enrollment.adapter_commitment,
++            environment_commitment=enrollment.environment_commitment,
++            source_commitment=enrollment.source_commitment,
++            observer_commitment=self.runtime._configuration.observer._commitment,
++            operation_budget=budget, required_outcome_bytes=limits.required_outcome_bytes,
++            deadline=enrollment.deadline, maximum_observation_age_ns=limits.maximum_observation_age_ns,
++            maximum_duration_ns=limits.maximum_effect_duration_ns,
++            consequences=('consequence:owned-worker-cpu-policy', 'consequence:independent-query',
++                'consequence:canonical-evidence-write', 'consequence:separate-approved-restore'),
++            restoration_of=self._cap_request.request_id if restoration else None,
++            original_request_commitment=self._cap_request.input_commitment if restoration else None)
++        if restoration:
++            require_restoration_link(self._cap_request, request)
++        self._owner.designate_effect(request, self._binding, self._capture, self._context)
++        self._request, self._proposal = request, owned_cpu_proposal(self.runtime._codec, request)
++        self._permit = self._proof = self._execution = self._outcome = None
++        self._approval_session = self._approval_result = None
++        self._transcript_wire = None
++        self._approval_stage, self._execution_attempted = 'NEW', False
++        return self.inspect()
++
++    def approve(self, request_id):
++        self._selected()
++        require(self._request is not None and request_id == self._request.request_id,
++            'MANUAL_PROFILE_REQUEST_ID_MISMATCH')
++        require(self._approval_stage in ('NEW', 'WAITING', 'APPROVED_RECOVERED'),
++            'MANUAL_PROFILE_APPROVAL_RECOVERY_REQUIRED')
++        try:
++            if self._approval_stage == 'APPROVED_RECOVERED':
++                # Only an explicit readback of the exact canonical approval can
++                # reach here. The original proof/context is still required by
++                # kernel preparation; this performs no ceremony/approval retry.
++                self._approval_stage = 'PREPARATION_COMMIT_ATTEMPTED'
++                result = self.runtime.kernel.prepare(self._proposal.original_wire, self._context)
++                self._permit = result.record_wire
++                self._approval_stage = 'PREPARED'
++                return self.inspect()
++            if self._approval_stage == 'NEW':
++                self._approval_stage = 'CEREMONY_ATTEMPTED'
++                self._approval_session = self._owner.approval_owner.begin_interactive(
++                    self._request, original_context=self._context,
++                    timeout_ms=self.profile.limits.ceremony_timeout_ms)
++                self._approval_stage = 'WAITING'
++            completed = self._approval_session.wait(self.profile.limits.ceremony_timeout_ms / 1000)
++            if completed is None:
++                return self.inspect()
++            transcript, self._proof = self._owner.retain_verified_effect(
++                self._approval_session, self._context)
++            self._transcript_wire = transcript.canonical_wire
++            self._approval_stage = 'APPROVAL_COMMIT_ATTEMPTED'
++            self._approval_result = self._kernel.approve_owned_cpu(self._enrollment.request_id,
++                self._request.canonical_wire, transcript.canonical_wire, self._proof, self._context)
++            self._approval_stage = 'PREPARATION_COMMIT_ATTEMPTED'
++            result = self.runtime.kernel.prepare(self._proposal.original_wire, self._context)
++            self._permit = result.record_wire
++            self._approval_stage = 'PREPARED'
++            return self.inspect()
++        except BaseException as primary:
++            _retain(primary, self)
++            raise
++
++    def execute(self, request_id):
++        self._selected()
++        require(self._request is not None and request_id == self._request.request_id
++            and self._approval_stage == 'PREPARED' and not self._execution_attempted,
++            'MANUAL_PROFILE_SINGLE_EXECUTION_REQUIRED')
++        self._execution_attempted = True  # Retain ambiguous entry/return; never replay.
++        try:
++            self._execution = self._kernel.owned_cpu_execution(self._request.canonical_wire,
++                self._permit, self._binding, self._capture, self._proof, self._context)
++            with self._execution as lease:
++                self._outcome = self.runtime.execute(lease)
++            if self._request.operation == CAP_OPERATION:
++                self._cap_request = self._request
++            return self.inspect()
++        except BaseException as primary:
++            _retain(primary, self)
++            raise
++
++    def reconcile(self, request_id):
++        self._selected(bookkeeping=True)
++        if self._enrollment is not None and request_id == self._enrollment.request_id:
++            state = self._kernel.recover_owner_enrollment(request_id, self._context).as_dict()
++            if self._enrollment_stage == 'COMMIT_ATTEMPTED' and state['state'] == 'ENROLLED':
++                self._enrollment_stage = 'ENROLLED'
++                self._enrollment_session.close()
++            # A reserved CHALLENGE is historical state, never an automatic retry.
++            return self.inspect()
++        require(self._request is not None and request_id == self._request.request_id,
++            'MANUAL_PROFILE_REQUEST_ID_MISMATCH')
++        try:
++            if self._execution is not None:
++                with self._execution.recover_outcome(self._context) as lease:
++                    self._outcome = (lease.record_denied_outcome()
++                        if lease.inspection()['denied_dispatch'] is not None
++                        else self.runtime.reconcile(lease))
++            elif self._approval_stage == 'APPROVAL_COMMIT_ATTEMPTED':
++                state = self._kernel.recover_owner_enrollment(
++                    self._enrollment.request_id, self._context).as_dict()
++                key = 'cap_approval' if self._request.operation == CAP_OPERATION else 'restore_approval'
++                row = state[key]
++                require(type(row) is dict
++                    and row['request_wire'] == self._request.canonical_wire.decode('utf8')
++                    and row['transcript_wire'] == self._transcript_wire.decode('utf8'),
++                    'MANUAL_PROFILE_EXACT_APPROVAL_NOT_COMMITTED')
++                self._approval_stage = 'APPROVED_RECOVERED'
++            elif self._approval_stage == 'PREPARATION_COMMIT_ATTEMPTED':
++                self._permit = self.runtime.kernel.recover_preparation(
++                    self._proposal.original_wire, self._context).original_wire
++                # A recovered permit is data; the genuine proof/context must still pass.
++                self._approval_stage = 'PREPARED'
++            else:
++                raise ContractError('MANUAL_PROFILE_NO_RECONCILABLE_INVOCATION')
++            if (self._execution is not None and self._execution.inspection()['closed']
++                    and self._request.operation == CAP_OPERATION):
++                self._cap_request = self._request
++            return self.inspect()
++        except BaseException as primary:
++            _retain(primary, self)
++            raise
++
++    def inspect(self):
++        self._selected(bookkeeping=True)
++        canonical = None
++        if self._enrollment is not None and self._enrollment_stage not in ('NEW', 'PREPARATION_ATTEMPTED'):
++            canonical = self._kernel.recover_owner_enrollment(
++                self._enrollment.request_id, self._context).as_dict()
++        custody = None
++        if self._execution is not None:
++            facts = self._execution.inspection()
++            custody = {name: facts[name] for name in
++                ('dispatch_admitted', 'closed', 'pending_cleanup', 'stopped', 'native_effect')}
++        return dict(profile='ceta-owned-real-effect-v1', run_id=self._run_id,
++            state=self._state, enrollment_stage=self._enrollment_stage,
++            enrollment=canonical, approval_stage=self._approval_stage,
++            request=None if self._request is None else self._request.as_dict(),
++            full_display=None if self._request is None else approval_display_bytes(self._request).decode('utf8'),
++            permit_wire=None if self._permit is None else self._permit.decode('utf8'),
++            outcome=None if self._outcome is None else self._outcome.as_dict(), custody=custody)
++
++    def stop(self, reason_ref):
++        self._selected(bookkeeping=True)
++        identifier(reason_ref)
++        try:
++            if self._enrollment is not None and self._enrollment_stage == 'ENROLLED':
++                self._kernel.stop_owner_authority(self._enrollment.request_id, self._context, reason_ref)
++        finally:
++            self._owner.request_stop()
++            self._state = 'STOPPED'
++        return self.inspect()
++
++    def close(self, primary=None):
++        require(threading.get_ident() == self._thread, 'MANUAL_PROFILE_ORIGINAL_THREAD_REQUIRED')
++        if self.closed:
++            return
++        if self._execution is not None and not self._execution.inspection()['closed']:
++            self._state = 'PENDING'
++            failure = ContractError('MANUAL_PROFILE_EXECUTION_CUSTODY_PENDING')
++            _retain(failure, self)
++            if primary is not None:
++                _retain(primary, self, failure)
++                return
++            raise failure
++        if self._context_exit_attempted:
++            failure = ContractError('MANUAL_PROFILE_CONTEXT_RETIREMENT_UNCERTAIN')
++            _retain(failure, self)
++            if primary is not None:
++                _retain(primary, self, failure)
++                return
++            raise failure
++        try:
++            if self._context_entry_attempted and not self._context_entered:
++                raise ContractError('MANUAL_PROFILE_CONTEXT_ENTRY_UNCERTAIN')
++            for session in (self._enrollment_session, self._approval_session):
++                if session is not None:
++                    session.close()
++            if self._binding is not None:
++                self._binding.close()
++            if self._context_entered:
++                self._context_exit_attempted = True
++                kind = None if primary is None else type(primary)
++                trace = None if primary is None else BaseException.__traceback__.__get__(primary)
++                result = self._context_manager.__exit__(kind, primary, trace)
++                require(result is None or result is False, 'MANUAL_PROFILE_CONTEXT_SUPPRESSION_DENIED')
++            self._state = 'CLOSED'
++            self.profile.retire_session(self)
++        except BaseException as cleanup:
++            self._state = 'PENDING'
++            if primary is None:
++                _retain(cleanup, self)
++                raise
++            _retain(primary, self, cleanup)
++
++    def __exit__(self, kind, primary, trace):
++        self.close(primary)
++        return False
+--- Q5/src/ceta/composition/service_process.py
++++ entrypoint/src/ceta/composition/service_process.py
+@@ -72,7 +72,51 @@
+         raise primary
+ 
+ 
+-def main(*, native_configuration=None):
++def serve_manual_profile(config, codec, manual_selection):
++    """Run the additive selected host; the control wire selects no native owner."""
++    from ceta.composition.real_effect_host import ManualRealEffectHost
++    from ceta.composition.real_effect_runtime import ManualRuntimeSelection
++    require(type(manual_selection) is ManualRuntimeSelection,
++        'MANUAL_HOST_TRUSTED_SELECTION_REQUIRED')
++    manual_selection.__post_init__()
++    require(manual_selection.private_root == Path(config['root'])
++        and manual_selection.installation_scope_id == config['installation']
++        and set(config['scopes']) == {manual_selection.installation_scope_id, manual_selection.scope_id}
++        and manual_selection.create is config['create'], 'MANUAL_HOST_CONTROL_BINDING')
++    host = object.__new__(ManualRealEffectHost)
++    primary = None
++    try:
++        ManualRealEffectHost.__init__(host, manual_selection, codec, config['pipe'],
++            peer_pid=config['client_pid'], peer_creation_time=config['client_creation'],
++            peer_image_sha256=config['client_image'], principal_id=config['principal'],
++            actor_session=config['session'])
++        emit(dict(host.ready(), event='ready', pid=os.getpid()))
++        while not host._stopped:
++            try:
++                host.receive_once(30.0)
++            except ContractError as error:
++                if host._pending is not None or host.receiver._retained_context is not None:
++                    raise
++                if error.code == 'WINDOWS_PIPE_TIMEOUT':
++                    continue
++                emit(dict(event='manual_denied_reconcile', code=error.code.split(':', 1)[0]))
++        return 0
++    except BaseException as error:
++        primary = error
++        host._expose(error)
++        raise
++    finally:
++        try:
++            host.close()
++        except BaseException as cleanup:
++            if primary is None:
++                raise
++            dict.update(BaseException.__dict__['__dict__'].__get__(primary),
++                manual_real_effect_host=host, manual_host_cleanup_error=cleanup)
++            raise primary
++
++
++def main(*, native_configuration=None, manual_selection=None):
+     require(len(sys.argv) == 2 and len(sys.argv[1]) <= 32768, "SERVICE_CONFIGURATION_REQUIRED")
+     config = strict_loads(base64.b64decode(sys.argv[1], validate=True))
+     require(type(config) is dict and set(config) == {"profile", "root", "installation",
+@@ -85,6 +129,9 @@
+     require(type(config["create"]) is bool and type(config["scopes"]) is list and 1 <= len(config["scopes"]) <= 8
+             and config["installation"] in config["scopes"], "SERVICE_CONFIGURATION_INVALID")
+     codec = RecordCodec(strict_loads((ROOT / "contracts/schemas/records.schema.json").read_bytes()))
++    if manual_selection is not None:
++        require(native_configuration is None, 'SERVICE_AMBIGUOUS_NATIVE_COMPOSITION')
++        return serve_manual_profile(config, codec, manual_selection)
+     registry, store, receiver, native_runtime, primary = None, None, None, None, None
+     try:
+         # Existing journal startup validates preserved state before writer access.
+--- Q5/src/ceta/contracts/local_ipc.py
++++ entrypoint/src/ceta/contracts/local_ipc.py
+@@ -7,13 +7,16 @@
+ from .wire import ContractError, MAX_WIRE_BYTES, RecordCodec, ParsedRecord, canonical_bytes, strict_loads
+ 
+ from .task_drafts import TaskCommand, TASK_OPERATIONS, decode_command
++from .manual_effect import (ManualEffectCommand, OPERATIONS as MANUAL_OPERATIONS,
++    decode_command as decode_manual_command)
+ 
+ IPC_PROFILE = "ceta-local-ingress-v1"
+ MAX_MESSAGE_TTL_MS = 30_000
+ MAX_REPLAY_ENTRIES = 4096
+ OPERATIONS = {"kernel.prepare": "ActionProposal", "kernel.consume": "OperationPermit",
+               "kernel.revoke": "StandingGrant", "kernel.resolve_consumption": "OperationPermit",
+-              "kernel.recover_permit": "OperationPermit", "kernel.recover_preparation": "ActionProposal", **{op: "TaskCommand" for op in TASK_OPERATIONS}}
++              "kernel.recover_permit": "OperationPermit", "kernel.recover_preparation": "ActionProposal", **{op: "TaskCommand" for op in TASK_OPERATIONS},
++              **{op: "ManualEffectCommand" for op in MANUAL_OPERATIONS}}
+ FIELDS = {"profile", "version", "message_id", "correlation_ref", "causation_ref",
+           "sender_session", "receiver_generation", "operation", "scope_id", "issued_at_ms",
+           "expires_at_ms", "record_commitment", "original_record_sha256", "record_wire", "arguments"}
+@@ -41,7 +44,7 @@
+     scope_id: str
+     issued_at_ms: int
+     expires_at_ms: int
+-    record: ParsedRecord | TaskCommand
++    record: ParsedRecord | TaskCommand | ManualEffectCommand
+     reason_ref: str | None
+     original_message: bytes
+ 
+@@ -50,7 +53,8 @@
+                    operation, issued_at_ms, expires_at_ms, correlation_ref=None,
+                    causation_ref=None, reason_ref=None):
+     require(type(record_wire) is bytes and type(codec) is RecordCodec, "IPC_RECORD_REQUIRED")
+-    record = decode_command(record_wire) if operation in TASK_OPERATIONS else codec.decode(record_wire)
++    record = (decode_manual_command(record_wire) if operation in MANUAL_OPERATIONS else
++        decode_command(record_wire) if operation in TASK_OPERATIONS else codec.decode(record_wire))
+     value = {"profile": IPC_PROFILE, "version": 1, "message_id": message_id,
+              "correlation_ref": correlation_ref, "causation_ref": causation_ref,
+              "sender_session": sender_session, "receiver_generation": receiver_generation,
+@@ -85,11 +89,14 @@
+             and end - start <= MAX_MESSAGE_TTL_MS, "IPC_VALIDITY_SHAPE")
+     require(type(value["record_wire"]) is str, "IPC_RECORD_REQUIRED")
+     original = value["record_wire"].encode("utf8")
+-    record = decode_command(original) if operation in TASK_OPERATIONS else codec.decode(original)
++    record = (decode_manual_command(original) if operation in MANUAL_OPERATIONS else
++        decode_command(original) if operation in TASK_OPERATIONS else codec.decode(original))
+     require(record.record_type == OPERATIONS[operation]
+             and record.as_dict()["scope_id"] == value["scope_id"], "IPC_OPERATION_SCOPE_BINDING")
+     if operation in TASK_OPERATIONS:
+         require(record.as_dict()["kind"] == TASK_OPERATIONS[operation], "TASK_ROUTE_BINDING")
++    if operation in MANUAL_OPERATIONS:
++        require(record.as_dict()['kind'] == MANUAL_OPERATIONS[operation], 'MANUAL_ROUTE_BINDING')
+     require(record.commitment == value["record_commitment"]
+             and hashlib.sha256(original).hexdigest() == value["original_record_sha256"], "IPC_RECORD_BINDING")
+     args = value["arguments"]
+--- Q5/src/ceta/contracts/local_results.py
++++ entrypoint/src/ceta/contracts/local_results.py
+@@ -13,6 +13,7 @@
+ from .evidence_admission import ConsumptionEvidence
+ from .kernel_transactions import KernelResult, require
+ from .local_ipc import LocalMessage, decode_message
++from .manual_effect import OPERATIONS as MANUAL_OPERATIONS, encode_result as encode_manual_result, decode_result as decode_manual_result
+ from .task_drafts import TaskResult, TASK_OPERATIONS, validate_result
+ from .task_meaning import MEANING_OPERATIONS, MEANING_RESULT_PROFILE, decode_proposal
+ from .editor_recovery import EDITOR_OPERATIONS, EDITOR_MUTATIONS, EDITOR_RESULT_PROFILE, decode_editor_snapshot
+@@ -40,6 +41,7 @@
+     prior_position: StreamPosition | None
+     original_response: bytes
+     task_result: TaskResult | None = None
++    manual_result_wire: bytes | None = None
+ 
+ 
+ def _binding(request, codec):
+@@ -231,6 +233,8 @@
+                     result: KernelResult | ConsumptionEvidence | ParsedRecord | TaskResult | ContractError,
+                     codec: RecordCodec) -> bytes:
+     binding = _binding(message, codec)
++    if message.operation in MANUAL_OPERATIONS:
++        return encode_manual_result(binding, result)
+     if message.operation in TASK_OPERATIONS:
+         return _encode_task_response(message, result, codec)
+     value = {"profile": RESULT_PROFILE, "version": 1, **binding,
+@@ -263,6 +267,10 @@
+ 
+ 
+ def decode_response(wire: bytes, request: LocalMessage, codec: RecordCodec) -> LocalResponse:
++    if request.operation in MANUAL_OPERATIONS:
++        value = decode_manual_result(wire, _binding(request, codec))
++        return LocalResponse(value['kind'], value['error_code'], None, None, None,
++            wire, manual_result_wire=wire)
+     require(type(wire) is bytes and 1 <= len(wire) <= MAX_WIRE_BYTES, "RESULT_SIZE")
+     value = strict_loads(wire)
+     if request.operation in TASK_OPERATIONS:
+--- Q5/src/ceta/contracts/manual_effect.py
++++ entrypoint/src/ceta/contracts/manual_effect.py
+@@ -0,0 +1,107 @@
++"""Additive manual-profile command data; no proof/configuration travels here."""
++from dataclasses import dataclass
++
++from .kernel_transactions import digest, identifier, require
++from .wire import canonical_bytes, strict_loads
++
++PROFILE = 'ceta-manual-effect-command-v1'
++OPERATIONS = {'manual.run': 'RUN', 'manual.restore': 'RESTORE',
++    'manual.inspect': 'INSPECT', 'manual.reconcile': 'RECONCILE', 'manual.stop': 'STOP'}
++FIELDS = {'profile', 'record_type', 'command_id', 'scope_id', 'kind', 'run_id',
++    'request_id', 'cpu_rate', 'reason_ref'}
++
++
++@dataclass(frozen=True)
++class ManualEffectCommand:
++    original_wire: bytes
++
++    def __post_init__(self):
++        _value(self.original_wire)
++
++    @property
++    def record_type(self):
++        return 'ManualEffectCommand'
++
++    @property
++    def record_id(self):
++        return self.as_dict()['command_id']
++
++    @property
++    def commitment(self):
++        return digest('manual-effect-command-v1', self.as_dict())
++
++    def as_dict(self):
++        return _value(self.original_wire)
++
++
++def _value(wire):
++    require(type(wire) is bytes and 1 <= len(wire) <= 4096, 'MANUAL_COMMAND_SIZE')
++    value = strict_loads(wire)
++    require(type(value) is dict and set(value) == FIELDS
++        and value['profile'] == PROFILE and value['record_type'] == 'ManualEffectCommand'
++        and canonical_bytes(value) == wire, 'MANUAL_COMMAND_FIELDS')
++    for name in ('command_id', 'scope_id', 'run_id'):
++        identifier(value[name])
++    require(type(value['kind']) is str and value['kind'] in OPERATIONS.values(),
++        'MANUAL_COMMAND_KIND')
++    kind = value['kind']
++    require((kind == 'RUN' and type(value['cpu_rate']) is int and 1 <= value['cpu_rate'] < 10000)
++        or (kind != 'RUN' and value['cpu_rate'] is None), 'MANUAL_COMMAND_CPU_RATE')
++    if kind in ('RESTORE', 'RECONCILE'):
++        identifier(value['request_id'])
++    else:
++        require(value['request_id'] is None, 'MANUAL_COMMAND_UNEXPECTED_REQUEST')
++    if kind == 'STOP':
++        identifier(value['reason_ref'])
++    else:
++        require(value['reason_ref'] is None, 'MANUAL_COMMAND_UNEXPECTED_REASON')
++    return value
++
++
++def decode_command(wire):
++    return ManualEffectCommand(wire)
++
++
++def command_wire(command_id, scope_id, run_id, kind, *, request_id=None,
++                 cpu_rate=None, reason_ref=None):
++    wire = canonical_bytes(dict(profile=PROFILE, record_type='ManualEffectCommand',
++        command_id=command_id, scope_id=scope_id, run_id=run_id, kind=kind,
++        request_id=request_id, cpu_rate=cpu_rate, reason_ref=reason_ref))
++    decode_command(wire)
++    return wire
++
++
++def encode_result(binding, result):
++    from .wire import ContractError
++    require(type(binding) is dict, 'MANUAL_RESULT_BINDING')
++    if type(result) is ContractError:
++        value = dict(profile='ceta-manual-effect-result-v1', version=1, **binding,
++            kind='DENIED_RECONCILE', error_code=result.code, state=None)
++    else:
++        require(type(result) is dict, 'MANUAL_RESULT_STATE_REQUIRED')
++        value = dict(profile='ceta-manual-effect-result-v1', version=1, **binding,
++            kind='MANUAL_STATE', error_code=None, state=result)
++    wire = canonical_bytes(value)
++    decode_result(wire, binding)
++    return wire
++
++
++def decode_result(wire, binding):
++    import re
++    require(type(wire) is bytes and 1 <= len(wire) <= 262144, 'MANUAL_RESULT_SIZE')
++    value = strict_loads(wire)
++    require(type(value) is dict and set(value) == set(binding) |
++        {'profile', 'version', 'kind', 'error_code', 'state'}
++        and value['profile'] == 'ceta-manual-effect-result-v1'
++        and type(value['version']) is int and value['version'] == 1
++        and canonical_bytes(value) == wire, 'MANUAL_RESULT_FIELDS')
++    require(all(type(value[k]) is type(v) and value[k] == v for k,v in binding.items()),
++        'MANUAL_RESULT_REQUEST_BINDING')
++    if value['kind'] == 'DENIED_RECONCILE':
++        require(type(value['error_code']) is str
++            and re.fullmatch('[A-Z][A-Z0-9_]{0,79}', value['error_code'])
++            and value['state'] is None, 'MANUAL_RESULT_DENIAL')
++    else:
++        require(value['kind'] == 'MANUAL_STATE' and value['error_code'] is None
++            and type(value['state']) is dict, 'MANUAL_RESULT_STATE_REQUIRED')
++    return value
+--- Q5/src/ceta/identity/windows_pipe.py
++++ entrypoint/src/ceta/identity/windows_pipe.py
+@@ -22,6 +22,7 @@
+ import hashlib
+ import math
+ import os
++import sys
+ import re
+ import secrets
+ import struct
+@@ -787,13 +788,17 @@
+ 
+ class WindowsPipeServer:
+     """Serial one-message receiver; return values stay local and confer no effects."""
+-    def __init__(self, pipe_name, registry, handler, codec, *, response_encoder=None):
++    def __init__(self, pipe_name, registry, handler, codec, *, response_encoder=None,
++                 context_retainer=None):
+         self._name = _pipe_name(pipe_name)
+         require(type(registry) is WindowsPeerRegistry and callable(handler) and type(codec) is RecordCodec,
+                 "WINDOWS_PIPE_DEPENDENCIES_REQUIRED")
+         self._registry, self._handler, self._codec = registry, handler, codec
+         require(response_encoder is None or callable(response_encoder), "WINDOWS_RESPONSE_ENCODER_REQUIRED")
+         self._response_encoder = response_encoder
++        require(context_retainer is None or callable(context_retainer), 'WINDOWS_CONTEXT_RETAINER_REQUIRED')
++        self._context_retainer = context_retainer
++        self._retained_context = None
+         # A reconstructed receiver cannot reuse a generation with an empty replay
+         # set. This nonce is owned here, never selected by a caller or request.
+         self._ingress = IngressState(secrets.token_hex(32))
+@@ -828,6 +833,7 @@
+         context = None
+         connection_attempted = False
+         try:
++            require(self._retained_context is None, 'WINDOWS_REQUEST_CONTEXT_RETAINED')
+             require(not self._closed and self._pipe is not None, "WINDOWS_PIPE_SERVER_CLOSED")
+             connection_attempted = True
+             _io(self._api, "connect", self._pipe, deadline)
+@@ -877,29 +883,66 @@
+             return result
+         finally:
+             try:
+-                self._registry._invalidate(context)
++                if self._retained_context is None:
++                    self._retire_dispatch_context(context, connection_attempted, sys.exception())
+             finally:
+-                try:
+-                    if connection_attempted:
+-                        if not self._api.DisconnectNamedPipe(self._pipe):
+-                            error = C.get_last_error()
+-                            # Reset even if a connect completed concurrently with
+-                            # cancellation. No old connection is reused next time.
+-                            if error not in (233, 232, 109):
+-                                self._closed = True
+-                                try:
+-                                    self._api.close_handle(self._pipe)
+-                                finally:
+-                                    self._pipe = None
+-                                _error("WINDOWS_PIPE_DISCONNECT_FAILED", error)
+-                finally:
+-                    self._lock.release()
++                self._lock.release()
++
++    def _retire_dispatch_context(self, context, connection_attempted, primary, *, retention_checked=False):
++        if not retention_checked and self._context_retainer is not None and context is not None:
++            try:
++                retained = self._context_retainer(context)
++                require(retained is None or not isinstance(retained, (bool, int, float, str, bytes)),
++                    'WINDOWS_CONTEXT_CUSTODY_REQUIRED')
++            except BaseException as error:
++                self._retained_context = (context, self._context_retainer)
++                if primary is None:
++                    BaseException.__dict__['__dict__'].__get__(error)['retained_ingress'] = self
++                    raise
++                data = BaseException.__dict__['__dict__'].__get__(primary)
++                dict.update(data, retained_ingress=self, ingress_retirement_error=error)
++                return
++            if retained is not None:
++                # This captured trusted callback can retain custody only. It
++                # cannot renew the original envelope or authorize another call.
++                self._retained_context = (context, retained)
++                return
++        try:
++            self._registry._invalidate(context)
++        finally:
++            if connection_attempted:
++                if not self._api.DisconnectNamedPipe(self._pipe):
++                    error = C.get_last_error()
++                    if error not in (233, 232, 109):
++                        self._closed = True
++                        try:
++                            self._api.close_handle(self._pipe)
++                        finally:
++                            self._pipe = None
++                        _error('WINDOWS_PIPE_DISCONNECT_FAILED', error)
++
++    def retire_retained_context(self):
++        """Explicit cleanup after the same trusted owner proves retirement.
++
++        This never extends a deadline, replaces a context, or dispatches a call.
++        """
++        require(self._lock.acquire(blocking=False), 'WINDOWS_PIPE_RECEIVER_BUSY')
++        try:
++            require(self._retained_context is not None and self._context_retainer is not None,
++                'WINDOWS_RETAINED_CONTEXT_REQUIRED')
++            context, owner = self._retained_context
++            require(self._context_retainer(context) is None, 'WINDOWS_REQUEST_CONTEXT_RETAINED')
++            self._retire_dispatch_context(context, True, None, retention_checked=True)
++            self._retained_context = None
++        finally:
++            self._lock.release()
+ 
+     def close(self):
+         # Active receives have a finite timeout. Never close a handle under pending
+         # I/O or a callback; the supervisor must join that receive before closing.
+         require(self._lock.acquire(blocking=False), "WINDOWS_PIPE_RECEIVER_BUSY")
+         try:
++            require(self._retained_context is None, 'WINDOWS_REQUEST_CONTEXT_RETAINED')
+             if not self._closed:
+                 self._closed = True
+                 self._api.close_handle(self._pipe)
+--- Q5/tests/contract/test_real_effect_entrypoint.py
++++ entrypoint/tests/contract/test_real_effect_entrypoint.py
+@@ -0,0 +1,632 @@
++"""Pure command/lifecycle controls; no native, consent or effect acceptance.
++
++Positive objects below are explicitly controlled instances of the original
++classes. Every native constructor, loader and process entry is forbidden unless
++the individual test replaces that exact constructor with a recording control.
++"""
++import argparse
++from contextlib import contextmanager
++from dataclasses import replace
++import io
++from pathlib import Path
++import threading
++from types import SimpleNamespace
++import unittest
++from unittest.mock import patch
++
++from ceta.composition import real_effect_cli as cli
++from ceta.composition.real_effect_service import ManualEffectLimits, ManualRealEffectSession
++from ceta.composition.real_effect_runtime import ManualRealEffectProfile, ManualRuntimeSelection
++from ceta.composition.native_cpu_runtime import NativeCpuRuntime
++from ceta.contracts.real_effect import CAP_OPERATION
++from ceta.contracts.resource_management import ResourceVector
++from ceta.contracts.kernel_transactions import BudgetVector
++from ceta.contracts.wire import ContractError, strict_loads
++from ceta.identity.native_code_binding import CodePin
++from ceta.store.outcome_capacity import OutcomeCapacityBudget
++
++H = 'sha256:' + 'a' * 64
++
++
++def budget(effects, written, wall):
++    return BudgetVector.from_dict(dict(max_effects=effects, max_model_calls=0,
++        max_input_tokens=0, max_output_tokens=0, max_bytes_read=32768,
++        max_bytes_written=written, wall_time_ms=wall))
++
++
++def limits():
++    return ManualEffectLimits(budget(2, 131072, 2000), budget(1, 65536, 1000),
++        ResourceVector(100, 16 * 1024 * 1024, 1048576, 2000), 65536, 32768)
++
++
++def selection():
++    fixture = Path(__file__).resolve().parents[2] / '.agents/fixtures/manual-entrypoint-pure'
++    names = ('helper', 'helper-source', 'worker', 'observer', 'observer-source', 'capacity')
++    groups = ('environment', 'source', 'environment', 'environment', 'source', 'environment')
++    pins = tuple(CodePin(g, n, str(fixture / n), 'a' * 64)
++        for g, n in zip(groups, names))
++    return ManualRuntimeSelection(fixture / 'root',
++        fixture / 'scratch', 'installation:manual', 'scope:manual', 7,
++        pins, H, H, *names, 'CETA.ControlledPure',
++        OutcomeCapacityBudget(1048576, 1048576, 65536), limits())
++
++
++class _Context:
++    def __init__(self):
++        self.entered = self.exited = 0
++        self.exit_error = None
++    def __enter__(self):
++        self.entered += 1
++        return self
++    def __exit__(self, kind, primary, trace):
++        self.exited += 1
++        if self.exit_error is not None:
++            raise self.exit_error
++        return False
++
++
++class _Lease:
++    def __init__(self):
++        self.entries = self.exits = self.recoveries = 0
++        self.closed = False
++        self.pending = False
++        self.dispatch_admitted = False
++        self.denied = None
++    def __enter__(self):
++        self.entries += 1
++        return self
++    def __exit__(self, kind, primary, trace):
++        self.exits += 1
++        self.closed = not self.pending
++    def inspection(self):
++        return dict(closed=self.closed, pending_cleanup=self.pending,
++            dispatch_admitted=self.dispatch_admitted, stopped=False,
++            native_effect='UNESTABLISHED_BY_ADMISSION', denied_dispatch=self.denied)
++    @contextmanager
++    def recover_outcome(self, context):
++        self.recoveries += 1
++        yield self
++    def record_denied_outcome(self):
++        return SimpleNamespace(as_dict=lambda: {'state': 'UNCERTAIN'})
++
++
++class _Fixture:
++    """CONTROLLED original-class identities and recording infrastructure ports."""
++    def __init__(self):
++        self.calls = []
++        self.context = object()
++        self.guard = _Context()
++        self.kernel = SimpleNamespace()
++        self.profile = object.__new__(ManualRealEffectProfile)
++        self.runtime = object.__new__(NativeCpuRuntime)
++        self.profile.runtime = self.runtime
++        self.profile._state = 'ACTIVE'
++        self.profile._thread = threading.get_ident()
++        self.profile._session = None
++        self.profile.limits = limits()
++        self.profile.adapter_commitment = H
++        self.runtime._store = object()
++        self.runtime._codec = object()
++        self.runtime._installation = 'installation:manual'
++        self.runtime._registry = SimpleNamespace(authenticate=self.authenticate)
++        self.profile.registry = self.runtime._registry
++        self.runtime._owner = SimpleNamespace(native_context=lambda c: self.guard,
++            request_stop=lambda: self.calls.append('stop'))
++        self.runtime.kernel = SimpleNamespace(_kernel=self.kernel)
++        self.runtime._selected = lambda *a, **kw: self.calls.append(('select', kw['bookkeeping']))
++        self.runtime.execute = self.execute
++        self.runtime.reconcile = self.reconcile
++        self.session = self.profile.command_session(self.context)
++        self.session.__enter__()
++        self.lease = _Lease()
++        self.proof = object()
++        self.request = SimpleNamespace(request_id='request:controlled', canonical_wire=b'request',
++            operation=CAP_OPERATION, as_dict=lambda: {'request_id': 'request:controlled'})
++        self.kernel.owned_cpu_execution = self.admission
++        self.session._request = self.request
++        self.session._permit = b'prepared'
++        self.session._proof = self.proof
++        self.session._binding, self.session._capture = object(), object()
++        self.session._approval_stage = 'PREPARED'
++        self.session.inspect = self.inspect
++    def authenticate(self, context):
++        if context is not self.context:
++            raise ContractError('CONTROLLED_FOREIGN_CONTEXT')
++        self.calls.append('authenticate')
++        return object()
++    def admission(self, wire, permit, binding, capture, proof, context):
++        assert (wire, permit, proof, context) == (b'request', b'prepared', self.proof, self.context)
++        assert binding is self.session._binding and capture is self.session._capture
++        self.calls.append('admission')
++        return self.lease
++    def execute(self, lease):
++        assert lease is self.lease
++        self.calls.append('execute')
++        lease.dispatch_admitted = True
++        return SimpleNamespace(as_dict=lambda: {'state': 'SETTLED_OBSERVED'})
++    def reconcile(self, lease):
++        assert lease is self.lease
++        self.calls.append('reconcile')
++        return SimpleNamespace(as_dict=lambda: {'state': 'UNCERTAIN'})
++    def inspect(self):
++        return dict(run_id=self.session.run_id, state=self.session._state)
++
++
++class ManualEntrypointPureTests(unittest.TestCase):
++    def setUp(self):
++        self.barriers = []
++        def forbidden(*args, **kwargs):
++            self.fail('Native/process/profile/test effects are forbidden in this pure cohort')
++        for name in ('ctypes.WinDLL', 'ctypes.CDLL', 'subprocess.Popen', 'subprocess.run',
++                     'socket.socket'):
++            value = patch(name, side_effect=forbidden)
++            value.start()
++            self.barriers.append(value)
++        self.addCleanup(lambda: [value.stop() for value in reversed(self.barriers)])
++
++    def test_selection_is_typed_and_no_cli_configuration_or_proof_flag_exists(self):
++        value = selection()
++        self.assertIs(type(value), ManualRuntimeSelection)
++        for changes in ({'durable_epoch': True}, {'create': 1}, {'work_duration_ms': 30001},
++                        {'code_pins': list(value.code_pins)}, {'private_root': Path('relative')},
++                        {'appcontainer_name': 'unrestricted'}, {'capacity_budget': object()}):
++            with self.subTest(changes=changes), self.assertRaises(ContractError):
++                replace(value, **changes)
++        for extra in ('--proof=x', '--config=x', '--yes', '--factory=x', '--private-root=x'):
++            with self.subTest(extra=extra), patch('sys.stderr', new=io.StringIO()), self.assertRaises(SystemExit):
++                cli.parser().parse_args(['start', '--profile', 'ceta-owned-real-effect-v1', extra])
++
++    def test_invalid_limits_deny_before_native_construction(self):
++        value = limits()
++        for changes in ({'authority_budget': budget(1, 131072, 2000)},
++                        {'required_outcome_bytes': 65537}, {'maximum_session_ns': 300000000001},
++                        {'resource_limit': ResourceVector(0, 1, 8192, 2000)}):
++            with self.subTest(changes=changes), self.assertRaises(ContractError):
++                replace(value, **changes)
++
++    def test_standalone_command_denies_without_constructing_native_owners(self):
++        for command in (['start', '--profile', 'ceta-owned-real-effect-v1'],
++                        ['enroll', '--run-id', 'run:invented'],
++                        ['execute', '--run-id', 'run:invented', '--request-id', 'request:invented']):
++            with self.subTest(command=command):
++                output = io.BytesIO()
++                self.assertEqual(cli.main(command, output=output), 2)
++                value = strict_loads(output.getvalue().rstrip(b'\n'))
++                self.assertEqual(value['code'], 'MANUAL_PROFILE_SELECTED_AUTHENTICATED_HOST_UNAVAILABLE')
++                self.assertEqual(value['transition_or_effect'], 'UNESTABLISHED_BY_RESPONSE')
++
++    def test_run_id_never_substitutes_for_live_original_context(self):
++        f = _Fixture()
++        args = cli.parser().parse_args(['execute', '--run-id', 'run:foreign', '--request-id', f.request.request_id])
++        with self.assertRaisesRegex(ContractError, 'RUN_ID_MISMATCH'):
++            cli.dispatch(args, f.session)
++        self.assertNotIn('admission', f.calls)
++        f.session._context = object()
++        with self.assertRaisesRegex(ContractError, 'CONTROLLED_FOREIGN_CONTEXT'):
++            f.session.execute(f.request.request_id)
++        self.assertNotIn('admission', f.calls)
++
++    def test_original_thread_required_before_any_admission(self):
++        f = _Fixture()
++        f.session._thread += 1  # No thread or process is created by this control.
++        with self.assertRaisesRegex(ContractError, 'ORIGINAL_THREAD_REQUIRED'):
++            f.session.execute(f.request.request_id)
++        self.assertNotIn('admission', f.calls)
++
++    def test_single_execution_uses_exact_retained_original_kernel_lease(self):
++        f = _Fixture()
++        result = f.session.execute(f.request.request_id)
++        self.assertEqual(result['run_id'], f.session.run_id)
++        self.assertEqual((f.lease.entries, f.lease.exits), (1, 1))
++        self.assertEqual([x for x in f.calls if x in ('admission', 'execute')], ['admission', 'execute'])
++        with self.assertRaisesRegex(ContractError, 'SINGLE_EXECUTION_REQUIRED'):
++            f.session.execute(f.request.request_id)
++        self.assertEqual(f.calls.count('execute'), 1)
++
++    def test_interrupted_admission_is_not_replayed_and_retains_exact_primary(self):
++        f = _Fixture()
++        primary = KeyboardInterrupt('controlled-before-return')
++        def failed(*args):
++            raise primary
++        f.kernel.owned_cpu_execution = failed
++        with self.assertRaises(KeyboardInterrupt) as caught:
++            f.session.execute(f.request.request_id)
++        self.assertIs(caught.exception, primary)
++        self.assertIs(primary.manual_real_effect_session, f.session)
++        self.assertTrue(f.session._execution_attempted)
++        with self.assertRaises(ContractError):
++            f.session.execute(f.request.request_id)
++        self.assertNotIn('execute', f.calls)
++
++    def test_reconciliation_uses_original_recovery_borrow_and_never_execute(self):
++        f = _Fixture()
++        f.session._execution = f.lease
++        f.session.reconcile(f.request.request_id)
++        self.assertEqual(f.lease.recoveries, 1)
++        self.assertEqual(f.calls.count('reconcile'), 1)
++        self.assertNotIn('execute', f.calls)
++        f.lease.denied = object()
++        f.session.reconcile(f.request.request_id)
++        self.assertEqual(f.lease.recoveries, 2)
++        self.assertEqual(f.calls.count('reconcile'), 1)
++
++    def test_pending_execution_preserves_context_guard_and_primary(self):
++        f = _Fixture()
++        f.session._execution = f.lease
++        f.lease.pending = True
++        primary = SystemExit('controlled-primary')
++        self.assertIs(f.session.__exit__(type(primary), primary, None), False)
++        self.assertIs(primary.manual_real_effect_session, f.session)
++        self.assertEqual(f.guard.exited, 0)
++        self.assertEqual(f.session._state, 'PENDING')
++        self.assertIs(f.profile._session, f.session)
++
++    def test_context_cleanup_failure_is_retained_once_without_primary_replacement(self):
++        f = _Fixture()
++        f.session._binding = None
++        cleanup = KeyboardInterrupt('controlled-context-close')
++        f.guard.exit_error = cleanup
++        primary = SystemExit('controlled-body')
++        self.assertFalse(f.session.__exit__(type(primary), primary, None))
++        self.assertIs(primary.manual_real_effect_cleanup_errors[0], cleanup)
++        self.assertEqual(f.guard.exited, 1)
++        with self.assertRaisesRegex(ContractError, 'RETIREMENT_UNCERTAIN'):
++            f.session.close()
++        self.assertEqual(f.guard.exited, 1)
++
++    def test_approval_uses_owner_ceremony_witness_and_canonical_prepare_record_wire(self):
++        f = _Fixture()
++        transcript = SimpleNamespace(canonical_wire=b'transcript')
++        ceremony = SimpleNamespace(wait=lambda seconds: object())
++        approval = SimpleNamespace(begin_interactive=lambda request, **kwargs: ceremony)
++        def verified(session, context):
++            self.assertIs(session, ceremony)
++            self.assertIs(context, f.context)
++            f.calls.append('genuine-origin-predicate-controlled')
++            return transcript, f.proof
++        f.runtime._owner.approval_owner = approval
++        f.runtime._owner.retain_verified_effect = verified
++        f.session._enrollment = SimpleNamespace(request_id='enrollment:controlled')
++        f.session._proposal = SimpleNamespace(original_wire=b'proposal')
++        f.session._approval_stage = 'NEW'
++        def approve(enrollment, wire, transcript_wire, proof, context):
++            self.assertEqual((enrollment, wire, transcript_wire),
++                ('enrollment:controlled', b'request', b'transcript'))
++            self.assertIs(proof, f.proof)
++            self.assertIs(context, f.context)
++            f.calls.append('canonical-approve')
++            return object()
++        f.kernel.approve_owned_cpu = approve
++        f.runtime.kernel.prepare = lambda wire, context: SimpleNamespace(record_wire=b'exact-prepared')
++        f.session.approve(f.request.request_id)
++        self.assertEqual(f.session._permit, b'exact-prepared')
++        self.assertEqual(f.session._approval_stage, 'PREPARED')
++        self.assertIn('canonical-approve', f.calls)
++        self.assertNotIn('execute', f.calls)
++
++    def test_approval_origin_rejection_never_calls_canonical_approve(self):
++        f = _Fixture()
++        f.session._approval_stage = 'NEW'
++        f.runtime._owner.approval_owner = SimpleNamespace(begin_interactive=lambda *a, **k:
++            SimpleNamespace(wait=lambda seconds: object()))
++        failure = ContractError('CONTROLLED_GENUINE_ORIGIN_DENIED')
++        def denied(*args):
++            raise failure
++        f.runtime._owner.retain_verified_effect = denied
++        f.kernel.approve_owned_cpu = lambda *a: self.fail('No canonical approval after origin denial')
++        with self.assertRaises(ContractError) as caught:
++            f.session.approve(f.request.request_id)
++        self.assertIs(caught.exception, failure)
++        self.assertIs(failure.manual_real_effect_session, f.session)
++        self.assertNotIn('execute', f.calls)
++
++    def test_concrete_factory_wires_one_clock_journal_registry_and_runtime(self):
++        from ceta.composition import real_effect_runtime as module
++        from ceta.contracts.wire import RecordCodec
++        calls = []
++        def controlled(name):
++            def initialize(owner, *args, **kwargs):
++                calls.append((name, owner, args, kwargs))
++                if name == 'observer':
++                    owner._clock = kwargs['clock']
++            return initialize
++        kinds = [('code', module.NativeCodeBinding), ('clock', module.NativeSessionClock),
++                 ('capacity', module.OutcomeCapacityRuntime), ('observer', module.NativeCpuEffectObserver),
++                 ('registry', module.WindowsPeerRegistry), ('store', module.SqliteJournal),
++                 ('runtime', module.NativeCpuRuntime)]
++        patches = [patch.object(kind, '__init__', controlled(name)) for name,kind in kinds]
++        for item in patches:
++            item.start()
++        self.addCleanup(lambda: [item.stop() for item in reversed(patches)])
++        codec = object.__new__(RecordCodec)
++        profile = ManualRealEffectProfile(selection(), codec)
++        self.assertEqual([row[0] for row in calls], [row[0] for row in kinds])
++        store = next(row for row in calls if row[0] == 'store')
++        self.assertIs(store[3]['outcome_runtime'], profile.capacity)
++        self.assertEqual(store[3]['profile'], 'ceta-sqlite-store-v2')
++        runtime = calls[-1]
++        self.assertIs(runtime[2][0], profile.store)
++        self.assertIs(runtime[2][1], codec)
++        self.assertIs(runtime[2][3], profile.registry)
++        configuration = runtime[2][4]
++        self.assertIs(configuration.clock, profile.clock)
++        self.assertIs(configuration.code_binding, profile.code)
++        self.assertIs(configuration.observer, profile.observer)
++        self.assertIs(configuration.outcome_runtime, profile.capacity)
++        self.assertIsNone(profile.worker)
++
++    def test_restricted_launch_error_is_retained_without_unrestricted_retry(self):
++        from ceta.composition import real_effect_runtime as module
++        f = _Fixture()
++        p = f.profile
++        p.selection = selection()
++        p._worker_launch_attempted = False
++        p._worker_launch_error = None
++        p.worker = p._binding = None
++        primary = KeyboardInterrupt('controlled-restrictive-create')
++        retained = object()
++        primary.owned_process = retained
++        with patch.object(module.IsolatedWindowsWorker, 'launch', side_effect=primary) as launch:
++            with self.assertRaises(KeyboardInterrupt) as caught:
++                p.cpu_binding()
++            self.assertIs(caught.exception, primary)
++            self.assertIs(p.worker, retained)
++            self.assertIs(primary.manual_real_effect_profile, p)
++            with self.assertRaisesRegex(ContractError, 'RESTRICTED_WORKER_UNAVAILABLE'):
++                p.cpu_binding()
++            self.assertEqual(launch.call_count, 1)
++            self.assertEqual(launch.call_args.kwargs['appcontainer_name'], 'CETA.ControlledPure')
++            self.assertEqual(launch.call_args.args[1], ('cpu', '30000'))
++
++    def test_real_enrollment_request_builder_uses_measured_data_and_fresh_nonce(self):
++        import test_owner_authority_transactions as data
++        source = data.enrollment_request()
++        f = _Fixture()
++        f.runtime._installation = source.installation_id
++        f.runtime._configuration = SimpleNamespace(scope_id=source.scope_id,
++            policy_commitment=H, code_binding=SimpleNamespace(source_commitment=H, environment_commitment=H))
++        observed = SimpleNamespace(peer=SimpleNamespace(principal_id=source.principal_id,
++            session_id=source.actor_session), private_root=source.private_root,
++            database=source.database, owner_facts=source.owner_facts)
++        f.runtime._view = SimpleNamespace(observe=lambda context: observed)
++        f.runtime._owner._worker_commitment = source.worker_image_commitment
++        f.runtime._owner.clock = lambda: (data.clock(1100000000), data.clock(1200000000))
++        native = SimpleNamespace(challenge_id=source.challenge_id, ceremony_nonce=source.ceremony_nonce,
++            helper=SimpleNamespace(identity=source.helper_identity), ui_identity=source.helper_identity,
++            helper_commitment=H, ui_commitment=H)
++        prepared = SimpleNamespace(enrollment_binding=native)
++        first = f.session._new_enrollment(prepared)
++        second = f.session._new_enrollment(prepared)
++        self.assertEqual(first.owner_facts, source.owner_facts)
++        self.assertEqual(first.private_root, source.private_root)
++        self.assertEqual(first.database, source.database)
++        self.assertEqual(first.helper_identity, source.helper_identity)
++        self.assertEqual(first.clock_session_nonce, '1' * 32)
++        self.assertNotEqual(first.owner_session_nonce, second.owner_session_nonce)
++        self.assertNotEqual(first.request_id, second.request_id)
++        self.assertEqual(first.deadline.durable_epoch, 7)
++        self.assertEqual(first.deadline.issued_monotonic_ns, 1200000000)
++        self.assertEqual(first.deadline.expires_monotonic_ns, 31200000000)
++
++    def test_failed_canonical_approval_is_not_replayed(self):
++        f = _Fixture()
++        f.session._approval_stage = 'NEW'
++        f.session._enrollment = SimpleNamespace(request_id='enrollment:controlled')
++        ceremony = SimpleNamespace(wait=lambda seconds: object())
++        f.runtime._owner.approval_owner = SimpleNamespace(begin_interactive=lambda *a, **k: ceremony)
++        f.runtime._owner.retain_verified_effect = lambda *a: (SimpleNamespace(canonical_wire=b't'), f.proof)
++        primary = KeyboardInterrupt('controlled-post-commit-return')
++        def failed(*args):
++            raise primary
++        f.kernel.approve_owned_cpu = failed
++        with self.assertRaises(KeyboardInterrupt) as caught:
++            f.session.approve(f.request.request_id)
++        self.assertIs(caught.exception, primary)
++        self.assertEqual(f.session._approval_stage, 'APPROVAL_COMMIT_ATTEMPTED')
++        with self.assertRaisesRegex(ContractError, 'APPROVAL_RECOVERY_REQUIRED'):
++            f.session.approve(f.request.request_id)
++        self.assertNotIn('execute', f.calls)
++
++    def test_manual_wire_and_correlated_result_are_additive_strict_data(self):
++        from ceta.contracts.manual_effect import command_wire
++        from ceta.contracts.local_ipc import encode_message, decode_message
++        from ceta.contracts.local_results import encode_response, decode_response
++        from ceta.contracts.wire import RecordCodec, canonical_bytes
++        root = Path(__file__).resolve().parents[2]
++        codec = RecordCodec(strict_loads((root / 'contracts/schemas/records.schema.json').read_bytes()))
++        body = command_wire('command:pure', 'scope:pure', 'run:pure', 'RUN', cpu_rate=100)
++        wire = encode_message(body, codec, message_id='message:pure', sender_session='session:pure',
++            receiver_generation='generation:pure', operation='manual.run',
++            issued_at_ms=1000, expires_at_ms=31000)
++        request = decode_message(wire, codec)
++        self.assertEqual(request.record.as_dict()['cpu_rate'], 100)
++        response = encode_response(request, {'state': 'SETTLED_OBSERVED', 'run_id': 'run:pure'}, codec)
++        decoded = decode_response(response, request, codec)
++        self.assertEqual(decoded.kind, 'MANUAL_STATE')
++        self.assertEqual(decoded.manual_result_wire, response)
++        for change in ({'proof': True}, {'native_configuration': {}}, {'cpu_rate': True}):
++            value = dict(strict_loads(body), **change)
++            with self.subTest(change=change), self.assertRaises(ContractError):
++                from ceta.contracts.manual_effect import decode_command
++                decode_command(canonical_bytes(value))
++        changed = strict_loads(wire)
++        changed['operation'] = 'manual.restore'
++        with self.assertRaisesRegex(ContractError, 'MANUAL_ROUTE_BINDING'):
++            decode_message(canonical_bytes(changed), codec)
++        changed = strict_loads(response)
++        changed['request_sha256'] = '0' * 64
++        with self.assertRaises(ContractError):
++            decode_response(canonical_bytes(changed), request, codec)
++
++    def test_receiver_retains_original_context_pipe_until_exact_owner_retires(self):
++        from ceta.identity.windows_pipe import WindowsPipeServer
++        receiver = object.__new__(WindowsPipeServer)
++        calls, context, owner = [], object(), object()
++        receiver._lock = threading.Lock()
++        receiver._closed, receiver._pipe = False, 405  # Pure numeric marker only.
++        receiver._retained_context = None
++        receiver._registry = SimpleNamespace(_invalidate=lambda value: calls.append(('invalidate', value)))
++        receiver._api = SimpleNamespace(DisconnectNamedPipe=lambda value: calls.append(('disconnect', value)) or True,
++            close_handle=lambda value: calls.append(('close', value)))
++        receiver._context_retainer = lambda value: owner
++        receiver._retire_dispatch_context(context, True, None)
++        self.assertEqual(receiver._retained_context, (context, owner))
++        self.assertEqual(calls, [])
++        with self.assertRaisesRegex(ContractError, 'CONTEXT_RETAINED'):
++            receiver.close()
++        self.assertEqual(calls, [])
++        receiver._context_retainer = lambda value: None
++        receiver.retire_retained_context()
++        self.assertIsNone(receiver._retained_context)
++        self.assertEqual(calls, [('invalidate', context), ('disconnect', 405)])
++
++    def test_retainer_failure_keeps_primary_and_original_context(self):
++        from ceta.identity.windows_pipe import WindowsPipeServer
++        receiver = object.__new__(WindowsPipeServer)
++        context = object()
++        cleanup, primary = KeyboardInterrupt('controlled-retirement'), SystemExit('controlled-body')
++        def failed(context):
++            raise cleanup
++        receiver._context_retainer = failed
++        receiver._retained_context = None
++        receiver._registry = SimpleNamespace(_invalidate=lambda value: self.fail('Context must remain retained'))
++        receiver._retire_dispatch_context(context, True, primary)
++        self.assertIs(primary.retained_ingress, receiver)
++        self.assertIs(primary.ingress_retirement_error, cleanup)
++        self.assertIs(receiver._retained_context[0], context)
++
++    def test_actual_selected_host_routes_whole_run_on_one_original_context(self):
++        from ceta.composition.real_effect_host import ManualRealEffectHost
++        from ceta.contracts.local_ipc import LocalMessage
++        f = _Fixture()
++        f.session._binding = None
++        f.session.close()
++        f.profile.selection = selection()
++        f.runtime._owner.native_context = lambda context: _Context()
++        f.profile.registry.require_message = lambda context, message: self.assertIs(context, f.context)
++        host = object.__new__(ManualRealEffectHost)
++        host._thread, host.run_id = threading.get_ident(), 'run:host'
++        host.profile = f.profile
++        host._pending = host._last_session = host._cap_session = None
++        host._stopped = False
++        calls = []
++        request = SimpleNamespace(request_id='request:host', canonical_wire=b'owned-request',
++            task_id='task:host', operation=CAP_OPERATION)
++        def enroll(session):
++            calls.append(('enroll', session._context))
++        def prepare(session, **kwargs):
++            calls.append(('prepare', session._context, kwargs))
++            session._request = request
++        def approve(session, request_id):
++            calls.append(('approve', session._context, request_id))
++        def execute(session, request_id):
++            calls.append(('execute', session._context, request_id))
++            session._cap_request = request
++            return {'state': 'SETTLED_OBSERVED'}
++        body = SimpleNamespace(as_dict=lambda: dict(kind='RUN', run_id='run:host', cpu_rate=100,
++            request_id=None, reason_ref=None))
++        message = LocalMessage('message:host', 'session:host', 'generation:host', 'manual.run',
++            'scope:manual', 1000, 31000, body, None, b'controlled')
++        with patch.object(ManualRealEffectSession, 'enroll', enroll), \
++             patch.object(ManualRealEffectSession, 'prepare', prepare), \
++             patch.object(ManualRealEffectSession, 'approve', approve), \
++             patch.object(ManualRealEffectSession, 'execute', execute):
++            result = host(message, f.context)
++        self.assertEqual([row[0] for row in calls], ['enroll', 'prepare', 'approve', 'execute'])
++        self.assertTrue(all(row[1] is f.context for row in calls))
++        self.assertEqual(result['run_id'], 'run:host')
++        self.assertTrue(host._last_session.closed)
++        self.assertIs(host._cap_session._cap_request, request)
++        with self.assertRaisesRegex(ContractError, 'CAP_SINGLE_ATTEMPT'):
++            host(message, f.context)
++
++    def test_failed_pre_api_constructor_can_retire_without_replaying_initialization(self):
++        from ceta.composition import real_effect_runtime as module
++        from ceta.contracts.wire import RecordCodec
++        primary = KeyboardInterrupt('controlled-code-api-binding')
++        calls = []
++        def before_api(owner, pins):
++            calls.append('constructor')
++            owner._lock = threading.RLock()
++            owner._closing, owner._closed = threading.Event(), False
++            raise primary
++        with patch.object(module.NativeCodeBinding, '__init__', before_api):
++            with self.assertRaises(KeyboardInterrupt) as caught:
++                ManualRealEffectProfile(selection(), object.__new__(RecordCodec))
++        self.assertIs(caught.exception, primary)
++        profile = primary.manual_real_effect_profile
++        self.assertIsNotNone(profile.code)
++        with self.assertRaisesRegex(ContractError, 'PARTIAL_CONSTRUCTOR_CUSTODY_PENDING'):
++            profile.close()
++        profile.retire_failed_constructor()
++        self.assertIsNone(profile.code)
++        profile.close()
++        self.assertTrue(profile.closed)
++        self.assertEqual(calls, ['constructor'])
++
++    def test_remote_denial_is_exit_two_and_client_never_retries_uncertain_effect(self):
++        from ceta.composition import real_effect_client as module
++        from ceta.contracts.wire import RecordCodec
++        from ceta.identity.windows_pipe import WindowsServerBinding
++        root = Path(__file__).resolve().parents[2]
++        codec = RecordCodec(strict_loads((root / 'contracts/schemas/records.schema.json').read_bytes()))
++        client = module.ManualEffectClient(codec, object.__new__(WindowsServerBinding),
++            r'\\.\pipe\CETA-controlled', run_id='run:client', scope_id='scope:client',
++            actor_session='session:client', receiver_generation='generation:client')
++        primary = KeyboardInterrupt('controlled-lost-response')
++        with patch.object(module, 'send_pipe_request', side_effect=primary) as send:
++            with self.assertRaises(KeyboardInterrupt) as caught:
++                client.call('RUN', cpu_rate=100)
++            self.assertIs(caught.exception, primary)
++            self.assertIs(primary.manual_effect_client, client)
++            with self.assertRaisesRegex(ContractError, 'EFFECT_RECONCILIATION_REQUIRED'):
++                client.call('RUN', cpu_rate=100)
++            self.assertEqual(send.call_count, 1)
++        output = io.BytesIO()
++        with patch.object(client, 'call', return_value=dict(kind='DENIED_RECONCILE',
++                state=None, error_code='CONTROLLED_DENIAL')):
++            self.assertEqual(cli.main(['run', '--run-id', 'run:client', '--cpu-rate', '100'],
++                client=client, output=output), 2)
++
++    def test_existing_positive_admission_dependency_stays_closed_without_substitution(self):
++        from ceta.identity.owner_session import NativeCpuOwnerSession
++        from ceta.identity.owners import WindowsIdentityOwners
++        self.assertIs(NativeCpuOwnerSession.require_admission, WindowsIdentityOwners.require_admission)
++        owner = object.__new__(NativeCpuOwnerSession)
++        with self.assertRaisesRegex(ContractError, 'PROTECTED_RESOURCE_OWNER_UNAVAILABLE'):
++            owner.require_admission(None, b'controlled-data-only', None)
++
++    def test_canonical_service_entrypoint_selects_manual_host_before_any_ordinary_journal(self):
++        from ceta.composition import service_process as service
++        from ceta.composition import real_effect_host as host_module
++        from ceta.contracts.wire import RecordCodec
++        chosen, calls = selection(), []
++        config = dict(root=str(chosen.private_root), installation=chosen.installation_scope_id,
++            scopes=[chosen.installation_scope_id, chosen.scope_id], create=chosen.create,
++            pipe=r'\\.\pipe\CETA-pure-service', client_pid=101, client_creation=102,
++            client_image='a' * 64, principal='principal:pure', session='session:pure')
++        class ControlledHost:
++            def __init__(self, selected, codec, pipe, **peer):
++                calls.append(('construct', selected, peer))
++                self._stopped = False
++            def ready(self):
++                return dict(profile='ceta-owned-real-effect-v1', run_id='run:controlled')
++            def receive_once(self, timeout):
++                calls.append(('receive', timeout))
++                self._stopped = True
++            def close(self):
++                calls.append(('close',))
++            def _expose(self, primary):
++                raise AssertionError('No failure expected in this controlled host')
++        with patch.object(host_module, 'ManualRealEffectHost', ControlledHost), \
++             patch.object(service, 'emit', lambda value: calls.append(('emit', value))), \
++             patch.object(service, 'open_service_journal', side_effect=AssertionError('No ordinary journal')):
++            self.assertEqual(service.serve_manual_profile(config, object.__new__(RecordCodec), chosen), 0)
++        self.assertIs(calls[0][1], chosen)
++        self.assertEqual(calls[0][2]['peer_pid'], 101)
++        self.assertEqual(calls[-1], ('close',))
++        self.assertEqual([x for x in calls if x[0] == 'receive'], [('receive', 30.0)])
++
++
++if __name__ == '__main__':
++    unittest.main()

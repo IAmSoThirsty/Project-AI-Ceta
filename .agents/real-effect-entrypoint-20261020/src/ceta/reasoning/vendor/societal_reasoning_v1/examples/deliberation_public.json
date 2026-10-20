@@ -1,0 +1,28 @@
+{
+  "scenario": {
+    "id": "illustration-discussion",
+    "question": "What interpretations of the exchange have attributed support?",
+    "evidence": [
+      {"id": "e1", "statement": "The illustration exaggerates a programmer's competence for laughs.", "origin": "user_report", "source_ref": "report-1"},
+      {"id": "e2", "statement": "The caption reads: AI coders cannot code.", "origin": "quoted_material", "source_ref": "caption-1"},
+      {"id": "e3", "statement": "Another participant pointed to a specific failing test.", "origin": "user_report", "source_ref": "report-2"},
+      {"id": "e4", "statement": "The poster secretly hates everybody using AI.", "origin": "interpretation", "source_ref": "guess-1"}
+    ],
+    "unknowns": ["The author's private motives", "Whether the participants know each other"]
+  },
+  "context_facts": [
+    {"id": "c1", "category": "channel", "value": "public_forum", "origin": "user_report", "source_ref": "setting-1"},
+    {"id": "c2", "category": "other", "value": "Illustration was posted on a weekday", "origin": "user_report", "source_ref": "setting-1"}
+  ],
+  "hypotheses": [
+    {"id": "group-directed-reading", "reading": "The illustration may function as public group-directed ridicule.", "proposed_by": "caller", "concept_ids": [74], "unknowns": ["The author's private intent"],
+     "warrants": [{"evidence_id": "e1", "role": "support", "rationale": "Reported exaggeration is compatible with ridicule in a public presentation", "conditions": [{"category": "channel", "value": "public_forum"}]},
+                  {"evidence_id": "e2", "role": "support", "rationale": "The supplied caption directs its characterization at a group", "conditions": [{"category": "channel", "value": "public_forum"}]}]},
+    {"id": "technical-reading", "reading": "The larger exchange may also contain a specific technical criticism.", "proposed_by": "caller", "unknowns": [],
+     "warrants": [{"evidence_id": "e3", "role": "support", "rationale": "A reported failing test addresses a concrete work product"}]},
+    {"id": "private-joking-reading", "reading": "A private exchange might function as mutually understood teasing.", "proposed_by": "model_proposal", "unknowns": ["Participant familiarity", "Whether the joke was welcome"],
+     "warrants": [{"evidence_id": "e1", "role": "support", "rationale": "Exaggeration can be used in teasing but does not establish mutual consent", "conditions": [{"category": "channel", "value": "private_chat"}]}]},
+    {"id": "invented-motive-reading", "reading": "The poster must have intended to hurt the audience.", "proposed_by": "model_proposal", "unknowns": [],
+     "warrants": [{"evidence_id": "e4", "role": "support", "rationale": "This is a preexisting interpretation, not observation"}]}
+  ]
+}

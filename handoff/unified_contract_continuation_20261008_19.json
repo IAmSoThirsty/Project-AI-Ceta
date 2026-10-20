@@ -1,0 +1,88 @@
+{
+  "schema_version": "1",
+  "record_kind": "ROOT_REVIEWED_UNIFIED_CONTRACT_CONTINUATION_NOT_FROZEN_NOT_QUALIFIED",
+  "observed_at_utc": "2026-10-08T09:58:41.971052+00:00",
+  "delegate_proposal": ".local-build-cache/unified-contract-reconciliation-20261008/proposal.json",
+  "delegate_proposal_sha256": "dfa67b3eb187c3172b51f2b6fa0a55f3a1c0ba9d8f271739c834a5c5b7134735",
+  "delegate_receipt": ".local-build-cache/unified-contract-reconciliation-20261008/read_receipt.json",
+  "delegate_receipt_sha256": "235ca841a3cee5e9ad146f8de49e4c94e5801ed26a0b4950f12af778cb749f30",
+  "root_personal_review": "ACTUAL_TRANSITION_CONSTRUCTION_EVIDENCE_CODE_TESTS_AND_DOCS;SPEC25/39/41;SEMANTIC_VALIDATION;SYSTEM_CONTRACT. Complete parent/spec semantic review attributed to delegate, not root.",
+  "source_interpretation": "SPEC25 four normal vault edges supported; six other principal interpretations unresolved and denied. Construction DAG separates prerequisites from gate qualifications without changing either.",
+  "findings": [
+    {
+      "finding": 1,
+      "status": "VERIFIED_FIXED",
+      "behavior": "Historical selected61, inventory72 and watched70 reconciled; all11 omissions named. Explicit two-pass SHA inventory now92/90 after20 additions. Case variants excluded; traversal failure rejects.",
+      "evidence": [
+        "evidence/runtime/development-inventory-remediation-19-final.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json",
+        "rebuild_ios/contracts/DEVELOPMENT_INVENTORY_V1.md"
+      ]
+    },
+    {
+      "finding": 2,
+      "status": "VERIFIED_FIXED",
+      "behavior": "All21 guides resolve through the exact receipt-bound working map to authentic493-byte schema. Original links and bytes preserved; author intent unestablished. Permuted witness map rejects.",
+      "evidence": [
+        ".local-build-cache/increment-19-remediation/reference_material_transfer.json",
+        "evidence/runtime/reference-permutation-first-failure-19.json",
+        "evidence/runtime/remediation-19-narrow-01.json"
+      ]
+    },
+    {
+      "finding": 3,
+      "status": "VERIFIED_UNRESOLVED",
+      "implemented_status": "IMPLEMENTED_NOT_QUALIFIED",
+      "behavior": "Twenty principal entries preserved; SPEC25 establishes four vault normal edges and denies two shortcuts. Six source-ambiguous entries and all absent edges deny; every result has runtime_authorized=false.",
+      "unresolved_rule_ids": [
+        "TR-04",
+        "TR-06",
+        "TR-09",
+        "TR-11",
+        "TR-13",
+        "TR-20"
+      ],
+      "evidence": [
+        "rebuild_ios/contracts/TRANSITION_MODEL_V1.md",
+        "evidence/runtime/desktop-contract-remediation-19-01.json",
+        ".local-build-cache/unified-contract-reconciliation-20261008/proposal.json"
+      ]
+    },
+    {
+      "finding": 4,
+      "status": "VERIFIED_FIXED",
+      "implemented_status": "IMPLEMENTED_NOT_QUALIFIED",
+      "behavior": "All28 packages/eight memberships preserved; construction prerequisites topologically ordered separately from unchanged gate acceptance. WP15 before16 and WP18 before21. No formal qualification issued.",
+      "evidence": [
+        "rebuild_ios/contracts/CONSTRUCTION_GATES_V1.md",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "finding": 5,
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "behavior": "Pure semantic/evidence checks reject missing consumption, empty qualification, incomplete owner-resolved dependencies; internalReadSet remains unadmitted. Runtime admission always denied pending actual authenticated/durable owners. No exploit or integrated enforcement claim.",
+      "runtime_integration": "OPEN",
+      "evidence": [
+        "rebuild_ios/contracts/EVIDENCE_ADMISSION_V1.md",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "finding": 6,
+      "status": "VERIFIED_FIXED",
+      "behavior": "Exact406 coverage bytes preserved; seven distinct machine-readable evidence axes; zero pending applicability cannot imply implementation, conformance, acceptance or gate completion.",
+      "evidence": [
+        "rebuild_ios/contracts/BUILD_MEASUREMENTS_V1.md",
+        "evidence/runtime/desktop-contract-remediation-19-01.json",
+        "evidence/runtime/build-measurements-remediation-19.json"
+      ]
+    }
+  ],
+  "full_scope": "175_REQUIREMENTS_25_COMPONENTS_128_CASES_28_PACKAGES_20_VOLUMES_406_ORIGINALS_8_GATES_ALL_MANDATORY_LANES",
+  "source_adoption": "NOT_EVALUATED",
+  "contract_freeze": "OPEN",
+  "runtime_integration": "OPEN",
+  "gate_a": "OPEN",
+  "full_objective": "ACTIVE_NOT_COMPLETE"
+}

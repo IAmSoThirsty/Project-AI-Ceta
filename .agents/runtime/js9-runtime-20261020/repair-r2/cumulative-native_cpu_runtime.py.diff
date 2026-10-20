@@ -1,0 +1,272 @@
+--- assembled/src/ceta/composition/native_cpu_runtime.py
++++ js9/src/ceta/composition/native_cpu_runtime.py
+@@ -0,0 +1,269 @@
++"""Explicit same-owner CPU composition; configuration is never request data.
++
++The caller retains the clock, code manifest, observer, registry and journal.
++This owner retains only the view's file pins and native approval session. It
++creates no authority, worker, ceremony, scheduler or independent durable state.
++"""
++from dataclasses import dataclass
++from pathlib import Path
++import threading
++
++from ceta.composition.kernel_service import compose_kernel
++from ceta.composition.native_cpu_outcome import NativeCpuOutcomeAdapter
++from ceta.contracts.kernel_transactions import commitment, identifier, require
++from ceta.contracts.store_transactions import STORE_PROFILE
++from ceta.contracts.temporal import require_clock_progress
++from ceta.contracts.wire import ContractError, RecordCodec
++from ceta.effects.native_observer import NativeCpuEffectObserver
++from ceta.identity.native_clock import NativeSessionClock
++from ceta.identity.native_approval import NativeApprovalOwner
++from ceta.identity.native_code_binding import NativeCodeBinding
++from ceta.identity.native_owner_view import NativeOwnerView, NativeStoreBinding
++from ceta.identity.owner_session import NativeCpuOwnerSession
++from ceta.identity.windows_pipe import WindowsPeerRegistry
++from ceta.kernel.cpu_execution import _RetainedCpuExecution
++from ceta.store.journal import SqliteJournal
++from ceta.store.outcome_capacity import OutcomeCapacityBudget, OutcomeCapacityRuntime, _CapacityVfs
++
++
++@dataclass(frozen=True)
++class NativeCpuConfiguration:
++    """Concrete reviewed dependencies supplied by trusted process composition.
++
++    A configuration binds existing observed objects; it is not a qualification
++    flag. Pin names identify entries in the retained NativeCodeBinding. The
++    native owners continue to check actual platform, file and request facts.
++    """
++    clock: NativeSessionClock
++    code_binding: NativeCodeBinding
++    outcome_runtime: OutcomeCapacityRuntime
++    outcome_budget: OutcomeCapacityBudget
++    observer: NativeCpuEffectObserver
++    scope_id: str
++    policy_commitment: str
++    helper_name: str
++    helper_source_name: str
++    worker_name: str
++    observer_name: str
++    observer_source_name: str
++    capacity_helper_name: str
++
++    def __post_init__(self):
++        require(type(self.clock) is NativeSessionClock
++            and type(self.code_binding) is NativeCodeBinding
++            and type(self.outcome_runtime) is OutcomeCapacityRuntime
++            and type(self.outcome_budget) is OutcomeCapacityBudget
++            and type(self.observer) is NativeCpuEffectObserver,
++            'NATIVE_CPU_CONCRETE_DEPENDENCIES_REQUIRED')
++        require(self.observer._clock is self.clock, 'NATIVE_CPU_CLOCK_BINDING_REQUIRED')
++        identifier(self.scope_id)
++        commitment(self.policy_commitment)
++        self.outcome_budget.__post_init__()
++        names = (self.helper_name, self.helper_source_name, self.worker_name,
++            self.observer_name, self.observer_source_name, self.capacity_helper_name)
++        require(all(type(name) is str and 0 < len(name) <= 512 for name in names)
++            and len(set(names)) == len(names), 'NATIVE_CPU_MANIFEST_NAMES_REQUIRED')
++
++    def require_current(self):
++        """Check retained native files and one actual same-clock observation."""
++        self.__post_init__()
++        rows = NativeCodeBinding.snapshot(self.code_binding)
++        files = self.code_binding._files
++
++        def selected(group, name):
++            matches = [row for row in rows if row[0] == group and row[1] == name]
++            retained = [row for row in files if row['group'] == group
++                and row['logical_name'] == name]
++            require(len(matches) == len(retained) == 1,
++                'NATIVE_CPU_RETAINED_MANIFEST_ENTRY_REQUIRED')
++            require(matches[0][2] == retained[0]['sha256'],
++                'NATIVE_CPU_RETAINED_MANIFEST_CHANGED')
++            return Path(retained[0]['path']), matches[0][2]
++
++        selected('environment', self.helper_name)
++        selected('source', self.helper_source_name)
++        selected('environment', self.worker_name)
++        observer, image = selected('environment', self.observer_name)
++        driver, driver_sha = selected('source', self.observer_source_name)
++        capacity, capacity_sha = selected('environment', self.capacity_helper_name)
++        # These source paths come from the actual imported driver, not a caller
++        # digest or another copy of a source file with the same basename.
++        import ceta.effects.native_observer as native_observer
++        require(observer == Path(self.observer._executable)
++            and image == self.observer._image
++            and driver == Path(native_observer.__file__).resolve()
++            and driver_sha == self.observer._driver_sha,
++            'NATIVE_CPU_OBSERVER_MANIFEST_MISMATCH')
++        require(capacity == self.outcome_runtime.path
++            and capacity_sha == self.outcome_runtime.sha256,
++            'NATIVE_CPU_CAPACITY_MANIFEST_MISMATCH')
++        previous, current = NativeSessionClock.clock(self.clock)
++        require_clock_progress(previous, current)
++
++
++def _retain(primary, runtime, secondary=None):
++    data = BaseException.__dict__['__dict__'].__get__(primary)
++    dict.update(data, native_cpu_runtime=runtime,
++        native_cpu_runtime_cleanup=runtime.close)
++    if secondary is not None:
++        previous = dict.get(data, 'native_cpu_runtime_cleanup_errors', ())
++        if type(previous) is not tuple:
++            previous = ()
++        dict.__setitem__(data, 'native_cpu_runtime_cleanup_errors', previous + (secondary,))
++
++
++class NativeCpuRuntime:
++    """One captured kernel/owner/view over the supplied canonical journal."""
++    def __init__(self, store, codec, installation_scope_id, registry, configuration):
++        self._thread = threading.get_ident()
++        self._state = 'BUILDING'
++        self._store, self._codec, self._installation = store, codec, installation_scope_id
++        self._registry, self._configuration = registry, configuration
++        self._binding = self._view = self._owner = None
++        self.kernel = self.outcome_adapter = None
++        self._owner_ready = False
++        require(type(configuration) is NativeCpuConfiguration,
++            'NATIVE_CPU_CONFIGURATION_REQUIRED')
++        require(type(store) is SqliteJournal and type(codec) is RecordCodec
++            and type(registry) is WindowsPeerRegistry,
++            'NATIVE_CPU_SERVICE_DEPENDENCIES_REQUIRED')
++        identifier(installation_scope_id)
++        require(installation_scope_id != configuration.scope_id
++            and {installation_scope_id, configuration.scope_id}.issubset(store._scopes)
++            and store._codec is codec and store._profile == STORE_PROFILE
++            and not store._closed and not store._read_only,
++            'NATIVE_CPU_CANONICAL_JOURNAL_REQUIRED')
++        vfs = store._capacity_vfs
++        require(type(vfs) is _CapacityVfs and vfs.runtime is configuration.outcome_runtime
++            and not vfs.closed, 'NATIVE_CPU_JOURNAL_CAPACITY_REQUIRED')
++        configuration.require_current()
++        try:
++            # Publish each owner before fallible initialization so exceptions
++            # retain even partial file/approval custody.
++            self._binding = object.__new__(NativeStoreBinding)
++            NativeStoreBinding.__init__(self._binding, store.path.parent)
++            self._view = NativeOwnerView(registry, configuration.clock, self._binding,
++                outcome_budget=configuration.outcome_budget,
++                cpu_outcome_observer=configuration.observer)
++            self._owner = object.__new__(NativeCpuOwnerSession)
++            NativeCpuOwnerSession.__init__(self._owner, self._view, configuration.clock,
++                configuration.code_binding, installation_id=installation_scope_id,
++                scope_id=configuration.scope_id,
++                policy_commitment=configuration.policy_commitment,
++                helper_name=configuration.helper_name,
++                helper_source_name=configuration.helper_source_name,
++                worker_name=configuration.worker_name,
++                temporary_root=store.path.parent)
++            self._owner_ready = True
++            self.kernel = compose_kernel(store, codec, installation_scope_id, owners=self._owner)
++            self.outcome_adapter = NativeCpuOutcomeAdapter(self._view)
++            self._state = 'ACTIVE'
++            self.select(store, codec, installation_scope_id, registry)
++        except BaseException as primary:
++            self._state = 'PENDING'
++            _retain(primary, self)
++            try:
++                self.close()
++            except BaseException as secondary:
++                _retain(primary, self, secondary)
++            raise
++
++    def select(self, store, codec, installation_scope_id, registry):
++        """Return only this exact kernel/identity pair to the existing ingress."""
++        return self._selected(store, codec, installation_scope_id, registry, bookkeeping=False)
++
++    def _selected(self, store, codec, installation_scope_id, registry, *, bookkeeping):
++        require(threading.get_ident() == self._thread,
++            'NATIVE_CPU_COMPOSITION_ORIGINAL_THREAD_REQUIRED')
++        require((self._state == 'ACTIVE' or bookkeeping and self._state == 'PENDING')
++            and store is self._store and codec is self._codec
++            and registry is self._registry and installation_scope_id == self._installation,
++            'NATIVE_CPU_SERVICE_COMPOSITION_CHANGED')
++        owner, view, configuration = self._owner, self._view, self._configuration
++        kernel = self.kernel._kernel
++        require(kernel._store is store and kernel._codec is codec and kernel._owners is owner
++            and kernel._installation == installation_scope_id
++            and owner._preparation_kernel is kernel and owner._view is view
++            and not owner.closed and view._store is self._binding and not self._binding.closed
++            and view._registry is registry and view._clock is configuration.clock
++            and owner._registry is registry and owner._native_clock is configuration.clock
++            and owner._code is configuration.code_binding
++            and view._outcome_budget is configuration.outcome_budget
++            and view._cpu_outcome is self.outcome_adapter._producer
++            and view._cpu_outcome._observer is configuration.observer
++            and self.outcome_adapter._view is view
++            and getattr(owner._execution_capacity, '__self__', None) is view
++            and getattr(owner._execution_capacity, '__func__', None)
++                is NativeOwnerView.retain_owned_cpu_outcome_capacity
++            and getattr(owner._execution_provenance, '__self__', None) is view
++            and getattr(owner._execution_provenance, '__func__', None)
++                is NativeOwnerView._require_owned_cpu_outcome_provenance
++            and not store._closed and not store._read_only
++            and type(store._capacity_vfs) is _CapacityVfs
++            and store._capacity_vfs.runtime is configuration.outcome_runtime
++            and not store._capacity_vfs.closed,
++            'NATIVE_CPU_OWNER_COMPOSITION_CHANGED')
++        return self.kernel, owner
++
++    def execute(self, lease):
++        """Dispatch only the original active kernel lease through its adapter."""
++        self.select(self._store, self._codec, self._installation, self._registry)
++        require(type(lease) is _RetainedCpuExecution
++            and lease._owner is self.kernel._kernel._cpu_execution,
++            'NATIVE_CPU_ORIGINAL_KERNEL_LEASE_REQUIRED')
++        return self.outcome_adapter.execute(lease)
++
++    def reconcile(self, lease):
++        """Record observation under existing active/recovery custody, without Set."""
++        self._selected(self._store, self._codec, self._installation, self._registry,
++            bookkeeping=True)
++        require(type(lease) is _RetainedCpuExecution
++            and lease._owner is self.kernel._kernel._cpu_execution,
++            'NATIVE_CPU_ORIGINAL_KERNEL_LEASE_REQUIRED')
++        return self.outcome_adapter.reconcile(lease)
++
++    @property
++    def closed(self):
++        return self._state == 'CLOSED'
++
++    def close(self):
++        """Retire owned pins only after exact execution/observer custody retires.
++
++        Borrowed store, registry, code and clock remain caller-owned. A failed
++        retirement retains this runtime and prevents dependent service closure.
++        """
++        require(threading.get_ident() == self._thread,
++            'NATIVE_CPU_COMPOSITION_ORIGINAL_THREAD_REQUIRED')
++        if self.closed:
++            return
++        self._state = 'PENDING'
++        try:
++            approval = None if self._owner is None else getattr(self._owner, '_approval', None)
++            if self._owner is not None and (self._owner_ready or type(approval) is NativeApprovalOwner):
++                NativeCpuOwnerSession.request_stop(self._owner)
++                active = None if self.kernel is None else self.kernel._kernel._cpu_execution.active
++                require(active is None and self._owner._execution is None
++                    and self._store._capacity_active is None,
++                    'NATIVE_CPU_EXECUTION_CUSTODY_PENDING')
++                NativeCpuEffectObserver.close_cleanup(self._configuration.observer)
++                NativeCpuOwnerSession.close(self._owner)
++            elif self._owner is not None:
++                require(approval is None,
++                    'NATIVE_CPU_PARTIAL_OWNER_CUSTODY_PENDING')
++            if self._binding is not None:
++                # A partial NativeStoreBinding carries its own exact handles;
++                # closing through the concrete implementation preserves errors.
++                NativeStoreBinding.close(self._binding)
++            self._state = 'CLOSED'
++        except BaseException as primary:
++            _retain(primary, self)
++            raise
++
++    def __copy__(self):
++        raise ContractError('NATIVE_CPU_RUNTIME_COPY_FORBIDDEN')
++
++    def __deepcopy__(self, memo):
++        raise ContractError('NATIVE_CPU_RUNTIME_COPY_FORBIDDEN')
++
++    def __reduce_ex__(self, protocol):
++        raise ContractError('NATIVE_CPU_RUNTIME_SERIALIZATION_FORBIDDEN')

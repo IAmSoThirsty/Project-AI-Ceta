@@ -1,0 +1,37 @@
+# 01-CONSTITUTIONAL-GOVERNANCE - test matrix
+
+## Unit-level acceptance coverage
+
+Every source specification defines ten concrete test obligations: required behavior, a domain-specific adverse case, schema compatibility, stale references, access, bounds and interruption, concurrency, recovery, real integration, and independent proof. These are planned tests, not runtime results.
+
+| Unit | Acceptance IDs | Positive oracle | Negative oracle | Initial execution state |
+| --- | --- | --- | --- | --- |
+| [CETA-01.01.01 / constitution-registry](01.01-CONSTITUTIONAL-SOURCES/constitution-registry.file.README.md) | AT-CETA-01.01.01-01 through AT-CETA-01.01.01-10 | A decision can recover the exact constitutional revision used at execution time. | An imported document claims constitutional authority without an activation decision. | NOT EXECUTED |
+| [CETA-01.01.02 / constitutional-rule-catalog](01.01-CONSTITUTIONAL-SOURCES/constitutional-rule-catalog.file.README.md) | AT-CETA-01.01.02-01 through AT-CETA-01.01.02-10 | A rule query returns both executable meaning and its exact approved source. | Two rules share an identity with different content in the same revision. | NOT EXECUTED |
+| [CETA-01.01.03 / rule-version-loader](01.01-CONSTITUTIONAL-SOURCES/rule-version-loader.file.README.md) | AT-CETA-01.01.03-01 through AT-CETA-01.01.03-10 | Concurrent evaluations see either the old complete revision or the new complete revision. | A partly loaded revision is exposed to an authorization evaluator. | NOT EXECUTED |
+| [CETA-01.02.01 / policy-interpreter](01.02-POLICY-ENGINE/policy-interpreter.file.README.md) | AT-CETA-01.02.01-01 through AT-CETA-01.02.01-10 | The same normalized proposal and policy snapshot produce the same policy result. | Excessive recursion terminates with an evaluation failure rather than permitting the action. | NOT EXECUTED |
+| [CETA-01.02.02 / policy-evaluator](01.02-POLICY-ENGINE/policy-evaluator.file.README.md) | AT-CETA-01.02.02-01 through AT-CETA-01.02.02-10 | A permitted read is allowed while an added write effect changes the result. | Missing required identity facts are interpreted as truthy defaults. | NOT EXECUTED |
+| [CETA-01.02.03 / policy-conflict-resolver](01.02-POLICY-ENGINE/policy-conflict-resolver.file.README.md) | AT-CETA-01.02.03-01 through AT-CETA-01.02.03-10 | An approved narrow exception overrides the identified general rule within its exact scope. | The system invents a priority based on rule order or model preference. | NOT EXECUTED |
+| [CETA-01.03.01 / transition-proposal-builder](01.03-GOVERNANCE-TRANSITIONS/transition-proposal-builder.file.README.md) | AT-CETA-01.03.01-01 through AT-CETA-01.03.01-10 | An owner approves the exact target, content, and effect set shown in the proposal. | Inputs change after approval and the original approval is reused. | NOT EXECUTED |
+| [CETA-01.03.02 / governance-packet-validator](01.03-GOVERNANCE-TRANSITIONS/governance-packet-validator.file.README.md) | AT-CETA-01.03.02-01 through AT-CETA-01.03.02-10 | Every referenced approval resolves to the same proposal digest and active authority. | A genuine approval for a different proposal is included in the packet. | NOT EXECUTED |
+| [CETA-01.03.03 / governance-quorum-controller](01.03-GOVERNANCE-TRANSITIONS/governance-quorum-controller.file.README.md) | AT-CETA-01.03.03-01 through AT-CETA-01.03.03-10 | Two distinct eligible approvals satisfy a configured two-principal rule. | One principal appears through two aliases and is counted twice. | NOT EXECUTED |
+| [CETA-01.04.01 / language-parser](01.04-THIRSTY-LANG/language-parser.file.README.md) | AT-CETA-01.04.01-01 through AT-CETA-01.04.01-10 | An approved valid policy produces a stable syntax tree with complete source spans. | Untrusted trailing text changes the parsed policy after the claimed end of input. | NOT EXECUTED |
+| [CETA-01.04.02 / policy-type-checker](01.04-THIRSTY-LANG/policy-type-checker.file.README.md) | AT-CETA-01.04.02-01 through AT-CETA-01.04.02-10 | A well-typed scope comparison resolves against the expected resource type. | A free-text approval is accepted where a validated approval reference is required. | NOT EXECUTED |
+| [CETA-01.04.03 / governed-rule-compiler](01.04-THIRSTY-LANG/governed-rule-compiler.file.README.md) | AT-CETA-01.04.03-01 through AT-CETA-01.04.03-10 | Compiled and interpreted forms agree on the same permitted and denied fixtures. | A compiler optimization changes denial behavior for a missing field. | NOT EXECUTED |
+| [CETA-01.05.01 / policy-invariant-checker](01.05-POLICY-ASSURANCE/policy-invariant-checker.file.README.md) | AT-CETA-01.05.01-01 through AT-CETA-01.05.01-10 | A delegated token is never wider than its parent in all specified boundary cases. | A rule grants authority from an agent confidence score. | NOT EXECUTED |
+| [CETA-01.05.02 / rule-traceability-mapper](01.05-POLICY-ASSURANCE/rule-traceability-mapper.file.README.md) | AT-CETA-01.05.02-01 through AT-CETA-01.05.02-10 | Every active rule links to an approved source and at least one verification obligation. | A rule is called enforced solely because it appears in a document. | NOT EXECUTED |
+| [CETA-01.05.03 / constitutional-change-validator](01.05-POLICY-ASSURANCE/constitutional-change-validator.file.README.md) | AT-CETA-01.05.03-01 through AT-CETA-01.05.03-10 | A narrowed permission change invalidates affected cached decisions at activation. | Existing approvals survive a scope-widening rule change without reevaluation. | NOT EXECUTED |
+
+
+## Component and subsystem tests
+
+| Component | Integrated behavior | Invariant |
+| --- | --- | --- |
+| [01.01](01.01-CONSTITUTIONAL-SOURCES/README.md) | Ingest authoritative rule sources; validate provenance and structure; stage a revision; obtain approval; activate atomically and retain earlier revisions. | Only explicitly designated rule sources can become governing inputs. |
+| [01.02](01.02-POLICY-ENGINE/README.md) | Normalize an action proposal; select applicable rules; evaluate typed predicates; resolve explicit precedence; emit a decision with its supporting rule trace. | An unresolved conflict, missing required input, or evaluator error cannot produce an allow decision. |
+| [01.03](01.03-GOVERNANCE-TRANSITIONS/README.md) | Create a complete transition proposal; bind approvals to its digest; validate quorum and revocation; commit the decision and its evidence atomically. | Approvals authorize the exact proposal and cannot be reused for changed effects. |
+| [01.04](01.04-THIRSTY-LANG/README.md) | Parse the locally reconciled language grammar; resolve names; type-check policy expressions; compile a bounded representation; retain source maps. | The approved local language grammar is authoritative; integration cannot silently replace it. |
+| [01.05](01.05-POLICY-ASSURANCE/README.md) | Check rule safety and traceability; exercise boundary fixtures; assess amendments; block activation when required evidence is absent. | A policy amendment is not active merely because it compiles. |
+
+
+Run these flows through actual local implementations after unit tests. Bind results to exact source, dependencies, configuration, environment, and artifact bytes. A mock-only test cannot qualify a native enforcement or installed-product claim. Preserve failed, blocked, skipped, and not-executed cases separately. Use [the cross-system scenarios](../ACCEPTANCE-CRITERIA/END-TO-END-SCENARIOS/README.md) for user-workflow qualification.

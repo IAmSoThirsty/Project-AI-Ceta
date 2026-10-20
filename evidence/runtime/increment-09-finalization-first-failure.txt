@@ -1,0 +1,9 @@
+Command: py -3 -B .local-build-cache/working-increment-09/finish_increment.py
+Working directory: T:\00-Active\CETA_Intelligence_Operating_System_Build_Package
+Exit code: 1
+Complete observed command output:
+Traceback (most recent call last):
+  File "T:\00-Active\CETA_Intelligence_Operating_System_Build_Package\.local-build-cache\working-increment-09\finish_increment.py", line 70, in <module>
+    assert next(c for c in load("architecture/components.json")["components"] if c["id"] == "CMP-08")["state"] == "NOT_STARTED"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

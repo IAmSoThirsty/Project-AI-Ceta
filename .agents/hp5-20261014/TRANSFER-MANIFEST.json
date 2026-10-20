@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "job": "HP5 Windows case-alias blocked-policy repair",
+  "author": "/root/pressure_writer",
+  "state": "FROZEN_AUTHOR_CANDIDATE_FOR_SEPARATE_REVIEW",
+  "frozen_at": "2026-10-14T10:29:21.544811+00:00",
+  "authoritative_repository": "T:\\00-Active\\Project-AI-CETA",
+  "cut": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp5-20261014",
+  "base": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp4-20261014",
+  "base_manifest_sha256": "a400f3a3c21427d37d2f6a40055b925a27e48edecd0006193ded61c67acbb9ce",
+  "payloads": [
+    {
+      "relative_path": "preserve_ceta_complete.py",
+      "kind": "functional_tool_source",
+      "action": "EXTEND",
+      "base_sha256": "a6a4e3c2ba47674a8c9b8771e01ac1d6c12333f1e1f9ac464373ff9132d1aa51",
+      "candidate_sha256": "445f26528ba24bdbac02297fc7927438648d5d0d278ff0db31ddcd9b2a8275de",
+      "bytes": 104393,
+      "before_image": ".agents/runtime/hp5-20261014/before-images/preserve_ceta_complete.py",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/diffs/preserve_ceta_complete.py.diff",
+        "sha256": "4cb8a7078c8477343a82b67ccdad5a3845f4831cb40905a34064a07398ab296d"
+      },
+      "physical_LOC": {
+        "added": 39,
+        "removed": 4,
+        "net": 35
+      },
+      "meaningful_LOC": {
+        "added": 26,
+        "removed": 4,
+        "net": 22
+      },
+      "count_method": "SequenceMatcher autojunk=False; Python excludes blank/comment/docstring; byte-exact reuse is zero new LOC"
+    },
+    {
+      "relative_path": "run_preservation_tests.py",
+      "kind": "test_automation",
+      "action": "EXTEND",
+      "base_sha256": "c06c8c06502722ff91371e9b273c2256e09a825d5d2cc881786d1302c7b31991",
+      "candidate_sha256": "60ce7d40a6670df3465c915f9cad81e6f5b54ffee2d10dde1f3ef9051d718433",
+      "bytes": 3638,
+      "before_image": ".agents/runtime/hp5-20261014/before-images/run_preservation_tests.py",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/diffs/run_preservation_tests.py.diff",
+        "sha256": "1393cee47f08e09068510f7eac78a581e42688712a9f038a705c6b50dfb9fd54"
+      },
+      "physical_LOC": {
+        "added": 1,
+        "removed": 1,
+        "net": 0
+      },
+      "meaningful_LOC": {
+        "added": 1,
+        "removed": 1,
+        "net": 0
+      },
+      "count_method": "SequenceMatcher autojunk=False; Python excludes blank/comment/docstring; byte-exact reuse is zero new LOC"
+    },
+    {
+      "relative_path": "test_preserve_ceta_complete.py",
+      "kind": "reused_native_test",
+      "action": "REUSE",
+      "base_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "candidate_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "bytes": 67690,
+      "before_image": ".agents/runtime/hp5-20261014/before-images/test_preserve_ceta_complete.py",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/diffs/test_preserve_ceta_complete.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "physical_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "meaningful_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "count_method": "SequenceMatcher autojunk=False; Python excludes blank/comment/docstring; byte-exact reuse is zero new LOC"
+    },
+    {
+      "relative_path": "test_provenance.py",
+      "kind": "reused_provenance_test",
+      "action": "REUSE",
+      "base_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "candidate_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "bytes": 38615,
+      "before_image": ".agents/runtime/hp5-20261014/before-images/test_provenance.py",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/diffs/test_provenance.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "physical_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "meaningful_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "count_method": "SequenceMatcher autojunk=False; Python excludes blank/comment/docstring; byte-exact reuse is zero new LOC"
+    },
+    {
+      "relative_path": "test_current_policy_fencing.py",
+      "kind": "reused_HP4_test",
+      "action": "REUSE",
+      "base_sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b",
+      "candidate_sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b",
+      "bytes": 13808,
+      "before_image": ".agents/runtime/hp5-20261014/before-images/test_current_policy_fencing.py",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/diffs/test_current_policy_fencing.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "physical_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "meaningful_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "count_method": "SequenceMatcher autojunk=False; Python excludes blank/comment/docstring; byte-exact reuse is zero new LOC"
+    },
+    {
+      "relative_path": "test_case_alias_fencing.py",
+      "kind": "new_case_test_source",
+      "action": "CREATE",
+      "base_sha256": null,
+      "candidate_sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d",
+      "bytes": 24107,
+      "before_image": null,
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/diffs/test_case_alias_fencing.py.diff",
+        "sha256": "a80ad0f74ae9f8a894f01dae0fd41a49275c980054f76b0bc37de6d3b067b381"
+      },
+      "physical_LOC": {
+        "added": 391,
+        "removed": 0,
+        "net": 391
+      },
+      "meaningful_LOC": {
+        "added": 359,
+        "removed": 0,
+        "net": 359
+      },
+      "count_method": "SequenceMatcher autojunk=False; Python excludes blank/comment/docstring; byte-exact reuse is zero new LOC",
+      "newly_authored_meaningful_LOC": 321,
+      "reused_independent_method_meaningful_LOC": 38,
+      "reused_independent_method_count": 2,
+      "new_test_count": 19
+    },
+    {
+      "relative_path": "README.md",
+      "kind": "documentation",
+      "action": "EXTEND",
+      "base_sha256": "c036fda20cb8d27d696f1c2268e361f243564604c0aa21a9114dcbd9ac4a43e9",
+      "candidate_sha256": "6a6e5f07d3dc21900d9248ea03086588a659bd565fa7a7019604a9e7f51a08ee",
+      "bytes": 14109,
+      "before_image": ".agents/runtime/hp5-20261014/before-images/README.md",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/diffs/README.md.diff",
+        "sha256": "a6a894f83a80d980c1b9739281001dda76b0300dab5d2de31b9544dd2735c983"
+      },
+      "physical_LOC": {
+        "added": 21,
+        "removed": 0,
+        "net": 21
+      },
+      "meaningful_LOC": {
+        "added": 21,
+        "removed": 0,
+        "net": 21
+      },
+      "count_method": "SequenceMatcher autojunk=False; Python excludes blank/comment/docstring; byte-exact reuse is zero new LOC"
+    }
+  ],
+  "tests": {
+    "total": 141,
+    "reused_original": 120,
+    "reused_independent_hostile": 2,
+    "newly_authored": 19,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 270.689,
+    "receipt": {
+      "repository_relative_path": ".agents/runtime/hp5-20261014/complete-r5.json",
+      "sha256": "94d337e8ca579f348c0dd1c684123ffd258befb960983bb756a3b3a8c1f53b9f"
+    },
+    "raw": {
+      "repository_relative_path": ".agents/runtime/hp5-20261014/complete-r5.txt",
+      "sha256": "0b4f2e08bd8b6a6a83fbbda6eaee8a91dbd34958acb1515c2c97e641c6836015"
+    }
+  },
+  "prior_failures": [
+    {
+      "operation": "Exact independent2 Windows same-file policy bypass oracles",
+      "classification": "FIXED_ON_AUTHOR_CANDIDATE_FOR_SEPARATE_REVIEW",
+      "failed_receipt": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/case-alias-baseline-r1.json",
+        "sha256": "9388178c6e74ca1792d48eb61bfd511415dce6d4011db76234ae9735b9083e64"
+      },
+      "failed_raw": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/case-alias-baseline-r1.txt",
+        "sha256": "75026e49b8abf8d454292aba0641a814213513f7d1ac9172a003fadb92ee9d03"
+      },
+      "tested_source_sha256": "a6a4e3c2ba47674a8c9b8771e01ac1d6c12333f1e1f9ac464373ff9132d1aa51",
+      "before_source": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/before-images/preserve_ceta_complete.py",
+        "sha256": "a6a4e3c2ba47674a8c9b8771e01ac1d6c12333f1e1f9ac464373ff9132d1aa51"
+      },
+      "failures": 2,
+      "closure": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/case-alias-closure-r2.json",
+        "sha256": "75f95cef750860788a37035ffde72c8a4ddf0f22ee6d15d1aeff52c46eba7624"
+      },
+      "final_full_receipt": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/complete-r5.json",
+        "sha256": "94d337e8ca579f348c0dd1c684123ffd258befb960983bb756a3b3a8c1f53b9f"
+      }
+    },
+    {
+      "operation": "Author Unicode normalization assumption",
+      "classification": "INVALID_TEST_ORACLE_CORRECTED_FROM_ACTUAL_INSTALLED_PYTHON_SOURCE",
+      "failed_receipt": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/focused-r3.json",
+        "sha256": "e9d414cdcad9dea04eccfe2269f6d385a0034878c2a2150507b57506d9fa2bf6"
+      },
+      "failed_raw": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/focused-r3.txt",
+        "sha256": "9612517a25af824f14ef1eff5863738fbc07772ab206b0a6a338f983903c75ce"
+      },
+      "failed_test_before_image": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/failed-author-oracle-r3.py",
+        "sha256": "1366d567d7e5986fdb786b7dc3b5ab29a61c5986e2e7be6744e1f39d310905da"
+      },
+      "failures": 1,
+      "reason": "Installed ntpath.normcase uses Windows LCMapStringEx and did not merge dotted-I and i-plus-dot; Python str.lower does merge that example",
+      "repair": "Corrected the probe to actual str.lower expansion, recorded current normcase inequality, retained native distinct-file and denial assertions",
+      "closure": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/focused-r4.json",
+        "sha256": "6563b7294d327db879f84a3db7a5073cdcf1f34e2ad2a9dbb29c1c8a3365ea9b"
+      },
+      "final_full_receipt": {
+        "repository_relative_path": ".agents/runtime/hp5-20261014/complete-r5.json",
+        "sha256": "94d337e8ca579f348c0dd1c684123ffd258befb960983bb756a3b3a8c1f53b9f"
+      }
+    }
+  ],
+  "self_review": {
+    "repository_relative_path": ".agents/runtime/hp5-20261014/self-review.json",
+    "sha256": "7a0e2d032533c69c2aea31d867682a7e6f21231fa866935b350d63c21c7fe9bf"
+  },
+  "native_observations": {
+    "repository_relative_path": ".agents/runtime/hp5-20261014/native-case-observations.json",
+    "sha256": "866ac4943a3a6d0650b9e1f13341fdc1d1591589cbf9843d10f2792ad2b05b8e"
+  },
+  "external_capture_or_policy_activation": false,
+  "active_product_application": false,
+  "review_acceptance": "PENDING_SEPARATE_REVIEW",
+  "held_entries": [
+    "W043",
+    "W044",
+    "W045"
+  ]
+}

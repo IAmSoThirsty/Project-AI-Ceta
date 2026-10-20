@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Untrusted Model Proposal — Truth Accountability",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "text"],
+  "properties": {
+    "kind": {"enum": ["quote", "paraphrase", "fact", "hypothesis"]},
+    "text": {"type": "string", "minLength": 1, "maxLength": 16384},
+    "source_id": {"type": "string"},
+    "span": {"type": "array", "prefixItems": [{"type": "integer", "minimum": 0}, {"type": "integer", "minimum": 1}], "minItems": 2, "maxItems": 2},
+    "scope": {"type": "object"},
+    "annotations": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "speech_act": {"enum": ["assertion", "question", "request", "offer", "commitment", "hypothesis", "experience_report", "unknown"]},
+        "modality": {"enum": ["asserted", "possible", "probable", "necessary", "unknown"]},
+        "negated": {"type": ["boolean", "null"]},
+        "quantifier": {"type": "string", "maxLength": 256},
+        "time_scope": {"type": "string", "maxLength": 256},
+        "spatial_scope": {"type": "string", "maxLength": 256},
+        "referent": {"type": "string", "maxLength": 256}
+      }
+    },
+    "policy": {"enum": ["standard", "high_stakes"]}
+  },
+  "allOf": [{"if": {"properties": {"kind": {"enum": ["quote", "paraphrase"]}}}, "then": {"required": ["source_id", "span"]}}]
+}

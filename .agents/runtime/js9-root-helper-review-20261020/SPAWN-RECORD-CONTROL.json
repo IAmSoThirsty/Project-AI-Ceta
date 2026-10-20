@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-20T10:55:28.195205+00:00",
+  "author": "/root",
+  "reviewer": "/root/recovery_regression20",
+  "mode": "FILE_AST_DATA_ONLY",
+  "scripts": {
+    "phase_coordinator.py": "4ecaecb74acea18f73246e5f87ec058e1300bda1b08f657a7965b3e043829429",
+    "issue_release.py": "60a5f888d7f2c87bfd8fec85dc828f194cbbe4ea1e68dc720b513ad5a4562a2b",
+    "run_reviewed.py": "236558a4a7aae98dd950482de53cc5b0a104a80c6de71cefd6310431165c7a7f"
+  },
+  "branches": [
+    {
+      "mode": "nonzero-terminal",
+      "synthetic_subprocess_calls": 1,
+      "actual_process_calls": 0,
+      "observed": {
+        "type": "SystemExit",
+        "message": "7",
+        "code": 7
+      },
+      "command_present": true,
+      "stdout_present": true,
+      "stderr_present": true,
+      "terminal_present": true
+    },
+    {
+      "mode": "spawn-exception",
+      "synthetic_subprocess_calls": 1,
+      "actual_process_calls": 0,
+      "observed": {
+        "type": "OSError",
+        "message": "CONTROLLED_CREATEPROCESS_REFUSED",
+        "code": null
+      },
+      "command_present": true,
+      "stdout_present": true,
+      "stderr_present": true,
+      "terminal_present": false
+    }
+  ],
+  "denied_events": [],
+  "actual_native_process_profile_socket_SQLite_operations": 0,
+  "finding": "ROOT-HELPER-01: process-creation exception leaves no terminal failure record",
+  "product_or_runtime_acceptance": false
+}

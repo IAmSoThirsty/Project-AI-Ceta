@@ -1,0 +1,150 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "node",
+    "complete",
+    "js9-runtime-r4-20261020",
+    "discover",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\lease-r2\\r4-discover-receipt.json",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\lease-r2"
+  ],
+  "exit_status": 0,
+  "response": {
+    "allowed": true,
+    "blocked": {
+      "evidence": "plan: predecessor state is PENDING",
+      "implement": "plan: predecessor state is PENDING",
+      "integrate": "validate: predecessor state is PENDING",
+      "review": "evidence: predecessor state is PENDING; implement: predecessor state is PENDING",
+      "validate": "review: predecessor state is PENDING"
+    },
+    "fingerprint_matches": true,
+    "graph_fingerprint": "72d2a71fc6c0c49ead2a39df87e634a4fd48ebf04087073db5dfaa46407643f3",
+    "graph_id": "ceta_js9_private_runtime_construction",
+    "nodes": {
+      "discover": {
+        "artifact_hash": "4c31914cd06b0134cea17ae73d33f9fa4cd49843e30aa49fa16c9480217e3118",
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T08:58:14.572549+00:00",
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": "/root/recovery_regression20",
+        "reason": "receipt and observed execution evidence validated",
+        "receipt_hash": "14c41cf795a16bb5bce1e070ec3f20fc23e439eaab572e8d1408b7cd1d5e3797",
+        "receipt_ref": "receipts/discover.json",
+        "state": "SUCCEEDED",
+        "validation_passed": true,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-20261020"
+      },
+      "evidence": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "plan: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "implement": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "plan: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "integrate": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "validate: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "plan": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "all hard predecessor requirements satisfied",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "READY",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "review": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "evidence: predecessor state is PENDING; implement: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "validate": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "review: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      }
+    },
+    "ready_now": [
+      "plan"
+    ],
+    "run_id": "js9-runtime-r4-20261020",
+    "sequence": 3,
+    "states": {
+      "discover": "SUCCEEDED",
+      "evidence": "PENDING",
+      "implement": "PENDING",
+      "integrate": "PENDING",
+      "plan": "READY",
+      "review": "PENDING",
+      "validate": "PENDING"
+    }
+  }
+}

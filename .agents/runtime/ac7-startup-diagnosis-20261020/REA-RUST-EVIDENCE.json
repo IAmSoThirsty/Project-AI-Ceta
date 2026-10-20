@@ -1,0 +1,78 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_ebaab34d447134bcdee04332fd57bcbf01e9d6805c174ba3eac615af8a66f3ab\",\"subject\":{\"name\":\"isolated_worker.exe\",\"digest\":{\"sha256\":\"3df03778e1e2f6f707d38b0869e04e262926f2d4c375f1d3d10562d3456443cc\"},\"local_path\":\"T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe\",\"format\":\"pe\",\"architecture\":\"x86_64\"},\"provider\":{\"id\":\"rust-auditable\",\"name\":\"REA Rust dependency reader\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_rust_binary\",\"parameters\":{\"path\":\"T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe\"},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe\",\"sha256\":\"3df03778e1e2f6f707d38b0869e04e262926f2d4c375f1d3d10562d3456443cc\",\"bytes\":4872606},\"format\":\"pe\",\"architecture\":\"amd64\",\"bits\":64,\"byte_order\":\"little\",\"auditable_metadata\":null,\"rustc_commit\":{\"evidence_kind\":\"inferred\",\"hashes\":[{\"hash\":\"31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd\",\"file_offset\":668350}]},\"limitations\":[\"Embedded dependency metadata is file content. It does not authenticate package names, versions, sources, or the compiler that produced the binary.\",\"Only the .dep-v0 dependency section and read-only compiler path strings are inspected. Functions, types, and runtime behavior are not recovered.\",\"Resource guards bound the selected file to 256 MiB, a dependency section to 1 MiB, inflated JSON to the smaller of 8 MiB and 64 times the section size, and the complete report to 8 MiB. Package and dependency counts are admitted against that output budget before schema cloning, graph objects, or reverse-edge allocation.\",\"No .dep-v0 section was found. Absence of .dep-v0 does not mean the binary has no dependencies.\",\"The rustc commit hash is inferred from a /rustc/<40-hex>/ path in read-only data. It does not by itself prove which compiler produced the binary.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Embedded dependency metadata is file content. It does not authenticate package names, versions, sources, or the compiler that produced the binary.\",\"Only the .dep-v0 dependency section and read-only compiler path strings are inspected. Functions, types, and runtime behavior are not recovered.\",\"Resource guards bound the selected file to 256 MiB, a dependency section to 1 MiB, inflated JSON to the smaller of 8 MiB and 64 times the section size, and the complete report to 8 MiB. Package and dependency counts are admitted against that output budget before schema cloning, graph objects, or reverse-edge allocation.\",\"No .dep-v0 section was found. Absence of .dep-v0 does not mean the binary has no dependencies.\",\"The rustc commit hash is inferred from a /rustc/<40-hex>/ path in read-only data. It does not by itself prove which compiler produced the binary.\"],\"relationship_coverage\":null,\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe\"}],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_ebaab34d447134bcdee04332fd57bcbf01e9d6805c174ba3eac615af8a66f3ab",
+    "subject": {
+      "name": "isolated_worker.exe",
+      "digest": {
+        "sha256": "3df03778e1e2f6f707d38b0869e04e262926f2d4c375f1d3d10562d3456443cc"
+      },
+      "local_path": "T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe",
+      "format": "pe",
+      "architecture": "x86_64"
+    },
+    "provider": {
+      "id": "rust-auditable",
+      "name": "REA Rust dependency reader",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis",
+    "operation": "inspect_rust_binary",
+    "parameters": {
+      "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "artifact": {
+        "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe",
+        "sha256": "3df03778e1e2f6f707d38b0869e04e262926f2d4c375f1d3d10562d3456443cc",
+        "bytes": 4872606
+      },
+      "format": "pe",
+      "architecture": "amd64",
+      "bits": 64,
+      "byte_order": "little",
+      "auditable_metadata": null,
+      "rustc_commit": {
+        "evidence_kind": "inferred",
+        "hashes": [
+          {
+            "hash": "31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd",
+            "file_offset": 668350
+          }
+        ]
+      },
+      "limitations": [
+        "Embedded dependency metadata is file content. It does not authenticate package names, versions, sources, or the compiler that produced the binary.",
+        "Only the .dep-v0 dependency section and read-only compiler path strings are inspected. Functions, types, and runtime behavior are not recovered.",
+        "Resource guards bound the selected file to 256 MiB, a dependency section to 1 MiB, inflated JSON to the smaller of 8 MiB and 64 times the section size, and the complete report to 8 MiB. Package and dependency counts are admitted against that output budget before schema cloning, graph objects, or reverse-edge allocation.",
+        "No .dep-v0 section was found. Absence of .dep-v0 does not mean the binary has no dependencies.",
+        "The rustc commit hash is inferred from a /rustc/<40-hex>/ path in read-only data. It does not by itself prove which compiler produced the binary."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "Embedded dependency metadata is file content. It does not authenticate package names, versions, sources, or the compiler that produced the binary.",
+      "Only the .dep-v0 dependency section and read-only compiler path strings are inspected. Functions, types, and runtime behavior are not recovered.",
+      "Resource guards bound the selected file to 256 MiB, a dependency section to 1 MiB, inflated JSON to the smaller of 8 MiB and 64 times the section size, and the complete report to 8 MiB. Package and dependency counts are admitted against that output budget before schema cloning, graph objects, or reverse-edge allocation.",
+      "No .dep-v0 section was found. Absence of .dep-v0 does not mean the binary has no dependencies.",
+      "The rustc commit hash is inferred from a /rustc/<40-hex>/ path in read-only data. It does not by itself prove which compiler produced the binary."
+    ],
+    "relationship_coverage": null,
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/ac7-token-contract-20261020/q-6be3c32cb832461093c6d15dc9c538f8/build-r2/isolated_worker.exe"
+      }
+    ],
+    "evidence_links": []
+  }
+}

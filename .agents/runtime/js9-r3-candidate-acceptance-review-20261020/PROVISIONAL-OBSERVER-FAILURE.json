@@ -1,0 +1,76 @@
+{
+  "at": "2026-10-20T11:15:46.416988+00:00",
+  "status": "PROVISIONAL_CASE_FAILURE_FULL_RUN_NOT_TERMINAL",
+  "reviewer": "/root/recovery_join_review20",
+  "case": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+  "events": [
+    {
+      "event": "PREPARE",
+      "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+      "at": "2026-10-20T11:09:14.173427+00:00",
+      "elapsed_seconds": 392.57139999998617
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+      "at": "2026-10-20T11:09:14.377463+00:00",
+      "elapsed_seconds": 392.7753786999965
+    },
+    {
+      "event": "FAILURE",
+      "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+      "at": "2026-10-20T11:09:15.465749+00:00",
+      "elapsed_seconds": 393.86360690000583,
+      "traceback": "ceta.contracts.wire.ContractError: OBSERVER_PROCESS_TIMEOUT at $\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\tests\\contract\\test_native_effect_observer.py\", line 422, in test_actual_overlong_native_pipe_output_is_rejected_and_retired\n    with self.assertRaisesRegex(ContractError,'OBSERVER_OUTPUT_OVERLONG'):self.call(observer,self.request(code))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"OBSERVER_OUTPUT_OVERLONG\" does not match \"OBSERVER_PROCESS_TIMEOUT at $\"\n"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+      "at": "2026-10-20T11:09:15.466394+00:00",
+      "elapsed_seconds": 393.86561280000024
+    }
+  ],
+  "live_source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\CASE-EVENTS.jsonl",
+  "captured_case_lines_sha256": "bf6bc0e22740d970085df5a42b424b58602b0d055674957112468930ef4ea9ca",
+  "frozen_source": {
+    "repository_relative_path": ".agents/js9-runtime-r5-20261020/src/ceta/effects/native_observer.py",
+    "sha256": "658cc277dcda70547150a39eb76de45ea4a2e0ec36652c94741cb59d290e6e7f"
+  },
+  "original_test": {
+    "repository_relative_path": ".agents/js9-runtime-r5-20261020/tests/contract/test_native_effect_observer.py",
+    "sha256": "671262ede1e04253bb5e276a913c85c673ff7dd46a7d884cb091fa7760bb0ecf"
+  },
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET.json",
+    "sha256": "32575147e478c63ead51c6269af9e22eebe06ccdc74619cdb04e46231fe9ac82"
+  },
+  "preflight": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/PREFLIGHT.json",
+    "sha256": "6341d24a18e59d47a50e8ca8d71cdd156a3536264dabd9121075766054bc9270"
+  },
+  "early_original_case_proof": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/NATIVE-CASE-EARLY-PROOF.json",
+    "sha256": "6edebcb7a21e7bc87113290870055400b548b4b25423165e747089e34e614dbb"
+  },
+  "source_analysis": {
+    "deadline_created_at": "observe:421-422 before _exchange pipe creation/launch/write",
+    "deadline_checked_at": "_exchange:360 before PeekNamedPipe:364, output bound:370 and process poll:376",
+    "transport_state_initialized_at": "_exchange:356-357 after WriteFile and input closure",
+    "test_maximum_duration_ns": 1000000000,
+    "test_required_error": "OBSERVER_OUTPUT_OVERLONG"
+  },
+  "established": "The exact original test failed on timeout versus its required overlong-output rejection.",
+  "hypotheses": [
+    "Budget may have expired before the first completed poll; final transport_state is required."
+  ],
+  "unresolved": [
+    "Where time was spent between deadline creation and transport loop.",
+    "Final failure count, complete native retirement and full terminal result."
+  ],
+  "no_wait_before_drain_claim": true,
+  "Source_publication_accepted": false,
+  "full_candidate_accepted": false,
+  "native_or_test_rerun": false,
+  "deadline_or_test_change": false,
+  "actual_review_CLI_claim": false
+}

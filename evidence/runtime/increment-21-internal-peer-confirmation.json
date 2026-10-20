@@ -1,0 +1,50 @@
+{
+  "kind": "ROOT_RECORDED_INTERNAL_MODEL_DELIVERY_REVIEW",
+  "result": "NO_BYTE_OR_JOIN_MISMATCH_REPORTED_IN_ASSIGNED_SCOPE",
+  "agent": "/root/volume_xi_reconciliation",
+  "observed_final_pin_check_at_utc": "2026-10-08T12:34:59.569235Z",
+  "state_sha256": "751a9ffc3ee6c4f31d234fee2f581e7e4640d6bcf05d0ca76ae9d5cd8b69f207",
+  "plan_sha256": "5fb13df9ead7e3c017ace58332f53facd71421f247f500c26a335fe2bf4be11a",
+  "delivery_receipt_sha256": "482c488e1b157b6d18f65c5e8251535fb9303322a9a7b6e4994dbacfcf222f23",
+  "zip_sha256": "7b519a368f02b5e44683a8a38b89bfb48596d9e530a4d2dbf5c012476e8cac73",
+  "root_confirmation_sha256": "193b8400122dcf9a403902d890e4da4e618ed0b61b6c760a2810bbe58860ea6f",
+  "peer_reported_fresh_byte_checks": {
+    "plan_rows": 217,
+    "source_stage_destination_role_checks": 651,
+    "zip_members_per_role": 216,
+    "zip_roles": 3,
+    "app_inventory_files": 108,
+    "current_watched_test_source_hashes": 106,
+    "raw_test_rows_all_pass": 233,
+    "s_and_d_state_map_entries": 1103,
+    "current_ledger_hashes": 5,
+    "before_ledger_copy_hashes": 5,
+    "created_record_hashes": 3,
+    "read_input_hashes": 57,
+    "checkpoint_proposal_receipt_joins": 34,
+    "mismatches": 0
+  },
+  "peer_metadata_only_scope": {
+    "retained_root_entries": 711,
+    "qualification": "NOT_FRESHLY_REHASHED_BY_THIS_PEER;ROOT_SEPARATE_CONFIRMATION_RECORDS_ACTUAL_CHECKS"
+  },
+  "pre_copy_hostile_review": {
+    "agent": "/root/volume_xii_reconciliation",
+    "observed_at_utc": "2026-10-08T12:27:33.123141Z",
+    "copy_helper_sha256": "12483664fbf7252ecc47216cd3b21aebf06847197406b56ea41aae4af1c1ee92",
+    "result": "NO_CONCRETE_PRE_COPY_BLOCKER_FOUND",
+    "source_stage_role_checks": 434,
+    "zip_members_verified": 216,
+    "qualification": "READ_ONLY_CODE_AND_BYTE_REVIEW;COPY_NOT_EXECUTED_BY_PEER"
+  },
+  "root_personal_verification": "Root actual final checker independently rehashed1814 current mapped entries plus historical preservation and all651 file roles/all648 ZIP member roles at12:29:29.007677Z; exact resulting confirmation digest above",
+  "full_scope": {"requirements":175,"components":25,"packages":28,"volumes":20,"lifecycle_sections":406,"original_cases":128,"formal_gates":8},
+  "original_acceptance": "128_NOT_RUN",
+  "formal_gates": "8_NOT_EVALUATED",
+  "gate_a": "OPEN",
+  "independence": "INTERNAL_MODEL_PEER_REVIEW;NO_HUMAN_OR_EXTERNAL_ACCEPTANCE",
+  "code_or_test_execution_by_peer": "NOT_RUN",
+  "full_objective": "ACTIVE_NOT_COMPLETE",
+  "product_qualification": "NOT_RUN",
+  "evidence_boundary": "After-package companion record; no historical state, ZIP, report or ledger bytes rewritten"
+}

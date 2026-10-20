@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-08T12:12:31.666794+00:00",
+  "status": "IMPLEMENTED_NOT_QUALIFIED",
+  "owner": "CMP-03",
+  "application_root": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios",
+  "specification_root": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package",
+  "implementation_sha256": {
+    "src/ceta/store/journal.py": "3bb496fbc5921bd15877c5de5f78381e3061cb062ad282655f979816ea13dd92",
+    "tests/contract/test_history.py": "0b1a676a850270ec7fbdd78eb96696d9c8347133136c8e80a6dc11343f0aa91c",
+    "contracts/DURABLE_HISTORY_V1.md": "62b0fdf44e3f9e721b02e88437f39589919874041263841426511e8544123bef",
+    "src/ceta/contracts/store_transactions.py": "d9dfe402c4f98420fea2d625ad2ec0bf7504b8321c9bc33dea547bad6080af7a",
+    "src/ceta/store/state.py": "117172514d904dfc7ec50b46cfbf71972feecbcfafd3c1e5cf3917863604510a",
+    "tests/contract/test_store_transactions.py": "3d6305d247960faca1f7665cdb0b295bf32fe7565055ceb9adfcb7f14d137bcb",
+    "contracts/STORE_TRANSACTION_V2.md": "1ac02ddc87383e4ac2592875e86e1cfbffa6c7c7d00351d1784f9008d4f0f30b"
+  },
+  "fresh_tests": {
+    "receipt": "evidence/runtime/desktop-transactions-final-21-05.json",
+    "sha256": "9714777f5f65fd75628e0c2dbd6118ccf6eba9367e533301c4fbb118e5c6b79c",
+    "observed_at_utc": "2026-10-08T12:05:18.429070+00:00",
+    "tests": 233,
+    "new_since_increment20": 27,
+    "rerun": 206,
+    "watched_paths": 106
+  },
+  "mechanics": "Explicit v2 profile; original events across scopes, grants/budget/reservation/permit/intent/queue/projection cells, exact state expectations and immutable reconstruction metadata commit once. V1 default and denial codes preserved; no automatic migration.",
+  "findings_fixed": [
+    "BaseException transaction unwind",
+    "transaction/event chronology",
+    "Boolean persisted counters",
+    "mutable commit containers",
+    "test scope for actual tail rollback and shared-state race"
+  ],
+  "failure_evidence": [
+    ".local-build-cache/increment-21-transactions/baseexception-first-failure-21-01.json",
+    "evidence/runtime/desktop-transactions-regressions-21-02.json"
+  ],
+  "volume19_rule_bodies": {
+    "checkpoint": 17,
+    "new_model_reads": 621,
+    "historical_model_reads": 10,
+    "total": 631,
+    "unread": 0,
+    "root_byte_index_validation": "evidence/runtime/volume19-semantic-root-validation-21-01.json",
+    "read_is_not_adoption_or_conformance": true,
+    "pdf_full_page_or_visual_review": "NOT_ESTABLISHED_BY_THIS_RULE_BODY_JOB"
+  },
+  "owner_limits": "Authenticated writer/IPC, complete kernel dependency selection, legal event/transition reducers, budget charging/conservation, single-use consume/revoke, protected resources, actual time/approval and effect admission remain open. Internal metadata and checkpoints confer no authority. Power-loss, installed, independent, hardware and endurance qualification NOT_RUN.",
+  "next_safe_action": "Implement actual kernel-owned prepare/consume/revoke transactions against this store with complete owner-selected read sets, exact budget/intent semantics and both revoke/consume orderings; connect authenticated identity/resource/time/approval owners before any effect admission. Continue remaining source decisions and all qualification lanes.",
+  "gate_a": "OPEN",
+  "original_cases": "128_NOT_RUN",
+  "formal_gates": "8_NOT_EVALUATED",
+  "full_objective": "ACTIVE_NOT_COMPLETE"
+}

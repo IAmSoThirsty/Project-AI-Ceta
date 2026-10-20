@@ -1,0 +1,78 @@
+{
+  "schema_version": "ceta.current-status.v1",
+  "author": "/root",
+  "source_root": "T:\\00-Active\\Project-AI-CETA",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\ct3-20261014",
+  "payloads": [
+    {
+      "relative_path": "build/progress.json",
+      "active_before_sha256": "e50a5dc134746f9b730cd6d24eecb610716cc52b0193e5baa007d21a4946f7ff",
+      "candidate_sha256": "83d73dac191dd1ae4a170214b3eccebad7c1019c5fa45f9ae608b586132655de",
+      "allowed_changed_keys": [
+        "current_repository_execution_20261014",
+        "repository_execution_history_20261014"
+      ],
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "source_native_identity": {
+        "device": 154504856318070761,
+        "inode": 281474979433324,
+        "mode": 33206,
+        "bytes": 27056,
+        "mtime_ns": 1791973019476006200,
+        "attributes": 32
+      }
+    },
+    {
+      "relative_path": "handoff/continuity.json",
+      "active_before_sha256": "bd83f174ea5ef5e06955fd25a42798d24c89f69d61833fef1bbe767b30aa5430",
+      "candidate_sha256": "baff6bba93b8f8c277b651f031ee9dc13207d5b84984c0def59e7bda30f2f5c3",
+      "allowed_changed_keys": [
+        "current_deliverable",
+        "current_increment_tests",
+        "current_repository_execution_20261014",
+        "historical_fields_before_ct3_20261014",
+        "latest_increment_working_record",
+        "latest_source_integrity",
+        "latest_source_tests",
+        "latest_state_check_freshness",
+        "next_action",
+        "repository_execution_history_20261014"
+      ],
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "source_native_identity": {
+        "device": 154504856318070761,
+        "inode": 281474979433319,
+        "mode": 33206,
+        "bytes": 107772,
+        "mtime_ns": 1791973019464980100,
+        "attributes": 32
+      }
+    }
+  ],
+  "application_paths": [
+    "build/progress.json",
+    "handoff/continuity.json"
+  ],
+  "runtime_code_changes": 0,
+  "global_gate_or_requirement_changes": 0,
+  "earlier_observations_preserved": true,
+  "source_suite": {
+    "repository_relative_path": ".agents/runtime/rs-owner2-20261014/active-application/destination-full-r1.json",
+    "sha256": "352491e61571b6b3987b749801ae19d9e149f8d02525e40e94e0e73ef9bf812b"
+  },
+  "accepted_source_ledger": {
+    "run_id": "rs-owner2-20261014",
+    "sequence": 13,
+    "claims": {},
+    "accepted_at": "2026-10-14T16:58:43.404955+00:00",
+    "integrate_receipt": {
+      "repository_relative_path": ".agents/runtime/rs-owner2-20261014/integrate.json",
+      "sha256": "a6d05e4a3f90481a1121b16971ee1bce479b1eeda2491b9a54dad49b4a89e7f4"
+    },
+    "acceptance": {
+      "repository_relative_path": ".agents/runtime/rs-owner2-20261014/actual-acceptance.json",
+      "sha256": "a967e4002dcbb6796da9d4c2b6ba602a3a49a3b9265e6218a10a8246d0ac113a"
+    }
+  },
+  "candidate_state": "PENDING_DISTINCT_REVIEW"
+}

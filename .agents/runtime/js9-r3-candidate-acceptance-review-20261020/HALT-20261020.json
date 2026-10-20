@@ -1,0 +1,216 @@
+{
+  "at": "2026-10-20T11:35:33.743745+00:00",
+  "state": "USER_REQUESTED_SAFE_HALT",
+  "reviewer": "/root/recovery_join_review20",
+  "decision": "reject_full_acceptance",
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET.json",
+    "sha256": "32575147e478c63ead51c6269af9e22eebe06ccdc74619cdb04e46231fe9ac82"
+  },
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/MANIFEST-Q5.json",
+    "sha256": "cce2c8e2c3a31fbedf5c2d83b2d15d499a93030c38ebe0c1e4545b868ef99acf"
+  },
+  "full_result": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/RESULT.json",
+    "sha256": "cecf080e81e5d1ace86738f1f0ac05cdccbc704e13e625ffc5471ca2c44f711f"
+  },
+  "launch": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full-LAUNCH-RESULT.json",
+    "sha256": "bd8f78e8e9a4880fb057e7acdacae2e8cdbedd6fe154b7f7368bca2b0e063405"
+  },
+  "Root_terminal": {
+    "repository_relative_path": ".agents/runtime/js9-root-r3-execution-20261020/candidate-full-TERMINAL.json",
+    "sha256": "d5575fe6e43b76a4e8e2f8abe76a6338cda8d1c2c86d34d11ed00d524f0cadd1"
+  },
+  "Root_terminal_exit": 1,
+  "Root_terminal_finished_at": "2026-10-20T11:28:52.567558+00:00",
+  "actual_event_counts": {
+    "PREPARE": 2622,
+    "START": 2622,
+    "STOP": 2622,
+    "FAILURE": 1
+  },
+  "exact2622_sequences": {
+    "PREPARE": true,
+    "START": true,
+    "STOP": true
+  },
+  "diagnostic_events": [
+    {
+      "event": "FAILURE",
+      "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+      "at": "2026-10-20T11:09:15.465749+00:00",
+      "elapsed_seconds": 393.86360690000583,
+      "traceback": "ceta.contracts.wire.ContractError: OBSERVER_PROCESS_TIMEOUT at $\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\tests\\contract\\test_native_effect_observer.py\", line 422, in test_actual_overlong_native_pipe_output_is_rejected_and_retired\n    with self.assertRaisesRegex(ContractError,'OBSERVER_OUTPUT_OVERLONG'):self.call(observer,self.request(code))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"OBSERVER_OUTPUT_OVERLONG\" does not match \"OBSERVER_PROCESS_TIMEOUT at $\"\n"
+    }
+  ],
+  "raw": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/RAW.txt",
+    "sha256": "a3d49780f7dcfb38314d53048cab8ec5672626ed4d0a15a257f7860358ee9b9e"
+  },
+  "raw_terminal_summary": [
+    "",
+    "----------------------------------------------------------------------",
+    "Ran 2622 tests in 1567.362s",
+    "",
+    "FAILED (failures=1)"
+  ],
+  "fallback": {
+    "tests_run": 0,
+    "executed_ids": 0,
+    "stopped_ids": 0,
+    "suite_aborted": true,
+    "primary_error": {
+      "type": "KeyError",
+      "message": "'native_after_fixture_cleanup'",
+      "traceback": "Traceback (most recent call last):\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 213, in main\n    report=execute(args,release,v,gate,progress)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 166, in execute\n    physical_proof=physical.finish();native_proof=native.finish()\n                                                  ^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 358, in finish\n    native_capacity_custody_retired=bool(capacity.NATIVE_CUSTODY_RECEIPTS) and all(\n                                                                               ^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 359, in <genexpr>\n    row['native_after_fixture_cleanup']['state']==4 and not row['registered_after_fixture_cleanup']\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'native_after_fixture_cleanup'\n",
+      "secondary_errors": []
+    }
+  },
+  "contradiction": "RAW and case events record completion of2622 cases with1failure. RESULT fallback reports tests_run0/executed0 because post-test native diagnostic assembly raised KeyError. Neither record is rewritten.",
+  "outer_owned_child": {
+    "timeout_seconds": 3600,
+    "native_owner": {
+      "pid": 17832,
+      "creation_time": 134369677281333036,
+      "image_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14"
+    },
+    "child_exit": 1,
+    "primary_error": null,
+    "retirement_error": null,
+    "construction_custody": null,
+    "native_owner_after": {
+      "closed": true,
+      "process_closed": true,
+      "thread_closed": true,
+      "job_closed": true,
+      "startup_handles_closed": true
+    },
+    "child_result": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/RESULT.json",
+      "sha256": "cecf080e81e5d1ace86738f1f0ac05cdccbc704e13e625ffc5471ca2c44f711f"
+    },
+    "automatic_cleanup_retry": false
+  },
+  "native_case_proof": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/NATIVE-CASE-PROOF.json",
+    "sha256": "6edebcb7a21e7bc87113290870055400b548b4b25423165e747089e34e614dbb"
+  },
+  "original_native_case": {
+    "passed": true,
+    "entered": true,
+    "attempted": true,
+    "precise_denial_matched": true,
+    "release_reader_closed": true,
+    "native_calls": [
+      {
+        "step": "restricted_CreateProcessW",
+        "returned": true,
+        "succeeded": false,
+        "winerror": 2
+      }
+    ],
+    "handles": 7,
+    "sockets": 3,
+    "no_profile_create_delete": true
+  },
+  "SQLite_recorded_flags": {
+    "test_journal_constructor_cleanup": {
+      "records": 13,
+      "exact_closure_field": "all_fixture_native_connections_closed",
+      "all_recorded_flags_true": true
+    },
+    "test_journal_postconstruction_cleanup": {
+      "records": 26,
+      "exact_closure_field": "all_exact_native_connections_closed",
+      "all_recorded_flags_true": true
+    }
+  },
+  "missing_required_full_proofs": [
+    "PHYSICAL-CUSTODY.json",
+    "NATIVE-OWNERS.json"
+  ],
+  "closure_limit": "Outer runner/job retirement is recorded. Complete physical/native resource closure and failed-case transport_state are not established because required full proof files were not published.",
+  "negative_input_gap": {
+    "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/NEGATIVE-INPUT-INVENTORY.json",
+    "sha256": "ea9358094eee40b51d4e451ebfb07a97a4a9744a6e02fc30145f2e25c3ff2ae9"
+  },
+  "provisional_failure": {
+    "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/PROVISIONAL-OBSERVER-FAILURE.json",
+    "sha256": "74c73a7392792e5885753ff147b7c3b0781d69a03a2f20ea9739b30299de4deb"
+  },
+  "dormant_diagnostic": {
+    "tool": {
+      "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/diagnostic-r1/observer_diagnostic.py",
+      "sha256": "7261e7896ceac93c30946a8a3209ab1e1603d7dc192b368d29a540dde9bd7453"
+    },
+    "manifest": {
+      "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/diagnostic-r1/MANIFEST.json",
+      "sha256": "6435e7fafa556beb1436c532e5c2c525c574124b82bc840abea5258efcf5b365"
+    },
+    "controls": {
+      "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/diagnostic-r1/PURE-CONTROLS.json",
+      "sha256": "7ef341d0a9111091a52f3993215edee29b26cd2a38fac344e0061a9d7979a115"
+    },
+    "attempt_marker_exists": false,
+    "run_directory_exists": false,
+    "executed": false,
+    "Root_personal_review_pending": true
+  },
+  "prepared_full_verifier_executed": false,
+  "own_CLI_claims": [],
+  "coordinator_observed_node_states": {
+    "candidate_cache": "RUNNING",
+    "candidate_fixtures": "RUNNING",
+    "destination_evidence": "PENDING",
+    "destination_fixtures": "PENDING",
+    "discover": "SUCCEEDED",
+    "implement": "RUNNING",
+    "integrate": "PENDING",
+    "plan": "SUCCEEDED",
+    "review": "PENDING",
+    "validate": "PENDING"
+  },
+  "coordinator_claims": {
+    "candidate_cache": {
+      "executor": "/root",
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.local-test-output"
+    },
+    "candidate_fixtures": {
+      "executor": "/root",
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures"
+    },
+    "implement": {
+      "executor": "/root",
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3"
+    }
+  },
+  "coordinator_observation": {
+    "state": {
+      "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/HALT-COORDINATOR-STATE.json",
+      "sha256": "48e08f6098a915f1ce50ddef489e2b6bec61dd4fc709810f1fa2eeae419e4279"
+    },
+    "claims": {
+      "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/HALT-COORDINATOR-CLAIMS.json",
+      "sha256": "ddda76d643ac58dc207bd84f8583fb4c631db3766a3ce37662ae5e570d9464bb"
+    },
+    "stable_through_read": true
+  },
+  "Root_owns_claim_finalization": true,
+  "own_commands_running": 0,
+  "own_native_resources_created": 0,
+  "candidate_no_profile_operations_consumed": 1,
+  "destination_no_profile_operations_unused": 1,
+  "diagnostic_operations_executed": 0,
+  "Source_publication": false,
+  "new_Source_baseline_accepted": false,
+  "next_steps_after_explicit_user_resume": [
+    "Inspect Root final FAILED main/fixture/cache receipts and recheck source/input pins.",
+    "Repair post-test receipt schema handling in a new reviewed cut without rewriting this failed run.",
+    "Root personally reviews the frozen diagnostic before deciding whether to execute one ordinary observation; no automatic execution on restart.",
+    "Pin exact negative images and lineage in the successor input cut. Diagnose timeout from sufficient new evidence without increasing deadlines or weakening the original test.",
+    "Any later full candidate repetition must account for the already-consumed candidate no-profile attempt; no retry approval is inferred."
+  ],
+  "no_tests_repairs_diagnostic_or_publication_started_after_halt": true
+}

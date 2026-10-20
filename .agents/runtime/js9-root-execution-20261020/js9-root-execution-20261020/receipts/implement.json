@@ -1,0 +1,131 @@
+{
+  "changed_files": [
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full-LAUNCH-ATTEMPT.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full-LAUNCH-OWNER.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full-LAUNCH-RESULT.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/NATIVE-CASE-PROOF.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/RESULT.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/crash-fixture-scripts/_fixture_paths.py",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/crash-fixture-scripts/test_kernel_transactions.py",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/crash-fixture-scripts/test_resource_reservations.py",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/isolation-harness/src/ceta/supervisor/isolated_worker.py",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/isolation-harness/src/ceta/supervisor/windows_jobs.py",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/consumed/nonce-280621909a1046a89150480e7596b5fb.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/consumed/release-22df8856f7709bd67ad6b528f195c747117e00032b1f8c570cd39b63a38013ce.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_observer_r2-CORROBORATION.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_observer_r2-LAUNCH-ATTEMPT.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_observer_r2-LAUNCH-OWNER.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_observer_r2/native.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_observer_r2/native.txt",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_store_r2-CORROBORATION.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_store_r2-LAUNCH-ATTEMPT.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_store_r2-LAUNCH-OWNER.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_store_r2/RAW.txt",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/native_store_r2/RESULT.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/releases/candidate-full-r2.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/releases/native-case-candidate-full.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/releases/native-observer-r2.json",
+    ".agents/runtime/js9-runtime-20261020/successor-r2/releases/native-store-r2.json"
+  ],
+  "commands": [
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\launch_native.py native-store native_store_r2 --release-path T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-store-r2.json --release-sha256 919cd03c47c67a22058109b5def8233e518c705d47e0ab8cf01e6d7d28d481da",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\launch_native.py native-observer native_observer_r2 --release-path T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-observer-r2.json --release-sha256 6a4b6a4bff5422c268e4aadafa34a9bce91a8165b96140e9e3986a41e46e3579",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\launch_full.py candidate-full --release-path T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\candidate-full-r2.json --release-sha256 71b2ecefbea7bbded786ef3f3f580083782bdd9ef9280ca8d8b0c438419ac5ae",
+      "exit_status": 1
+    }
+  ],
+  "executor_id": "/root",
+  "exit_status": 1,
+  "finished_at": "2026-10-20T10:41:46.207277+00:00",
+  "git_baseline": {
+    "available": true,
+    "diff_hash": "2ce0f7867e59ab9f506c36df95073aca8aef5d17f6405a6ac78ccb0a23e912bd",
+    "git_changed_files": [
+      ".gitignore",
+      "AGENTS.md",
+      "CODEX_BOOTSTRAP_PROMPT.md",
+      "README.md",
+      "START_HERE.md",
+      "architecture/components.json",
+      "build/progress.json",
+      "build/work_packages.json",
+      "contracts/README.md",
+      "decisions/decision_register.json",
+      "handoff/continuity.json",
+      "requirements/requirements.json",
+      "src/ceta/reasoning/__init__.py",
+      "src/ceta/reasoning/adapter.py",
+      "src/ceta/reasoning/assessment.py",
+      "src/ceta/reasoning/shadow.py",
+      "src/ceta/reasoning/source_loader.py",
+      "standards/lifecycle_coverage.json",
+      "tools/README.md"
+    ],
+    "head": "83fc9432b4a37ee7f91d6c5b0d358a015548aed4",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "6a20c00689411c27cfce88ca57dbdeeb7598c07fe9964d454dc28db1d1a0e58b"
+  },
+  "input_hash": "6fa8de149930445666ab5d05b4a86688f6d69a99c9585db6e11947832f79615c",
+  "node_id": "implement",
+  "observed_git": {
+    "available": true,
+    "diff_hash": "2ce0f7867e59ab9f506c36df95073aca8aef5d17f6405a6ac78ccb0a23e912bd",
+    "git_changed_files": [
+      ".gitignore",
+      "AGENTS.md",
+      "CODEX_BOOTSTRAP_PROMPT.md",
+      "README.md",
+      "START_HERE.md",
+      "architecture/components.json",
+      "build/progress.json",
+      "build/work_packages.json",
+      "contracts/README.md",
+      "decisions/decision_register.json",
+      "handoff/continuity.json",
+      "requirements/requirements.json",
+      "src/ceta/reasoning/__init__.py",
+      "src/ceta/reasoning/adapter.py",
+      "src/ceta/reasoning/assessment.py",
+      "src/ceta/reasoning/shadow.py",
+      "src/ceta/reasoning/source_loader.py",
+      "standards/lifecycle_coverage.json",
+      "tools/README.md"
+    ],
+    "head": "83fc9432b4a37ee7f91d6c5b0d358a015548aed4",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "6a20c00689411c27cfce88ca57dbdeeb7598c07fe9964d454dc28db1d1a0e58b"
+  },
+  "receipt_hash": "6e22b6874839a3be4d853e5b361af21dac4d46fd57d795200caccac71d55f67d",
+  "result": {
+    "Source_accepted": false,
+    "cause": "Missing two same-project test helper dependencies; actual discovery records retained separately",
+    "disposition": "FAILED_BEFORE_TEST_EXECUTION",
+    "full_tests_run": 0,
+    "native_observer_cases_passed": 6,
+    "native_store_cases_passed": 18,
+    "no_profile_attempt_consumed": false,
+    "publication_performed": false,
+    "successor": "Fresh dependency-complete candidate and corrected runner; frozen R2 preserved",
+    "terminal_sha256": "18651e46b1e3ce1196d949db94841b67b28d61cbb0b0671bcd85b0cd62735ee2"
+  },
+  "run_id": "js9-root-execution-20261020",
+  "schema_version": 1,
+  "started_at": "2026-10-20T10:22:04.292065+00:00",
+  "validations": [
+    {
+      "name": "full_candidate_acceptance",
+      "passed": false
+    },
+    {
+      "name": "authorized_no_profile_case_was_not_entered_or_attempted",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "recorded_at": "2026-10-20T11:37:20.016443+00:00",
+  "status": "HALTED_INCOMPLETE_FOR_CODEX_RESTART",
+  "user_requested_safe_halt": true,
+  "project": "T:\\00-Active\\Project-AI-CETA",
+  "candidate": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020",
+  "files": {
+    "capture_core.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\capture_core.py",
+      "bytes": 9794,
+      "sha256": "0c346fced0336df0985e8d1395ffd70be052d3ff205f016dca853f981a104ab4",
+      "physical_lines": 215
+    },
+    "isolated_adapter.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\isolated_adapter.py",
+      "bytes": 18975,
+      "sha256": "e6f937fb0da0ad2547129b20160cb75429510f1d5235306bfc99094d3643dea6",
+      "physical_lines": 341
+    },
+    "test_loader_capture.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\test_loader_capture.py",
+      "bytes": 17936,
+      "sha256": "69f40bfdf024b1fd4e15807f39d519907e45a0a098fffea8fedc4e9f379c41df",
+      "physical_lines": 275
+    },
+    "win32_debug.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\win32_debug.py",
+      "bytes": 16790,
+      "sha256": "220a94da19275058f824400d4720159c8b5617c308607ce74feb7905af847218",
+      "physical_lines": 333
+    }
+  },
+  "source_physical_lines": 889,
+  "test_physical_lines": 275,
+  "latest_test_result": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\records\\pure-r2\\RESULT.json",
+    "bytes": 4466,
+    "sha256": "400c120a9f6825ed4965d570e17b766fe5a5f452df47c7d2db6d1a89558e43f0",
+    "tests_run": 28,
+    "exit_status": 0,
+    "native_qualification": false
+  },
+  "earlier_test_result": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\records\\pure-r1\\RESULT.json",
+    "bytes": 4050,
+    "sha256": "d2244ad06174b953f9cf7c0278fb03effb2866337476f250ddbc964ceca15d78",
+    "tests_run": 24,
+    "exit_status": 0
+  },
+  "test_command": [
+    "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\records\\run_pure_r2.py"
+  ],
+  "terminal_handles": {
+    "latest_pure": "62543a",
+    "earlier_pure": "da9468",
+    "both_exit_status": 0
+  },
+  "active_owned_tool_sessions": [],
+  "live_debugger_worker_profile_or_effect_operations_started": false,
+  "owned_native_children_or_handles_acquired": false,
+  "native_resources_claim_basis": "This lane executed only guarded pure deterministic tests; no live debugger, fixture worker, AppContainer, listener, credential or host configuration operation was started.",
+  "canonical_source_or_other_candidate_writes_from_this_lane": false,
+  "acceptance": {
+    "implementation_complete": false,
+    "named_review_complete": false,
+    "native_qualified": false,
+    "failing_dll_attribution": "UNKNOWN"
+  },
+  "unfinished": [
+    "Create and pin exact INPUTS.json and code manifest; no live release has been issued.",
+    "Finish concrete caller integration and operational handoff for the existing owned AC7 launcher.",
+    "Inspect and test remaining acquisition/unknown-return custody boundaries before freezing a final reviewed tool cut.",
+    "Obtain named independent review; no review is started at this halt.",
+    "Any future live debugger or child instrumentation requires a separate exact reviewed release."
+  ],
+  "restart_point": "After user resume, reacquire fresh exclusive Q and records scopes; read this checkpoint and the current four files. Continue incomplete input/caller/custody work. Do not rerun tests, create a profile, or launch a debugger automatically.",
+  "skills_used": [
+    "protocol-interoperability-auditor"
+  ],
+  "governing_version": "thirsty-constitution-v0.1"
+}

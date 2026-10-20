@@ -1,0 +1,2070 @@
+{
+  "schema_version": "1",
+  "recorded_at_utc": "2026-10-08T04:50:40.635223+00:00",
+  "record_class": "BOUNDED_WORKING_SOURCE_RECONCILIATION_NOT_RIVAL_AUTHORITY",
+  "objective": "Ship This as a Finished Product.",
+  "objective_state": "ACTIVE_NOT_COMPLETE",
+  "authority_refs": [
+    "handoff/OWNER_SCOPE_OVERRIDE.md",
+    "handoff/executor_ledger.json",
+    "sources/ground_up_master_prompt.original.md"
+  ],
+  "application_root": "T:\\00-Active\\CETA-desktop-delivery-20260906",
+  "development_namespace": "rebuild_ios",
+  "specification_root": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package",
+  "source_assessment_ref": "handoff/source_reconciliation_20261007_10.md",
+  "source_inspections": [
+    {
+      "section": "061",
+      "path": "sources/codex/canonical_text/03_SECTIONS/061_ELECTRICAL_ENGINEERING.txt",
+      "sha256": "b5bfba7398615165ae8c34fb381c00c2f3a8a031a2e0c6a51a4a968cb759254c",
+      "lines_read": 101,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Electrical dependency and energy safety in retained physical lanes",
+      "decision_reason": "Actual host power/resource assumptions and physical-actuator lanes can affect electrical function and safety. Desktop code does not establish an installed electrical design.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Sources, loads, operating modes, units and interfaces",
+          "requirement_ids": [
+            "REQ-03-01",
+            "REQ-04-01",
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-21-03",
+            "REQ-33-03",
+            "REQ-34-04"
+          ]
+        },
+        {
+          "original_clause_family": "Protection, qualified authority, isolation, emergency stop and field recovery",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-20-01",
+            "REQ-25-01",
+            "REQ-26-02",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Record actual selected sources, loads, protection, isolation, grounding, thermal/environment and stored-energy constraints with exact versions, instruments and qualified review before energization or operation. Keep simulation, ratings, inspection and installed measurements distinct. Custom electrical design/installation is not implied by this software build; desktop-only construction exemptions require a bounded impact/reopening record.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "062",
+      "path": "sources/codex/canonical_text/03_SECTIONS/062_ELECTRONICS_ENGINEERING.txt",
+      "sha256": "3797575dc1b09b5eb0622834ddfa0836ea74a08e653b30088f284e9717e30049",
+      "lines_read": 100,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Electronic device interfaces, tolerances and actual assembly evidence",
+      "decision_reason": "Retained sensor/actuator and hardware-custody dependencies require actual electronic interface and failure assumptions, even when CETA does not design a circuit.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Circuit/component/firmware identity, constraints and device interfaces",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-05-01",
+            "REQ-06-02",
+            "REQ-21-03",
+            "REQ-23-01",
+            "REQ-33-03",
+            "REQ-35-02"
+          ]
+        },
+        {
+          "original_clause_family": "Safe power/fault behavior, substitutions, calibrated qualification and lifecycle",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-34-04",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-38-01",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Resolve exact selected assembly/firmware revisions, signals, clocks, rails, tolerances, power-up/brownout/fault behavior, calibration, thermal/EMC, substitutes and test access. Supplier statements and nominal simulation are bounded inputs. No schematic, part pinout, production assembly, certification or hardware operating result was invented.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "063",
+      "path": "sources/codex/canonical_text/03_SECTIONS/063_COMPUTER_ENGINEERING.txt",
+      "sha256": "a836aa693fd27a0de08fea26bb8ce71d7a75dcbd0e46f67457c7a09975a6ac1e",
+      "lines_read": 100,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Host hardware/software contracts and bounded resources",
+      "decision_reason": "The Windows product materially depends on compute, memory, storage, drivers, model accelerators, power, reset, boot, update and resource-failure behavior.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Compute allocation, memory/storage/I/O contracts, timing and placement",
+          "requirement_ids": [
+            "REQ-03-01",
+            "REQ-03-03",
+            "REQ-05-01",
+            "REQ-07-01",
+            "REQ-08-01",
+            "REQ-21-03",
+            "REQ-22-01",
+            "REQ-23-01",
+            "REQ-34-01",
+            "REQ-34-04"
+          ]
+        },
+        {
+          "original_clause_family": "Trust, failure containment, controlled update, installed evidence and recovery",
+          "requirement_ids": [
+            "REQ-25-01",
+            "REQ-26-02",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-01",
+            "REQ-38-01",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Bind actual workload, host/unit, hardware/firmware/driver revisions, configuration and budgets. Verify storage integrity, exhaustion, concurrency, reset/update interruption, rollback, diagnostics and recovery on the actual supported host. A boot or benchmark does not prove readiness. CETA performs no boot reconfiguration or firmware operation here.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "064",
+      "path": "sources/codex/canonical_text/03_SECTIONS/064_MECHANICAL_ENGINEERING.txt",
+      "sha256": "810a88a61aa36704d07be9da047c929043cea060aee7aac335831254c32e1b72",
+      "lines_read": 100,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Mechanical consequence limits of retained device/actuator lanes",
+      "decision_reason": "Explicit physical lanes can involve motion, loads, enclosures, access, temperature and service hazards. Their qualification cannot be inferred from desktop contract tests.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Loads, motion, physical environment, interfaces and human access",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-05-01",
+            "REQ-08-01",
+            "REQ-24-01",
+            "REQ-32-04",
+            "REQ-33-03",
+            "REQ-35-02"
+          ]
+        },
+        {
+          "original_clause_family": "Guards, exact action authority, independent qualification and lifecycle",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-20-01",
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-38-01",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "For each selected physical system resolve loads/motion, material/geometry/tolerance interfaces, guards, human access, environmental/thermal constraints and qualified evidence. No CAD, material property, safety factor, lifting/pressure approval or manufacturing change was fabricated. Desktop-only mechanical construction clauses require impact justification; manual protected stop and safe physical recovery remain open.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "065",
+      "path": "sources/codex/canonical_text/03_SECTIONS/065_INDUSTRIAL_DESIGN.txt",
+      "sha256": "f487e95ff93a81194445c31c70e47bbd14ef49eed21c2451cb1989f4200d9840",
+      "lines_read": 95,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Human use and serviceability of selected physical products",
+      "decision_reason": "The retained device lane has physical human-use, accessibility, safety and service implications; aesthetic or digital renderings cannot validate them.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Users, form/function, ergonomic controls and interface constraints",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-24-01",
+            "REQ-32-01",
+            "REQ-32-04",
+            "REQ-33-03"
+          ]
+        },
+        {
+          "original_clause_family": "Access, hazards, production/service limits, evidence and acceptance",
+          "requirement_ids": [
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-38-01",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Retain actual audience/use context, ergonomics, controls, material/finish/production constraints, access, service, repair and disposal where a device is selected. Do not invent anthropometry, representative users, cultural preference, new industrial hardware or manufacturing requirements unrelated to the actual adapter. Preserve accessibility and real user/domain review before a physical product claim.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "066",
+      "path": "sources/codex/canonical_text/03_SECTIONS/066_SEMICONDUCTOR_ENGINEERING.txt",
+      "sha256": "6d53edd15d8002722144ec30bb738e28f04779278fbe15f5e54284ebc5260922",
+      "lines_read": 95,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "SUPPORTING",
+      "bounded_subject": "Upstream semiconductor dependency identity and supplier limits",
+      "decision_reason": "CETA relies on supplied processors, memory, accelerators and possible hardware anchors. It does not currently own silicon/process/mask/foundry engineering.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Supplied device/package provenance and hardware trust assumptions",
+          "requirement_ids": [
+            "REQ-03-01",
+            "REQ-22-01",
+            "REQ-23-01",
+            "REQ-26-02",
+            "REQ-35-02",
+            "REQ-38-01"
+          ]
+        },
+        {
+          "original_clause_family": "Population/environment-qualified supplier evidence and controlled change",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Keep actual device/process/package/supplier identity and affected timing, aging, security, resource and qualification assumptions attributable when selecting hardware. Vendor or small-sample data does not qualify a field population. No tape-out, mask, yield, fab, export regime or custom chip program is required by the current scope. Reopen direct design clauses if CETA actually designs/substitutes a device/process or depends on such claims.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "067",
+      "path": "sources/codex/canonical_text/03_SECTIONS/067_PCB_DESIGN.txt",
+      "sha256": "9d1800f0c9d719f17a2f4e9d7df296219a0b67f3e39e1bc4a5014415a08c9816",
+      "lines_read": 95,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "SUPPORTING",
+      "bounded_subject": "Upstream board revision and device-interface qualification",
+      "decision_reason": "Selected devices may rely on board revision, electrical/firmware interfaces and as-built behavior. The current CETA scope creates no PCB geometry, stackup or fabrication output.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Board/library/as-built revision and dependent interfaces",
+          "requirement_ids": [
+            "REQ-05-01",
+            "REQ-06-02",
+            "REQ-21-03",
+            "REQ-23-01",
+            "REQ-33-03",
+            "REQ-35-02",
+            "REQ-38-01"
+          ]
+        },
+        {
+          "original_clause_family": "Actual test access, supplier variation, substitution and lifecycle evidence",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "For an actual selected board retain revision/lot/library/component/firmware identity, critical interface and test/field assumptions, substitutions and recovery evidence. Board review or simulation is not as-built proof. Do not invent a CETA PCB or respin program. Reopen direct design/manufacturing clauses on any real board/layout/assembly change or claim whose correctness relies on these properties.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "068",
+      "path": "sources/codex/canonical_text/03_SECTIONS/068_FIRMWARE_ENGINEERING.txt",
+      "sha256": "46c9b8febde65d44e70774093dcce251be33afa87a8ba1ef31eec32a2f3befdb",
+      "lines_read": 95,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Firmware and privileged device dependency boundaries",
+      "decision_reason": "Physical adapters and hardware custody can depend on boot, firmware, drivers, image and update semantics. Compilation alone cannot establish those semantics.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Hardware/firmware/image/interface and deterministic resource contracts",
+          "requirement_ids": [
+            "REQ-03-03",
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-21-03",
+            "REQ-23-01",
+            "REQ-33-03",
+            "REQ-34-04"
+          ]
+        },
+        {
+          "original_clause_family": "Privilege, update/signing authority, failure/recovery and target evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-25-01",
+            "REQ-26-02",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-38-01",
+            "REQ-38-03",
+            "REQ-38-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Bind actual target/register/interface, firmware image/source/build/toolchain, interrupts, memory/timing, reset/brownout/watchdog and diagnostics. Keep signed release/update authority, anti-rollback and recoverability explicit. No firmware was created, signed, flashed or approved for field use. Real representative hardware, update interruption and rollback evidence remain required for any enabled dependent claim.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "069",
+      "path": "sources/codex/canonical_text/03_SECTIONS/069_EMBEDDED_SOFTWARE_ENGINEERING.txt",
+      "sha256": "2857dac63d65a4d9121ffd12e7f57111240b61f7c3fe16c9c0b0b3396335c166",
+      "lines_read": 112,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Embedded timing, images and physical control in selected adapters",
+      "decision_reason": "An actual device/controller variant of the retained physical lane must respect target timing, power, interrupts, resource, update and safety boundaries.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Target/source/image lineage, timing, scheduling and hardware interfaces",
+          "requirement_ids": [
+            "REQ-05-01",
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-21-03",
+            "REQ-23-01",
+            "REQ-33-03",
+            "REQ-34-04"
+          ]
+        },
+        {
+          "original_clause_family": "Authority, faults/power loss, secure updates and representative target evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-38-01",
+            "REQ-38-03",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Keep designed code, host-tested build, flashed image and observed target behavior separate. Resolve actual target/BSP/compiler/flags/interfaces, scheduling, watchdogs, diagnostics, faults, secure update and recovery. No target/field population, timing class, regulated safety regime, signing permission or embedded implementation is invented. Host fixtures prove bounded contracts; representative target and independent evidence remain open.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "070",
+      "path": "sources/codex/canonical_text/03_SECTIONS/070_INTERNET_OF_THINGS_ENGINEERING.txt",
+      "sha256": "ffae0cfade8526dd2fdef19db661d7aa719a73418a983f530801989113e7762a",
+      "lines_read": 106,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "SUPPORTING",
+      "bounded_subject": "Networked-device variant of the retained device lane",
+      "decision_reason": "The manifested device/physical adapter contract can cover connected devices, but no fleet, device class, enrollment service, cloud provider or collection scope is selected.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Device identity, enrollment, telemetry purpose and versioned protocol",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-21-03",
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-33-03",
+            "REQ-35-02"
+          ]
+        },
+        {
+          "original_clause_family": "Scoped command authority, replay/partition/update and physical outcomes",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-20-01",
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Before a networked variant, bind exact device/owner/firmware/protocol, provisioning and revocation, telemetry purpose, command freshness/ordering/replay/idempotency and safe partition/offline/update behavior. A digital twin is bounded data, not current physical truth or command authority. Keep actual fleet/locations/scale and field recovery open without inventing fleet operations or activating collection.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "071",
+      "path": "sources/codex/canonical_text/03_SECTIONS/071_TELECOMMUNICATIONS_ENGINEERING.txt",
+      "sha256": "4aceaefd7bfc7f92d8a4d037290408f3c32cddb6dd99ec0d20454081d0d7ced1",
+      "lines_read": 107,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "SUPPORTING",
+      "bounded_subject": "Underlying communications service and physical adapter assumptions",
+      "decision_reason": "The local product has communications dependencies and retained network/device adapters. It does not become a carrier, radio service or telephony product by applying this source.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Endpoint/service/medium identity, quality and bounded traffic assumptions",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-08-01",
+            "REQ-21-03",
+            "REQ-24-01",
+            "REQ-33-03",
+            "REQ-34-04",
+            "REQ-35-02"
+          ]
+        },
+        {
+          "original_clause_family": "Security/privacy, congestion/partition/failover and actual service evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-25-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Resolve actual endpoint/path/medium/protocol and measured loss, delay, jitter, ordering, capacity, admission, priority, privacy and recovery where material. Carrier claims and average bandwidth do not prove end-to-end outcome. Spectrum, geography, emergency telephony and service commitments are not selected; revisit their actual authority and evidence before any such operational path.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "072",
+      "path": "sources/codex/canonical_text/03_SECTIONS/072_SIGNAL_PROCESSING.txt",
+      "sha256": "80696630f46dcd7141280b4a32ebda72a5aa2c1d8a41b28ae631f435fa8120b5",
+      "lines_read": 106,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Signal acquisition and interpretation in voice/screen/device lanes",
+      "decision_reason": "Explicit voice, selected-screen and device observations transform signals into uncertain information. Processing outputs and model confidence are not ground truth.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Acquisition-to-output lineage, calibration, time, units and purpose",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-09-01",
+            "REQ-11-01",
+            "REQ-29-01",
+            "REQ-33-01",
+            "REQ-33-02",
+            "REQ-35-02"
+          ]
+        },
+        {
+          "original_clause_family": "Uncertain interpretation, authority, hostile signals and outcome evidence",
+          "requirement_ids": [
+            "REQ-13-03",
+            "REQ-19-01",
+            "REQ-22-01",
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-34-04",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Bind actual source/sensor, capture authority, time/sample/units, calibration, preprocessing/algorithm/model/threshold, quality and uncertainty. Test aliasing, missing/saturated/noisy/shifted/replayed inputs, drift, numerical/resource limits and safe downstream use. No calibration regime, dataset, ground truth, acceptable error or detection claim is fabricated. Preserve the original heading/body defect described below; map actual body roles explicitly.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "073",
+      "path": "sources/codex/canonical_text/03_SECTIONS/073_CONTROL_SYSTEMS_ENGINEERING.txt",
+      "sha256": "a0665d79141f9873ffb921519844db9e1225effad5dc8b96b9aaad1e22cda891",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Computational supervision and retained physical feedback-control limits",
+      "decision_reason": "CETA supervises an operating cycle and retains physical actuation. Feedback capability does not supply authority or prove robustness on an actual plant.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Loop/mode/state identity, feedback timing, limits and control boundaries",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-05-01",
+            "REQ-07-01",
+            "REQ-08-01",
+            "REQ-21-03",
+            "REQ-33-03",
+            "REQ-34-04"
+          ]
+        },
+        {
+          "original_clause_family": "Exact authority, independent stop, faults and plant-specific evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-20-01",
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Keep plant/controller/estimator/supervisor/safety-monitor/operator roles and current mode/limits explicit. Actual physical control requires identified sampling/delay/noise/saturation, bounded adaptive changes, manual override, independent stop, calibration, faults and verified recovery. Do not invent a plant, tuning approval, stability margin or live test.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "074",
+      "path": "sources/codex/canonical_text/03_SECTIONS/074_ROBOTICS_ENGINEERING.txt",
+      "sha256": "e5f83441134913c6b65e0a11a0fa9d8f04dec27237cc3a068bb8e9d1536b3c30",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Robot/control variant of retained physical capability lanes",
+      "decision_reason": "REQ-33-03 retains physical devices and interlocks; any selected robot variant needs mission, environment, autonomy, human-proximity and physical-outcome qualification.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Mission/environment, embodiment, maps, sensors and bounded autonomy",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-06-02",
+            "REQ-09-01",
+            "REQ-15-01",
+            "REQ-24-01",
+            "REQ-33-03",
+            "REQ-35-02"
+          ]
+        },
+        {
+          "original_clause_family": "Exact targets/authority, interlocks/manual stop and field qualification",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-20-01",
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Keep actual mission/robot/workspace/map/sensor/actuator/controller/operator identity and authority bounded. Separate perception, planning, control and independent safety monitor; test stale maps, collisions, link/power/sensor loss, geofence, manual stop, update and recovery on actual targets. No robot/mission/autonomy class, domain specialist or field success is invented, and no physical lane was operated.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "075",
+      "path": "sources/codex/canonical_text/03_SECTIONS/075_HUMAN_COMPUTER_INTERACTION.txt",
+      "sha256": "79d7af361584a3ef6f8e0b0ddd7d6b7f79ce4624400501cdf134ba50a9085b50",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Native human control, comprehension and usable recovery",
+      "decision_reason": "Users/operators must understand and control the requested native system across ordinary, ambiguous, denied, interrupted and assistive paths.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Population/task/context and perceivable state/action/feedback",
+          "requirement_ids": [
+            "REQ-09-01",
+            "REQ-10-01",
+            "REQ-13-05",
+            "REQ-32-01",
+            "REQ-32-03",
+            "REQ-32-04",
+            "REQ-33-01"
+          ]
+        },
+        {
+          "original_clause_family": "Consent, access, denial/correction/recovery and representative evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Declare actual tasks/populations/devices/access modes without invented personas or inferred disability, consent or comprehension. Test real state/action feedback, task outcomes, correction/stop/appeal, latency and recovery including AI failure. Keep observation, researcher interpretation and acceptance separate; clicks and silence do not prove benefit.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "076",
+      "path": "sources/codex/canonical_text/03_SECTIONS/076_INTERACTION_DESIGN.txt",
+      "sha256": "93609be54550af812ca44e645f14cee7683ca7dd3d207926ee4291769f416e6a",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Stateful actions, feedback and reversible native interaction",
+      "decision_reason": "The native experience needs explicit understandable states, pending authority, errors and accessible cancellation/correction rather than a polished nominal flow.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Goals/states/actions, focus, feedback, content and permissions",
+          "requirement_ids": [
+            "REQ-07-01",
+            "REQ-13-04",
+            "REQ-19-01",
+            "REQ-32-01",
+            "REQ-32-03",
+            "REQ-32-04"
+          ]
+        },
+        {
+          "original_clause_family": "Cancellation, error/undo/correction, access and implementation fidelity",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-33-01",
+            "REQ-34-04",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Bind actions to actual use cases and state machines, focus/input/feedback, exact permissions, timing, undo where real, and truthful uncertain/terminal states. Test stale approvals, late callbacks, interruption, keyboard/assistive alternatives and recovery. A confirmation dialogue is not enforcement and disabling a control without explanation is not usable denial.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "077",
+      "path": "sources/codex/canonical_text/03_SECTIONS/077_EXPERIENCE_DESIGN.txt",
+      "sha256": "5dbcb2cc8bf748ce88cf87e5b03ecddd051dbfea924b66f8e19f548124f69c88",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Continuity across setup, work, failures and next-session experience",
+      "decision_reason": "CETA's user outcome spans setup, conversation, actions, memory, models, restart, support and recovery; one attractive screen cannot qualify that journey.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Population/journey, expectations and frontstage/backstage continuity",
+          "requirement_ids": [
+            "REQ-10-01",
+            "REQ-13-05",
+            "REQ-32-01",
+            "REQ-32-02",
+            "REQ-32-03",
+            "REQ-33-01"
+          ]
+        },
+        {
+          "original_clause_family": "Privacy/access, support/dependency failure and real recovered outcome",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-31-01",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Map frontstage/backstage dependencies and real multi-step outcomes. Preserve intent, scope, evidence and accessible help across errors/channel transitions/AI loss. Do not infer emotion, satisfaction, consent or universal preference from the user's messages or proxy analytics. Actual end-to-end and affected-user evidence remain required.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "078",
+      "path": "sources/codex/canonical_text/03_SECTIONS/078_SERVICE_DESIGN.txt",
+      "sha256": "a155af808c2d6a80dfada37e52778f823f31d9bd58471ab91c40e55961ec0d7e",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Whole local service outcome and accountable support handoffs",
+      "decision_reason": "The local product coordinates people, processes, policy, model/tool suppliers and support/recovery. Outsourcing a dependency does not outsource outcome accountability.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Outcome/actors, service definition, handoffs and dependency ownership",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-05-01",
+            "REQ-21-03",
+            "REQ-23-01",
+            "REQ-24-01",
+            "REQ-32-01"
+          ]
+        },
+        {
+          "original_clause_family": "Actual delivery, capacity, supplier failure, redress and recovery evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-34-04",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Link actual service state and wait/denial explanation to use cases, dependency ownership, queues/capacity and accessible non-AI/manual alternatives. Keep eligibility, commitments, staffing, supplier and compensation choices explicit when actually selected; do not invent a subscription service, SLA, support team or compensation authority.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "079",
+      "path": "sources/codex/canonical_text/03_SECTIONS/079_UX_STRATEGY.txt",
+      "sha256": "ee347bd09853d23f98f5f4fe5baf18be2c11bb4c552adf0d90c11a710ca641ee",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Product experience priorities tied to the full authorized mission",
+      "decision_reason": "Experience decisions must support the owner's complete CETA outcome and retained controls, rather than shrink the product to a convenient demonstrable subset.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Mission/outcomes, populations, priorities and dependency-aware tradeoffs",
+          "requirement_ids": [
+            "REQ-03-01",
+            "REQ-04-01",
+            "REQ-13-05",
+            "REQ-24-01",
+            "REQ-32-01",
+            "REQ-39-04"
+          ]
+        },
+        {
+          "original_clause_family": "Evidence/uncertainty, inclusion, protected outcomes and full-scope acceptance",
+          "requirement_ids": [
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-40-01",
+            "REQ-41-04",
+            "REQ-42-03"
+          ]
+        }
+      ],
+      "remaining_obligations": "Trace real mission/tasks and inclusion to priorities, tradeoffs, feasibility, dependencies and outcome measures. Record dissent/reopening conditions. Do not import another product's strategy, copy competitor assets, invent a market/customer portfolio or equate engagement with user benefit. Investment and external commitments remain current owner decisions.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "080",
+      "path": "sources/codex/canonical_text/03_SECTIONS/080_UX_RESEARCH.txt",
+      "sha256": "3e1b6c6d0dba902c855ac40c465ebd1e719648a228eae41bec22f3ed9b6343d3",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Protected human research and honest interpretation",
+      "decision_reason": "User/assistive acceptance claims require actual method, population, context and evidence; synthetic examples and AI summaries cannot fabricate participants or representative results.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Question/method/population and separation of evidence/interpretation",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-09-01",
+            "REQ-13-03",
+            "REQ-24-01",
+            "REQ-32-04",
+            "REQ-35-01"
+          ]
+        },
+        {
+          "original_clause_family": "Consent, privacy/withdrawal, accessible tasks and decision traceability",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-29-02",
+            "REQ-29-03",
+            "REQ-33-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Before actual research bind question, recruitment, protocol, participant safeguards, consent/recording, language/accessibility, privacy, retention and decision use. Preserve raw evidence, rival interpretations, dissent and negative cases. No outreach, participant capture, incentive, sensitive-attribute inference or research session occurred here.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "081",
+      "path": "sources/codex/canonical_text/03_SECTIONS/081_UX_ARCHITECTURE.txt",
+      "sha256": "05ba286ebf015c9f627a7ebd3311ad4f258ac197a12bbc909286e70aa13a42bf",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Coherent native journeys, patterns and state taxonomy",
+      "decision_reason": "Conversation, current work, approvals, memory/evidence, models and recovery need one experience structure connected to actual domain state and ownership.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Journeys/states/patterns, information and actual use-case ownership",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-05-01",
+            "REQ-07-01",
+            "REQ-11-01",
+            "REQ-32-01",
+            "REQ-32-03",
+            "REQ-40-01"
+          ]
+        },
+        {
+          "original_clause_family": "Permission/access, exceptions, degraded behavior and consumer validation",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Trace journeys, states, information/content, controls, patterns, access and exceptions to the existing product/component contracts. Reuse patterns only where task context fits. Keep UI architecture separate from implemented behavior; no rival design authority or cross-project pattern/brand import is created.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "082",
+      "path": "sources/codex/canonical_text/03_SECTIONS/082_UX_DESIGN.txt",
+      "sha256": "22ce15df1f614d0d8647b4d307ae33be9a60868c7f6cd84f6b584627ed1228fe",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Task-complete native UX and implementation fidelity",
+      "decision_reason": "The intended product must be usable through complete tasks, including denial/error/recovery, with actual state, source meaning and authority.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Goals/tasks/flows, content and authoritative state feedback",
+          "requirement_ids": [
+            "REQ-10-01",
+            "REQ-13-05",
+            "REQ-19-01",
+            "REQ-32-01",
+            "REQ-32-03",
+            "REQ-32-04"
+          ]
+        },
+        {
+          "original_clause_family": "Representative access, privacy, failures and real implementation outcomes",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-33-01",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Specify flows/content/feedback/permissions, access, device constraints and tests tied to original requirements. Validate implemented—not merely prototype—task success, comprehension, latency, privacy and recovery with relevant users. No heuristic or AI critique is represented as lived-experience acceptance.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "083",
+      "path": "sources/codex/canonical_text/03_SECTIONS/083_UI_DESIGN.txt",
+      "sha256": "5b322a55b6757ff0db5f2c926a254700147909da4b3dec97b216136bfaa06af3",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Native UI surfaces, controls and meaningful status",
+      "decision_reason": "The required native Windows UI needs actual enabled control use cases, coherent state feedback, accessible focus/input and long-path/content handling.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Surfaces/components/state hierarchy and real action/data binding",
+          "requirement_ids": [
+            "REQ-07-01",
+            "REQ-19-01",
+            "REQ-32-01",
+            "REQ-32-02",
+            "REQ-32-03",
+            "REQ-32-04"
+          ]
+        },
+        {
+          "original_clause_family": "Focus/access/scaling, failure, latency and installed UI evidence",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-33-01",
+            "REQ-34-04",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Specify actual surfaces, component/loading/error/offline/uncertain states, scaling, keyboard/screen-reader order and content fit. Keep data/permission enforcement in its real boundary; visual color/status cannot grant trust. Test double clicks, stale approvals, late callbacks, restarts/multiple windows and AI loss on actual UI paths.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "084",
+      "path": "sources/codex/canonical_text/03_SECTIONS/084_VISUAL_DESIGN.txt",
+      "sha256": "9df5e6175cb40c718534b9b4bb5a557f46088bba5dc6dab55c2c642df55323dc",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Readable CETA visual language and provenance",
+      "decision_reason": "Native hierarchy, typography, color, icons and evidence/status displays affect comprehension, access and truthful product self-description.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Hierarchy/type/color/imagery and source/rights identity",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-13-05",
+            "REQ-24-01",
+            "REQ-32-01",
+            "REQ-32-03",
+            "REQ-32-04",
+            "REQ-38-01"
+          ]
+        },
+        {
+          "original_clause_family": "Accessible alternatives, localization/rendering and factual status fidelity",
+          "requirement_ids": [
+            "REQ-29-01",
+            "REQ-35-03",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-40-01",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Keep semantic non-color status, contrast, readable scaling/reflow/content fit and accessible alternatives. Track actual asset/source/license/version and local rendering constraints; no other project's branding, assets or cultural representation is imported. A screenshot/style score is not comprehension, access or permission evidence.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "085",
+      "path": "sources/codex/canonical_text/03_SECTIONS/085_GRAPHIC_DESIGN.txt",
+      "sha256": "2784a7de3e52462d2f197cdaaf8b2f47bf66d8eeb6b3f5e3d673f9d5c541cb5b",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Product graphics and evidence displays",
+      "decision_reason": "CETA interface/help/diagram/graph graphics communicate task and evidence meaning and require provenance, access and accurate representation.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Message, asset identity/provenance and accurate visual representation",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-12-03",
+            "REQ-13-03",
+            "REQ-24-01",
+            "REQ-32-03",
+            "REQ-38-01"
+          ]
+        },
+        {
+          "original_clause_family": "Access/rights, source-bound content, correction and audience evidence",
+          "requirement_ids": [
+            "REQ-29-01",
+            "REQ-32-04",
+            "REQ-35-03",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Bind actual message/audience/medium/asset/version/rights and accessible alternatives. Verify scaling, nonvisual meaning, content/localization and implementation fidelity. Polish, cropping, illustrative scale or generated assets do not prove truth or audience comprehension. External publication remains separately authorized.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "086",
+      "path": "sources/codex/canonical_text/03_SECTIONS/086_MOTION_DESIGN.txt",
+      "sha256": "b0c79c4c782e76e4c8ee67b373215fbfd5f47361a15e8a88b786e3a73ce98aee",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "State-linked motion, timing and static alternatives",
+      "decision_reason": "Loading/transition/feedback timing in the native UI must preserve control, focus, access and actual state even when decorative animation is absent.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "State/feedback timing, purpose, interruption and resources",
+          "requirement_ids": [
+            "REQ-07-01",
+            "REQ-13-05",
+            "REQ-32-03",
+            "REQ-32-04",
+            "REQ-34-04"
+          ]
+        },
+        {
+          "original_clause_family": "Reduced/static alternatives, cancellation/failure and actual device/user tests",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-33-01",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Define intentional triggers, timing, interruption, reduced/no-motion status, focus and resource budgets for motion actually used. Static accessible feedback must preserve the same outcome. No animation requirement or universal comfort threshold is invented; real device/user sensitivity evidence is needed before motion-health/access claims.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "087",
+      "path": "sources/codex/canonical_text/03_SECTIONS/087_SOUND_DESIGN.txt",
+      "sha256": "dca5286e9772390f8080dc2937ac3f4360c657b92cd3b177504bd165bc7c5a8c",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Audio cues and voice-output privacy/access",
+      "decision_reason": "The explicit local voice lane and any real audio status cue affect meaning, privacy, access and user control; critical status cannot rely only on sound.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Cue/source/listener/device, meaning, rights and timed feedback",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-24-01",
+            "REQ-32-03",
+            "REQ-33-01",
+            "REQ-38-01"
+          ]
+        },
+        {
+          "original_clause_family": "Consent/privacy, mute/alternate access, failure and environment evidence",
+          "requirement_ids": [
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-33-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Specify actual cue/speech/source/rights/device, timing/loudness/priority, interruption/mute, text/caption/visual equivalents and degraded behavior. Do not invent audio assets or infer hearing ability/cultural meaning. Studio/loudness data is not comprehension or safe listener/environment evidence; capture/output remains separately scoped.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "088",
+      "path": "sources/codex/canonical_text/03_SECTIONS/088_VOICE_INTERFACE_DESIGN.txt",
+      "sha256": "4279e13f914386ea577ce5ae0b3596271dc527c306a359358fa9299e0fa40b24",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Explicit local voice capture, repair and independent action authority",
+      "decision_reason": "SPEC-33 retains local voice with consent, provenance and cancellation. Recognition confidence cannot authenticate a speaker or authorize a consequential effect.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Invocation/capture, recognition/transcript, turn-taking and source identity",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-09-01",
+            "REQ-10-01",
+            "REQ-33-01",
+            "REQ-33-02"
+          ]
+        },
+        {
+          "original_clause_family": "Authority/confirmation, uncertainty, privacy, cancellation and representative tests",
+          "requirement_ids": [
+            "REQ-13-03",
+            "REQ-19-01",
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Separate capture, recognition, intent, policy, confirmation, execution, response and logging. Keep visible capture status, transcript/correction, ambiguity, cancellation, privacy, spoofing/noise/accent/language tests and keyboard/text alternatives. No speech model, supported language/population, recording permission or voice result is invented.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "089",
+      "path": "sources/codex/canonical_text/03_SECTIONS/089_CONVERSATIONAL_DESIGN.txt",
+      "sha256": "ac0b1dc460b7ee0ac3b95266a9876d2ca3b970f85509d58e20d7ce12b6df1e0a",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Faithful conversation, correction and governed tool use",
+      "decision_reason": "Ordinary conversation is core CETA behavior. Fluency is neither accurate retrieval, understanding, consent, authority nor task completion.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Dialogue/intent/context, truthful recollection and independent expression",
+          "requirement_ids": [
+            "REQ-10-01",
+            "REQ-11-01",
+            "REQ-13-01",
+            "REQ-13-02",
+            "REQ-13-03",
+            "REQ-13-04",
+            "REQ-13-05"
+          ]
+        },
+        {
+          "original_clause_family": "Privacy/authority, tool errors, correction/exit and actual semantic evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-32-01",
+            "REQ-33-01",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Preserve exact instructions, scope/format/negations, turn corrections, retrieved sources, uncertainty, refusals and terminal state. Keep dialogue/retrieval/generation/policy/tool authority separate and real stop/exit/nonconversational recovery available. Test prompt injection, context loss, ambiguity, hidden tools, long turns, privacy and failure; avoid fabricated inner identity, emotional pressure and endless repair loops.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "090",
+      "path": "sources/codex/canonical_text/03_SECTIONS/090_SPATIAL_INTERFACE_DESIGN.txt",
+      "sha256": "a7fa162737b7711c27283db898bd54582d67292f973a304186c262d6a499ac0e",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Spatial frames and safe human interface in physical lanes",
+      "decision_reason": "The retained physical/robot variant can rely on workspace, map, orientation, boundaries and calibration. This does not require an immersive desktop UI.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Physical space/frame/anchor identity, calibration and uncertain observations",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-08-01",
+            "REQ-09-01",
+            "REQ-24-01",
+            "REQ-33-01",
+            "REQ-33-03",
+            "REQ-35-02"
+          ]
+        },
+        {
+          "original_clause_family": "Exact physical authority, access/safe exit and environmental outcome evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-20-01",
+            "REQ-25-01",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-36-01",
+            "REQ-37-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "For actual selected physical spatial behavior bind frame/units/anchor/map/device/time/calibration, tracking uncertainty, operator authority, geofence/collision constraints, accessible non-spatial fallback and independent safe exit/stop. No space, 3D renderer, tracking system, motion comfort or spatial qualification is invented.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "091",
+      "path": "sources/codex/canonical_text/03_SECTIONS/091_AR_DESIGN.txt",
+      "sha256": "e3eea90a2f8947c93a48d88a6288213284537eb354bb91dbc46c78f453647cd9",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "NOT_APPLICABLE",
+      "bounded_subject": "AR overlay design outside the declared product",
+      "decision_reason": "The supplied native Windows, local conversation/work, voice and selected-screen interpretation requirements contain no AR/headset/physical-world overlay use case. A qualified physical adapter does not itself create an AR display requirement.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Declared product/capability boundary and retained physical obligations",
+          "requirement_ids": [
+            "REQ-01-01",
+            "REQ-03-01",
+            "REQ-32-01",
+            "REQ-33-01",
+            "REQ-33-03",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "No AR overlay, field-of-view/depth/occlusion, headset tracking, or AR physical-task interface is selected or changed. This decision preserves all required physical/device safety and capture clauses. Reopen on an actual AR overlay/tracking/display use case, selected AR device or material AR privacy/access/safety claim.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change.",
+      "non_applicability_context": {
+        "baseline_sha256": {
+          "requirements/requirements.json": "a9d44e81e342f593bdcfa27e0b42be0cc6e7139ad9dcd04472bec575de5b2388",
+          "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+          "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+          "docs/specification/03_fixed_engineering_decisions.md": "5bafaf9625d259a620936cfb5c7e559b9a3287430d93c2017da8b6d24c9d3f31",
+          "docs/specification/15_shadow_thirst_and_pre_effect_evaluation.md": "c8d94bde7deab74a8a63f0c8aa531b48b3436f77d1c2031617f0cc4bb11bc132",
+          "docs/specification/32_native_interface_and_inspectability.md": "a004fc27cf8de7cb9f05aaf1a16ec2229f42b4ad0a3c7a0a6916b17e673f3e4d",
+          "docs/specification/33_modalities_and_additional_interfaces.md": "0a0c1698f8827e05d3166b5db38020c9a491f96b0206bda7e0416e9b4ffcdfac"
+        },
+        "evidence_date_utc": "2026-10-08T04:50:40.635223+00:00",
+        "proposer": "CURRENT_CODEX_EXECUTION_AGENT",
+        "owner_acceptance": "NOT_PERFORMED",
+        "basis": "Declared product requirements and actual component/work-package boundary; no source text or required physical capability removed."
+      }
+    },
+    {
+      "section": "092",
+      "path": "sources/codex/canonical_text/03_SECTIONS/092_VR_DESIGN.txt",
+      "sha256": "1535cb8861b7564102b5d0ab1913f1edbd58776b11769206fb99efc828c561de",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "NOT_APPLICABLE",
+      "bounded_subject": "Immersive VR world and embodiment outside the declared product",
+      "decision_reason": "No VR headset, room-scale environment, virtual locomotion/embodiment, virtual world or immersive operating mode is specified for this CETA build.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Declared native modalities, staging boundary and full-scope fidelity",
+          "requirement_ids": [
+            "REQ-01-01",
+            "REQ-03-01",
+            "REQ-15-02",
+            "REQ-32-01",
+            "REQ-33-01",
+            "REQ-33-03",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Native text/voice/screen interpretation and controlled candidate staging do not implement immersive VR. Preserve actual device/physical controls and user exit requirements. Reopen on a selected VR world/headset/locomotion/haptics/supervision use case or any material VR comfort/privacy/accessibility/safety claim.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change.",
+      "non_applicability_context": {
+        "baseline_sha256": {
+          "requirements/requirements.json": "a9d44e81e342f593bdcfa27e0b42be0cc6e7139ad9dcd04472bec575de5b2388",
+          "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+          "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+          "docs/specification/03_fixed_engineering_decisions.md": "5bafaf9625d259a620936cfb5c7e559b9a3287430d93c2017da8b6d24c9d3f31",
+          "docs/specification/15_shadow_thirst_and_pre_effect_evaluation.md": "c8d94bde7deab74a8a63f0c8aa531b48b3436f77d1c2031617f0cc4bb11bc132",
+          "docs/specification/32_native_interface_and_inspectability.md": "a004fc27cf8de7cb9f05aaf1a16ec2229f42b4ad0a3c7a0a6916b17e673f3e4d",
+          "docs/specification/33_modalities_and_additional_interfaces.md": "0a0c1698f8827e05d3166b5db38020c9a491f96b0206bda7e0416e9b4ffcdfac"
+        },
+        "evidence_date_utc": "2026-10-08T04:50:40.635223+00:00",
+        "proposer": "CURRENT_CODEX_EXECUTION_AGENT",
+        "owner_acceptance": "NOT_PERFORMED",
+        "basis": "Declared product requirements and actual component/work-package boundary; no source text or required physical capability removed."
+      }
+    },
+    {
+      "section": "093",
+      "path": "sources/codex/canonical_text/03_SECTIONS/093_XR_DESIGN.txt",
+      "sha256": "3b89adf545489ee0daf694128debe8d55005f4a2b5fc8d68193fd95714369f1f",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "NOT_APPLICABLE",
+      "bounded_subject": "Combined immersive XR interface outside the declared product",
+      "decision_reason": "The current specified modalities do not combine AR/VR/immersive spatial or wearable experiences. Multiple local input lanes are not automatically an XR system.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Explicit product/modalities and material scope-change trigger",
+          "requirement_ids": [
+            "REQ-01-01",
+            "REQ-03-01",
+            "REQ-32-01",
+            "REQ-33-01",
+            "REQ-33-03",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "No cross-immersive rendering, embodiment, coordinate-world transition or XR device has been selected. This does not remove voice/screen/physical lane requirements. Reopen on a real AR/VR/wearable/immersive collaborative modality or XR state/tracking/comfort/privacy/access claim.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change.",
+      "non_applicability_context": {
+        "baseline_sha256": {
+          "requirements/requirements.json": "a9d44e81e342f593bdcfa27e0b42be0cc6e7139ad9dcd04472bec575de5b2388",
+          "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+          "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+          "docs/specification/03_fixed_engineering_decisions.md": "5bafaf9625d259a620936cfb5c7e559b9a3287430d93c2017da8b6d24c9d3f31",
+          "docs/specification/15_shadow_thirst_and_pre_effect_evaluation.md": "c8d94bde7deab74a8a63f0c8aa531b48b3436f77d1c2031617f0cc4bb11bc132",
+          "docs/specification/32_native_interface_and_inspectability.md": "a004fc27cf8de7cb9f05aaf1a16ec2229f42b4ad0a3c7a0a6916b17e673f3e4d",
+          "docs/specification/33_modalities_and_additional_interfaces.md": "0a0c1698f8827e05d3166b5db38020c9a491f96b0206bda7e0416e9b4ffcdfac"
+        },
+        "evidence_date_utc": "2026-10-08T04:50:40.635223+00:00",
+        "proposer": "CURRENT_CODEX_EXECUTION_AGENT",
+        "owner_acceptance": "NOT_PERFORMED",
+        "basis": "Declared product requirements and actual component/work-package boundary; no source text or required physical capability removed."
+      }
+    },
+    {
+      "section": "094",
+      "path": "sources/codex/canonical_text/03_SECTIONS/094_GAME_DESIGN.txt",
+      "sha256": "e0701c551e456c0ec4674351aba378759e23158b1976fbe25766cec96af91ced",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "NOT_APPLICABLE",
+      "bounded_subject": "Game mechanics and player economy outside the declared product",
+      "decision_reason": "CETA's governing task cycle is not a game/player/reward/economy system. No game mechanic, live player population, wagering, monetization or game social world is specified.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Declared product, task/conversation and non-game staging boundary",
+          "requirement_ids": [
+            "REQ-01-01",
+            "REQ-03-01",
+            "REQ-13-05",
+            "REQ-15-01",
+            "REQ-15-02",
+            "REQ-32-01",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Retain truthful dialogue, user agency and any generated-content safeguards without inventing a game feature. Reopen if an actual playable/game-like rule/reward/social/economy system is introduced, or a qualified game-specific use case is expressly added. Engagement never substitutes for the required operating outcome.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change.",
+      "non_applicability_context": {
+        "baseline_sha256": {
+          "requirements/requirements.json": "a9d44e81e342f593bdcfa27e0b42be0cc6e7139ad9dcd04472bec575de5b2388",
+          "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+          "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+          "docs/specification/03_fixed_engineering_decisions.md": "5bafaf9625d259a620936cfb5c7e559b9a3287430d93c2017da8b6d24c9d3f31",
+          "docs/specification/15_shadow_thirst_and_pre_effect_evaluation.md": "c8d94bde7deab74a8a63f0c8aa531b48b3436f77d1c2031617f0cc4bb11bc132",
+          "docs/specification/32_native_interface_and_inspectability.md": "a004fc27cf8de7cb9f05aaf1a16ec2229f42b4ad0a3c7a0a6916b17e673f3e4d",
+          "docs/specification/33_modalities_and_additional_interfaces.md": "0a0c1698f8827e05d3166b5db38020c9a491f96b0206bda7e0416e9b4ffcdfac"
+        },
+        "evidence_date_utc": "2026-10-08T04:50:40.635223+00:00",
+        "proposer": "CURRENT_CODEX_EXECUTION_AGENT",
+        "owner_acceptance": "NOT_PERFORMED",
+        "basis": "Declared product requirements and actual component/work-package boundary; no source text or required physical capability removed."
+      }
+    },
+    {
+      "section": "095",
+      "path": "sources/codex/canonical_text/03_SECTIONS/095_LEVEL_DESIGN.txt",
+      "sha256": "7c9827b67d1d56bbdae14347f05dca00b9556117103ce2ab80cb091ed37b5c1d",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "NOT_APPLICABLE",
+      "bounded_subject": "Playable level geometry, encounters and progression outside the product",
+      "decision_reason": "The supplied staging/simulation requirement concerns governed candidates and prediction-versus-outcome evidence, with no player levels, encounters or difficulty system.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Actual proposal/staging semantics and preserved mandatory task/physical controls",
+          "requirement_ids": [
+            "REQ-01-01",
+            "REQ-03-01",
+            "REQ-15-01",
+            "REQ-15-02",
+            "REQ-15-03",
+            "REQ-32-01",
+            "REQ-33-03",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Graph/task navigation and a safe physical workspace do not become a playable level. No game/simulation level layout, pacing/checkpoint difficulty or player progression is introduced. Reopen on actual interactive level/virtual training-space content or a declared game/level-specific scope; preserve all real task and physical safety controls.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change.",
+      "non_applicability_context": {
+        "baseline_sha256": {
+          "requirements/requirements.json": "a9d44e81e342f593bdcfa27e0b42be0cc6e7139ad9dcd04472bec575de5b2388",
+          "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+          "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+          "docs/specification/03_fixed_engineering_decisions.md": "5bafaf9625d259a620936cfb5c7e559b9a3287430d93c2017da8b6d24c9d3f31",
+          "docs/specification/15_shadow_thirst_and_pre_effect_evaluation.md": "c8d94bde7deab74a8a63f0c8aa531b48b3436f77d1c2031617f0cc4bb11bc132",
+          "docs/specification/32_native_interface_and_inspectability.md": "a004fc27cf8de7cb9f05aaf1a16ec2229f42b4ad0a3c7a0a6916b17e673f3e4d",
+          "docs/specification/33_modalities_and_additional_interfaces.md": "0a0c1698f8827e05d3166b5db38020c9a491f96b0206bda7e0416e9b4ffcdfac"
+        },
+        "evidence_date_utc": "2026-10-08T04:50:40.635223+00:00",
+        "proposer": "CURRENT_CODEX_EXECUTION_AGENT",
+        "owner_acceptance": "NOT_PERFORMED",
+        "basis": "Declared product requirements and actual component/work-package boundary; no source text or required physical capability removed."
+      }
+    },
+    {
+      "section": "096",
+      "path": "sources/codex/canonical_text/03_SECTIONS/096_NARRATIVE_DESIGN.txt",
+      "sha256": "84a355e05ff569024ed132ac96774db5259825848db0836e12682240f4ea4cf2",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "SUPPORTING",
+      "bounded_subject": "Creative narrative outputs and fiction/fact distinction",
+      "decision_reason": "Language assistance can produce requested story or dialogue content; CETA does not currently own a game narrative engine, fictional world or character canon.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Attributed/generative content, faithful dialogue and fiction/fact provenance",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-10-01",
+            "REQ-11-01",
+            "REQ-13-01",
+            "REQ-13-02",
+            "REQ-13-05",
+            "REQ-24-01"
+          ]
+        },
+        {
+          "original_clause_family": "Rights/privacy, accessible correction and bounded content evidence",
+          "requirement_ids": [
+            "REQ-29-01",
+            "REQ-32-04",
+            "REQ-36-01",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "For actual requested narrative drafts preserve source/author/fiction/generated status, audience/rights/content constraints, continuity, user choice and correction. Never substitute fiction for actual Companion history or fabricate lived experience. No fixed game world, emotional targeting, age regime or sensitive-content publication is selected. Reopen specific world/branching/interactive narrative requirements if added.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "097",
+      "path": "sources/codex/canonical_text/03_SECTIONS/097_CONTENT_DESIGN.txt",
+      "sha256": "0e01fe15705417c4ea8b08ee752d053d73caa09df544c25e296d1aba8dadeced",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Truthful native messages, instructions and source-linked content",
+      "decision_reason": "Interface/help/error/notification/onboarding and ordinary answer content communicates real product behavior and must support understanding, decision and recovery.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Audience/task, source/terms, product state and accurate message meaning",
+          "requirement_ids": [
+            "REQ-06-02",
+            "REQ-10-01",
+            "REQ-11-01",
+            "REQ-13-04",
+            "REQ-13-05",
+            "REQ-32-01",
+            "REQ-32-03"
+          ]
+        },
+        {
+          "original_clause_family": "Disclosure/access/localization, error recovery, correction and evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-35-03",
+            "REQ-36-01",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Bind actual audience/task/state/source/version/owner/locale and accessible correction route. Verify claims, terminology, authority/privacy disclosure, content fit and actual behavior. Draft/rendered/translated/published states remain distinct; do not invent facts, citations, consent, legal approval or implemented controls.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "098",
+      "path": "sources/codex/canonical_text/03_SECTIONS/098_CONTENT_STRATEGY.txt",
+      "sha256": "aa2f609d13fa9db37b70f8e45992025851f2ac75dce36880f03148145535ee00",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Maintained product content ownership and lifecycle",
+      "decision_reason": "CETA answers, help, artifacts, evidence and operational guidance require consistent ownership, source validity, maintenance and retirement rather than uncontrolled volume.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Content mission/inventory, source ownership, standards and maintained artifacts",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-11-01",
+            "REQ-13-05",
+            "REQ-32-01",
+            "REQ-35-02",
+            "REQ-39-04",
+            "REQ-40-01"
+          ]
+        },
+        {
+          "original_clause_family": "Privacy/access, claim freshness, correction/retirement and evidence",
+          "requirement_ids": [
+            "REQ-24-01",
+            "REQ-29-01",
+            "REQ-29-02",
+            "REQ-31-01",
+            "REQ-36-01",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Use established source/authority/artifact ledgers for real content channels and version/rights/freshness/workflow decisions. Keep public distribution and external records rules separately scoped. No rival editorial authority, unowned publication portfolio, staffing or metric-to-benefit claim is invented.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "099",
+      "path": "sources/codex/canonical_text/03_SECTIONS/099_TECHNICAL_WRITING.txt",
+      "sha256": "f1fdb6092e6258d6539dd70621a9d7a2359ef843c5993d73fc1a98d427e3dd47",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Executable technical instructions bound to actual version/environment",
+      "decision_reason": "Developer/operator/user/build/install/migration/recovery documentation must refer to actual files, commands, permissions and supported behavior.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Reader/task/version, authoritative source and actual commands",
+          "requirement_ids": [
+            "REQ-03-01",
+            "REQ-06-02",
+            "REQ-32-02",
+            "REQ-38-01",
+            "REQ-39-04",
+            "REQ-40-01",
+            "REQ-40-02",
+            "REQ-40-03"
+          ]
+        },
+        {
+          "original_clause_family": "Permissions, truthful errors/recovery, compatibility and reproduced evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-24-01",
+            "REQ-30-01",
+            "REQ-31-01",
+            "REQ-36-01",
+            "REQ-37-01",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Execute representative documented commands where claimed; preserve exact source/artifact/version/environment, prerequisite, result, warning and repair path. Mark illustrative/unrun instructions plainly and maintain accessible correction/version guidance. A rendered page, grammar review or old release label is not executed proof.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "100",
+      "path": "sources/codex/canonical_text/03_SECTIONS/100_COPYWRITING.txt",
+      "sha256": "c73b9018e1a5be87d47784e7896604299fe3c2b816bab2832bf5d7d130b0da92",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Substantiated product/onboarding copy and informed choice",
+      "decision_reason": "Native onboarding, notices, disclosures and product claims can influence consent and action, even without a marketing campaign or commercial offer.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Claim/audience/state identity, substantiation and clear conditions",
+          "requirement_ids": [
+            "REQ-13-05",
+            "REQ-24-01",
+            "REQ-32-02",
+            "REQ-32-03",
+            "REQ-35-03",
+            "REQ-40-03"
+          ]
+        },
+        {
+          "original_clause_family": "Consent/access/privacy, correction and actual comprehension evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-32-04",
+            "REQ-33-02",
+            "REQ-36-01",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Tie actual claims/material conditions to implemented behavior and evidence. Keep readiness/liveness/model quality distinct and choices understandable/accessibly reversible. No testimonial, scarcity, fee, guarantee, targeting rationale, audience culture or conversion-to-benefit claim is invented; external publication remains reserved.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "101",
+      "path": "sources/codex/canonical_text/03_SECTIONS/101_LOCALIZATION.txt",
+      "sha256": "c5bd1173fda9768c1843ab15b4c5b7ddf110d28f4723454502c8de2848045ef9",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Source-language meaning, locale formatting and declared translation scope",
+      "decision_reason": "Language, date/number/unit formatting, Unicode content, voice and native rendering can materially change meaning even before a translation pack is selected.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Source/locale/terms, meaning, formats and original data integrity",
+          "requirement_ids": [
+            "REQ-06-03",
+            "REQ-08-01",
+            "REQ-10-01",
+            "REQ-24-01",
+            "REQ-32-04",
+            "REQ-33-01"
+          ]
+        },
+        {
+          "original_clause_family": "Human translation authority, access/privacy, fallback and locale evidence",
+          "requirement_ids": [
+            "REQ-13-05",
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Declare actual supported locale/source/fallback and terms; preserve meaning, units, critical disclosure, scripts/direction, content fit, voice and access. Do not infer culture or a locale matrix from time zone/OS/user intensity. Qualified cultural/domain review is required for material translated claims. Preserve the misplaced input/role bodies and explicit source-input gap noted below.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "102",
+      "path": "sources/codex/canonical_text/03_SECTIONS/102_INTERNATIONALIZATION.txt",
+      "sha256": "1e36350903afeec6c633c72b5aee077dea285e469c66055c89a632541187ac97",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Explicit locale boundaries and invariant security/data semantics",
+      "decision_reason": "The product processes user language, timestamps, units and formatted data; hidden global locale assumptions could alter content or exact security semantics.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Locale variation/resources, canonical data, precision and time boundaries",
+          "requirement_ids": [
+            "REQ-06-03",
+            "REQ-08-01",
+            "REQ-10-01",
+            "REQ-24-01",
+            "REQ-32-04",
+            "REQ-33-01"
+          ]
+        },
+        {
+          "original_clause_family": "Regional/sensitive scope, accessible fallback and actual supported-matrix evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Keep locale-aware presentation separate from canonical signed/counter/time bytes. Declare supported scripts/formats/defaults/fallback and test lossless parsing, direction/plurals/sorting/timezones/data and locale switching as applicable. No regional policy/currency/language coverage is silently selected. Input/role heading misplacement remains recorded rather than treated as supplied input evidence.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "103",
+      "path": "sources/codex/canonical_text/03_SECTIONS/103_ACCESSIBILITY_DESIGN.txt",
+      "sha256": "d3711668ee9a1ab7e40776a3338ae8ad1e96213d5bb66824a29a05220d117511",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Equivalent accessible outcomes across native critical workflows",
+      "decision_reason": "The explicit native accessibility requirement spans setup, authentication, review, memory, models, failures, stop, correction and recovery.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "User/task/access context, semantics/input/focus and equivalent alternatives",
+          "requirement_ids": [
+            "REQ-13-05",
+            "REQ-24-01",
+            "REQ-32-01",
+            "REQ-32-02",
+            "REQ-32-04",
+            "REQ-33-01"
+          ]
+        },
+        {
+          "original_clause_family": "Privacy/authority, accommodations, denial/recovery and lived-experience evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-30-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Declare actual tasks/access needs/standards/device/assistive matrix and affected-user evidence. Verify semantics, keyboard/focus, scaling/contrast, captions/alternative inputs/timing/cognitive load and equivalent outcomes including failure. No disability is inferred or conformance claimed from scans. Preserve the original misplaced authority/AI bodies and unresolved actual input/standard scope.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "104",
+      "path": "sources/codex/canonical_text/03_SECTIONS/104_DESIGN_SYSTEMS.txt",
+      "sha256": "029dec5e4929c917a45334ad4bc3f95c292e0457bb20354622288459fffb04a9",
+      "lines_read": 96,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Shared native components with real behavior and controlled consumer changes",
+      "decision_reason": "Common native patterns can propagate state, accessibility, content or timing defects across all required workflows; reuse must preserve context and ownership.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Components/tokens/states, ownership, versions and real consumer behavior",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-05-01",
+            "REQ-07-01",
+            "REQ-24-01",
+            "REQ-32-01",
+            "REQ-32-04",
+            "REQ-40-01"
+          ]
+        },
+        {
+          "original_clause_family": "Access/content, compatibility, exceptions, fallback and consumer evidence",
+          "requirement_ids": [
+            "REQ-30-01",
+            "REQ-31-01",
+            "REQ-35-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-38-04",
+            "REQ-41-04"
+          ]
+        }
+      ],
+      "remaining_obligations": "Version actual tokens/components/states/content/code/docs and consumer/use-case bindings; test keyboard/access, responsive content, compatibility, migration and degraded behavior. Exceptions must preserve task outcomes and evidence. No unrelated project design system or universal pattern authority is imported. Preserve input/role heading defects and unknown actual consumer/component choices.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "105",
+      "path": "sources/codex/canonical_text/03_SECTIONS/105_PROTOTYPING.txt",
+      "sha256": "834f6ea90bafe8be0666e7e1b30fbb4388ca3ab7c8c515f44b5a39b82d1cd117",
+      "lines_read": 222,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Bounded experiments whose evidence cannot replace the product",
+      "decision_reason": "The rebuild contains material technical/user/containment/migration uncertainty; isolated fixtures and rehearsals must answer explicit questions with honest limits.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Learning question/fidelity, isolated staging and evidence-supported promotion",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-15-01",
+            "REQ-15-02",
+            "REQ-15-03",
+            "REQ-24-01",
+            "REQ-35-02",
+            "REQ-36-01"
+          ]
+        },
+        {
+          "original_clause_family": "Authority/privacy/access, negative evidence, disposal and full-scope acceptance",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-29-02",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-37-02",
+            "REQ-40-03",
+            "REQ-41-04",
+            "REQ-42-03"
+          ]
+        }
+      ],
+      "remaining_obligations": "Record question/hypothesis/decision, owner, fidelity, real/synthetic/stub/manual/omitted elements, scope, dependencies, controls, protocol, negative evidence and stop/disposal conditions. Ordinary authorized reversible development continues; participant/private/production/external activity needs its actual authority. No mock-up/spike/fixture PASS can promote the whole finished-product requirement or fabricate feedback, operational readiness, independent review or acceptance.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    },
+    {
+      "section": "106",
+      "path": "sources/codex/canonical_text/03_SECTIONS/106_USER_VALIDATION.txt",
+      "sha256": "1bad1e012067455a232ac6ce544eeb0e60a2230088e00a1bafd0a3e89a0de6c9",
+      "lines_read": 221,
+      "inspection": "COMPLETE_ORIGINAL",
+      "original_status": "CONTENT-COMPLETE",
+      "applicability": "DIRECT",
+      "bounded_subject": "Actual user/affected-party outcome validation",
+      "decision_reason": "The requested native product must support real comprehension, task outcomes, access, control, privacy, correction and recovery under declared contexts.",
+      "clause_allocations": [
+        {
+          "original_clause_family": "Outcome/question/population/version and evidence/interpretation/decision separation",
+          "requirement_ids": [
+            "REQ-04-01",
+            "REQ-06-02",
+            "REQ-09-01",
+            "REQ-13-03",
+            "REQ-24-01",
+            "REQ-35-01",
+            "REQ-35-02",
+            "REQ-40-03"
+          ]
+        },
+        {
+          "original_clause_family": "Protected/access/recovery journeys, remediation and independent acceptance evidence",
+          "requirement_ids": [
+            "REQ-19-01",
+            "REQ-29-01",
+            "REQ-29-02",
+            "REQ-30-01",
+            "REQ-32-04",
+            "REQ-33-02",
+            "REQ-36-01",
+            "REQ-37-02",
+            "REQ-41-04",
+            "REQ-42-03"
+          ]
+        }
+      ],
+      "remaining_obligations": "Bind actual question/outcome/population/context/version/method/task/instrument/recruitment/safeguards/authority and predeclared criteria. Preserve observed behavior, participant report, instrument output, interpretation and owner decision separately; negative/dissent/missing groups and harm remain visible. No real study, participant, consent, representative coverage or universal acceptance is fabricated. Retest remediation on the changed installed version and preserve participant retention/withdrawal/appeal duties before declaring acceptance.",
+      "conformance_status": "NOT_EVALUATED",
+      "reopening_condition": "Material actual scope/use-case/host/device/modality/data/population/authority/policy/source/evidence/claim/lifecycle change."
+    }
+  ],
+  "source_structure_observations": [
+    {
+      "section": "072",
+      "classification": "NOT_BLOCKING_RECONCILIATION_EXPLICIT_BODY_MAPPING_SOURCE_REVIEW_OPEN",
+      "observation": "Original lifecycle headings and their bodies are displaced; HANDOFF repeats.",
+      "body_mapping": [
+        {
+          "original_heading": "OWNER COCKPIT AND USER-CONTROL REQUIREMENTS",
+          "observed_role": "REQUIRED_ARTIFACTS"
+        },
+        {
+          "original_heading": "REQUIRED OUTPUTS AND ARTIFACTS",
+          "observed_role": "EVIDENCE_IDENTITY"
+        },
+        {
+          "original_heading": "EVIDENCE REQUIREMENTS",
+          "observed_role": "VERIFICATION_ACTIVITIES"
+        },
+        {
+          "original_heading": "VERIFICATION AND ACCEPTANCE TESTS",
+          "observed_role": "ANTI_PATTERNS"
+        },
+        {
+          "original_heading": "FAILURE STATES AND ANTI-PATTERNS",
+          "observed_role": "RECOVERY_ACTIONS"
+        },
+        {
+          "original_heading": "RECOVERY AND RECONSIDERATION",
+          "observed_role": "COMPLETION_CRITERIA"
+        },
+        {
+          "original_heading": "COMPLETION CRITERIA",
+          "observed_role": "HANDOFF"
+        }
+      ],
+      "handling": "Preserve original bytes/hash/headings/maturity; allocate every actual body including repeated handoff. Do not invent the missing distinct cockpit specification."
+    },
+    {
+      "section": "101",
+      "classification": "NOT_BLOCKING_RECONCILIATION_EXPLICIT_BODY_MAPPING_SOURCE_REVIEW_OPEN",
+      "observation": "REQUIRED INPUTS contains human authority; HUMAN RESPONSIBILITIES contains AI responsibilities; the explicit AI section adds AI duties.",
+      "body_mapping": [
+        {
+          "original_heading": "REQUIRED INPUTS",
+          "observed_role": "HUMAN_AUTHORITY"
+        },
+        {
+          "original_heading": "HUMAN RESPONSIBILITIES AND AUTHORITY",
+          "observed_role": "AI_RESPONSIBILITIES"
+        },
+        {
+          "original_heading": "AI RESPONSIBILITIES AND BOUNDARIES",
+          "observed_role": "ADDITIONAL_AI_BOUNDARIES"
+        }
+      ],
+      "handling": "Preserve both actual human and AI clauses under their original labels. Prerequisites do not prove that actual locale/user/standard/consumer inputs have been supplied. Keep input selection, source review and acceptance open."
+    },
+    {
+      "section": "102",
+      "classification": "NOT_BLOCKING_RECONCILIATION_EXPLICIT_BODY_MAPPING_SOURCE_REVIEW_OPEN",
+      "observation": "REQUIRED INPUTS contains human authority; HUMAN RESPONSIBILITIES contains AI responsibilities; the explicit AI section adds AI duties.",
+      "body_mapping": [
+        {
+          "original_heading": "REQUIRED INPUTS",
+          "observed_role": "HUMAN_AUTHORITY"
+        },
+        {
+          "original_heading": "HUMAN RESPONSIBILITIES AND AUTHORITY",
+          "observed_role": "AI_RESPONSIBILITIES"
+        },
+        {
+          "original_heading": "AI RESPONSIBILITIES AND BOUNDARIES",
+          "observed_role": "ADDITIONAL_AI_BOUNDARIES"
+        }
+      ],
+      "handling": "Preserve both actual human and AI clauses under their original labels. Prerequisites do not prove that actual locale/user/standard/consumer inputs have been supplied. Keep input selection, source review and acceptance open."
+    },
+    {
+      "section": "103",
+      "classification": "NOT_BLOCKING_RECONCILIATION_EXPLICIT_BODY_MAPPING_SOURCE_REVIEW_OPEN",
+      "observation": "REQUIRED INPUTS contains human authority; HUMAN RESPONSIBILITIES contains AI responsibilities; the explicit AI section adds AI duties.",
+      "body_mapping": [
+        {
+          "original_heading": "REQUIRED INPUTS",
+          "observed_role": "HUMAN_AUTHORITY"
+        },
+        {
+          "original_heading": "HUMAN RESPONSIBILITIES AND AUTHORITY",
+          "observed_role": "AI_RESPONSIBILITIES"
+        },
+        {
+          "original_heading": "AI RESPONSIBILITIES AND BOUNDARIES",
+          "observed_role": "ADDITIONAL_AI_BOUNDARIES"
+        }
+      ],
+      "handling": "Preserve both actual human and AI clauses under their original labels. Prerequisites do not prove that actual locale/user/standard/consumer inputs have been supplied. Keep input selection, source review and acceptance open."
+    },
+    {
+      "section": "104",
+      "classification": "NOT_BLOCKING_RECONCILIATION_EXPLICIT_BODY_MAPPING_SOURCE_REVIEW_OPEN",
+      "observation": "REQUIRED INPUTS contains human authority; HUMAN RESPONSIBILITIES contains AI responsibilities; the explicit AI section adds AI duties.",
+      "body_mapping": [
+        {
+          "original_heading": "REQUIRED INPUTS",
+          "observed_role": "HUMAN_AUTHORITY"
+        },
+        {
+          "original_heading": "HUMAN RESPONSIBILITIES AND AUTHORITY",
+          "observed_role": "AI_RESPONSIBILITIES"
+        },
+        {
+          "original_heading": "AI RESPONSIBILITIES AND BOUNDARIES",
+          "observed_role": "ADDITIONAL_AI_BOUNDARIES"
+        }
+      ],
+      "handling": "Preserve both actual human and AI clauses under their original labels. Prerequisites do not prove that actual locale/user/standard/consumer inputs have been supplied. Keep input selection, source review and acceptance open."
+    }
+  ],
+  "source_applicability": "113_ASSESSED_293_UNRESOLVED",
+  "complete_originals_read": 46,
+  "complete_original_lines_read": 4727,
+  "volume_iv": {
+    "range": "061-106",
+    "all_46_applicability_assessed": true,
+    "source_adoption": "NOT_RATIFIED",
+    "conformance": "NOT_EVALUATED"
+  },
+  "baseline_scope_sha256": {
+    "requirements/requirements.json": "a9d44e81e342f593bdcfa27e0b42be0cc6e7139ad9dcd04472bec575de5b2388",
+    "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+    "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+    "docs/specification/03_fixed_engineering_decisions.md": "5bafaf9625d259a620936cfb5c7e559b9a3287430d93c2017da8b6d24c9d3f31",
+    "docs/specification/15_shadow_thirst_and_pre_effect_evaluation.md": "c8d94bde7deab74a8a63f0c8aa531b48b3436f77d1c2031617f0cc4bb11bc132",
+    "docs/specification/32_native_interface_and_inspectability.md": "a004fc27cf8de7cb9f05aaf1a16ec2229f42b4ad0a3c7a0a6916b17e673f3e4d",
+    "docs/specification/33_modalities_and_additional_interfaces.md": "0a0c1698f8827e05d3166b5db38020c9a491f96b0206bda7e0416e9b4ffcdfac"
+  },
+  "source_checker_repair": {
+    "old_cached_summary": "406_SOURCE_SECTIONS_PRESENT_53_APPLICABILITY_ASSESSED_353_PENDING",
+    "actual_before_rows": "67_ASSESSED_339_UNRESOLVED",
+    "new_summary": "406_SOURCE_SECTIONS_PRESENT_113_APPLICABILITY_ASSESSED_293_PENDING",
+    "first_rejection_evidence": "evidence/runtime/source-summary-stale-header-01.json",
+    "checks": [
+      "SUMMARY_MATCHES_DETAILED_ROWS",
+      "ORIGINAL_PENDING_ONLY_HEADER_CANNOT_HIDE_ASSESSED_ROWS",
+      "PARSED_METADATA_MATCHES_FIRST_SNAPSHOT",
+      "SAFE_METADATA_PATHS_BEFORE_READ",
+      "WATCHED_INPUT_AND_CHECKER_BYTES_UNCHANGED"
+    ],
+    "evidence": "evidence/runtime/source-coverage-tests-source-bound-09.json",
+    "tests_run": 16,
+    "scope": "SPECIFICATION_TOOL_ONLY_NOT_RUNTIME_OR_SEMANTIC_CONFORMANCE"
+  },
+  "code_evidence": [
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\verify_source_coverage.py",
+      "sha256": "e32eb1171d258f5dd65373b9094831ccdd8302f604e06fe86ece488561ae120d"
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tests\\contract\\test_source_coverage.py",
+      "sha256": "9a6027cec788a0293f736b6b3a7ac272edfa668090cc07f16530335340f445d7"
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\README.md",
+      "sha256": "238322e3e16e1f4b5156d1c35755a37911aaa437d842a5fbcf896bbe4c6b2538"
+    }
+  ],
+  "application_source": {
+    "changed_this_increment": false,
+    "historical_suite": "evidence/runtime/desktop-contract-source-bound-12.json",
+    "tests_run_then": 123,
+    "current_watched_bytes_match": true,
+    "tests_rerun_this_increment": false
+  },
+  "scope_limits": {
+    "other_repository_import": false,
+    "normal_profile_contents_read": false,
+    "physical_device_or_capture_operation": false,
+    "participant_research": false,
+    "host_configuration_changed": false,
+    "publication": false
+  },
+  "runtime": "NOT_RUN",
+  "independent_review": "NOT_PERFORMED",
+  "acceptance": "128_NOT_RUN",
+  "gates": "8_NOT_EVALUATED",
+  "gate_a": "OPEN",
+  "next_action": "Read complete original 107 Software Engineering and subsequent Volume V sources; continue all 293 remaining source decisions and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. The full finished-product objective remains active."
+}

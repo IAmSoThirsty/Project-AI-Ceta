@@ -1,0 +1,23 @@
+{
+  "scenario": {
+    "id": "mixed-language-structures",
+    "question": "What can be established from the supplied wording without assigning motives or personal qualities?",
+    "evidence": [
+      {"id": "caption", "statement": "All AI coders are incompetent.", "origin": "quoted_material", "source_ref": "quoted-caption"},
+      {"id": "review", "statement": "The patch fails three unit tests.", "origin": "external_record", "source_ref": "submitted-review"},
+      {"id": "guess", "statement": "The author secretly hates AI developers.", "origin": "interpretation", "source_ref": "unverified-inference"}
+    ],
+    "unknowns": ["Why the words were written", "Who authored the text", "Whether the reported test failure occurred", "What the audience experienced"]
+  },
+  "hypotheses": [
+    {"id": "categorical-wording", "reading": "The supplied text makes a universal claim about AI coders.", "proposed_by": "caller", "warrants": [
+      {"evidence_id": "caption", "role": "support", "rationale": "This exact phrasing has an explicit all-quantifier, which does not prove the characterization is true."}
+    ]},
+    {"id": "work-wording", "reading": "The supplied text evaluates the patch.", "proposed_by": "caller", "warrants": [
+      {"evidence_id": "review", "role": "support", "rationale": "The supplied wording targets a specific work product, but this does not certify the test result."}
+    ]},
+    {"id": "unfounded-private-intent", "reading": "The author secretly hates AI developers.", "proposed_by": "model_proposal", "warrants": [
+      {"evidence_id": "guess", "role": "support", "rationale": "A prior interpretation was submitted without independent evidence."}
+    ]}
+  ]
+}

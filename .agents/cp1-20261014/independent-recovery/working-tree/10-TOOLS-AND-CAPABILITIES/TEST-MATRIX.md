@@ -1,0 +1,37 @@
+# 10-TOOLS-AND-CAPABILITIES - test matrix
+
+## Unit-level acceptance coverage
+
+Every source specification defines ten concrete test obligations: required behavior, a domain-specific adverse case, schema compatibility, stale references, access, bounds and interruption, concurrency, recovery, real integration, and independent proof. These are planned tests, not runtime results.
+
+| Unit | Acceptance IDs | Positive oracle | Negative oracle | Initial execution state |
+| --- | --- | --- | --- | --- |
+| [CETA-10.01.01 / tool-manifest](10.01-TOOL-REGISTRY/tool-manifest.file.README.md) | AT-CETA-10.01.01-01 through AT-CETA-10.01.01-10 | A tool invocation is validated against the exact installed manifest revision. | Tool code changes while retaining an old trusted manifest digest. | NOT EXECUTED |
+| [CETA-10.01.02 / tool-discovery-engine](10.01-TOOL-REGISTRY/tool-discovery-engine.file.README.md) | AT-CETA-10.01.02-01 through AT-CETA-10.01.02-10 | Discovery lists qualified tools without triggering their effects. | A discovery operation executes an extension's arbitrary startup action. | NOT EXECUTED |
+| [CETA-10.01.03 / tool-capability-index](10.01-TOOL-REGISTRY/tool-capability-index.file.README.md) | AT-CETA-10.01.03-01 through AT-CETA-10.01.03-10 | A task can find read-only inspection tools separately from modifying tools. | A search match is reported as permission to execute the tool. | NOT EXECUTED |
+| [CETA-10.02.01 / tool-input-validator](10.02-TOOL-CONTRACTS/tool-input-validator.file.README.md) | AT-CETA-10.02.01-01 through AT-CETA-10.02.01-10 | The approved argument digest matches the dispatched normalized arguments. | Additional hidden fields alter behavior after approval. | NOT EXECUTED |
+| [CETA-10.02.02 / tool-output-validator](10.02-TOOL-CONTRACTS/tool-output-validator.file.README.md) | AT-CETA-10.02.02-01 through AT-CETA-10.02.02-10 | A valid result is accepted with exact artifact and receipt references. | A tool returns a success label with missing required output and is treated as complete. | NOT EXECUTED |
+| [CETA-10.02.03 / tool-effect-classifier](10.02-TOOL-CONTRACTS/tool-effect-classifier.file.README.md) | AT-CETA-10.02.03-01 through AT-CETA-10.02.03-10 | A command that writes and sends data declares both effects before approval. | A shell wrapper is classified as read-only because its top-level name sounds harmless. | NOT EXECUTED |
+| [CETA-10.03.01 / filesystem-tool-adapter](10.03-LOCAL-OPERATIONS/filesystem-tool-adapter.file.README.md) | AT-CETA-10.03.01-01 through AT-CETA-10.03.01-10 | A staged edit replaces only the approved file revision and preserves a recovery snapshot. | A path alias or link redirects an operation outside the approved root. | NOT EXECUTED |
+| [CETA-10.03.02 / command-execution-adapter](10.03-LOCAL-OPERATIONS/command-execution-adapter.file.README.md) | AT-CETA-10.03.02-01 through AT-CETA-10.03.02-10 | The observed command, executable digest, arguments, and environment match approval. | Injected shell syntax expands a permitted argument into a second command. | NOT EXECUTED |
+| [CETA-10.03.03 / application-control-adapter](10.03-LOCAL-OPERATIONS/application-control-adapter.file.README.md) | AT-CETA-10.03.03-01 through AT-CETA-10.03.03-10 | The requested action affects only the selected application instance. | Focus changes cause a destructive action in an unrelated window. | NOT EXECUTED |
+| [CETA-10.04.01 / network-request-adapter](10.04-NETWORK-OPERATIONS/network-request-adapter.file.README.md) | AT-CETA-10.04.01-01 through AT-CETA-10.04.01-10 | An authorized request reaches only its approved destination class and payload scope. | A public-looking target redirects to a private administrative endpoint. | NOT EXECUTED |
+| [CETA-10.04.02 / browser-operation-adapter](10.04-NETWORK-OPERATIONS/browser-operation-adapter.file.README.md) | AT-CETA-10.04.02-01 through AT-CETA-10.04.02-10 | A form submission uses the reviewed destination and exact field values. | Page instructions trigger an unrelated file upload or secret disclosure. | NOT EXECUTED |
+| [CETA-10.04.03 / external-resource-adapter](10.04-NETWORK-OPERATIONS/external-resource-adapter.file.README.md) | AT-CETA-10.04.03-01 through AT-CETA-10.04.03-10 | A conditional update fails safely when the remote resource changed since inspection. | A remote timeout is interpreted as proof that no write occurred. | NOT EXECUTED |
+| [CETA-10.05.01 / tool-dispatch-controller](10.05-TOOL-EXECUTION-RESULTS/tool-dispatch-controller.file.README.md) | AT-CETA-10.05.01-01 through AT-CETA-10.05.01-10 | A denied invocation never reaches its underlying adapter. | A retry path bypasses the gate because the first attempt was previously approved. | NOT EXECUTED |
+| [CETA-10.05.02 / tool-result-normalizer](10.05-TOOL-EXECUTION-RESULTS/tool-result-normalizer.file.README.md) | AT-CETA-10.05.02-01 through AT-CETA-10.05.02-10 | A partial write is represented as partial or uncertain with its actual observed bytes. | An exit code alone overrides contradictory effect observations. | NOT EXECUTED |
+| [CETA-10.05.03 / tool-execution-receipt](10.05-TOOL-EXECUTION-RESULTS/tool-execution-receipt.file.README.md) | AT-CETA-10.05.03-01 through AT-CETA-10.05.03-10 | A receipt verifies the exact operation and returned artifact revision. | A valid receipt from another operation is attached to the current result. | NOT EXECUTED |
+
+
+## Component and subsystem tests
+
+| Component | Integrated behavior | Invariant |
+| --- | --- | --- |
+| [10.01](10.01-TOOL-REGISTRY/README.md) | Register a tool manifest; verify implementation binding and qualification; expose authorized discovery; pin the exact tool revision for each invocation. | A tool revision change invalidates incompatible cached schemas and prior invocation approvals. |
+| [10.02](10.02-TOOL-CONTRACTS/README.md) | Validate exact arguments; classify all intended effects; bind normalized input to approval; validate returned observations before consumers use them. | Unknown effects require explicit classification or denial rather than a permissive default. |
+| [10.03](10.03-LOCAL-OPERATIONS/README.md) | Resolve local targets within approved roots; validate stable identities; execute through isolated native adapters; observe actual changes; return exact results. | Path normalization and actual resource binding must be rechecked at use time. |
+| [10.04](10.04-NETWORK-OPERATIONS/README.md) | Validate destination and payload scope; acquire explicit network authority; enforce redirects and size limits; record requests and observed outcomes; classify timeout uncertainty. | Network requests cannot reach local administrative resources through unchecked redirects or name resolution changes. |
+| [10.05](10.05-TOOL-EXECUTION-RESULTS/README.md) | Validate invocation; obtain gate admission; dispatch once per stable operation identity; normalize observations; bind an evidence receipt; return a typed outcome. | Only the execution gate can authorize dispatch; result normalization cannot convert uncertain effects into success. |
+
+
+Run these flows through actual local implementations after unit tests. Bind results to exact source, dependencies, configuration, environment, and artifact bytes. A mock-only test cannot qualify a native enforcement or installed-product claim. Preserve failed, blocked, skipped, and not-executed cases separately. Use [the cross-system scenarios](../ACCEPTANCE-CRITERIA/END-TO-END-SCENARIOS/README.md) for user-workflow qualification.

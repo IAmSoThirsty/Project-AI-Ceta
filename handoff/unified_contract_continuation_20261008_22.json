@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-08T13:34:44.218955+00:00",
+  "record": "handoff/kernel_transactions_continuation_20261008_22.json",
+  "status": "IMPLEMENTED_NOT_QUALIFIED",
+  "bounded_fixture_mechanics": "One composition captures the existing store/codec/installation and internal owner ports. Kernel-owned prepare reserves allocation and commits intent/issuance/permit together; consume charges the held ceiling and records immutable consumption; revoke updates grant generation. Exact dependencies/deadline commitments and issuance generation zero prevent stale/ABA reuse. Both transaction orderings remain fixture mechanics. Captured clock guard runs immediately before SQLite COMMIT; post-COMMIT expiry denies the return while preserving spent authority. No fixture owner is claimed as a real owner, and runtime admission always denies.",
+  "unresolved_transition_ids": [
+    "TR-04",
+    "TR-06",
+    "TR-09",
+    "TR-11",
+    "TR-13",
+    "TR-20"
+  ],
+  "unanswered_owner_question": [
+    "TR-06",
+    "TR-09",
+    "TR-11"
+  ],
+  "owner_limits": "Fixture owner ports and one-process model review do not establish authenticated OS principals, trusted approval/time/resource owners, protected effect linearization, independent evidence, installed operation, power-loss, hardware/device/custody/distributed or endurance qualification. Broker/runtime admission stays closed. TR-06/TR-09/TR-11 owner question is unanswered; TR-07/TR-08 mechanics start from an owner-bound PREPARED fixture basis. Source adoption and remaining transition decisions stay open. Seven-dimensional allocation liability is a versioned development engineering profile, not elapsed-time or actual-use billing, settlement or refund.",
+  "source_adoption": "UNCHANGED_NOT_RATIFIED",
+  "effect_admission": "CLOSED",
+  "preserved_scope": {
+    "requirements": 175,
+    "components": 25,
+    "original_cases": 128,
+    "packages": 28,
+    "volumes": 20,
+    "lifecycle": 406,
+    "gates": 8
+  },
+  "gate_a": "OPEN",
+  "full_objective": "ACTIVE_NOT_COMPLETE",
+  "qualification": "NOT_RUN"
+}

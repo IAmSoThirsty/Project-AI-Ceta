@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "result": "PASS_BOUNDED_INTERNAL_AGENT_REVIEWS",
+  "latest_peer_observation_utc": "2026-10-08T18:07:28.485828Z",
+  "scope": "Separate single-job, read-only model-agent reviews. Findings remain bounded to their exact observation cuts.",
+  "brief_sha256": "340cf6670cb909da37239fe94fc0994468f33b08540eff300f48b3503ec293e5",
+  "pins": {
+    "integration": "97a3a8bf525861580b5e73b667f3e7e49be05f1cf4d6e0fab0ff8e81c0521a00",
+    "state": "4380d62b2f733dc34a196751e195f59637998d2e956097c1f7971be9d23ab98f",
+    "plan": "ff93840399c6d7a431d8493e54bcf4105dabada0606e7763f2abde99cafdfe40",
+    "copy_receipt": "4b5bfd2f6eeaef34b15237ecc6959ca998dc59de1ca91265e436aba0903aadcb",
+    "zip": "ec874c313d2c2fc72f69e058effd0862e4ebe162c3954bbe2ed43c9d3baedc24"
+  },
+  "reviews": [
+    {
+      "agent": "/root/volume_xi_reconciliation",
+      "job": "Collaborative review of the complete senior brief",
+      "observed_at_utc": "2026-10-08T17:57:35.392718Z",
+      "result": "PASS_NO_BLOCKING_OMISSION",
+      "complete_lines": 90,
+      "bytes": 4985,
+      "clarification": "NEW paths require absence checks and exclusive creation. Root adopted this as an explicit assignment rule; the frozen brief was preserved.",
+      "changed": "NONE"
+    },
+    {
+      "agent": "/root/volume_x_reconciliation",
+      "job": "Actual ledger-integration verification",
+      "started_at_utc": "2026-10-08T17:57:10.342960Z",
+      "ended_at_utc": "2026-10-08T18:00:43.269719Z",
+      "result": "PASS",
+      "destinations": 9,
+      "backups": 6,
+      "ticket_prefix_preserved": 27,
+      "issue_prefix_preserved": 81,
+      "work_package_state_pairs_preserved": 28,
+      "volume_authority_metadata_preserved": 20,
+      "current_application_files": 145,
+      "current_watched_files": 143,
+      "unique_passing_test_ids": 427,
+      "manifest_inputs_checked": 240,
+      "manifest_inputs_excluded": 1,
+      "exclusion": "User attachment outside this agent's named project-read scope; root separately checked the attached directive pin using tool b75d70.",
+      "changed": "NONE"
+    },
+    {
+      "agent": "/root/volume_xii_reconciliation",
+      "job": "Hostile readiness review of the frozen finalization cut",
+      "ended_at_utc": "2026-10-08T18:02:58.212167Z",
+      "result": "PASS_NO_CONCRETE_READINESS_BLOCKER",
+      "prior_preservation_entries": 1936,
+      "preservation_substitutions": 13,
+      "before_application_copies": 126,
+      "unchanged_application_files": 119,
+      "current_map_entries": 2202,
+      "prepared_files": 458,
+      "source_stage_roles": 916,
+      "zip_members": 457,
+      "current_passing_test_ids": 427,
+      "limits": "Fixture-author overlap; no destination verification in this readiness job.",
+      "changed": "NONE"
+    },
+    {
+      "agent": "/root/volume_xi_reconciliation",
+      "job": "Prepared-state evidence verification",
+      "map_bookend_utc": "2026-10-08T18:02:42.020856Z",
+      "test_inventory_bookend_utc": "2026-10-08T18:06:11.124155Z",
+      "integrity_measurement_bookend_utc": "2026-10-08T18:07:28.485828Z",
+      "result": "PASS_NO_SUPPORTED_MISMATCH",
+      "map_counts": [
+        639,
+        5,
+        642,
+        55,
+        150,
+        711
+      ],
+      "named_map_entries": 2202,
+      "unique_mapped_paths": 2181,
+      "explicitly_mapped_retained_R_paths": 277,
+      "plan_files": 458,
+      "source_stage_roles": 916,
+      "stage_files_including_plan": 459,
+      "test_ids": 427,
+      "new_test_ids": 103,
+      "prior_test_ids": 324,
+      "limits": "Candidate/copy-helper author overlap; destination completion was not inspected.",
+      "changed": "NONE"
+    },
+    {
+      "agent": "/root/volume_x_reconciliation",
+      "job": "Actual review-delivery byte verification",
+      "started_at_utc": "2026-10-08T18:03:12.441923Z",
+      "ended_at_utc": "2026-10-08T18:04:19.672159Z",
+      "result": "PASS",
+      "planned_files": 458,
+      "source_stage_destination_roles": 1374,
+      "output_files": 458,
+      "stage_files_including_plan": 459,
+      "physical_zips": 2,
+      "members_per_zip": 457,
+      "actual_member_checks": 914,
+      "unknown_files": 0,
+      "omissions": 0,
+      "hash_or_size_differences": 0,
+      "zip_bytes": 12737646,
+      "limits": "Six full state maps were outside this delivery-only job.",
+      "changed": "NONE"
+    }
+  ],
+  "root_cross_checks": {
+    "complete_brief_read": "dde433",
+    "brief_identity": "ba7012",
+    "actual_nine_destinations_and_raw427": "5e67c8",
+    "all_current2202_maps": "4441e1",
+    "reviewed_frozen_delivery_verifier_actual_execution": "c3abe3",
+    "actual_copy_receipt_and_attached_directive": "b75d70"
+  },
+  "dispositions": [
+    {
+      "item": "Brief NEW-path wording",
+      "classification": "fixed now in explicit writing assignments",
+      "detail": "No demonstrated overwrite was found; clarification adopted without changing the evidence-bound brief."
+    },
+    {
+      "item": "First full-suite marker-publication error",
+      "classification": "fixed now",
+      "detail": "First failed execution remains preserved. Final repaired427-test execution supports the current source cut."
+    },
+    {
+      "item": "Product qualification and source/adoption decisions",
+      "classification": "requires separate follow-up work and applicable user decisions",
+      "detail": "These reviews do not close installed, visible UI, hardware/model/device, custody, distributed, human, independence or endurance obligations."
+    }
+  ],
+  "qualification": {
+    "internal_review": true,
+    "external_or_human_acceptance": false,
+    "gate_a": "OPEN",
+    "original_acceptance": "128_NOT_RUN",
+    "formal_gates": "8_NOT_EVALUATED",
+    "full_objective": "ACTIVE_NOT_COMPLETE"
+  },
+  "phase_limit": "This is a late agent-report synopsis with root cross-check references, outside the earlier immutable state and ZIP. A separate sidecar delivery receipt must bind any copied synopsis bytes."
+}

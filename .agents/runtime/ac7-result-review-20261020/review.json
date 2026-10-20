@@ -1,0 +1,159 @@
+{
+  "schema": "ceta-ac7-result-interpretation-review-v1",
+  "at": "2026-10-20T09:45:52.370205+00:00",
+  "reviewer": "/root/recovery_join_review20",
+  "decision": "approved_as_failed_attempt_and_recorded_cleanup_evidence",
+  "positive_isolation_decision": "rejected_not_established",
+  "canonical_real_effect_decision": "not_established",
+  "no_host_execution_approval": true,
+  "host_execution_approved": false,
+  "human_approval_issued": false,
+  "retry_approved": false,
+  "native_execution_performed_by_reviewer": false,
+  "source_publication_approved": false,
+  "approval_sha256": "1664e04705da6ffcd9fd0bb4838811eb1890a41835737eb8667e6d292112cf01",
+  "manifest_sha256": "83967d7b5c00abc6461cdcb9bbe398bb63b0ab53078d8364f56f383de9b511cf",
+  "tool_sha256": "79da07922e6a7f56cca0ae9d90a2498c3d6f28a58dcb6bd3144ab56a87b5bd84",
+  "wrapper_sha256": "f25ee11f38fae860ca2a21673c42c0591db62cef0937b0b57f9b6aa0eff871bd",
+  "proposal_sha256": "ddb4382f6d2aa9e62d0d39a661c73730cd10e55201a0958542f0fd8829cc6071",
+  "attempt_directory": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\q-6be3c32cb832461093c6d15dc9c538f8",
+  "attempt_result_sha256": "17e166ce17b01ddfedb0845d8934dcabe4875c930056d5a2b368056c7c9a5e5b",
+  "native_receipt_sha256": "ab1c95b6940c4a94d588221cfe9622e44cc706e06d75287baf04280f59d0a78c",
+  "recorded_worker_exit": 3221225794,
+  "recorded_worker_exit_hex": "0xC0000142",
+  "recorded_retirement_status": "all_captured_owned_resources_retired",
+  "recorded_profile_cleanup": "DELETE_SUCCEEDED_AND_FOLDER_ABSENCE_OBSERVED",
+  "fresh_current_host_inspection_performed": false,
+  "independent_system_wide_process_handle_witness": false,
+  "candidate_payload_hashes_checked": 357,
+  "source_cut_hashes_checked": 352,
+  "candidate_native_cut_hashes_checked": 352,
+  "file_checks": 65,
+  "stable_read_inputs": 755,
+  "evidence": {
+    "REVIEW.md": "8241dd37b00bb7e7df60ed83d0f53206d7c7463c8de77e5bb434eb8adf9f423e",
+    "FILE-REVIEW-RESULT.json": "8f0b4426b675e260f647cbf3a36c1df201403073a113a1960f6d71c42c029b36",
+    "verify_recorded_attempt_v2.py": "466879b4b9f013789e2c1a970a887c76d1c3ab9074aa646799adea8c1452f214",
+    "verify_recorded_attempt.py": "220faa629520652c33ca274486cf875d58b1bde424bf679e909e8c953e9f244f",
+    "FILE-REVIEW-FAILURE.json": "54acc0aeba41c3253f3a471ce0a57c41427cfc9084a73642417924eb70c418ee"
+  },
+  "claims": [
+    {
+      "statement": "Exact approval, command, reviewed packet, logs, one-attempt markers and terminal failure are mutually bound in retained records.",
+      "epistemic_status": "verified",
+      "source_ids": [
+        "FILE-REVIEW-RESULT.json",
+        "AUTHORIZED-AC7-TERMINAL.json"
+      ]
+    },
+    {
+      "statement": "Parent token receipt has exact AppContainer SID, capability0, low integrity4096, restrictedfalse/raw0/error0/count0 for PID26536.",
+      "epistemic_status": "verified",
+      "source_ids": [
+        "native-profile-r2.json"
+      ]
+    },
+    {
+      "statement": "Both captured owned lifetimes and pending native-resource records report retirement; exact own-profile deletion0 precedes folder absence observation.",
+      "epistemic_status": "verified",
+      "source_ids": [
+        "RETIREMENT.json",
+        "DELETE-INTENT.json",
+        "DELETE-RETURN.json",
+        "POST-DELETE-OBSERVATION.json",
+        "RESULT.json"
+      ]
+    },
+    {
+      "statement": "The worker returned0xC0000142 and no usable probe facts; oracle rejected NATIVE_WORKER_FACTS_REQUIRED.",
+      "epistemic_status": "verified",
+      "source_ids": [
+        "native-profile-r2.json",
+        "RESULT.json",
+        "tools/isolated_worker_token_oracle.py:81"
+      ]
+    },
+    {
+      "statement": "Scoped Source352/candidate352 maps are conserved and all357 frozen candidate hashes still match.",
+      "epistemic_status": "verified",
+      "source_ids": [
+        "FILE-REVIEW-RESULT.json"
+      ]
+    },
+    {
+      "statement": "DLL failure occurred before useful Rust probe execution.",
+      "epistemic_status": "hypothesis",
+      "source_ids": [
+        "native-profile-r2.json",
+        "Microsoft NTSTATUS0xC0000142"
+      ]
+    },
+    {
+      "statement": "Specific DLL/root cause, Rust main entry and native allowed-effect/denial results.",
+      "epistemic_status": "unknown",
+      "source_ids": []
+    },
+    {
+      "statement": "Exact raw worker stdout length and bytes in the non-exception branch.",
+      "epistemic_status": "unknown",
+      "source_ids": [
+        "native_fixture_support.py:158"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "AC7-RUNTIME-01",
+      "classification": "blocking positive isolation acceptance",
+      "issue": "Native worker initialization status0xC0000142; facts missing.",
+      "next_executable_path": "Root separate bounded diagnosis, pin concrete correction and obtain fresh exact one-attempt authorization before successor execution."
+    },
+    {
+      "id": "AC7-REVIEW-HELPER-01",
+      "classification": "fixed now",
+      "issue": "First file checker treated the opening brace of pretty JSON as a complete JSON line.",
+      "repair": "V2 skips incomplete JSON lines and requires a complete final snapshot with semantic equality; original failure retained."
+    }
+  ],
+  "skill": "epistemic-status-enforcer",
+  "skill_version": "0.1.0",
+  "governing_version": "thirsty-constitution-v0.1",
+  "skill_sources": {
+    "SKILL.md": "ab4e1fc97e6eeebc242832afc6d865fe7408352b5ce0c716539b14e287d85fae",
+    "references/constitutional-rules.md": "fcac1c8ed76418d9ec44b97a057e5ac0c9b654e0f0337d1a255267a5a0867496",
+    "references/handoff-schema.md": "3f8cefccc028af6f37d7ac2b3add59fe6e5079bee86df0453a523443ad0b4823"
+  },
+  "assumptions": [
+    "Trusted Windows/kernel/user identity and original actual-human-response capture."
+  ],
+  "contradictions": [],
+  "risks": [
+    "Missing worker facts must not be accepted as successful access refusal or functioning product."
+  ],
+  "irreversible_effects": [],
+  "external_actions_taken": [
+    "Read Microsoft primary NTSTATUS reference; no host/profile/process-management action."
+  ],
+  "unresolved_questions": [
+    "Which DLL/init routine failed and why?",
+    "Did Rust main execute?",
+    "What were raw native stdout bytes?",
+    "Can a separately authorized corrected worker produce all required positive and negative effects?",
+    "Canonical source publication and real application acceptance remain outside this review."
+  ],
+  "recommended_next_skills": [],
+  "recommended_next_action": "Preserve failed packet; Root completes separate concrete DLL-init diagnosis. Fresh exact authorization is required for any successor profile attempt.",
+  "invalidation_conditions": [
+    "Changed pins",
+    "Contradictory native evidence",
+    "A discovered receipt/measurement defect"
+  ],
+  "primary_references": [
+    {
+      "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55",
+      "entry": "0xC0000142 STATUS_DLL_INIT_FAILED",
+      "accessed": "2026-10-20",
+      "claim_scope": "status-name classification only"
+    }
+  ]
+}

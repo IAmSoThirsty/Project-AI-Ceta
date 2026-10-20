@@ -1,0 +1,124 @@
+{
+  "errors": [
+    {
+      "code": "AUTHORITY_MISSING",
+      "category": "DENIED",
+      "next_action": "Request current bounded authorization.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "AUTHORITY_REVOKED",
+      "category": "DENIED",
+      "next_action": "Reauthorize through the trusted owner interaction.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "PERMIT_CONSUMED",
+      "category": "DENIED",
+      "next_action": "Observe prior outcome; prepare a new attempt if permitted.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "PREPARATION_STALE",
+      "category": "STALE",
+      "next_action": "Recompile current context and preserve the draft.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "RESOURCE_CHANGED",
+      "category": "CONFLICT",
+      "next_action": "Inspect current resource and prepare a fresh candidate.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "EFFECT_INDETERMINATE",
+      "category": "INDETERMINATE",
+      "next_action": "Reconcile actual outcome before dependent work.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "IDENTITY_MISSING",
+      "category": "RECOVERY",
+      "next_action": "Preserve original data and recover legitimate identity.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "HISTORY_INVALID",
+      "category": "INTEGRITY_FAILED",
+      "next_action": "Open read-only preserved recovery and inspect anchor evidence.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "CONTAINMENT_UNAVAILABLE",
+      "category": "UNAVAILABLE",
+      "next_action": "Keep that execution lane closed; qualify the required boundary.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "MODEL_UNQUALIFIED",
+      "category": "UNAVAILABLE",
+      "next_action": "Measure a compatible configuration for the requested capability.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "RESOURCE_EXHAUSTED",
+      "category": "RESOURCE_EXHAUSTED",
+      "next_action": "Apply backpressure and preserve recovery reserve.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "CONTEXT_OVERFLOW",
+      "category": "INVALID",
+      "next_action": "Show mandatory content budget and request explicit reduction.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "QUORUM_UNAVAILABLE",
+      "category": "DENIED",
+      "next_action": "Restore required independent authority; do not downgrade.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "OBSERVATION_PARTIAL",
+      "category": "INCOMPLETE",
+      "next_action": "Preserve completeness and resolve required missing observations.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "STOP_PENDING",
+      "category": "CANCELLING",
+      "next_action": "Wait for observed owned termination and reconcile effects.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "REVIEW_INDEPENDENCE_MISSING",
+      "category": "BLOCKED",
+      "next_action": "Assign a real qualifying reviewer.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "SCHEMA_UNSUPPORTED",
+      "category": "INVALID",
+      "next_action": "Use a supported version or an explicit converter.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "SOURCE_CONFLICT",
+      "category": "BLOCKED",
+      "next_action": "Resolve the named source/meaning conflict.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "CAPTURE_NOT_AUTHORIZED",
+      "category": "DENIED",
+      "next_action": "Activate capture explicitly with scope and retention.",
+      "must_not_imply_completed_effect": true
+    },
+    {
+      "code": "RELEASE_NOT_AUTHORIZED",
+      "category": "DENIED",
+      "next_action": "Obtain release-specific owner authorization.",
+      "must_not_imply_completed_effect": true
+    }
+  ]
+}

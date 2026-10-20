@@ -1,0 +1,405 @@
+{
+  "components": [
+    {
+      "id": "CMP-01",
+      "slug": "contracts",
+      "title": "Canonical types and serialization",
+      "path": "src/ceta/contracts",
+      "allowed_static_dependencies": [],
+      "boundary": "Pure contract library; no OS handles, UI, model calls or mutable state.",
+      "owns": "Own strict records, identifiers, canonical byte rules, version dispatch and deterministic validation errors.",
+      "section_ids": [
+        "SPEC-05",
+        "SPEC-06"
+      ],
+      "state": "IN_PROGRESS_PARTIAL_SOURCE_TESTED",
+      "implementation_owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "mapped_implementation_path": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-10.json",
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "decisions/ADR-021.md",
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md"
+      ],
+      "evidence_limits": "Pure leaf contracts including framing and memory metadata binding only; full contract, domain state, current authority, transport and runtime incomplete."
+    },
+    {
+      "id": "CMP-02",
+      "slug": "kernel",
+      "title": "Deterministic governance and transition kernel",
+      "path": "src/ceta/kernel",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Trusted control boundary; the only positive-authority decision owner.",
+      "owns": "Own admissibility, authority and policy evaluation, transition predicates, consent binding and single-use permit state.",
+      "section_ids": [
+        "SPEC-16",
+        "SPEC-19"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-03",
+      "slug": "store",
+      "title": "Canonical history and projections",
+      "path": "src/ceta/store",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Protected store adapter accessible to the trusted application service, never model workers.",
+      "owns": "Own durable commit mechanics, per-scope ordered streams, optimistic revisions, outbox transactions and derivable projections.",
+      "section_ids": [
+        "SPEC-07"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-04",
+      "slug": "identity",
+      "title": "Identity, trusted approvals and time",
+      "path": "src/ceta/identity",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Credential and trusted-approval boundary with narrowly exposed operations.",
+      "owns": "Own technical identity lookup, authentication bindings, key references, session/boot generations and approval ceremony verification.",
+      "section_ids": [
+        "SPEC-06",
+        "SPEC-19"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-05",
+      "slug": "supervisor",
+      "title": "Supervisor, queues and owned lifetimes",
+      "path": "src/ceta/supervisor",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Application supervisor with bounded lifecycle privileges; requests authority from kernel.",
+      "owns": "Own event dispatch leases, task wakeups, service lifetimes, stop coordination and health reporting.",
+      "section_ids": [
+        "SPEC-08",
+        "SPEC-09",
+        "SPEC-30"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-06",
+      "slug": "observation",
+      "title": "Scoped observation and reconciliation",
+      "path": "src/ceta/observation",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Least-authority read workers with explicit subscriptions.",
+      "owns": "Own observations of selected resources, change hints, reconciliation scans and source completeness.",
+      "section_ids": [
+        "SPEC-10"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-07",
+      "slug": "context",
+      "title": "Intake and exact context compiler",
+      "path": "src/ceta/context",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Cognitive preparation boundary; no general tools or permit issuance.",
+      "owns": "Own original-request preservation, interpretation records, scope-aware retrieval assembly and exact prepared payload.",
+      "section_ids": [
+        "SPEC-09",
+        "SPEC-11"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-08",
+      "slug": "memory",
+      "title": "Fates, retrieval and cognitive graph",
+      "path": "src/ceta/memory",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Scoped payload/index storage; mutations admitted by the kernel.",
+      "owns": "Own candidate creation, relevance weighting, lifecycle proposals and permission-filtered derived indexes.",
+      "section_ids": [
+        "SPEC-12",
+        "SPEC-29"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-09",
+      "slug": "companion",
+      "title": "Partner-facing intelligence",
+      "path": "src/ceta/companion",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Untrusted reasoner relative to effect authority, using a qualified inference worker.",
+      "owns": "Own conversation and explanation use cases, decision-support rationale and technical identity presentation.",
+      "section_ids": [
+        "SPEC-13"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-10",
+      "slug": "reflection",
+      "title": "Sovereign Interior Vault",
+      "path": "src/ceta/reflection",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Isolated exploratory workspace with no production effect route.",
+      "owns": "Own finite speculative sessions and proposition formation.",
+      "section_ids": [
+        "SPEC-14"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-11",
+      "slug": "shadow",
+      "title": "Shadow Thirst staging",
+      "path": "src/ceta/shadow",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Hostile-code containment with disposable workspace and no real credentials.",
+      "owns": "Own governed proposal IR, candidate bytes, simulation records and predicted-versus-observed comparisons.",
+      "section_ids": [
+        "SPEC-15"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-12",
+      "slug": "review",
+      "title": "Galahad, Cerberus and Codex review",
+      "path": "src/ceta/review",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Bounded review workers; protected authority remains in kernel.",
+      "owns": "Own attributable identity/consent, security/survival and constitutional findings with dissent.",
+      "section_ids": [
+        "SPEC-17"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-13",
+      "slug": "orchestration",
+      "title": "Constrained orchestration and TAAR adaptation",
+      "path": "src/ceta/orchestration",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Pure graph compiler plus kernel-owned scheduling use cases.",
+      "owns": "Own typed graph semantics and compute legal readiness without independent permission state.",
+      "section_ids": [
+        "SPEC-18"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-14",
+      "slug": "effects",
+      "title": "Effect broker and adapters",
+      "path": "src/ceta/effects",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "OS-enforced broker/worker boundary; no unrestricted generic execution RPC.",
+      "owns": "Own bounded effect performance after kernel admission and exact adapter dispatch.",
+      "section_ids": [
+        "SPEC-20",
+        "SPEC-21"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-15",
+      "slug": "verification",
+      "title": "Independent outcome observation and evidence checks",
+      "path": "src/ceta/verification",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Distinct observing/verifying role with separately described independence.",
+      "owns": "Own checks of actual postconditions and evidence bundles; kernel settles state.",
+      "section_ids": [
+        "SPEC-20",
+        "SPEC-35",
+        "SPEC-36"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-16",
+      "slug": "inference",
+      "title": "CETA-owned local model execution",
+      "path": "src/ceta/inference",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Contained inference worker behind owned lifecycle and residency lease.",
+      "owns": "Own pinned model execution, exact tokenizer/template contract and measured backend state.",
+      "section_ids": [
+        "SPEC-22",
+        "SPEC-23",
+        "SPEC-24"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-17",
+      "slug": "assets",
+      "title": "Asset custody and resource admission",
+      "path": "src/ceta/assets",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Explicit acquisition workers; no model-pack code execution.",
+      "owns": "Own verified downloads/imports, manifests, licenses, storage staging and hardware observations.",
+      "section_ids": [
+        "SPEC-23"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-18",
+      "slug": "custody",
+      "title": "Defensive Vault",
+      "path": "src/ceta/custody",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Dedicated protected object service, never a tool launcher.",
+      "owns": "Own object admission, seal/release lifecycle, protected metadata and custody evidence.",
+      "section_ids": [
+        "SPEC-25",
+        "SPEC-29"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-19",
+      "slug": "cbcc",
+      "title": "Distributed cryptographic authority",
+      "path": "src/ceta/cbcc",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Independently administered authority domains plus sealed operation worker.",
+      "owns": "Own threshold protocol participation and proof checks within each independent domain.",
+      "section_ids": [
+        "SPEC-26",
+        "SPEC-27"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-20",
+      "slug": "integrity",
+      "title": "NIRL monitoring and Chimera isolation",
+      "path": "src/ceta/integrity",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Technical signal monitor plus visibly isolated containment lane.",
+      "owns": "Own evidence-backed signal detection and containment recommendations.",
+      "section_ids": [
+        "SPEC-28",
+        "SPEC-35"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-21",
+      "slug": "desktop",
+      "title": "Native desktop and trusted interaction",
+      "path": "src/ceta/desktop",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "PySide6 host and explicitly trusted approval surface; no core authority writes.",
+      "owns": "Own presentation, user input, real actions, approvals, accessibility and honest status.",
+      "section_ids": [
+        "SPEC-32"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-22",
+      "slug": "modalities",
+      "title": "Voice, selected-screen and external adapters",
+      "path": "src/ceta/modalities",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Opt-in capture/connector workers with explicit scope and retention.",
+      "owns": "Own device observations and interface adaptation, not separate assistants.",
+      "section_ids": [
+        "SPEC-33"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-23",
+      "slug": "migration",
+      "title": "Legacy import and coherent cutover",
+      "path": "src/ceta/migration",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Read-mostly conversion boundary plus separately authorized cutover tooling.",
+      "owns": "Own source snapshots, mapping, conversion, quarantine and restoration rehearsals.",
+      "section_ids": [
+        "SPEC-31"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-24",
+      "slug": "delivery",
+      "title": "Build, release and maintenance",
+      "path": "src/ceta/delivery",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Reproducible build tooling and separately authorized publisher actions.",
+      "owns": "Own candidate assembly, dependency closure, signed update protocol and artifact provenance.",
+      "section_ids": [
+        "SPEC-38"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CMP-25",
+      "slug": "evaluation",
+      "title": "Quality, drift and training lifecycle",
+      "path": "src/ceta/evaluation",
+      "allowed_static_dependencies": [
+        "contracts"
+      ],
+      "boundary": "Isolated evaluator/training process with budgeted data access.",
+      "owns": "Own test corpus lineage, scoring, candidate qualification proposals and optional authorized training.",
+      "section_ids": [
+        "SPEC-24",
+        "SPEC-34",
+        "SPEC-36",
+        "SPEC-37"
+      ],
+      "state": "SPECIFIED_NOT_IMPLEMENTED"
+    }
+  ]
+}

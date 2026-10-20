@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "result": "PASS_EXCLUSIVE_LATE_PROOF_DELIVERY",
+  "command_tool": "084153",
+  "command_exit_code": 0,
+  "started_at_utc": "2026-10-08T18:11:08.9006141Z",
+  "observed_at_utc": "2026-10-08T18:11:09.8013080Z",
+  "expected_root": "C:/Users/Quencher/Documents/Codex/2026-10-06/t-00-active-ceta-intelligence-operating/outputs/increment-24-owned-service",
+  "plan_sha256": "ff93840399c6d7a431d8493e54bcf4105dabada0606e7763f2abde99cafdfe40",
+  "state_sha256": "4380d62b2f733dc34a196751e195f59637998d2e956097c1f7971be9d23ab98f",
+  "original_delivery_receipt_sha256": "4b5bfd2f6eeaef34b15237ecc6959ca998dc59de1ca91265e436aba0903aadcb",
+  "planned_files": 458,
+  "planned_role_readbacks": 1374,
+  "late_files": 4,
+  "late_source_destination_readbacks": 8,
+  "known_output_files": 462,
+  "unknown_files": [],
+  "late_files_verified": [
+    {
+      "name": "review-output-copy-24.json",
+      "source": "T:/00-Active/CETA_Intelligence_Operating_System_Build_Package/evidence/runtime/review-output-copy-24.json",
+      "destination": "C:/Users/Quencher/Documents/Codex/2026-10-06/t-00-active-ceta-intelligence-operating/outputs/increment-24-owned-service/review-output-copy-24.json",
+      "bytes": 333358,
+      "sha256": "4b5bfd2f6eeaef34b15237ecc6959ca998dc59de1ca91265e436aba0903aadcb"
+    },
+    {
+      "name": "increment-24-root-confirmation.json",
+      "source": "T:/00-Active/CETA_Intelligence_Operating_System_Build_Package/evidence/runtime/increment-24-root-confirmation.json",
+      "destination": "C:/Users/Quencher/Documents/Codex/2026-10-06/t-00-active-ceta-intelligence-operating/outputs/increment-24-owned-service/increment-24-root-confirmation.json",
+      "bytes": 6615,
+      "sha256": "12bae818f9b06794f4ed820b30e1b54a0b6eb02fa430c819ef42c72eb7a96638"
+    },
+    {
+      "name": "increment-24-internal-review.json",
+      "source": "T:/00-Active/CETA_Intelligence_Operating_System_Build_Package/evidence/runtime/increment-24-internal-review.json",
+      "destination": "C:/Users/Quencher/Documents/Codex/2026-10-06/t-00-active-ceta-intelligence-operating/outputs/increment-24-owned-service/increment-24-internal-review.json",
+      "bytes": 5965,
+      "sha256": "14166e70508746169bd4fdbabe0bf457fb161d9fab6a5ef317405bcd325c0770"
+    },
+    {
+      "name": "SENIOR_AGENT_BRIEF.md",
+      "source": "T:/00-Active/CETA_Intelligence_Operating_System_Build_Package/.local-build-cache/increment-23-ipc/SENIOR_AGENT_BRIEF.md",
+      "destination": "C:/Users/Quencher/Documents/Codex/2026-10-06/t-00-active-ceta-intelligence-operating/outputs/increment-24-owned-service/SENIOR_AGENT_BRIEF.md",
+      "bytes": 4985,
+      "sha256": "340cf6670cb909da37239fe94fc0994468f33b08540eff300f48b3503ec293e5"
+    }
+  ],
+  "preservation": "Exclusive File.Copy overwrite=false; original458 plan files, ZIP, stage, plan and state were preserved. Partial outputs would remain on failure; actual command returned0.",
+  "qualification": "LOCAL_REVIEW_EVIDENCE_ONLY_NOT_PRODUCT_QUALIFICATION",
+  "phase_limit": "Four declared files were copied after the original458-file delivery cut. This new receipt is outside the immutable state/package and is not itself included in the462-file delivered namespace."
+}

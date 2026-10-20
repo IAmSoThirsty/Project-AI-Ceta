@@ -1,0 +1,75 @@
+{
+  "schema": "ceta.safe-halt.v1",
+  "observed_at": "2026-10-20T11:33:27Z",
+  "authority": "Parent /root relayed the user's immediate safe halt for Codex restart.",
+  "author": "/root/ac7_native_artifact_review20",
+  "project": "T:/00-Active/Project-AI-CETA",
+  "candidate": "T:/00-Active/Project-AI-CETA/.agents/real-effect-entrypoint-20261020",
+  "evidence": "T:/00-Active/Project-AI-CETA/.agents/runtime/real-effect-entrypoint-20261020",
+  "status": "HALTED_FROZEN_REVIEW_PENDING_POSITIVE_ADMISSION_BLOCKED",
+  "pins": {
+    "MANIFEST.json": "d33e2b09c1492fe4cb6b0cce233d567bccf7ac5e3de0e62fd11d270368e657a1",
+    "implement-receipt.json": "1dd837e1621ee529711b64423db672cde5188bf8899c8eb398b6d73662ec54f1",
+    "evidence-receipt-r2.json": "4d99ad826fcee6eed9fe6f18c994d9264a946868924140b3abf8d8c19a5aac75",
+    "pure_r7/RESULT.json": "65fa6ac2209e7063450933424c8b11419fee34b6e8176e5ba627e6ced57194be",
+    "dependency_MANIFEST-Q5.json": "cce2c8e2c3a31fbedf5c2d83b2d15d499a93030c38ebe0c1e4545b868ef99acf"
+  },
+  "terminal_state": {
+    "last_verification": {
+      "tool_chunk": "a54b1d",
+      "exit_code": 0
+    },
+    "evidence_completion": {
+      "tool_chunk": "d72fa9",
+      "exit_code": 0,
+      "receipt": "evidence-complete-r2.json",
+      "allowed": true
+    },
+    "final_pure_controls": {
+      "tool_chunk": "3a598c",
+      "exit_code": 0,
+      "cases_passed": 69,
+      "result": "pure_r7/RESULT.json"
+    },
+    "running_owned_commands_or_processes": [],
+    "running_exec_sessions_or_cells": [],
+    "owned_native_resources_or_listeners": [],
+    "outstanding_claims": {},
+    "claims_basis": "Actual claims.json read as {} in the completed final verification.",
+    "implementation_write_lease": "COMPLETED_RELEASED",
+    "evidence_write_lease": "COMPLETED_RELEASED",
+    "review_node": "READY",
+    "validate_node": "PENDING",
+    "integrate_node": "PENDING"
+  },
+  "admission_blocker": {
+    "classification": "BLOCKING_POSITIVE_END_TO_END_EXECUTION",
+    "inherited_port": "src/ceta/identity/owners.py:21-22",
+    "concrete_owner": "src/ceta/identity/owner_session.py NativeCpuOwnerSession",
+    "predicate": "NativeCpuOwnerSession does not override WindowsIdentityOwners.require_admission; the inherited implementation raises ContractError('PROTECTED_RESOURCE_OWNER_UNAVAILABLE').",
+    "callers": [
+      "src/ceta/kernel/transactions.py:365",
+      "src/ceta/kernel/transactions.py:400"
+    ],
+    "evidence": "Final pure controls assert the inherited method identity and its typed denial without acquiring native resources.",
+    "bypass_added": false
+  },
+  "restart_point": [
+    "Keep this candidate frozen. Root assigns a distinct named reviewer to the exact MANIFEST.json cut and completed TAAR receipts before integration.",
+    "Separately implement and review the concrete protected-resource admission port using the existing native owner, exact retained context, kernel lease and currentness path before any positive end-to-end release.",
+    "The consumption path sets _consumption_attempted=True; its admission check cannot simply reuse the pre-consumption CAPACITY retainer predicate that requires no consumption attempt.",
+    "Root retains all Source publication and action-specific live-acceptance authority."
+  ],
+  "preserved_limits": [
+    "No canonical Source, Q5 or D3 files were changed by this lane.",
+    "No app, selected host, listener, worker, DLL load, SQLite connection, Hello or credential operation, profile operation or CPU effect was executed by this lane.",
+    "Pure controls do not establish native, full application, destination or product acceptance.",
+    "AC7 positive qualification remains failed and consumed; failing DLL initialization remains unidentified, and no new profile authority is inferred.",
+    "Trusted deployment selection, canonical epoch provenance and actual peer/server identities still require legitimate trusted parent provisioning.",
+    "Retaining a connected pipe does not renew the original context expiry. Durable custody across interpreter exit remains unqualified.",
+    "FROZEN.json is preserved as historical evidence; the later successful evidence-complete-r2.json and this halt record establish the final released-claim state.",
+    "Earlier denied receipts and failed pure-control attempts remain preserved."
+  ],
+  "halt_effect": "Only this additive halt record was authored after the immediate halt instruction. No further implementation, review, tests, native operations or publication were started.",
+  "remaining_owned_resources_or_claims": []
+}

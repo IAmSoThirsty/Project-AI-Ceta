@@ -1,0 +1,103 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "run",
+    "ready",
+    "ac7-loader-capture-20261020",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\control"
+  ],
+  "exit_status": 0,
+  "response": {
+    "allowed": true,
+    "blocked": {},
+    "fingerprint_matches": true,
+    "graph_fingerprint": "34f649bb1be6f0e07a6dae56aabc5aa4515444ab482c8c184a0278e9038c7b06",
+    "graph_id": "ceta_ac7_loader_capture_construction",
+    "nodes": {
+      "evidence": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "all hard predecessor requirements satisfied",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "READY",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "implement": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": {
+          "baseline_snapshot": {},
+          "capabilities": [],
+          "claimed_at": "2026-10-20T11:13:05.234203+00:00",
+          "effective_write_scope": [
+            ".agents/ac7-loader-capture-20261020/**"
+          ],
+          "executor_id": "/root/recovery_regression20",
+          "git_baseline": {
+            "available": true,
+            "diff_hash": "2ce0f7867e59ab9f506c36df95073aca8aef5d17f6405a6ac78ccb0a23e912bd",
+            "git_changed_files": [
+              ".gitignore",
+              "AGENTS.md",
+              "CODEX_BOOTSTRAP_PROMPT.md",
+              "README.md",
+              "START_HERE.md",
+              "architecture/components.json",
+              "build/progress.json",
+              "build/work_packages.json",
+              "contracts/README.md",
+              "decisions/decision_register.json",
+              "handoff/continuity.json",
+              "requirements/requirements.json",
+              "src/ceta/reasoning/__init__.py",
+              "src/ceta/reasoning/adapter.py",
+              "src/ceta/reasoning/assessment.py",
+              "src/ceta/reasoning/shadow.py",
+              "src/ceta/reasoning/source_loader.py",
+              "standards/lifecycle_coverage.json",
+              "tools/README.md"
+            ],
+            "head": "83fc9432b4a37ee7f91d6c5b0d358a015548aed4",
+            "repo_root": "T:\\00-Active\\Project-AI-CETA",
+            "status_hash": "6a20c00689411c27cfce88ca57dbdeeb7598c07fe9964d454dc28db1d1a0e58b"
+          },
+          "input_hash": "26e3bd1e59f88f127918358c7248b69f08044448d89f62ea61108ad794dfceff",
+          "node_id": "implement",
+          "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020"
+        },
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [
+          ".agents/ac7-loader-capture-20261020/**"
+        ],
+        "executor_id": "/root/recovery_regression20",
+        "reason": "legally claimed",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "RUNNING",
+        "validation_passed": false,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020"
+      }
+    },
+    "ready_now": [
+      "evidence"
+    ],
+    "run_id": "ac7-loader-capture-20261020",
+    "sequence": 2,
+    "states": {
+      "evidence": "READY",
+      "implement": "RUNNING"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "ceta.collaborative-review.v1",
+  "observed_at_utc": "2026-10-20 11:37:29 UTC",
+  "author": "/root",
+  "reviewer": "/root/ac7_native_artifact_review20",
+  "disposition": "APPROVED_EXACT_SCRIPT_FOR_HALT_CHECKPOINT_AND_FAILED_CLAIM_CLOSURE_ONLY",
+  "reviewed_script": {
+    "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/js9-root-r3-execution-20261020/close_for_user_halt.py",
+    "sha256": "263dedef5f1db28c39e9e13e4ffc8bc6bac3ade4a8c8a9b8f7b13df76c9929ff"
+  },
+  "read_scope": [
+    "The complete halt script and phase_coordinator.complete/save/invoke implementations",
+    "Actual candidate-full terminal, full result and launch result JSON",
+    "Complete case-event JSONL parsed for counts, ordered identities and failure events",
+    "Pinned native-case proof fields and absence of publication/destination-attempt paths",
+    "Actual preclosure claims/state and canonical metadata fields/hashes",
+    "js9_support.proof and verify source, without executing those functions"
+  ],
+  "inputs": {
+    "candidate-full/RESULT.json": "cecf080e81e5d1ace86738f1f0ac05cdccbc704e13e625ffc5471ca2c44f711f",
+    "candidate-full-LAUNCH-RESULT.json": "bd8f78e8e9a4880fb057e7acdacae2e8cdbedd6fe154b7f7368bca2b0e063405",
+    "candidate-full-TERMINAL.json": "d5575fe6e43b76a4e8e2f8abe76a6338cda8d1c2c86d34d11ed00d524f0cadd1",
+    "candidate-full/NATIVE-CASE-PROOF.json": "6edebcb7a21e7bc87113290870055400b548b4b25423165e747089e34e614dbb",
+    "build/progress.json_before": "8257f739a2f16f9acb4361bebaf0f81b14675f6a12e780d8eac677cf8b4594d0",
+    "handoff/continuity.json_before": "b23f4427131d7fa392af9e286c530e6546791ed0724889600da6abe46b2ff206"
+  },
+  "verified_findings": [
+    {
+      "lines": "28-44,53-68",
+      "finding": "Actual terminal, launch and full result all record exit 1. Aggregation failed with KeyError('native_after_fixture_cleanup'). Script preserves that failure, final-report tests_run=0, all 2622 ordered PREPARE/START/STOP identities, and the separate observer failure event; it does not rewrite the contradiction as a pass."
+    },
+    {
+      "lines": "53-68",
+      "finding": "Actual launch records child_exit=1, retirement_error=null and all five outer runner/handle closure flags true. The script explicitly leaves the inner native cleanup summary unavailable and unaccepted."
+    },
+    {
+      "lines": "69-86",
+      "finding": "The corrected commands.command is a string via subprocess.list2cmdline. Each exact /root claim produces an exit-1/failed-validation receipt through the existing coordinator. The script requires the actual EXECUTION_FAILED denial, node FAILED state, removal of that claim, and finally empty claims plus review BLOCKED; it cannot report successful implementation completion."
+    },
+    {
+      "lines": "96-125",
+      "finding": "Checkpoint and beforeimages use exclusive creation. Metadata beforeimages preserve exact raw bytes as base64 plus SHA-256. Semantic metadata changes are limited to latest_user_halt_20261020 and goal_state in progress, and latest_user_halt_20261020, goal_status, first_next_action and next_action in continuity. Existing historical safe-halt and accepted JS8 records are retained. Before-read and open-stream compare checks reject observed intervening changes."
+    },
+    {
+      "lines": "87-95,104-113",
+      "finding": "Explicit user pause/resume requirement and private-lane blockers are preserved. The script does not authorize another candidate run, consume the unused destination grant, publish Source, accept joined Source, or claim product acceptance."
+    }
+  ],
+  "concrete_recorded_failure": {
+    "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+    "expected": "OBSERVER_OUTPUT_OVERLONG",
+    "observed": "OBSERVER_PROCESS_TIMEOUT",
+    "classification": "FAILED_CASE_REQUIRES_SEPARATE_REPAIR_AFTER_USER_RESUME"
+  },
+  "preclosure_claims": [
+    "implement",
+    "candidate_fixtures",
+    "candidate_cache"
+  ],
+  "blocking_findings_in_final_script": [],
+  "required_wording_corrections": [],
+  "execution_status": "NOT_EXECUTED_BY_REVIEWER; actual closure and destination state remain for Root to observe after the approved halt-only command.",
+  "limits": [
+    "This review approves only the exact halt/checkpoint script and its failed-claim closure path.",
+    "No tests, product/native effects, profile operations, debugger launches, candidate changes or canonical metadata writes were performed by the reviewer.",
+    "The inner native cleanup summary remains unknown; outer job/handle retirement does not establish individual inner cleanup.",
+    "No JS9 Source, full application or product acceptance is granted.",
+    "The earlier reviewer SAFE-HALT.json remains intact; this additive review was separately requested by Root."
+  ],
+  "reviewer_lane": {
+    "candidate_frozen": true,
+    "implementation_and_evidence_leases_completed": true,
+    "own_outstanding_claims_or_resources": [],
+    "next_action": "Halt immediately after sending this verdict; wait for explicit user resume."
+  }
+}

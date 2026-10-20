@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "recorded_at_utc": "2026-10-08T06:50:55.893225+00:00",
+  "scope": "LOCAL_GENERATOR_GUARD_DIAGNOSIS_ONLY",
+  "first_command": "py -3 -B .local-build-cache/working-increment-15/make_record.py",
+  "first_exit_code": 1,
+  "first_observed_error": "AssertionError: ('3705', 3, 4)",
+  "classification": "FIXED_NOW",
+  "target_created_by_failed_attempt": false,
+  "ledger_changes_by_failed_attempt": false,
+  "verified_source_occurrences": {
+    "3705": 3,
+    "117": 6,
+    "INCREMENT14": 4,
+    "258_ASSESSED_148_UNRESOLVED": 3
+  },
+  "repair": "Correct exact expected occurrence counts from4 to3 and7 to6; all equality guards and AST validation retained. No validation weakening.",
+  "rerun_exit_code": 0,
+  "rerun_result": "INCREMENT15_RECORD_HELPER_EXCLUSIVE_CREATE_AST_PASS",
+  "generated_helper_sha256": "87b4d9910c3c96be854105efaba454a086ea24299a02b50909878cd9442f1b59",
+  "application_code_change": "NONE",
+  "runtime_qualification": "NOT_RUN",
+  "generated_helper_hash_scope": "Historical hash at exclusive generation before subsequent issue-record addition.",
+  "finalizer_generator_failures": [
+    {
+      "exit_code": 1,
+      "observed_error": "AssertionError: ('Volume VIII assessment', 2, 1)",
+      "classification": "FIXED_NOW",
+      "repair": "Exact guard expected occurrence count corrected1 to2 after source inspection.",
+      "target_created": false,
+      "ledger_changes": false
+    },
+    {
+      "exit_code": 1,
+      "observed_error": "AssertionError: ('.local-build-cache/working-increment-14/', 3, 2)",
+      "classification": "FIXED_NOW",
+      "repair": "Exact guard count corrected2 to3 after source inspection.",
+      "target_created": false,
+      "ledger_changes": false
+    }
+  ],
+  "finalizer_generator_repair": {
+    "exit_code": 0,
+    "result": "INCREMENT15_FINALIZER_EXCLUSIVE_CREATE_AST_PASS",
+    "all_equality_guards_retained": true,
+    "ast_validation_retained": true
+  }
+}

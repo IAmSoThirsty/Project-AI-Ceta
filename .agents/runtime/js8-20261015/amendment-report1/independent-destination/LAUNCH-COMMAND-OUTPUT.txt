@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\independent-destination\launch_delivered.py", line 47, in <module>
+    if __name__=='__main__':sys.exit(main())
+                                     ^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\independent-destination\launch_delivered.py", line 43, in main
+    if primary is not None:raise primary
+                           ^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\independent-destination\launch_delivered.py", line 32, in main
+    record=run_owned(launch,emit,child,timeout=600);assert record['child_exit']==0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\bounded_custody.py", line 84, in run_owned
+    raise primary
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\bounded_custody.py", line 72, in run_owned
+    try:report['child_result']=read_child()
+                               ^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\independent-destination\launch_delivered.py", line 25, in child
+    path=V/'delivered-r1/RESULT.json';proof=j.current_json(path)
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\amendment_support.py", line 127, in current_json
+    def current_json(path):return pinned_json(path,s.ordinary(path)['sha256'])
+                                                   ^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\foundation_support.py", line 26, in ordinary
+    path=fs.safe_components(Path(path));info=fs.lstat(path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\pr4-20261014\preserve_ceta_complete.py", line 96, in safe_components
+    require(allow_missing, f"declared path is missing: {cursor}")
+  File "T:\00-Active\Project-AI-CETA\.agents\pr4-20261014\preserve_ceta_complete.py", line 49, in require
+    raise PreservationError(message)
+foundation4_native_reader.PreservationError: declared path is missing: T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\independent-destination\delivered-r1\RESULT.json

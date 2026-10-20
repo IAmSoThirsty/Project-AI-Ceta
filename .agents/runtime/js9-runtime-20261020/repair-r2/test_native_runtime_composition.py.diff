@@ -1,0 +1,169 @@
+--- frozen-r3/tests/contract/test_native_runtime_composition.py
++++ repaired-r4/tests/contract/test_native_runtime_composition.py
+@@ -382,7 +382,10 @@
+ 
+     def controlled_queued_api(self, primary, cleanup_failures=0):
+         queued=[];released=[];calls=[]
+-        def queue(handle):queued.append(handle);raise primary
++        def queue(handle):
++            if handle not in queued:
++                queued.append(handle)
++                raise primary
+         def retry(**kwargs):
+             calls.append(kwargs)
+             if len(calls)<=cleanup_failures:raise OSError('controlled pending close')
+@@ -391,7 +394,7 @@
+             retry_cleanup=retry,pending_native_resources=lambda:tuple(queued))
+         return api,queued,released,calls
+ 
+-    def test_published_api_queue_is_retired_even_before_pin_row_publication(self):
++    def test_published_api_queue_is_retired_with_preregistered_pin_row(self):
+         import ceta.identity.native_owner_view as view_module
+         failure=KeyboardInterrupt('queued controlled handle before pin row')
+         api,queued,released,calls=self.controlled_queued_api(failure)
+@@ -403,7 +406,9 @@
+         self.assertIs(caught.exception,failure)
+         value=raw(failure)['native_cpu_runtime']
+         self.assertTrue(value.closed);self.assertTrue(value._binding.closed)
+-        self.assertEqual(value._binding._pins,[])
++        self.assertEqual(len(value._binding._pins),1)
++        self.assertEqual(value._binding._pins[0]['handle'],405)
++        self.assertTrue(value._binding._pins[0]['enrolled'])
+         self.assertEqual(queued,[]);self.assertEqual(released,[405])
+         self.assertEqual(calls,[dict(kinds=('handles',))])
+ 
+@@ -422,6 +427,134 @@
+             _NATIVE_STORE_CLOSE(binding)
+             self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
+         self.assertEqual(queued,[]);self.assertEqual(released,[405]);self.assertEqual(len(calls),2)
++
++    def actual_queue_control(self, binding):
++        """Actual queue/pending methods; only Python markers, no native calls."""
++        import ceta.supervisor.isolated_worker as isolation
++        api=SimpleNamespace(_cleanup_lock=threading.RLock(),_pending_handles=[],
++            pending_sids=[],_uncertain_sids=set(),_pending_strings=[],_pending_attributes=[],
++            _pending_token_outputs=[],_pending_known_folders=[])
++        api.queue_handle=MethodType(isolation._IsolationAPI.queue_handle,api)
++        api.pending_native_resources=MethodType(isolation._IsolationAPI.pending_native_resources,api)
++        released=[];calls=[]
++        def opened(*args):
++            self.assertEqual(len(binding._pins),1)
++            self.assertIsNone(binding._pins[0]['handle'])
++            self.assertEqual(binding._pins[0]['open_state'],'UNCERTAIN')
++            return 405
++        def retry(**kwargs):
++            calls.append(kwargs)
++            released.extend(row['handle'] for row in api._pending_handles)
++            api._pending_handles.clear()
++        api.CreateFileW=opened
++        api.retry_cleanup=retry
++        return isolation,api,released,calls
++
++    def test_actual_queue_handle_preappend_failure_keeps_known_return_and_retires_once(self):
++        import ceta.identity.native_owner_view as view_module
++        binding=object.__new__(NativeStoreBinding)
++        isolation,api,released,calls=self.actual_queue_control(binding)
++        failure=MemoryError('actual HANDLE allocation before queue append')
++        original=isolation.HANDLE
++        with patch.object(view_module,'_ViewAPI',return_value=api), \
++                patch.object(view_module,'_path',return_value=str(self.root)), \
++                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
++                patch.object(isolation,'HANDLE',side_effect=[failure,original()]):
++            with self.assertRaises(MemoryError) as caught:_NATIVE_STORE_INIT(binding,self.root)
++        self.assertIs(caught.exception,failure)
++        self.assertIs(raw(failure)['native_owner_view'],binding)
++        self.assertTrue(binding.closed)
++        self.assertEqual(binding._pins[0]['handle'],405)
++        self.assertTrue(binding._pins[0]['enrolled'])
++        self.assertEqual(binding.pending_native_resources,())
++        _NATIVE_STORE_CLOSE(binding)
++        self.assertEqual(released,[405]);self.assertEqual(len(calls),1)
++
++    def test_actual_queue_handle_registration_retry_failure_remains_pending_then_recovers(self):
++        import ceta.identity.native_owner_view as view_module
++        binding=object.__new__(NativeStoreBinding)
++        isolation,api,released,calls=self.actual_queue_control(binding)
++        primary=MemoryError('initial actual HANDLE allocation')
++        retry_failure=MemoryError('close actual HANDLE allocation')
++        with patch.object(view_module,'_ViewAPI',return_value=api), \
++                patch.object(view_module,'_path',return_value=str(self.root)), \
++                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
++                patch.object(isolation,'HANDLE',side_effect=[primary,retry_failure]):
++            with self.assertRaises(MemoryError) as caught:_NATIVE_STORE_INIT(binding,self.root)
++        self.assertIs(caught.exception,primary)
++        self.assertFalse(binding.closed)
++        self.assertEqual(api._pending_handles,[])
++        self.assertEqual(released,[]);self.assertEqual(calls,[])
++        self.assertEqual(binding.pending_native_resources,
++            (dict(kind='unregistered_file_handle',path=str(binding._pins[0]['path']),
++                  handle=405,retry='PENDING'),))
++        with patch.object(api,'queue_handle',side_effect=retry_failure):
++            with self.assertRaises(MemoryError) as again:_NATIVE_STORE_CLOSE(binding)
++        self.assertIs(again.exception,retry_failure)
++        self.assertIs(raw(retry_failure)['native_owner_view'],binding)
++        self.assertFalse(binding.closed);self.assertEqual(calls,[])
++        _NATIVE_STORE_CLOSE(binding)
++        self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
++        self.assertEqual(released,[405]);self.assertEqual(len(calls),1)
++
++    def test_actual_queue_append_then_raise_is_deduplicated_before_cleanup(self):
++        import ceta.identity.native_owner_view as view_module
++        binding=object.__new__(NativeStoreBinding)
++        isolation,api,released,calls=self.actual_queue_control(binding)
++        primary=KeyboardInterrupt('after actual queue append')
++        original=api.queue_handle;queued=[]
++        def interrupted(handle):
++            original(handle)
++            queued.append(len(api._pending_handles))
++            if len(queued)==1:raise primary
++        api.queue_handle=interrupted
++        with patch.object(view_module,'_ViewAPI',return_value=api), \
++                patch.object(view_module,'_path',return_value=str(self.root)), \
++                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
++            with self.assertRaises(KeyboardInterrupt) as caught:_NATIVE_STORE_INIT(binding,self.root)
++        self.assertIs(caught.exception,primary)
++        self.assertEqual(queued,[1,1])
++        self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
++        self.assertEqual(released,[405]);self.assertEqual(len(calls),1)
++
++    def test_invalid_native_open_returns_are_known_no_acquisition_states(self):
++        import ceta.identity.native_owner_view as view_module
++        for invalid in (None,0,view_module.INVALID_HANDLE):
++            with self.subTest(invalid=invalid):
++                binding=object.__new__(NativeStoreBinding)
++                isolation,api,released,calls=self.actual_queue_control(binding)
++                api.CreateFileW=lambda *args:invalid
++                with patch.object(view_module,'_ViewAPI',return_value=api), \
++                        patch.object(view_module,'_path',return_value=str(self.root)), \
++                        patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
++                    with self.assertRaises(ContractError) as caught:_NATIVE_STORE_INIT(binding,self.root)
++                self.assertEqual(caught.exception.code,'OWNER_VIEW_NATIVE_OPEN_FAILED')
++                self.assertIs(raw(caught.exception)['native_owner_view'],binding)
++                self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
++                self.assertEqual(binding._pins[0]['open_state'],'RETURNED')
++                self.assertFalse(binding._pins[0]['enrolled'])
++                self.assertEqual(api._pending_handles,[]);self.assertEqual(released,[])
++                self.assertEqual(len(calls),1)
++
++    def test_interrupted_native_open_preserves_unknown_output_without_false_closure(self):
++        import ceta.identity.native_owner_view as view_module
++        binding=object.__new__(NativeStoreBinding)
++        isolation,api,released,calls=self.actual_queue_control(binding)
++        primary=KeyboardInterrupt('controlled native call did not return a value')
++        api.CreateFileW=lambda *args:(_ for _ in ()).throw(primary)
++        with patch.object(view_module,'_ViewAPI',return_value=api), \
++                patch.object(view_module,'_path',return_value=str(self.root)), \
++                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
++            with self.assertRaises(KeyboardInterrupt) as caught:_NATIVE_STORE_INIT(binding,self.root)
++        self.assertIs(caught.exception,primary)
++        self.assertIs(raw(primary)['native_owner_view'],binding)
++        self.assertFalse(binding.closed)
++        self.assertEqual(binding.pending_native_resources,
++            (dict(kind='file_open',path=str(binding._pins[0]['path']),
++                  handle=None,retry='UNCERTAIN'),))
++        self.assert_denied('OWNER_VIEW_OPEN_CUSTODY_UNCERTAIN',lambda:_NATIVE_STORE_CLOSE(binding))
++        self.assertFalse(binding.closed)
++        self.assertEqual(api._pending_handles,[]);self.assertEqual(released,[]);self.assertEqual(calls,[])
+ 
+     def test_no_api_with_contradictory_pin_state_is_preserved_and_denied(self):
+         binding=object.__new__(NativeStoreBinding)

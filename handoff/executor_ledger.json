@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "observed_date": "2026-10-06",
+  "integrator": "CURRENT_CODEX_EXECUTION_AGENT",
+  "executors": [
+    {
+      "id": "CURRENT_CODEX_EXECUTION_AGENT",
+      "roles": ["LEAD_INTEGRATOR", "IMPLEMENTATION", "TEST_EXECUTION", "CONTINUITY"],
+      "exclusive_write_scopes": [
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\docs\\operations\\CONTINUITY_MAP.md"
+      ],
+      "limits": ["NO_NORMAL_PROFILE_MUTATION", "NO_REFERENCE_WORKTREE_EDITS", "NO_CUTOVER_OR_PUBLICATION"]
+    }
+  ],
+  "independent_review": "NOT_PERFORMED",
+  "independent_security_review": "NOT_PERFORMED",
+  "other_assigned_workers": [],
+  "concurrent_change_rule": "Invalidate source-bound evidence if the before/after snapshot differs."
+}

@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "scope": "Exact require_release AST body with explicit in-memory proof and corroboration transports; no authority issued",
+  "controls": [
+    {
+      "name": "native-store_complete_admission",
+      "allowed": true,
+      "expected": true,
+      "corroboration_calls": [],
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "native-observer_complete_admission",
+      "allowed": true,
+      "expected": true,
+      "corroboration_calls": [],
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "candidate-full_complete_admission",
+      "allowed": true,
+      "expected": true,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ],
+        [
+          "observer",
+          "native-observer"
+        ]
+      ],
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "candidate-full_missing_native_store_corroboration",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [],
+      "error": "KeyError",
+      "passed": true
+    },
+    {
+      "name": "candidate-full_missing_native_observer_corroboration",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ]
+      ],
+      "error": "KeyError",
+      "passed": true
+    },
+    {
+      "name": "candidate-full_failed_store",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ]
+      ],
+      "error": "AssertionError",
+      "passed": true
+    },
+    {
+      "name": "candidate-full_failed_observer",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ],
+        [
+          "observer",
+          "native-observer"
+        ]
+      ],
+      "error": "AssertionError",
+      "passed": true
+    },
+    {
+      "name": "destination-full_complete_admission",
+      "allowed": true,
+      "expected": true,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ],
+        [
+          "observer",
+          "native-observer"
+        ]
+      ],
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "destination-full_missing_native_store_corroboration",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [],
+      "error": "KeyError",
+      "passed": true
+    },
+    {
+      "name": "destination-full_missing_native_observer_corroboration",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ]
+      ],
+      "error": "KeyError",
+      "passed": true
+    },
+    {
+      "name": "destination-full_failed_store",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ]
+      ],
+      "error": "AssertionError",
+      "passed": true
+    },
+    {
+      "name": "destination-full_failed_observer",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ],
+        [
+          "observer",
+          "native-observer"
+        ]
+      ],
+      "error": "AssertionError",
+      "passed": true
+    },
+    {
+      "name": "publish_complete_admission",
+      "allowed": true,
+      "expected": true,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ],
+        [
+          "observer",
+          "native-observer"
+        ]
+      ],
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "publish_missing_native_store_corroboration",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [],
+      "error": "KeyError",
+      "passed": true
+    },
+    {
+      "name": "publish_missing_native_observer_corroboration",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ]
+      ],
+      "error": "KeyError",
+      "passed": true
+    },
+    {
+      "name": "publish_failed_store",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ]
+      ],
+      "error": "AssertionError",
+      "passed": true
+    },
+    {
+      "name": "publish_failed_observer",
+      "allowed": false,
+      "expected": false,
+      "corroboration_calls": [
+        [
+          "store",
+          "native-store"
+        ],
+        [
+          "observer",
+          "native-observer"
+        ]
+      ],
+      "error": "AssertionError",
+      "passed": true
+    }
+  ],
+  "count": 17,
+  "source_sha256": "a5511b3aa7de4710f43d55834db1dd4e869ce0aff1bf22608936b886dfa30cda"
+}

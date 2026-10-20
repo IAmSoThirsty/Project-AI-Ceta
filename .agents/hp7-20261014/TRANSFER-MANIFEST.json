@@ -1,0 +1,499 @@
+{
+  "schema_version": "ceta.preservation-successor.v1",
+  "job": "HP7_EXACT_W045_LEGACY_DATA_ONLY_VALIDATION",
+  "author": "/root/history_preservation",
+  "frozen_at": "2026-10-14T12:42:17.928647+00:00",
+  "source_root": "T:\\00-Active\\Project-AI-CETA",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp7-20261014",
+  "base_cut": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp6-20261014",
+  "base_manifest_sha256": "c525e88dc132199b85cb2924a3368793f19b422c7c127350551cec131153464e",
+  "base_integrate": {
+    "repository_relative_path": ".agents/runtime/hp6-20261014/integrate.json",
+    "sha256": "474b4f4515bbe4b06966fd106b5ed247b64585191d4496ff4226f142ffcc7096"
+  },
+  "payloads": [
+    {
+      "relative_path": "README.md",
+      "action": "EXTEND",
+      "category": "documentation",
+      "candidate_sha256": "c160291bdd0342dcc4f46c488e9e225cc11ccf4bc9eff251c2cb72817e9f84dd",
+      "bytes": 19210,
+      "candidate_native_identity": {
+        "bytes": 19210,
+        "mtime_ns": 1791981024851270800,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467127,
+        "attributes": 32
+      },
+      "base_sha256": "25e301add653705f9e6252916f7e1e5d529f9b8a20d95649cc5f7d17f0082fde",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/README.md",
+        "sha256": "25e301add653705f9e6252916f7e1e5d529f9b8a20d95649cc5f7d17f0082fde"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/README.md.diff",
+        "sha256": "675b36046e1a93fe7df42d0f485c1ccf83fb9d002bdd9142c388314bf13f80c3"
+      },
+      "LOC": {
+        "physical": {
+          "added": 59,
+          "removed": 1,
+          "net": 58
+        },
+        "meaningful": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        }
+      }
+    },
+    {
+      "relative_path": "legacy_cache_validation.py",
+      "action": "CREATE",
+      "category": "functional_source",
+      "candidate_sha256": "9871bcbddfe82f3f63b975d07ea9a408ef7ff544dba040a966a93b3817a17ae5",
+      "bytes": 18504,
+      "candidate_native_identity": {
+        "bytes": 18504,
+        "mtime_ns": 1791981466715643300,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 1688849863022631,
+        "attributes": 32
+      },
+      "base_sha256": null,
+      "before_image": null,
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/legacy_cache_validation.py.diff",
+        "sha256": "99d8579ba7d9cf27a423da4a0dda3d92110fc676e6ad5f423ffaf0812d33677d"
+      },
+      "LOC": {
+        "physical": {
+          "added": 253,
+          "removed": 0,
+          "net": 253
+        },
+        "meaningful": {
+          "added": 233,
+          "removed": 0,
+          "net": 233
+        }
+      }
+    },
+    {
+      "relative_path": "legacy_cache_worker311.py",
+      "action": "CREATE",
+      "category": "functional_source",
+      "candidate_sha256": "f403ceb9345ba1152d4f104cf0091c50a42bb786f4349582829ca11ec0a3c54d",
+      "bytes": 6900,
+      "candidate_native_identity": {
+        "bytes": 6900,
+        "mtime_ns": 1791981420166103400,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467316,
+        "attributes": 32
+      },
+      "base_sha256": null,
+      "before_image": null,
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/legacy_cache_worker311.py.diff",
+        "sha256": "c6ffd3bd1c92331d9767fb96bd2e9c6081682b1b182dc05846b35064b40e1781"
+      },
+      "LOC": {
+        "physical": {
+          "added": 122,
+          "removed": 0,
+          "net": 122
+        },
+        "meaningful": {
+          "added": 109,
+          "removed": 0,
+          "net": 109
+        }
+      }
+    },
+    {
+      "relative_path": "preserve_ceta_complete.py",
+      "action": "EXTEND",
+      "category": "functional_source",
+      "candidate_sha256": "f5777109bf034ce44f0fefa8fc834516974e23f74e77d46429af3d112362d8dd",
+      "bytes": 107964,
+      "candidate_native_identity": {
+        "bytes": 107964,
+        "mtime_ns": 1791980541145271600,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467113,
+        "attributes": 32
+      },
+      "base_sha256": "25ded8f963192b954acbd77b2eb48d34e64af9abdf13ec0f767b8ebb2d8d733c",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/preserve_ceta_complete.py",
+        "sha256": "25ded8f963192b954acbd77b2eb48d34e64af9abdf13ec0f767b8ebb2d8d733c"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/preserve_ceta_complete.py.diff",
+        "sha256": "97b5343d3ae54d8c69ff3338e4337f0acc45f3b5a09361f70b4632aa782a1adc"
+      },
+      "LOC": {
+        "physical": {
+          "added": 37,
+          "removed": 2,
+          "net": 35
+        },
+        "meaningful": {
+          "added": 37,
+          "removed": 2,
+          "net": 35
+        }
+      }
+    },
+    {
+      "relative_path": "run_preservation_tests.py",
+      "action": "EXTEND",
+      "category": "test_runner",
+      "candidate_sha256": "c5142cd635ae911bf0d9486f2fb1e6b473fb3e80843b3496d9de54764e5c1ae4",
+      "bytes": 3760,
+      "candidate_native_identity": {
+        "bytes": 3760,
+        "mtime_ns": 1791980657563800800,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467125,
+        "attributes": 32
+      },
+      "base_sha256": "1cb5c0798e3eea6d673813b3e63281b5e6c28496082e65e84dd93c067a06c507",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/run_preservation_tests.py",
+        "sha256": "1cb5c0798e3eea6d673813b3e63281b5e6c28496082e65e84dd93c067a06c507"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/run_preservation_tests.py.diff",
+        "sha256": "cdd11455401c45242fc78b8ae37fd2f4c4e32b5271c4b4920b100c7f7690aca2"
+      },
+      "LOC": {
+        "physical": {
+          "added": 1,
+          "removed": 1,
+          "net": 0
+        },
+        "meaningful": {
+          "added": 1,
+          "removed": 1,
+          "net": 0
+        }
+      }
+    },
+    {
+      "relative_path": "test_callback_fencing.py",
+      "action": "REUSE",
+      "category": "test_source",
+      "candidate_sha256": "554d5ecf561984f696be53534e08d261bfc1dc75f25ec50fc6e15e5450b0867a",
+      "bytes": 17296,
+      "candidate_native_identity": {
+        "bytes": 17296,
+        "mtime_ns": 1791978892181660300,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467123,
+        "attributes": 32
+      },
+      "base_sha256": "554d5ecf561984f696be53534e08d261bfc1dc75f25ec50fc6e15e5450b0867a",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/test_callback_fencing.py",
+        "sha256": "554d5ecf561984f696be53534e08d261bfc1dc75f25ec50fc6e15e5450b0867a"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/test_callback_fencing.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "LOC": {
+        "physical": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        },
+        "meaningful": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        }
+      }
+    },
+    {
+      "relative_path": "test_case_alias_fencing.py",
+      "action": "REUSE",
+      "category": "test_source",
+      "candidate_sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d",
+      "bytes": 24107,
+      "candidate_native_identity": {
+        "bytes": 24107,
+        "mtime_ns": 1791978892177150400,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467121,
+        "attributes": 32
+      },
+      "base_sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/test_case_alias_fencing.py",
+        "sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/test_case_alias_fencing.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "LOC": {
+        "physical": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        },
+        "meaningful": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        }
+      }
+    },
+    {
+      "relative_path": "test_current_policy_fencing.py",
+      "action": "REUSE",
+      "category": "test_source",
+      "candidate_sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b",
+      "bytes": 13808,
+      "candidate_native_identity": {
+        "bytes": 13808,
+        "mtime_ns": 1791978892173139700,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467119,
+        "attributes": 32
+      },
+      "base_sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/test_current_policy_fencing.py",
+        "sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/test_current_policy_fencing.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "LOC": {
+        "physical": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        },
+        "meaningful": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        }
+      }
+    },
+    {
+      "relative_path": "test_legacy_cache_validation.py",
+      "action": "CREATE",
+      "category": "test_source",
+      "candidate_sha256": "11ac1094b3171ff4097728c364b6741584c77a9de2cce1a08b96ad247ad8b1da",
+      "bytes": 27091,
+      "candidate_native_identity": {
+        "bytes": 27091,
+        "mtime_ns": 1791981466731288700,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 1407374886319890,
+        "attributes": 32
+      },
+      "base_sha256": null,
+      "before_image": null,
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/test_legacy_cache_validation.py.diff",
+        "sha256": "6a4793f2d13ea02f889d0b6a8095984eb0c2a7545fef11cebcb859302fb596ad"
+      },
+      "LOC": {
+        "physical": {
+          "added": 427,
+          "removed": 0,
+          "net": 427
+        },
+        "meaningful": {
+          "added": 367,
+          "removed": 0,
+          "net": 367
+        }
+      }
+    },
+    {
+      "relative_path": "test_preserve_ceta_complete.py",
+      "action": "REUSE",
+      "category": "test_source",
+      "candidate_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "bytes": 67690,
+      "candidate_native_identity": {
+        "bytes": 67690,
+        "mtime_ns": 1791978892165088400,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467115,
+        "attributes": 32
+      },
+      "base_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/test_preserve_ceta_complete.py",
+        "sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/test_preserve_ceta_complete.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "LOC": {
+        "physical": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        },
+        "meaningful": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        }
+      }
+    },
+    {
+      "relative_path": "test_provenance.py",
+      "action": "REUSE",
+      "category": "test_source",
+      "candidate_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "bytes": 38615,
+      "candidate_native_identity": {
+        "bytes": 38615,
+        "mtime_ns": 1791978892169089200,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979467117,
+        "attributes": 32
+      },
+      "base_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/before-images/test_provenance.py",
+        "sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086"
+      },
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp7-20261014/diffs/test_provenance.py.diff",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "LOC": {
+        "physical": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        },
+        "meaningful": {
+          "added": 0,
+          "removed": 0,
+          "net": 0
+        }
+      }
+    }
+  ],
+  "payload_count": 11,
+  "source_inputs": {
+    "repository_relative_path": ".agents/runtime/hp7-20261014/source-inputs.json",
+    "sha256": "81f09b6f467e6c8a781b12a2ca8e0e518097af736351288a9e697b9e7a9df1a6"
+  },
+  "source_conservation": {
+    "repository_relative_path": ".agents/runtime/hp7-20261014/source-conservation.json",
+    "sha256": "6e65fe462c452cd9aeee165ed79a0dd59a0acbe6555a91271caade9b3a743eed"
+  },
+  "self_review": {
+    "repository_relative_path": ".agents/runtime/hp7-20261014/self-review.json",
+    "sha256": "1540749982515350468f60dd511c55f4ac1ae458eca7ee3eab46050cf4e851dc"
+  },
+  "LOC": {
+    "functional_source": {
+      "added": 379,
+      "removed": 2,
+      "net": 377
+    },
+    "test_source": {
+      "added": 367,
+      "removed": 0,
+      "net": 367
+    },
+    "test_runner": {
+      "added": 1,
+      "removed": 1,
+      "net": 0
+    }
+  },
+  "reused_original_tests_new_LOC": 0,
+  "actual_tests": {
+    "receipt": {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/final190-r3.json",
+      "sha256": "5ffef66f2488178358a1d507f62626adefea45e44af5d44d3b80679a7c792c9d"
+    },
+    "raw": {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/final190-r3.txt",
+      "sha256": "307ec384c53c3831a370a456275b9bd948e2a200d08449c8abedb6bc10d301b9"
+    },
+    "original156": 156,
+    "new34": 34,
+    "total": 190,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "native_legacy_lifetimes": 24
+  },
+  "prior_failed_oracles": [
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/patch-r1-failure.json",
+      "sha256": "2903a52db37ff9b22ed2ae74b5e5fe6aa6858b3015a78202fcea35d5f700f427"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/pipe-close-r1.json",
+      "sha256": "07a3c577ef08f233c0d0e91271eeac3b8eb8964070c4bd7e0873012518be79bc"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/typed-set-r1.json",
+      "sha256": "42fc4410236456551f134e8bc1eec8c36c937840395356360aaf901648fcceb7"
+    }
+  ],
+  "prior_passed_source_cuts": [
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/original156.json",
+      "sha256": "d00d164895d5967344674f4af690824859b14b76906ee02eecb2ed8f9df363e3"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/legacy33-r1.json",
+      "sha256": "048d4ce102e6b9b404d3e16de1452218df4e07608ac2788805cdef7a62fe30d3"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/final189-r1.json",
+      "sha256": "bc3a40a40167e8821eecdfee00eecf78c5ea508317f6fd641c253c5b23d728b8"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/legacy34-r2.json",
+      "sha256": "7bd2cf0d1a52a83dae1c6d510064f0d435ddd78b0617543fb0127cf3b3abbc6f"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/final190-r2.json",
+      "sha256": "327372663002acc97077953ee4a6600f4a5f889eca0dd572b599448285c34230"
+    }
+  ],
+  "native_worker_sha256": "f403ceb9345ba1152d4f104cf0091c50a42bb786f4349582829ca11ec0a3c54d",
+  "native_parent_sha256": "9871bcbddfe82f3f63b975d07ea9a408ef7ff544dba040a966a93b3817a17ae5",
+  "remaining": [
+    "Original optimization and producer custody UNPROVED",
+    "Synchronous OS native launch occupancy not fully deadline bounded",
+    "Native job custody is not administrator/token/filesystem/network isolation",
+    "Synthetic seam/protocol negative controls do not establish live external admission",
+    "W043/W044 remain held; W045 activation and full preservation/source-history integration remain pending"
+  ],
+  "active_policy_application": false,
+  "actual_source_capture_or_restore": false,
+  "review_acceptance": "PENDING_DISTINCT_REVIEW"
+}

@@ -1,0 +1,367 @@
+{
+  "at_utc": "2026-10-20T10:04:08.8613403Z",
+  "providers": [
+    {
+      "query": "Microsoft-Windows-Loader",
+      "status": "QUERY_ERROR",
+      "error_id": "NoMatchingProvidersFound,Microsoft.PowerShell.Commands.GetWinEventCommand",
+      "error": "There is not an event provider on the localhost computer that matches \"Microsoft-Windows-Loader\"."
+    },
+    {
+      "query": "Microsoft-Windows-Kernel-Process",
+      "status": "FOUND",
+      "name": "Microsoft-Windows-Kernel-Process",
+      "id": "22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716",
+      "message_path": "%SystemRoot%\\system32\\Microsoft-Windows-System-Events.dll",
+      "resource_path": "%SystemRoot%\\system32\\Microsoft-Windows-System-Events.dll",
+      "events": [
+        {
+          "id": 1,
+          "version": 0,
+          "task_name": "ProcessStart",
+          "task_value": 1,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 1,
+          "version": 1,
+          "task_name": "ProcessStart",
+          "task_value": 1,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Flags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 1,
+          "version": 2,
+          "task_name": "ProcessStart",
+          "task_value": 1,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Flags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"ImageChecksum\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"PackageFullName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"PackageRelativeAppId\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 1,
+          "version": 3,
+          "task_name": "ProcessStart",
+          "task_value": 1,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ParentProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Flags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenElevationType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenIsElevated\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"MandatoryLabel\" inType=\"win:SID\" outType=\"xs:string\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"ImageChecksum\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"PackageFullName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"PackageRelativeAppId\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 1,
+          "version": 4,
+          "task_name": "ProcessStart",
+          "task_value": 1,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ParentProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Flags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenElevationType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenIsElevated\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"MandatoryLabel\" inType=\"win:SID\" outType=\"xs:string\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"ImageChecksum\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"PackageFullName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"PackageRelativeAppId\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"SecurityMitigations\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 2,
+          "version": 0,
+          "task_name": "ProcessStop",
+          "task_value": 2,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ExitTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ExitCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"TokenElevationType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"HandleCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"CommitCharge\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CommitPeak\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ImageName\" inType=\"win:AnsiString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 2,
+          "version": 1,
+          "task_name": "ProcessStop",
+          "task_value": 2,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ExitTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ExitCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"TokenElevationType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"HandleCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"CommitCharge\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CommitPeak\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CPUCycleCount\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReadOperationCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"WriteOperationCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ReadTransferKiloBytes\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"WriteTransferKiloBytes\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"HardFaultCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ImageName\" inType=\"win:AnsiString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 2,
+          "version": 2,
+          "task_name": "ProcessStop",
+          "task_value": 2,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ExitTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ExitCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"TokenElevationType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"HandleCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"CommitCharge\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CommitPeak\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CPUCycleCount\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReadOperationCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"WriteOperationCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ReadTransferKiloBytes\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"WriteTransferKiloBytes\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"HardFaultCount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ImageName\" inType=\"win:AnsiString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 3,
+          "version": 0,
+          "task_name": "ThreadStart",
+          "task_value": 3,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"StackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"Win32StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"TebBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 3,
+          "version": 1,
+          "task_name": "ThreadStart",
+          "task_value": 3,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"StackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"Win32StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"TebBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"SubProcessTag\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 4,
+          "version": 0,
+          "task_name": "ThreadStop",
+          "task_value": 4,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"StackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"Win32StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"TebBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 4,
+          "version": 1,
+          "task_name": "ThreadStop",
+          "task_value": 4,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"StackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"UserStackLimit\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"Win32StartAddr\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"TebBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"SubProcessTag\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"CycleTime\" inType=\"win:UInt64\" outType=\"win:HexInt64\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 5,
+          "version": 0,
+          "task_name": "ImageLoad",
+          "task_value": 5,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ImageBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ImageSize\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ImageCheckSum\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"DefaultBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 6,
+          "version": 0,
+          "task_name": "ImageUnload",
+          "task_value": 6,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ImageBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ImageSize\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ImageCheckSum\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"DefaultBase\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 7,
+          "version": 0,
+          "task_name": "CpuBasePriorityChange",
+          "task_value": 7,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"OldPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n  <data name=\"NewPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 8,
+          "version": 0,
+          "task_name": "CpuPriorityChange",
+          "task_value": 8,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"OldPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n  <data name=\"NewPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 9,
+          "version": 0,
+          "task_name": "PagePriorityChange",
+          "task_value": 9,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"OldPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n  <data name=\"NewPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 10,
+          "version": 0,
+          "task_name": "IoPriorityChange",
+          "task_value": 10,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"OldPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n  <data name=\"NewPriority\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 11,
+          "version": 0,
+          "task_name": "ProcessFreeze",
+          "task_value": 11,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"FrozenProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 11,
+          "version": 1,
+          "task_name": "ProcessFreeze",
+          "task_value": 11,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"FrozenProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 12,
+          "version": 0,
+          "task_name": "ProcessFreeze",
+          "task_value": 11,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"FrozenProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 12,
+          "version": 1,
+          "task_name": "ProcessFreeze",
+          "task_value": 11,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"FrozenProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 13,
+          "version": 0,
+          "task_name": "JobStart",
+          "task_value": 13,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Container ID\" inType=\"win:GUID\" outType=\"xs:GUID\"/>\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 14,
+          "version": 0,
+          "task_name": "JobTerminate",
+          "task_value": 14,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Container ID\" inType=\"win:GUID\" outType=\"xs:GUID\"/>\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 15,
+          "version": 0,
+          "task_name": "ProcessRundown",
+          "task_value": 15,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Flags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"ImageChecksum\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"PackageFullName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"PackageRelativeAppId\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 15,
+          "version": 1,
+          "task_name": "ProcessRundown",
+          "task_value": 15,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ParentProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Flags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenElevationType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenIsElevated\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"MandatoryLabel\" inType=\"win:SID\" outType=\"xs:string\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"ImageChecksum\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"PackageFullName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"PackageRelativeAppId\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 15,
+          "version": 2,
+          "task_name": "ProcessRundown",
+          "task_value": 15,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CreateTime\" inType=\"win:FILETIME\" outType=\"xs:dateTime\"/>\r\n  <data name=\"ParentProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n  <data name=\"ParentProcessSequenceNumber\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SessionID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Flags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenElevationType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"ProcessTokenIsElevated\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"MandatoryLabel\" inType=\"win:SID\" outType=\"xs:string\"/>\r\n  <data name=\"ImageName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"ImageChecksum\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"TimeDateStamp\" inType=\"win:UInt32\" outType=\"win:HexInt32\"/>\r\n  <data name=\"PackageFullName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"PackageRelativeAppId\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"SecurityMitigations\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 16,
+          "version": 0,
+          "task_name": null,
+          "task_value": 0,
+          "opcode_name": "win:Info",
+          "template": ""
+        },
+        {
+          "id": 17,
+          "version": 0,
+          "task_name": "PsDiskIoAttribution",
+          "task_value": 16,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"DiskIoAttribution\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 18,
+          "version": 0,
+          "task_name": "PsDiskIoAttribution",
+          "task_value": 16,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"DiskIoAttribution\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 19,
+          "version": 0,
+          "task_name": "PsIoRateControl",
+          "task_value": 17,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"IoRateControl\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ControlType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"RateType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"RateAmount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 19,
+          "version": 1,
+          "task_name": "PsIoRateControl",
+          "task_value": 17,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"IoRateControl\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"MaxIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ControlFlags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"VolumeName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 19,
+          "version": 2,
+          "task_name": "PsIoRateControl",
+          "task_value": 17,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"IoRateControl\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"MaxIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SoftMaxIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SoftMaxBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SoftMaxTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ControlFlags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"VolumeName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 20,
+          "version": 0,
+          "task_name": "PsIoRateControl",
+          "task_value": 17,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"IoRateControl\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"ControlType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"RateType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"RateAmount\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 20,
+          "version": 1,
+          "task_name": "PsIoRateControl",
+          "task_value": 17,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"IoRateControl\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"MaxIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ControlFlags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"VolumeName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 20,
+          "version": 2,
+          "task_name": "PsIoRateControl",
+          "task_value": 17,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"IoRateControl\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/>\r\n  <data name=\"MaxIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"MaxTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"CriticalReservationTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SoftMaxIops\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SoftMaxBandwidth\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"SoftMaxTimePercent\" inType=\"win:UInt64\" outType=\"xs:unsignedLong\"/>\r\n  <data name=\"ControlFlags\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"VolumeName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 21,
+          "version": 0,
+          "task_name": "ThreadWorkOnBehalfUpdate",
+          "task_value": 18,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"OldWorkOnBehalfThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n  <data name=\"NewWorkOnBehalfThreadID\" inType=\"win:UInt32\" outType=\"win:TID\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 22,
+          "version": 0,
+          "task_name": "JobServerSiloStateChange",
+          "task_value": 19,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Container ID\" inType=\"win:GUID\" outType=\"xs:GUID\"/>\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"State\" inType=\"win:UInt16\" outType=\"xs:unsignedShort\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 23,
+          "version": 0,
+          "task_name": "ServerSiloCreateCallback",
+          "task_value": 21,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Container ID\" inType=\"win:GUID\" outType=\"xs:GUID\"/>\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"MonitorName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 24,
+          "version": 0,
+          "task_name": "ServerSiloCreateCallback",
+          "task_value": 21,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Container ID\" inType=\"win:GUID\" outType=\"xs:GUID\"/>\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"Status\" inType=\"win:UInt32\" outType=\"win:NTStatus\"/>\r\n  <data name=\"MonitorName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 25,
+          "version": 0,
+          "task_name": "ServerSiloTerminateCallback",
+          "task_value": 22,
+          "opcode_name": "win:Start",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Container ID\" inType=\"win:GUID\" outType=\"xs:GUID\"/>\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"MonitorName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 26,
+          "version": 0,
+          "task_name": "ServerSiloTerminateCallback",
+          "task_value": 22,
+          "opcode_name": "win:Stop",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"Container ID\" inType=\"win:GUID\" outType=\"xs:GUID\"/>\r\n  <data name=\"Job ID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/>\r\n  <data name=\"MonitorName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n</template>\r\n"
+        },
+        {
+          "id": 27,
+          "version": 0,
+          "task_name": "ProcessInPrivateSet",
+          "task_value": 20,
+          "opcode_name": "win:Info",
+          "template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\">\r\n  <data name=\"ProcessName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/>\r\n  <data name=\"ProcessID\" inType=\"win:UInt32\" outType=\"win:PID\"/>\r\n</template>\r\n"
+        }
+      ]
+    }
+  ],
+  "trace_started": false,
+  "flags_or_provider_state_changed": false
+}

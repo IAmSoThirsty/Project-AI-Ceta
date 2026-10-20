@@ -1,0 +1,184 @@
+{
+  "at_utc": "2026-10-20T10:04:08.8410147Z",
+  "project": "T:\\00-Active\\Project-AI-CETA",
+  "method": "Read-only command/path/package/file/provider metadata inventory; no debugger/DLL/worker launched",
+  "command_resolution": [
+    {
+      "name": "cdb.exe",
+      "matches": []
+    },
+    {
+      "name": "windbg.exe",
+      "matches": []
+    },
+    {
+      "name": "windbgx.exe",
+      "matches": []
+    },
+    {
+      "name": "ntsd.exe",
+      "matches": []
+    },
+    {
+      "name": "gflags.exe",
+      "matches": []
+    },
+    {
+      "name": "dbgeng.dll",
+      "matches": [
+        {
+          "name": "dbgeng.dll",
+          "source": "C:\\WINDOWS\\system32\\dbgeng.dll",
+          "version": "10.0.26100.1"
+        }
+      ]
+    },
+    {
+      "name": "dbghelp.dll",
+      "matches": [
+        {
+          "name": "dbghelp.dll",
+          "source": "C:\\WINDOWS\\system32\\dbghelp.dll",
+          "version": "10.0.26100.9549"
+        }
+      ]
+    },
+    {
+      "name": "procdump.exe",
+      "matches": []
+    },
+    {
+      "name": "vsjitdebugger.exe",
+      "matches": [
+        {
+          "name": "vsjitdebugger.exe",
+          "source": "C:\\WINDOWS\\system32\\vsjitdebugger.exe",
+          "version": "17.0.157.0"
+        }
+      ]
+    },
+    {
+      "name": "kd.exe",
+      "matches": []
+    }
+  ],
+  "explicit_files": [
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\cdb.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\dbgeng.dll",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\sdk\\inc\\dbgeng.h",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files\\Windows Kits\\10\\Debuggers\\x64\\cdb.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\Windows\\System32\\dbgeng.dll",
+      "exists": true,
+      "bytes": 7225344,
+      "file_version": "10.0.26100.1 (WinBuild.160101.0800)",
+      "sha256": "bfa188b10eb64a94f1eb59bfb0f8d85eb5dfc803cd0f6b5c554816fe311a236e"
+    },
+    {
+      "path": "C:\\Windows\\System32\\dbghelp.dll",
+      "exists": true,
+      "bytes": 2317640,
+      "file_version": "10.0.26100.9549 (WinBuild.160101.0800)",
+      "sha256": "2d2ec94891162a61d86789133623b47d64d74c15d6be99473b25ad7a6468cf39"
+    },
+    {
+      "path": "C:\\Windows\\System32\\dbgcore.dll",
+      "exists": true,
+      "bytes": 241664,
+      "file_version": "10.0.26100.9549 (WinBuild.160101.0800)",
+      "sha256": "4aa8f5241b94752cac649e61bdf57c8910e1dbf3d4e9759c658bb41a852f6cdf"
+    },
+    {
+      "path": "C:\\Windows\\System32\\dbgmodel.dll",
+      "exists": true,
+      "bytes": 1142784,
+      "file_version": "10.0.26100.1 (WinBuild.160101.0800)",
+      "sha256": "b1711ae13f4385c2c12e694c8a549c01bcee1f77e149fb792329eefbe4e61798"
+    },
+    {
+      "path": "C:\\Windows\\System32\\exts.dll",
+      "exists": false
+    },
+    {
+      "path": "C:\\Windows\\System32\\vsjitdebugger.exe",
+      "exists": true,
+      "bytes": 385528,
+      "file_version": "17.0.157.0",
+      "sha256": "c5fa570bede6399cb09681634777b30d24b0cf916aab382f31aa5d37ac6daa9e"
+    },
+    {
+      "path": "C:\\Windows\\System32\\kernel32.dll",
+      "exists": true,
+      "bytes": 861992,
+      "file_version": "10.0.26100.9549 (WinBuild.160101.0800)",
+      "sha256": "e132eba4166256e2f414b91fe7d5386590bc5ea8626aee5af9c9738383cf2ae1"
+    }
+  ],
+  "bounded_filename_searches": [
+    {
+      "root": "C:\\Program Files (x86)\\Windows Kits",
+      "exists": true,
+      "command": "rg --files --hidden with exact debugger/header filename globs",
+      "exit_status": 1,
+      "output": []
+    },
+    {
+      "root": "C:\\Program Files\\Microsoft Visual Studio",
+      "exists": true,
+      "command": "rg --files --hidden with exact debugger/header filename globs",
+      "exit_status": 0,
+      "output": [
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\CoreCon\\Binaries\\Phone Tools\\Debugger\\target\\x86\\msvsmon.exe",
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\CoreCon\\Binaries\\Phone Tools\\Debugger\\target\\x64\\msvsmon.exe",
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\CoreCon\\Binaries\\Phone Tools\\Debugger\\target\\arm64\\msvsmon.exe",
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\Common7\\IDE\\Remote Debugger\\x86\\msvsmon.exe",
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\Common7\\IDE\\Remote Debugger\\x64\\msvsmon.exe"
+      ]
+    },
+    {
+      "root": "C:\\Program Files (x86)\\Microsoft Visual Studio",
+      "exists": true,
+      "command": "rg --files --hidden with exact debugger/header filename globs",
+      "exit_status": 0,
+      "output": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\CoreCon\\Binaries\\Phone Tools\\Debugger\\target\\x86\\msvsmon.exe",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\CoreCon\\Binaries\\Phone Tools\\Debugger\\target\\x64\\msvsmon.exe",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\CoreCon\\Binaries\\Phone Tools\\Debugger\\target\\arm64\\msvsmon.exe",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\CoreCon\\Binaries\\Phone Tools\\Debugger\\target\\armv4i\\msvsmon.exe",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\Remote Debugger\\x86\\msvsmon.exe",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\Remote Debugger\\x64\\msvsmon.exe"
+      ]
+    },
+    {
+      "root": "T:\\03-Toolchains\\Codex-AI-Toolkit",
+      "exists": true,
+      "command": "rg --files --hidden with exact debugger/header filename globs",
+      "exit_status": 1,
+      "output": []
+    }
+  ],
+  "windbg_appx": [],
+  "windbg_appx_query_error": null,
+  "windbg_app_directories": [],
+  "windbg_app_directory_error": null,
+  "symbol_path_present": false,
+  "alternate_symbol_path_present": false,
+  "limitations": [
+    "Not an exhaustive machine-wide search",
+    "File presence is not successful engine loading or API capability validation",
+    "Provider metadata is not a trace recording",
+    "No external/native engine startup or target attachment"
+  ]
+}

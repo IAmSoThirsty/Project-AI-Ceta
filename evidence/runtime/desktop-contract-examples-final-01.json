@@ -1,0 +1,27 @@
+{
+  "scope": "RECORD_SHAPES_ONLY",
+  "result": "PASS",
+  "examples": [
+    {
+      "example": "observation_hash_invalid.json",
+      "expected": "REJECT",
+      "actual": "REJECT",
+      "result": "PASS"
+    },
+    {
+      "example": "observation_shape_valid.json",
+      "expected": "ACCEPT",
+      "actual": "ACCEPT",
+      "result": "PASS"
+    },
+    {
+      "example": "observation_unknown_field_invalid.json",
+      "expected": "REJECT",
+      "actual": "REJECT",
+      "result": "PASS"
+    }
+  ],
+  "duplicate_key_rejection": "PASS",
+  "authority_qualification": "NOT_RUN",
+  "system_runtime": "NOT_RUN"
+}

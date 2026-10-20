@@ -1,0 +1,1123 @@
+{
+  "version": "1",
+  "packages": [
+    {
+      "id": "WP-00",
+      "title": "Preserve and identify the real workspace",
+      "path": "build/work_packages/WP-00.md",
+      "depends_on": [],
+      "component_owners": [
+        "LEAD_INTEGRATOR"
+      ],
+      "requirement_ids": [
+        "REQ-00-01",
+        "REQ-00-02",
+        "REQ-00-03",
+        "REQ-00-04",
+        "REQ-00-05",
+        "REQ-01-01",
+        "REQ-01-02",
+        "REQ-01-03",
+        "REQ-01-04",
+        "REQ-01-05",
+        "REQ-02-01",
+        "REQ-02-02",
+        "REQ-02-03",
+        "REQ-02-04",
+        "REQ-02-05"
+      ],
+      "acceptance_ids": [
+        "B001",
+        "B002",
+        "B003",
+        "B004",
+        "B005",
+        "B006",
+        "B007",
+        "B008",
+        "B128"
+      ],
+      "target_gate": "G-A",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-01",
+      "title": "Freeze the coherent system contract",
+      "path": "build/work_packages/WP-01.md",
+      "depends_on": [
+        "WP-00"
+      ],
+      "component_owners": [
+        "CMP-01",
+        "LEAD_INTEGRATOR"
+      ],
+      "requirement_ids": [
+        "REQ-03-01",
+        "REQ-03-02",
+        "REQ-03-03",
+        "REQ-03-04",
+        "REQ-04-01",
+        "REQ-04-02",
+        "REQ-04-03",
+        "REQ-04-04",
+        "REQ-05-01",
+        "REQ-05-02",
+        "REQ-05-03",
+        "REQ-05-04",
+        "REQ-06-01",
+        "REQ-06-02",
+        "REQ-06-03",
+        "REQ-06-04",
+        "REQ-39-01",
+        "REQ-39-02",
+        "REQ-39-03",
+        "REQ-39-04"
+      ],
+      "acceptance_ids": [
+        "B001",
+        "B007",
+        "B008",
+        "B037",
+        "B045",
+        "B053",
+        "B054",
+        "B055",
+        "B056",
+        "B059",
+        "B063",
+        "B065",
+        "B068",
+        "B073",
+        "B121",
+        "B128"
+      ],
+      "target_gate": "G-A",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-02",
+      "title": "Build canonical types and durable history",
+      "path": "build/work_packages/WP-02.md",
+      "depends_on": [
+        "WP-01"
+      ],
+      "component_owners": [
+        "CMP-01",
+        "CMP-03"
+      ],
+      "requirement_ids": [
+        "REQ-06-01",
+        "REQ-06-02",
+        "REQ-06-03",
+        "REQ-06-04",
+        "REQ-07-01",
+        "REQ-07-02",
+        "REQ-07-03",
+        "REQ-07-04",
+        "REQ-07-05"
+      ],
+      "acceptance_ids": [
+        "B007",
+        "B009",
+        "B010",
+        "B011",
+        "B012",
+        "B013",
+        "B014",
+        "B016",
+        "B056",
+        "B059"
+      ],
+      "target_gate": "G-B",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-03",
+      "title": "Implement policy, identities and exact permission",
+      "path": "build/work_packages/WP-03.md",
+      "depends_on": [
+        "WP-02"
+      ],
+      "component_owners": [
+        "CMP-02",
+        "CMP-04"
+      ],
+      "requirement_ids": [
+        "REQ-16-01",
+        "REQ-16-02",
+        "REQ-16-03",
+        "REQ-16-04",
+        "REQ-19-01",
+        "REQ-19-02",
+        "REQ-19-03",
+        "REQ-19-04",
+        "REQ-19-05"
+      ],
+      "acceptance_ids": [
+        "B005",
+        "B048",
+        "B051",
+        "B057",
+        "B058",
+        "B059",
+        "B060",
+        "B061",
+        "B062",
+        "B063",
+        "B064",
+        "B114"
+      ],
+      "target_gate": "G-B",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-04",
+      "title": "Establish Windows effect and worker boundaries",
+      "path": "build/work_packages/WP-04.md",
+      "depends_on": [
+        "WP-03"
+      ],
+      "component_owners": [
+        "CMP-14",
+        "CMP-15"
+      ],
+      "requirement_ids": [
+        "REQ-05-01",
+        "REQ-05-02",
+        "REQ-05-03",
+        "REQ-05-04",
+        "REQ-20-01",
+        "REQ-20-02",
+        "REQ-20-03",
+        "REQ-20-04",
+        "REQ-21-01",
+        "REQ-21-02",
+        "REQ-21-03",
+        "REQ-21-04",
+        "REQ-21-05"
+      ],
+      "acceptance_ids": [
+        "B037",
+        "B058",
+        "B060",
+        "B063",
+        "B065",
+        "B066",
+        "B067",
+        "B068",
+        "B069",
+        "B070",
+        "B071",
+        "B072",
+        "B097",
+        "B098",
+        "B099",
+        "B100",
+        "B103",
+        "B104"
+      ],
+      "target_gate": "G-B",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-05",
+      "title": "Connect supervisor and scoped observations",
+      "path": "build/work_packages/WP-05.md",
+      "depends_on": [
+        "WP-04"
+      ],
+      "component_owners": [
+        "CMP-05",
+        "CMP-06"
+      ],
+      "requirement_ids": [
+        "REQ-08-01",
+        "REQ-08-02",
+        "REQ-08-03",
+        "REQ-08-04",
+        "REQ-09-01",
+        "REQ-09-02",
+        "REQ-09-03",
+        "REQ-09-04",
+        "REQ-10-01",
+        "REQ-10-02",
+        "REQ-10-03",
+        "REQ-10-04",
+        "REQ-30-01",
+        "REQ-30-02",
+        "REQ-30-03",
+        "REQ-30-04"
+      ],
+      "acceptance_ids": [
+        "B015",
+        "B017",
+        "B018",
+        "B019",
+        "B020",
+        "B021",
+        "B022",
+        "B023",
+        "B024",
+        "B025",
+        "B027",
+        "B028",
+        "B044",
+        "B064",
+        "B077",
+        "B078",
+        "B098",
+        "B100",
+        "B101",
+        "B102",
+        "B115"
+      ],
+      "target_gate": "G-B",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-06",
+      "title": "Build the meaning-preserving request compiler",
+      "path": "build/work_packages/WP-06.md",
+      "depends_on": [
+        "WP-05"
+      ],
+      "component_owners": [
+        "CMP-07"
+      ],
+      "requirement_ids": [
+        "REQ-09-01",
+        "REQ-09-02",
+        "REQ-09-03",
+        "REQ-09-04",
+        "REQ-11-01",
+        "REQ-11-02",
+        "REQ-11-03",
+        "REQ-11-04",
+        "REQ-11-05"
+      ],
+      "acceptance_ids": [
+        "B022",
+        "B025",
+        "B026",
+        "B027",
+        "B028",
+        "B029",
+        "B030",
+        "B031",
+        "B032",
+        "B064"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-07",
+      "title": "Build memory, The Fates and continuity",
+      "path": "build/work_packages/WP-07.md",
+      "depends_on": [
+        "WP-06"
+      ],
+      "component_owners": [
+        "CMP-08"
+      ],
+      "requirement_ids": [
+        "REQ-12-01",
+        "REQ-12-02",
+        "REQ-12-03",
+        "REQ-12-04",
+        "REQ-12-05",
+        "REQ-29-01",
+        "REQ-29-02",
+        "REQ-29-03"
+      ],
+      "acceptance_ids": [
+        "B033",
+        "B034",
+        "B035",
+        "B036",
+        "B037",
+        "B038",
+        "B040",
+        "B065",
+        "B066",
+        "B117",
+        "B118"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-08",
+      "title": "Build owned assets and real local inference",
+      "path": "build/work_packages/WP-08.md",
+      "depends_on": [
+        "WP-06"
+      ],
+      "component_owners": [
+        "CMP-16",
+        "CMP-17"
+      ],
+      "requirement_ids": [
+        "REQ-22-01",
+        "REQ-22-02",
+        "REQ-22-03",
+        "REQ-22-04",
+        "REQ-23-01",
+        "REQ-23-02",
+        "REQ-23-03",
+        "REQ-23-04"
+      ],
+      "acceptance_ids": [
+        "B072",
+        "B073",
+        "B074",
+        "B075",
+        "B076",
+        "B077",
+        "B078",
+        "B079",
+        "B080",
+        "B113",
+        "B121"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-09",
+      "title": "Implement the continuing Companion",
+      "path": "build/work_packages/WP-09.md",
+      "depends_on": [
+        "WP-07",
+        "WP-08"
+      ],
+      "component_owners": [
+        "CMP-09"
+      ],
+      "requirement_ids": [
+        "REQ-13-01",
+        "REQ-13-02",
+        "REQ-13-03",
+        "REQ-13-04",
+        "REQ-13-05",
+        "REQ-24-01",
+        "REQ-24-02",
+        "REQ-24-03",
+        "REQ-24-04",
+        "REQ-24-05"
+      ],
+      "acceptance_ids": [
+        "B032",
+        "B033",
+        "B039",
+        "B081",
+        "B082",
+        "B083",
+        "B084",
+        "B085",
+        "B086",
+        "B087",
+        "B088",
+        "B120"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-10",
+      "title": "Build reflection and Shadow staging",
+      "path": "build/work_packages/WP-10.md",
+      "depends_on": [
+        "WP-09"
+      ],
+      "component_owners": [
+        "CMP-10",
+        "CMP-11"
+      ],
+      "requirement_ids": [
+        "REQ-14-01",
+        "REQ-14-02",
+        "REQ-14-03",
+        "REQ-15-01",
+        "REQ-15-02",
+        "REQ-15-03"
+      ],
+      "acceptance_ids": [
+        "B041",
+        "B042",
+        "B043",
+        "B044",
+        "B046",
+        "B100"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-11",
+      "title": "Implement review, graph and TAAR roles",
+      "path": "build/work_packages/WP-11.md",
+      "depends_on": [
+        "WP-10"
+      ],
+      "component_owners": [
+        "CMP-12",
+        "CMP-13"
+      ],
+      "requirement_ids": [
+        "REQ-17-01",
+        "REQ-17-02",
+        "REQ-17-03",
+        "REQ-18-01",
+        "REQ-18-02",
+        "REQ-18-03",
+        "REQ-18-04"
+      ],
+      "acceptance_ids": [
+        "B045",
+        "B046",
+        "B047",
+        "B048",
+        "B049",
+        "B050",
+        "B051",
+        "B052",
+        "B053",
+        "B054",
+        "B055",
+        "B056"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-12",
+      "title": "Finish all action adapters and settlement",
+      "path": "build/work_packages/WP-12.md",
+      "depends_on": [
+        "WP-11"
+      ],
+      "component_owners": [
+        "CMP-14",
+        "CMP-15",
+        "CMP-05"
+      ],
+      "requirement_ids": [
+        "REQ-19-01",
+        "REQ-19-02",
+        "REQ-19-03",
+        "REQ-19-04",
+        "REQ-19-05",
+        "REQ-20-01",
+        "REQ-20-02",
+        "REQ-20-03",
+        "REQ-20-04",
+        "REQ-30-01",
+        "REQ-30-02",
+        "REQ-30-03",
+        "REQ-30-04"
+      ],
+      "acceptance_ids": [
+        "B015",
+        "B019",
+        "B057",
+        "B058",
+        "B059",
+        "B060",
+        "B061",
+        "B062",
+        "B063",
+        "B064",
+        "B077",
+        "B078",
+        "B097",
+        "B098",
+        "B099",
+        "B100",
+        "B101",
+        "B102",
+        "B103",
+        "B104",
+        "B114",
+        "B115"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-13",
+      "title": "Implement governed object custody",
+      "path": "build/work_packages/WP-13.md",
+      "depends_on": [
+        "WP-04"
+      ],
+      "component_owners": [
+        "CMP-18"
+      ],
+      "requirement_ids": [
+        "REQ-25-01",
+        "REQ-25-02",
+        "REQ-25-03",
+        "REQ-25-04",
+        "REQ-29-01",
+        "REQ-29-02",
+        "REQ-29-03"
+      ],
+      "acceptance_ids": [
+        "B037",
+        "B038",
+        "B065",
+        "B066",
+        "B089",
+        "B093",
+        "B095",
+        "B096",
+        "B117",
+        "B118"
+      ],
+      "target_gate": "G-D",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-14",
+      "title": "Implement reviewed CBCC composition",
+      "path": "build/work_packages/WP-14.md",
+      "depends_on": [
+        "WP-13",
+        "WP-03"
+      ],
+      "component_owners": [
+        "CMP-19"
+      ],
+      "requirement_ids": [
+        "REQ-26-01",
+        "REQ-26-02",
+        "REQ-26-03",
+        "REQ-26-04",
+        "REQ-27-01",
+        "REQ-27-02",
+        "REQ-27-03",
+        "REQ-27-04"
+      ],
+      "acceptance_ids": [
+        "B089",
+        "B090",
+        "B091",
+        "B092",
+        "B093",
+        "B094",
+        "B095",
+        "B096"
+      ],
+      "target_gate": "G-D",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-15",
+      "title": "Connect integrity and assumption propagation",
+      "path": "build/work_packages/WP-15.md",
+      "depends_on": [
+        "WP-12",
+        "WP-13"
+      ],
+      "component_owners": [
+        "CMP-20"
+      ],
+      "requirement_ids": [
+        "REQ-28-01",
+        "REQ-28-02",
+        "REQ-28-03",
+        "REQ-35-01",
+        "REQ-35-02",
+        "REQ-35-03"
+      ],
+      "acceptance_ids": [
+        "B011",
+        "B013",
+        "B029",
+        "B041",
+        "B043",
+        "B072",
+        "B075",
+        "B117",
+        "B120",
+        "B126"
+      ],
+      "target_gate": "G-D",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-16",
+      "title": "Finish the native product experience",
+      "path": "build/work_packages/WP-16.md",
+      "depends_on": [
+        "WP-12",
+        "WP-15"
+      ],
+      "component_owners": [
+        "CMP-21"
+      ],
+      "requirement_ids": [
+        "REQ-32-01",
+        "REQ-32-02",
+        "REQ-32-03",
+        "REQ-32-04"
+      ],
+      "acceptance_ids": [
+        "B026",
+        "B113",
+        "B114",
+        "B115",
+        "B116",
+        "B119"
+      ],
+      "target_gate": "G-C",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-17",
+      "title": "Implement migration and rehearse cutover",
+      "path": "build/work_packages/WP-17.md",
+      "depends_on": [
+        "WP-16"
+      ],
+      "component_owners": [
+        "CMP-23"
+      ],
+      "requirement_ids": [
+        "REQ-31-01",
+        "REQ-31-02",
+        "REQ-31-03",
+        "REQ-31-04",
+        "REQ-31-05"
+      ],
+      "acceptance_ids": [
+        "B105",
+        "B106",
+        "B107",
+        "B108",
+        "B109",
+        "B110",
+        "B111",
+        "B112"
+      ],
+      "target_gate": "G-E",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-18",
+      "title": "Qualify reasoning and semantic behaviour",
+      "path": "build/work_packages/WP-18.md",
+      "depends_on": [
+        "WP-09",
+        "WP-12",
+        "WP-16"
+      ],
+      "component_owners": [
+        "CMP-25"
+      ],
+      "requirement_ids": [
+        "REQ-24-01",
+        "REQ-24-02",
+        "REQ-24-03",
+        "REQ-24-04",
+        "REQ-24-05",
+        "REQ-36-01",
+        "REQ-36-02",
+        "REQ-36-03",
+        "REQ-36-04"
+      ],
+      "acceptance_ids": [
+        "B008",
+        "B081",
+        "B082",
+        "B083",
+        "B084",
+        "B085",
+        "B086",
+        "B087",
+        "B088",
+        "B126",
+        "B128"
+      ],
+      "target_gate": "G-F",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-19",
+      "title": "Qualify responsiveness and bounded growth",
+      "path": "build/work_packages/WP-19.md",
+      "depends_on": [
+        "WP-16",
+        "WP-18"
+      ],
+      "component_owners": [
+        "CMP-25",
+        "CMP-03",
+        "CMP-05"
+      ],
+      "requirement_ids": [
+        "REQ-34-01",
+        "REQ-34-02",
+        "REQ-34-03",
+        "REQ-34-04",
+        "REQ-35-01",
+        "REQ-35-02",
+        "REQ-35-03"
+      ],
+      "acceptance_ids": [
+        "B011",
+        "B013",
+        "B020",
+        "B075",
+        "B080",
+        "B115",
+        "B117",
+        "B125",
+        "B126"
+      ],
+      "target_gate": "G-F",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-20",
+      "title": "Implement modality and additional-adapter lanes",
+      "path": "build/work_packages/WP-20.md",
+      "depends_on": [
+        "WP-16",
+        "WP-12"
+      ],
+      "component_owners": [
+        "CMP-22"
+      ],
+      "requirement_ids": [
+        "REQ-33-01",
+        "REQ-33-02",
+        "REQ-33-03"
+      ],
+      "acceptance_ids": [
+        "B063",
+        "B118",
+        "B120"
+      ],
+      "target_gate": "G-D",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-21",
+      "title": "Implement governed training and promotion workflow",
+      "path": "build/work_packages/WP-21.md",
+      "depends_on": [
+        "WP-18"
+      ],
+      "component_owners": [
+        "CMP-25"
+      ],
+      "requirement_ids": [
+        "REQ-24-01",
+        "REQ-24-02",
+        "REQ-24-03",
+        "REQ-24-04",
+        "REQ-24-05"
+      ],
+      "acceptance_ids": [
+        "B081",
+        "B082",
+        "B083",
+        "B084",
+        "B085",
+        "B086",
+        "B087",
+        "B088"
+      ],
+      "target_gate": "G-D",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-22",
+      "title": "Build independent evidence verification",
+      "path": "build/work_packages/WP-22.md",
+      "depends_on": [
+        "WP-12",
+        "WP-17",
+        "WP-19"
+      ],
+      "component_owners": [
+        "CMP-15"
+      ],
+      "requirement_ids": [
+        "REQ-36-01",
+        "REQ-36-02",
+        "REQ-36-03",
+        "REQ-36-04",
+        "REQ-40-01",
+        "REQ-40-02",
+        "REQ-40-03"
+      ],
+      "acceptance_ids": [
+        "B004",
+        "B007",
+        "B008",
+        "B086",
+        "B126",
+        "B128"
+      ],
+      "target_gate": "G-F",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-23",
+      "title": "Produce the exact installable candidate",
+      "path": "build/work_packages/WP-23.md",
+      "depends_on": [
+        "WP-17",
+        "WP-19",
+        "WP-22"
+      ],
+      "component_owners": [
+        "CMP-24"
+      ],
+      "requirement_ids": [
+        "REQ-38-01",
+        "REQ-38-02",
+        "REQ-38-03",
+        "REQ-38-04",
+        "REQ-38-05"
+      ],
+      "acceptance_ids": [
+        "B112",
+        "B122",
+        "B123",
+        "B124"
+      ],
+      "target_gate": "G-F",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-24",
+      "title": "Run clean installed offline qualification",
+      "path": "build/work_packages/WP-24.md",
+      "depends_on": [
+        "WP-23"
+      ],
+      "component_owners": [
+        "CMP-25",
+        "CMP-21"
+      ],
+      "requirement_ids": [
+        "REQ-37-01",
+        "REQ-37-02",
+        "REQ-37-03",
+        "REQ-37-04"
+      ],
+      "acceptance_ids": [
+        "B121",
+        "B122",
+        "B124",
+        "B125",
+        "B127",
+        "B128"
+      ],
+      "target_gate": "G-F",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-25",
+      "title": "Run actual seven-day controlled operation",
+      "path": "build/work_packages/WP-25.md",
+      "depends_on": [
+        "WP-24"
+      ],
+      "component_owners": [
+        "CMP-25"
+      ],
+      "requirement_ids": [
+        "REQ-37-01",
+        "REQ-37-02",
+        "REQ-37-03",
+        "REQ-37-04",
+        "REQ-41-01",
+        "REQ-41-02",
+        "REQ-41-03",
+        "REQ-41-04"
+      ],
+      "acceptance_ids": [
+        "B121",
+        "B122",
+        "B124",
+        "B125",
+        "B127",
+        "B128"
+      ],
+      "target_gate": "G-G",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-26",
+      "title": "Complete external and hardware assurance",
+      "path": "build/work_packages/WP-26.md",
+      "depends_on": [
+        "WP-14",
+        "WP-20",
+        "WP-22"
+      ],
+      "component_owners": [
+        "CMP-15",
+        "CMP-19"
+      ],
+      "requirement_ids": [
+        "REQ-21-01",
+        "REQ-21-02",
+        "REQ-21-03",
+        "REQ-21-04",
+        "REQ-21-05",
+        "REQ-27-01",
+        "REQ-27-02",
+        "REQ-27-03",
+        "REQ-27-04",
+        "REQ-36-01",
+        "REQ-36-02",
+        "REQ-36-03",
+        "REQ-36-04",
+        "REQ-41-01",
+        "REQ-41-02",
+        "REQ-41-03",
+        "REQ-41-04"
+      ],
+      "acceptance_ids": [
+        "B008",
+        "B065",
+        "B066",
+        "B067",
+        "B068",
+        "B069",
+        "B070",
+        "B071",
+        "B072",
+        "B086",
+        "B089",
+        "B090",
+        "B091",
+        "B092",
+        "B093",
+        "B094",
+        "B095",
+        "B096",
+        "B121",
+        "B126",
+        "B127",
+        "B128"
+      ],
+      "target_gate": "G-G",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    },
+    {
+      "id": "WP-27",
+      "title": "Approve cutover and separately authorize release",
+      "path": "build/work_packages/WP-27.md",
+      "depends_on": [
+        "WP-25",
+        "WP-26"
+      ],
+      "component_owners": [
+        "LEAD_INTEGRATOR",
+        "CMP-24"
+      ],
+      "requirement_ids": [
+        "REQ-31-01",
+        "REQ-31-02",
+        "REQ-31-03",
+        "REQ-31-04",
+        "REQ-31-05",
+        "REQ-38-01",
+        "REQ-38-02",
+        "REQ-38-03",
+        "REQ-38-04",
+        "REQ-38-05",
+        "REQ-41-01",
+        "REQ-41-02",
+        "REQ-41-03",
+        "REQ-41-04",
+        "REQ-42-01",
+        "REQ-42-02",
+        "REQ-42-03"
+      ],
+      "acceptance_ids": [
+        "B001",
+        "B008",
+        "B105",
+        "B106",
+        "B107",
+        "B108",
+        "B109",
+        "B110",
+        "B111",
+        "B112",
+        "B121",
+        "B122",
+        "B123",
+        "B124",
+        "B127",
+        "B128"
+      ],
+      "target_gate": "G-H",
+      "implementation_status": "NOT_STARTED",
+      "review_status": "NOT_ASSIGNED",
+      "evidence_refs": []
+    }
+  ]
+}

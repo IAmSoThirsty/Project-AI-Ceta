@@ -1,0 +1,126 @@
+{
+  "at": "2026-10-20T10:58:19.405688+00:00",
+  "author": "/root",
+  "reviewer": "/root/recovery_regression20",
+  "mode": "FILE_AST_DATA_ONLY",
+  "scripts": {
+    "phase_coordinator.py": "4ecaecb74acea18f73246e5f87ec058e1300bda1b08f657a7965b3e043829429",
+    "issue_release.py": "60a5f888d7f2c87bfd8fec85dc828f194cbbe4ea1e68dc720b513ad5a4562a2b",
+    "run_reviewed.py": "a24e338955668b07c68e8334d2655c6171a131899c6da65f21268666d5f84c95"
+  },
+  "installed_graph_fingerprint": "7676087c6806a93e1f423ddd1be427727407e24b68e3310e0394cbd5c97788ac",
+  "scopes": {
+    "implement": [
+      ".agents/runtime/js9-runtime-20261020/successor-r3/**"
+    ],
+    "candidate_fixtures": [
+      ".agents/js9-runtime-r5-20261020/.agents/fixtures/**"
+    ],
+    "candidate_cache": [
+      ".agents/js9-runtime-r5-20261020/.local-test-output/**"
+    ],
+    "integrate": [
+      "contracts/CPU_OUTCOME_CAPACITY_CONNECTION_V1.md",
+      "contracts/CPU_OUTCOME_RECOVERY_V1.md",
+      "contracts/NATIVE_CPU_OUTCOME_PROVENANCE_V1.md",
+      "contracts/NATIVE_CPU_RUNTIME_COMPOSITION_V1.md",
+      "contracts/NATIVE_OWNER_SESSION_V1.md",
+      "contracts/OUTCOME_CAPACITY_V1.md",
+      "native/sqlite_runtime/outcome_capacity.cpp",
+      "src/ceta/composition/ipc_service.py",
+      "src/ceta/composition/native_cpu_outcome.py",
+      "src/ceta/composition/native_cpu_runtime.py",
+      "src/ceta/composition/service_process.py",
+      "src/ceta/effects/native_observer.py",
+      "src/ceta/identity/cpu_outcome_capacity.py",
+      "src/ceta/identity/native_cpu_outcome.py",
+      "src/ceta/identity/native_owner_view.py",
+      "src/ceta/identity/owner_session.py",
+      "src/ceta/kernel/cpu_execution.py",
+      "src/ceta/kernel/cpu_outcome_recovery.py",
+      "src/ceta/kernel/effect_transactions.py",
+      "src/ceta/store/journal.py",
+      "src/ceta/store/outcome_capacity.py",
+      "tests/contract/test_cpu_capacity_connection.py",
+      "tests/contract/test_cpu_execution_admission.py",
+      "tests/contract/test_cpu_outcome_recovery.py",
+      "tests/contract/test_cpu_recovery_registration.py",
+      "tests/contract/test_native_cpu_outcome_provenance.py",
+      "tests/contract/test_native_observer_origin.py",
+      "tests/contract/test_native_owner_execution.py",
+      "tests/contract/test_native_owner_preparation.py",
+      "tests/contract/test_native_runtime_composition.py",
+      "tests/contract/test_outcome_capacity.py",
+      ".local-test-output/**"
+    ],
+    "destination_evidence": [
+      ".agents/runtime/js9-runtime-20261020/successor-r3/**"
+    ],
+    "destination_fixtures": [
+      ".agents/fixtures/**"
+    ]
+  },
+  "controls": [
+    "actual_packet_bound541_and31",
+    "actual_exact_operation_equivalence_and_unconsumed_old_proof",
+    "actual_installed_TAAR_candidate_and_destination_scopes_disjoint",
+    "actual_three_candidate_claims_current_and_exact",
+    "actual_compiled_dependency_review_and_gate_edges",
+    "actual_wrapper_AST_nonzero-terminal",
+    "actual_wrapper_AST_spawn-exception",
+    "actual_wrapper_AST_spawn-and-terminal-writer-exception"
+  ],
+  "branches": [
+    {
+      "mode": "nonzero-terminal",
+      "passed": true,
+      "synthetic_subprocess_calls": 1,
+      "actual_process_calls": 0
+    },
+    {
+      "mode": "spawn-exception",
+      "passed": true,
+      "synthetic_subprocess_calls": 1,
+      "actual_process_calls": 0
+    },
+    {
+      "mode": "spawn-and-terminal-writer-exception",
+      "passed": true,
+      "synthetic_subprocess_calls": 1,
+      "actual_process_calls": 0
+    }
+  ],
+  "operation_equivalence": {
+    "original_operator_authorization": {
+      "repository_relative_path": ".agents/runtime/js9-root-execution-20261020/NO-PROFILE-AUTHORIZATION.json",
+      "sha256": "2de12485ef5fa2b204a1c5648667b2446105aebf16378238379455f6799ec2b0"
+    },
+    "predecessor_packet": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/PACKET.json",
+      "sha256": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055"
+    },
+    "successor_packet": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET.json",
+      "sha256": "32575147e478c63ead51c6269af9e22eebe06ccdc74619cdb04e46231fe9ac82"
+    },
+    "failed_preflight_proof": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/candidate-full/NATIVE-CASE-PROOF.json",
+      "sha256": "bdf3c92a20846ba818386625016edd35c996a31f79565c1bb4b6b79f06294094"
+    },
+    "original_operation_unchanged": true,
+    "prior_no_profile_attempts": 0,
+    "exact_phase_limits": {
+      "candidate_full": 1,
+      "destination_full": 1
+    },
+    "repair": "Same-project dependency closure and diagnostic repair; native gate path rebinding only",
+    "new_human_authorization_fabricated": false,
+    "automatic_retry": false
+  },
+  "repaired_finding": "ROOT-HELPER-01",
+  "no_automatic_retry": true,
+  "actual_native_process_profile_socket_SQLite_operations": 0,
+  "denied_effect_events": [],
+  "product_tools_or_Q5_review": false,
+  "limitation": "Completion helper records supplied command/validation evidence; actual phase results and receipts still require independent acceptance. No execution performed by this reviewer."
+}

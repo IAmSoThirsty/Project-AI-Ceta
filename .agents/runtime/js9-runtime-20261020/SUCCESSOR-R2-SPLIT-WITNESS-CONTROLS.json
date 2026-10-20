@@ -1,0 +1,173 @@
+{
+  "scope": "Exact AST functions; in-memory synthetic dispatch/data only; no authority or actual child receipt created",
+  "tests": 26,
+  "all_passed": true,
+  "cases": [
+    {
+      "case": "native-store_post_CAS_without_Git_subprocess",
+      "passed": true,
+      "allowed": true,
+      "diagnostic": null
+    },
+    {
+      "case": "native-store_default_Git_remains_forbidden_inside_same_audit",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "RuntimeError: JS9_NATIVE_STORE_BOUNDARY"
+    },
+    {
+      "case": "native-observer_post_CAS_without_Git_subprocess",
+      "passed": true,
+      "allowed": true,
+      "diagnostic": null
+    },
+    {
+      "case": "native-observer_default_Git_remains_forbidden_inside_same_audit",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: NATIVE_REVIEW_FORBIDS_subprocess.Popen"
+    },
+    {
+      "case": "parent_default_executes_both_real_code_Git_calls_with_synthetic_dispatch",
+      "passed": true,
+      "allowed": true,
+      "diagnostic": null
+    },
+    {
+      "case": "complete_synthetic_parent_witness_shape",
+      "passed": true,
+      "allowed": true,
+      "diagnostic": null
+    },
+    {
+      "case": "nonzero_actual_child_exit_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "unretired_child_job_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "wrong_child_image_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "wrong_child_command_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "failed_child_receipt_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "missing_Git_observation_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "mismatched_parent_packet_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "mismatched_parent_source_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "mismatched_child_interpreter_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "wrong_exact_case_ids_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "pending_parent_outcome_denied",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: "
+    },
+    {
+      "case": "candidate-full_requires_both_parent_witness_callbacks",
+      "passed": true,
+      "allowed": true,
+      "diagnostic": null
+    },
+    {
+      "case": "candidate-full_native-store_refusal_denies_admission",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: SYNTHETIC_FAILED_WITNESS"
+    },
+    {
+      "case": "candidate-full_native-observer_refusal_denies_admission",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: SYNTHETIC_FAILED_WITNESS"
+    },
+    {
+      "case": "destination-full_requires_both_parent_witness_callbacks",
+      "passed": true,
+      "allowed": true,
+      "diagnostic": null
+    },
+    {
+      "case": "destination-full_native-store_refusal_denies_admission",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: SYNTHETIC_FAILED_WITNESS"
+    },
+    {
+      "case": "destination-full_native-observer_refusal_denies_admission",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: SYNTHETIC_FAILED_WITNESS"
+    },
+    {
+      "case": "publish_requires_both_parent_witness_callbacks",
+      "passed": true,
+      "allowed": true,
+      "diagnostic": null
+    },
+    {
+      "case": "publish_native-store_refusal_denies_admission",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: SYNTHETIC_FAILED_WITNESS"
+    },
+    {
+      "case": "publish_native-observer_refusal_denies_admission",
+      "passed": true,
+      "allowed": false,
+      "diagnostic": "AssertionError: SYNTHETIC_FAILED_WITNESS"
+    }
+  ],
+  "packet_sha256": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055",
+  "script_hashes": {
+    "js9_support.py": "a5511b3aa7de4710f43d55834db1dd4e869ce0aff1bf22608936b886dfa30cda",
+    "run_native_store.py": "415a329a0014d791e5f0088b9719fd24aae8b028e08571786e1d18661b668d3d",
+    "run_native_observer.py": "69193456fc900f9b2f3769f57382ca7dd65495dff87f0dc97891bf2324099090",
+    "launch_native.py": "c23de7b6164cc001902244061d365f62578fb5b9e55ed34ab2fc1f59c6382852"
+  },
+  "actual_Git_or_native_subprocesses": 0,
+  "actual_product_tests": 0,
+  "Source_or_Q_changes": false
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "run_id": "js8-20261015",
+  "node_id": "validate",
+  "executor_id": "/root",
+  "started_at": "2026-10-15T20:02:47.954428+00:00",
+  "finished_at": "2026-10-18T01:41:32.486027+00:00",
+  "input_hash": "486aeaefdcddd7589315498b740034aefc210fbcd150fd52071377d24e8c5953",
+  "changed_files": [],
+  "result": {
+    "manifest_sha256": "2a3abde78bd4ab25af268ad1b16cef9eeaf9e2c30586c06fac4600876ba3c7c6",
+    "qualification_kind": "SOURCE_PUBLICATION_PREFLIGHT",
+    "candidate_full_status": "FAILED",
+    "final_acceptance": "PENDING",
+    "source_publication_preflight": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/SOURCE-PUBLICATION-PREFLIGHT.json",
+      "sha256": "8cb05807ad689def986e1df73a7ed6944cd9687c2691b9e44d66fca92cf1f86b"
+    },
+    "prior_failed_candidate": {
+      "result": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/RESULT.json",
+        "sha256": "18be4285d1d126fa5e679447c251ee4db8fb8917ca22ea63da307066936dfaa3"
+      },
+      "launch": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full-LAUNCH-RESULT.json",
+        "sha256": "188f8b71d723bc553d7d0b1a5184c1a7abed7bab7cb613c2a496f1cf58a593e0"
+      },
+      "command": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full-COMMAND.json",
+        "sha256": "ec1f42f25137f3b61474a6c66f4b4f8ffdd53c20776cbc2e9b78bf3f11dcfcb0"
+      },
+      "preflight": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/PREFLIGHT.json",
+        "sha256": "f5b488b65ac825c32e3e5d1839575cc5e24573642b12e79a310cf4967143ad84"
+      },
+      "raw": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/RAW.txt",
+        "sha256": "ac55dc7928dc632c61af3751968f492bf22fd7f404c03388683f2bf7ca1be4da"
+      },
+      "events": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/CASE-EVENTS.jsonl",
+        "sha256": "b99ee9dc611d92f6c2c7aaee2d05e82492d35c192667eee1458530179618a122"
+      },
+      "physical": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/PHYSICAL-CUSTODY.json",
+        "sha256": "5581f54b5661cd884b373f0f30df6445ac8ebac5d22c4c053d365f3a5c676c86"
+      },
+      "native": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/NATIVE-CASE-PROOF.json",
+        "sha256": "b1e4caa03735c8dd36ae98e307125f2092138218c2051b656f705edd31990c25"
+      },
+      "sqlite_receipts": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/SQLITE-RECEIPTS.json",
+        "sha256": "de06d655196a19fbe196fc2b67ae074699088a58e068873035742b3e6f4d844f"
+      }
+    },
+    "reviewed_scripts": {
+      "amendment_support.py": "bb37cf668c2e859a29769b86b69111d21958b610e190e8d859ef0e2d0af67dc0",
+      "run_full.py": "aadaf9abd5dca3934887c6f96c3b4e76e40ba23df90e1fc230f27b0687927e6f",
+      "launch_full.py": "cc71611a4c6504acdb6b0fd4859098f470d6b211347cb5ded32467b034dd165e",
+      "publish_source.py": "ae7b116f9270d65755d5abec30314f090f476d1608e3f77c6df56834381f6866",
+      "complete_source.py": "72aa88d041a50e728a477e9632cec956c2a57c0fbcee503d25261ad2da60193b",
+      "bounded_custody.py": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4",
+      "gc_observer.py": "92f1a44059e704e84763220fa63990e5a9d093338f41cdd32b777916f7be915f",
+      "tool_environment.py": "f0a11e1346ad008f68c8ab0a6dde680a54669c4257e21d6ecab2f9b41db19c9f",
+      "fixture_runtime.py": "ba0d95b88e7edd73b514f9feedebfedb34c978267d68bb28e4ee09491b8c3dc8",
+      "resource_observer.py": "de5deb609eb8b57b2b52e695ec0b38e1eac05f31ada119e83e74b9157074fd4a",
+      "candidate_readiness.py": "e82ed21784a388a09f8fa3f76ad240232603fcab9c19c878daf8b477c3e58102",
+      "publication_preflight.py": "e51a8e6bfd21db71e05dc366e0e6e6cc8f0d98156a44b2d86a670e8adde5761a"
+    },
+    "amendment": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/AMENDMENT.json",
+      "sha256": "ad3091e4ac129d0efcecae70b45ff15d45d6dedcc0c52dc30efead3714929776"
+    },
+    "Source_accepted": false
+  },
+  "commands": [
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js8-20261015\\amendment-report1\\publication_preflight.py --release-path T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js8-20261015\\amendment-report1\\releases\\publication-preflight.json --release-sha256 534bd385d3c629879ee82d9a2b66acc6a4023d0db438db4f0cdc074c67283845",
+      "exit_status": 0
+    },
+    {
+      "command": "git -C T:\\00-Active\\Project-AI-CETA\\.agents\\js8-20261015 diff --check",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "exact_publication_preflight_and_graph_diff",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

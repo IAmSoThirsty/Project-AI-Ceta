@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "run_id": "ac7-qualification-r4-20261020",
+  "node_id": "validate",
+  "executor_id": "/root",
+  "started_at": "2026-10-20T09:29:22.548157+00:00",
+  "finished_at": "2026-10-20T09:29:22.951252+00:00",
+  "input_hash": "74eda7c61592aa443af679ed7db0137af243e580411fe8f0e9f1063d54881b66",
+  "changed_files": [],
+  "result": {
+    "manifest_sha256": "83967d7b5c00abc6461cdcb9bbe398bb63b0ab53078d8364f56f383de9b511cf",
+    "review_sha256": "d90585db535e80d6d90b0d39a258bfe62504e6fbaa509048666b9ec49f7d4e01",
+    "frozen_payloads": 357,
+    "source352_unchanged": true,
+    "qualification": "PREPARED_CODE_AND_CONTROLLED_TESTS_ONLY",
+    "profile_operations": false,
+    "source_publication": false
+  },
+  "commands": [
+    {
+      "command": "git -C T:\\00-Active\\Project-AI-CETA diff --check",
+      "exit_status": 0
+    }
+  ],
+  "exit_status": 0,
+  "validations": [
+    {
+      "name": "exact_frozen_pins_review_and_diff_gate",
+      "passed": true
+    }
+  ]
+}

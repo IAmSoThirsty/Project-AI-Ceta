@@ -1,0 +1,41 @@
+{
+  "fingerprint": "34f649bb1be6f0e07a6dae56aabc5aa4515444ab482c8c184a0278e9038c7b06",
+  "graph": {
+    "edges": [],
+    "id": "ceta_ac7_loader_capture_construction",
+    "nodes": {
+      "evidence": {
+        "access": "write_scoped",
+        "kind": "agent",
+        "role": "worker",
+        "write_scope": [
+          ".agents/runtime/ac7-loader-capture-20261020/records/**"
+        ]
+      },
+      "implement": {
+        "access": "write_scoped",
+        "kind": "agent",
+        "role": "worker",
+        "write_scope": [
+          ".agents/ac7-loader-capture-20261020/**"
+        ]
+      }
+    },
+    "policy": {
+      "fail_closed": true,
+      "max_parallel": 4,
+      "prohibit_scope_overlap": true,
+      "prohibit_self_review": true,
+      "require_receipts": true
+    }
+  },
+  "root": "T:\\00-Active\\Project-AI-CETA",
+  "scope": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020",
+  "sources": [
+    {
+      "digest": "cb6a033da6dfdbbed4f5a872d1c2ed4f124f905163fa289cc9128c42e294b7e4",
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\AGENTS.md"
+    }
+  ],
+  "version": 1
+}

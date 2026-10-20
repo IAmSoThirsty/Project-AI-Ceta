@@ -1,0 +1,36 @@
+--- assembled/src/ceta/composition/ipc_service.py
++++ js9/src/ceta/composition/ipc_service.py
+@@ -6,17 +6,27 @@
+ from ceta.identity.windows_pipe import WindowsPipeServer
+ 
+ 
+-def compose_local_kernel_service(store, codec, installation_scope_id, registry, pipe_name):
+-    owners = WindowsIdentityOwners(registry)
+-    kernel = compose_kernel(store, codec, installation_scope_id, owners=owners)
++def _selected_kernel(store, codec, installation_scope_id, registry, native_runtime):
++    if native_runtime is None:
++        owners = WindowsIdentityOwners(registry)
++        return compose_kernel(store, codec, installation_scope_id, owners=owners), owners
++    from ceta.composition.native_cpu_runtime import NativeCpuRuntime
++    from ceta.contracts.kernel_transactions import require
++    require(type(native_runtime) is NativeCpuRuntime, 'NATIVE_CPU_RUNTIME_REQUIRED')
++    return native_runtime.select(store, codec, installation_scope_id, registry)
++
++
++def compose_local_kernel_service(store, codec, installation_scope_id, registry, pipe_name,
++                                 *, native_runtime=None):
++    kernel, owners = _selected_kernel(store, codec, installation_scope_id, registry, native_runtime)
+     return WindowsPipeServer(pipe_name, registry, KernelIngress(kernel, owners), codec)
+ 
+ 
+-def compose_duplex_kernel_service(store, codec, installation_scope_id, registry, pipe_name):
++def compose_duplex_kernel_service(store, codec, installation_scope_id, registry, pipe_name,
++                                  *, native_runtime=None):
+     """The same kernel/store owner, with authenticated correlated result bytes."""
+     from ceta.contracts.local_results import encode_response
+-    owners = WindowsIdentityOwners(registry)
+-    kernel = compose_kernel(store, codec, installation_scope_id, owners=owners)
++    kernel, owners = _selected_kernel(store, codec, installation_scope_id, registry, native_runtime)
+     tasks = TaskDrafts(store, codec, owners)
+     return WindowsPipeServer(pipe_name, registry, KernelIngress(kernel, owners, tasks), codec,
+                              response_encoder=encode_response)

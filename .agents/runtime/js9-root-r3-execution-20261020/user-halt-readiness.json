@@ -1,0 +1,200 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "run",
+    "ready",
+    "js9-root-r3-execution-20261020",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-root-r3-execution-20261020"
+  ],
+  "exit_status": 0,
+  "response": {
+    "allowed": true,
+    "blocked": {
+      "destination_evidence": "validate: predecessor state is PENDING",
+      "destination_fixtures": "validate: predecessor state is PENDING",
+      "integrate": "validate: predecessor state is PENDING",
+      "review": "candidate_cache is FAILED; candidate_fixtures is FAILED; implement is FAILED",
+      "validate": "review: predecessor state is BLOCKED"
+    },
+    "fingerprint_matches": true,
+    "graph_fingerprint": "7676087c6806a93e1f423ddd1be427727407e24b68e3310e0394cbd5c97788ac",
+    "graph_id": "ceta_js9_r3_execution",
+    "nodes": {
+      "candidate_cache": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T11:38:13.357984+00:00",
+        "decision": null,
+        "effective_write_scope": [
+          ".agents/js9-runtime-r5-20261020/.local-test-output/**"
+        ],
+        "executor_id": "/root",
+        "reason": "Receipt records unsuccessful execution",
+        "receipt_hash": "402446cec4ad260db80710b59bde46f74cfae9727a0611ae5ddb1d6d8c92f404",
+        "receipt_ref": "receipts/candidate_cache.json",
+        "state": "FAILED",
+        "validation_passed": false,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.local-test-output"
+      },
+      "candidate_fixtures": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T11:38:12.452482+00:00",
+        "decision": null,
+        "effective_write_scope": [
+          ".agents/js9-runtime-r5-20261020/.agents/fixtures/**"
+        ],
+        "executor_id": "/root",
+        "reason": "Receipt records unsuccessful execution",
+        "receipt_hash": "84b331a769f5fd7c5ea139482d060e18f8128b9eeb54554e2312fbab7373de83",
+        "receipt_ref": "receipts/candidate_fixtures.json",
+        "state": "FAILED",
+        "validation_passed": false,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures"
+      },
+      "destination_evidence": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "validate: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "destination_fixtures": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "validate: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "discover": {
+        "artifact_hash": "5b3d0f8457d155f84922427d6a7c4b2d1644854f68f6a28846f2289e6824a35b",
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T10:48:45.276854+00:00",
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": "/root",
+        "reason": "receipt and observed execution evidence validated",
+        "receipt_hash": "d43b96b9da6f84faa8b88fa3cf8ba5969b2b3f741dbe255ec4860653f3c52107",
+        "receipt_ref": "receipts/discover.json",
+        "state": "SUCCEEDED",
+        "validation_passed": true,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-root-r3-execution-20261020\\read-only-workspace"
+      },
+      "implement": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T11:38:04.804766+00:00",
+        "decision": null,
+        "effective_write_scope": [
+          ".agents/runtime/js9-runtime-20261020/successor-r3/**"
+        ],
+        "executor_id": "/root",
+        "reason": "Receipt records unsuccessful execution",
+        "receipt_hash": "d483bb414b8f7d555dfecff515ca335b658618c7e6347232dfa01c17925a4ac3",
+        "receipt_ref": "receipts/implement.json",
+        "state": "FAILED",
+        "validation_passed": false,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3"
+      },
+      "integrate": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "validate: predecessor state is PENDING",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "plan": {
+        "artifact_hash": "62d7de64a41ddb11c26ad030fea61e669b61741f022d2955d3ac7bf83a0cc2a2",
+        "changed_files": [],
+        "claim": null,
+        "completed_at": "2026-10-20T10:48:47.841382+00:00",
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": "/root",
+        "reason": "receipt and observed execution evidence validated",
+        "receipt_hash": "df4c18d2774e444b74810f231f270208aa568cbedc53d813c01dc16e603d2c11",
+        "receipt_ref": "receipts/plan.json",
+        "state": "SUCCEEDED",
+        "validation_passed": true,
+        "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-root-r3-execution-20261020\\read-only-workspace"
+      },
+      "review": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "candidate_cache is FAILED; candidate_fixtures is FAILED; implement is FAILED",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "BLOCKED",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "validate": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "review: predecessor state is BLOCKED",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "PENDING",
+        "validation_passed": false,
+        "workspace": null
+      }
+    },
+    "ready_now": [],
+    "run_id": "js9-root-r3-execution-20261020",
+    "sequence": 14,
+    "states": {
+      "candidate_cache": "FAILED",
+      "candidate_fixtures": "FAILED",
+      "destination_evidence": "PENDING",
+      "destination_fixtures": "PENDING",
+      "discover": "SUCCEEDED",
+      "implement": "FAILED",
+      "integrate": "PENDING",
+      "plan": "SUCCEEDED",
+      "review": "BLOCKED",
+      "validate": "PENDING"
+    }
+  }
+}

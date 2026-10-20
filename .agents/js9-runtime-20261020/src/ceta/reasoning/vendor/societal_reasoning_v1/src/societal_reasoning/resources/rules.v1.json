@@ -1,0 +1,167 @@
+[
+  {
+    "clarification_question": "Was the target people who use the tool, or a specific implementation and its demonstrated defects?",
+    "concept_ids": [
+      171,
+      576,
+      1069,
+      151
+    ],
+    "context_matches": {
+      "setting": {
+        "public_professional_discussion": 1,
+        "public_social_platform": 1
+      }
+    },
+    "contradicts": {
+      "established_mutual_banter": 4,
+      "specific_work_product": 2,
+      "verifiable_defect": 2
+    },
+    "id": "public_group_ridicule",
+    "interpretation": "The presented conduct is consistent with ridicule of people or a group, not merely an assessment of their work.",
+    "limitation": "This does not establish the author's private motive or exclude every critical purpose.",
+    "min_score": 2,
+    "requires_all": [
+      "derisive_form",
+      "people_or_group_targeted"
+    ],
+    "supports": {
+      "no_specific_failure": 1,
+      "public_audience": 2,
+      "status_attack": 2,
+      "stereotyping": 2
+    },
+    "title": "Public ridicule directed at people rather than a specific artifact"
+  },
+  {
+    "clarification_question": "Is there a specific failure, reproducible evidence, or evaluation criterion?",
+    "concept_ids": [
+      461,
+      115,
+      1892,
+      1069
+    ],
+    "context_matches": {
+      "setting": {
+        "engineering_review": 2,
+        "public_professional_discussion": 1
+      }
+    },
+    "contradicts": {
+      "derisive_form": 2,
+      "people_or_group_targeted": 2
+    },
+    "id": "technical_work_criticism",
+    "interpretation": "The presented conduct is consistent with substantive criticism of an identifiable work product.",
+    "limitation": "A demonstrated defect does not prove anything about the overall ability or worth of its author.",
+    "min_score": 2,
+    "requires_all": [
+      "specific_work_product",
+      "verifiable_defect"
+    ],
+    "supports": {
+      "evaluation_criteria": 2,
+      "professional_review": 1,
+      "reproducible_evidence": 3
+    },
+    "title": "Criticism of a specific work product"
+  },
+  {
+    "clarification_question": "Is this reciprocal joking within an established relationship, or unwanted ridicule?",
+    "concept_ids": [
+      1072,
+      1073,
+      1071,
+      1069
+    ],
+    "context_matches": {
+      "relationship": {
+        "established_friends": 2,
+        "familiar_colleagues": 1
+      }
+    },
+    "contradicts": {
+      "coercion": 4,
+      "public_humiliation": 2,
+      "unwanted_attention": 3
+    },
+    "id": "mutual_playful_banter",
+    "interpretation": "The exchange is consistent with playful teasing between willing participants in an established relationship.",
+    "limitation": "A claimed joke is insufficient; mutual willingness and context matter.",
+    "min_score": 3,
+    "requires_all": [
+      "established_mutual_banter",
+      "mutual_playfulness"
+    ],
+    "supports": {
+      "consent_to_play": 2,
+      "shared_reference": 2,
+      "teasing": 1
+    },
+    "title": "Mutually playful teasing or banter"
+  },
+  {
+    "clarification_question": "What specific requirement prevents practical access to the promised service?",
+    "concept_ids": [
+      1999,
+      2000,
+      350,
+      961
+    ],
+    "context_matches": {
+      "setting": {
+        "government_service": 1,
+        "healthcare_administration": 1
+      }
+    },
+    "contradicts": {
+      "working_alternative_available": 2
+    },
+    "id": "administrative_access_barrier",
+    "interpretation": "The reported process may be functioning procedurally while failing to deliver its intended service to this person.",
+    "limitation": "The record does not independently establish policy illegality, administrative intent, or full eligibility.",
+    "min_score": 3,
+    "requires_all": [
+      "service_promised",
+      "eligibility_or_document_barrier"
+    ],
+    "supports": {
+      "agency_discretion": 1,
+      "disproportionate_cost": 2,
+      "person_cannot_supply_document": 2
+    },
+    "title": "Operational barrier to a formally available service"
+  },
+  {
+    "clarification_question": "What independently verifiable authorization permits this specific action?",
+    "concept_ids": [
+      1664,
+      958,
+      961,
+      1645
+    ],
+    "context_matches": {
+      "setting": {
+        "AI_agent": 1,
+        "software_operations": 1
+      }
+    },
+    "contradicts": {
+      "documented_valid_authorization": 5
+    },
+    "id": "unauthorized_action_risk",
+    "interpretation": "Authority to perform a consequential action has not been established by the described evidence.",
+    "limitation": "This advisory result never grants or denies execution capabilities; host governance remains authoritative.",
+    "min_score": 2,
+    "requires_all": [
+      "external_action_requested",
+      "authorization_unverified"
+    ],
+    "supports": {
+      "high_impact_change": 2,
+      "untrusted_instruction": 3
+    },
+    "title": "Requested action with unestablished authority"
+  }
+]

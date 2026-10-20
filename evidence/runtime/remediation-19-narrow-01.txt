@@ -1,0 +1,44 @@
+COMMAND ["T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe", "-B", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests/contract", "-p", "test_development_inventory.py", "-v"]
+test_ambient_gitignore_does_not_hide_an_unknown_source (test_development_inventory.DevelopmentInventoryTests.test_ambient_gitignore_does_not_hide_an_unknown_source) ... ok
+test_exact_content_hashes_and_distinct_watch_selection (test_development_inventory.DevelopmentInventoryTests.test_exact_content_hashes_and_distinct_watch_selection) ... ok
+test_explicit_cache_and_private_exclusions (test_development_inventory.DevelopmentInventoryTests.test_explicit_cache_and_private_exclusions) ... ok
+test_input_drift_rejects_the_observation (test_development_inventory.DevelopmentInventoryTests.test_input_drift_rejects_the_observation) ... ok
+test_scan_permission_failure_rejects_incomplete_inventory (test_development_inventory.DevelopmentInventoryTests.test_scan_permission_failure_rejects_incomplete_inventory) ... ok
+test_windows_case_variants_of_excluded_paths_are_not_read (test_development_inventory.DevelopmentInventoryTests.test_windows_case_variants_of_excluded_paths_are_not_read) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.138s
+
+OK
+
+COMMAND ["T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe", "-B", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests/contract", "-p", "test_source_references.py", "-v"]
+test_all_twenty_one_actual_guides_resolve_without_rewriting_originals (test_source_references.SourceReferenceTests.test_all_twenty_one_actual_guides_resolve_without_rewriting_originals) ... ok
+test_changed_guide_is_rejected (test_source_references.SourceReferenceTests.test_changed_guide_is_rejected) ... ok
+test_changed_or_invented_schema_is_rejected (test_source_references.SourceReferenceTests.test_changed_or_invented_schema_is_rejected) ... ok
+test_duplicate_missing_and_wrong_witness_maps_are_rejected (test_source_references.SourceReferenceTests.test_duplicate_missing_and_wrong_witness_maps_are_rejected) ... ok
+test_unmapped_or_traversal_reference_is_rejected (test_source_references.SourceReferenceTests.test_unmapped_or_traversal_reference_is_rejected) ... ok
+test_valid_witness_numbers_cannot_be_permuted_between_guide_identities (test_source_references.SourceReferenceTests.test_valid_witness_numbers_cannot_be_permuted_between_guide_identities) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.007s
+
+OK
+
+COMMAND ["T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe", "-B", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests/contract", "-p", "test_build_measurements.py", "-v"]
+test_pending_classification_is_counted_separately (test_build_measurements.BuildMeasurementTests.test_pending_classification_is_counted_separately) ... ok
+test_unknown_applicability_is_rejected (test_build_measurements.BuildMeasurementTests.test_unknown_applicability_is_rejected) ... ok
+test_zero_unresolved_applicability_preserves_every_open_evidence_axis (test_build_measurements.BuildMeasurementTests.test_zero_unresolved_applicability_preserves_every_open_evidence_axis) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+COMMAND ["T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe", "-B", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests/contract", "-p", "test_boundaries.py", "-v"]
+test_actual_import_is_mapped_namespace_not_retained_ceta (test_boundaries.BoundaryTests.test_actual_import_is_mapped_namespace_not_retained_ceta) ... ok
+test_contract_leaf_imports_only_declared_pure_dependencies (test_boundaries.BoundaryTests.test_contract_leaf_imports_only_declared_pure_dependencies) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.022s
+
+OK

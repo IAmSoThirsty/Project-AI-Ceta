@@ -1,0 +1,24 @@
+# Source standards and engineering requirements remain visible.
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Private runtime data must not enter the repository.
+.private/
+.local-runtime/
+.local-models/
+.local-credentials/
+.local-profiles/
+.local-build-cache/
+.local-test-output/
+*.key
+*.pem
+*.p12
+*.pfx
+# Exceptions for actual reviewed PUBLIC verification material must be explicit.
+
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md

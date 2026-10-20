@@ -1,0 +1,89 @@
+{
+  "scope": "Pure exact AST function bodies with in-memory synthetic records; no authority issued",
+  "tests": 12,
+  "cases": [
+    {
+      "case": "all2622_exact_order_and_explicit50_namespace_cases",
+      "passed": true,
+      "allowed": true,
+      "error": null
+    },
+    {
+      "case": "missing_original_case_denied",
+      "passed": true,
+      "allowed": false,
+      "error": "DISCOVERED_CASESET_MISMATCH"
+    },
+    {
+      "case": "duplicate_discovered_case_denied",
+      "passed": true,
+      "allowed": false,
+      "error": "DUPLICATE_DISCOVERED_CASE"
+    },
+    {
+      "case": "unexpected_discovered_case_denied",
+      "passed": true,
+      "allowed": false,
+      "error": "DISCOVERED_CASESET_MISMATCH"
+    },
+    {
+      "case": "namespace_module_outside_exact_candidate_denied",
+      "passed": true,
+      "allowed": false,
+      "error": ""
+    },
+    {
+      "case": "exact31_paths_with_matching_running_Source_claim",
+      "passed": true,
+      "allowed": true,
+      "error": null
+    },
+    {
+      "case": "foreign_executor_denied",
+      "passed": true,
+      "allowed": false,
+      "error": ""
+    },
+    {
+      "case": "wrong_workspace_denied",
+      "passed": true,
+      "allowed": false,
+      "error": ""
+    },
+    {
+      "case": "missing31st_write_scope_denied",
+      "passed": true,
+      "allowed": false,
+      "error": ""
+    },
+    {
+      "case": "completed_claim_denied",
+      "passed": true,
+      "allowed": false,
+      "error": ""
+    },
+    {
+      "case": "claim_input_mismatch_denied",
+      "passed": true,
+      "allowed": false,
+      "error": ""
+    },
+    {
+      "case": "state_executor_mismatch_denied",
+      "passed": true,
+      "allowed": false,
+      "error": ""
+    }
+  ],
+  "all_passed": true,
+  "sources": {
+    "js9_support.py": "a5511b3aa7de4710f43d55834db1dd4e869ce0aff1bf22608936b886dfa30cda",
+    "publish_source.py": "90c20b3fcd83eb80707b93373599437f1df9cebfd628777ab471fc10fdf2b7fa",
+    "CASESET.json": "eb84271555192021f192906f8f110c943d335009c2eb5c0cd088d38e5837eebb",
+    "PACKET.json": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055"
+  },
+  "candidate_imports": false,
+  "product_tests": false,
+  "native_calls": false,
+  "Source_mutation": false
+}

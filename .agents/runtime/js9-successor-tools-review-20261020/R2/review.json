@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "at": "2026-10-20T10:16:24.160226+00:00",
+  "reviewer": "/root/recovery_join_review20",
+  "author": "/root/recovery_regression20",
+  "decision": "approved",
+  "exit_status": 0,
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/PACKET.json",
+    "sha256": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055"
+  },
+  "reviewed_scripts": {
+    "bounded_custody.py": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4",
+    "fixture_runtime.py": "c6c91421b85fbf7cc7088cc193abae1b81f2cbc64c0d7219aa175240f18185c3",
+    "gc_observer.py": "92f1a44059e704e84763220fa63990e5a9d093338f41cdd32b777916f7be915f",
+    "js9_support.py": "a5511b3aa7de4710f43d55834db1dd4e869ce0aff1bf22608936b886dfa30cda",
+    "launch_full.py": "512654ab83e937bcd2d973f35ae12ed314a274a754aa4e17ccfc296901bc37fa",
+    "launch_native.py": "c23de7b6164cc001902244061d365f62578fb5b9e55ed34ab2fc1f59c6382852",
+    "native_case_gate.py": "39ae5136f85849855ce60434f5e71d061e3ffc11e784bfd00084d6181b3d1468",
+    "publish_source.py": "90c20b3fcd83eb80707b93373599437f1df9cebfd628777ab471fc10fdf2b7fa",
+    "resource_observer.py": "de5deb609eb8b57b2b52e695ec0b38e1eac05f31ada119e83e74b9157074fd4a",
+    "run_full.py": "28ff1f27cfc673e8e9cc1725aee4b1846b095cf47b76fe884653aa1e17d0d336",
+    "run_native_observer.py": "69193456fc900f9b2f3769f57382ca7dd65495dff87f0dc97891bf2324099090",
+    "run_native_store.py": "415a329a0014d791e5f0088b9719fd24aae8b028e08571786e1d18661b668d3d"
+  },
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/MANIFEST-R4.json",
+    "sha256": "212f1913af6ef24c24041628d2dcca23c7b754849ba79de9db8d75a210b3f532"
+  },
+  "approval_scope": "Exact frozen R2 engineering tools; independent native parent corroboration is mandatory. Human scope, actual Source lease and runtime acceptance remain separate.",
+  "no_host_execution_approval": true,
+  "host_execution_approved": false,
+  "human_approval_issued": false,
+  "Source_publication_approved": false,
+  "native_execution_performed_by_reviewer": false,
+  "full_or_product_tests_executed_by_reviewer": false,
+  "repaired_findings": [
+    "JS9-TOOLS-01"
+  ],
+  "new_blocking_code_findings": [],
+  "predecessor": {
+    "packet_sha256": "455efb4d1d30ecd05f7076f32648a44b71f7fc383882945e233f1e2c126810c5",
+    "review_sha256": "e4e72f0be08b771d282d4031b19e6c2ac85753143e1172734c206fbf6a357d41",
+    "decision": "rejected",
+    "history_preserved": true
+  },
+  "verified_boundaries": {
+    "default_Git": true,
+    "only_two_post_audit_false_calls": [
+      [
+        "run_native_observer.py",
+        164
+      ],
+      [
+        "run_native_store.py",
+        80
+      ]
+    ],
+    "strict_native_audits_preserved": true,
+    "native_children_acceptance_complete": false,
+    "new_parent_child_timeout_seconds": 300,
+    "actual_child_terminal_and_retirement_required": true,
+    "both_corroborations_required_for": [
+      "candidate-full",
+      "destination-full",
+      "publish"
+    ],
+    "candidate_payloads_unchanged": 530,
+    "case_ids_unchanged": 2622,
+    "original_case_ids_preserved": 2334,
+    "reasoning_cases_preserved": 50,
+    "changed_new_Source_paths_unchanged": 31,
+    "accepted_Source352_preserved": true
+  },
+  "independent_controls": {
+    "repair_and_receipt": 52,
+    "downstream_release": 17,
+    "total": 69,
+    "stable_read_inputs": 1081,
+    "mode": "FILE/AST/DATA_ONLY",
+    "actual_native_or_subprocess_calls": 0
+  },
+  "partial_disposition": {
+    "native_store18": "Engineering tool cut approved; Root exact release and output ownership remain required",
+    "native_observer6": "Engineering tool cut approved; Root exact release and output ownership remain required",
+    "full_phases": "Engineering tools approved; the retained no-profile case remains gated on distinct current human authorization for one case in each of two phases",
+    "publication": "Exact candidate/native/full evidence and actual exclusive Source write lease required",
+    "baseline": "New accepted baseline requires terminal destination evidence, distinct review and actual integration completion"
+  },
+  "authority_boundary": {
+    "case": "test_isolated_worker.NativeIsolatedWorkerTests.test_actual_nonpersistent_launch_denial_and_medium_control_retirement",
+    "AC7_authority_consumed": true,
+    "AC7_post_cleanup_regression_excluded": true,
+    "generic_authority_string_is_not_fresh_human_approval": true,
+    "required_phases": [
+      "candidate-full",
+      "destination-full"
+    ]
+  },
+  "evidence": {
+    "REVIEW.md": "6cbcb9508e3e8e9ee1bbe5cedc6db1ddc54e74ab6f1fdfa22369c5e0eb46b6a7",
+    "REPAIR-CONTROLS.json": "6e5464f5a61f6876b7512a9113496d18d446f99e652a36157ea6dec655c820d6",
+    "verify_repair.py": "330a459bfea14569bcc9bbd9b2d13d72d8561844f2657f2dbf727868ce931e75",
+    "DOWNSTREAM-RELEASE-CONTROLS.json": "8b2e573ceefdf92fa64c0b9f5c5b73802fccc26cc81c8d7522d612199f59aeae",
+    "release_controls.py": "d5c33be858561fa5663ff040e5d39c7ccb384c17d51ba00cb67e8ff028914dad",
+    "AUTHOR-CONTROLS-READ.json": "522d3d489277156baf6edabad8bbd293c10eca972f75f4252612ca0fb9607f15"
+  },
+  "skill": "epistemic-status-enforcer",
+  "skill_version": "0.1.0",
+  "governing_version": "thirsty-constitution-v0.1",
+  "skill_sources": {
+    "SKILL.md": "ab4e1fc97e6eeebc242832afc6d865fe7408352b5ce0c716539b14e287d85fae",
+    "references/constitutional-rules.md": "fcac1c8ed76418d9ec44b97a057e5ac0c9b654e0f0337d1a255267a5a0867496",
+    "references/handoff-schema.md": "3f8cefccc028af6f37d7ac2b3add59fe6e5079bee86df0453a523443ad0b4823"
+  },
+  "claims": [
+    {
+      "statement": "JS9-TOOLS-01 repaired by an explicit pending child and mandatory separate parent default-Git witness",
+      "epistemic_status": "verified source/control fact",
+      "sources": [
+        "REPAIR-CONTROLS.json",
+        "DOWNSTREAM-RELEASE-CONTROLS.json"
+      ]
+    },
+    {
+      "statement": "Exact carried candidate/case/source/environment cut remains frozen",
+      "epistemic_status": "verified file fact",
+      "sources": [
+        "REPAIR-CONTROLS.json"
+      ]
+    },
+    {
+      "statement": "Actual native/full/destination success and accepted successor Source baseline",
+      "epistemic_status": "unknown",
+      "sources": []
+    }
+  ],
+  "assumptions": [
+    "Trusted Windows/operator/interpreter",
+    "Cooperative exclusive Source ownership; inherited native namespace-race limits remain"
+  ],
+  "contradictions": [],
+  "risks": [
+    "A child-local PASS without successful exact parent corroboration must remain unaccepted",
+    "Full original no-profile case requires distinct human scope after consumed AC7 grant"
+  ],
+  "irreversible_effects": [],
+  "external_actions_taken": [],
+  "recommended_next_skills": [],
+  "recommended_next_action": "Root personal inspection and ownership handoff; exact native parent releases and terminal corroboration. Request separate exact human scope before either full phase, then preserve required native/full/publication/destination evidence.",
+  "unresolved_questions": [
+    "Actual native18/native6 outcomes and accepted parent witnesses",
+    "Current human authorization for two no-profile cases",
+    "Actual candidate/full/publication/destination terminals",
+    "Successor accepted Source baseline"
+  ],
+  "invalidation_conditions": [
+    "Changed frozen pin",
+    "Contrary actual runtime evidence",
+    "Discovered observation/custody defect"
+  ]
+}

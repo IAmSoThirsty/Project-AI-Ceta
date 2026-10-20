@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "run_id": "ac7-token-contract-20261020",
+  "node_id": "plan",
+  "executor_id": "/root",
+  "started_at": "2026-10-20T08:07:45.689265+00:00",
+  "finished_at": "2026-10-20T08:07:45.988472+00:00",
+  "input_hash": "9b5ab2cf9d6cf6cf1e355a06b3cf9a9f731ffaecdb304209d541e3d004366117",
+  "changed_files": [],
+  "result": {
+    "accepted_source_sha256": "5d001e3144805864048edf165e7124fdba21f8d99fc01b36e1f7463877b68bb0",
+    "accepted_payloads_verified": 352,
+    "observed_failure": "AC6 pre-resume token qualification, IsTokenRestricted=False without error status",
+    "required_correction": "Independent restricting-SID measurements and typed consistency; preserve AppContainer identity, zero capabilities, exact low integrity, job/child/environment and denial probes",
+    "native_profile_or_worker_execution": false
+  },
+  "commands": [],
+  "exit_status": 0,
+  "validations": [
+    {
+      "name": "accepted352_and_exact_current_token_source_inspected",
+      "passed": true
+    }
+  ]
+}

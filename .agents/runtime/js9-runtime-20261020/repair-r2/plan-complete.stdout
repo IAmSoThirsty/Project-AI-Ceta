@@ -1,0 +1,116 @@
+{
+  "allowed": true,
+  "blocked": {
+    "integrate": "validate: predecessor state is PENDING",
+    "review": "implement: predecessor state is READY",
+    "validate": "review: predecessor state is PENDING"
+  },
+  "fingerprint_matches": true,
+  "graph_fingerprint": "b030137bd62e19b5e0335db3fe3092c3c3033d43a304489b0e4e6bbd9a290b9e",
+  "graph_id": "ceta_js9_private_runtime_construction",
+  "nodes": {
+    "discover": {
+      "artifact_hash": "19fe06b09b9f9e42f56ef1572d37cd4d334d4a63c0d630bf83f79a92773137c7",
+      "changed_files": [],
+      "claim": null,
+      "completed_at": "2026-10-20T09:28:32.755893+00:00",
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": "/root/recovery_regression20",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "f057f4ab4f9de9d0abf70cab1d1971428c5dfbffcd177af818fb13916dfaefe5",
+      "receipt_ref": "receipts/discover.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-20261020"
+    },
+    "implement": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "all hard predecessor requirements satisfied",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "READY",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "integrate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "validate: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "plan": {
+      "artifact_hash": "6c0a0c4257a0d1d9de802f62f60b0fcaa78f597c4db5c3a4d461ad9e414e7a96",
+      "changed_files": [],
+      "claim": null,
+      "completed_at": "2026-10-20T09:28:35.839969+00:00",
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": "/root/recovery_regression20",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "b2dc3f805d78f0a1bbcc6238647e7288638534be4726448312771ca24257f838",
+      "receipt_ref": "receipts/plan.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-20261020"
+    },
+    "review": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "implement: predecessor state is READY",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "validate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "review: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    }
+  },
+  "ready_now": [
+    "implement"
+  ],
+  "run_id": "js9-composition-repair-r2-20261020",
+  "sequence": 6,
+  "states": {
+    "discover": "SUCCEEDED",
+    "implement": "READY",
+    "integrate": "PENDING",
+    "plan": "SUCCEEDED",
+    "review": "PENDING",
+    "validate": "PENDING"
+  }
+}

@@ -1,0 +1,1815 @@
+{
+  "schema_version": 1,
+  "job": "ER1 exact relocated E3 launcher and RECORD preparation",
+  "author": "/root/history_preservation",
+  "frozen_at": "2026-10-14T11:32:54.326247+00:00",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\er1-20261014",
+  "active_environment_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3",
+  "state": "FROZEN_AUTHOR_CANDIDATE_FOR_SEPARATE_REVIEW",
+  "current_inventory": {
+    "repository_relative_path": ".agents/runtime/er1-20261014/launcher-inventory-r2.json",
+    "sha256": "1ca08fef1764ee77e504a0988f6c0aecf6f21285d480e46d08f5439fe4863751"
+  },
+  "superseded_native_identity_bug_inventory": {
+    "repository_relative_path": ".agents/runtime/er1-20261014/launcher-inventory.json",
+    "sha256": "c9446a4099517d2bdc3e1a4761c28561f2f3949b7b742c348ae9eddeda574007"
+  },
+  "source_conservation": {
+    "repository_relative_path": ".agents/runtime/er1-20261014/source-conservation.json",
+    "sha256": "e125aa4d0a3b5a28d1521ee407d138bc4bcb05fa2ade20cab8c69467742ac2e4"
+  },
+  "generation": {
+    "repository_relative_path": ".agents/runtime/er1-20261014/candidate-generation.json",
+    "sha256": "67640734a1d02fb2242f9cfef979843c6c8c19c8b3924acd730dee76a53a0216"
+  },
+  "payloads": [
+    {
+      "candidate_relative_path": "launchers/jsonschema.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108448,
+      "candidate_sha256": "32c90b040be8ab5e7c2cd415a0323f46591f0b789a1271364219727a0e009da8",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\jsonschema.exe",
+      "source_sha256": "8e739b21763da86272b6d7ee6e8c993fb77e92ad50929ca57198bbcc33889be5",
+      "source_native_identity": {
+        "bytes": 108481,
+        "mtime_ns": 1791945440266286800,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342221,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/jsonschema.exe",
+        "sha256": "8e739b21763da86272b6d7ee6e8c993fb77e92ad50929ca57198bbcc33889be5"
+      },
+      "distribution": "jsonschema",
+      "version": "4.26.0",
+      "entry_point": "jsonschema.cli:main",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "48bc9f1f6b04f2415987bc8a949d87263f5d8d1c1461ef5a96532529abd9c346",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "SAFE_NONINTERACTIVE_CLI_PROBES"
+    },
+    {
+      "candidate_relative_path": "launchers/pip.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108456,
+      "candidate_sha256": "df36043a88d3f02cc7767f0cad6c4cc75bdf99d7d3925248633913bff814c127",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pip.exe",
+      "source_sha256": "7ea99c3ae3c2caebe3aa48cca3b204508ea0d3a16b4b8d7143398cfac616abaa",
+      "source_native_identity": {
+        "bytes": 108489,
+        "mtime_ns": 1791945401626053300,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979339333,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pip.exe",
+        "sha256": "7ea99c3ae3c2caebe3aa48cca3b204508ea0d3a16b4b8d7143398cfac616abaa"
+      },
+      "distribution": "pip",
+      "version": "25.0.1",
+      "entry_point": "pip._internal.cli.main:main",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "99685f3a8a57bf6b7c66e3fb2e005fe85cc31c814165820118cd09a8f9e96cbd",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "SAFE_NONINTERACTIVE_CLI_PROBES"
+    },
+    {
+      "candidate_relative_path": "launchers/pip3.12.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108456,
+      "candidate_sha256": "df36043a88d3f02cc7767f0cad6c4cc75bdf99d7d3925248633913bff814c127",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pip3.12.exe",
+      "source_sha256": "7ea99c3ae3c2caebe3aa48cca3b204508ea0d3a16b4b8d7143398cfac616abaa",
+      "source_native_identity": {
+        "bytes": 108489,
+        "mtime_ns": 1791945401650435100,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979339337,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pip3.12.exe",
+        "sha256": "7ea99c3ae3c2caebe3aa48cca3b204508ea0d3a16b4b8d7143398cfac616abaa"
+      },
+      "distribution": "pip",
+      "version": "25.0.1",
+      "entry_point": "pip._internal.cli.main:main",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "99685f3a8a57bf6b7c66e3fb2e005fe85cc31c814165820118cd09a8f9e96cbd",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "SAFE_NONINTERACTIVE_CLI_PROBES"
+    },
+    {
+      "candidate_relative_path": "launchers/pip3.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108456,
+      "candidate_sha256": "df36043a88d3f02cc7767f0cad6c4cc75bdf99d7d3925248633913bff814c127",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pip3.exe",
+      "source_sha256": "7ea99c3ae3c2caebe3aa48cca3b204508ea0d3a16b4b8d7143398cfac616abaa",
+      "source_native_identity": {
+        "bytes": 108489,
+        "mtime_ns": 1791945401629554400,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979339335,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pip3.exe",
+        "sha256": "7ea99c3ae3c2caebe3aa48cca3b204508ea0d3a16b4b8d7143398cfac616abaa"
+      },
+      "distribution": "pip",
+      "version": "25.0.1",
+      "entry_point": "pip._internal.cli.main:main",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "99685f3a8a57bf6b7c66e3fb2e005fe85cc31c814165820118cd09a8f9e96cbd",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "SAFE_NONINTERACTIVE_CLI_PROBES"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-assistant.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108471,
+      "candidate_sha256": "84e59cfaa5fb026d52ed8636da426f06fe84ae24ab4120a79a96db8ab1256c9c",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-assistant.exe",
+      "source_sha256": "70a62539679a22ea4d4ea106259040c3d6df9b898c3ecd0d8838a20fffdcf4a3",
+      "source_native_identity": {
+        "bytes": 108504,
+        "mtime_ns": 1791945440089252800,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342103,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-assistant.exe",
+        "sha256": "70a62539679a22ea4d4ea106259040c3d6df9b898c3ecd0d8838a20fffdcf4a3"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:assistant",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "516946be55a2048797166475fe3743a450fd8ed6b42e0f581741ba5c43333f26",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-balsam.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108465,
+      "candidate_sha256": "d0cf374132d926c033abfc9b2b74b2859746f2d42e396f4622f0ec526387eec2",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-balsam.exe",
+      "source_sha256": "add7e17e0e4211d38c5793fae6c8a5b21400d73b44a34028b3c545ef48c69d50",
+      "source_native_identity": {
+        "bytes": 108498,
+        "mtime_ns": 1791945440092080900,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342104,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-balsam.exe",
+        "sha256": "add7e17e0e4211d38c5793fae6c8a5b21400d73b44a34028b3c545ef48c69d50"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:balsam",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "5c091344e95256832006453c19bd6462039225a084c8b1a17b4817feb758cc49",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-balsamui.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108469,
+      "candidate_sha256": "44f16b6ec7262218bd3e96fa5b6aebfb9ea9980df7f1248caa603c1346f106d8",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-balsamui.exe",
+      "source_sha256": "a334ef63ac67462e80dcc604e86ff00a0f94a87b62db9b4766d6defea79aa08f",
+      "source_native_identity": {
+        "bytes": 108502,
+        "mtime_ns": 1791945440093085400,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342105,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-balsamui.exe",
+        "sha256": "a334ef63ac67462e80dcc604e86ff00a0f94a87b62db9b4766d6defea79aa08f"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:balsamui",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "452e41ba1c90f319c03251c2ab93cbc43661ead2aec6bccf23f7aa3a12684900",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-deploy.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108465,
+      "candidate_sha256": "0c932fe18bfd2ead4b9ed9065cae95e7ad50390d3df00f0e9fae992232e54341",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-deploy.exe",
+      "source_sha256": "d4fa12d1b7a30f75f1e38edef7f26a1878b6fb2db2c7e334cca29f94808fe65f",
+      "source_native_identity": {
+        "bytes": 108498,
+        "mtime_ns": 1791945440096085400,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342106,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-deploy.exe",
+        "sha256": "d4fa12d1b7a30f75f1e38edef7f26a1878b6fb2db2c7e334cca29f94808fe65f"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:deploy",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "3a01766832254939238e5482db6ee65d6d4c10d845c4dc69807b7f3b987d37a7",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-designer.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108469,
+      "candidate_sha256": "55fd8e2d0ddaab0c3300b48991d6d98f1d783aa8798552e05bdcf2dabf71e319",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-designer.exe",
+      "source_sha256": "b0f66fe48db43409c1d6366ba0b97d108bd023b9826b6f1c16c4c0766a33d104",
+      "source_native_identity": {
+        "bytes": 108502,
+        "mtime_ns": 1791945440098089300,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342107,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-designer.exe",
+        "sha256": "b0f66fe48db43409c1d6366ba0b97d108bd023b9826b6f1c16c4c0766a33d104"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:designer",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "2feccc57d8715da3b5a3bc6efd674f7e99fd67fcf802c945a1c514b108f1f261",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-genpyi.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108465,
+      "candidate_sha256": "6c320bb5dfbd7e87295ecfeb21bbe385e60eb5bafe3f9074433394d91829517e",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-genpyi.exe",
+      "source_sha256": "4c916a629cc76efe012d02745044d00064c122d81ef3ca176b76858786c31721",
+      "source_native_identity": {
+        "bytes": 108498,
+        "mtime_ns": 1791945440100112400,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342108,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-genpyi.exe",
+        "sha256": "4c916a629cc76efe012d02745044d00064c122d81ef3ca176b76858786c31721"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:genpyi",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "38e2feb72e9c4c1e79770b50ba52a1cffac9b01fac2f0ec6c4e46d85b676ba10",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-linguist.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108469,
+      "candidate_sha256": "ccc988fc1f12a22c1ddf006cab65d1d3bca7b64a4defb3dc5f2ad2e1837096d6",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-linguist.exe",
+      "source_sha256": "9935010bd26fd5622f0875ab66ef5a222fd347f75ed4c217f302287490d90fc7",
+      "source_native_identity": {
+        "bytes": 108502,
+        "mtime_ns": 1791945440102117100,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342109,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-linguist.exe",
+        "sha256": "9935010bd26fd5622f0875ab66ef5a222fd347f75ed4c217f302287490d90fc7"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:linguist",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "8e8ac41d341c3ae756e6fc31516790a7da1e4f5332c4bf0b6111240a1f32bb77",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-lrelease.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108469,
+      "candidate_sha256": "f57888ac5278d3ec235018722e640abc2295020c57474a072edb6a475e5510fd",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-lrelease.exe",
+      "source_sha256": "0692d6c00587b27fb792435e6baf7386c04fe919cd64ad262ba2a641c46bba79",
+      "source_native_identity": {
+        "bytes": 108502,
+        "mtime_ns": 1791945440103117300,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342110,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-lrelease.exe",
+        "sha256": "0692d6c00587b27fb792435e6baf7386c04fe919cd64ad262ba2a641c46bba79"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:lrelease",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "b7f5b2e783e4cac25b97d4c6599252cfded05e858a0e9bd395b22408e07f4daf",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-lupdate.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108467,
+      "candidate_sha256": "865bac6d90a14593f9bc11153cf2434bf44a446121130aaae6ccc31f286d1a32",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-lupdate.exe",
+      "source_sha256": "7a7fe34c5b2e61321b50612571c5e771a674b16288153db00c1884bb6879fef5",
+      "source_native_identity": {
+        "bytes": 108500,
+        "mtime_ns": 1791945440105117800,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342111,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-lupdate.exe",
+        "sha256": "7a7fe34c5b2e61321b50612571c5e771a674b16288153db00c1884bb6879fef5"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:lupdate",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "b5fb55cf01bafe1bc94203dab44d40cd2bfc0f4a3b7cdc7c8ea65b521e83b42b",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-metaobjectdump.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108481,
+      "candidate_sha256": "fbffa6ec38f85a124e94fd7ac7c3561477bdbba655f0932d8f3e6b9e93fe8629",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-metaobjectdump.exe",
+      "source_sha256": "884210c8921e8ee5ee474092872bcdb6684971deb8e91414bb747a48985e7ff8",
+      "source_native_identity": {
+        "bytes": 108514,
+        "mtime_ns": 1791945440107117100,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342112,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-metaobjectdump.exe",
+        "sha256": "884210c8921e8ee5ee474092872bcdb6684971deb8e91414bb747a48985e7ff8"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:metaobjectdump",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "ee7049ba679d1fb7729e6416d67e270e1ee2baaf402e122665659bd636aa5a3f",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-project.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108467,
+      "candidate_sha256": "d9fbe18ebc249adb0e23defeb823223a467510d3c0818cf877f72d33fdd0adec",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-project.exe",
+      "source_sha256": "36218a5223e8f828c96c0ecae8cdd58363dca78abf5692f02924c2e171bcefb0",
+      "source_native_identity": {
+        "bytes": 108500,
+        "mtime_ns": 1791945440109117500,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342113,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-project.exe",
+        "sha256": "36218a5223e8f828c96c0ecae8cdd58363dca78abf5692f02924c2e171bcefb0"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:project",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "8d98086539fd53bd7c0b0194ee12c107aeed34c0c9a5a7a6f8c0b80305b99369",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qml.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108459,
+      "candidate_sha256": "1ba5e03dcf4280a433879bc897f596466a0f0553fdd80f8124d336c2101fe63a",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qml.exe",
+      "source_sha256": "71f6a50a2ac8c54007dbc3469412fba88576c866a6892f459e59844cc7ecbd43",
+      "source_native_identity": {
+        "bytes": 108492,
+        "mtime_ns": 1791945440110476300,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342114,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qml.exe",
+        "sha256": "71f6a50a2ac8c54007dbc3469412fba88576c866a6892f459e59844cc7ecbd43"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qml",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "1ed4ba8d9186d55a79960303561f2cd50fd55f1fa32633f6f781c8ca56b4b080",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qmlcachegen.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108475,
+      "candidate_sha256": "a5d4bfde15c25d2a4d69ff996b8ef2c80409e586ea179dfac13441e6afd1176a",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qmlcachegen.exe",
+      "source_sha256": "a03e3df4f69ea04e736e005c7eac7054ddcc49e0942c6c301e7733603aafcfe9",
+      "source_native_identity": {
+        "bytes": 108508,
+        "mtime_ns": 1791945440112483000,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342115,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qmlcachegen.exe",
+        "sha256": "a03e3df4f69ea04e736e005c7eac7054ddcc49e0942c6c301e7733603aafcfe9"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qmlcachegen",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "448960ef439a068c54a150cf081760e1b3c5556f071317067c67a5895b8656fc",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qmlformat.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108471,
+      "candidate_sha256": "691571f7594654a5c7036fcdf9074b2fcf767f63b4a97a05bc4b8e3d9a03f19b",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qmlformat.exe",
+      "source_sha256": "fa0506ece05f99f7b3e7044af42fe6b128acbab5ef01ad63e36cc5acf660cf2d",
+      "source_native_identity": {
+        "bytes": 108504,
+        "mtime_ns": 1791945440114484900,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342116,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qmlformat.exe",
+        "sha256": "fa0506ece05f99f7b3e7044af42fe6b128acbab5ef01ad63e36cc5acf660cf2d"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qmlformat",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "5150c7bb1215b160960d4caa5ca911cc99d733860d7072a21a325bd6f15be3c1",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qmlimportscanner.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108485,
+      "candidate_sha256": "13c6935e203871e54ebb4effb50c3e920c857bbe19a7bb435721b36870dc5bb8",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qmlimportscanner.exe",
+      "source_sha256": "95d59955e13a3fffa7cbe7c7c379e0cbf3a25d36b34582d00f1bab851861968a",
+      "source_native_identity": {
+        "bytes": 108518,
+        "mtime_ns": 1791945440117480400,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342117,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qmlimportscanner.exe",
+        "sha256": "95d59955e13a3fffa7cbe7c7c379e0cbf3a25d36b34582d00f1bab851861968a"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qmlimportscanner",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "122e198635a792b4cdf051581034c5b2535942889c2d56c76cf4da453cebb4ba",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qmllint.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108467,
+      "candidate_sha256": "56b31a78de7278f89fb23b46481475637e61658d340b2eff99cdcaee8848d9fe",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qmllint.exe",
+      "source_sha256": "5d87e31b62ee88745a84cf883243e62869eb8c46c16d571c446d5e044e7a4633",
+      "source_native_identity": {
+        "bytes": 108500,
+        "mtime_ns": 1791945440119318700,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342118,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qmllint.exe",
+        "sha256": "5d87e31b62ee88745a84cf883243e62869eb8c46c16d571c446d5e044e7a4633"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qmllint",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "49266348dc80fc3fe0c7744906aada3ae14233d771702bc8e2ca60f78e0cef21",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qmlls.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108463,
+      "candidate_sha256": "4329f999741213241b21019427288b6f005effd4701ca2c9fa9fe464dcda298c",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qmlls.exe",
+      "source_sha256": "cc5a7ef027833a6203d117482bf1b077ffc19d8837663cb999d7b1dd15ac9039",
+      "source_native_identity": {
+        "bytes": 108496,
+        "mtime_ns": 1791945440121714000,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342119,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qmlls.exe",
+        "sha256": "cc5a7ef027833a6203d117482bf1b077ffc19d8837663cb999d7b1dd15ac9039"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qmlls",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "30a29c42eaac5c6f3122f2e44bcb94f8b242dca000a8674c4fd84ea3ca60fc1a",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qmltyperegistrar.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108485,
+      "candidate_sha256": "7db2c5e27c32d4cd404b9c225339c03d5feaf41d1edd4e7f325cd6524c37000e",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qmltyperegistrar.exe",
+      "source_sha256": "6931cd84a1ae4b285f20ba83ca037463245f29bc24e08a1be1a62b0940e23514",
+      "source_native_identity": {
+        "bytes": 108518,
+        "mtime_ns": 1791945440123994100,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342120,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qmltyperegistrar.exe",
+        "sha256": "6931cd84a1ae4b285f20ba83ca037463245f29bc24e08a1be1a62b0940e23514"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qmltyperegistrar",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "2041a314cd4b249430232240bc26d210f19ea1010a3729362d5eb623f9307fb9",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qsb.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108459,
+      "candidate_sha256": "9f743d58bdea7764601910fa66adfd76ed5f607aa261508798232511482fa2a3",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qsb.exe",
+      "source_sha256": "fc2111596755e7da0588d8a20c570f7a6273aa51ee8c5e605b0a82dd95169682",
+      "source_native_identity": {
+        "bytes": 108492,
+        "mtime_ns": 1791945440125998000,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342121,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qsb.exe",
+        "sha256": "fc2111596755e7da0588d8a20c570f7a6273aa51ee8c5e605b0a82dd95169682"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qsb",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "acc4f15b3d94b258031db1f475f8b20f26b60f12f8da247e4977722493724e41",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-qtpy2cpp.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108469,
+      "candidate_sha256": "483445b182ac8f40a2de295d63ec17095442d1c16c5183770138a040a796379d",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-qtpy2cpp.exe",
+      "source_sha256": "0435df15cac41892446b508ab996f5244707d698e4b4854f7b4b7ac8fba83ebe",
+      "source_native_identity": {
+        "bytes": 108502,
+        "mtime_ns": 1791945440127998200,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342122,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-qtpy2cpp.exe",
+        "sha256": "0435df15cac41892446b508ab996f5244707d698e4b4854f7b4b7ac8fba83ebe"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:qtpy2cpp",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "9f96645357d9777278ca0fe480b6a32c2a1420e8eb617c585dcd3a5cd103a738",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-rcc.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108459,
+      "candidate_sha256": "605b4befc36f3f2e02965ccc33ddd649c851baecf954a9ae8570cecb7bc6a627",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-rcc.exe",
+      "source_sha256": "c15790fa9572ebb1349c0e455d4162617ad3c9246215480d606e268842415d1a",
+      "source_native_identity": {
+        "bytes": 108492,
+        "mtime_ns": 1791945440129504700,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342123,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-rcc.exe",
+        "sha256": "c15790fa9572ebb1349c0e455d4162617ad3c9246215480d606e268842415d1a"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:rcc",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "7d12330e74aac632e4d1da9f0da999bbb9bc8db2ab1593746480d8d267f42e76",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-svgtoqml.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108469,
+      "candidate_sha256": "34c614aff53dd96a7aaf268b5916ad6dc29b54b41d0f498688f9280db089f903",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-svgtoqml.exe",
+      "source_sha256": "fe441fcebab9efdc83b51850f2641f174b208b58ed496c4c3eabb9d13da974ea",
+      "source_native_identity": {
+        "bytes": 108502,
+        "mtime_ns": 1791945440131571000,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342124,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-svgtoqml.exe",
+        "sha256": "fe441fcebab9efdc83b51850f2641f174b208b58ed496c4c3eabb9d13da974ea"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:svgtoqml",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "2b672ccddbb29cf996e73e192e26bff45449f87520e891be50e6ef274feef3f2",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "launchers/pyside6-uic.exe",
+      "kind": "GENERATED_EXECUTABLE_CONSOLE_LAUNCHER",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 108459,
+      "candidate_sha256": "056499495162617460b326201ae75466b6e6d9cbde879ce45499813a946db7e1",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\pyside6-uic.exe",
+      "source_sha256": "935915d6ba56effdcf34f937498e58eec18600491e4677a643bcff4052bba6a9",
+      "source_native_identity": {
+        "bytes": 108492,
+        "mtime_ns": 1791945440133570300,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979342125,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/pyside6-uic.exe",
+        "sha256": "935915d6ba56effdcf34f937498e58eec18600491e4677a643bcff4052bba6a9"
+      },
+      "distribution": "PySide6_Essentials",
+      "version": "6.11.2",
+      "entry_point": "PySide6.scripts.pyside_tool:uic",
+      "current_shebang": "#!T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "main_script_sha256": "9aa874e0af6c17a3972e8b1e19e9a5a2a67f932b0649327f089876d8f55793ad",
+      "main_script_behavior": "EXACT_REUSE_ZERO_NEW_FUNCTIONAL_LOC",
+      "stub_sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "stub_behavior": "EXACT_REUSE",
+      "execution": "STATIC_IMPORT_ONLY_NOT_EXECUTED"
+    },
+    {
+      "candidate_relative_path": "metadata/pip-25.0.1.dist-info/RECORD",
+      "kind": "EXACT_INSTALLED_RECORD_FIELD_CANDIDATE",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 65740,
+      "candidate_sha256": "0884a2fcf911685b27b9f6b172db8968c94d586c177523e6a48564128d67a115",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Lib\\site-packages\\pip-25.0.1.dist-info\\RECORD",
+      "source_sha256": "0f3039ace5dfa5d66182b4357fd7a2d321295d3930124eca81a952206b37d281",
+      "source_native_identity": {
+        "bytes": 65740,
+        "mtime_ns": 1791945401719986000,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979339344,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/metadata/pip-25.0.1.dist-info/RECORD",
+        "sha256": "0f3039ace5dfa5d66182b4357fd7a2d321295d3930124eca81a952206b37d281"
+      },
+      "exact_changed_rows": [
+        {
+          "line_number": 1,
+          "filename": "pip.exe",
+          "original_row": [
+            "../../Scripts/pip.exe",
+            "sha256=fqmcOuPCyuvjqkjMo7IEUI6g06FrS41xQzmM-sYWq6o",
+            "108489"
+          ],
+          "candidate_row": [
+            "../../Scripts/pip.exe",
+            "sha256=3zYEOojT8CzHdn8MrWxMx1vfmdfTklJIYzkTv_gUwSc",
+            "108456"
+          ],
+          "original_line_sha256": "624d3f575e62b57149dfb9dd7bccd2a70893aa1b7177bc8968faa04925d9b9a5",
+          "candidate_line_sha256": "d47ad30883056e5bac85cc2f4773d59d118a7a29a942bd810dc251c60fd1d8ec",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              22,
+              72
+            ],
+            "size": [
+              73,
+              79
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 2,
+          "filename": "pip3.12.exe",
+          "original_row": [
+            "../../Scripts/pip3.12.exe",
+            "sha256=fqmcOuPCyuvjqkjMo7IEUI6g06FrS41xQzmM-sYWq6o",
+            "108489"
+          ],
+          "candidate_row": [
+            "../../Scripts/pip3.12.exe",
+            "sha256=3zYEOojT8CzHdn8MrWxMx1vfmdfTklJIYzkTv_gUwSc",
+            "108456"
+          ],
+          "original_line_sha256": "ab6f0c365ca09266d5b446520dd263fcf72b754ae5523d390e4103a1c97e4d41",
+          "candidate_line_sha256": "20ce9cc6037474b8519ca2073e3ab8b7479464f8a38ed55f21cb2d10a794afe8",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              107,
+              157
+            ],
+            "size": [
+              158,
+              164
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 3,
+          "filename": "pip3.exe",
+          "original_row": [
+            "../../Scripts/pip3.exe",
+            "sha256=fqmcOuPCyuvjqkjMo7IEUI6g06FrS41xQzmM-sYWq6o",
+            "108489"
+          ],
+          "candidate_row": [
+            "../../Scripts/pip3.exe",
+            "sha256=3zYEOojT8CzHdn8MrWxMx1vfmdfTklJIYzkTv_gUwSc",
+            "108456"
+          ],
+          "original_line_sha256": "31d8668a0686522f0b2f96b1efc0cb0cb6d1117551f45407fbb03aadc1f62950",
+          "candidate_line_sha256": "f77f9f4f2260a72e4899c4532b7d8b90c1f168195beb4314a55f5d279687b6ff",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              189,
+              239
+            ],
+            "size": [
+              240,
+              246
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        }
+      ],
+      "row_count": 854,
+      "other_original_raw_lines_identical": true,
+      "scope": "Only declared27 total launcher hash/size fields, original names/roworder/endings/quoting retained"
+    },
+    {
+      "candidate_relative_path": "metadata/jsonschema-4.26.0.dist-info/RECORD",
+      "kind": "EXACT_INSTALLED_RECORD_FIELD_CANDIDATE",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 4142,
+      "candidate_sha256": "653f9d6fab44603ecdadb469ddea9c1a39f190b1b74c52573c6d7f3349e1d671",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Lib\\site-packages\\jsonschema-4.26.0.dist-info\\RECORD",
+      "source_sha256": "d9ad66c43f0a1e301c6043ea5eb29257c1b81c97c482782df55b32f56170305d",
+      "source_native_identity": {
+        "bytes": 4142,
+        "mtime_ns": 1791945440272312900,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979342224,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/metadata/jsonschema-4.26.0.dist-info/RECORD",
+        "sha256": "d9ad66c43f0a1e301c6043ea5eb29257c1b81c97c482782df55b32f56170305d"
+      },
+      "exact_changed_rows": [
+        {
+          "line_number": 1,
+          "filename": "jsonschema.exe",
+          "original_row": [
+            "../../Scripts/jsonschema.exe",
+            "sha256=jnObIXY9qGJyttfuboyZP7d-kq1QkpylcZi7zDOIm-U",
+            "108481"
+          ],
+          "candidate_row": [
+            "../../Scripts/jsonschema.exe",
+            "sha256=MskLBAvoq158LNQVoDI_RlkfC3iaEnE2Qhlyeg4Anag",
+            "108448"
+          ],
+          "original_line_sha256": "2ad3fd4fb355e364d42fd9a2fb3776709229e6990e17b459b99309ac034eb2c2",
+          "candidate_line_sha256": "15526014ade8a004f61bc1637511364f9235fe947530a913a5f1d5d709db8a6b",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              29,
+              79
+            ],
+            "size": [
+              80,
+              86
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        }
+      ],
+      "row_count": 46,
+      "other_original_raw_lines_identical": true,
+      "scope": "Only declared27 total launcher hash/size fields, original names/roworder/endings/quoting retained"
+    },
+    {
+      "candidate_relative_path": "metadata/pyside6_essentials-6.11.2.dist-info/RECORD",
+      "kind": "EXACT_INSTALLED_RECORD_FIELD_CANDIDATE",
+      "action": "EXTEND_STAGED_ONLY",
+      "candidate_bytes": 297312,
+      "candidate_sha256": "13e3254b50e25579ed4f2672d55a15d41e35c481e9fd94a40cbaf6e44c153dd4",
+      "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Lib\\site-packages\\pyside6_essentials-6.11.2.dist-info\\RECORD",
+      "source_sha256": "02bd654f5deb3c744be1c39cb63e68fd6a8c4adc0f230d42bd1cb56999429506",
+      "source_native_identity": {
+        "bytes": 297312,
+        "mtime_ns": 1791945440161111600,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979342128,
+        "attributes": 32
+      },
+      "before_image": {
+        "repository_relative_path": ".agents/runtime/er1-20261014/before-images/metadata/pyside6_essentials-6.11.2.dist-info/RECORD",
+        "sha256": "02bd654f5deb3c744be1c39cb63e68fd6a8c4adc0f230d42bd1cb56999429506"
+      },
+      "exact_changed_rows": [
+        {
+          "line_number": 1,
+          "filename": "pyside6-assistant.exe",
+          "original_row": [
+            "../../Scripts/pyside6-assistant.exe",
+            "sha256=cKYlOWeaIupNTqEGJZBAw9bfm4mMPs0NiDiiD__c9KM",
+            "108504"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-assistant.exe",
+            "sha256=hOWc-qX7Am1S7YY22kJvBv6EriSrQSCnmpbbirElbJw",
+            "108471"
+          ],
+          "original_line_sha256": "2451e96f990d768fe049cdcc2aa4d31648867cc7450334e7e8a0076273e6e94f",
+          "candidate_line_sha256": "fa143fcae1a685f7022a7963925a91e4b4465b81b28ada2d846046c0e961c7a6",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              36,
+              86
+            ],
+            "size": [
+              87,
+              93
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 2,
+          "filename": "pyside6-balsam.exe",
+          "original_row": [
+            "../../Scripts/pyside6-balsam.exe",
+            "sha256=rdfhfg5CEdOMV5P65silshQA1ztEo0Aos8VF70jGnVA",
+            "108498"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-balsam.exe",
+            "sha256=0M83QTLZJsAzq_ybK3SyhZdG8tQuOW9GIvDsUmOH7sI",
+            "108465"
+          ],
+          "original_line_sha256": "6ab9ab83a0167a43d43c60c73c2a2891d60a15f34d237b8d86834c4f1e39caff",
+          "candidate_line_sha256": "8232bd2127faecb38457c2b8a74cf14e541c7b85a9e7dcc568850a4207a034c7",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              128,
+              178
+            ],
+            "size": [
+              179,
+              185
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 3,
+          "filename": "pyside6-balsamui.exe",
+          "original_row": [
+            "../../Scripts/pyside6-balsamui.exe",
+            "sha256=ozTvY6xnRi6A3MYE6G_wCg-UqHti25tHZtbe_qeaoI8",
+            "108502"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-balsamui.exe",
+            "sha256=RPFrbscmIhi9Ppb6W2rr-56pmA338SSMqmA8E0bxBtg",
+            "108469"
+          ],
+          "original_line_sha256": "3fb2251d9eab242569f9496c29b4730f4f8378ecfa12a6ab7e6b75e1fbb4d5a3",
+          "candidate_line_sha256": "502697840ee965e2e53e81de40007c73ae6ec21cc431159de91fecf4d32c1c13",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              222,
+              272
+            ],
+            "size": [
+              273,
+              279
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 4,
+          "filename": "pyside6-deploy.exe",
+          "original_row": [
+            "../../Scripts/pyside6-deploy.exe",
+            "sha256=1PoS0bejD3Xx447e9_JqGHi2-y2yx-M0zKKflICP5l8",
+            "108498"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-deploy.exe",
+            "sha256=DJMv4Yv9Lq1LntkGXK6V561QOQ098A8On66ZIjLlQ0E",
+            "108465"
+          ],
+          "original_line_sha256": "64a3405cf6c598e46da7372f9f65fbecbefd4341b82eb11ccd9759a8d732152e",
+          "candidate_line_sha256": "eb00ba3f0134d86542f9daffff0b78c2baadf05d72871aff646f0aa14af5cc17",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              314,
+              364
+            ],
+            "size": [
+              365,
+              371
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 5,
+          "filename": "pyside6-designer.exe",
+          "original_row": [
+            "../../Scripts/pyside6-designer.exe",
+            "sha256=sPZv5I20NAnB1jZroLl9EIvQI7mCa28cFsTAdmoz0QQ",
+            "108502"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-designer.exe",
+            "sha256=Vf2OLQ3aqwwzALSJkdbZjx14Oqh5hVLgW9zy2r9x4xk",
+            "108469"
+          ],
+          "original_line_sha256": "373c724248ab7165123eea3488883409dc7e283920f5540ded719881b8a9c5d2",
+          "candidate_line_sha256": "c3f7a3cbdda7fdd2067e4b7ba2cd068559b9b2b13b72a9db48f45366cba4e8d6",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              408,
+              458
+            ],
+            "size": [
+              459,
+              465
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 6,
+          "filename": "pyside6-genpyi.exe",
+          "original_row": [
+            "../../Scripts/pyside6-genpyi.exe",
+            "sha256=TJFqYpzHbv4BLQJ0UETQAGTBItge88oXa3aFh4bDFyE",
+            "108498"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-genpyi.exe",
+            "sha256=bDILtd-9focpXs_rIbvjheYOtbr-P5B0QzOU2RgpUX4",
+            "108465"
+          ],
+          "original_line_sha256": "52a5ca192866bc94dc7ab7646459e3632a404573393c632186f85382b462b0f8",
+          "candidate_line_sha256": "6ffef0af3609e4b04858f29c18de32a3851309e13963128e03528f7d673f58af",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              500,
+              550
+            ],
+            "size": [
+              551,
+              557
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 7,
+          "filename": "pyside6-linguist.exe",
+          "original_row": [
+            "../../Scripts/pyside6-linguist.exe",
+            "sha256=mTUBC9Jv1WIvCHWrZu9aIi_TR_de1MIX8wIodJDZD8c",
+            "108502"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-linguist.exe",
+            "sha256=zMmI_B8Soiwd3wBsq2XR07yntkpN77PcXyrS4YNwltY",
+            "108469"
+          ],
+          "original_line_sha256": "c886ca500c77f060086f14853d8a4806db071cbd99cfa2afe148f75aaa2272ef",
+          "candidate_line_sha256": "5f9d47bc809df371c5bc82a2a0329df25ae87fa628f91b267ee2f3fd52ab5773",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              594,
+              644
+            ],
+            "size": [
+              645,
+              651
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 8,
+          "filename": "pyside6-lrelease.exe",
+          "original_row": [
+            "../../Scripts/pyside6-lrelease.exe",
+            "sha256=BpLWwAWHsn-3kkNea69zhsBP6RnNZK0mK6KmQcRrunk",
+            "108502"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-lrelease.exe",
+            "sha256=9XiIrFJ40-wjUBhyLmQKvCKVAgxXR0oHLttqR15VEP0",
+            "108469"
+          ],
+          "original_line_sha256": "ed4cf00ceb617e8cd1ca844af54cf55b0ad79ffd9ef1a75985b1b05ac0af81b9",
+          "candidate_line_sha256": "63e7052375fc4116d0a68c78ddaf929d2f282c759a179cc882df50645894649d",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              688,
+              738
+            ],
+            "size": [
+              739,
+              745
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 9,
+          "filename": "pyside6-lupdate.exe",
+          "original_row": [
+            "../../Scripts/pyside6-lupdate.exe",
+            "sha256=en_jTFsuYTIbUGElccXncaZ0sWKIFT2wDBiEu2h5_vU",
+            "108500"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-lupdate.exe",
+            "sha256=hlusbZChRZP5vBEVPPJDS_RKRGEhEwqq5szDHyhtGjI",
+            "108467"
+          ],
+          "original_line_sha256": "e4cce47a2019b583aa1c017faab3c9e053c4b166c6c1ed122df51a580a040b1e",
+          "candidate_line_sha256": "e3e34d9f07fd3da38f7a541cbfefe2b774039175734623c40f3b017a3ee1959a",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              781,
+              831
+            ],
+            "size": [
+              832,
+              838
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 10,
+          "filename": "pyside6-metaobjectdump.exe",
+          "original_row": [
+            "../../Scripts/pyside6-metaobjectdump.exe",
+            "sha256=iEIQyJIejuXuR0CShyvNtmhJcd646RQUu3R6SJhef_g",
+            "108514"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-metaobjectdump.exe",
+            "sha256=-_-m7Dj4WhJOlP16x8NWFHe9u6ZV8JMtjz5rnpP-hik",
+            "108481"
+          ],
+          "original_line_sha256": "c0d49691e48e9e4f2ca3a04858cc2ceb91577e0f51bd4635348734d25bb54ce2",
+          "candidate_line_sha256": "47f662cd59ff6561a31426ffdef06775f9f044d70513976ff7f50b23838b48fa",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              881,
+              931
+            ],
+            "size": [
+              932,
+              938
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 11,
+          "filename": "pyside6-project.exe",
+          "original_row": [
+            "../../Scripts/pyside6-project.exe",
+            "sha256=NiGKUiPo-CjJbA7K6M3Vg2Pcp4q_VpLwKSTC4XG877A",
+            "108500"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-project.exe",
+            "sha256=2fvhjrwkmtsOI97-uCMiOkZ1ENPAgYz4d_ctM_3Qrew",
+            "108467"
+          ],
+          "original_line_sha256": "5340ea93f500c14780b8aad449ea096436e01a730c63da2999ea826356dbf771",
+          "candidate_line_sha256": "5ed87daaa40c5243ed8d8e640b98b6e4b3bef271984482800da89709cc80e25c",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              974,
+              1024
+            ],
+            "size": [
+              1025,
+              1031
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 12,
+          "filename": "pyside6-qml.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qml.exe",
+            "sha256=cfalCirIxUAH28NGlBL7qIV2yGamiS9FnlmETMfsvUM",
+            "108492"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qml.exe",
+            "sha256=G6XgPc9CgKQzh5vIl_WWRmoPBVP92A-BJNM2whAf5jo",
+            "108459"
+          ],
+          "original_line_sha256": "2834bbf2056ff585c5a9f9e103a7a58465af1e50426a24add2e30c20b9217982",
+          "candidate_line_sha256": "5e373986dc80367e2309e97713564164a395b42dc6a52cf41d596e0075311daa",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1063,
+              1113
+            ],
+            "size": [
+              1114,
+              1120
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 13,
+          "filename": "pyside6-qmlcachegen.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qmlcachegen.exe",
+            "sha256=oD499PaeoE5zbgBcfqxwVN3MSeCULGwwHnczYDqvz-k",
+            "108508"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qmlcachegen.exe",
+            "sha256=pdS_3hXCXSpNaf-Za47yyAQJ5YbqF536wTRB5q_RF2o",
+            "108475"
+          ],
+          "original_line_sha256": "c4b2b26a6fddf81ffcf3885de25f4437a5462b98534b362167c03962cc0682e5",
+          "candidate_line_sha256": "aa3c3ff40d1fd7ef3b9d520243f365e92a6555ce6244b4bfe4b06e1fbcbd6d03",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1160,
+              1210
+            ],
+            "size": [
+              1211,
+              1217
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 14,
+          "filename": "pyside6-qmlformat.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qmlformat.exe",
+            "sha256=-gUG7OBfmfez5wRK9C_msSisurXvAa1j42zFrPZgzy0",
+            "108504"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qmlformat.exe",
+            "sha256=aRVx91lGVKXHA2_N-QdLL892f2O0qXoFvEuOPZoD8Zs",
+            "108471"
+          ],
+          "original_line_sha256": "4afd45af488275b89898003cb04d9d05b27632194400ee5928d8895c91b363ed",
+          "candidate_line_sha256": "75a7b90186a6782d6e8a73ec577e4efed4ce375f5806d8c863c55e0f449f79b7",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1255,
+              1305
+            ],
+            "size": [
+              1306,
+              1312
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 15,
+          "filename": "pyside6-qmlimportscanner.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qmlimportscanner.exe",
+            "sha256=ldWZVeE6P_-ny-fHw3ngy_OiXTazRYLQDxurhRhhloo",
+            "108518"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qmlimportscanner.exe",
+            "sha256=E8aTXiA4ceVOu07_tQw-kgyFe74Zp7tDVyGzaHDcW7g",
+            "108485"
+          ],
+          "original_line_sha256": "3338426ad2522464e0bae4e774b02afb731fa57c7dd03db168000d959dde0822",
+          "candidate_line_sha256": "edef641e74f7a2e586088be08bbaf85b7359c3c1d9e0144a192a8b27dfe4db38",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1357,
+              1407
+            ],
+            "size": [
+              1408,
+              1414
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 16,
+          "filename": "pyside6-qmllint.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qmllint.exe",
+            "sha256=XYfjG2LuiHRahM-IMkPmKGnrjEbBbVccRG1eBE56RjM",
+            "108500"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qmllint.exe",
+            "sha256=VrMaeN5yePifsjtGSBR1Y35hZY00Cy7_mc3K7ohI2f4",
+            "108467"
+          ],
+          "original_line_sha256": "a74e3a7d456c9e29e352974d11a4c5bd7aea2fbe2f257270cb45535685ceacb8",
+          "candidate_line_sha256": "f7876b9ebd946001044e25bbfbe8d4c2911e27cddf52baf0276ab68bfaa8e2d5",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1450,
+              1500
+            ],
+            "size": [
+              1501,
+              1507
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 17,
+          "filename": "pyside6-qmlls.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qmlls.exe",
+            "sha256=zFp-8CeDOmID0RdIK_Gwd__BnYg3Zjy5mdex3RWskDk",
+            "108496"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qmlls.exe",
+            "sha256=Qyn5mXQSEyQbIQGUJyiLbwBe_9RwHKLJ-p_kZNzaKYw",
+            "108463"
+          ],
+          "original_line_sha256": "d5c3289ee2f992f5936253f1ba83834cf984d89a943f243df1232d09ea9b1c0b",
+          "candidate_line_sha256": "0198d028115785be1692b7805b4212c9ec34faf31682c05dce85292189cc1029",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1541,
+              1591
+            ],
+            "size": [
+              1592,
+              1598
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 18,
+          "filename": "pyside6-qmltyperegistrar.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qmltyperegistrar.exe",
+            "sha256=aTHNhKGuSyhfILqDygN0YyRfKbwk4Iob4aYrCUDiNRQ",
+            "108518"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qmltyperegistrar.exe",
+            "sha256=fbLF4nwy1M1AS5wiUznAPV_q9B0e3U5_MlzWUkw3AA4",
+            "108485"
+          ],
+          "original_line_sha256": "c8fe675945ab54d2d917bc2af8a8264971c279abbe323d23dfc79b59553a65ae",
+          "candidate_line_sha256": "bbad56a9e03fe7d1e73dc7a9a318dbdb93e33ad34b8b7f8e2b7da0373b6a1f8d",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1643,
+              1693
+            ],
+            "size": [
+              1694,
+              1700
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 19,
+          "filename": "pyside6-qsb.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qsb.exe",
+            "sha256=_CERWWdV59oFiNiiDFcPemJzqlHujF5gWwqC3ZUWloI",
+            "108492"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qsb.exe",
+            "sha256=n3Q9WL3qd2RgGRD6Zq39du1fYHqiYVCHmCMlEUgvoqM",
+            "108459"
+          ],
+          "original_line_sha256": "6b4674056db150a159adb1bcf6c8573e5eae49288138cf573ba9f32fbb2d229b",
+          "candidate_line_sha256": "ede1ea07b9c9a5d9e9cf7414b52d37cfa0ef1de3332dd360920bc9a4e437f241",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1732,
+              1782
+            ],
+            "size": [
+              1783,
+              1789
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 20,
+          "filename": "pyside6-qtpy2cpp.exe",
+          "original_row": [
+            "../../Scripts/pyside6-qtpy2cpp.exe",
+            "sha256=BDXfFcrEGJJEa1CKuZb1JEcH1pjktIVPe0t6yPuoPr4",
+            "108502"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-qtpy2cpp.exe",
+            "sha256=SDRFsYKsj0Ci3ildY-wXCVRC0cFsUYN3ATigQKeWN50",
+            "108469"
+          ],
+          "original_line_sha256": "f1eb3797577a8343d1ffb59bdaac72c45334481af3089d8eed9f7345c00af5df",
+          "candidate_line_sha256": "b0b4e1e5027cac8d68235bfee82e68d1208a28d53b1f5200dc9d13dd5e3b0f02",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1826,
+              1876
+            ],
+            "size": [
+              1877,
+              1883
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 21,
+          "filename": "pyside6-rcc.exe",
+          "original_row": [
+            "../../Scripts/pyside6-rcc.exe",
+            "sha256=wVeQ-pVy67E0nA5FXUFiYXrTySRiFUgNYG4miEJBXRo",
+            "108492"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-rcc.exe",
+            "sha256=YFtL78NvPy4CllzMM93WSchRuuz5VKmuhXDOy3vGpic",
+            "108459"
+          ],
+          "original_line_sha256": "157b5db6b3fe27bdfde8276218ba1dd91fa814555b7cae22aa9ccad7e25557fb",
+          "candidate_line_sha256": "a04dca8f2fb8a9ae0f0b5f1723f5307844535eaa2c440eda1cccd66fed675c17",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              1915,
+              1965
+            ],
+            "size": [
+              1966,
+              1972
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 22,
+          "filename": "pyside6-svgtoqml.exe",
+          "original_row": [
+            "../../Scripts/pyside6-svgtoqml.exe",
+            "sha256=_kQfzrq579yDtRhQ8mQfF0sgi1jtSWxMPqu50T2pdOo",
+            "108502"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-svgtoqml.exe",
+            "sha256=NMYUr_U92Wp6ryaLWRatbcKbVLQdD0mGiPkoDbCJ-QM",
+            "108469"
+          ],
+          "original_line_sha256": "246f025350298569c6e0c205a799770bd39b7afde201a20764f0f12e1f1769bd",
+          "candidate_line_sha256": "85bfc47cdda004328184e74c393393e0ad85e8f3ebee1ee2a36d7c30d40e5fb7",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              2009,
+              2059
+            ],
+            "size": [
+              2060,
+              2066
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        },
+        {
+          "line_number": 23,
+          "filename": "pyside6-uic.exe",
+          "original_row": [
+            "../../Scripts/pyside6-uic.exe",
+            "sha256=k1kV1rpW7_3PNPk3SY5Y7sGGAEkeRnemQ7z_QFK7pqk",
+            "108492"
+          ],
+          "candidate_row": [
+            "../../Scripts/pyside6-uic.exe",
+            "sha256=BWSZSVFiYXRgsyYgGudUZrbm2cveh5zkVJmBOpRtt-E",
+            "108459"
+          ],
+          "original_line_sha256": "48e1ad63de01a2885889f13549407a061837453d6a34744eaa479a27ec94f4cd",
+          "candidate_line_sha256": "2d1f2ed65d53a425b9256abba9c90c2e4fce2e21fb770020fa62b185e971b985",
+          "original_line_ending_hex": "0d0a",
+          "original_byte_spans": {
+            "hash": [
+              2098,
+              2148
+            ],
+            "size": [
+              2149,
+              2155
+            ]
+          },
+          "original_field_quoting": [
+            false,
+            false
+          ]
+        }
+      ],
+      "row_count": 2496,
+      "other_original_raw_lines_identical": true,
+      "scope": "Only declared27 total launcher hash/size fields, original names/roworder/endings/quoting retained"
+    }
+  ],
+  "payload_count": 30,
+  "launchers": 27,
+  "metadata": 3,
+  "exact_RECORD_rows_changed": 27,
+  "writer_source": {
+    "path": "build_launchers.py",
+    "sha256": "c71e5ac1a73f3ea47cf5134528a2da6590d05d87ca9d939c0ce8b49ef6558425",
+    "meaningful_LOC": 163,
+    "physical_LOC": 180
+  },
+  "generated_wrappers_and_stubs_new_LOC": 0,
+  "generated_wrapper_LOC_reason": "Exact reuse; exe bytes and metadata field replacements measured separately from hand-written source",
+  "author_tests": {
+    "methods": 7,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "actual_CLI_invocations": 7,
+    "static_entrypoint_imports": 27,
+    "Qt_tools_executed": 0,
+    "test_automation_meaningful_LOC": 138,
+    "receipt": {
+      "repository_relative_path": ".agents/runtime/er1-20261014/staged-tests-r2.json",
+      "sha256": "074660d053fe4a89409985819e546edc90413291c215f05ab2542a0958a938de"
+    },
+    "raw": {
+      "repository_relative_path": ".agents/runtime/er1-20261014/staged-tests-r2.txt",
+      "sha256": "fe70286c7ef182aeaf58ddc096849aff0c2a1d33d5bfeecffdcae830bf485029"
+    }
+  },
+  "self_review": {
+    "repository_relative_path": ".agents/runtime/er1-20261014/self-review.json",
+    "sha256": "bf93f329275c2c030cece511e05bf8c2506cb4868396d4f99eaacf900f6048eb"
+  },
+  "prior_failures": [
+    {
+      "repository_relative_path": ".agents/runtime/er1-20261014/discovery-r1-failure.json",
+      "sha256": "fa4b18d01c73c9f75b2026268fba542d0bce10179aa5cffbeb5ac1d4b5af069f"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/er1-20261014/discovery-r2-failure.json",
+      "sha256": "7221dea389a1d502bc20c0f1c7a11fcb8ebc49a0e3b4e5adb4b6e690166e24fc"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/er1-20261014/discovery-r3-failure.json",
+      "sha256": "dc311e73c6177af13def162b6b86713bdaa75e6826cf2dac245a65d9037e2b36"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/er1-20261014/discovery-failure-qualification.json",
+      "sha256": "3bce7ead2c8d50cc484c430c646a8d8f5f663c4a7bef15fd23f013e47d5fa936"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/er1-20261014/builder-r1-failure.json",
+      "sha256": "4d0b23f4e8b92151856625fea8d38ee0777a96ebad261167bdbce5e363076daf"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/er1-20261014/staged-tests-r1-qualification.json",
+      "sha256": "ba672abb38c60a948b61d4be720931f1ce2f638b8b28ef8b527848a76d83b6c7"
+    }
+  ],
+  "additional_metadata_scope_authority": "Root explicitly authorized exactly3 staged RECORD paths and27 launcher checksum/size fields; no active E3 metadata or launcher publication authorized",
+  "active_E3_or_source_application": false,
+  "review_acceptance": "PENDING_DISTINCT_REVIEW"
+}

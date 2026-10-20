@@ -1,0 +1,43 @@
+"""Record the actual current human reply; issue no broader authority."""
+from datetime import datetime, timezone
+from pathlib import Path
+import json
+
+R = Path(__file__).resolve().parent
+record = dict(
+    recorded_at=datetime.now(timezone.utc).isoformat(),
+    source='Actual user send_user_message_question_reply in this current Codex session',
+    question_item_id='["request_user_input_async","call_f4c36ddbf2754fe0937d19d0b866eeda",0]',
+    answer='Authorize these two exact no-profile test executions',
+    reviewed_packet_sha256='eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055',
+    canonical_repository='T:\\00-Active\\Project-AI-CETA',
+    permitted_phases=['candidate-full', 'destination-full'],
+    executions_per_phase=1,
+    exact_case='test_isolated_worker.NativeIsolatedWorkerTests.test_actual_nonpersistent_launch_denial_and_medium_control_retirement',
+    fixture_name='One fresh CETA.AC1.<UUID> per phase',
+    effects_per_execution=dict(profile_absence_queries='before and after',
+        restricted_launch_attempts=1, expected_denial_winerror=2,
+        ordinary_disposable_controls=1, bounded_loopback_sockets=3,
+        newly_created_access_integrity_label_targets=11,
+        fixture_files_and_receipts='Under the canonical repository only',
+        cleanup='Exact owned processes and handles'),
+    profile_creation=False, profile_deletion=False, elevation=False,
+    firewall_change=False, loopback_exemption=False, existing_profile_modification=False,
+    automatic_retry=False,
+    inherited_AC7_permission=False,
+    question_text=(
+        'Authorize the existing no-profile isolation test once in each JS9 full-suite phase: '
+        'candidate verification and verification at the canonical T:\\00-Active\\Project-AI-CETA destination? '
+        'Reviewed tool packet SHA-256: eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055. '
+        'Each of the two executions will use a fresh CETA.AC1.<UUID> fixture name, verify profile absence before '
+        'and after, make one restricted launch attempt expected to be denied, and run one ordinary disposable '
+        'control. Each uses three bounded loopback sockets and applies access/integrity labels only to eleven '
+        'newly created fixture paths under this repository. It retains receipts and retires its exact owned '
+        'processes and handles. No profile creation/deletion, elevation, firewall change, loopback exemption, '
+        'existing-profile modification or automatic retry is included. I need this separate decision because '
+        'your AC7 authorization explicitly excluded the post-cleanup regression. The separate native file/observer '
+        'checks continue under existing authority.'))
+with (R / 'NO-PROFILE-AUTHORIZATION.json').open('x', encoding='utf-8') as stream:
+    json.dump(record, stream, indent=2)
+    stream.write('\n')
+print(json.dumps(dict(recorded=True, phases=record['permitted_phases'], executions_per_phase=1)))

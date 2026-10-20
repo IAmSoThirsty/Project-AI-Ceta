@@ -1,0 +1,96 @@
+{
+  "fingerprint": "cec66baf16a49708bc1aad2d5cca8a93b5d4d80388d6f8192e064dadce4274c1",
+  "graph": {
+    "edges": [
+      {
+        "from": "discover",
+        "id": "discover_plan",
+        "to": "plan",
+        "type": "depends_on"
+      },
+      {
+        "from": "implement",
+        "id": "implement_review",
+        "to": "review",
+        "type": "requires_review"
+      },
+      {
+        "from": "plan",
+        "id": "plan_implement",
+        "to": "implement",
+        "type": "delegates_to"
+      },
+      {
+        "from": "review",
+        "id": "review_validate",
+        "to": "validate",
+        "type": "authorizes"
+      },
+      {
+        "from": "validate",
+        "id": "validate_integrate",
+        "to": "integrate",
+        "type": "gates"
+      }
+    ],
+    "id": "ceta_js9_private_runtime_construction",
+    "nodes": {
+      "discover": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "explorer"
+      },
+      "implement": {
+        "access": "write_scoped",
+        "kind": "agent",
+        "role": "worker",
+        "write_scope": [
+          ".agents/js9-runtime-20261020/**",
+          ".agents/runtime/js9-runtime-20261020/**"
+        ]
+      },
+      "integrate": {
+        "access": "write_scoped",
+        "kind": "integration",
+        "role": "integrator",
+        "write_scope": [
+          ".agents/js9-runtime-20261020/**",
+          ".agents/runtime/js9-runtime-20261020/**"
+        ]
+      },
+      "plan": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "architect"
+      },
+      "review": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "reviewer"
+      },
+      "validate": {
+        "access": "read_only",
+        "commands": [
+          "git -C \"{workspace}\" diff --check"
+        ],
+        "kind": "gate"
+      }
+    },
+    "policy": {
+      "fail_closed": true,
+      "max_parallel": 4,
+      "prohibit_scope_overlap": true,
+      "prohibit_self_review": true,
+      "require_receipts": true
+    }
+  },
+  "root": "T:\\00-Active\\Project-AI-CETA",
+  "scope": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+  "sources": [
+    {
+      "digest": "680dff618b417d82659e57961317d5930e53505f8da3f223c21339af4e65a8de",
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\AGENTS.md"
+    }
+  ],
+  "version": 1
+}

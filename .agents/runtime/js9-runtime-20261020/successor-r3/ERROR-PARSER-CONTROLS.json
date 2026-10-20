@@ -1,0 +1,92 @@
+{
+  "at": "2026-10-20T10:47:05.442212+00:00",
+  "mode": "FILE_AST_DATA_ONLY",
+  "packet_sha256": "2f61b0e9b90c73ef82c03188c4e7fa91be74e5da663445afe7e7ccf1923a6c6b",
+  "candidate_manifest_sha256": "cce2c8e2c3a31fbedf5c2d83b2d15d499a93030c38ebe0c1e4545b868ef99acf",
+  "controls": [
+    {
+      "name": "primary_message_and_original_trace",
+      "passed": true
+    },
+    {
+      "name": "none_primary",
+      "passed": true
+    },
+    {
+      "name": "broken_primary_str_guarded",
+      "passed": true
+    },
+    {
+      "name": "broken_secondary_str_keeps_primary",
+      "passed": true
+    },
+    {
+      "name": "malformed_retained_entries_recorded",
+      "passed": true
+    },
+    {
+      "name": "malformed_retained_container_recorded",
+      "passed": true
+    },
+    {
+      "name": "primary_and_secondary_trace_formatter_failure_guarded",
+      "passed": true
+    },
+    {
+      "name": "actual_old_failed_schema_preserved_without_KeyError",
+      "passed": true
+    },
+    {
+      "name": "new_failed_schema_preserves_trace_and_case_inventory",
+      "passed": true
+    },
+    {
+      "name": "successful_child_exact_case_set_required",
+      "passed": true
+    },
+    {
+      "name": "successful_child_missing_ids_refused",
+      "passed": true
+    },
+    {
+      "name": "failed_child_wrong_supplied_ids_refused",
+      "passed": true
+    },
+    {
+      "name": "invalid_status_boolean",
+      "passed": true
+    },
+    {
+      "name": "invalid_status_string",
+      "passed": true
+    },
+    {
+      "name": "invalid_status_absent",
+      "passed": true
+    },
+    {
+      "name": "actual_main_AST_preflight",
+      "passed": true,
+      "mode": "CONTROLLED_PORTS_NO_NATIVE_OR_TEST_BODIES"
+    },
+    {
+      "name": "actual_main_AST_broken-secondary",
+      "passed": true,
+      "mode": "CONTROLLED_PORTS_NO_NATIVE_OR_TEST_BODIES"
+    },
+    {
+      "name": "actual_main_AST_malformed-secondary",
+      "passed": true,
+      "mode": "CONTROLLED_PORTS_NO_NATIVE_OR_TEST_BODIES"
+    }
+  ],
+  "count": 18,
+  "passed": true,
+  "denied_events": [],
+  "actual_test_bodies": 0,
+  "native_calls": 0,
+  "full_execution": false,
+  "fixture_execution": false,
+  "actual_candidate541_payloads_unchanged": true,
+  "exit_status": 0
+}

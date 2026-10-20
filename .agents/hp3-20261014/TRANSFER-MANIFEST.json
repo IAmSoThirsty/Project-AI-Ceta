@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "job": "HP3",
+  "author": "/root/pressure_writer",
+  "state": "FROZEN_AUTHOR_CUT_FOR_SEPARATE_REVIEW",
+  "frozen_at": "2026-10-14T09:05:43.695599+00:00",
+  "authoritative_repository": "T:\\00-Active\\Project-AI-CETA",
+  "cut": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp3-20261014",
+  "base": "T:\\00-Active\\Project-AI-CETA\\.agents\\pr4-20261014",
+  "payloads": [
+    {
+      "relative_path": "preserve_ceta_complete.py",
+      "kind": "functional_tool_source",
+      "action": "CREATE_AUTHOR_CUT_FROM_PINNED_P4",
+      "base_sha256": "2ccbca31973ead308e1cdcc6676bbd7371cdec29a0f16178f3f55a4ab4130618",
+      "candidate_sha256": "425cb5ab10af2842e5c154fa69bc018113a09784cef2357ccacbd728e0f69d25",
+      "bytes": 99838,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\originals\\preserve_ceta_complete.py",
+      "diff_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\diffs\\preserve_ceta_complete.py.diff",
+      "diff_sha256": "ee4c77b26150646e5feec97e92f143e514c5143eb1908bf748f0b32aeee1ce63",
+      "meaningful_LOC": {
+        "added": 477,
+        "removed": 9,
+        "net": 468
+      },
+      "physical_LOC": {
+        "added": 517,
+        "removed": 9,
+        "net": 508
+      },
+      "count_method": "SequenceMatcher autojunk=False; meaningful Python excludes blank/comment/docstring; no reused LOC counted as new"
+    },
+    {
+      "relative_path": "run_preservation_tests.py",
+      "kind": "test_automation",
+      "action": "CREATE_AUTHOR_CUT_FROM_PINNED_P4",
+      "base_sha256": "a2f99e89cd9b5bced13fd5a6bb1f29cc8f463f4b68bbeef78ea1a36f5afa6839",
+      "candidate_sha256": "cb59f0ba2cc0f511a33837e72024da7f63c1806fad04b1737463c3a809f3cf83",
+      "bytes": 3574,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\originals\\run_preservation_tests.py",
+      "diff_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\diffs\\run_preservation_tests.py.diff",
+      "diff_sha256": "d4654b5a4ba377a32017a50bc85bcdd981a20bafdc88544ec79aa28bbb60cfdd",
+      "meaningful_LOC": {
+        "added": 9,
+        "removed": 4,
+        "net": 5
+      },
+      "physical_LOC": {
+        "added": 9,
+        "removed": 4,
+        "net": 5
+      },
+      "count_method": "SequenceMatcher autojunk=False; meaningful Python excludes blank/comment/docstring; no reused LOC counted as new"
+    },
+    {
+      "relative_path": "test_preserve_ceta_complete.py",
+      "kind": "reused_native_test",
+      "action": "CREATE_AUTHOR_CUT_FROM_PINNED_P4",
+      "base_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "candidate_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "bytes": 67690,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\originals\\test_preserve_ceta_complete.py",
+      "diff_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\diffs\\test_preserve_ceta_complete.py.diff",
+      "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaningful_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "physical_LOC": {
+        "added": 0,
+        "removed": 0,
+        "net": 0
+      },
+      "count_method": "SequenceMatcher autojunk=False; meaningful Python excludes blank/comment/docstring; no reused LOC counted as new"
+    },
+    {
+      "relative_path": "test_provenance.py",
+      "kind": "new_test_source",
+      "action": "CREATE_AUTHOR_CUT_NEW_TEST",
+      "base_sha256": null,
+      "candidate_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "bytes": 38615,
+      "before_image": null,
+      "diff_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\diffs\\test_provenance.py.diff",
+      "diff_sha256": "a6c3f0ec8b52016ff704282ebf4d3f676207d3388fa2c0230c5e773e06e57a34",
+      "meaningful_LOC": {
+        "added": 557,
+        "removed": 0,
+        "net": 557
+      },
+      "physical_LOC": {
+        "added": 627,
+        "removed": 0,
+        "net": 627
+      },
+      "count_method": "SequenceMatcher autojunk=False; meaningful Python excludes blank/comment/docstring; no reused LOC counted as new"
+    },
+    {
+      "relative_path": "README.md",
+      "kind": "documentation",
+      "action": "CREATE_AUTHOR_CUT_FROM_PINNED_P4",
+      "base_sha256": "8fddca584f6069e1c3dc03aaa9cf7af119f422f57a98e087b1651a8e703d7f0f",
+      "candidate_sha256": "139185f78fecdaf698bb9bb3257ebdf0aa585473629729f7e6e1f1b2c39a4b72",
+      "bytes": 11612,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\originals\\README.md",
+      "diff_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\diffs\\README.md.diff",
+      "diff_sha256": "cdbb8306608275c9e2e26c7fdf5abb0fa5a6b5418442dbc45326d50f5a25ee69",
+      "meaningful_LOC": {
+        "added": 67,
+        "removed": 0,
+        "net": 67
+      },
+      "physical_LOC": {
+        "added": 67,
+        "removed": 0,
+        "net": 67
+      },
+      "count_method": "SequenceMatcher autojunk=False; meaningful Python excludes blank/comment/docstring; no reused LOC counted as new"
+    }
+  ],
+  "tests": {
+    "total": 110,
+    "reused": 66,
+    "new": 44,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 171.391,
+    "receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\complete-r3.json",
+    "receipt_sha256": "6704389b30522bc136a791f1806f4388d40a5121c49f2c14d18d219cc2495f65",
+    "raw": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\complete-r3.txt",
+    "raw_sha256": "c8a6276d8c7f690147c5a039bf35592c6899306253df71dcd7a8c976eb9c8938"
+  },
+  "prior_failures": [
+    {
+      "operation": "HP3 author self-review native historical-generator alias reproduction",
+      "receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\alias-gap-r1.json",
+      "receipt_sha256": "28720b243e095281e8c2c1df74c43cc5334285537203f0f9edf275aafb959e5f",
+      "output": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\alias-gap-r1.txt",
+      "output_sha256": "7ad5e782646388969c4863d8b49aa7439acf41273fa9939a6c6f5aa475592858",
+      "exit_status": 1,
+      "tests": 1,
+      "failures": 1,
+      "tested_source_sha256": "a6542b18d72aec98447fbc4979dc953744b72d69c1581506f29bb0b5a2c80342",
+      "before_source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\failed-candidate-before-alias-repair.py",
+      "before_source_method": "Reconstructed exact pre-repair bytes by reverting only snapshot repair; digest verified against contemporaneous test receipts. Not a contemporaneous source-byte copy.",
+      "defect": "New historical generator alias blocked Git transfer but left its cache in a partial working archive.",
+      "repair": "Snapshot rechecks complete live generator aliases and holds cache before copying; pending working diffs remain withheld.",
+      "closure_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\alias-repair-r2.json",
+      "closure_sha256": "3116eebce2df3dc8a872c7106fd258bb968cbc9f173c5a8f62342871c85c0d5c",
+      "final_full_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\complete-r3.json",
+      "classification": "FIXED_NOW_ON_TESTED_AUTHOR_CUT"
+    }
+  ],
+  "policy_candidate": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\hp3-policy-candidate.json",
+  "policy_sha256": "0dfbaf07b223a26f836ce0d2be35c6c426ff1b5d648bbf01b5c0fe563ab0dea5",
+  "policy_destinations": {
+    "capture": 0,
+    "restore": 0
+  },
+  "held_entries": [
+    "W043",
+    "W044",
+    "W045"
+  ],
+  "source_admission_or_external_capture": false,
+  "active_product_application": false,
+  "reviewer_acceptance": "PENDING_SEPARATE_REVIEW",
+  "self_review": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp3-20261014\\self-review.json",
+  "self_review_sha256": "59da6c728193c4baa4989f0c19ffb4752fc4b50a5dbc30cadd4d04055c0c93d9"
+}

@@ -1,0 +1,124 @@
+{
+  "allowed": true,
+  "blocked": {
+    "integrate": "validate: predecessor state is PENDING",
+    "validate": "review: predecessor state is READY"
+  },
+  "fingerprint_matches": true,
+  "graph_fingerprint": "18cdbaaf99341c4b6670211253cca3ed4350fc8f17315f479c2697843139000e",
+  "graph_id": "ceta_ac7_token_contract20",
+  "nodes": {
+    "discover": {
+      "artifact_hash": "f3d748d9c5d781bc8bc1d5944ffee7d24e678f010a81e5156ae479d60bb7ba69",
+      "changed_files": [],
+      "claim": null,
+      "completed_at": "2026-10-20T09:17:03.305745+00:00",
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": "/root",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "72949a22a9e8094fb7d696d5853ab347afd12b944725c26ea7026ae9c061cd6d",
+      "receipt_ref": "receipts/discover.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\fixtures\\ac7-token-observation-20261020"
+    },
+    "implement": {
+      "artifact_hash": "3a6c16f049247d45048cb95dca8a50e06155f000b60a3a1334cecbf6d83cb2b3",
+      "changed_files": [
+        ".agents/ac7-token-contract-20261020/contracts/ISOLATED_WORKER_V1.md",
+        ".agents/ac7-token-contract-20261020/tests/contract/test_isolation_qualification_entry.py",
+        ".agents/ac7-token-contract-20261020/tests/contract/test_isolation_qualification_oracle.py",
+        ".agents/ac7-token-contract-20261020/tools/isolated_worker_token_oracle.py",
+        ".agents/ac7-token-contract-20261020/tools/qualify_isolated_worker.py",
+        ".agents/ac7-token-contract-20261020/tools/run_one_isolation_qualification.py"
+      ],
+      "claim": null,
+      "completed_at": "2026-10-20T09:21:43.507023+00:00",
+      "decision": null,
+      "effective_write_scope": [
+        ".agents/ac7-token-contract-20261020/**"
+      ],
+      "executor_id": "/root",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "3c0eb2f3a18d312eceb9bace4411927347b7e856237b38237e7ab4093e112878",
+      "receipt_ref": "receipts/implement.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-token-contract-20261020"
+    },
+    "integrate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "validate: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "plan": {
+      "artifact_hash": "48a23d33442aae9c7041e15082cf55063b1c7c6a2421ba9dd665cacc5aed5a61",
+      "changed_files": [],
+      "claim": null,
+      "completed_at": "2026-10-20T09:17:05.169210+00:00",
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": "/root",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "a5c58368837d56bdc3a3a867c36f46cfdef0ba4997b6dc38315565b7d7aeecd4",
+      "receipt_ref": "receipts/plan.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\fixtures\\ac7-token-observation-20261020"
+    },
+    "review": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "all hard predecessor requirements satisfied",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "READY",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "validate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "review: predecessor state is READY",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    }
+  },
+  "ready_now": [
+    "review"
+  ],
+  "run_id": "ac7-qualification-r4-20261020",
+  "sequence": 7,
+  "states": {
+    "discover": "SUCCEEDED",
+    "implement": "SUCCEEDED",
+    "integrate": "PENDING",
+    "plan": "SUCCEEDED",
+    "review": "READY",
+    "validate": "PENDING"
+  }
+}

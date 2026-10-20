@@ -1,0 +1,43 @@
+--- before/src/ceta/identity/native_owner_view.py
++++ after/src/ceta/identity/native_owner_view.py
+@@ -128,11 +128,14 @@
+     def __init__(self, private_root, *, expected_root=None, expected_database=None):
+         self._lock = threading.RLock()
+         self._closed = False
+-        self._api = _ViewAPI()
++        self._api = None
+         self._pins = []
+-        self._root_path = Path(_path(str(private_root), directory=True))
+-        self._database_path = self._root_path / 'history.sqlite3'
+         try:
++            # These API constructors bind exports and initialize empty cleanup
++            # queues. File handles are acquired only after this publication.
++            self._api = _ViewAPI()
++            self._root_path = Path(_path(str(private_root), directory=True))
++            self._database_path = self._root_path / 'history.sqlite3'
+             ancestors = tuple(reversed(self._root_path.parents)) + (self._root_path, self._database_path)
+             for path in ancestors:
+                 handle = self._api.CreateFileW(str(path), 0x80, 3, None, 3,
+@@ -184,6 +187,9 @@
+ 
+     @property
+     def pending_native_resources(self):
++        if self._api is None:
++            require(not self._pins, 'OWNER_VIEW_API_CUSTODY_UNAVAILABLE')
++            return ()
+         return self._api.pending_native_resources()
+ 
+     @property
+@@ -202,6 +208,12 @@
+     def close(self):
+         with self._lock:
+             if self._closed: return
++            if self._api is None:
++                # API construction failed before the first file acquisition.
++                # A contradictory retained pin cannot be labelled retired.
++                require(not self._pins, 'OWNER_VIEW_API_CUSTODY_UNAVAILABLE')
++                self._closed = True
++                return
+             try:
+                 self._api.retry_cleanup(kinds=('handles',))
+                 require(not self.pending_native_resources, 'OWNER_VIEW_CLEANUP_PENDING')

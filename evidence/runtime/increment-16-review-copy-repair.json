@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "observed_at_utc": "2026-10-08T07:26:44.448178+00:00",
+  "classification": "FIXED_NOW",
+  "first_exit_code": 1,
+  "first_tool_chunk": "105b93",
+  "first_error": "Get-FileHash filename syntax incorrect: root prefixed to an already absolute contract source path",
+  "first_attempt_scope": "BOUND_STATE_PREFLIGHT_BEFORE_ANY_REVIEW_COPY_OR_RECEIPT_WRITE",
+  "repair": "Resolve rooted hash-map paths directly; otherwise join relative paths. Require every resolved path stays inside its exact named permitted root. All state map checks retained.",
+  "rerun_exit_code": 0,
+  "result": "PASS",
+  "new_copies": 12,
+  "overwritten_files": 0,
+  "copy_receipt": "evidence/runtime/review-output-copy-16.json",
+  "verified_state_sha256": "9ce0941d86b74995f76935816fc281124ff4c26af6ce6cf32860babc020f0a43",
+  "copy_helper_sha256": "24aa7be4d1afd3a9d0200f9b6a2fbcac1bf1e11f8560a9e6a0996c1b0f553d91",
+  "source_and_ledger_state_current_before_and_after_copy": true
+}

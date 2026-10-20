@@ -1,0 +1,264 @@
+{
+  "status": "PREWRITTEN_SEMANTIC_REQUIREMENTS",
+  "note": "A transition entry is not executable enforcement. Codex implements these predicates, atomicity and source-specific edge cases. Additional legal transitions require a recorded contract amendment.",
+  "rules": [
+    {
+      "id": "TR-01",
+      "domain": "TASK",
+      "from": "CREATED",
+      "to": "ACTIVE",
+      "required_predicate": "Authenticated owner accepts exact objective/scope and the kernel records the finite grant.",
+      "on_failure": "Identity/policy/scope unknown -> remain CREATED or BLOCKED; no work dispatched.",
+      "acceptance_ids": [
+        "B027",
+        "B057"
+      ]
+    },
+    {
+      "id": "TR-02",
+      "domain": "TASK",
+      "from": "ACTIVE",
+      "to": "WAITING_FOR_CLARIFICATION",
+      "required_predicate": "A material unresolved interpretation prevents identifying the permitted task.",
+      "on_failure": "Ask a bounded question; preserve raw request and prior work.",
+      "acceptance_ids": [
+        "B025",
+        "B027",
+        "B028"
+      ]
+    },
+    {
+      "id": "TR-03",
+      "domain": "GRAPH_NODE",
+      "from": "PENDING",
+      "to": "READY",
+      "required_predicate": "Every typed hard prerequisite, current policy and required evidence predicate is satisfied.",
+      "on_failure": "Keep BLOCKED/PENDING with actual unmet conditions.",
+      "acceptance_ids": [
+        "B049",
+        "B050",
+        "B055"
+      ]
+    },
+    {
+      "id": "TR-04",
+      "domain": "GRAPH_NODE",
+      "from": "READY",
+      "to": "RUNNING",
+      "required_predicate": "Atomic claim commits with real executor identity, current input/graph, lease/fence, capacity and non-overlapping scope.",
+      "on_failure": "Conflict cannot yield a second active claimant.",
+      "acceptance_ids": [
+        "B052",
+        "B053",
+        "B054"
+      ]
+    },
+    {
+      "id": "TR-05",
+      "domain": "GRAPH_NODE",
+      "from": "RUNNING",
+      "to": "SUCCEEDED",
+      "required_predicate": "Actual receipt, output artifacts, required observations and exact candidate/input binding verify.",
+      "on_failure": "Malformed/stale result fails or remains INDETERMINATE; do not release successors.",
+      "acceptance_ids": [
+        "B046",
+        "B055",
+        "B056"
+      ]
+    },
+    {
+      "id": "TR-06",
+      "domain": "EFFECT",
+      "from": "PROPOSED",
+      "to": "PREPARED",
+      "required_predicate": "Typed bounded operation, actual inputs, required staged artifacts, reviews and current consent are established.",
+      "on_failure": "Reject unknown target, unsupported predicate, missing consent or stale review.",
+      "acceptance_ids": [
+        "B058",
+        "B059",
+        "B063"
+      ]
+    },
+    {
+      "id": "TR-07",
+      "domain": "EFFECT",
+      "from": "PREPARED",
+      "to": "INTENT_COMMITTED",
+      "required_predicate": "Authority/read-set still current; reservation and durable intent are committed atomically under the kernel.",
+      "on_failure": "No external effect on missing authority or incomplete storage commit.",
+      "acceptance_ids": [
+        "B009",
+        "B016",
+        "B031"
+      ]
+    },
+    {
+      "id": "TR-08",
+      "domain": "EFFECT",
+      "from": "INTENT_COMMITTED",
+      "to": "ADMISSION_REDEEMED",
+      "required_predicate": "Broker checks authenticated peer, current fence, permit, revocation, actual resource handle and preconditions, then consumes once.",
+      "on_failure": "Reject replay or revocation winning the admission race.",
+      "acceptance_ids": [
+        "B060",
+        "B061",
+        "B068",
+        "B070"
+      ]
+    },
+    {
+      "id": "TR-09",
+      "domain": "EFFECT",
+      "from": "ADMISSION_REDEEMED",
+      "to": "RUNNING",
+      "required_predicate": "Bounded broker dispatches the exact registered operation with admitted parameters.",
+      "on_failure": "Uncertain post-dispatch failure becomes INDETERMINATE; no automatic refund/replay.",
+      "acceptance_ids": [
+        "B063",
+        "B067",
+        "B098"
+      ]
+    },
+    {
+      "id": "TR-10",
+      "domain": "EFFECT",
+      "from": "RUNNING",
+      "to": "PROCESS_EXITED",
+      "required_predicate": "Actual owned process termination is observed and exit/output retained.",
+      "on_failure": "Stream loss or client timeout alone is not process termination.",
+      "acceptance_ids": [
+        "B077",
+        "B078",
+        "B097"
+      ]
+    },
+    {
+      "id": "TR-11",
+      "domain": "EFFECT",
+      "from": "PROCESS_EXITED",
+      "to": "VERIFIED",
+      "required_predicate": "Independent required observation establishes the specified postcondition and the kernel settles against current state.",
+      "on_failure": "Exit zero without result evidence stays unverified or becomes failed/indeterminate.",
+      "acceptance_ids": [
+        "B097",
+        "B099"
+      ]
+    },
+    {
+      "id": "TR-12",
+      "domain": "EFFECT",
+      "from": "RUNNING",
+      "to": "INDETERMINATE",
+      "required_predicate": "Crash/acknowledgment loss leaves a possible external effect without sufficient settlement evidence.",
+      "on_failure": "Preserve spent/uncertain permit and fence resource-dependent new work.",
+      "acceptance_ids": [
+        "B098",
+        "B102",
+        "B103"
+      ]
+    },
+    {
+      "id": "TR-13",
+      "domain": "RECOVERY",
+      "from": "OPEN",
+      "to": "SETTLED_WITH_EVIDENCE",
+      "required_predicate": "Fresh observations plus the adapter predicate establish the defensible settlement; new authority admits any compensation.",
+      "on_failure": "Acknowledgment alone or matching current bytes without causal evidence cannot invent historical attribution.",
+      "acceptance_ids": [
+        "B098",
+        "B100",
+        "B102"
+      ]
+    },
+    {
+      "id": "TR-14",
+      "domain": "SUPERVISOR",
+      "from": "ACTIVE",
+      "to": "STOPPING",
+      "required_predicate": "Authenticated stop disables new admission at the declared boundary and sends bounded owned-worker stop/termination.",
+      "on_failure": "Retain partial results and actual uncertainty; do not report STOPPED yet.",
+      "acceptance_ids": [
+        "B019",
+        "B077",
+        "B115"
+      ]
+    },
+    {
+      "id": "TR-15",
+      "domain": "SUPERVISOR",
+      "from": "STOPPING",
+      "to": "STOPPED",
+      "required_predicate": "Owned workers are observed stopped and no further admission is possible; unresolved effects remain separately recorded.",
+      "on_failure": "Timeout or unknown backend keeps a stopping/recovery status.",
+      "acceptance_ids": [
+        "B019",
+        "B078"
+      ]
+    },
+    {
+      "id": "TR-16",
+      "domain": "VAULT",
+      "from": "SEALED",
+      "to": "AUTHORIZED_RELEASE",
+      "required_predicate": "Object-scoped proof, current policy/epoch, real required quorum and approved consumer boundary validate.",
+      "on_failure": "Keep sealed on missing authority/domain/time/integrity; never downgrade to ordinary decryption.",
+      "acceptance_ids": [
+        "B089",
+        "B090",
+        "B091",
+        "B094"
+      ]
+    },
+    {
+      "id": "TR-17",
+      "domain": "VAULT",
+      "from": "AUTHORIZED_RELEASE",
+      "to": "SEALED",
+      "required_predicate": "Permitted operation completes, actual key/buffer cleanup is performed to the qualified profile and outcome evidence is committed.",
+      "on_failure": "Cleanup uncertainty seals/degrades the dependent lane and retains the failed proof obligation.",
+      "acceptance_ids": [
+        "B095",
+        "B096"
+      ]
+    },
+    {
+      "id": "TR-18",
+      "domain": "QUALIFICATION",
+      "from": "NOT_EVALUATED",
+      "to": "QUALIFIED_WITHIN_SCOPE",
+      "required_predicate": "Declared tests/thresholds, real configuration, reviewer independence and evidence match this capability profile.",
+      "on_failure": "No promotion from liveness, mocks, inherited history or package checks.",
+      "acceptance_ids": [
+        "B081",
+        "B086",
+        "B121",
+        "B126"
+      ]
+    },
+    {
+      "id": "TR-19",
+      "domain": "MEMORY",
+      "from": "ACTIVE",
+      "to": "SUPERSEDED",
+      "required_predicate": "Authorized correction/lifecycle transition preserves original provenance and updates effective retrieval/dependent claims.",
+      "on_failure": "Never overwrite original history to simulate having always known the correction.",
+      "acceptance_ids": [
+        "B034",
+        "B035"
+      ]
+    },
+    {
+      "id": "TR-20",
+      "domain": "MIGRATION",
+      "from": "VALIDATED_SNAPSHOT",
+      "to": "ACTIVATED",
+      "required_predicate": "Exact rehearsal, backup/restoration, quiescence and current owner cutover approval all exist.",
+      "on_failure": "Keep old profile authoritative and new target isolated until all activation conditions hold.",
+      "acceptance_ids": [
+        "B105",
+        "B106",
+        "B112"
+      ]
+    }
+  ]
+}

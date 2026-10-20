@@ -1,0 +1,11 @@
+command: python -m ceta.governance (PYTHONPATH=src)
+exit_code: 0
+python 3.11.15
+fixture: tests/fixtures/governance/test-rule-set.json (TEST FIXTURE ONLY)
+pin_match: True
+case_i quorum approved=True reasons=['quorum_met:2/2']
+case_i activated version=1
+case_i read subject_present=allow
+case_i read subject_absent=deny
+case_ii tampered rejected code=digest_mismatch
+case_iii no rule set decision=deny

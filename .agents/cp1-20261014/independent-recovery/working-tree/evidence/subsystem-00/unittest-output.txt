@@ -1,0 +1,48 @@
+command: python -m unittest discover -s tests -v (PYTHONPATH=src)
+exit_code: 0
+
+test_boundary_empty_runtime_boots_to_running (test_runtime_lifecycle.BootTests.test_boundary_empty_runtime_boots_to_running) ... ok
+test_negative_boot_while_running_is_illegal (test_runtime_lifecycle.BootTests.test_negative_boot_while_running_is_illegal) ... ok
+test_negative_dependency_cycle_refused (test_runtime_lifecycle.BootTests.test_negative_dependency_cycle_refused) ... ok
+test_negative_missing_dependency_refused_state_unchanged (test_runtime_lifecycle.BootTests.test_negative_missing_dependency_refused_state_unchanged) ... ok
+test_negative_non_boolean_trust_verdict_fails_closed (test_runtime_lifecycle.BootTests.test_negative_non_boolean_trust_verdict_fails_closed) ... ok
+test_negative_self_dependency_and_duplicate_rejected (test_runtime_lifecycle.BootTests.test_negative_self_dependency_and_duplicate_rejected) ... ok
+test_negative_start_failure_rolls_back_started_components (test_runtime_lifecycle.BootTests.test_negative_start_failure_rolls_back_started_components) ... ok
+test_negative_trust_check_exception_fails_closed (test_runtime_lifecycle.BootTests.test_negative_trust_check_exception_fails_closed) ... ok
+test_oracle_missing_trust_opens_maintenance_dispatch_closed (test_runtime_lifecycle.BootTests.test_oracle_missing_trust_opens_maintenance_dispatch_closed) ... ok
+test_positive_valid_installation_reaches_running (test_runtime_lifecycle.BootTests.test_positive_valid_installation_reaches_running) ... ok
+test_recovery_failed_boot_retry_gets_new_generation (test_runtime_lifecycle.BootTests.test_recovery_failed_boot_retry_gets_new_generation) ... ok
+test_recovery_maintenance_then_repaired_trust_boots (test_runtime_lifecycle.BootTests.test_recovery_maintenance_then_repaired_trust_boots) ... ok
+test_start_hook_reentrant_boot_fails_closed (test_runtime_lifecycle.ReentrancyTests.test_start_hook_reentrant_boot_fails_closed) ... ok
+test_stop_hook_reentrant_shutdown_fails_closed (test_runtime_lifecycle.ReentrancyTests.test_stop_hook_reentrant_shutdown_fails_closed) ... ok
+test_boundary_restart_invalidates_previously_issued_token (test_runtime_regressions.H04ForgedTokenTests.test_boundary_restart_invalidates_previously_issued_token) ... ok
+test_negative_malformed_mac_is_refused (test_runtime_regressions.H04ForgedTokenTests.test_negative_malformed_mac_is_refused) ... ok
+test_negative_plain_tuple_is_refused_as_forged (test_runtime_regressions.H04ForgedTokenTests.test_negative_plain_tuple_is_refused_as_forged) ... ok
+test_negative_token_from_another_runtime_is_refused (test_runtime_regressions.H04ForgedTokenTests.test_negative_token_from_another_runtime_is_refused) ... ok
+test_negative_token_with_altered_generation_is_refused (test_runtime_regressions.H04ForgedTokenTests.test_negative_token_with_altered_generation_is_refused) ... ok
+test_negative_token_with_altered_name_is_refused (test_runtime_regressions.H04ForgedTokenTests.test_negative_token_with_altered_name_is_refused) ... ok
+test_positive_issued_token_is_accepted (test_runtime_regressions.H04ForgedTokenTests.test_positive_issued_token_is_accepted) ... ok
+test_recovery_refused_forgery_does_not_block_genuine_token (test_runtime_regressions.H04ForgedTokenTests.test_recovery_refused_forgery_does_not_block_genuine_token) ... ok
+test_boundary_empty_string_dependency_rejected (test_runtime_regressions.H05DependencyTypeTests.test_boundary_empty_string_dependency_rejected) ... ok
+test_negative_bare_string_depends_rejected (test_runtime_regressions.H05DependencyTypeTests.test_negative_bare_string_depends_rejected) ... ok
+test_negative_non_string_dependency_rejected (test_runtime_regressions.H05DependencyTypeTests.test_negative_non_string_dependency_rejected) ... ok
+test_negative_none_dependency_rejected (test_runtime_regressions.H05DependencyTypeTests.test_negative_none_dependency_rejected) ... ok
+test_positive_valid_text_dependencies_accepted (test_runtime_regressions.H05DependencyTypeTests.test_positive_valid_text_dependencies_accepted) ... ok
+test_recovery_name_reusable_after_rejected_registration (test_runtime_regressions.H05DependencyTypeTests.test_recovery_name_reusable_after_rejected_registration) ... ok
+test_clean_shutdown_dependents_first (test_runtime_shutdown.ShutdownTests.test_clean_shutdown_dependents_first) ... ok
+test_dispatch_refused_after_shutdown (test_runtime_shutdown.ShutdownTests.test_dispatch_refused_after_shutdown) ... ok
+test_drain_exception_marks_uncertain_and_failed (test_runtime_shutdown.ShutdownTests.test_drain_exception_marks_uncertain_and_failed) ... ok
+test_effect_without_drain_hook_is_uncertain (test_runtime_shutdown.ShutdownTests.test_effect_without_drain_hook_is_uncertain) ... ok
+test_fast_drain_completes_effect (test_runtime_shutdown.ShutdownTests.test_fast_drain_completes_effect) ... ok
+test_maintenance_shutdown_starts_and_stops_nothing (test_runtime_shutdown.ShutdownTests.test_maintenance_shutdown_starts_and_stops_nothing) ... ok
+test_negative_deadline_rejected (test_runtime_shutdown.ShutdownTests.test_negative_deadline_rejected) ... ok
+test_oracle_overrun_effect_is_uncertain (test_runtime_shutdown.ShutdownTests.test_oracle_overrun_effect_is_uncertain) ... ok
+test_restart_invalidates_old_token (test_runtime_shutdown.ShutdownTests.test_restart_invalidates_old_token) ... ok
+test_second_shutdown_is_noop (test_runtime_shutdown.ShutdownTests.test_second_shutdown_is_noop) ... ok
+test_stop_failure_marks_failed_and_blocks_reboot (test_runtime_shutdown.ShutdownTests.test_stop_failure_marks_failed_and_blocks_reboot) ... ok
+test_uncertain_effect_not_replayed_on_restart (test_runtime_shutdown.ShutdownTests.test_uncertain_effect_not_replayed_on_restart) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.003s
+
+OK

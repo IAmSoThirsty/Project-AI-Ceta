@@ -1,0 +1,95 @@
+--- before/tests/contract/test_native_runtime_composition.py
++++ after/tests/contract/test_native_runtime_composition.py
+@@ -347,11 +347,89 @@
+         self.assertIs(caught.exception,failure)
+         value=raw(failure)['native_cpu_runtime']
+         self.assertIsNotNone(value._binding)
+-        self.assertFalse(hasattr(value._binding,'_api'))
++        self.assertIsNone(value._binding._api)
+         self.assertIsNone(value._owner)
+-        self.assertFalse(value.closed)
+-        self.assertIsInstance(raw(failure)['native_cpu_runtime_cleanup_errors'][0],AttributeError)
++        self.assertTrue(value._binding.closed)
++        self.assertEqual(value._binding.pending_native_resources,())
++        self.assertTrue(value.closed)
++        self.assertNotIn('native_cpu_runtime_cleanup_errors',raw(failure))
+         self.assertFalse(self.store._closed)
++        # This fixture VFS was never registered. Retire that controlled marker
++        # before checking actual dependent SQLite/service closure.
++        self.store._capacity_vfs=None
++        retired=[]
++        service_process.retire_service(None,value,SimpleNamespace(close=lambda:retired.append('registry')),
++            self.store,failure)
++        self.assertEqual(retired,['registry'])
++        self.assertTrue(self.store._closed)
++
++    def test_published_api_without_file_opens_uses_original_cleanup_once(self):
++        import ceta.identity.native_owner_view as view_module
++        failure=KeyboardInterrupt('path validation before file acquisition')
++        calls=[]
++        api=SimpleNamespace(retry_cleanup=lambda **kw:calls.append(kw),pending_native_resources=lambda:())
++        with patch.object(NativeStoreBinding,'__init__',_NATIVE_STORE_INIT), \
++                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
++                patch.object(view_module,'_ViewAPI',return_value=api), \
++                patch.object(view_module,'_path',side_effect=failure):
++            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
++        self.assertIs(caught.exception,failure)
++        value=raw(failure)['native_cpu_runtime']
++        self.assertTrue(value.closed);self.assertTrue(value._binding.closed)
++        self.assertIs(value._binding._api,api)
++        self.assertEqual(value._binding._pins,[])
++        self.assertEqual(calls,[dict(kinds=('handles',))])
++
++    def controlled_queued_api(self, primary, cleanup_failures=0):
++        queued=[];released=[];calls=[]
++        def queue(handle):queued.append(handle);raise primary
++        def retry(**kwargs):
++            calls.append(kwargs)
++            if len(calls)<=cleanup_failures:raise OSError('controlled pending close')
++            released.extend(queued);queued.clear()
++        api=SimpleNamespace(CreateFileW=lambda *args:405,queue_handle=queue,
++            retry_cleanup=retry,pending_native_resources=lambda:tuple(queued))
++        return api,queued,released,calls
++
++    def test_published_api_queue_is_retired_even_before_pin_row_publication(self):
++        import ceta.identity.native_owner_view as view_module
++        failure=KeyboardInterrupt('queued controlled handle before pin row')
++        api,queued,released,calls=self.controlled_queued_api(failure)
++        with patch.object(NativeStoreBinding,'__init__',_NATIVE_STORE_INIT), \
++                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE), \
++                patch.object(view_module,'_ViewAPI',return_value=api), \
++                patch.object(view_module,'_path',return_value=str(self.root)):
++            with self.assertRaises(KeyboardInterrupt) as caught:self.compose()
++        self.assertIs(caught.exception,failure)
++        value=raw(failure)['native_cpu_runtime']
++        self.assertTrue(value.closed);self.assertTrue(value._binding.closed)
++        self.assertEqual(value._binding._pins,[])
++        self.assertEqual(queued,[]);self.assertEqual(released,[405])
++        self.assertEqual(calls,[dict(kinds=('handles',))])
++
++    def test_published_api_pending_queue_retains_primary_and_allows_explicit_close_retry(self):
++        import ceta.identity.native_owner_view as view_module
++        failure=KeyboardInterrupt('queued controlled handle with failed cleanup')
++        api,queued,released,calls=self.controlled_queued_api(failure,cleanup_failures=1)
++        binding=object.__new__(NativeStoreBinding)
++        with patch.object(view_module,'_ViewAPI',return_value=api), \
++                patch.object(view_module,'_path',return_value=str(self.root)), \
++                patch.object(NativeStoreBinding,'close',_NATIVE_STORE_CLOSE):
++            with self.assertRaises(KeyboardInterrupt) as caught:_NATIVE_STORE_INIT(binding,self.root)
++            self.assertIs(caught.exception,failure)
++            self.assertIs(raw(failure)['native_owner_view'],binding)
++            self.assertFalse(binding.closed);self.assertEqual(binding.pending_native_resources,(405,))
++            _NATIVE_STORE_CLOSE(binding)
++            self.assertTrue(binding.closed);self.assertEqual(binding.pending_native_resources,())
++        self.assertEqual(queued,[]);self.assertEqual(released,[405]);self.assertEqual(len(calls),2)
++
++    def test_no_api_with_contradictory_pin_state_is_preserved_and_denied(self):
++        binding=object.__new__(NativeStoreBinding)
++        binding._lock=threading.RLock();binding._closed=False
++        binding._api=None;binding._pins=[dict(handle=405)]
++        self.assert_denied('OWNER_VIEW_API_CUSTODY_UNAVAILABLE',lambda:_NATIVE_STORE_CLOSE(binding))
++        self.assertFalse(binding.closed)
++        self.assert_denied('OWNER_VIEW_API_CUSTODY_UNAVAILABLE',lambda:binding.pending_native_resources)
+ 
+     def test_runtime_rejects_other_thread_and_serialization(self):
+         value=self.compose();errors=[]

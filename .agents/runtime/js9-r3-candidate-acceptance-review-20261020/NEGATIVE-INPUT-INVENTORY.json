@@ -1,0 +1,134 @@
+{
+  "at": "2026-10-20T11:18:13.381725+00:00",
+  "finding_id": "JS9-CANDIDATE-02",
+  "classification": "blocking current full acceptance until an exact successor input cut is reviewed",
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET.json",
+    "sha256": "32575147e478c63ead51c6269af9e22eebe06ccdc74619cdb04e46231fe9ac82"
+  },
+  "reuse": {
+    "repository_relative_path": ".agents/runtime/ob2-20261014/negative-reuse/REUSE.json",
+    "sha256": "7b7e5bee287026e6ef11bf156ea380ff8550a06514eaac29334dc38b178b4c1e"
+  },
+  "original_build": {
+    "repository_relative_path": ".agents/runtime/ob1-20261014/native-negative-r2/build.json",
+    "sha256": "4f23565b90f53fded995de5d51e417fed0400a521841d218b866eec9d0223fb8"
+  },
+  "negative_source": {
+    "repository_relative_path": ".agents/runtime/ob1-20261014/native-negative-r2/negative_helpers.rs",
+    "sha256": "0c50af3eb01cc01f051c9f5c4bb20ae7ae8d44af4d01e9f64a0c9aa3b0b5396e"
+  },
+  "images": [
+    {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\overlong.exe",
+      "actual": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\overlong.exe",
+        "bytes": 4840819,
+        "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+        "native_identity": {
+          "bytes": 4840819,
+          "mtime_ns": 1792023894400776100,
+          "mode": 511,
+          "device": 154504856318070761,
+          "inode": 281474979650738,
+          "attributes": 32
+        }
+      },
+      "recorded_reuse": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\overlong.exe",
+        "bytes": 4840819,
+        "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+        "native_identity": {
+          "bytes": 4840819,
+          "mtime_ns": 1792023894400776100,
+          "mode": 511,
+          "device": 154504856318070761,
+          "inode": 281474979650738,
+          "attributes": 32
+        }
+      },
+      "in_packet_fixture_dependencies": false,
+      "in_Source_before": false,
+      "in_Q5_payloads": false,
+      "in_E3_environment": false
+    },
+    {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\rights.exe",
+      "actual": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\rights.exe",
+        "bytes": 4840819,
+        "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+        "native_identity": {
+          "bytes": 4840819,
+          "mtime_ns": 1792023894259448400,
+          "mode": 511,
+          "device": 154504856318070761,
+          "inode": 281474979650737,
+          "attributes": 32
+        }
+      },
+      "recorded_reuse": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\rights.exe",
+        "bytes": 4840819,
+        "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+        "native_identity": {
+          "bytes": 4840819,
+          "mtime_ns": 1792023894259448400,
+          "mode": 511,
+          "device": 154504856318070761,
+          "inode": 281474979650737,
+          "attributes": 32
+        }
+      },
+      "in_packet_fixture_dependencies": false,
+      "in_Source_before": false,
+      "in_Q5_payloads": false,
+      "in_E3_environment": false
+    },
+    {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\silent.exe",
+      "actual": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\silent.exe",
+        "bytes": 4840819,
+        "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+        "native_identity": {
+          "bytes": 4840819,
+          "mtime_ns": 1792023894542283100,
+          "mode": 511,
+          "device": 154504856318070761,
+          "inode": 281474979650739,
+          "attributes": 32
+        }
+      },
+      "recorded_reuse": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\negative-reuse\\silent.exe",
+        "bytes": 4840819,
+        "sha256": "a7705d9eac986868c0ce01a027d99b69be2922b5af4d2ab4560aa4b6180fb856",
+        "native_identity": {
+          "bytes": 4840819,
+          "mtime_ns": 1792023894542283100,
+          "mode": 511,
+          "device": 154504856318070761,
+          "inode": 281474979650739,
+          "attributes": 32
+        }
+      },
+      "in_packet_fixture_dependencies": false,
+      "in_Source_before": false,
+      "in_Q5_payloads": false,
+      "in_E3_environment": false
+    }
+  ],
+  "verified": "All three currently match their retained same-project reuse/build digests and native identities, but none is in R3 fixture dependencies, Source-before, Q5 payloads or E3 environment pins.",
+  "source_locations": [
+    "fixture_runtime.py:136 supplies negative-reuse root",
+    "test_native_effect_observer.py:390-397 computes each current image hash and calls it a controlled negative image",
+    "js9_support.py:125 post-verifies only packet fixture_dependencies",
+    "negative_helpers.rs:14-18 selects behavior using current_exe file stem; all three image byte hashes are intentionally equal"
+  ],
+  "required_small_correction": "Add exact path/role/hash/native facts for the three images and pinned reuse/build/source provenance to the next reviewed fixture input cut; verify them before and after execution. Preserve R3 unchanged.",
+  "causal_status": "No causal link from this inventory gap to the timeout is established. Current bytes match recorded historical inputs; terminal recorded-launch/receipt digests must be compared separately.",
+  "no_native_execution": true,
+  "no_tool_or_source_changes": true,
+  "no_retry_approval": true
+}

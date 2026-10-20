@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "original_case_id": "test_isolated_worker.NativeIsolatedWorkerTests.test_actual_nonpersistent_launch_denial_and_medium_control_retirement",
+  "release": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/releases/native-case-candidate-full.json",
+    "sha256": "1794e708bdd50faa2eb1076806c40b4d6a33af4093dd777de5650c83b09c3ccd"
+  },
+  "run_nonce": "8ccc126e0ef54009af1e538c99715c9e",
+  "subject": {
+    "environment_sha256": "850a6b4e12427361d7e093ab23693f072862d85d7d5cbda353674e8e9bae61f2",
+    "expected_ids_sha256": "eb84271555192021f192906f8f110c943d335009c2eb5c0cd088d38e5837eebb",
+    "fixture_helper_sha256": "a7247426deee70890107b9d826c7cda9209015edd5f1192f93ee3bd1e5a4314f",
+    "fixture_runtime": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014",
+    "mode": "candidate-full",
+    "native_image_sha256": "527518104fb84c430e3e9e0be61982c533b0c6fbb13e1a85e959ba1a3866ad0f",
+    "original_case_id": "test_isolated_worker.NativeIsolatedWorkerTests.test_actual_nonpersistent_launch_denial_and_medium_control_retirement",
+    "payload_map_sha256": "5b4dcbf1c8141f33c1ed87d2b1b8334e959a3412923043d52ee225868d8d9119",
+    "run_id": "js9-runtime-20261020",
+    "run_nonce": "8ccc126e0ef54009af1e538c99715c9e",
+    "source_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020",
+    "tools_sha256": "690ada89b6805213d1d40fdb20ed768dd169dd23d10b28c49989071cb6208ed0"
+  },
+  "authority_basis": "existing_user_authorized_disposable_acceptance_tests",
+  "exact_native_calls": [
+    {
+      "step": "restricted_CreateProcessW",
+      "returned": true,
+      "succeeded": false,
+      "winerror": 2
+    }
+  ],
+  "expected_denial_winerror": 2,
+  "profile_folder_observations": [
+    {
+      "stage": "before",
+      "name": "CETA.AC1.a658874687a441f8b0e0689dd278ae44",
+      "sid": "S-1-15-2-3743631101-4138586503-324805837-2474843916-2656550986-919936564-176651719",
+      "release_attempted": false,
+      "allocation_closed": true,
+      "HRESULT": -2147024894,
+      "path": null,
+      "folder_metadata": null,
+      "absent": true,
+      "folder_absent": true,
+      "observation_basis": "native_file_not_found_without_output",
+      "registration_enumerated": false,
+      "contents_read": false,
+      "query": "GetAppContainerFolderPath",
+      "primary": null,
+      "cleanup": null
+    },
+    {
+      "stage": "after",
+      "name": "CETA.AC1.a658874687a441f8b0e0689dd278ae44",
+      "sid": "S-1-15-2-3743631101-4138586503-324805837-2474843916-2656550986-919936564-176651719",
+      "release_attempted": false,
+      "allocation_closed": true,
+      "HRESULT": -2147024894,
+      "path": null,
+      "folder_metadata": null,
+      "absent": true,
+      "folder_absent": true,
+      "observation_basis": "native_file_not_found_without_output",
+      "registration_enumerated": false,
+      "contents_read": false,
+      "query": "GetAppContainerFolderPath",
+      "primary": null,
+      "cleanup": null
+    }
+  ],
+  "handles": [
+    {
+      "kind": "event",
+      "handle": 19256,
+      "close_attempted": true,
+      "closed": true,
+      "close_error": 6,
+      "post_close_error": 6,
+      "diagnostic": null
+    },
+    {
+      "kind": "pipe-read",
+      "handle": 19264,
+      "close_attempted": true,
+      "closed": true,
+      "close_error": 6,
+      "post_close_error": 6,
+      "diagnostic": null
+    },
+    {
+      "kind": "pipe-write",
+      "handle": 19088,
+      "close_attempted": true,
+      "closed": true,
+      "close_error": 6,
+      "post_close_error": 6,
+      "diagnostic": null
+    },
+    {
+      "kind": "pipe-read",
+      "handle": 18560,
+      "close_attempted": true,
+      "closed": true,
+      "close_error": 6,
+      "post_close_error": 6,
+      "diagnostic": null
+    },
+    {
+      "kind": "pipe-write",
+      "handle": 18544,
+      "close_attempted": true,
+      "closed": true,
+      "close_error": 6,
+      "post_close_error": 6,
+      "diagnostic": null
+    },
+    {
+      "kind": "pipe-read",
+      "handle": 18576,
+      "close_attempted": true,
+      "closed": true,
+      "close_error": 6,
+      "post_close_error": 6,
+      "diagnostic": null
+    },
+    {
+      "kind": "pipe-write",
+      "handle": 18492,
+      "close_attempted": true,
+      "closed": true,
+      "close_error": 6,
+      "post_close_error": 6,
+      "diagnostic": null
+    }
+  ],
+  "sockets": [
+    {
+      "close_attempted": true,
+      "closed": true,
+      "fileno": -1,
+      "diagnostic": null
+    },
+    {
+      "close_attempted": true,
+      "closed": true,
+      "fileno": -1,
+      "diagnostic": null
+    },
+    {
+      "close_attempted": true,
+      "closed": true,
+      "fileno": -1,
+      "diagnostic": null
+    }
+  ],
+  "original_probe_receipt": {
+    "reference": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/isolation-harness/.agents/runtime/ac1-20261014/native-fixtures/ac1-55a0d679be75499e8bf907fa09b8e6d0/native-test-final.json",
+      "sha256": "8b9b882accbf6dc903633ed9872f83a5161d05afa446b0f5f6984439884035d1"
+    },
+    "value": {
+      "label": "native-test-final",
+      "started_at": "2026-10-20T11:06:49.648377+00:00",
+      "finished_at": "2026-10-20T11:06:59.587392+00:00",
+      "setup": {
+        "fixture": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0",
+        "container_name": "CETA.AC1.a658874687a441f8b0e0689dd278ae44",
+        "appcontainer_sid": "S-1-15-2-3743631101-4138586503-324805837-2474843916-2656550986-919936564-176651719",
+        "owner_sid": "S-1-5-21-1218874621-2294869469-207301144-1003",
+        "image": {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\assets\\isolated_worker.exe",
+          "bytes": 4872045,
+          "sha256": "527518104fb84c430e3e9e0be61982c533b0c6fbb13e1a85e959ba1a3866ad0f",
+          "native_identity": {
+            "bytes": 4872045,
+            "mtime_ns": 1792494409507725900,
+            "mode": 511,
+            "device": 154504856318070761,
+            "inode": 281474979912227,
+            "attributes": 32
+          }
+        },
+        "asset": {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\assets\\allowed.txt",
+          "bytes": 26,
+          "sha256": "ec615612ee06c04f07b9af5f0ee45a38cecddf7ba5b2bf52563f623c59130347",
+          "native_identity": {
+            "bytes": 26,
+            "mtime_ns": 1792494409509729600,
+            "mode": 438,
+            "device": 154504856318070761,
+            "inode": 281474979912228,
+            "attributes": 32
+          }
+        },
+        "protected_before": {
+          "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\canonical.db": {
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\canonical.db",
+            "bytes": 31,
+            "sha256": "90ddb2c25d73574a7f9133916e288c07c578091808128ddacb0352b8042e7cb6",
+            "native_identity": {
+              "bytes": 31,
+              "mtime_ns": 1792494409511725900,
+              "mode": 438,
+              "device": 154504856318070761,
+              "inode": 281474979912229,
+              "attributes": 32
+            }
+          },
+          "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\canonical.db-wal": {
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\canonical.db-wal",
+            "bytes": 31,
+            "sha256": "90ddb2c25d73574a7f9133916e288c07c578091808128ddacb0352b8042e7cb6",
+            "native_identity": {
+              "bytes": 31,
+              "mtime_ns": 1792494409512725700,
+              "mode": 438,
+              "device": 154504856318070761,
+              "inode": 281474979912230,
+              "attributes": 32
+            }
+          },
+          "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\canonical.db-shm": {
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\canonical.db-shm",
+            "bytes": 31,
+            "sha256": "90ddb2c25d73574a7f9133916e288c07c578091808128ddacb0352b8042e7cb6",
+            "native_identity": {
+              "bytes": 31,
+              "mtime_ns": 1792494409513725500,
+              "mode": 438,
+              "device": 154504856318070761,
+              "inode": 281474979912231,
+              "attributes": 32
+            }
+          },
+          "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\policy.txt": {
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\policy.txt",
+            "bytes": 31,
+            "sha256": "90ddb2c25d73574a7f9133916e288c07c578091808128ddacb0352b8042e7cb6",
+            "native_identity": {
+              "bytes": 31,
+              "mtime_ns": 1792494409515726000,
+              "mode": 438,
+              "device": 154504856318070761,
+              "inode": 281474979912232,
+              "attributes": 32
+            }
+          },
+          "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\source.txt": {
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\candidate-full\\isolation-harness\\.agents\\runtime\\ac1-20261014\\native-fixtures\\ac1-55a0d679be75499e8bf907fa09b8e6d0\\protected\\source.txt",
+            "bytes": 31,
+            "sha256": "90ddb2c25d73574a7f9133916e288c07c578091808128ddacb0352b8042e7cb6",
+            "native_identity": {
+              "bytes": 31,
+              "mtime_ns": 1792494409516727200,
+              "mode": 438,
+              "device": 154504856318070761,
+              "inode": 281474979912233,
+              "attributes": 32
+            }
+          }
+        },
+        "acl_operations": "DACL+mandatory label only fresh fixture descendants; App SID RX assets, modify low scratch, absent protected medium assets",
+        "persistent_profile_install": false
+      },
+      "failure_type": "ContractError",
+      "failure": "ISOLATION_RESTRICTED_CREATE_FAILED:2 at $",
+      "raw_stdout": "",
+      "trusted_target": {
+        "pid": 20884,
+        "creation_time": 134369680096666205,
+        "integrity": "S-1-16-8192"
+      },
+      "cleanup": [
+        {
+          "kind": "trusted_medium_fixture",
+          "pid": 20884,
+          "creation_time": 134369680096666205,
+          "exit_code": 125,
+          "active_processes": 0,
+          "lifetime_closed": true
+        }
+      ]
+    }
+  },
+  "entered": true,
+  "attempted": true,
+  "issues": [],
+  "diagnostic": null,
+  "owned_fixture_resources_closed": true,
+  "precise_denial_matched": true,
+  "passed": true,
+  "no_profile_create_delete": true,
+  "legacy_regex_limitation": "The unchanged ':2' regex also matches other 2xx errors; the supplemental native code is exact.",
+  "limits": [
+    "Folder absence is the exact native FILE_NOT_FOUND/no-output observation; no missing-profile launch causality is inferred.",
+    "Actual control/worker process and job retirement must additionally be bound by the enclosing runner physical resource proof; no numeric PID is reopened.",
+    "Unexpected successful probe descendants and child-local handles require the enclosing bounded-job/native recorder proof; this denial result never certifies positive isolation."
+  ],
+  "Source_accepted": false,
+  "release_reader_closed": true
+}

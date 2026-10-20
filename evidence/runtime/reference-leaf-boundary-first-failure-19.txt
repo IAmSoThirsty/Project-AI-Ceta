@@ -1,0 +1,15 @@
+test_actual_import_is_mapped_namespace_not_retained_ceta (test_boundaries.BoundaryTests.test_actual_import_is_mapped_namespace_not_retained_ceta) ... ok
+test_contract_leaf_imports_only_declared_pure_dependencies (test_boundaries.BoundaryTests.test_contract_leaf_imports_only_declared_pure_dependencies) ... FAIL
+
+======================================================================
+FAIL: test_contract_leaf_imports_only_declared_pure_dependencies (test_boundaries.BoundaryTests.test_contract_leaf_imports_only_declared_pure_dependencies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\CETA-desktop-delivery-20260906\rebuild_ios\tests\contract\test_boundaries.py", line 23, in test_contract_leaf_imports_only_declared_pure_dependencies
+    self.assertIn(node.module.split(".")[0], allowed, str(path))
+AssertionError: 'pathlib' not found in {'typing', 'datetime', 'unicodedata', '__future__', 'hashlib', 're', 'json', 'dataclasses'} : T:\00-Active\CETA-desktop-delivery-20260906\rebuild_ios\src\ceta\contracts\source_references.py
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.011s
+
+FAILED (failures=1)

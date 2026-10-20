@@ -1,0 +1,202 @@
+{
+  "on_disk_candidates": [
+    {
+      "import": "api-ms-win-core-synch-l1-2-0.dll",
+      "coverage": "API-set contract; physical-file and host mapping not resolved"
+    },
+    {
+      "dll": "bcryptprimitives.dll",
+      "sha256": "f0dba794068893c9616b0b54bef1be8f904be89eb2cb09b575d3d7fb1b5000f8",
+      "normal_import_descriptors": 14,
+      "delay_import_descriptors": 0,
+      "concrete_normal_edges": [
+        "ntdll.dll"
+      ],
+      "concrete_delay_edges": [],
+      "selected_forwarders": [],
+      "actual_historical_module_binding": "UNKNOWN"
+    },
+    {
+      "dll": "ADVAPI32.dll",
+      "sha256": "b864e1468a01a44f1901e03c05c1029e71655dd9abddd6d840bcfff5e7227d44",
+      "normal_import_descriptors": 35,
+      "delay_import_descriptors": 12,
+      "concrete_normal_edges": [
+        "msvcrt.dll",
+        "ntdll.dll",
+        "KERNELBASE.dll",
+        "SECHOST.dll",
+        "KERNEL32.dll",
+        "RPCRT4.dll"
+      ],
+      "concrete_delay_edges": [
+        "CRYPTSP.dll",
+        "WINTRUST.dll",
+        "CRYPTBASE.dll",
+        "SspiCli.dll",
+        "USER32.dll",
+        "CRYPT32.dll",
+        "bcrypt.dll"
+      ],
+      "selected_forwarders": [],
+      "actual_historical_module_binding": "UNKNOWN"
+    },
+    {
+      "dll": "KERNEL32.dll",
+      "sha256": "e132eba4166256e2f414b91fe7d5386590bc5ea8626aee5af9c9738383cf2ae1",
+      "normal_import_descriptors": 104,
+      "delay_import_descriptors": 3,
+      "concrete_normal_edges": [
+        "ntdll.dll",
+        "KERNELBASE.dll"
+      ],
+      "concrete_delay_edges": [
+        "RPCRT4.dll"
+      ],
+      "selected_forwarders": [
+        {
+          "imported_name": "AddVectoredExceptionHandler",
+          "ordinal": 21,
+          "forwarder": "NTDLL.RtlAddVectoredExceptionHandler",
+          "forwarder_file_offset": 699291
+        },
+        {
+          "imported_name": "DeleteCriticalSection",
+          "ordinal": 309,
+          "forwarder": "NTDLL.RtlDeleteCriticalSection",
+          "forwarder_file_offset": 707324
+        },
+        {
+          "imported_name": "DeleteProcThreadAttributeList",
+          "ordinal": 317,
+          "forwarder": "api-ms-win-core-processthreads-l1-1-0.DeleteProcThreadAttributeList",
+          "forwarder_file_offset": 707491
+        },
+        {
+          "imported_name": "EnterCriticalSection",
+          "ordinal": 349,
+          "forwarder": "NTDLL.RtlEnterCriticalSection",
+          "forwarder_file_offset": 708455
+        },
+        {
+          "imported_name": "HeapAlloc",
+          "ordinal": 899,
+          "forwarder": "NTDLL.RtlAllocateHeap",
+          "forwarder_file_offset": 722005
+        },
+        {
+          "imported_name": "HeapReAlloc",
+          "ordinal": 906,
+          "forwarder": "NTDLL.RtlReAllocateHeap",
+          "forwarder_file_offset": 722113
+        },
+        {
+          "imported_name": "InitOnceBeginInitialize",
+          "ordinal": 917,
+          "forwarder": "api-ms-win-core-synch-l1-2-0.InitOnceBeginInitialize",
+          "forwarder_file_offset": 722311
+        },
+        {
+          "imported_name": "InitOnceComplete",
+          "ordinal": 918,
+          "forwarder": "api-ms-win-core-synch-l1-2-0.InitOnceComplete",
+          "forwarder_file_offset": 722381
+        },
+        {
+          "imported_name": "InitializeCriticalSection",
+          "ordinal": 924,
+          "forwarder": "NTDLL.RtlInitializeCriticalSection",
+          "forwarder_file_offset": 722670
+        },
+        {
+          "imported_name": "InitializeProcThreadAttributeList",
+          "ordinal": 928,
+          "forwarder": "api-ms-win-core-processthreads-l1-1-0.InitializeProcThreadAttributeList",
+          "forwarder_file_offset": 722872
+        },
+        {
+          "imported_name": "LeaveCriticalSection",
+          "ordinal": 1015,
+          "forwarder": "NTDLL.RtlLeaveCriticalSection",
+          "forwarder_file_offset": 725245
+        },
+        {
+          "imported_name": "UpdateProcThreadAttribute",
+          "ordinal": 1551,
+          "forwarder": "api-ms-win-core-processthreads-l1-1-0.UpdateProcThreadAttribute",
+          "forwarder_file_offset": 739318
+        },
+        {
+          "imported_name": "__C_specific_handler",
+          "ordinal": 1656,
+          "forwarder": "NTDLL.__C_specific_handler",
+          "forwarder_file_offset": 741917
+        }
+      ],
+      "actual_historical_module_binding": "UNKNOWN"
+    },
+    {
+      "dll": "msvcrt.dll",
+      "sha256": "fc1447db4e4814cbcb002179a8003a41f383fc417879f628727043cab8c25093",
+      "normal_import_descriptors": 24,
+      "delay_import_descriptors": 0,
+      "concrete_normal_edges": [
+        "ntdll.dll",
+        "KERNELBASE.dll"
+      ],
+      "concrete_delay_edges": [],
+      "selected_forwarders": [],
+      "actual_historical_module_binding": "UNKNOWN"
+    },
+    {
+      "dll": "ntdll.dll",
+      "sha256": "651ac9041af8e6b5ebd331d53163244c0a27d36d1433f0f15cac1f28c5f2e82c",
+      "normal_import_descriptors": 0,
+      "delay_import_descriptors": 0,
+      "concrete_normal_edges": [],
+      "concrete_delay_edges": [],
+      "selected_forwarders": [],
+      "actual_historical_module_binding": "UNKNOWN"
+    },
+    {
+      "dll": "USERENV.dll",
+      "sha256": "aeb1a6a15397bee7a0ebc67b8188f751e10089c0adadfd86146496c5faae914c",
+      "normal_import_descriptors": 36,
+      "delay_import_descriptors": 11,
+      "concrete_normal_edges": [
+        "RPCRT4.dll",
+        "ntdll.dll"
+      ],
+      "concrete_delay_edges": [
+        "SspiCli.dll",
+        "IPHLPAPI.DLL",
+        "DNSAPI.dll",
+        "netutils.dll",
+        "logoncli.dll",
+        "profapi.dll",
+        "cldapi.dll"
+      ],
+      "selected_forwarders": [],
+      "actual_historical_module_binding": "UNKNOWN"
+    },
+    {
+      "dll": "WS2_32.dll",
+      "sha256": "b123b00c46c415d7baeaada58c29c3e6920895db836ee4c0cfee49d738af60ad",
+      "normal_import_descriptors": 33,
+      "delay_import_descriptors": 4,
+      "concrete_normal_edges": [
+        "ntdll.dll",
+        "RPCRT4.dll"
+      ],
+      "concrete_delay_edges": [
+        "NSI.dll"
+      ],
+      "selected_forwarders": [],
+      "actual_historical_module_binding": "UNKNOWN"
+    }
+  ],
+  "coverage": "One current System32 level, all reported normal/delay import descriptors; API-set and deeper host mapping unresolved",
+  "failing_dll": "UNKNOWN",
+  "initialization_order": "UNKNOWN",
+  "runtime_api_order": "UNKNOWN"
+}

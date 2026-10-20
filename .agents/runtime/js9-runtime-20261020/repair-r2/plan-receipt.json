@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run_id": "js9-composition-repair-r2-20261020",
+  "node_id": "plan",
+  "executor_id": "/root/recovery_regression20",
+  "started_at": "2026-10-20T09:28:35.496968+00:00",
+  "finished_at": "2026-10-20T09:28:35.839969+00:00",
+  "input_hash": "429e90776709170c730d58309f2fb680f920de1034ea26bc07dac7383aa496be",
+  "changed_files": [],
+  "result": {
+    "blocker": "JS9-P2-002: CreateFileW-to-queue publication gap",
+    "frozen_manifest_sha256": "86ad0ef8f2fa1f0bcaff4ac02ea83d4957900ce4e68e637d7428d3649220571d",
+    "allowed_changes": [
+      "src/ceta/identity/native_owner_view.py",
+      "tests/contract/test_native_runtime_composition.py"
+    ],
+    "native_execution": false,
+    "Root_authorized_narrow_repair": true
+  },
+  "commands": [],
+  "validations": [
+    {
+      "name": "exact530_pins_beforeimages_and_real_queue_handle_inspected",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

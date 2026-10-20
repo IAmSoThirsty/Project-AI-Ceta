@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "ac7-qualification-r4-20261020",
+  "node_id": "implement",
+  "executor_id": "/root",
+  "started_at": "2026-10-20T09:17:06.999278+00:00",
+  "finished_at": "2026-10-20T09:21:43.507023+00:00",
+  "input_hash": "5e86a12e787173e5b4e56be400a17e8f46a802fd9053272d33d55032d86d563e",
+  "changed_files": [
+    ".agents/ac7-token-contract-20261020/contracts/ISOLATED_WORKER_V1.md",
+    ".agents/ac7-token-contract-20261020/tests/contract/test_isolation_qualification_entry.py",
+    ".agents/ac7-token-contract-20261020/tests/contract/test_isolation_qualification_oracle.py",
+    ".agents/ac7-token-contract-20261020/tools/isolated_worker_token_oracle.py",
+    ".agents/ac7-token-contract-20261020/tools/qualify_isolated_worker.py",
+    ".agents/ac7-token-contract-20261020/tools/run_one_isolation_qualification.py"
+  ],
+  "result": {
+    "manifest_sha256": "83967d7b5c00abc6461cdcb9bbe398bb63b0ab53078d8364f56f383de9b511cf",
+    "candidate_payloads": 357,
+    "controlled_python": 47,
+    "pure_rust": 5,
+    "source_publication": false,
+    "host_profile_operations": false,
+    "skills_used": [
+      "thirsty-work-orchestrator",
+      "unfinished-work-recovery",
+      "protocol-interoperability-auditor"
+    ],
+    "governing_version": "thirsty-constitution-v0.1"
+  },
+  "commands": [],
+  "exit_status": 0,
+  "validations": [
+    {
+      "name": "frozen_source_tests_build_and_preserved_Source352",
+      "passed": true
+    }
+  ]
+}

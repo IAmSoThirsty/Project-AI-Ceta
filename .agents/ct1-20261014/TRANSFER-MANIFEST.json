@@ -1,0 +1,52 @@
+{
+  "schema_version": "ceta.current-status.v1",
+  "author": "/root",
+  "source_root": "T:\\00-Active\\Project-AI-CETA",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\ct1-20261014",
+  "payloads": [
+    {
+      "relative_path": "handoff/continuity.json",
+      "active_before_sha256": "e70a48569003a5a7730eb36978407e895192a88c9ab8bc4cf0aeb6aecd7c6b32",
+      "candidate_sha256": "bd83f174ea5ef5e06955fd25a42798d24c89f69d61833fef1bbe767b30aa5430",
+      "allowed_changed_keys": [
+        "authoritative_application_root",
+        "current_repository_execution_20261014",
+        "historical_latest_source_tests_before_repository_consolidation_20261014",
+        "latest_source_tests",
+        "next_action"
+      ],
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE"
+    },
+    {
+      "relative_path": "build/progress.json",
+      "active_before_sha256": "b399ad6d64612e35df12f9034193228d0c68f7156560ee67aed2b9b7f991c0a6",
+      "candidate_sha256": "e50a5dc134746f9b730cd6d24eecb610716cc52b0193e5baa007d21a4946f7ff",
+      "allowed_changed_keys": [
+        "current_repository_execution_20261014"
+      ],
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE"
+    }
+  ],
+  "application_paths": [
+    "build/progress.json",
+    "handoff/continuity.json"
+  ],
+  "proofs": {
+    ".agents/runtime/app3-20261014/integrate.json": "844dc49ed944549f83a6ad7f83220dbba71217d53ea97b8fa3911dfb0d30208c",
+    ".agents/runtime/rs2-20261014/active-application/destination-full-r2.json": "a94362246244b5d0fb99672e503934a3c8265bd47125aa7dbc1d256b8e59b8af",
+    ".agents/runtime/rename-20261014/independent-review/post-move-integrity.json": "1788d572ad057639882464cb7c94830095401cfd63cafd10c12f4fbe507b8f8f",
+    ".agents/runtime/rename-20261014/identity-destination-review/identity-relocation-review.json": "5144bfeaf91dbb65f6335157a523c806e38bbce60ca0119835bb9d2087c725bc",
+    ".agents/runtime/br1-20261014/integrate.json": "c516b826476368596441d5c6c116f59e2882243d41d55a4b0d44fa3aafd36083",
+    ".agents/runtime/br1-20261014/destination-desktop.json": "817cfdf0593baff7e01480b1a424a26de8f688efe608f8bc7b8539e242d0da26",
+    ".agents/runtime/br1-20261014/active-destination-review/destination-review.json": "e601ffcee745eb77d629f065ce1fef7b94a5da680bb315f31f0bd47b47537808",
+    ".agents/hp3-20261014/TRANSFER-MANIFEST.json": "baeb856cb188655b3b3ad857c548cb3af4c0d24ec8e595910a25898c081f91a2",
+    ".agents/runtime/hp3-20261014/implement.json": "1d125c16e97d2d64c28040f9bff62dd63eb036eb8b5a6d89ad166df32907c3f4",
+    ".agents/runtime/hp3-20261014/complete-r3.json": "6704389b30522bc136a791f1806f4388d40a5121c49f2c14d18d219cc2495f65",
+    ".agents/runtime/hp1-root-review-20261014/partial-archive-verification.json": "a6c1fcb79523f7e247847db5510cc1a4c7ae233afbe6694e63184d92b3e5b9ef",
+    ".agents/runtime/hp3-20261014/independent-review/review.json": "11f0512ab58f86f9f8fda9af160c6991a13668a3cdcbc79c4f008cbd0549cc93"
+  },
+  "active_source_changes": 0,
+  "global_gate_or_requirement_changes": 0,
+  "earlier_tests_preserved": true,
+  "candidate_state": "PENDING_DISTINCT_REVIEW"
+}

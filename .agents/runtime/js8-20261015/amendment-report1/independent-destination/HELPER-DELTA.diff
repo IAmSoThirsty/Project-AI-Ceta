@@ -1,0 +1,47 @@
+--- T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-order1\independent-destination\review_support.py
++++ T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\independent-destination\review_support.py
+@@ -7,10 +7,10 @@
+ import os
+ import sys
+ 
+-F=Path('T:/00-Active/Project-AI-CETA');R=F/'.agents/runtime/js8-20261015/amendment-order1';Q=F/'.agents/js8-amendment-order1-20261017'
+-V=Path(__file__).resolve().parent;ACTOR='/root/integration_amendment_review'
+-PIN='6a99465610569df671fe736914ca2bd37f249e45794d3c6c4a7f5d044f32c31e'
+-AMENDMENT_PIN='3152785dde49c1cda26619b651ff89799ba03759c4594eb75004d110a75dadb4'
++F=Path('T:/00-Active/Project-AI-CETA');R=F/'.agents/runtime/js8-20261015/amendment-report1';Q=F/'.agents/js8-amendment-report1-20261017'
++V=Path(__file__).resolve().parent;ACTOR='/root/publication_recovery_review'
++PIN='2a3abde78bd4ab25af268ad1b16cef9eeaf9e2c30586c06fac4600876ba3c7c6'
++AMENDMENT_PIN='ad3091e4ac129d0efcecae70b45ff15d45d6dedcc0c52dc30efead3714929776'
+ sys.path.insert(0,str(R))
+ import amendment_support as j
+ from amendment_support import s,PY
+@@ -47,7 +47,9 @@
+     assert helper['manifest_sha256']==PIN and helper['completion_script_sha256']==value['completion_script_sha256']
+     claim=j.require_current_claim()
+     assert value['claim_input_hash']==claim['input_hash'] and value['claim_started_at']==claim['claimed_at']
+-    for phase in ('candidate-full','destination-full'):
++    j.require_candidate_readiness(value['candidate_readiness'],source='after')
++    j.require_validation(value['candidate_readiness'],source='after')
++    for phase in ('destination-full',):
+         proof_path,full=j.proof(value[phase.replace('-','_')])
+         launch_path,launch=j.proof(value[phase.replace('-','_')+'_launch'])
+         assert proof_path==R/phase/'RESULT.json' and launch_path==R/(phase+'-LAUNCH-RESULT.json')
+@@ -55,6 +57,7 @@
+     application_path,application=j.proof(value['application'])
+     assert application_path==R/'active-application/APPLIED.json'
+     assert application['paths']==m['application_paths'] and application['Source_accepted'] is False
++    assert application['candidate_readiness']==value['candidate_readiness']
+     assert set(application['source352'])==set(m['expected_payload_hashes'])
+     for name,row in application['source352'].items():
+         assert row['sha256']==m['expected_payload_hashes'][name] and s.ordinary(F/name)==row
+--- T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-order1\independent-destination\record_actual_delivered_review.py
++++ T:\00-Active\Project-AI-CETA\.agents\runtime\js8-20261015\amendment-report1\independent-destination\record_actual_delivered_review.py
+@@ -82,7 +82,7 @@
+     value=dict(schema_version=1,at=s.utc(),decision='approved',exit_status=0,reviewer=ACTOR,
+         manifest_sha256=PIN,source_root=str(F),expected_payload_hashes=m['expected_payload_hashes'],
+         application=release['application'],destination_full=release['destination_full'],destination_full_launch=release['destination_full_launch'],
+-        candidate_full=release['candidate_full'],candidate_full_launch=release['candidate_full_launch'],
++        candidate_readiness=release['candidate_readiness'],candidate_full_status='FAILED_PRESERVED',
+         independent_source_proof=j.exact_ref(result_path),independent_raw_proof=j.exact_ref(raw_path),
+         independent_launch_proof=j.exact_ref(V/'LAUNCH-RESULT.json'),custody=j.exact_ref(output/'CUSTODY.json'),
+         native_cpu_custody=j.exact_ref(output/'NATIVE-SEVEN-CUSTODY.json'),native_owners_proof=j.exact_ref(output/'NATIVE-OWNERS.json'),

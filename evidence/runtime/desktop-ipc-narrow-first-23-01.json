@@ -1,0 +1,46 @@
+{
+  "result": "PASS",
+  "scope": "SEVEN_EXPLICIT_PURE_TEST_INPUTS_ONLY;NO_NATIVE_OR_FULL_INVENTORY_CLAIM",
+  "command": [
+    "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/contract",
+    "-p",
+    "test_local_ipc.py",
+    "-v"
+  ],
+  "started_at_utc": "2026-10-08T14:20:14.665753+00:00",
+  "observed_at_utc": "2026-10-08T14:20:19.133429+00:00",
+  "returncode": 0,
+  "tests_run": 16,
+  "source_before_sha256": {
+    "src/ceta/contracts/local_ipc.py": "dea43011545c66c327ec07eba4dd87099162571842bb45393cc18c0134f98fbc",
+    "src/ceta/contracts/wire.py": "ddbd04d6ce1c7dcd92c040a87d54da5c870d9ade3a5054784948242663f7306e",
+    "src/ceta/contracts/kernel_transactions.py": "7e5a4f77b75c2cb3dfbeeabadf87a6d5516fc362f5691ba58a3fdbc9c72e7bc6",
+    "src/ceta/contracts/store_transactions.py": "8531ead603b354ded7ce5341d28cd7d2a23a77f18198d39c74985768012b9bb1",
+    "contracts/schemas/records.schema.json": "f83f8a1116492266aa9ffbbf85c4e4677218e99d8771f0de61a3affef8313f79",
+    "tests/contract/test_local_ipc.py": "23009c7d9c13ab0bff45d50a994be851da1501ec47b36fee9ed342a2041ae83a",
+    "tests/contract/test_all_records.py": "d59723fc6c001a7b8ca74488cc7f728c2f840fd67c5a0380a039e1fdc4cda0ea"
+  },
+  "source_after_sha256": {
+    "src/ceta/contracts/local_ipc.py": "dea43011545c66c327ec07eba4dd87099162571842bb45393cc18c0134f98fbc",
+    "src/ceta/contracts/wire.py": "ddbd04d6ce1c7dcd92c040a87d54da5c870d9ade3a5054784948242663f7306e",
+    "src/ceta/contracts/kernel_transactions.py": "7e5a4f77b75c2cb3dfbeeabadf87a6d5516fc362f5691ba58a3fdbc9c72e7bc6",
+    "src/ceta/contracts/store_transactions.py": "8531ead603b354ded7ce5341d28cd7d2a23a77f18198d39c74985768012b9bb1",
+    "contracts/schemas/records.schema.json": "f83f8a1116492266aa9ffbbf85c4e4677218e99d8771f0de61a3affef8313f79",
+    "tests/contract/test_local_ipc.py": "23009c7d9c13ab0bff45d50a994be851da1501ec47b36fee9ed342a2041ae83a",
+    "tests/contract/test_all_records.py": "d59723fc6c001a7b8ca74488cc7f728c2f840fd67c5a0380a039e1fdc4cda0ea"
+  },
+  "source_unchanged": true,
+  "complete_log_sha256": "6a11d46df68052855ec4631db39e23f8ea2e1c8af6a4ef79cbb57dd4aa50328d",
+  "native_execution": "NOT_RUN",
+  "original_acceptance": "128_NOT_RUN",
+  "gate_a": "OPEN",
+  "full_objective": "ACTIVE_NOT_COMPLETE"
+}

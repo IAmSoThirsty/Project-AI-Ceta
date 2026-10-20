@@ -1,0 +1,30 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "node",
+    "cancel",
+    "js9-runtime-20261020",
+    "discover",
+    "--executor",
+    "/root/recovery_regression20",
+    "--reason",
+    "Preserved bounded-scope binding correction: full-project snapshot was unnecessarily broad; successor uses explicit disjoint Q and R writer claims.",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020"
+  ],
+  "exit_status": 1,
+  "response": {
+    "allowed": false,
+    "code": "RUNTIME_LOCKED",
+    "details": {
+      "created_at": "2026-10-20T08:55:01.105904+00:00",
+      "host": "Thirstys-Computer",
+      "pid": 22428,
+      "token": "0e20fde8751d4a3abc50efae6284836d"
+    },
+    "message": "Run js9-runtime-20261020 is locked by another orchestrator"
+  }
+}

@@ -1,0 +1,37 @@
+# 02-IDENTITY-AND-AUTHORITY - test matrix
+
+## Unit-level acceptance coverage
+
+Every source specification defines ten concrete test obligations: required behavior, a domain-specific adverse case, schema compatibility, stale references, access, bounds and interruption, concurrency, recovery, real integration, and independent proof. These are planned tests, not runtime results.
+
+| Unit | Acceptance IDs | Positive oracle | Negative oracle | Initial execution state |
+| --- | --- | --- | --- | --- |
+| [CETA-02.01.01 / principal-registry](02.01-PRINCIPAL-IDENTITY/principal-registry.file.README.md) | AT-CETA-02.01.01-01 through AT-CETA-02.01.01-10 | Revoking a credential leaves historical actions attributable to the same principal. | Display-name equality merges two distinct principals. | NOT EXECUTED |
+| [CETA-02.01.02 / identity-proof-verifier](02.01-PRINCIPAL-IDENTITY/identity-proof-verifier.file.README.md) | AT-CETA-02.01.02-01 through AT-CETA-02.01.02-10 | A fresh proof for the intended session authenticates its bound principal. | A captured proof is replayed against another audience or challenge. | NOT EXECUTED |
+| [CETA-02.01.03 / identity-binding-controller](02.01-PRINCIPAL-IDENTITY/identity-binding-controller.file.README.md) | AT-CETA-02.01.03-01 through AT-CETA-02.01.03-10 | A restarted process obtains a new binding before sensitive requests proceed. | A reused process identifier inherits another process's authority. | NOT EXECUTED |
+| [CETA-02.02.01 / authenticated-session-manager](02.02-SESSION-AUTHORITY/authenticated-session-manager.file.README.md) | AT-CETA-02.02.01-01 through AT-CETA-02.02.01-10 | A session survives an allowed interface reconnect only after context validation. | A restored conversation record is treated as an authenticated session. | NOT EXECUTED |
+| [CETA-02.02.02 / session-scope-validator](02.02-SESSION-AUTHORITY/session-scope-validator.file.README.md) | AT-CETA-02.02.02-01 through AT-CETA-02.02.02-10 | A scoped session authorizes only the explicitly requested permitted resource. | A request includes a second resource outside the session grant. | NOT EXECUTED |
+| [CETA-02.02.03 / session-expiration-controller](02.02-SESSION-AUTHORITY/session-expiration-controller.file.README.md) | AT-CETA-02.02.03-01 through AT-CETA-02.02.03-10 | Crossing the session deadline prevents the next effect and records interrupted work. | Clock rollback extends a previously expired session. | NOT EXECUTED |
+| [CETA-02.03.01 / capability-token-issuer](02.03-CAPABILITY-TOKENS/capability-token-issuer.file.README.md) | AT-CETA-02.03.01-01 through AT-CETA-02.03.01-10 | A valid approved write produces a token usable only for the approved target and content. | A caller requests token issuance without a matching governance decision. | NOT EXECUTED |
+| [CETA-02.03.02 / capability-token-validator](02.03-CAPABILITY-TOKENS/capability-token-validator.file.README.md) | AT-CETA-02.03.02-01 through AT-CETA-02.03.02-10 | Concurrent attempts to consume a single-use token produce at most one admitted operation. | A signature-valid token has been revoked and is still accepted from cache. | NOT EXECUTED |
+| [CETA-02.03.03 / capability-scope-evaluator](02.03-CAPABILITY-TOKENS/capability-scope-evaluator.file.README.md) | AT-CETA-02.03.03-01 through AT-CETA-02.03.03-10 | A target resolved to the approved stable resource identity is accepted. | A directory link redirects an approved path into an unauthorized location. | NOT EXECUTED |
+| [CETA-02.04.01 / delegation-graph](02.04-DELEGATED-AUTHORITY/delegation-graph.file.README.md) | AT-CETA-02.04.01-01 through AT-CETA-02.04.01-10 | Revoking a parent identifies all descendant grants and pending tasks. | A delegation edge creates a cycle or implicitly unions unrelated grants. | NOT EXECUTED |
+| [CETA-02.04.02 / delegation-boundary-checker](02.04-DELEGATED-AUTHORITY/delegation-boundary-checker.file.README.md) | AT-CETA-02.04.02-01 through AT-CETA-02.04.02-10 | A read-only child scope remains within its parent's resource and time bounds. | A delegate grants write permission from a read-only parent. | NOT EXECUTED |
+| [CETA-02.04.03 / authority-revocation-controller](02.04-DELEGATED-AUTHORITY/authority-revocation-controller.file.README.md) | AT-CETA-02.04.03-01 through AT-CETA-02.04.03-10 | A revoked grant prevents a queued operation from starting. | A revocation race is hidden by reporting the entire operation as cancelled despite committed effects. | NOT EXECUTED |
+| [CETA-02.05.01 / owner-recovery-controller](02.05-AUTHORITY-RECOVERY/owner-recovery-controller.file.README.md) | AT-CETA-02.05.01-01 through AT-CETA-02.05.01-10 | Valid recovery proofs restore owner access and revoke superseded session grants. | Possession of a copied data directory alone authorizes owner takeover. | NOT EXECUTED |
+| [CETA-02.05.02 / authority-rotation-manager](02.05-AUTHORITY-RECOVERY/authority-rotation-manager.file.README.md) | AT-CETA-02.05.02-01 through AT-CETA-02.05.02-10 | Historical signatures remain verifiable after a properly recorded key rotation. | A retired key continues issuing new capabilities. | NOT EXECUTED |
+| [CETA-02.05.03 / authority-integrity-verifier](02.05-AUTHORITY-RECOVERY/authority-integrity-verifier.file.README.md) | AT-CETA-02.05.03-01 through AT-CETA-02.05.03-10 | A restored authority store passes ancestry and revocation consistency checks. | A restored backup silently erases a later known revocation. | NOT EXECUTED |
+
+
+## Component and subsystem tests
+
+| Component | Integrated behavior | Invariant |
+| --- | --- | --- |
+| [02.01](02.01-PRINCIPAL-IDENTITY/README.md) | Enroll a principal through an authorized process; verify credentials; bind device and process identities where required; rotate or revoke without losing attribution. | An agent, human, process, and device have distinct identities even when associated. |
+| [02.02](02.02-SESSION-AUTHORITY/README.md) | Establish a session; calculate its permitted scope; refresh only through valid reauthentication; terminate and invalidate cached authority. | A session refresh cannot restore revoked or expired parent authority. |
+| [02.03](02.03-CAPABILITY-TOKENS/README.md) | Issue a capability from approved authority; bind exact scope and effect inputs; validate authenticity and current status; consume or revoke according to its usage rule. | The capability issuer cannot manufacture governance approval; it consumes validated approval references. |
+| [02.04](02.04-DELEGATED-AUTHORITY/README.md) | Construct a bounded delegation graph; verify parent-child attenuation; propagate revocation; reevaluate dependent work at admission and effect boundaries. | A child cannot outlive or exceed its parent grant; revocation is checked along the entire ancestry. |
+| [02.05](02.05-AUTHORITY-RECOVERY/README.md) | Enter a restricted recovery flow; verify configured recovery proofs; rotate affected authority; invalidate old credentials; test restored control before reopening effects. | Recovery uses preapproved proof requirements and never creates an unaudited emergency bypass. |
+
+
+Run these flows through actual local implementations after unit tests. Bind results to exact source, dependencies, configuration, environment, and artifact bytes. A mock-only test cannot qualify a native enforcement or installed-product claim. Preserve failed, blocked, skipped, and not-executed cases separately. Use [the cross-system scenarios](../ACCEPTANCE-CRITERIA/END-TO-END-SCENARIOS/README.md) for user-workflow qualification.

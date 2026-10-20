@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-10-20T12:34:30.807400+00:00",
+  "actual_response": {
+    "argv": [
+      "powershell",
+      "-NoProfile",
+      "-File",
+      "T:/02-Config/agents/taar-orchestrate.ps1",
+      "node",
+      "complete",
+      "ceta-git-publication-20261020",
+      "verify_polyglot27",
+      "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\git-publication-20261020\\control\\verify_polyglot27-receipt-r2.json",
+      "--runtime-root",
+      "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\git-publication-20261020\\control"
+    ],
+    "exit_status": 1,
+    "response": {
+      "allowed": false,
+      "code": "EXECUTION_FAILED",
+      "details": {},
+      "message": "Receipt records unsuccessful execution"
+    }
+  },
+  "node_state": {
+    "artifact_hash": null,
+    "changed_files": [],
+    "claim": null,
+    "completed_at": "2026-10-20T12:34:30.731888+00:00",
+    "decision": null,
+    "effective_write_scope": [],
+    "executor_id": "/root/verify_polyglot27",
+    "reason": "Receipt records unsuccessful execution",
+    "receipt_hash": "b1e45dbc694a9c2edc56c5c845847b53ea17eba416895ba80c3dc487a2cb857d",
+    "receipt_ref": "receipts/verify_polyglot27.json",
+    "state": "FAILED",
+    "validation_passed": false,
+    "workspace": "T:\\00-Active\\Project-AI-CETA\\.git"
+  },
+  "claim_still_present": false,
+  "corrected_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\git-publication-20261020\\control\\verify_polyglot27-receipt-r2.json",
+  "corrected_receipt_sha256": "8f1d8907b9fd18df631c392077e15770ee8e7b1820aa6f4b588135a5ce0ab516"
+}

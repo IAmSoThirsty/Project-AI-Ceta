@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "run_id": "js8-20261015",
+  "node_id": "integrate",
+  "executor_id": "/root",
+  "started_at": "2026-10-18T01:48:45.914775+00:00",
+  "finished_at": "2026-10-18T02:46:56.765902+00:00",
+  "input_hash": "30d07dbc5af0d2696d910011c7d4bb94eedec363aee7c61499a632b7c8e9c266",
+  "changed_files": [
+    "00-Active/Project-AI-CETA/contracts/ISOLATED_WORKER_V1.md",
+    "00-Active/Project-AI-CETA/contracts/NATIVE_CODE_BINDING_V1.md",
+    "00-Active/Project-AI-CETA/contracts/NATIVE_CPU_BINDING_V1.md",
+    "00-Active/Project-AI-CETA/contracts/NATIVE_EFFECT_OBSERVER_V1.md",
+    "00-Active/Project-AI-CETA/contracts/NATIVE_OWNER_APPROVAL_V1.md",
+    "00-Active/Project-AI-CETA/contracts/NATIVE_OWNER_SESSION_V1.md",
+    "00-Active/Project-AI-CETA/contracts/NATIVE_OWNER_VIEW_V1.md",
+    "00-Active/Project-AI-CETA/contracts/NATIVE_SESSION_CLOCK_V1.md",
+    "00-Active/Project-AI-CETA/contracts/OWNED_CPU_EXECUTION_V1.md",
+    "00-Active/Project-AI-CETA/contracts/OWNED_CPU_OUTCOME_V1.md",
+    "00-Active/Project-AI-CETA/contracts/OWNER_AUTHORITY_V1.md",
+    "00-Active/Project-AI-CETA/contracts/OWNER_ENROLLMENT_V1.md",
+    "00-Active/Project-AI-CETA/contracts/REAL_EFFECT_V1.md",
+    "00-Active/Project-AI-CETA/contracts/WORKLOAD_THROTTLING_V1.md",
+    "00-Active/Project-AI-CETA/native/windows_broker/effect_observer.rs",
+    "00-Active/Project-AI-CETA/native/windows_broker/isolated_worker.rs",
+    "00-Active/Project-AI-CETA/native/windows_broker/owner_approval.cpp",
+    "00-Active/Project-AI-CETA/src/ceta/contracts/owner_enrollment.py",
+    "00-Active/Project-AI-CETA/src/ceta/contracts/real_effect.py",
+    "00-Active/Project-AI-CETA/src/ceta/contracts/workload_throttling.py",
+    "00-Active/Project-AI-CETA/src/ceta/effects/native_cpu_binding.py",
+    "00-Active/Project-AI-CETA/src/ceta/effects/native_observer.py",
+    "00-Active/Project-AI-CETA/src/ceta/identity/native_approval.py",
+    "00-Active/Project-AI-CETA/src/ceta/identity/native_clock.py",
+    "00-Active/Project-AI-CETA/src/ceta/identity/native_code_binding.py",
+    "00-Active/Project-AI-CETA/src/ceta/identity/native_owner_view.py",
+    "00-Active/Project-AI-CETA/src/ceta/identity/owner_session.py",
+    "00-Active/Project-AI-CETA/src/ceta/kernel/cpu_execution.py",
+    "00-Active/Project-AI-CETA/src/ceta/kernel/effect_transactions.py",
+    "00-Active/Project-AI-CETA/src/ceta/kernel/owner_authority.py",
+    "00-Active/Project-AI-CETA/src/ceta/kernel/resource_reservations.py",
+    "00-Active/Project-AI-CETA/src/ceta/kernel/transactions.py",
+    "00-Active/Project-AI-CETA/src/ceta/resource/pressure.py",
+    "00-Active/Project-AI-CETA/src/ceta/supervisor/isolated_worker.py",
+    "00-Active/Project-AI-CETA/src/ceta/supervisor/windows_jobs.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_cpu_execution_admission.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_cpu_execution_cross_kernel.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_cpu_execution_registration_interruptions.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_cpu_execution_timing_diagnostics.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_fresh_observer_reconciliation.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_isolated_worker.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_isolation_token_diagnostics.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_kernel_initializer_publication.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_code_binding.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_cpu_binding.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_cpu_owner_approval.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_effect_observer.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_owner_approval.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_owner_preparation.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_owner_session.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_owner_view.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_native_session_clock.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_owned_cpu_outcome_transactions.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_owner_authority_transactions.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_owner_enrollment.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_owner_enrollment_guid.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_owner_session_cleanup.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_owner_session_context_boundary.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_real_effect_contract.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_windows_throttling.py",
+    "00-Active/Project-AI-CETA/tests/contract/test_workload_throttling.py"
+  ],
+  "result": {
+    "manifest_sha256": "2a3abde78bd4ab25af268ad1b16cef9eeaf9e2c30586c06fac4600876ba3c7c6",
+    "application": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/active-application/APPLIED.json",
+      "sha256": "b22b2f404a8373be3eb7bcd2ab9c974f5dba187aed2c787fb62f54fac7508a87"
+    },
+    "source_publication_preflight": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/SOURCE-PUBLICATION-PREFLIGHT.json",
+      "sha256": "8cb05807ad689def986e1df73a7ed6944cd9687c2691b9e44d66fca92cf1f86b"
+    },
+    "prior_failed_candidate": {
+      "result": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/RESULT.json",
+        "sha256": "18be4285d1d126fa5e679447c251ee4db8fb8917ca22ea63da307066936dfaa3"
+      },
+      "launch": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full-LAUNCH-RESULT.json",
+        "sha256": "188f8b71d723bc553d7d0b1a5184c1a7abed7bab7cb613c2a496f1cf58a593e0"
+      },
+      "command": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full-COMMAND.json",
+        "sha256": "ec1f42f25137f3b61474a6c66f4b4f8ffdd53c20776cbc2e9b78bf3f11dcfcb0"
+      },
+      "preflight": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/PREFLIGHT.json",
+        "sha256": "f5b488b65ac825c32e3e5d1839575cc5e24573642b12e79a310cf4967143ad84"
+      },
+      "raw": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/RAW.txt",
+        "sha256": "ac55dc7928dc632c61af3751968f492bf22fd7f404c03388683f2bf7ca1be4da"
+      },
+      "events": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/CASE-EVENTS.jsonl",
+        "sha256": "b99ee9dc611d92f6c2c7aaee2d05e82492d35c192667eee1458530179618a122"
+      },
+      "physical": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/PHYSICAL-CUSTODY.json",
+        "sha256": "5581f54b5661cd884b373f0f30df6445ac8ebac5d22c4c053d365f3a5c676c86"
+      },
+      "native": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/NATIVE-CASE-PROOF.json",
+        "sha256": "b1e4caa03735c8dd36ae98e307125f2092138218c2051b656f705edd31990c25"
+      },
+      "sqlite_receipts": {
+        "repository_relative_path": ".agents/runtime/js8-20261015/amendment-order1/candidate-full/SQLITE-RECEIPTS.json",
+        "sha256": "de06d655196a19fbe196fc2b67ae074699088a58e068873035742b3e6f4d844f"
+      }
+    },
+    "destination_full": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/destination-full/RESULT.json",
+      "sha256": "632c26363e8611bda9f822438745e371e82480c5687120cfa6cc97eba2ec9f85"
+    },
+    "destination_full_launch": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/destination-full-LAUNCH-RESULT.json",
+      "sha256": "6af75ac47ffb889361df76ed68c4fa9fe6344e7ff7c6f4b8b05a9dc7e54b8886"
+    },
+    "delivered_review": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/amendment-fixture2/DELIVERED-REVIEW.json",
+      "sha256": "9017c0e7b158b1adc42935d9f8cae54bef32de94cc745830dfad3bb2cd5339e5"
+    },
+    "completion_helper_review": {
+      "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/COMPLETION-HELPER-REVIEW-R2.json",
+      "sha256": "4ec105fd63463c41bb286089c7d081e981c53be5c509d1b1bf0358bd19b312a9"
+    },
+    "Source_payloads": 352,
+    "tests_run": 2334,
+    "Source_accepted": true
+  },
+  "commands": [
+    {
+      "command": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js8-20261015\\amendment-report1\\launch_full.py destination-full --release-path T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js8-20261015\\amendment-report1\\releases\\destination-full.json --release-sha256 8f9051efaff31e8d8bfcc62801f28719379673382606696a24e613059400260b",
+      "exit_status": 0
+    },
+    {
+      "command": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js8-20261015\\amendment-report1\\independent-destination\\amendment-fixture2\\run_delivered.py --release-path T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js8-20261015\\amendment-report1\\releases\\delivered-review-fixture2.json --release-sha256 bd04e03c63ba72ffdaf26076943e1bf2ed1a8e84b2e5af301c1aa39f848c803a",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "exact295_Source/native_originals_E3_full_and_delivered_proofs",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

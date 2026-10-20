@@ -1,0 +1,18 @@
+interpreter=T:\03-Toolchains\Hermes\hermes-agent\venv\Scripts\python.exe
+version=3.11.15
+== scenario running ==
+BOOT trust_present=True
+  start db
+  start policy
+  start api
+BOOT_RESULT state=running started=('db', 'policy', 'api') dispatch_open=True
+SHUTDOWN begin
+  stop api
+  stop policy
+  stop db
+SHUTDOWN_RESULT state=stopped stop_order=('api', 'policy', 'db')
+== scenario missing-dependency ==
+REFUSED code=missing_dependency state=created
+== scenario maintenance ==
+BOOT trust_present=False
+BOOT_RESULT state=maintenance started=() dispatch_open=False

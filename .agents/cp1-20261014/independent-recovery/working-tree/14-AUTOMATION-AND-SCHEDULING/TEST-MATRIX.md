@@ -1,0 +1,37 @@
+# 14-AUTOMATION-AND-SCHEDULING - test matrix
+
+## Unit-level acceptance coverage
+
+Every source specification defines ten concrete test obligations: required behavior, a domain-specific adverse case, schema compatibility, stale references, access, bounds and interruption, concurrency, recovery, real integration, and independent proof. These are planned tests, not runtime results.
+
+| Unit | Acceptance IDs | Positive oracle | Negative oracle | Initial execution state |
+| --- | --- | --- | --- | --- |
+| [CETA-14.01.01 / schedule-contract](14.01-SCHEDULE-DEFINITIONS/schedule-contract.file.README.md) | AT-CETA-14.01.01-01 through AT-CETA-14.01.01-10 | A recurring schedule has an unambiguous next occurrence and renewal requirement. | A schedule omits timezone and silently uses whatever the host currently reports. | NOT EXECUTED |
+| [CETA-14.01.02 / schedule-registry](14.01-SCHEDULE-DEFINITIONS/schedule-registry.file.README.md) | AT-CETA-14.01.02-01 through AT-CETA-14.01.02-10 | Deactivating a schedule prevents future admissions while preserving occurrence history. | A stale scheduler instance continues launching a deactivated schedule. | NOT EXECUTED |
+| [CETA-14.01.03 / schedule-validation-engine](14.01-SCHEDULE-DEFINITIONS/schedule-validation-engine.file.README.md) | AT-CETA-14.01.03-01 through AT-CETA-14.01.03-10 | A valid schedule is simulated across boundary dates before activation. | A recurrence can create unbounded overlapping tasks without explicit approval. | NOT EXECUTED |
+| [CETA-14.02.01 / recurring-trigger-controller](14.02-TIME-TRIGGERS/recurring-trigger-controller.file.README.md) | AT-CETA-14.02.01-01 through AT-CETA-14.02.01-10 | A daylight-time transition follows the explicitly configured skip or repeat behavior. | A repeated local clock hour launches the same occurrence twice accidentally. | NOT EXECUTED |
+| [CETA-14.02.02 / one-time-trigger-controller](14.02-TIME-TRIGGERS/one-time-trigger-controller.file.README.md) | AT-CETA-14.02.02-01 through AT-CETA-14.02.02-10 | Restart near the due time results in one claimed occurrence. | Two scheduler workers both launch the same one-time task. | NOT EXECUTED |
+| [CETA-14.02.03 / time-window-evaluator](14.02-TIME-TRIGGERS/time-window-evaluator.file.README.md) | AT-CETA-14.02.03-01 through AT-CETA-14.02.03-10 | A task due outside its allowed window moves to the next valid window according to policy. | Clock rollback extends an expired execution window indefinitely. | NOT EXECUTED |
+| [CETA-14.03.01 / system-event-listener](14.03-EVENT-TRIGGERS/system-event-listener.file.README.md) | AT-CETA-14.03.01-01 through AT-CETA-14.03.01-10 | A reconnect resumes from a known sequence or records an explicit gap. | Lost events are silently assumed not to have occurred. | NOT EXECUTED |
+| [CETA-14.03.02 / resource-change-watcher](14.03-EVENT-TRIGGERS/resource-change-watcher.file.README.md) | AT-CETA-14.03.02-01 through AT-CETA-14.03.02-10 | Rapid changes consolidate into an occurrence tied to the final inspected revision. | Watcher overflow is treated as complete coverage of all changes. | NOT EXECUTED |
+| [CETA-14.03.03 / event-condition-evaluator](14.03-EVENT-TRIGGERS/event-condition-evaluator.file.README.md) | AT-CETA-14.03.03-01 through AT-CETA-14.03.03-10 | A matching authorized event produces the expected task occurrence. | A crafted event changes the condition or injects a new task definition. | NOT EXECUTED |
+| [CETA-14.04.01 / automation-job-dispatcher](14.04-AUTOMATION-DISPATCH/automation-job-dispatcher.file.README.md) | AT-CETA-14.04.01-01 through AT-CETA-14.04.01-10 | Duplicate trigger deliveries resolve to the same admitted task. | A queue retry creates a new task with the same external effect. | NOT EXECUTED |
+| [CETA-14.04.02 / scheduled-authority-validator](14.04-AUTOMATION-DISPATCH/scheduled-authority-validator.file.README.md) | AT-CETA-14.04.02-01 through AT-CETA-14.04.02-10 | An expired recurring grant pauses the next occurrence with a clear renewal request. | A schedule continues indefinitely on the authority present at creation. | NOT EXECUTED |
+| [CETA-14.04.03 / automation-concurrency-controller](14.04-AUTOMATION-DISPATCH/automation-concurrency-controller.file.README.md) | AT-CETA-14.04.03-01 through AT-CETA-14.04.03-10 | A nonoverlapping schedule queues or skips according to its approved policy. | A replacement starts before the previous effectful task has actually stopped. | NOT EXECUTED |
+| [CETA-14.05.01 / missed-trigger-reconciler](14.05-AUTOMATION-CONTINUITY/missed-trigger-reconciler.file.README.md) | AT-CETA-14.05.01-01 through AT-CETA-14.05.01-10 | A long outage produces only the configured bounded catch-up set. | Every missed occurrence is replayed automatically despite expired inputs. | NOT EXECUTED |
+| [CETA-14.05.02 / automation-recovery-controller](14.05-AUTOMATION-CONTINUITY/automation-recovery-controller.file.README.md) | AT-CETA-14.05.02-01 through AT-CETA-14.05.02-10 | Recovery reconnects an already running task rather than launching another copy. | A lost dispatch acknowledgement triggers a duplicate task. | NOT EXECUTED |
+| [CETA-14.05.03 / automation-outcome-recorder](14.05-AUTOMATION-CONTINUITY/automation-outcome-recorder.file.README.md) | AT-CETA-14.05.03-01 through AT-CETA-14.05.03-10 | A failed task remains a failed automation occurrence despite successful scheduling. | Dispatch success is reported as completion of the scheduled work. | NOT EXECUTED |
+
+
+## Component and subsystem tests
+
+| Component | Integrated behavior | Invariant |
+| --- | --- | --- |
+| [14.01](14.01-SCHEDULE-DEFINITIONS/README.md) | Define trigger and task binding; validate time and effect semantics; approve authority scope; register a durable schedule revision; expose next planned occurrences. | Every recurring schedule defines timezone, overlap, expiry, missed-run, and cancellation semantics. |
+| [14.02](14.02-TIME-TRIGGERS/README.md) | Compute occurrences using declared calendar semantics; handle clock changes; acquire a durable occurrence claim; dispatch once per occurrence identity. | Wall-clock changes cannot duplicate an already claimed occurrence. |
+| [14.03](14.03-EVENT-TRIGGERS/README.md) | Observe scoped events; authenticate source; normalize and deduplicate; evaluate conditions; create a stable occurrence linked to the source event. | An event payload is untrusted data and cannot modify its own trigger authority. |
+| [14.04](14.04-AUTOMATION-DISPATCH/README.md) | Claim an occurrence; validate schedule revision and current authority; acquire concurrency and resources; submit a durable task; record admission or blocking reason. | Authorization is checked when the scheduled action runs, not only when the schedule was created. |
+| [14.05](14.05-AUTOMATION-CONTINUITY/README.md) | Reconcile downtime and event gaps; apply approved catch-up rules; renew authority where needed; recover task links; record actual outcomes and remaining uncertainty. | Catch-up behavior cannot create a burst of unapproved or stale effects. |
+
+
+Run these flows through actual local implementations after unit tests. Bind results to exact source, dependencies, configuration, environment, and artifact bytes. A mock-only test cannot qualify a native enforcement or installed-product claim. Preserve failed, blocked, skipped, and not-executed cases separately. Use [the cross-system scenarios](../ACCEPTANCE-CRITERIA/END-TO-END-SCENARIOS/README.md) for user-workflow qualification.

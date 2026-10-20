@@ -1,0 +1,16 @@
+F
+======================================================================
+FAIL: test_nonreserved_sqlite_like_trigger_is_not_hidden_from_schema_check (__main__.HistoryPersistenceTests.test_nonreserved_sqlite_like_trigger_is_not_hidden_from_schema_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\CETA-desktop-delivery-20260906\rebuild_ios\tests\contract\test_history.py", line 249, in test_nonreserved_sqlite_like_trigger_is_not_hidden_from_schema_check
+    self.reject("JOURNAL_SCHEMA_MISMATCH", self.journal.append, before, (row,))
+  File "T:\00-Active\CETA-desktop-delivery-20260906\rebuild_ios\tests\contract\test_history.py", line 61, in reject
+    with self.assertRaises(ContractError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.052s
+
+FAILED (failures=1)

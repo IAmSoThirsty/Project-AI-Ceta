@@ -1,0 +1,1020 @@
+{
+  "started_at": "2026-10-20T09:30:43.263988+00:00",
+  "finished_at": "2026-10-20T09:30:45.302178+00:00",
+  "pid": 7424,
+  "command": [
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    ".agents/runtime/js9-runtime-20261020/run_controlled_composition_v2.py",
+    "--attempt",
+    "controlled_r3",
+    "--manifest",
+    "MANIFEST-PRETEST-R4.json",
+    "--cases",
+    "CONTROLLED-CASESET-R4.json"
+  ],
+  "interpreter": {
+    "executable": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+    "base_executable": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "prefix": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3",
+    "base_prefix": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312",
+    "orig_argv": [
+      "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      ".agents/runtime/js9-runtime-20261020/run_controlled_composition_v2.py",
+      "--attempt",
+      "controlled_r3",
+      "--manifest",
+      "MANIFEST-PRETEST-R4.json",
+      "--cases",
+      "CONTROLLED-CASESET-R4.json"
+    ]
+  },
+  "manifest_sha256": "7f79d570dbe6fa2dc2521ba56a11030c5cf80577aed6957591f67229f32c4443",
+  "case_sha256": "fb0e9487b8451b2765a916241f5f94de083039b7eb0db872e8930d9c4dc0d80a",
+  "runner_sha256": "66080a2f497de670917c8db5bf479b5737a1427a1e7a85d8cc069130d0714df5",
+  "tests_run": 45,
+  "failures": [],
+  "skipped": [],
+  "unexpected_successes": 0,
+  "exception": null,
+  "events": [
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_active_execution_retains_all_dependencies_and_allows_bookkeeping",
+      "at": "2026-10-20T09:30:43.594432+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_active_execution_retains_all_dependencies_and_allows_bookkeeping",
+      "at": "2026-10-20T09:30:43.636432+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_append_then_raise_is_deduplicated_before_cleanup",
+      "at": "2026-10-20T09:30:43.636432+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_append_then_raise_is_deduplicated_before_cleanup",
+      "at": "2026-10-20T09:30:43.661432+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_handle_preappend_failure_keeps_known_return_and_retires_once",
+      "at": "2026-10-20T09:30:43.661432+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_handle_preappend_failure_keeps_known_return_and_retires_once",
+      "at": "2026-10-20T09:30:43.687435+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_handle_registration_retry_failure_remains_pending_then_recovers",
+      "at": "2026-10-20T09:30:43.687435+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_handle_registration_retry_failure_remains_pending_then_recovers",
+      "at": "2026-10-20T09:30:43.717946+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_close_keeps_borrowed_journal_registry_clock_and_code",
+      "at": "2026-10-20T09:30:43.717946+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_close_keeps_borrowed_journal_registry_clock_and_code",
+      "at": "2026-10-20T09:30:43.744945+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_cannot_select_an_unregistered_scope",
+      "at": "2026-10-20T09:30:43.744945+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_cannot_select_an_unregistered_scope",
+      "at": "2026-10-20T09:30:43.769947+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_currentness_failure_acquires_no_owner_or_file_binding",
+      "at": "2026-10-20T09:30:43.769947+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_currentness_failure_acquires_no_owner_or_file_binding",
+      "at": "2026-10-20T09:30:43.800459+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_capacity_helper",
+      "at": "2026-10-20T09:30:43.800459+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_capacity_helper",
+      "at": "2026-10-20T09:30:43.839461+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_driver_source_path",
+      "at": "2026-10-20T09:30:43.839461+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_driver_source_path",
+      "at": "2026-10-20T09:30:43.872461+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_observer_image",
+      "at": "2026-10-20T09:30:43.872461+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_observer_image",
+      "at": "2026-10-20T09:30:43.904975+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_different_observer_clock",
+      "at": "2026-10-20T09:30:43.904975+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_different_observer_clock",
+      "at": "2026-10-20T09:30:43.937973+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_duplicate_manifest_names",
+      "at": "2026-10-20T09:30:43.937973+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_duplicate_manifest_names",
+      "at": "2026-10-20T09:30:43.970973+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_nonconcrete_runtime",
+      "at": "2026-10-20T09:30:43.970973+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_nonconcrete_runtime",
+      "at": "2026-10-20T09:30:44.002487+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_requires_each_retained_manifest_entry",
+      "at": "2026-10-20T09:30:44.002487+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_requires_each_retained_manifest_entry",
+      "at": "2026-10-20T09:30:44.032488+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_different_registry_store_codec_or_installation_denies_ingress",
+      "at": "2026-10-20T09:30:44.032488+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_different_registry_store_codec_or_installation_denies_ingress",
+      "at": "2026-10-20T09:30:44.067488+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_execute_requires_original_kernel_lease",
+      "at": "2026-10-20T09:30:44.067488+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_execute_requires_original_kernel_lease",
+      "at": "2026-10-20T09:30:44.097622+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_existing_five_argument_ingress_retains_closed_default",
+      "at": "2026-10-20T09:30:44.097622+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_existing_five_argument_ingress_retains_closed_default",
+      "at": "2026-10-20T09:30:44.128622+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_existing_ingress_captures_the_selected_kernel_and_identity",
+      "at": "2026-10-20T09:30:44.128622+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_existing_ingress_captures_the_selected_kernel_and_identity",
+      "at": "2026-10-20T09:30:44.161622+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_ingress_rejects_a_request_supplied_runtime_object",
+      "at": "2026-10-20T09:30:44.161622+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_ingress_rejects_a_request_supplied_runtime_object",
+      "at": "2026-10-20T09:30:44.194136+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_interrupt_after_owner_initializer_still_retires_published_owner",
+      "at": "2026-10-20T09:30:44.194136+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_interrupt_after_owner_initializer_still_retires_published_owner",
+      "at": "2026-10-20T09:30:44.230136+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_interrupted_native_open_preserves_unknown_output_without_false_closure",
+      "at": "2026-10-20T09:30:44.230136+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_interrupted_native_open_preserves_unknown_output_without_false_closure",
+      "at": "2026-10-20T09:30:44.265135+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_invalid_native_open_returns_are_known_no_acquisition_states",
+      "at": "2026-10-20T09:30:44.266136+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_invalid_native_open_returns_are_known_no_acquisition_states",
+      "at": "2026-10-20T09:30:44.293651+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_journal_capacity_from_another_runtime_is_denied",
+      "at": "2026-10-20T09:30:44.293651+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_journal_capacity_from_another_runtime_is_denied",
+      "at": "2026-10-20T09:30:44.319651+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_journal_without_selected_capacity_is_denied",
+      "at": "2026-10-20T09:30:44.319651+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_journal_without_selected_capacity_is_denied",
+      "at": "2026-10-20T09:30:44.344651+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_kernel_construction_interrupt_preserves_primary_and_retires_owned_pins",
+      "at": "2026-10-20T09:30:44.344651+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_kernel_construction_interrupt_preserves_primary_and_retires_owned_pins",
+      "at": "2026-10-20T09:30:44.377654+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_main_propagates_primary_contract_error_with_actionable_receiver_custody",
+      "at": "2026-10-20T09:30:44.377654+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_main_propagates_primary_contract_error_with_actionable_receiver_custody",
+      "at": "2026-10-20T09:30:44.433164+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_native_binding_initializer_failure_before_api_publication_retains_partial_owner",
+      "at": "2026-10-20T09:30:44.433164+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_native_binding_initializer_failure_before_api_publication_retains_partial_owner",
+      "at": "2026-10-20T09:30:44.469164+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_no_api_with_contradictory_pin_state_is_preserved_and_denied",
+      "at": "2026-10-20T09:30:44.469164+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_no_api_with_contradictory_pin_state_is_preserved_and_denied",
+      "at": "2026-10-20T09:30:44.496676+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_observer_retirement_failure_retains_owner_and_file_pins",
+      "at": "2026-10-20T09:30:44.496676+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_observer_retirement_failure_retains_owner_and_file_pins",
+      "at": "2026-10-20T09:30:44.526676+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_original_lease_delegates_to_existing_adapter_only",
+      "at": "2026-10-20T09:30:44.526676+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_original_lease_delegates_to_existing_adapter_only",
+      "at": "2026-10-20T09:30:44.562676+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_partial_native_binding_failure_preserves_primary_and_cleanup_custody",
+      "at": "2026-10-20T09:30:44.562676+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_partial_native_binding_failure_preserves_primary_and_cleanup_custody",
+      "at": "2026-10-20T09:30:44.592734+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_pending_queue_retains_primary_and_allows_explicit_close_retry",
+      "at": "2026-10-20T09:30:44.592734+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_pending_queue_retains_primary_and_allows_explicit_close_retry",
+      "at": "2026-10-20T09:30:44.623736+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_queue_is_retired_with_preregistered_pin_row",
+      "at": "2026-10-20T09:30:44.623736+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_queue_is_retired_with_preregistered_pin_row",
+      "at": "2026-10-20T09:30:44.653734+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_without_file_opens_uses_original_cleanup_once",
+      "at": "2026-10-20T09:30:44.653734+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_without_file_opens_uses_original_cleanup_once",
+      "at": "2026-10-20T09:30:44.685739+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_real_owner_captures_capacity_and_provenance_before_same_kernel_binding",
+      "at": "2026-10-20T09:30:44.685739+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_real_owner_captures_capacity_and_provenance_before_same_kernel_binding",
+      "at": "2026-10-20T09:30:44.720947+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_replaced_capacity_port_on_same_view_is_denied",
+      "at": "2026-10-20T09:30:44.720947+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_replaced_capacity_port_on_same_view_is_denied",
+      "at": "2026-10-20T09:30:44.752947+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_runtime_rejects_other_thread_and_serialization",
+      "at": "2026-10-20T09:30:44.752947+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_runtime_rejects_other_thread_and_serialization",
+      "at": "2026-10-20T09:30:44.793433+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_selected_configuration_does_not_create_authority_records",
+      "at": "2026-10-20T09:30:44.793433+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_selected_configuration_does_not_create_authority_records",
+      "at": "2026-10-20T09:30:44.827434+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_control_message_cannot_select_native_dependencies",
+      "at": "2026-10-20T09:30:44.828435+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_control_message_cannot_select_native_dependencies",
+      "at": "2026-10-20T09:30:44.859434+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_denies_scope_or_unqualified_config_before_opening_journal",
+      "at": "2026-10-20T09:30:44.859434+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_denies_scope_or_unqualified_config_before_opening_journal",
+      "at": "2026-10-20T09:30:44.888437+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_journal_selects_exact_configured_runtime",
+      "at": "2026-10-20T09:30:44.888437+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_journal_selects_exact_configured_runtime",
+      "at": "2026-10-20T09:30:44.916945+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_preserves_completed_constructor_cleanup_without_automatic_retry",
+      "at": "2026-10-20T09:30:44.916945+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_preserves_completed_constructor_cleanup_without_automatic_retry",
+      "at": "2026-10-20T09:30:44.946945+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_retirement_stops_at_pending_runtime_and_preserves_primary",
+      "at": "2026-10-20T09:30:44.946945+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_retirement_stops_at_pending_runtime_and_preserves_primary",
+      "at": "2026-10-20T09:30:44.975950+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_retirement_without_primary_raises_exact_cleanup_error",
+      "at": "2026-10-20T09:30:44.975950+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_retirement_without_primary_raises_exact_cleanup_error",
+      "at": "2026-10-20T09:30:45.178614+00:00"
+    },
+    {
+      "event": "START",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_unqualified_configuration_is_denied_before_native_binding",
+      "at": "2026-10-20T09:30:45.178614+00:00"
+    },
+    {
+      "event": "STOP",
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_unqualified_configuration_is_denied_before_native_binding",
+      "at": "2026-10-20T09:30:45.207126+00:00"
+    }
+  ],
+  "sqlite_connect_uris": [
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/8920a5647a06482eb409ce215872ba7a/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/0fbe04b7a9ad430e918ec31c7138bc6b/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/2003fb0fee0f44f4bbbf188337b3828f/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/80b5acceacdd45548502771f294b059a/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/766f4eb39b5e4176bfaf94f20fdc691d/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/a1d96f04d6704d6784c2ae1c1fac6b8e/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/0949bd321af340099c7e72e9c3c5f9bf/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/843d698a0baf4954a34a116113f118d0/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/15b98c24d7a24048af5bbba7664ecda8/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/fb504a35854940d39b50f29501fc4f42/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/97e597e2ce6147ffa3d4fb79d0c6c74f/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/1caa6ef204864a37ae3a6bdebf652916/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/3dac9f654bc841289734b09f9f249cf2/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/a6c18435dd8840b489d896a3f3384382/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/2df9625b5dd14d38be38d9a0660cbd79/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/90701c87162b4c6d98f95587bae62a9d/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/bea6905b974d45b3b5ea0648c8108aa7/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/9595e294ea4848d29e11e07533dd87bd/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/905b337ce0124a768992c4e6fcef34df/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/fec82b1640864fc8aec01074c0338dab/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/c4956f3e9774421ba8281e8bd94ef210/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/a7affe4983944a98b2c2ec9a6ab9d924/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/51bc3aecabaf4f82b9662973b001471d/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/7d20986b74e4449f9a370c1027afb6b6/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/d63eeeda181f4c09826ad9c3c216150d/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/4d1e5b992f0e445a94a83c72da9689a7/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/999d1ea36a414bb48af79aa785186610/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/103f17b331cc471db68fbc62c5ef1509/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/a4a7f3556885405fbd850e7d661d8717/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/ccf54090a0704378b0be189fc3dcdb72/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/cc7230d47c6a4e2992f01283dbce3a01/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/7efc1794ea5f4af7a882e2ac77274973/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/2eb6ed55f1304751838f147efca9f097/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/ab249b875ebd47db87127bc3b9303a1e/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/d9ce4c87d098468b8af2a900b450cd2a/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/57dca15b0b514e3180c0de9bbf3b039c/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/3002a6bd356d45d190394c0a304df091/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/ffb6ae04b8dc4567a5ec541b45acc222/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/f4ea6e02475d452d91688f600b66dbd5/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/8c6e8574521e4400a384a1d831689097/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/23129e7c21784e26a56f534aa6a8a491/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/d1797b7af81d402aace37492815de926/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/31cc4198f8454fbfb8d59b88d1048393/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/568c42f313e54a0da9b5c012631e4a5b/history.sqlite3?mode=rw",
+    "file:///T:/00-Active/Project-AI-CETA/.agents/runtime/js9-runtime-20261020/controlled_r3/fixtures/57e8460f42094457825d117fe6f109ba/history.sqlite3?mode=rw"
+  ],
+  "journals_created": 45,
+  "all_journals_closed": true,
+  "threads_before": [
+    [
+      16932,
+      "MainThread",
+      false
+    ]
+  ],
+  "threads_after": [
+    [
+      16932,
+      "MainThread",
+      false
+    ]
+  ],
+  "residual_threads": [],
+  "boundary_violations": [],
+  "native_boundary_attempts": [],
+  "candidate_unchanged": true,
+  "Source352_unchanged": true,
+  "fixture_facts": [
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_active_execution_retains_all_dependencies_and_allows_bookkeeping",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\8920a5647a06482eb409ce215872ba7a",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_append_then_raise_is_deduplicated_before_cleanup",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\0fbe04b7a9ad430e918ec31c7138bc6b",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_handle_preappend_failure_keeps_known_return_and_retires_once",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\2003fb0fee0f44f4bbbf188337b3828f",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_actual_queue_handle_registration_retry_failure_remains_pending_then_recovers",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\80b5acceacdd45548502771f294b059a",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_close_keeps_borrowed_journal_registry_clock_and_code",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\766f4eb39b5e4176bfaf94f20fdc691d",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_cannot_select_an_unregistered_scope",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\a1d96f04d6704d6784c2ae1c1fac6b8e",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_currentness_failure_acquires_no_owner_or_file_binding",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\0949bd321af340099c7e72e9c3c5f9bf",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_capacity_helper",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\843d698a0baf4954a34a116113f118d0",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_driver_source_path",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\15b98c24d7a24048af5bbba7664ecda8",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_another_observer_image",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\fb504a35854940d39b50f29501fc4f42",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_different_observer_clock",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\97e597e2ce6147ffa3d4fb79d0c6c74f",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_duplicate_manifest_names",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\1caa6ef204864a37ae3a6bdebf652916",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_rejects_nonconcrete_runtime",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\3dac9f654bc841289734b09f9f249cf2",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_configuration_requires_each_retained_manifest_entry",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\a6c18435dd8840b489d896a3f3384382",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_different_registry_store_codec_or_installation_denies_ingress",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\2df9625b5dd14d38be38d9a0660cbd79",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_execute_requires_original_kernel_lease",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\90701c87162b4c6d98f95587bae62a9d",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_existing_five_argument_ingress_retains_closed_default",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\bea6905b974d45b3b5ea0648c8108aa7",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_existing_ingress_captures_the_selected_kernel_and_identity",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\9595e294ea4848d29e11e07533dd87bd",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_ingress_rejects_a_request_supplied_runtime_object",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\905b337ce0124a768992c4e6fcef34df",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_interrupt_after_owner_initializer_still_retires_published_owner",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\fec82b1640864fc8aec01074c0338dab",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_interrupted_native_open_preserves_unknown_output_without_false_closure",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\c4956f3e9774421ba8281e8bd94ef210",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_invalid_native_open_returns_are_known_no_acquisition_states",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\a7affe4983944a98b2c2ec9a6ab9d924",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_journal_capacity_from_another_runtime_is_denied",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\51bc3aecabaf4f82b9662973b001471d",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_journal_without_selected_capacity_is_denied",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\7d20986b74e4449f9a370c1027afb6b6",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_kernel_construction_interrupt_preserves_primary_and_retires_owned_pins",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\d63eeeda181f4c09826ad9c3c216150d",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_main_propagates_primary_contract_error_with_actionable_receiver_custody",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\4d1e5b992f0e445a94a83c72da9689a7",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_native_binding_initializer_failure_before_api_publication_retains_partial_owner",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\999d1ea36a414bb48af79aa785186610",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_no_api_with_contradictory_pin_state_is_preserved_and_denied",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\103f17b331cc471db68fbc62c5ef1509",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_observer_retirement_failure_retains_owner_and_file_pins",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\a4a7f3556885405fbd850e7d661d8717",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_original_lease_delegates_to_existing_adapter_only",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\ccf54090a0704378b0be189fc3dcdb72",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_partial_native_binding_failure_preserves_primary_and_cleanup_custody",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\cc7230d47c6a4e2992f01283dbce3a01",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_pending_queue_retains_primary_and_allows_explicit_close_retry",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\7efc1794ea5f4af7a882e2ac77274973",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_queue_is_retired_with_preregistered_pin_row",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\2eb6ed55f1304751838f147efca9f097",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_published_api_without_file_opens_uses_original_cleanup_once",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\ab249b875ebd47db87127bc3b9303a1e",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_real_owner_captures_capacity_and_provenance_before_same_kernel_binding",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\d9ce4c87d098468b8af2a900b450cd2a",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_replaced_capacity_port_on_same_view_is_denied",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\57dca15b0b514e3180c0de9bbf3b039c",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_runtime_rejects_other_thread_and_serialization",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\3002a6bd356d45d190394c0a304df091",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_selected_configuration_does_not_create_authority_records",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\ffb6ae04b8dc4567a5ec541b45acc222",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_control_message_cannot_select_native_dependencies",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\f4ea6e02475d452d91688f600b66dbd5",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_denies_scope_or_unqualified_config_before_opening_journal",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\8c6e8574521e4400a384a1d831689097",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_journal_selects_exact_configured_runtime",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\23129e7c21784e26a56f534aa6a8a491",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_preserves_completed_constructor_cleanup_without_automatic_retry",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\d1797b7af81d402aace37492815de926",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_retirement_stops_at_pending_runtime_and_preserves_primary",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\31cc4198f8454fbfb8d59b88d1048393",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_service_retirement_without_primary_raises_exact_cleanup_error",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\568c42f313e54a0da9b5c012631e4a5b",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    },
+    {
+      "test_id": "test_native_runtime_composition.NativeRuntimeCompositionTests.test_unqualified_configuration_is_denied_before_native_binding",
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\controlled_r3\\fixtures\\57e8460f42094457825d117fe6f109ba",
+      "sqlite_closed": true,
+      "connection_close_state": "CLOSED",
+      "native_processes": 0,
+      "native_VFS_calls": 0,
+      "native_CPU_Set_calls": 0,
+      "origins": "CONTROLLED_CLOCK_CODE_FILE_AND_OBSERVER_FACTS"
+    }
+  ],
+  "native_execution": false,
+  "scope": "Controlled composition; real SQLite, controlled native origins",
+  "passed": true
+}

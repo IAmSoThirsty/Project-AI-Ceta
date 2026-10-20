@@ -1,0 +1,45 @@
+test_component_and_package_cycles_reject (test_allocations.AllocationTests.test_component_and_package_cycles_reject) ... ok
+test_current_real_input_mutation_is_not_certified (test_allocations.AllocationTests.test_current_real_input_mutation_is_not_certified) ... FAIL
+test_duplicate_or_deleted_identifier_cannot_replace_baseline (test_allocations.AllocationTests.test_duplicate_or_deleted_identifier_cannot_replace_baseline) ... ok
+test_malformed_registry_and_references_return_failure (test_allocations.AllocationTests.test_malformed_registry_and_references_return_failure) ... ok
+test_malformed_section_and_row_identifier_fail_without_exception (test_allocations.AllocationTests.test_malformed_section_and_row_identifier_fail_without_exception) ... ok
+test_manifest_substitution_rejects_before_registry_load (test_allocations.AllocationTests.test_manifest_substitution_rejects_before_registry_load) ... FAIL
+test_self_cycle_cannot_hide_in_dependencies (test_allocations.AllocationTests.test_self_cycle_cannot_hide_in_dependencies) ... ok
+test_unallocated_case_is_visible (test_allocations.AllocationTests.test_unallocated_case_is_visible) ... ok
+test_unallocated_component_is_visible (test_allocations.AllocationTests.test_unallocated_component_is_visible) ... ok
+test_unallocated_requirement_is_visible (test_allocations.AllocationTests.test_unallocated_requirement_is_visible) ... ok
+test_unknown_component_dependency_and_duplicate_slug_reject (test_allocations.AllocationTests.test_unknown_component_dependency_and_duplicate_slug_reject) ... ok
+test_unknown_gate_and_gate_package_reject (test_allocations.AllocationTests.test_unknown_gate_and_gate_package_reject) ... ok
+test_unknown_or_missing_case_requirement_link_rejects (test_allocations.AllocationTests.test_unknown_or_missing_case_requirement_link_rejects) ... ok
+test_unknown_owner_and_owner_section_mismatch_reject (test_allocations.AllocationTests.test_unknown_owner_and_owner_section_mismatch_reject) ... ok
+test_valid_allocation_and_shared_support_component_are_not_promoted (test_allocations.AllocationTests.test_valid_allocation_and_shared_support_component_are_not_promoted) ... ok
+
+======================================================================
+FAIL: test_current_real_input_mutation_is_not_certified (test_allocations.AllocationTests.test_current_real_input_mutation_is_not_certified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\CETA_Intelligence_Operating_System_Build_Package\tests\contract\test_allocations.py", line 145, in test_current_real_input_mutation_is_not_certified
+    self.assertIn("SOURCE_CHANGED_DURING_VERIFICATION", result["errors"])
+AssertionError: 'SOURCE_CHANGED_DURING_VERIFICATION' not found in ['SOURCE_CHANGED_DURING_VERIFICATION at $']
+
+======================================================================
+FAIL: test_manifest_substitution_rejects_before_registry_load (test_allocations.AllocationTests.test_manifest_substitution_rejects_before_registry_load)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\CETA_Intelligence_Operating_System_Build_Package\tests\contract\test_allocations.py", line 158, in test_manifest_substitution_rejects_before_registry_load
+    self.assertEqual(["ORIGINAL_MANIFEST_CHANGED"], result["errors"])
+AssertionError: Lists differ: ['ORIGINAL_MANIFEST_CHANGED'] != ['ORIGINAL_MANIFEST_CHANGED at $']
+
+First differing element 0:
+'ORIGINAL_MANIFEST_CHANGED'
+'ORIGINAL_MANIFEST_CHANGED at $'
+
+- ['ORIGINAL_MANIFEST_CHANGED']
++ ['ORIGINAL_MANIFEST_CHANGED at $']
+?                            +++++
+
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.087s
+
+FAILED (failures=2)

@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-20T10:47:45.559619+00:00",
+  "authorization": "Root exact two-reference metadata repair; scripts unchanged",
+  "before": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET-BEFORE-LINEAGE-REPAIR.json",
+    "sha256": "2f61b0e9b90c73ef82c03188c4e7fa91be74e5da663445afe7e7ccf1923a6c6b"
+  },
+  "after": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET.json",
+    "sha256": "32575147e478c63ead51c6269af9e22eebe06ccdc74619cdb04e46231fe9ac82"
+  },
+  "changed_keys": [
+    "adapter_deltas",
+    "predecessor_packet"
+  ],
+  "before_values": {
+    "adapter_deltas": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/ADAPTER-DELTAS.json",
+      "sha256": "6482fc7d02b7b1de23c14cbc408c78076f52a02795396c7726a6402e119d1e63"
+    },
+    "predecessor_packet": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r1/PACKET.json",
+      "sha256": "455efb4d1d30ecd05f7076f32648a44b71f7fc383882945e233f1e2c126810c5"
+    }
+  },
+  "after_values": {
+    "adapter_deltas": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/ADAPTER-DELTAS.json",
+      "sha256": "5c838a9268abcb00a37c4666a2f514be89d9d0839d5a97ff9e596bdf0606d180"
+    },
+    "predecessor_packet": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/PACKET.json",
+      "sha256": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055"
+    }
+  },
+  "script_hashes_unchanged": true,
+  "case_set_unchanged": true,
+  "candidate_manifest_unchanged": true,
+  "native_case_semantics_unchanged": true,
+  "controls": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/ERROR-PARSER-CONTROLS.json",
+    "sha256": "df3024cfe41b85cf7c679768632baa26310ed9d39a31c1475765b673735ebf19"
+  },
+  "controls_applicability": "18 controls bind the exact unchanged script hashes; only the two recorded packet lineage references changed.",
+  "full_or_native_execution": false
+}

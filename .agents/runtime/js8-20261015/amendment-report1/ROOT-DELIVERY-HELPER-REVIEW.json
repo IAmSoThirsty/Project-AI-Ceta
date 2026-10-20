@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root",
+  "author": "/root/publication_recovery_review",
+  "at": "2026-10-18T01:44:24.444149+00:00",
+  "decision": "approved",
+  "exit_status": 0,
+  "scope": "Exact independent delivered helper delta and unchanged original methods",
+  "requirements": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/RELEASE-REQUIREMENTS-NATIVE-PREFIX.json",
+    "sha256": "9f6a8fadeb40a8fecddf14ed3e84c946f368aa8774a46f810a2b3c74643d3c26"
+  },
+  "preparation": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/PREPARATION.json",
+    "sha256": "b834a705bb446168198c3fbd783a17d0742785fcad080295ef871c30441f6f69"
+  },
+  "helper_delta": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/HELPER-DELTA.diff",
+    "sha256": "14c6d3efadc9a64c61779d4e26ea8876cf40c2b2f0f176cd837b81aa59e6fa38"
+  },
+  "helpers": {
+    "review_support.py": "456ea83d5f082e279b798d8fe1cd37c76ee700a39221accb40a27a7c2eb5a1dd",
+    "resource_observer.py": "de5deb609eb8b57b2b52e695ec0b38e1eac05f31ada119e83e74b9157074fd4a",
+    "bounded_custody.py": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4",
+    "resource_witness.py": "071b1402c309021fbbdf510f3755dc0b8571de7b37446ef40ba46a32926ec399",
+    "run_delivered.py": "81b3550bc6d82a4ecc6c8bd1e3083de070a14b19182ea28fe264a3d909d9daae",
+    "launch_delivered.py": "343f275443190037da3d6906173debfbc217890ed3b70ad5d764d2bd6a3b3eb3",
+    "record_actual_delivered_review.py": "8eb76d26e41024af5234893c0a0ef6ef25540360161c2533341082fd080ccc57"
+  },
+  "byte_identical_helpers": [
+    "resource_observer.py",
+    "bounded_custody.py",
+    "resource_witness.py",
+    "run_delivered.py",
+    "launch_delivered.py"
+  ],
+  "required_case_count": 180,
+  "native_case_count": 7,
+  "findings": [
+    "Personally inspected complete changed helper diff, release validator, final release fields and completion-helper review.",
+    "Actual reviewer identity and final author pins replace the prior unused preparation.",
+    "Original candidate failure is authenticated by publication readiness; canonical destination full remains mandatory.",
+    "Current Root claim, exact352 destination hashes, four original native identities and bounded fixture remain required.",
+    "Five helper files and all selected original case IDs remain unchanged.",
+    "No native execution is authorized until a fresh Root release after destination full."
+  ],
+  "Source_accepted": false,
+  "native_execution": false
+}

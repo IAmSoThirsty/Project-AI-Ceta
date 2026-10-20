@@ -1,0 +1,65 @@
+{
+  "profile": "ceta-sqlite-runtime-v1",
+  "version": "3.53.4",
+  "platform": "windows-x64",
+  "archive_url": "https://sqlite.org/2026/sqlite-dll-win-x64-3530400.zip",
+  "archive_sha3_256": "deddee963c810d1eeac3ce5e15c7c41da21a1c54d7a39cf54fbf577d2f50de3a",
+  "archive_sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+  "members": {
+    "sqlite3.dll": {
+      "path": "native/sqlite_runtime/win-x64/sqlite3.dll",
+      "bytes": 3285504,
+      "sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+      "crc32": 4294754780
+    },
+    "sqlite3.def": {
+      "path": "native/sqlite_runtime/win-x64/sqlite3.def",
+      "bytes": 8722,
+      "sha256": "a93b7867cc1fdb4e1dd0d4eef727cf910fe9f2bb6cd612d933744add1fa7f11b",
+      "crc32": 880109120
+    }
+  },
+  "official_pages": {
+    "download.html": {
+      "url": "https://sqlite.org/download.html",
+      "bytes": 19324,
+      "sha256": "9cd376c2fb3a04ec2d6ca65bb1f8428631103d4c510d827c23cc979700735326"
+    },
+    "cves.html": {
+      "url": "https://sqlite.org/cves.html",
+      "bytes": 40802,
+      "sha256": "0ef51a811fdc3dcfcd86692736190db83ef78073892fbe2d89029cbc57ade3a5"
+    },
+    "security.html": {
+      "url": "https://sqlite.org/security.html",
+      "bytes": 15269,
+      "sha256": "55cf2628b79907b1b2e10af9b2caeba09829abedbfdd5f173d166f2058c85047"
+    },
+    "wal.html": {
+      "url": "https://sqlite.org/wal.html",
+      "bytes": 42143,
+      "sha256": "f3467b530b883d4a00574fe1a898b3d121ed72764ae28cf66941080ac0badb9e"
+    },
+    "backup.html": {
+      "url": "https://sqlite.org/backup.html",
+      "bytes": 28195,
+      "sha256": "306b6cca5c7c2f93b648040ae139f14d7d3221c0d16d79b5749e69d808382e04"
+    },
+    "copyright.html": {
+      "url": "https://sqlite.org/copyright.html",
+      "bytes": 8351,
+      "sha256": "44ca9f793055c8e32fc65f65a4f5bcf813a33f5bdaaa084067dd617a4ed3cc70"
+    },
+    "releaselog/3_53_4.html": {
+      "url": "https://sqlite.org/releaselog/3_53_4.html",
+      "bytes": 12926,
+      "sha256": "c8d12ef674ac295edba47c341cb18b5913795ba94a78474c68e4213970d128ac"
+    }
+  },
+  "observed_at_utc": "2026-10-08T10:42:45.713270+00:00",
+  "loading": "EXACT_DLL_HASH_AND_LOADED_MODULE_PATH_REQUIRED;REJECT_PRELOADED_CONFLICT",
+  "advisory_scope": "Official CVE table reviewed; older engines observed, no exploit established",
+  "native_wrapper": "Installed CPython _sqlite3.pyd retained; actual loaded project DLL/version must be probed",
+  "license": "SQLite public domain; https://sqlite.org/copyright.html",
+  "qualification": "DEPENDENCY_BYTES_ONLY;LOAD_COMPATIBILITY_AND_STORE_TESTS_PENDING"
+}

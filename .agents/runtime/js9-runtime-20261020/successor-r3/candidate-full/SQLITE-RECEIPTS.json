@@ -1,0 +1,1182 @@
+{
+  "test_journal_constructor_cleanup": [
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_cleanup_failure_preserves_exact_primary_and_native_fixture_recovery",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\219e4b230f384c81b05e39be6c67e77b",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\e761fd7e513c49c982a0d0de3bbd0d1f",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\ac4b1dd35530432abe2c05cd71c85667",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\d295bde1858142dab3635e38faaca46d",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\ad9af7aafc0d49e1a3979d52eafb5226",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\93f7217c434d4375b840e03bb4a51272"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_create_and_reopen_preserve_both_canonical_profiles",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\5b8c33d49693464b9cde16acca017fd1",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\b0c5bc9ad76b4ed3885ce74aa12b1e44"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_hostile_diagnostic_setters_and_note_getters_are_not_invoked",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\69824a3682bc4085ae10dfcc07ceea65"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_initial_connect_failure_has_absent_connection_and_known_closed_owner",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\b1278bfcc4cc48a3929c5d896086d7e0"
+      ],
+      "connections": [],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_malformed_cleanup_response_stays_uncertain_and_keeps_primary",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\854769ed86af489296591dad88838a1a",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\54b926ed2c2d4550b6e3b16382c39ef0",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\f0456cfbb63d4f46af6cad24661a6b63",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\59d7f814d3d84a4eb18149f6d98c44bc"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_malformed_switch_close_response_never_opens_writer",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\01c7a92750164286b6baaf1ce387b2ae",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\65c6bd35e32d48418f33f7d7fbda6260",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\6153c5db079e4b859ace6142239dc572",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\b7ba1efb7bbc4bcbbe2f348e60d2902a"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_parallel_explicit_close_cannot_replay_uncertain_constructor_close",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\b0cf069947014f5b9615af0f8ed1b08d"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_readonly_constructor_has_one_connection_and_retains_readonly_denial",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\06b74e60f4574e1abb7cb4cd21351697"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_readonly_switch_close_is_never_implicitly_replayed",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\9d7dffa0e34448b6bb046332f6f527e2",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\f84be6b54a324044adff082c3d195546"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_real_default_close_response_is_exact_none",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\84ef6d2a579944b3b12ff6c2d20c8487"
+      ],
+      "connections": [],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_successful_cleanup_marks_known_closed_without_replacing_control",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\a2058ae08171478ca1a2b6263dfcf1f4",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\a46ca16782694bd9ab26382b8bb4346d",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\5ffdebfe7c7444d689e57a50e8df7e08"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_writer_connect_failure_does_not_reclose_known_closed_inspection",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\9c94755be54d48d3b208f957e3b64c28"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    },
+    {
+      "test_id": "test_journal_constructor_cleanup.JournalConstructorCleanupTests.test_writer_setup_failure_retains_exact_new_connection",
+      "fixture_roots": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-constructor\\c41fb52d52de424390c12d05b78223da"
+      ],
+      "connections": [
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true
+        },
+        {
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true
+        }
+      ],
+      "all_fixture_native_connections_closed": true,
+      "qualification": "Real project SQLite connections; controlled Python response faults. Product uncertainty is not overwritten by the test recovery oracle."
+    }
+  ],
+  "test_journal_postconstruction_cleanup": [
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_all_seven_transaction_paths_preserve_getter_secondary_and_custody",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\e7efc311505a47f380356b9334213fa7",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\b0f4d7b5abaa46c383fa61796db34059",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN IMMEDIATE"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\ac6994c50f2c447fb4757ebb77fa9422",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN IMMEDIATE"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\443debf3cdc749dba912dc1dfe7e89c9",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\3e50441db133460ab90b6ed5b7198fe3",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\2fe90aeb90234627960ae302d47c3d26",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\610c01b91ff642a7840501254ec68208",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_begin_refusal_with_no_native_transaction_does_not_issue_rollback",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\70d0537fefe146e4b63770a1eac1e17f",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "BEGIN",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "COMMIT"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_begin_response_loss_is_caught_and_rolled_back_once",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\f49c8d74b2264d0aa8145231fe3f8f75",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK",
+            "BEGIN",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "COMMIT"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_close_failure_never_replays_and_retains_exact_custody",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\7c9f7534ade84512bd656642670d6cf9",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\095db9965bbd4cf988e05ce6314f4889",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\1c06615f4b6c4ab7ac199fbbfa75914b",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\403d07a40f5246728bbb8cac7068d862",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_close_method_lookup_failure_is_single_attempt_uncertainty",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\afaf1bb4ab4a493585ef7a9e575322c7",
+          "close_calls": 0,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_close_retention_bypasses_hostile_dictionary_methods",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\af5e7597afe74126bbeeae57fe1bb1f5",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_commit_response_loss_never_replays_commit_and_reconciles_actual_history",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\8d4fe06efe8346029aa82d2fb614ab62",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "COMMIT",
+            "BEGIN IMMEDIATE",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "INSERT INTO history_events VALUES(?,?,?,?,?,?,?,?)",
+            "UPDATE history_scopes SET next_sequence=?,head=? WHERE scope_id=?",
+            "COMMIT",
+            "BEGIN",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "COMMIT",
+            "BEGIN",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "SELECT event_wire,payload_wire FROM history_events WHERE scope_id=? AND sequence>=? ORDER BY sequence LIMIT ?",
+            "COMMIT"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_concurrent_close_invokes_native_exactly_once_after_refusal",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\fb1a322f5609441c8e73310a413b2b2a",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_constructor_retention_keeps_JC1_contract_with_hostile_dictionary",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\5c9ee967f30e4b7680cf4c533ad8e896",
+          "native_known_closed": true,
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Real constructor connection with controlled diagnostic dictionary/close faults; no native leak claim."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_constructor_retention_keeps_JC1_contract_with_hostile_dictionary",
+      "resources": [],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_hostile_primary_diagnostic_setters_are_not_called",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\7c3546bbf05a40ae926d3db8b216a78a",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_malformed_close_response_stays_uncertain_without_replay",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\03b5392d7b0a4b5297fb4224db928338",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\097e12e210f940e0a277cb49726079c8",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\8343108641c24d21acabbe4e5b5244c1",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\7c49c95a9b41425983306b9e124c6fd2",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_malformed_in_transaction_values_do_not_confer_recovery",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\5a42e7f072d04fa288e178ef0563caaa",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\7222ddcc6e3244b88190db3e5bde2e23",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\851d35a5f86643758a937621fb046e96",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\b8c1b7232a5249a8a536005d0493092f",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\0c82d4a138984a6c93ac2dfd4c94e77f",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_projection_diagnostic_uses_only_trusted_exception_storage",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\d95a34dbd64e454bbb2100307519558c",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_projection_note_bypasses_hostile_dictionary_methods",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\a03ebd51be654aee826dcfca44eacf6a",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_projection_unknown_note_container_is_preserved_without_callbacks",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\c47674bd250d4a46980011f0d0fb6429",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_reopen_after_explicit_retirement_recovers_without_effect_replay",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\da30fdf7c3ac4b21a0f1be9fa1fec8d2",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_rollback_postcheck_getter_failure_keeps_native_disposition_distinct",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\79ca3d4017c24e90be18838f0bbd5a82",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_rollback_refusal_before_native_preserves_primary_and_does_not_retry",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\459a520d89fe4869ac4e91970f4893cc",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_rollback_response_loss_poison_preserves_one_legitimate_close",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\6ddcb72254954d00b99c9fc50da43abe",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_rollback_retention_bypasses_hostile_dictionary_methods",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\e180dabceeef4e6f880994e3db1b5b64",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_rollback_return_or_postcheck_failure_remains_uncertain",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\68531295c8e74bc0853e33adbe853022",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\b0dea2dd7b164c5485b9f193b5102b9d",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\b9e0ecdb76bf4e93ba7a5fc342b79f5f",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\696276e079ab4912913c3dfcc7e412ad",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_successful_close_remains_exact_none_and_idempotent",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\fcaa06c3787b4b83b2fe3381261d938a",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "READY"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\991ef706e3c04d3a9737296d686e28e3",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_successful_rollback_keeps_journal_usable_and_primary_exact",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\8e7bd139488747478dcd510aaf55d086",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN",
+            "ROLLBACK",
+            "BEGIN",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "COMMIT",
+            "BEGIN IMMEDIATE",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "INSERT INTO history_events VALUES(?,?,?,?,?,?,?,?)",
+            "UPDATE history_scopes SET next_sequence=?,head=? WHERE scope_id=?",
+            "COMMIT",
+            "BEGIN",
+            "PRAGMA journal_mode",
+            "PRAGMA integrity_check",
+            "SELECT name,type,sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'",
+            "SELECT * FROM history_meta",
+            "SELECT scope_id,next_sequence,head FROM history_scopes ORDER BY scope_id",
+            "PRAGMA foreign_key_check",
+            "SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence",
+            "COMMIT"
+          ],
+          "product_closed": true,
+          "product_close_state": "CLOSED",
+          "product_transaction_state": "READY"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_transaction_uncertainty_and_close_uncertainty_remain_separate",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\3c94a3e23be046adbbb41a56021d8b52",
+          "close_calls": 1,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 0,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": false,
+          "product_close_state": "UNCERTAIN",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    },
+    {
+      "test_id": "test_journal_postconstruction_cleanup.PostConstructionCleanupTests.test_validation_getter_failure_never_replaces_original_primary",
+      "resources": [
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\bb55b300341c407abee8426acc00e41b",
+          "close_calls": 0,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": false,
+          "product_close_state": "OPEN",
+          "product_transaction_state": "UNCERTAIN"
+        },
+        {
+          "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\.agents\\fixtures\\journal-postconstruct\\6bb69665af5d46d28416bd74663aa385",
+          "close_calls": 0,
+          "native_close_calls": 1,
+          "fixture_recovery_calls": 1,
+          "native_known_closed": true,
+          "transaction_statements": [
+            "BEGIN"
+          ],
+          "product_closed": false,
+          "product_close_state": "OPEN",
+          "product_transaction_state": "UNCERTAIN"
+        }
+      ],
+      "all_exact_native_connections_closed": true,
+      "qualification": "Actual project SQLite connections, explicitly controlled Python response/getter faults. Not evidence of a native SQLite leak or live authority."
+    }
+  ]
+}

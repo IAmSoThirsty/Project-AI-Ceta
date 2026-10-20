@@ -1,0 +1,66 @@
+{
+  "schema_version": "1",
+  "observed_at_utc": "2026-10-08T05:35:06.129602+00:00",
+  "result": "PASS",
+  "scope": "CURRENT_COMPLETE_SOURCE_ALLOCATION_PRESERVATION_AND_STATUS_ASSERTIONS_ONLY",
+  "source_report": "evidence/runtime/source-integrity-final-13.json",
+  "original_files_verified": 642,
+  "source_report_metadata_tool_current": true,
+  "source_applicability": {
+    "total": 406,
+    "assessed": 195,
+    "unresolved": 211
+  },
+  "complete_volume_vi_sources": 38,
+  "complete_original_lines_read": 3861,
+  "exact_original_non_applicability_bodies_retained": 38,
+  "source_classifications": {
+    "DIRECT": 37,
+    "SUPPORTING": 1,
+    "NOT_APPLICABLE": 0
+  },
+  "source_original_metadata_and_other_decisions": "UNCHANGED",
+  "progress_source_count_fields": "CONSISTENT_WITH_ACTUAL_COVERAGE",
+  "allocation_report": "evidence/runtime/allocation-integrity-final-06.json",
+  "allocation_freshness": "NOT_RERUN_INPUT_AND_TOOL_BYTES_CURRENT",
+  "registry_counts": {
+    "requirements": 175,
+    "components": 25,
+    "packages": 28,
+    "cases": 128,
+    "gates": 8
+  },
+  "preservation_report": "evidence/runtime/preservation-and-scope-audit-12.json",
+  "retained_desktop_baseline_files": 434,
+  "retained_reference_baseline_files": 277,
+  "desktop_namespace_added_paths": 72,
+  "desktop_continuity": "OLD_BYTES_PRESERVED_PREFIX",
+  "reference_changes": "NONE",
+  "normal_profile": "TOP_LEVEL_METADATA_UNCHANGED_CONTENTS_NOT_READ",
+  "app_tests": {
+    "passed": 123,
+    "evidence": "evidence/runtime/desktop-contract-source-bound-12.json",
+    "freshness": "HISTORICAL_NOT_RERUN_INCREMENT12_WATCHED_SOURCE_BYTES_CURRENT"
+  },
+  "spec_tests": {
+    "passed": 16,
+    "evidence": "evidence/runtime/source-coverage-tests-source-bound-09.json",
+    "freshness": "HISTORICAL_NOT_RERUN_INCREMENT12_WATCHED_SOURCE_BYTES_CURRENT"
+  },
+  "app_code_change": "NONE",
+  "requirements_components_packages": "UNCHANGED_SINCE_ALLOCATION_REPORT06",
+  "original_acceptance": "128_UNCHANGED_NOT_RUN",
+  "formal_gates": "8_UNCHANGED_NOT_EVALUATED",
+  "gate_a": "OPEN",
+  "wp00_wp01": "IN_PROGRESS",
+  "wp02_wp27": "NOT_STARTED",
+  "tickets": 17,
+  "training": "NO_RUN_SEPARATE_AUTHORIZATION_AND_BUDGET_REQUIRED",
+  "nirl_chimera": "TECHNICAL_MONITORING_AND_LABELED_ISOLATION_NOT_TRAINING",
+  "runtime_installed_model_hardware_endurance": "NOT_RUN",
+  "independent_review": "NOT_PERFORMED",
+  "production_cutover": "NOT_PERFORMED",
+  "full_objective": "ACTIVE_NOT_COMPLETE",
+  "external_blocker_established": false,
+  "next_safe_action": "Read original 189 Cybersecurity Engineering and the remaining 211 sources; finish full source reconciliation and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. The full finished-product objective remains active."
+}

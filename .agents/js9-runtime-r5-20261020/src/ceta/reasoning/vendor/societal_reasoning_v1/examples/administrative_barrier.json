@@ -1,0 +1,10 @@
+{
+  "id": "service_access_failure",
+  "question": "Why might an officially available service be inaccessible?",
+  "context": {"setting": "government_service"},
+  "evidence": [
+    {"id": "e1", "statement": "The agency states the service is available to qualifying applicants.", "origin": "external_record", "cues": ["service_promised"]},
+    {"id": "e2", "statement": "A person without stable housing is required to produce proof of address.", "origin": "user_report", "cues": ["eligibility_or_document_barrier", "person_cannot_supply_document"]}
+  ],
+  "unknowns": ["Whether an exemption exists", "Whether the applicant satisfies all remaining eligibility criteria"]
+}

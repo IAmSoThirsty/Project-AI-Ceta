@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "job": "hp8-20261014",
+  "author": "/root/pressure_review",
+  "frozen_at": "2026-10-14T14:09:29.765264+00:00",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp8-20261014",
+  "source_root": "T:\\00-Active\\Project-AI-CETA",
+  "parent_failed_review": {
+    "repository_relative_path": ".agents/runtime/hp7-20261014/independent-review/review.json",
+    "sha256": "83662f2417e6940ee423e2630f56a55b5c87e06ce3da42bf05e140b2dc5730b8"
+  },
+  "parent_manifest": {
+    "repository_relative_path": ".agents/hp7-20261014/TRANSFER-MANIFEST.json",
+    "sha256": "dcc289233798fc19656f0d2edc120a03dce03559e4ae7ae12599fb88988de606"
+  },
+  "payloads": [
+    {
+      "path": "legacy_cache_validation.py",
+      "action": "EXTEND",
+      "bytes": 23852,
+      "sha256": "b9100525b743c2679abfd64e3da3d7e4718f2d5b86b944f8a4fdbf0164982949",
+      "source_before_sha256": "9871bcbddfe82f3f63b975d07ea9a408ef7ff544dba040a966a93b3817a17ae5",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp8-20261014/diffs/legacy_cache_validation.py.diff",
+        "sha256": "9b5e3e8e10fbdf32ea4397ef2c04c3d2551bbba2af9570d10bc75d4ca9c2b1e3"
+      }
+    },
+    {
+      "path": "legacy_cache_worker311.py",
+      "action": "REUSE",
+      "bytes": 6900,
+      "sha256": "f403ceb9345ba1152d4f104cf0091c50a42bb786f4349582829ca11ec0a3c54d",
+      "source_before_sha256": "f403ceb9345ba1152d4f104cf0091c50a42bb786f4349582829ca11ec0a3c54d"
+    },
+    {
+      "path": "preserve_ceta_complete.py",
+      "action": "EXTEND",
+      "bytes": 107981,
+      "sha256": "7eb6dc4be074950ad24ad0d5234b3c380e5856c7adff63e63560832c4c4958d2",
+      "source_before_sha256": "f5777109bf034ce44f0fefa8fc834516974e23f74e77d46429af3d112362d8dd",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp8-20261014/diffs/preserve_ceta_complete.py.diff",
+        "sha256": "befeb9cac022f87daafe25ff77b77df101f9dd98d5fe33ab1e5d38eda8ddec8d"
+      }
+    },
+    {
+      "path": "README.md",
+      "action": "EXTEND",
+      "bytes": 22196,
+      "sha256": "21f20a5995bf34abd0bc46f68c64ac0d56a113d6b83c0c8f7e3c1691641d109c",
+      "source_before_sha256": "c160291bdd0342dcc4f46c488e9e225cc11ccf4bc9eff251c2cb72817e9f84dd",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp8-20261014/diffs/README.md.diff",
+        "sha256": "30510d2b49ee213669882c788e807c4bd26ac0228f313b8b4b737719013e6c6d"
+      }
+    },
+    {
+      "path": "run_preservation_tests.py",
+      "action": "REUSE",
+      "bytes": 3760,
+      "sha256": "c5142cd635ae911bf0d9486f2fb1e6b473fb3e80843b3496d9de54764e5c1ae4",
+      "source_before_sha256": "c5142cd635ae911bf0d9486f2fb1e6b473fb3e80843b3496d9de54764e5c1ae4"
+    },
+    {
+      "path": "test_callback_fencing.py",
+      "action": "REUSE",
+      "bytes": 17296,
+      "sha256": "554d5ecf561984f696be53534e08d261bfc1dc75f25ec50fc6e15e5450b0867a",
+      "source_before_sha256": "554d5ecf561984f696be53534e08d261bfc1dc75f25ec50fc6e15e5450b0867a"
+    },
+    {
+      "path": "test_case_alias_fencing.py",
+      "action": "REUSE",
+      "bytes": 24107,
+      "sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d",
+      "source_before_sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d"
+    },
+    {
+      "path": "test_current_policy_fencing.py",
+      "action": "REUSE",
+      "bytes": 13808,
+      "sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b",
+      "source_before_sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b"
+    },
+    {
+      "path": "test_legacy_cache_validation.py",
+      "action": "EXTEND",
+      "bytes": 27091,
+      "sha256": "29d3d78ad618f06ca1a9770f4b4f3745ace5c5031fdc46b2def9a1c75086377a",
+      "source_before_sha256": "11ac1094b3171ff4097728c364b6741584c77a9de2cce1a08b96ad247ad8b1da",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp8-20261014/diffs/test_legacy_cache_validation.py.diff",
+        "sha256": "35e8835d323d6bec94b17515d4a1ed4cfedf81fdc6c8b6d0f9a4f3953e680554"
+      }
+    },
+    {
+      "path": "test_preserve_ceta_complete.py",
+      "action": "REUSE",
+      "bytes": 67690,
+      "sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "source_before_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc"
+    },
+    {
+      "path": "test_provenance.py",
+      "action": "REUSE",
+      "bytes": 38615,
+      "sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "source_before_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086"
+    },
+    {
+      "path": "test_startup_custody.py",
+      "action": "CREATE",
+      "bytes": 7523,
+      "sha256": "2a5baf82a86012e07bd687fa2720c132ff28378ca6b28cd7c7beeb4e092454d3",
+      "source_before_sha256": null
+    },
+    {
+      "path": "test_transport_recovery.py",
+      "action": "CREATE",
+      "bytes": 12405,
+      "sha256": "0d6b4e738c6cf6ad52102f926d95958c1c2f810621a012d40680b3bcaf168d8c",
+      "source_before_sha256": null
+    }
+  ],
+  "payload_count": 13,
+  "tests": {
+    "repository_relative_path": ".agents/runtime/hp8-20261014/final197-r1.json",
+    "sha256": "9595e74f4bec4d8b107467ca419ec2a9e3f0a7997a63b8ea8bd7468dc08cff59"
+  },
+  "raw_tests": {
+    "repository_relative_path": ".agents/runtime/hp8-20261014/final197-r1.txt",
+    "sha256": "b2694f3fba7b7c0a1b8d7488e8fd84dd2cde2d84f63ca8f3fb7fde1174be5862"
+  },
+  "tests_run": 197,
+  "reused_original_cases": 190,
+  "reused_hostile_cases": 2,
+  "new_authored_cases": 5,
+  "native_worker_lifetimes": 31,
+  "actual_new_native_methods": 4,
+  "new_native_schedules": 5,
+  "declared_boundary_methods": 1,
+  "interface_proof": {
+    "repository_relative_path": ".agents/runtime/hp8-20261014/interface-checks.json",
+    "sha256": "f0ac73f4652895e02cfa854fb2c6196d70e316d9c4dd2a5e94fc432c1e190fb8"
+  },
+  "path_pin_exception": {
+    "repository_relative_path": ".agents/runtime/hp8-20261014/path-pin-exception.json",
+    "sha256": "cc2d9659e514933e37cf8af6db3d162ec642a63fa081eb00597bde0fdb871022"
+  },
+  "reused_oracles": {
+    "repository_relative_path": ".agents/runtime/hp8-20261014/reused-oracles-binding.json",
+    "sha256": "6a11b847fc520331884786c2ae3e8069f81e10c74247baa53bf01bc221229ac4"
+  },
+  "self_review": {
+    "repository_relative_path": ".agents/runtime/hp8-20261014/self-review.json",
+    "sha256": "f89bab9a24fd685a3c05943d9fe596d5e06fd88562bb455656430f3fb76f6ade"
+  },
+  "source_counts": {
+    "legacy_cache_validation.py": {
+      "physical_added": 126,
+      "physical_removed": 20,
+      "meaningful_added": 106,
+      "meaningful_removed": 20
+    },
+    "preserve_ceta_complete.py": {
+      "physical_added": 1,
+      "physical_removed": 1,
+      "meaningful_added": 1,
+      "meaningful_removed": 1
+    },
+    "README.md": {
+      "physical_added": 13,
+      "physical_removed": 0,
+      "meaningful_added": 5,
+      "meaningful_removed": 0
+    }
+  },
+  "new_test_lines": {
+    "authored_methods": 5,
+    "physical_lines": 227,
+    "meaningful_lines": 216,
+    "actual_native_methods": 4,
+    "declared_owner_boundary_methods": 1
+  },
+  "reused_new_LOC": 0,
+  "prior_failures": [
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/independent-review/review.json",
+      "sha256": "83662f2417e6940ee423e2630f56a55b5c87e06ce3da42bf05e140b2dc5730b8"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp7-20261014/independent-review/hostile-startup-r2.json",
+      "sha256": "a4583d6495da2309ba6a4667b8c3c9f588c8a933c05d19ac34138dd522a3e161"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp8-20261014/baseline-startup-r1.json",
+      "sha256": "559de210703d02c0211a92a57d4c862e07dba0ef8a3d50fb320a61a83e633307"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp8-20261014/legacy34-r1-failure.json",
+      "sha256": "568f7345191c0c838c9716eb5a03a9996ab8fa6e4c1c7ba73b60255804e82030"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp8-20261014/self-review-native-owner-r1.json",
+      "sha256": "daa1a85a45d7bac1fb1b86e45ba8e782b95d1b31e198cb7651cb8d5c326f430a"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/hp8-20261014/interface-r1-failure.json",
+      "sha256": "35b2bc5a5c3633a3b6cd64b7809cbc06560c86b8fc318b9c85be8b3599c7054e"
+    }
+  ],
+  "state": "FROZEN_AUTHOR_TESTED_PENDING_DISTINCT_REVIEW",
+  "Source_application": false,
+  "external_capture_or_policy_activation": false,
+  "remaining": [
+    "Self-review is not independent acceptance",
+    "Synchronous native startup/IO occupancy has no whole OS hard deadline",
+    "Entry-fenced possibly started threads can remain pending; cleanup reports them without asserting no start",
+    "Canonical process owner, installed Python311/312 and administrator principal remain shared trusted dependencies",
+    "The ordinary-file census does not establish continuous custody or directory-allocation metadata equality",
+    "W043/W044/W045 remain unadmitted; no actual policy activation, external capture, restored publication or active Source application"
+  ]
+}

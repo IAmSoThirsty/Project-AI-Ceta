@@ -1,0 +1,408 @@
+{
+  "at": "2026-10-20T10:15:10.544775+00:00",
+  "author": "/root/recovery_regression20",
+  "packet": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\PACKET.json",
+    "sha256": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055"
+  },
+  "native_or_Source_execution_released": false,
+  "common_release_requirements": [
+    "schema_version=1",
+    "executor=/root",
+    "run_id=js9-runtime-20261020",
+    "phase=exact phase below",
+    "packet=exact reference to successor-r1/PACKET.json",
+    "candidate_manifest=packet candidate_manifest",
+    "reviewed_scripts=packet scripts",
+    "case_set=packet case_set",
+    "Source_before=packet Source_before",
+    "automatic_retry=false",
+    "create_profiles=false",
+    "Source_publication=true only for publish",
+    "all_conflicting_Source_pinned_runs_released=true",
+    "issued_at_ns/expires_at_ns integer current window <=1800 seconds",
+    "independent_review=exact approved distinct tool review reference containing reviewer,author,decision=approved,exit_status=0,packet,reviewed_scripts,candidate_manifest"
+  ],
+  "prerequisites": [
+    "Distinct review of exact frozen12-script R2 packet must approve; R1 was rejected and remains immutable",
+    "Close the current whole-R evidence claim honestly as historical preparation and observe actual readiness; no accepted gate is asserted from a self-ledger snapshot",
+    "Create successor phase claims with workspace successor-r2 and orchestration runtime outside that workspace; preserve frozen script/packet paths and admit only new releases/output paths",
+    "Do not run component scripts a second time after launch_native; that command owns the sole native component child and then corroborates it",
+    "Actual Source31 write lease is required for publication, with separate owned output/fixture leases as needed; no CETA source mutation during native verification",
+    "The full original no-profile denial case still needs its present Root/human authority; AC7 excluded its post-cleanup regression and no permission is inferred from its termination"
+  ],
+  "recommended_order": [
+    {
+      "phase": "native-store",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\launch_native.py",
+        "native-store",
+        "native_store_r1",
+        "--release-path",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-store-r1.json",
+        "--release-sha256",
+        {
+          "sha256_of_Root_created_release": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-store-r1.json"
+        }
+      ],
+      "cwd": "T:\\00-Active\\Project-AI-CETA",
+      "Root_release_file_to_create": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-store-r1.json",
+      "release_exists": false,
+      "expected_terminal_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r1-CORROBORATION.json",
+      "component_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r1\\RESULT.json",
+      "component_receipt_status": "Passing component cases remain pending parent Git corroboration",
+      "native_child_process_bound_seconds": 300,
+      "parent_witness": "One actual canonical WindowsOwnedProcess child; unchanged bounded_custody; actual child exit0, own job/process/thread/startup retirement; exact child receipt/argv/interpreter; parent default full Source/environment/native/Git verification",
+      "extra_process_boundary": "The enclosing parent owns one Python component-test child. Pre-audit child verification and parent verification use pinned read-only Git processes; the native child post-audit still forbids subprocesses."
+    },
+    {
+      "phase": "native-observer",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\launch_native.py",
+        "native-observer",
+        "native_observer_r1",
+        "--release-path",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-observer-r1.json",
+        "--release-sha256",
+        {
+          "sha256_of_Root_created_release": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-observer-r1.json"
+        }
+      ],
+      "cwd": "T:\\00-Active\\Project-AI-CETA",
+      "Root_release_file_to_create": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-observer-r1.json",
+      "release_exists": false,
+      "expected_terminal_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_observer_r1-CORROBORATION.json",
+      "component_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_observer_r1\\native.json",
+      "component_receipt_status": "Passing component cases remain pending parent Git corroboration",
+      "native_child_process_bound_seconds": 300,
+      "parent_witness": "One actual canonical WindowsOwnedProcess child; unchanged bounded_custody; actual child exit0, own job/process/thread/startup retirement; exact child receipt/argv/interpreter; parent default full Source/environment/native/Git verification",
+      "extra_process_boundary": "The enclosing parent owns one Python component-test child. Pre-audit child verification and parent verification use pinned read-only Git processes; the native child post-audit still forbids subprocesses."
+    },
+    {
+      "phase": "candidate-full",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\launch_full.py",
+        "candidate-full",
+        "--release-path",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\candidate-full-r1.json",
+        "--release-sha256",
+        {
+          "sha256_of_Root_created_release": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\candidate-full-r1.json"
+        }
+      ],
+      "cwd": "T:\\00-Active\\Project-AI-CETA",
+      "Root_release_file_to_create": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\candidate-full-r1.json",
+      "release_exists": false,
+      "expected_terminal_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\candidate-full\\RESULT.json",
+      "enclosing_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\candidate-full-LAUNCH-RESULT.json",
+      "required_native_case_release": {
+        "kind": "JS9_DISPOSABLE_NO_PROFILE_CASE_ROOT_RELEASE_V1",
+        "executor": "/root",
+        "authority_basis": "existing_user_authorized_disposable_acceptance_tests",
+        "run_id": "js9-runtime-20261020",
+        "run_nonce": "fresh32hex; exact nonce must occur in subject and create-only gate attempt",
+        "issued_at_ns": "current integer",
+        "expires_at_ns": "integer <=1800sec",
+        "subject": "js9_support.native_case_subject(phase,nonce), exact current native file/environment/tool facts",
+        "execute_exact_original_case": true,
+        "create_profiles": false,
+        "expected_denial_winerror": "Root must choose supported exact native error; no value guessed here",
+        "reference": "phase release native_case_release must pin this separate Root-created file under successor-r1/releases"
+      },
+      "mandatory_parent_corroboration_fields": {
+        "native_store_corroboration": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r1-CORROBORATION.json",
+        "native_observer_corroboration": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_observer_r1-CORROBORATION.json",
+        "format": "Exact repository_relative_path/sha256 references; missing/failed/mismatched witnesses deny admission"
+      }
+    },
+    {
+      "phase": "publish",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\publish_source.py",
+        "--release-path",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\publish-r1.json",
+        "--release-sha256",
+        {
+          "sha256_of_Root_created_release": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\publish-r1.json"
+        }
+      ],
+      "cwd": "T:\\00-Active\\Project-AI-CETA",
+      "Root_release_file_to_create": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\publish-r1.json",
+      "release_exists": false,
+      "expected_terminal_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\publication\\RESULT.json",
+      "additional_release_fields": [
+        "candidate_full = exact candidate-full/RESULT.json reference",
+        "candidate_full_launch = exact candidate-full-LAUNCH-RESULT.json reference",
+        "source_lease = claims/state exact references +run_id,node_id,input_hash,claimed_at for actual RUNNING /root Source workspace claim covering every31 application path"
+      ],
+      "beforeimages": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\publication\\before",
+      "native_backups": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\publication\\native-backups",
+      "source_paths": [
+        "contracts/CPU_OUTCOME_CAPACITY_CONNECTION_V1.md",
+        "contracts/CPU_OUTCOME_RECOVERY_V1.md",
+        "contracts/NATIVE_CPU_OUTCOME_PROVENANCE_V1.md",
+        "contracts/NATIVE_CPU_RUNTIME_COMPOSITION_V1.md",
+        "contracts/NATIVE_OWNER_SESSION_V1.md",
+        "contracts/OUTCOME_CAPACITY_V1.md",
+        "native/sqlite_runtime/outcome_capacity.cpp",
+        "src/ceta/composition/ipc_service.py",
+        "src/ceta/composition/native_cpu_outcome.py",
+        "src/ceta/composition/native_cpu_runtime.py",
+        "src/ceta/composition/service_process.py",
+        "src/ceta/effects/native_observer.py",
+        "src/ceta/identity/cpu_outcome_capacity.py",
+        "src/ceta/identity/native_cpu_outcome.py",
+        "src/ceta/identity/native_owner_view.py",
+        "src/ceta/identity/owner_session.py",
+        "src/ceta/kernel/cpu_execution.py",
+        "src/ceta/kernel/cpu_outcome_recovery.py",
+        "src/ceta/kernel/effect_transactions.py",
+        "src/ceta/store/journal.py",
+        "src/ceta/store/outcome_capacity.py",
+        "tests/contract/test_cpu_capacity_connection.py",
+        "tests/contract/test_cpu_execution_admission.py",
+        "tests/contract/test_cpu_outcome_recovery.py",
+        "tests/contract/test_cpu_recovery_registration.py",
+        "tests/contract/test_native_cpu_outcome_provenance.py",
+        "tests/contract/test_native_observer_origin.py",
+        "tests/contract/test_native_owner_execution.py",
+        "tests/contract/test_native_owner_preparation.py",
+        "tests/contract/test_native_runtime_composition.py",
+        "tests/contract/test_outcome_capacity.py"
+      ],
+      "mandatory_parent_corroboration_fields": {
+        "native_store_corroboration": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r1-CORROBORATION.json",
+        "native_observer_corroboration": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_observer_r1-CORROBORATION.json",
+        "format": "Exact repository_relative_path/sha256 references; missing/failed/mismatched witnesses deny admission"
+      }
+    },
+    {
+      "phase": "destination-full",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\launch_full.py",
+        "destination-full",
+        "--release-path",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\destination-full-r1.json",
+        "--release-sha256",
+        {
+          "sha256_of_Root_created_release": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\destination-full-r1.json"
+        }
+      ],
+      "cwd": "T:\\00-Active\\Project-AI-CETA",
+      "Root_release_file_to_create": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\destination-full-r1.json",
+      "release_exists": false,
+      "expected_terminal_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\destination-full\\RESULT.json",
+      "enclosing_receipt": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\destination-full-LAUNCH-RESULT.json",
+      "required_native_case_release": {
+        "kind": "JS9_DISPOSABLE_NO_PROFILE_CASE_ROOT_RELEASE_V1",
+        "executor": "/root",
+        "authority_basis": "existing_user_authorized_disposable_acceptance_tests",
+        "run_id": "js9-runtime-20261020",
+        "run_nonce": "fresh32hex; exact nonce must occur in subject and create-only gate attempt",
+        "issued_at_ns": "current integer",
+        "expires_at_ns": "integer <=1800sec",
+        "subject": "js9_support.native_case_subject(phase,nonce), exact current native file/environment/tool facts",
+        "execute_exact_original_case": true,
+        "create_profiles": false,
+        "expected_denial_winerror": "Root must choose supported exact native error; no value guessed here",
+        "reference": "phase release native_case_release must pin this separate Root-created file under successor-r1/releases"
+      },
+      "mandatory_parent_corroboration_fields": {
+        "native_store_corroboration": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r1-CORROBORATION.json",
+        "native_observer_corroboration": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_observer_r1-CORROBORATION.json",
+        "format": "Exact repository_relative_path/sha256 references; missing/failed/mismatched witnesses deny admission"
+      }
+    }
+  ],
+  "small_native_lanes": "Two independent Root parent invocations, one for18 file-binding cases and one for6 observer cases; each owns exactly one child. Neither has profile query/create/delete operations in its native component test bodies.",
+  "profile_operation_inventory": {
+    "exact_profile_folder_query_tests": [
+      {
+        "test_id": "test_isolated_worker.NativeIsolatedWorkerTests.test_actual_nonpersistent_launch_denial_and_medium_control_retirement",
+        "test_source": {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-20261020\\tests\\contract\\test_isolated_worker.py",
+          "sha256": "df0e81962f34d200b52b09019335d9990f2954764c64d732067aa50c3dc67127",
+          "line": 368
+        },
+        "through_helper": "native_fixture_support.run_native_probe -> gated prepare_fixture",
+        "queries": [
+          {
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_case_gate.py",
+            "line": 431,
+            "operation": "GetAppContainerFolderPath before case"
+          },
+          {
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_case_gate.py",
+            "line": 483,
+            "operation": "GetAppContainerFolderPath after case"
+          }
+        ],
+        "name": "Fresh CETA.AC1.<uuid>, not AC7 fixed profile name",
+        "other_effects": [
+          "one restricted no-profile CreateProcessW attempt",
+          "one disposable ordinary medium worker",
+          "one bounded loopback listener",
+          "owned fixture DACL/integrity labels, event and pipe handles"
+        ],
+        "AC7_excluded_no_profile_denial_regression": true
+      }
+    ],
+    "profile_creation_test_ids": [],
+    "profile_deletion_test_ids": [],
+    "create_delete_guard": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_case_gate.py",
+      "sha256": "39ae5136f85849855ce60434f5e71d061e3ffc11e784bfd00084d6181b3d1468",
+      "line": 314,
+      "behavior": "CreateAppContainerProfile and DeleteAppContainerProfile denied on every observed _IsolationAPI userenv"
+    },
+    "scanned_sources": [
+      "all frozen tests/contract *.py",
+      "all active src and native excluding inactive retained vendor payloads",
+      "pinned native_fixture_support.py",
+      "frozen native_case_gate.py"
+    ],
+    "native18_profile_operations": [],
+    "native6_profile_operations": [],
+    "direct_SID_derivation_tests": [
+      {
+        "test_id": "test_isolated_worker.NativeIsolatedWorkerTests.test_actual_sid_derivation_is_stable_and_distinct",
+        "calls": [
+          {
+            "call": "appcontainer_sid",
+            "line": 252
+          },
+          {
+            "call": "appcontainer_sid",
+            "line": 253
+          },
+          {
+            "call": "appcontainer_sid",
+            "line": 254
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolated_worker.NativeIsolatedWorkerTests.test_container_name_rejects_unbounded_or_injected_input",
+        "calls": [
+          {
+            "call": "appcontainer_sid",
+            "line": 258
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolated_worker.NativeIsolatedWorkerTests.test_sid_release_failure_retains_actual_allocation_for_recovery",
+        "calls": [
+          {
+            "call": "api.derive",
+            "line": 314
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolated_worker.NativeCleanupRecoveryTests.test_independent_sid_release_continues_after_known_refusal",
+        "calls": [
+          {
+            "call": "api.derive",
+            "line": 403
+          },
+          {
+            "call": "api.derive",
+            "line": 403
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolated_worker.NativeCleanupRecoveryTests.test_sid_free_then_control_exception_never_replays_uncertain_free",
+        "calls": [
+          {
+            "call": "api.derive",
+            "line": 421
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolated_worker.NativeCleanupRecoveryTests.test_sid_text_refusal_retains_primary_and_explicit_native_recovery",
+        "calls": [
+          {
+            "call": "api.derive",
+            "line": 436
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolated_worker.NativeCleanupRecoveryTests.test_local_free_then_control_exception_is_not_repeated",
+        "calls": [
+          {
+            "call": "api.derive",
+            "line": 453
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolated_worker.NativeCleanupRecoveryTests.test_malformed_post_free_responses_remain_uncertain_without_double_free",
+        "calls": [
+          {
+            "call": "api.derive",
+            "line": 591
+          },
+          {
+            "call": "text_api.derive",
+            "line": 601
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      },
+      {
+        "test_id": "test_isolation_token_diagnostics.NativeCurrentTokenDiagnosticTests.test_actual_current_process_rejection_and_token_sid_allocation_retirement",
+        "calls": [
+          {
+            "call": "api.derive",
+            "line": 246
+          }
+        ],
+        "classification": "SID name derivation/allocation only; no profile registration or folder query inferred"
+      }
+    ],
+    "scope_limit": "Static exact source/call-site inventory, not an assertion of arbitrary process-wide native API interception"
+  },
+  "known_execution_limits": [
+    "Native/full/publication/destination remain NOT RUN",
+    "Native labels are caller arguments inside the frozen directory; no automatic retry is implemented, and each additional attempt requires a fresh Root decision",
+    "Full output directories and native-case nonce files are create-only",
+    "No product approval, compiler, effect qualification or installed-product acceptance is inferred from these engineering adapters",
+    "R2 parent terminal is engineering native-scope evidence only; Source/product acceptance remains separate",
+    "The current TAAR whole-R writer overlaps its own runtime records; its immutable evidence is the selected frozen payload/tool pins, not a claim that all future R contents are immutable"
+  ],
+  "predecessor_map": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\EXECUTION-COMMAND-AND-PROFILE-MAP.json",
+    "sha256": "54d173d2e8b71362278734046c5d82a512e646e2f45702e77c5060b175fb7767"
+  }
+}

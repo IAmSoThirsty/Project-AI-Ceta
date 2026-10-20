@@ -1,0 +1,2045 @@
+{
+  "phase": "native-store",
+  "started_at": "2026-10-20T10:23:48.558169+00:00",
+  "finished_at": "2026-10-20T10:24:00.728018+00:00",
+  "elapsed_seconds": 12.170272100018337,
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/PACKET.json",
+    "sha256": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055"
+  },
+  "runner_sha256": "415a329a0014d791e5f0088b9719fd24aae8b028e08571786e1d18661b668d3d",
+  "post_CAS_verified": true,
+  "Git_corroboration": {
+    "status": "PENDING_ROOT_CORROBORATION",
+    "before": {
+      "HEAD": "83fc9432b4a37ee7f91d6c5b0d358a015548aed4",
+      "branch": "candidate/societal-reasoning-v1"
+    },
+    "after": null
+  },
+  "acceptance_complete": false,
+  "command": [
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\run_native_store.py",
+    "native_store_r2",
+    "--release-path",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-store-r2.json",
+    "--release-sha256",
+    "919cd03c47c67a22058109b5def8233e518c705d47e0ab8cf01e6d7d28d481da"
+  ],
+  "observed_argv": [
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\run_native_store.py",
+    "native_store_r2",
+    "--release-path",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\releases\\native-store-r2.json",
+    "--release-sha256",
+    "919cd03c47c67a22058109b5def8233e518c705d47e0ab8cf01e6d7d28d481da"
+  ],
+  "cwd": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+  "interpreter": {
+    "sys_executable": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+    "sys_base_executable": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "python": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "bytes": 274424,
+      "sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+      "native_identity": {
+        "bytes": 274424,
+        "mtime_ns": 1791945362601512900,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979338317,
+        "attributes": 32
+      }
+    },
+    "base_python": {
+      "path": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "bytes": 104952,
+      "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+      "native_identity": {
+        "bytes": 104952,
+        "mtime_ns": 1744142256000000000,
+        "mode": 511,
+        "device": 8375675987628699060,
+        "inode": 1688849860437982,
+        "attributes": 32
+      }
+    }
+  },
+  "release": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/releases/native-store-r2.json",
+    "sha256": "919cd03c47c67a22058109b5def8233e518c705d47e0ab8cf01e6d7d28d481da"
+  },
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/MANIFEST-R4.json",
+    "sha256": "212f1913af6ef24c24041628d2dcca23c7b754849ba79de9db8d75a210b3f532"
+  },
+  "expected_ids": [
+    "test_native_owner_view.NativeStoreBindingTests.test_actual_replacement_is_denied_while_retained_and_detected_after_release",
+    "test_native_owner_view.NativeStoreBindingTests.test_actual_two_second_native_observation_cannot_round_down_to_success",
+    "test_native_owner_view.NativeStoreBindingTests.test_actual_volume_and_file_ids_are_distinct_full_width_and_current",
+    "test_native_owner_view.NativeStoreBindingTests.test_all_retained_native_file_handles_are_noninheritable",
+    "test_native_owner_view.NativeStoreBindingTests.test_close_is_idempotent_and_closed_view_never_revalidates",
+    "test_native_owner_view.NativeStoreBindingTests.test_context_primary_survives_cleanup_denial_and_can_recover",
+    "test_native_owner_view.NativeStoreBindingTests.test_control_exception_with_refusing_attributes_keeps_exact_primary_and_custody",
+    "test_native_owner_view.NativeStoreBindingTests.test_directory_instead_of_database_is_denied_and_never_repurposed",
+    "test_native_owner_view.NativeStoreBindingTests.test_exact_native_expectation_refuses_different_file_id_and_root",
+    "test_native_owner_view.NativeStoreBindingTests.test_failed_current_observation_never_becomes_a_measured_match",
+    "test_native_owner_view.NativeStoreBindingTests.test_file_currentness_and_close_are_serialized_without_lost_custody",
+    "test_native_owner_view.NativeStoreBindingTests.test_missing_database_is_denied_without_creation_and_all_handles_retire",
+    "test_native_owner_view.NativeStoreBindingTests.test_reopen_exact_native_expectation_observes_same_objects",
+    "test_native_owner_view.NativeStoreBindingTests.test_slow_observation_is_rejected_without_claiming_native_preemption",
+    "test_native_owner_view.NativeStoreBindingTests.test_sqlite_writes_continue_on_the_same_canonical_database_identity",
+    "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_charges_both_endpoint_resolutions_at_inclusive_boundary",
+    "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_invalid_unavailable_or_coarse_sources_are_denied",
+    "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_tick_type_rollback_and_control_failure_remain_explicit"
+  ],
+  "events": [
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_actual_replacement_is_denied_while_retained_and_detected_after_release",
+      "at": "2026-10-20T10:23:48.656679+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_actual_replacement_is_denied_while_retained_and_detected_after_release",
+      "at": "2026-10-20T10:23:48.688680+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_actual_two_second_native_observation_cannot_round_down_to_success",
+      "at": "2026-10-20T10:23:48.688680+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_actual_two_second_native_observation_cannot_round_down_to_success",
+      "at": "2026-10-20T10:23:50.699911+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_actual_volume_and_file_ids_are_distinct_full_width_and_current",
+      "at": "2026-10-20T10:23:50.699911+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_actual_volume_and_file_ids_are_distinct_full_width_and_current",
+      "at": "2026-10-20T10:23:50.708526+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_all_retained_native_file_handles_are_noninheritable",
+      "at": "2026-10-20T10:23:50.708526+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_all_retained_native_file_handles_are_noninheritable",
+      "at": "2026-10-20T10:23:50.716531+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_close_is_idempotent_and_closed_view_never_revalidates",
+      "at": "2026-10-20T10:23:50.716531+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_close_is_idempotent_and_closed_view_never_revalidates",
+      "at": "2026-10-20T10:23:50.726041+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_context_primary_survives_cleanup_denial_and_can_recover",
+      "at": "2026-10-20T10:23:50.726041+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_context_primary_survives_cleanup_denial_and_can_recover",
+      "at": "2026-10-20T10:23:50.735043+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_control_exception_with_refusing_attributes_keeps_exact_primary_and_custody",
+      "at": "2026-10-20T10:23:50.735043+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_control_exception_with_refusing_attributes_keeps_exact_primary_and_custody",
+      "at": "2026-10-20T10:23:50.743042+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_directory_instead_of_database_is_denied_and_never_repurposed",
+      "at": "2026-10-20T10:23:50.743042+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_directory_instead_of_database_is_denied_and_never_repurposed",
+      "at": "2026-10-20T10:23:50.753043+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_exact_native_expectation_refuses_different_file_id_and_root",
+      "at": "2026-10-20T10:23:50.753043+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_exact_native_expectation_refuses_different_file_id_and_root",
+      "at": "2026-10-20T10:23:50.767042+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_failed_current_observation_never_becomes_a_measured_match",
+      "at": "2026-10-20T10:23:50.767042+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_failed_current_observation_never_becomes_a_measured_match",
+      "at": "2026-10-20T10:23:50.778042+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_file_currentness_and_close_are_serialized_without_lost_custody",
+      "at": "2026-10-20T10:23:50.778042+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_file_currentness_and_close_are_serialized_without_lost_custody",
+      "at": "2026-10-20T10:23:50.788042+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_missing_database_is_denied_without_creation_and_all_handles_retire",
+      "at": "2026-10-20T10:23:50.788042+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_missing_database_is_denied_without_creation_and_all_handles_retire",
+      "at": "2026-10-20T10:23:50.796457+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_reopen_exact_native_expectation_observes_same_objects",
+      "at": "2026-10-20T10:23:50.796457+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_reopen_exact_native_expectation_observes_same_objects",
+      "at": "2026-10-20T10:23:50.808458+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_slow_observation_is_rejected_without_claiming_native_preemption",
+      "at": "2026-10-20T10:23:50.808458+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_slow_observation_is_rejected_without_claiming_native_preemption",
+      "at": "2026-10-20T10:23:50.819805+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_sqlite_writes_continue_on_the_same_canonical_database_identity",
+      "at": "2026-10-20T10:23:50.819805+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_sqlite_writes_continue_on_the_same_canonical_database_identity",
+      "at": "2026-10-20T10:23:50.834315+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_charges_both_endpoint_resolutions_at_inclusive_boundary",
+      "at": "2026-10-20T10:23:50.834315+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_charges_both_endpoint_resolutions_at_inclusive_boundary",
+      "at": "2026-10-20T10:23:50.846314+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_invalid_unavailable_or_coarse_sources_are_denied",
+      "at": "2026-10-20T10:23:50.846314+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_invalid_unavailable_or_coarse_sources_are_denied",
+      "at": "2026-10-20T10:23:50.853314+00:00"
+    },
+    {
+      "event": "START",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_tick_type_rollback_and_control_failure_remain_explicit",
+      "at": "2026-10-20T10:23:50.853314+00:00"
+    },
+    {
+      "event": "STOP",
+      "id": "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_tick_type_rollback_and_control_failure_remain_explicit",
+      "at": "2026-10-20T10:23:50.860314+00:00"
+    }
+  ],
+  "tests_run": 18,
+  "failures": [],
+  "errors": [],
+  "skips": [],
+  "primary_error": null,
+  "binding_custody": [
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 844,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 824,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 740,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 828,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 780,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 416,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 372,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 556,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 696,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 812,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6cb1ac5b18be4cdba53ebda919cb3a13",
+          "handle": 688,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6cb1ac5b18be4cdba53ebda919cb3a13\\history.sqlite3",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 688,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 812,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 696,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 556,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 372,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 416,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 780,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 828,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 740,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6cb1ac5b18be4cdba53ebda919cb3a13",
+          "handle": 824,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6cb1ac5b18be4cdba53ebda919cb3a13\\history.sqlite3",
+          "handle": 844,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 824,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 740,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 828,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 780,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 416,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 372,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 556,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 696,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 812,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 688,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-685220850ae749e1a71fa92ab02a95d9",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-685220850ae749e1a71fa92ab02a95d9\\history.sqlite3",
+          "handle": 792,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 688,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 812,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 696,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 556,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 372,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 416,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 780,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 828,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 740,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-73c9929c760c4dacbb3e2ab4f9555cea",
+          "handle": 824,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-73c9929c760c4dacbb3e2ab4f9555cea\\history.sqlite3",
+          "handle": 404,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 824,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 740,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 828,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 780,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 416,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 372,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 556,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 696,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 812,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 688,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-d2d967959841459c9295c5beb2adc299",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-d2d967959841459c9295c5beb2adc299\\history.sqlite3",
+          "handle": 832,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 832,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 688,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 812,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 696,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 556,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 372,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 416,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 780,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 828,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-05093a2550b74f958ca277647a320e69",
+          "handle": 740,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-05093a2550b74f958ca277647a320e69\\history.sqlite3",
+          "handle": 824,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 796,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 824,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 740,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 828,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 780,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 416,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 372,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 556,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 696,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 688,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-637586c383ef4f148c3babfa08e07f21",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-637586c383ef4f148c3babfa08e07f21\\history.sqlite3",
+          "handle": 832,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 640,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 852,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 856,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 860,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 864,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 868,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 872,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 876,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 880,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 884,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-e504425f393e470e9e06568e002e4e3a",
+          "handle": 888,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-e504425f393e470e9e06568e002e4e3a\\history.sqlite3",
+          "handle": 892,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 908,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 912,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 916,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 920,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 924,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 928,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 932,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 936,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 940,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 944,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-c1ef3b95d59f47dcaada12ee21039b2f",
+          "handle": 948,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-c1ef3b95d59f47dcaada12ee21039b2f\\directory-db",
+          "handle": 952,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-c1ef3b95d59f47dcaada12ee21039b2f\\directory-db\\history.sqlite3",
+          "handle": 956,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 952,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 948,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 944,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 940,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 936,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 932,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 928,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 924,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 920,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 916,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-ecfa1c104c0044db887bf13ba9144cb3",
+          "handle": 912,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-ecfa1c104c0044db887bf13ba9144cb3\\history.sqlite3",
+          "handle": 908,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 972,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 976,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 980,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 984,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 988,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 992,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 996,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 1000,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 1004,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 1008,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-ecfa1c104c0044db887bf13ba9144cb3",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-ecfa1c104c0044db887bf13ba9144cb3\\history.sqlite3",
+          "handle": 892,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 816,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 1008,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 1004,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 1000,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 996,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 992,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 988,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 984,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 980,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 976,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-ecfa1c104c0044db887bf13ba9144cb3",
+          "handle": 972,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-ecfa1c104c0044db887bf13ba9144cb3\\history.sqlite3",
+          "handle": 884,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 1020,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 748,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 728,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 716,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 648,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 756,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 820,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 880,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 908,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 912,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-94a59a662c504755b457788e16f5affa",
+          "handle": 916,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-94a59a662c504755b457788e16f5affa\\history.sqlite3",
+          "handle": 920,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 916,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 912,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 908,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 880,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 820,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 756,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 648,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 716,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 728,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 748,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-a6ee0b8489cb4f478ef4768ff9a81327",
+          "handle": 1020,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-a6ee0b8489cb4f478ef4768ff9a81327\\history.sqlite3",
+          "handle": 928,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 932,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 936,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 668,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 940,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 928,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 1020,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 748,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 728,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 716,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 648,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-f31cbf1070784ff28284d586367e4b7e",
+          "handle": 756,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-f31cbf1070784ff28284d586367e4b7e\\missing",
+          "handle": 820,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-f31cbf1070784ff28284d586367e4b7e\\missing\\history.sqlite3",
+          "handle": 18446744073709551615,
+          "enrolled": false,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 756,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 648,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 716,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 728,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 748,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 1020,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 928,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 940,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 668,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 936,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6ad0f0bf6f834a0ab633cda879483144",
+          "handle": 932,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6ad0f0bf6f834a0ab633cda879483144\\history.sqlite3",
+          "handle": 908,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 944,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 948,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 952,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 884,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 972,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 976,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 980,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 984,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 988,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 992,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6ad0f0bf6f834a0ab633cda879483144",
+          "handle": 996,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6ad0f0bf6f834a0ab633cda879483144\\history.sqlite3",
+          "handle": 1000,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 672,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 720,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 1004,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 996,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 992,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 988,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 984,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 980,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 976,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 972,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-aa23c886927f4f28be75764c9e729ffc",
+          "handle": 884,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-aa23c886927f4f28be75764c9e729ffc\\history.sqlite3",
+          "handle": 952,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 976,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 980,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 984,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 988,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 992,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 996,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 1004,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 720,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 672,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 944,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-310b2c881f5146dc82940fce3e3e9e7a",
+          "handle": 908,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-310b2c881f5146dc82940fce3e3e9e7a\\history.sqlite3",
+          "handle": 932,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    },
+    {
+      "closed": true,
+      "pending": [],
+      "pins": [
+        {
+          "path": "T:\\",
+          "handle": 908,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active",
+          "handle": 944,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA",
+          "handle": 672,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents",
+          "handle": 720,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime",
+          "handle": 1004,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020",
+          "handle": 996,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2",
+          "handle": 992,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2",
+          "handle": 988,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents",
+          "handle": 984,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures",
+          "handle": 980,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-96fc804ce4dd45789fdf3a4ac2686b68",
+          "handle": 976,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        },
+        {
+          "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-96fc804ce4dd45789fdf3a4ac2686b68\\history.sqlite3",
+          "handle": 940,
+          "enrolled": true,
+          "open_state": "RETURNED"
+        }
+      ]
+    }
+  ],
+  "physical_custody": {
+    "sqlite": [
+      {
+        "object_id": 2423663915024,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423663916224,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423663917184,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423663917904,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423663917664,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423670309648,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662477856,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662478336,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662478816,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662479776,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662480976,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662480736,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662481456,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662482416,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662482896,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662483616,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662484096,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662482176,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      },
+      {
+        "object_id": 2423662485296,
+        "database": null,
+        "physical_closed_probe": true,
+        "probe_observation": "Cannot operate on a closed database."
+      }
+    ],
+    "streams": [
+      {
+        "object_id": 2423670583392,
+        "descriptor": 3,
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\PACKET.json",
+        "device": 154504856318070761,
+        "inode": 1125899910040959,
+        "closed": true,
+        "fileno_denied": true
+      },
+      {
+        "object_id": 2423669772512,
+        "descriptor": 3,
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\RAW.txt",
+        "device": 154504856318070761,
+        "inode": 281474979909153,
+        "closed": true,
+        "fileno_denied": true
+      },
+      {
+        "object_id": 2423663204432,
+        "descriptor": 4,
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6cb1ac5b18be4cdba53ebda919cb3a13\\history.sqlite3",
+        "device": 154504856318070761,
+        "inode": 281474979909157,
+        "closed": true,
+        "fileno_denied": true
+      },
+      {
+        "object_id": 2423663204960,
+        "descriptor": 4,
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r2\\native_store_r2\\.agents\\fixtures\\nv-6cb1ac5b18be4cdba53ebda919cb3a13\\replacement.sqlite3",
+        "device": 154504856318070761,
+        "inode": 562949956619814,
+        "closed": true,
+        "fileno_denied": true
+      }
+    ],
+    "os_descriptors": [],
+    "native_owners": [],
+    "remaining_resources": [],
+    "owned_resources_closed": true,
+    "no_logical_journal_closed_flags_used": true,
+    "no_native_process_API_wrappers": true,
+    "clock_registration_calls": 0,
+    "physical_probe_limits": "Only exact captured fixture-returned objects; no historical/native numeric adoption."
+  },
+  "sqlite_runtime": {
+    "version": "3.53.4",
+    "dll_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-20261020\\native\\sqlite_runtime\\win-x64\\sqlite3.dll",
+    "dll_sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+    "wrapper_path": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_sqlite3.pyd",
+    "wrapper_sha256": "64b51df2805c58b023a875e8ae3be7ac7f61ef664f32ca6c90f6315da47ef0bc",
+    "qualification": "LOADED_LIBRARY_IDENTITY_ONLY"
+  },
+  "remaining_threads": [],
+  "boundary_violations": [],
+  "actual_disposable_native_file_operations": true,
+  "host_profiles": false,
+  "Source_publication": false,
+  "Source_accepted": false,
+  "passed": true,
+  "exit_status": 0
+}

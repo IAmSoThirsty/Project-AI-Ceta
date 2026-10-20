@@ -1,0 +1,9 @@
+--- before/.gitignore
++++ candidate/.gitignore
+@@ -22,3 +22,6 @@
+ 
+ #Ignore vscode AI rules
+ .github\instructions\codacy.instructions.md
++
++# Native comparison build artifacts remain outside tracked source.
++native/canonical_reference/target/

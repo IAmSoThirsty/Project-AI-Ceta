@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "at": "2026-10-20T09:45:27.473084+00:00",
+  "run_id": "js9-runtime-20261020",
+  "author": "/root/recovery_regression20",
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/MANIFEST-R4.json",
+    "sha256": "212f1913af6ef24c24041628d2dcca23c7b754849ba79de9db8d75a210b3f532"
+  },
+  "case_set": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r1/CASESET.json",
+    "sha256": "eb84271555192021f192906f8f110c943d335009c2eb5c0cd088d38e5837eebb"
+  },
+  "Source_before": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r1/SOURCE-BEFORE.json",
+    "sha256": "a76dbdf4301eb0120bd646430c76e277827de46f888bb38d3a7c2fdad1d6958b"
+  },
+  "environment": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r1/ENVIRONMENT.json",
+    "sha256": "748a6364912c0f2873ee5628cee46d90eb1fb421f198e30544ce9e602fd11e39"
+  },
+  "git_dependency": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/GIT-SEARCH-DEPENDENCY.json",
+    "sha256": "164703b819df1311c4a4bc71ee5b106332f773b85b9af56beda60747dc9cf1e8"
+  },
+  "Git": {
+    "HEAD": "83fc9432b4a37ee7f91d6c5b0d358a015548aed4",
+    "branch": "candidate/societal-reasoning-v1"
+  },
+  "scripts": {
+    "bounded_custody.py": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4",
+    "fixture_runtime.py": "c6c91421b85fbf7cc7088cc193abae1b81f2cbc64c0d7219aa175240f18185c3",
+    "gc_observer.py": "92f1a44059e704e84763220fa63990e5a9d093338f41cdd32b777916f7be915f",
+    "js9_support.py": "d7d14925c45a47bcd16210ec6586e8ed5a5c4e3a8d0b87b9156115451384858a",
+    "launch_full.py": "512654ab83e937bcd2d973f35ae12ed314a274a754aa4e17ccfc296901bc37fa",
+    "native_case_gate.py": "c80da0dcb898bd7251631f3c32ec22e9cb7842dfc213642774d0e93eeba452b3",
+    "publish_source.py": "90c20b3fcd83eb80707b93373599437f1df9cebfd628777ab471fc10fdf2b7fa",
+    "resource_observer.py": "de5deb609eb8b57b2b52e695ec0b38e1eac05f31ada119e83e74b9157074fd4a",
+    "run_full.py": "28ff1f27cfc673e8e9cc1725aee4b1846b095cf47b76fe884653aa1e17d0d336",
+    "run_native_observer.py": "2ea66926c5fad8164201ef8f169b12b9e085264d6362b6d16bbb5ea60447b734",
+    "run_native_store.py": "bd58d103cd74134af17158a2d40e47f8ec90f1772531e7e127bd1575daa4389f"
+  },
+  "fixture_dependencies": {
+    "foundation": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js8-20261015\\foundation_support.py",
+      "bytes": 8697,
+      "sha256": "3d429a51f846289438acdead20d4ec4ef875d8d199d571656423dd78b255b023",
+      "native_identity": {
+        "bytes": 8697,
+        "mtime_ns": 1792091547400848900,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 6192449490710926,
+        "attributes": 32
+      }
+    },
+    "preservation_reader": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\pr4-20261014\\preserve_ceta_complete.py",
+      "bytes": 65813,
+      "sha256": "2ccbca31973ead308e1cdcc6676bbd7371cdec29a0f16178f3f55a4ab4130618",
+      "native_identity": {
+        "bytes": 65813,
+        "mtime_ns": 1791949663496279500,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 1970324839628361,
+        "attributes": 32
+      }
+    },
+    "raw_release_reader": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js7-20261015\\publish_source.py",
+      "bytes": 12948,
+      "sha256": "a536996ace058cb7d524508189d7c96de1c4ccb9e789ac61d2dc4eafc923cab3",
+      "native_identity": {
+        "bytes": 12948,
+        "mtime_ns": 1792085463283775900,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979773984,
+        "attributes": 32
+      }
+    },
+    "publication_primitive": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\rs2-20261014\\apply_joined_source.py",
+      "bytes": 9118,
+      "sha256": "4592a2ccee83904c6fd698a2145d82279e07c0cc27cabb45fd1c13b844baec77",
+      "native_identity": {
+        "bytes": 9118,
+        "mtime_ns": 1791960872770445800,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 1407374886232513,
+        "attributes": 32
+      }
+    },
+    "isolation_helper": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac1-20261014\\native_fixture_support.py",
+      "bytes": 11669,
+      "sha256": "a7247426deee70890107b9d826c7cda9209015edd5f1192f93ee3bd1e5a4314f",
+      "native_identity": {
+        "bytes": 11669,
+        "mtime_ns": 1792014367595050300,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979591669,
+        "attributes": 32
+      }
+    },
+    "worker": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac1-20261014\\build-r2\\isolated_worker.exe",
+      "bytes": 4872045,
+      "sha256": "527518104fb84c430e3e9e0be61982c533b0c6fbb13e1a85e959ba1a3866ad0f",
+      "native_identity": {
+        "bytes": 4872045,
+        "mtime_ns": 1792013561672587700,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 562949956302187,
+        "attributes": 32
+      }
+    },
+    "observer": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\build-reuse\\effect_observer.exe",
+      "bytes": 4849229,
+      "sha256": "2cb69daab94b1225be228db19ce17393f1972a24ee5aa37d7b035bd30d1917f0",
+      "native_identity": {
+        "bytes": 4849229,
+        "mtime_ns": 1792023894108231800,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 1407374886493358,
+        "attributes": 32
+      }
+    },
+    "capacity": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\outcome-capacity-20261015\\build-r2\\outcome_capacity.dll",
+      "bytes": 149504,
+      "sha256": "5fe04c516ca120acf9cfb2c7cb65dfeca3786c24a0745049f26e9e06a9e8a665",
+      "native_identity": {
+        "bytes": 149504,
+        "mtime_ns": 1792284563035293700,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 3377699721752766,
+        "attributes": 32
+      }
+    },
+    "approval_build": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\na2-20261014\\build-r1\\build.json",
+      "bytes": 4993,
+      "sha256": "65d7d1ee8654f036fd6ea3922a702c48281eeca71dbf1cd45a078926196c1108",
+      "native_identity": {
+        "bytes": 4993,
+        "mtime_ns": 1792021972591052700,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979642966,
+        "attributes": 32
+      }
+    },
+    "observer_build": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ob2-20261014\\build-reuse\\BUILD-REUSE.json",
+      "bytes": 1253,
+      "sha256": "e0af8762f877f7a5c7f4cb2a66a21b7b9c6906791bd451c3cbd3dfe08382373f",
+      "native_identity": {
+        "bytes": 1253,
+        "mtime_ns": 1792023894127489200,
+        "mode": 438,
+        "device": 154504856318070761,
+        "inode": 281474979650735,
+        "attributes": 32
+      }
+    }
+  },
+  "application_paths": [
+    "contracts/CPU_OUTCOME_CAPACITY_CONNECTION_V1.md",
+    "contracts/CPU_OUTCOME_RECOVERY_V1.md",
+    "contracts/NATIVE_CPU_OUTCOME_PROVENANCE_V1.md",
+    "contracts/NATIVE_CPU_RUNTIME_COMPOSITION_V1.md",
+    "contracts/NATIVE_OWNER_SESSION_V1.md",
+    "contracts/OUTCOME_CAPACITY_V1.md",
+    "native/sqlite_runtime/outcome_capacity.cpp",
+    "src/ceta/composition/ipc_service.py",
+    "src/ceta/composition/native_cpu_outcome.py",
+    "src/ceta/composition/native_cpu_runtime.py",
+    "src/ceta/composition/service_process.py",
+    "src/ceta/effects/native_observer.py",
+    "src/ceta/identity/cpu_outcome_capacity.py",
+    "src/ceta/identity/native_cpu_outcome.py",
+    "src/ceta/identity/native_owner_view.py",
+    "src/ceta/identity/owner_session.py",
+    "src/ceta/kernel/cpu_execution.py",
+    "src/ceta/kernel/cpu_outcome_recovery.py",
+    "src/ceta/kernel/effect_transactions.py",
+    "src/ceta/store/journal.py",
+    "src/ceta/store/outcome_capacity.py",
+    "tests/contract/test_cpu_capacity_connection.py",
+    "tests/contract/test_cpu_execution_admission.py",
+    "tests/contract/test_cpu_outcome_recovery.py",
+    "tests/contract/test_cpu_recovery_registration.py",
+    "tests/contract/test_native_cpu_outcome_provenance.py",
+    "tests/contract/test_native_observer_origin.py",
+    "tests/contract/test_native_owner_execution.py",
+    "tests/contract/test_native_owner_preparation.py",
+    "tests/contract/test_native_runtime_composition.py",
+    "tests/contract/test_outcome_capacity.py"
+  ],
+  "product_modules": [
+    "src/ceta/__init__.py",
+    "src/ceta/application/__init__.py",
+    "src/ceta/application/ipc_service.py",
+    "src/ceta/application/lifecycle.py",
+    "src/ceta/application/operator.py",
+    "src/ceta/application/task_operator.py",
+    "src/ceta/application/use_cases.py",
+    "src/ceta/composition/__init__.py",
+    "src/ceta/composition/client_process.py",
+    "src/ceta/composition/ipc_service.py",
+    "src/ceta/composition/kernel_service.py",
+    "src/ceta/composition/native_cpu_outcome.py",
+    "src/ceta/composition/native_cpu_runtime.py",
+    "src/ceta/composition/owned_service.py",
+    "src/ceta/composition/service_process.py",
+    "src/ceta/context/__init__.py",
+    "src/ceta/context/compiler.py",
+    "src/ceta/contracts/__init__.py",
+    "src/ceta/contracts/construction.py",
+    "src/ceta/contracts/custody_protocol.py",
+    "src/ceta/contracts/editor_recovery.py",
+    "src/ceta/contracts/errors.py",
+    "src/ceta/contracts/events.py",
+    "src/ceta/contracts/evidence_admission.py",
+    "src/ceta/contracts/framing.py",
+    "src/ceta/contracts/graphs.py",
+    "src/ceta/contracts/history.py",
+    "src/ceta/contracts/kernel_transactions.py",
+    "src/ceta/contracts/local_ipc.py",
+    "src/ceta/contracts/local_results.py",
+    "src/ceta/contracts/memory_lifecycle.py",
+    "src/ceta/contracts/owner_enrollment.py",
+    "src/ceta/contracts/provenance.py",
+    "src/ceta/contracts/read_sets.py",
+    "src/ceta/contracts/real_effect.py",
+    "src/ceta/contracts/request_compiler.py",
+    "src/ceta/contracts/resource_management.py",
+    "src/ceta/contracts/resource_reservations.py",
+    "src/ceta/contracts/runtime_records.py",
+    "src/ceta/contracts/source_references.py",
+    "src/ceta/contracts/store_transactions.py",
+    "src/ceta/contracts/task_drafts.py",
+    "src/ceta/contracts/task_meaning.py",
+    "src/ceta/contracts/temporal.py",
+    "src/ceta/contracts/transitions.py",
+    "src/ceta/contracts/wire.py",
+    "src/ceta/contracts/workload_throttling.py",
+    "src/ceta/desktop/__init__.py",
+    "src/ceta/desktop/accessibility.py",
+    "src/ceta/desktop/meaning_view.py",
+    "src/ceta/desktop/operator_view.py",
+    "src/ceta/desktop/preparation_view.py",
+    "src/ceta/desktop/task_view.py",
+    "src/ceta/effects/native_cpu_binding.py",
+    "src/ceta/effects/native_observer.py",
+    "src/ceta/identity/__init__.py",
+    "src/ceta/identity/cpu_outcome_capacity.py",
+    "src/ceta/identity/native_approval.py",
+    "src/ceta/identity/native_clock.py",
+    "src/ceta/identity/native_code_binding.py",
+    "src/ceta/identity/native_cpu_outcome.py",
+    "src/ceta/identity/native_owner_view.py",
+    "src/ceta/identity/owner_session.py",
+    "src/ceta/identity/owners.py",
+    "src/ceta/identity/windows_pipe.py",
+    "src/ceta/kernel/__init__.py",
+    "src/ceta/kernel/cpu_execution.py",
+    "src/ceta/kernel/cpu_outcome_recovery.py",
+    "src/ceta/kernel/editor_recovery.py",
+    "src/ceta/kernel/effect_transactions.py",
+    "src/ceta/kernel/owner_authority.py",
+    "src/ceta/kernel/resource_reservations.py",
+    "src/ceta/kernel/task_drafts.py",
+    "src/ceta/kernel/transactions.py",
+    "src/ceta/orchestration/__init__.py",
+    "src/ceta/orchestration/graph.py",
+    "src/ceta/reasoning/__init__.py",
+    "src/ceta/reasoning/adapter.py",
+    "src/ceta/reasoning/assessment.py",
+    "src/ceta/reasoning/shadow.py",
+    "src/ceta/reasoning/source_loader.py",
+    "src/ceta/resource/__init__.py",
+    "src/ceta/resource/admission.py",
+    "src/ceta/resource/budget.py",
+    "src/ceta/resource/diagnostics.py",
+    "src/ceta/resource/hardware.py",
+    "src/ceta/resource/inference.py",
+    "src/ceta/resource/pressure.py",
+    "src/ceta/store/__init__.py",
+    "src/ceta/store/backups.py",
+    "src/ceta/store/journal.py",
+    "src/ceta/store/outcome_capacity.py",
+    "src/ceta/store/projections.py",
+    "src/ceta/store/sqlite_runtime.py",
+    "src/ceta/store/state.py",
+    "src/ceta/supervisor/__init__.py",
+    "src/ceta/supervisor/isolated_worker.py",
+    "src/ceta/supervisor/service.py",
+    "src/ceta/supervisor/windows_jobs.py"
+  ],
+  "original_case_id": "test_isolated_worker.NativeIsolatedWorkerTests.test_actual_nonpersistent_launch_denial_and_medium_control_retirement",
+  "native_observer_ids": [
+    "test_native_observer_origin.NativeObserverOriginTests.test_actual_cleanup_complete_but_diagnostic_failure_does_not_publish",
+    "test_native_observer_origin.NativeObserverOriginTests.test_actual_native_return_has_origin_and_equal_decoded_dto_does_not",
+    "test_native_observer_origin.NativeObserverOriginTests.test_actual_other_retained_target_and_observer_are_denied",
+    "test_native_observer_origin.NativeObserverOriginTests.test_actual_protocol_rejection_invalidates_previous_origin",
+    "test_native_observer_origin.NativeObserverOriginTests.test_actual_second_observation_retires_first_origin",
+    "test_native_observer_origin.NativeObserverOriginTests.test_actual_unavailable_membership_has_origin_but_no_measured_outcome"
+  ],
+  "native_store_ids": [
+    "test_native_owner_view.NativeStoreBindingTests.test_actual_replacement_is_denied_while_retained_and_detected_after_release",
+    "test_native_owner_view.NativeStoreBindingTests.test_actual_two_second_native_observation_cannot_round_down_to_success",
+    "test_native_owner_view.NativeStoreBindingTests.test_actual_volume_and_file_ids_are_distinct_full_width_and_current",
+    "test_native_owner_view.NativeStoreBindingTests.test_all_retained_native_file_handles_are_noninheritable",
+    "test_native_owner_view.NativeStoreBindingTests.test_close_is_idempotent_and_closed_view_never_revalidates",
+    "test_native_owner_view.NativeStoreBindingTests.test_context_primary_survives_cleanup_denial_and_can_recover",
+    "test_native_owner_view.NativeStoreBindingTests.test_control_exception_with_refusing_attributes_keeps_exact_primary_and_custody",
+    "test_native_owner_view.NativeStoreBindingTests.test_directory_instead_of_database_is_denied_and_never_repurposed",
+    "test_native_owner_view.NativeStoreBindingTests.test_exact_native_expectation_refuses_different_file_id_and_root",
+    "test_native_owner_view.NativeStoreBindingTests.test_failed_current_observation_never_becomes_a_measured_match",
+    "test_native_owner_view.NativeStoreBindingTests.test_file_currentness_and_close_are_serialized_without_lost_custody",
+    "test_native_owner_view.NativeStoreBindingTests.test_missing_database_is_denied_without_creation_and_all_handles_retire",
+    "test_native_owner_view.NativeStoreBindingTests.test_reopen_exact_native_expectation_observes_same_objects",
+    "test_native_owner_view.NativeStoreBindingTests.test_slow_observation_is_rejected_without_claiming_native_preemption",
+    "test_native_owner_view.NativeStoreBindingTests.test_sqlite_writes_continue_on_the_same_canonical_database_identity",
+    "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_charges_both_endpoint_resolutions_at_inclusive_boundary",
+    "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_invalid_unavailable_or_coarse_sources_are_denied",
+    "test_native_owner_view.NativeStoreBindingTests.test_stopwatch_tick_type_rollback_and_control_failure_remain_explicit"
+  ],
+  "inactive_retained_vendor_payloads": 150,
+  "source_baseline_status": "Accepted JS8 Source352 plus separately pinned existing reasoning inputs; JS9 not published",
+  "execution": "DORMANT_PENDING_DISTINCT_REVIEW_AND_ROOT_RELEASE",
+  "Source_publication": false,
+  "product_acceptance": false,
+  "host_profiles": false,
+  "adapter_deltas": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r1/ADAPTER-DELTAS-R2.json",
+    "sha256": "dd3ca882aaa5753e86ee20dada34eb860b583e9a775c3a7e2a41041dd1ad75e3"
+  },
+  "metadata_successor": {
+    "previous_sha256": "ab97a0817abdb08b33efc91d072548a8808c704f38fa8bf06cd8533fa9f46088",
+    "reason": "Record exact final adapter deltas and per-file Source claim/error-custody gates before review; all predecessor bytes preserved",
+    "Source_or_candidate_changes": false
+  }
+}

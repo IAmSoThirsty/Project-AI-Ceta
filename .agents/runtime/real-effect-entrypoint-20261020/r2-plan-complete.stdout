@@ -1,0 +1,133 @@
+{
+  "allowed": true,
+  "blocked": {
+    "integrate": "validate: predecessor state is PENDING",
+    "review": "evidence: predecessor state is READY; implement: predecessor state is READY",
+    "validate": "review: predecessor state is PENDING"
+  },
+  "fingerprint_matches": true,
+  "graph_fingerprint": "5770b0555529c24d250e4963168821466cdd074f90a05d025ada34c2731c434a",
+  "graph_id": "ceta_private_manual_real_effect_entrypoint",
+  "nodes": {
+    "discover": {
+      "artifact_hash": "9947a3f6c94ed28b55868a74aa45b9a1d05dc5f83b4aea06d2b0d125ae75d88a",
+      "changed_files": [],
+      "claim": null,
+      "completed_at": "2026-10-20T10:58:44.306568+00:00",
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": "/root/ac7_native_artifact_review20",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "0c704abc37b5c0303b075a47701dcb0be5bb13a818203e65a78ee01ae64bf437",
+      "receipt_ref": "receipts/discover.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\real-effect-entrypoint-20261020"
+    },
+    "evidence": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "all hard predecessor requirements satisfied",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "READY",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "implement": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "all hard predecessor requirements satisfied",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "READY",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "integrate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "validate: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "plan": {
+      "artifact_hash": "b6e6f31cce789ab60a5039d9648cdaf58036f3af1a7076fca16ceba39cd57b64",
+      "changed_files": [],
+      "claim": null,
+      "completed_at": "2026-10-20T10:58:46.997421+00:00",
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": "/root/ac7_native_artifact_review20",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "6e4f05652f0e095e30fc9f45406761c4e875fb4f8a9842ce93d56e1b82ff5a01",
+      "receipt_ref": "receipts/plan.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\real-effect-entrypoint-20261020"
+    },
+    "review": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "evidence: predecessor state is READY; implement: predecessor state is READY",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "validate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "review: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    }
+  },
+  "ready_now": [
+    "evidence",
+    "implement"
+  ],
+  "run_id": "real-effect-entrypoint-20261020",
+  "sequence": 6,
+  "states": {
+    "discover": "SUCCEEDED",
+    "evidence": "READY",
+    "implement": "READY",
+    "integrate": "PENDING",
+    "plan": "SUCCEEDED",
+    "review": "PENDING",
+    "validate": "PENDING"
+  }
+}

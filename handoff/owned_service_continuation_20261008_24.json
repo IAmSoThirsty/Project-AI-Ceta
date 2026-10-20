@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-08T17:37:05.792491+00:00",
+  "status": "IMPLEMENTED_NOT_QUALIFIED",
+  "integration": "PROPOSED_NOT_APPLIED_ROOT_CANDIDATE_REVIEW_PENDING",
+  "application_root": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios",
+  "scope": {
+    "changed_existing": [
+      "contracts/LOCAL_IPC_V1.md",
+      "src/ceta/application/ipc_service.py",
+      "src/ceta/application/use_cases.py",
+      "src/ceta/composition/ipc_service.py",
+      "src/ceta/contracts/local_ipc.py",
+      "src/ceta/identity/windows_pipe.py",
+      "src/ceta/kernel/transactions.py"
+    ],
+    "new": [
+      "contracts/OWNED_SERVICE_V1.md",
+      "contracts/dependencies/native-operator.lock",
+      "contracts/dependencies/native-operator.txt",
+      "src/ceta/application/operator.py",
+      "src/ceta/composition/client_process.py",
+      "src/ceta/composition/owned_service.py",
+      "src/ceta/composition/service_process.py",
+      "src/ceta/contracts/local_results.py",
+      "src/ceta/desktop/__init__.py",
+      "src/ceta/desktop/operator_view.py",
+      "src/ceta/supervisor/__init__.py",
+      "src/ceta/supervisor/service.py",
+      "src/ceta/supervisor/windows_jobs.py",
+      "tests/contract/test_kernel_recovery.py",
+      "tests/contract/test_local_results.py",
+      "tests/contract/test_operator_view.py",
+      "tests/contract/test_owned_service.py",
+      "tests/contract/test_windows_jobs.py",
+      "tools/ceta_operator.py"
+    ]
+  },
+  "preserved_scope": {
+    "requirements": 175,
+    "components": 25,
+    "original_cases": 128,
+    "packages": 28,
+    "volumes": 20,
+    "lifecycle": 406,
+    "gates": 8
+  },
+  "mechanics": "Owned Windows service/client lifetimes use atomic job membership and selected process creation/image identity. A single-use controller reserves launch slots and disables dispatch before owned termination; stopped status requires observed primary exit, empty owned jobs, no launch in flight and completed retryable handle cleanup. Authenticated duplex results bind request, route, scope, peer lifetime and fresh receiver generation. Read-only recover_permit returns matching durable current state without replay, refund or authority renewal. The model-free native development inspector calls the existing five kernel routes through one captured kernel/store; identity-only owners and positive effect admission remain closed.",
+  "limits": "This is development execution, IMPLEMENTED_NOT_QUALIFIED. Same-account jobs and image-file hashes do not establish filesystem/network/credential isolation or loaded-code attestation. Synchronous launch and tiny control writes rely on ordinary OS scheduling; no universal native/driver deadline is claimed. Stop does not cancel a kernel COMMIT. Lost or denied results may follow committed consumption and require read-only reconciliation, never automatic replay/refund. Drafts are per-view memory only. Offscreen Qt controls and a hidden native Windows render do not qualify visible UI/accessibility. Trusted time/approval/resource/revocation owners, protected effects, installed/offline, independent/human, power-loss, physical/device/custody/hardware/distributed/endurance lanes and all original cases/gates remain open. Source adoption is unchanged; six transition decisions remain unresolved. Historical V18-GAP-002 records46 blank Owners Cockpit CHAPTER ACCEPTANCE RULE bodies (witness635/rawPDF e8484ea4...,139pages/48headings/two populated), distinct from128 AppendixB scenarios; no new PDF/visual/provenance proof is claimed in this job.",
+  "next_action": "Complete protected current time, approval and resource/broker owners and unresolved source decisions before positive runtime/effect admission. Qualify complete supervisor/event/queue/lease/recovery behavior, independent evidence, visible native UI/durable drafts and the whole installed/offline/physical/device/custody/hardware/distributed/endurance scope. Final source/allocation/state checks and delivery require later exact receipts.",
+  "fresh_tests": {
+    "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.json",
+    "sha256": "741c45c1c6779ea688ceb03a9aa01bd33503d9b7c7991d0392e2c61974af1b70",
+    "tests": 427,
+    "new": 103,
+    "prior": 324,
+    "raw_log": {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.txt",
+      "sha256": "4e19bfd451ba6d4d69ce5bf5064cd390a5341167f8afaf4df27a44701b58122d"
+    },
+    "started_at_utc": "2026-10-08T17:22:01.173120+00:00",
+    "ended_at_utc": "2026-10-08T17:22:55.027532+00:00",
+    "qualification": "DEVELOPMENT_EXECUTION_ONLY_NOT_ORIGINAL_ACCEPTANCE_OR_PRODUCT_QUALIFICATION"
+  },
+  "source_review": {
+    "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\root-source-fullsuite-review-24-04.json",
+    "sha256": "984bdf777ba9aa436b1c6f66baeeaeef5867733fb2ba62238a5331dbef7bcc26"
+  },
+  "first_failed_full_run": {
+    "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-first-24-01.json",
+    "sha256": "a2ccd72879068d436108bc2d4e2215dc56c390c1ad79646a93c3f8a2533f0b88",
+    "tests": 427,
+    "ok": 426,
+    "errors": 1,
+    "log": {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-first-24-01.txt",
+      "sha256": "fd21bb024baf131f5283f8e96d34282dad591b5a360de1315c490ed310ba0284"
+    }
+  },
+  "failure_resolution": "Marker publication fixture repaired using closed sibling file/atomic rename and forced parent-child barrier. Exact initial marker bytes/interleaving were not retained; no application STOP defect established.",
+  "observed_execution_receipts": [
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-first-24-01.json",
+      "sha256": "a2ccd72879068d436108bc2d4e2215dc56c390c1ad79646a93c3f8a2533f0b88",
+      "exit_code": 1,
+      "result": null,
+      "observed_at_utc": "2026-10-08T17:12:22.024893+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-first-24-01.txt",
+          "sha256": "fd21bb024baf131f5283f8e96d34282dad591b5a360de1315c490ed310ba0284",
+          "bytes": 75644,
+          "raw_test_rows": 427
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.json",
+      "sha256": "741c45c1c6779ea688ceb03a9aa01bd33503d9b7c7991d0392e2c61974af1b70",
+      "exit_code": 0,
+      "result": null,
+      "observed_at_utc": "2026-10-08T17:22:55.027532+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.txt",
+          "sha256": "4e19bfd451ba6d4d69ce5bf5064cd390a5341167f8afaf4df27a44701b58122d",
+          "bytes": 73672,
+          "raw_test_rows": 427
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-first-24-01.json",
+      "sha256": "064308d6a184be1372cd020d5ca1beb25e15b606a026c61698a1d632a25e313a",
+      "exit_code": 1,
+      "result": "FAIL_RETAINED",
+      "observed_at_utc": "2026-10-08T16:31:22.033333+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-first-24-01.txt",
+          "sha256": "7182fc67d762f88907e430bc92012d95219ced54789897025ff91b8f18055081",
+          "bytes": 4508,
+          "raw_test_rows": 15
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-repair-24-04.json",
+      "sha256": "1fb909a6de3f3136db1306d6c01c917c50360ad65f9f4c64515ac2201540dd61",
+      "exit_code": 0,
+      "result": "PASS_FOCUSED_NATIVE_FIXTURES",
+      "observed_at_utc": "2026-10-08T16:39:40.000689+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-repair-24-04.txt",
+          "sha256": "0ccced98233bb7ca92569d91ae06411395cb1c9cd115978fc04dfca444348b01",
+          "bytes": 2668,
+          "raw_test_rows": 17
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-lifetime-24-01.json",
+      "sha256": "1b10a9acfeca68ed0b1e9efda79fe536f0a6d7b3b851be14620091a03846f7c9",
+      "exit_code": 0,
+      "result": "PASS_NARROW_NATIVE_FIXTURES",
+      "observed_at_utc": "2026-10-08T17:05:54.669233+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-lifetime-24-01.txt",
+          "sha256": "371cc8dcdfe7a920936509b25e66690ee9e5c7f1633e6d79c98c4b5f7418ac8b",
+          "bytes": 2854,
+          "raw_test_rows": 18
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-smoke-first-24-01.json",
+      "sha256": "6fbf79f131b83414cfe4897125f4ce055ec2dd91266b1adb0e546592ca078004",
+      "exit_code": 1,
+      "result": null,
+      "observed_at_utc": "2026-10-08T16:56:30.919784+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-smoke-first-24-01.txt",
+          "sha256": "c7f7064ae74bc07f8e487f16e7abbe21c1bc301fd758c847bf878bb5edc9359f",
+          "bytes": 2425,
+          "raw_test_rows": 0
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-smoke-repair-24-02.json",
+      "sha256": "1e8c953f3f09483ee7ab989096e58651d80f77eb5cc0b0382125cacaf36dd203",
+      "exit_code": 1,
+      "result": null,
+      "observed_at_utc": "2026-10-08T16:57:03.671674+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-smoke-repair-24-02.txt",
+          "sha256": "b8088b10390bfd1c3beaa7be07f2527f4f705bbc03d90a1f2f18e637a7c31313",
+          "bytes": 1305,
+          "raw_test_rows": 0
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-smoke-fixture-corrected-24-03.json",
+      "sha256": "176c046824e4690543b059f9951dd3aa445c8c9cd9b3cefffb9fb27f7c321c3c",
+      "exit_code": 0,
+      "result": null,
+      "observed_at_utc": "2026-10-08T16:57:35.639653+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-smoke-fixture-corrected-24-03.txt",
+          "sha256": "c755580da7b733a0f6c0793b571a9afb936b6b268e6dba47b9c9dede43143887",
+          "bytes": 955,
+          "raw_test_rows": 0
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-focused-first-24-01.json",
+      "sha256": "95a512bc2a975436fc2e2cb2b07253e09764e62dc14f11e2eab7bc076806b84d",
+      "exit_code": 0,
+      "result": null,
+      "observed_at_utc": "2026-10-08T17:07:53.199359+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-focused-first-24-01.txt",
+          "sha256": "023bab7e752cc42eba195595d42ecf614e06823e1fa1a6a538721f8e48953f81",
+          "bytes": 5229,
+          "raw_test_rows": 24
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-focused-identity-join-24-01.json",
+      "sha256": "caf02a79cefea7a7e7e8d26f575e8b0fe4191bf6eb87eec72eb176f0906bc33f",
+      "exit_code": null,
+      "result": "PASS_24_RAW_IDENTITIES_JOINED",
+      "observed_at_utc": "2026-10-08T17:08:53.641674+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-focused-first-24-01.txt",
+          "sha256": "023bab7e752cc42eba195595d42ecf614e06823e1fa1a6a538721f8e48953f81",
+          "bytes": 5229,
+          "raw_test_rows": 24
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-focused-repair-24-04.json",
+      "sha256": "67ab4df3352fc6f4e26d4fe4c73d81253820f60484e8d0f5c3d5332b968956d5",
+      "exit_code": 0,
+      "result": null,
+      "observed_at_utc": "2026-10-08T17:21:46.422420+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\owned-service-focused-repair-24-04.txt",
+          "sha256": "9c139b6f4e2d49e0480dc003acb945d11abba300e54270f0d63dade6c145f4f0",
+          "bytes": 5229,
+          "raw_test_rows": 24
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\operator-view-first-24-01.json",
+      "sha256": "b3541c54f741cf5e34032bcfee200c2950135fde7bb02a2ccfa6fae8cc49ac0e",
+      "exit_code": 0,
+      "result": "PASS_FOCUSED_QT_CONTROLS",
+      "observed_at_utc": null,
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\operator-view-first-24-01.txt",
+          "sha256": "590d5d18977adf22065f197fb065bd7ee801a712e8245fffbe9ac39d789c83b4",
+          "bytes": 2879,
+          "raw_test_rows": 16
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\operator-native-render-first-24-01.json",
+      "sha256": "20077457b52a3dc2998c326f27a5444258b73c46bc178f9083890329571f2619",
+      "exit_code": 0,
+      "result": null,
+      "observed_at_utc": "2026-10-08T17:05:48.694015+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\operator-native-render-first-24-01.txt",
+          "sha256": "c695f33985e7d97425c86846ead721ae48eabbeb0f0913562802cf0546251025",
+          "bytes": 707,
+          "raw_test_rows": 0
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\operator-dependency-plan.json",
+      "sha256": "be6e346cf82bd10b8e4a6cbceb33fe4b8005f753656f4fcb11fabdfce7c96573",
+      "exit_code": null,
+      "result": null,
+      "observed_at_utc": null,
+      "logs": []
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\operator-dependency-install.json",
+      "sha256": "52e5cc524d4a753a4a582a6769815421ac933a6f400cf348a107a05861f94193",
+      "exit_code": null,
+      "result": null,
+      "observed_at_utc": null,
+      "logs": []
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-first-24-01.json",
+      "sha256": "b72d52c4a082b73022c221db02d35ae450fcefe18666b3bd572c98b3afdd574d",
+      "exit_code": 0,
+      "result": "PASS_NARROW_PURE_TESTS",
+      "observed_at_utc": null,
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-first-24-01.txt",
+          "sha256": "19a36d6fce961ca0902fc7189ed492738722f23d0c6ba4da49d5c8328d03dde0",
+          "bytes": 4216,
+          "raw_test_rows": 23
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-recovery-24-02.json",
+      "sha256": "1ad75372afb3c8772672b3063a5ec01203bccd8275abd6ecefbdd0c0aada02a1",
+      "exit_code": 0,
+      "result": "PASS_FOCUSED_RESULT_REPAIR",
+      "observed_at_utc": null,
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-recovery-24-02.txt",
+          "sha256": "91cf97fd16be06c142621f7bd2ea49c81a2ef0f688d6ee59ff95284bdcffce66",
+          "bytes": 4994,
+          "raw_test_rows": 27
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-recovery-24-03.json",
+      "sha256": "e78798cc6ef60102668dd57bac5a19774005aa0b0f4e051539df1ba509d66d58",
+      "exit_code": 0,
+      "result": "PASS_FOCUSED_RESULT_REPAIR",
+      "observed_at_utc": null,
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-recovery-24-03.txt",
+          "sha256": "fd8c8963f98e09063d09d6b22254844e52c675aecdbbcb37f337cd31f7e825e7",
+          "bytes": 4994,
+          "raw_test_rows": 27
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\kernel-recovery-focused-first-24-01.json",
+      "sha256": "94465d321762d9ae72935240417610658fde2d787bffc58a6133e76e702f9150",
+      "exit_code": 0,
+      "result": "PASS_FOCUSED_DEVELOPMENT_TESTS_NOT_QUALIFIED",
+      "observed_at_utc": "2026-10-08T16:30:28.621888+00:00",
+      "logs": [
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\kernel-recovery-focused-first-24-01.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "raw_test_rows": 0
+        },
+        {
+          "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\kernel-recovery-focused-first-24-01.stderr.txt",
+          "sha256": "071b2043973b1c40bdc5d240f1146853ddfd6eabdd30ca63d58af43ecd648d3f",
+          "bytes": 3673,
+          "raw_test_rows": 18
+        }
+      ]
+    },
+    {
+      "path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\integration-pre-review-repair-24-02.json",
+      "sha256": "7c147b31a473b066a7a266428197b2cc17f53342cbbdb00a7632448a80d60103",
+      "exit_code": null,
+      "result": null,
+      "observed_at_utc": "2026-10-08T16:49:15.7666186Z",
+      "logs": []
+    }
+  ],
+  "historical_before_copy_sha256": {
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-recovery-before-24-02-local_results.py.before": "7b471bfe05c6629a85bd78f5590459e7d0510702b8a92b41f8ccb6ed6f678068",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\local-results-recovery-before-24-02-test_local_results.py.before": "dcf92585a056379376232d6726e8cb4f2851197f7e2847a038ed725a0c7cbc47",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\LOCAL_IPC_V1.md.pre_final_lifecycle_repair.before": "6b11c74d58df7b6ace196fd0aeecb3872f0bd5f8aa38036cef8b6912658e7164",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\LOCAL_IPC_V1.pre_increment24.before": "a823ab511c77aeded2016e43a926f81556b6cab660203aa694c8ffc383cb7ca7",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\OWNED_SERVICE_V1.md.pre_final_lifecycle_repair.before": "35f6b6918cac117232ffe3f9a77039c07cead0d63e736314cd94c9e547f5228b",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\OWNED_SERVICE_V1.pre-marker-publication-repair-24-04.before": "21f0ccf261bc04c3ed2f273c245dfbee8e35b4811faa004aa7e53d85c6ad7330",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\run-bound-validation-24.pre-identity-join.before": "28e23999d3fa3f783969f072ea2b2250fe36616f3f5b3c6725af1809bdd0cae0",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\run-bound-validation-24.pre-windows-lines.before": "313dbaf4655787dee9cda1a03f067a88c61da8391c25bd60dbbc211bc6f1b327",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\src-ceta-application-operator.py.pre-review-repair-24-02.before": "d4ba81c9bab86decf2041100fdd4eff41c676034a9a596e1b977a35ef3ae2f8d",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\src-ceta-composition-client_process.py.pre-integer-timeout-24-02.before": "586840d88b2916558e58df1b9daa27f4395678be7fa0af8ef0fe0b96db0f8b52",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\src-ceta-composition-owned_service.py.pre-extra-review-24-03.before": "5956b0647ef634505e7f438378a769f19e6c5eb01ac7c6c3e5da396dae30afdf",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\src-ceta-composition-owned_service.py.pre-integer-timeout-24-02.before": "ba57cda9cf8da67946254ea34528f7b2d5e8325ed93c51506dd81f4fcfe00c38",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\src-ceta-composition-owned_service.py.pre-review-repair-24-02.before": "a5d4dbc6ccc4da265ddbe95b180cca87eea5d131a6f130966d939b4b895a6814",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\src-ceta-supervisor-service.py.pre-extra-review-24-03.before": "83caa64e3b59ea3738563afa3f7f20437058c4dea27c9050ac12abc4d845699a",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\src-ceta-supervisor-service.py.pre-review-repair-24-02.before": "0127715628b2b7d6253252d1d13d4e707448c48b7e451e2076bccbe82243443b",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\test_owned_service.pre-marker-publication-repair-24-04.before": "6350bff3520e3e3232cea0d4fb853eda99f5b16084113919fb06bdd2f8693b65",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\test_windows_jobs.first.before": "af53a4f9c8018c139ab0160701bb0c7b610eeab58742cecff66b2fd82dbb7c75",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-lifetime-before-24-01-test_windows_jobs.py.before": "da642b26b9a5e9fda1bfc9ac5477923c47bd841625868014bbdf0484ef771abf",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows-jobs-lifetime-before-24-01-windows_jobs.py.before": "f73b6d86b18aeecfa96d0d57d69bde99905011c57e1185b00bef9bbf42bc1924",
+    "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\windows_jobs.first.before": "7871c0a32b75244eff6aea9ed53bd2eca49128bcc65f708194583c57d16c2eb8"
+  },
+  "receipt_collector_repair": "First focused24 receipt/raw retained; separate CRLF identity-join sidecar supplies24 actual raw identities without relabeling or replacing original receipt.",
+  "fixture_partition": {
+    "result_parser": "27_PURE",
+    "kernel_recovery": "18_REAL_SQLITE_SYNTHETIC_OWNERS",
+    "windows_jobs": "18_NATIVE_OWNED_JOBS",
+    "operator_view": "16_OFFSCREEN_QT_CONTROLLED_SESSION",
+    "owned_service": "24_10_NATIVE_14_CONTROLLED"
+  },
+  "native_qt_render": "Actual Windows Qt platform, hidden window, real owned service/read-only CURRENT_RECORD, observed STOP and unchanged journal. Not visible UI qualification.",
+  "historical_blank_chapter_criteria": {
+    "record": "handoff/supplemental_reconciliation_20261008_18.json",
+    "record_sha256": "27cd33e30d1ccee19f28be901eddda1b89d94be89eec72ef57b5d2b33d32890f",
+    "gap_id": "V18-GAP-002",
+    "source_witness": 635,
+    "source_pdf_sha256": "e8484ea46ce017fda427bc748627e7313f536c4a6a41248832b6b069238f8b0b",
+    "pages": 139,
+    "chapter_acceptance_rule_headings": 48,
+    "blank_bodies": 46,
+    "populated_bodies": 2,
+    "domain": "Owners Cockpit chapter boxes, not AppendixB B001-B128",
+    "review": "Historical gap record read; original PDF/images not reread here; do not invent missing criteria."
+  },
+  "dependency": "Hashlocked PySide6-Essentials/shiboken6 6.11.2 declared project dependencies; plan/install reports separately bound, not installed-product qualification.",
+  "unresolved_transition_ids": [
+    "TR-04",
+    "TR-06",
+    "TR-09",
+    "TR-11",
+    "TR-13",
+    "TR-20"
+  ],
+  "effect_admission": "CLOSED",
+  "runtime_positive_owners": "CLOSED",
+  "source_adoption": "UNCHANGED_NOT_RATIFIED",
+  "gate_a": "OPEN",
+  "original_cases": "128_NOT_RUN",
+  "formal_gates": "8_NOT_EVALUATED",
+  "full_objective": "ACTIVE_NOT_COMPLETE",
+  "normal_profile": "NOT_INSPECTED;NO_CURRENT_INTEGRITY_CLAIM",
+  "final_state_and_checks": "PENDING_FINALIZER_AT_INTEGRATION_CUT",
+  "review_delivery": "PENDING_COPY_AT_INTEGRATION_CUT"
+}

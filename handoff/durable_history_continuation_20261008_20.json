@@ -1,0 +1,208 @@
+{
+  "schema_version": "1",
+  "kind": "REAL_DURABLE_HISTORY_MECHANISM_CONTINUATION_NOT_RUNTIME_QUALIFICATION",
+  "observed_at_utc": "2026-10-08T11:18:53.024332+00:00",
+  "status": "IMPLEMENTED_NOT_QUALIFIED",
+  "source_scope": "EXISTING_CMP03_STORE_AND_CONTRACTS;NO_NEW_SUBSYSTEM",
+  "new_application_paths": [
+    "src/ceta/contracts/history.py",
+    "src/ceta/store/__init__.py",
+    "src/ceta/store/sqlite_runtime.py",
+    "src/ceta/store/journal.py",
+    "tests/contract/test_history.py",
+    "tests/contract/test_sqlite_runtime.py",
+    "contracts/DURABLE_HISTORY_V1.md",
+    "contracts/SQLITE_RUNTIME_V1.json",
+    "tools/probe_sqlite_runtime.py",
+    "native/sqlite_runtime/win-x64/sqlite3.dll",
+    "native/sqlite_runtime/win-x64/sqlite3.def",
+    "native/sqlite_runtime/README.md"
+  ],
+  "changed_existing_paths": {
+    "tools/development_inventory.py": "c3c87dbf2a128f5ef4e83b88d629885640f6d53663226be4e59d41a616c2bef5",
+    "tools/run_source_tests.py": "b3d17c1841d2ec6bf4c5a5bb06952c7cd860668f0d368725878d01347c541886"
+  },
+  "fresh_tests": {
+    "path": "evidence/runtime/desktop-history-final-20-07.json",
+    "tests": 206,
+    "new_tests_since_increment19": 25,
+    "prior_tests_rerun": 181,
+    "command": [
+      "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "tools/run_source_tests.py",
+      "desktop-history-final-20-07"
+    ],
+    "watched_files": 102,
+    "observed_at_utc": "2026-10-08T11:12:44.624770+00:00",
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "actual_mechanism": "Immutable ports; actual pinned SQLite loaded; event/payload original-byte persistence; serialized CAS/batch append; full-prefix/schema/profile/integrity validation; checkpoint-bound append/replay; fresh-process interruption and reopen; real SQLite FULL through page limit.",
+  "owner_limits": "No authenticated serialized writer process, OS protected resources, independent checkpoint/signature trust, atomic grants/budgets/intents/queue/projections, IPC authority or broker/effect admission. Fixture scope/time/actor identities are synthetic.",
+  "sqlite_dependency": {
+    "result": "PASS_OFFICIAL_ARCHIVE_BYTES_ONLY",
+    "manifest": {
+      "profile": "ceta-sqlite-runtime-v1",
+      "version": "3.53.4",
+      "platform": "windows-x64",
+      "archive_url": "https://sqlite.org/2026/sqlite-dll-win-x64-3530400.zip",
+      "archive_sha3_256": "deddee963c810d1eeac3ce5e15c7c41da21a1c54d7a39cf54fbf577d2f50de3a",
+      "archive_sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+      "members": {
+        "sqlite3.dll": {
+          "path": "native/sqlite_runtime/win-x64/sqlite3.dll",
+          "bytes": 3285504,
+          "sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+          "crc32": 4294754780
+        },
+        "sqlite3.def": {
+          "path": "native/sqlite_runtime/win-x64/sqlite3.def",
+          "bytes": 8722,
+          "sha256": "a93b7867cc1fdb4e1dd0d4eef727cf910fe9f2bb6cd612d933744add1fa7f11b",
+          "crc32": 880109120
+        }
+      },
+      "official_pages": {
+        "download.html": {
+          "url": "https://sqlite.org/download.html",
+          "bytes": 19324,
+          "sha256": "9cd376c2fb3a04ec2d6ca65bb1f8428631103d4c510d827c23cc979700735326"
+        },
+        "cves.html": {
+          "url": "https://sqlite.org/cves.html",
+          "bytes": 40802,
+          "sha256": "0ef51a811fdc3dcfcd86692736190db83ef78073892fbe2d89029cbc57ade3a5"
+        },
+        "security.html": {
+          "url": "https://sqlite.org/security.html",
+          "bytes": 15269,
+          "sha256": "55cf2628b79907b1b2e10af9b2caeba09829abedbfdd5f173d166f2058c85047"
+        },
+        "wal.html": {
+          "url": "https://sqlite.org/wal.html",
+          "bytes": 42143,
+          "sha256": "f3467b530b883d4a00574fe1a898b3d121ed72764ae28cf66941080ac0badb9e"
+        },
+        "backup.html": {
+          "url": "https://sqlite.org/backup.html",
+          "bytes": 28195,
+          "sha256": "306b6cca5c7c2f93b648040ae139f14d7d3221c0d16d79b5749e69d808382e04"
+        },
+        "copyright.html": {
+          "url": "https://sqlite.org/copyright.html",
+          "bytes": 8351,
+          "sha256": "44ca9f793055c8e32fc65f65a4f5bcf813a33f5bdaaa084067dd617a4ed3cc70"
+        },
+        "releaselog/3_53_4.html": {
+          "url": "https://sqlite.org/releaselog/3_53_4.html",
+          "bytes": 12926,
+          "sha256": "c8d12ef674ac295edba47c341cb18b5913795ba94a78474c68e4213970d128ac"
+        }
+      },
+      "observed_at_utc": "2026-10-08T10:42:45.713270+00:00",
+      "loading": "EXACT_DLL_HASH_AND_LOADED_MODULE_PATH_REQUIRED;REJECT_PRELOADED_CONFLICT",
+      "advisory_scope": "Official CVE table reviewed; older engines observed, no exploit established",
+      "native_wrapper": "Installed CPython _sqlite3.pyd retained; actual loaded project DLL/version must be probed",
+      "license": "SQLite public domain; https://sqlite.org/copyright.html",
+      "qualification": "DEPENDENCY_BYTES_ONLY;LOAD_COMPATIBILITY_AND_STORE_TESTS_PENDING"
+    },
+    "preparer_sha256": "0317f636928e683bc31c38eaeeb987d63831c4a4f3ae9378652c0fb5bf9658fd"
+  },
+  "loaded_runtime_evidence": "evidence/runtime/sqlite-runtime-loaded-20-02.json",
+  "power_loss": "NOT_TESTED;PROCESS_CRASH_IS_NOT_ELECTRICAL_POWER_LOSS",
+  "installed_frozen_executable_library": "NOT_RUN;DEVELOPMENT_INTERPRETER_LOAD_ONLY",
+  "source_inputs_sha256": {
+    "docs/architecture/SYSTEM_CONTRACT.md": "0fe4565543fc3afb4a1144ae54c329f514deba0ff22bd8c84deed3fac8e546bf",
+    "docs/architecture/DEPENDENCIES_AND_IPC.md": "f0e19742aabac18ba327dc80fe841f0c64d7165fbdb4ce4d2d51a09b5b66f107",
+    "docs/architecture/STATE_AND_TRANSACTION_MODEL.md": "8aaecefa5e760bbeeadf81fad5bd27e78c7169a1c83ab0e587238047dcfa4236",
+    "docs/specification/07_canonical_history_and_transactions.md": "1a2cf1ee955fcdae19934b646952d30188dd56452cd4dc53fb56f69894ef404f",
+    "docs/specification/06_identity_and_canonical_objects.md": "96b9d696f9436ac4ef0e65789e9d8951eaaab9d58870d074f424547609091f7b",
+    "src/ceta/store/README.md": "b09dde3898353e7d1d5326c806fbdbeeef1b763041d18f2cc32d63cf25fdbe8c",
+    "sources/ground_up_master_prompt.original.md": "bf3f1f74bf072627081cee4d42f74d77dd41b47201b0fe291389d8f1850d4b04",
+    "policies/POL-02_execution_and_effects.md": "a02fc6febc4c2171afc68fb106f70123a736326b5b5c57d188c0004336474299",
+    "policies/POL-07_identity_keys_and_time.md": "1a2e1358d6e894a48a65d4053b57ccdfb3c4a852284bde66ef346927a7320c2c",
+    "policies/POL-16_stop_recovery_and_reconciliation.md": "087ee6b4a7ecff2a46079d2962df42a8d9cd1d614736cdf91e6aaf5e5ec3ee01",
+    "handoff/OWNER_SCOPE_OVERRIDE.md": "851a203c271b45433ff9052dfc3451624ed4b00c47ae038f91aea771336a1b2c"
+  },
+  "current_ledger_before_sha256": {
+    "handoff/source_authority_register.json": "443a5eae6a71261d4ab5f126309587cf80ec327323cb8e9a25f56e9931b579b2",
+    "requirements/atomic_tickets.json": "c2160a239d21a41d147ad4f1bd1e570b562b64b3efeef8c529a832774c402a3d",
+    "build/progress.json": "147f8c6d680026d3a95c2b85a35c14b0f3ece1279ab0de2e71d87e4df1a92051",
+    "handoff/continuity.json": "4632dfd3b74ffcd365dc42275326f893f5a8286ec8f6c9ea927da24316a4db74",
+    "handoff/issues_20261006.json": "2fe388f97c896c9e3e9e43c68bc18b9f1eb4f048c7463c62886fb3f98a8f9471"
+  },
+  "volume19_partial": {
+    "immutable_checkpoint": 6,
+    "delegate_new_complete_bodies": 229,
+    "historical_complete_bodies": 10,
+    "complete_at_bound_cut": 239,
+    "remaining_at_bound_cut": 392,
+    "root_fresh_byte_index_check": "evidence/runtime/volume19-semantic-root-validation-20-02.json",
+    "root_personal_semantic_samples": [
+      89,
+      116,
+      129,
+      221
+    ],
+    "limits": "MODEL_AGENT_READS;NO_ADOPTION_OR_ANALYZER_CONFORMANCE;CONTINUATION_RUNNING",
+    "receipt_labels": "Original002/003 checkpoint literal1; exact separate correction retained and verified; no added semantic coverage"
+  },
+  "volume1": "PRIOR_COMPLETE_MODEL_READ_AND_FRESH_MACHINE_R2_EVIDENCE_RETAINED;14_SOURCE_RATIFICATION_DECISIONS_OPEN",
+  "preserved_failures_and_repairs": [
+    {
+      "issue": "Checkpoint validation separated from later replay/append",
+      "classification": "FIXED_NOW",
+      "repair": "Optional anchors checked in each actual transaction",
+      "failure": "evidence/runtime/desktop-history-review-regressions-20-03.json"
+    },
+    {
+      "issue": "WAL assert removed by optimized Python",
+      "classification": "FIXED_NOW",
+      "repair": "Explicit storage-profile denial",
+      "failure": "evidence/runtime/desktop-history-review-regressions-20-03.json"
+    },
+    {
+      "issue": "WAL changes between read-only and writer connections",
+      "classification": "FIXED_NOW",
+      "repair": "Actual WAL mode checked in every validation transaction",
+      "failure": "evidence/runtime/history-writer-profile-first-failure-20-01.txt"
+    },
+    {
+      "issue": "LIKE underscore wildcard hid sqliteXcorrupt trigger",
+      "classification": "FIXED_NOW",
+      "repair": "Literal reserved-prefix GLOB; unknown schema rejected before insertion",
+      "failure": "evidence/runtime/history-schema-first-failure-20-01.txt"
+    },
+    {
+      "issue": "First SQLite probe command array omitted output argument",
+      "classification": "FIXED_NOW",
+      "repair": "First source/receipt preserved; new20-02 probe records complete argument array"
+    },
+    {
+      "issue": "Volume19 receipt002/003 labels retained literal1",
+      "classification": "FIXED_NOW",
+      "repair": "Separate correction receipt; original bytes preserved"
+    }
+  ],
+  "evidence_sha256": {
+    "evidence/runtime/desktop-history-final-20-07.json": "7dbf59a41fe44e6db72960cbd0ec55d8eb77c8573e5c086a063ab9d7280bea3a",
+    "evidence/runtime/sqlite-runtime-loaded-20-02.json": "7380c50da39263928fe21caa3f36ae292f67d33eb866ec56ed2d702eaa4cc2c1",
+    "evidence/runtime/volume19-semantic-root-validation-20-02.json": "65489085d748499f673c89926da19af3a29f4d4dd56ceb8eefc1c87ed05ddd6e",
+    "evidence/runtime/desktop-history-review-regressions-20-03.json": "218be872d002dbf54b71e10d9b4de3f22286ec401bc0b961900de1daba3fb759",
+    "evidence/runtime/history-writer-profile-first-failure-20-01.txt": "a0c43a2174584c6969d064ff6b2a0a76a965798d941f13bbc5bc974288c0bca5",
+    "evidence/runtime/history-schema-first-failure-20-01.txt": "089e47d304143ecab51b047829321d45301323178fe2ed15d85cd4b62e1fbe7b"
+  },
+  "scope_record_sha256": "22270d1868257a071f3a4c1bc4f297ce04496234b1be059ff4e84acd2bd73d85",
+  "inspection_failures_retained_in_session": "Wrong guessed script/checkpoint/continuity paths; PowerShell JSON case collision corrected using Python json; combined output truncations bounded and repeated. No missing-source or integrity claim inferred from these failed reads.",
+  "source_adoption": "NOT_EVALUATED",
+  "gate_a": "OPEN",
+  "original_cases": "128_UNCHANGED_NOT_RUN",
+  "formal_gates": "8_UNCHANGED_NOT_EVALUATED",
+  "full_scope": "175_REQUIREMENTS_25_COMPONENTS_128_CASES_28_PACKAGES_20_VOLUMES_406_ORIGINALS_8_GATES_ALL_MANDATORY_LANES",
+  "next_safe_action": "Continue complete Volume19 rule semantics and source decisions; extend existing store transaction to grants/reservations/intents/queue/projections, then actual kernel consume/revoke and authenticated IPC/resource/time owners with integrated tests; no unresolved edge receives runtime authority.",
+  "full_objective": "ACTIVE_NOT_COMPLETE"
+}

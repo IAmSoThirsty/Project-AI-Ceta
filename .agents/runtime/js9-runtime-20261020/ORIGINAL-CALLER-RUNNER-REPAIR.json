@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-20T09:34:43.306750+00:00",
+  "failure": {
+    "path": "original_callers_r1/RESULT.json",
+    "sha256": "ce767819a17f3ddd3ae95bb2bf51ef2c35aa4b61472fbb9faf1562fac38a2b5e",
+    "tool_chunk": "3183a7",
+    "terminal_exit_status": 1,
+    "tests_started": 0
+  },
+  "old_runner_sha256": "1d6c5e8ed289e11a214d65a4c17741b87d5257b4b64c34343e63daf6f5865cad",
+  "new_runner_sha256": "5f6f26114a9424799a61c99f3f38bf0f59a7881514f69d0ca65258d47334a243",
+  "delta": "--- \n+++ \n@@ -64,7 +64,11 @@\n   preparation.FIXTURES=fixture/'owner-preparation'\n   authority.ROOT=fixture/'authority'\n   suite=unittest.defaultTestLoader.loadTestsFromNames(cases)\n-  actual=sorted(t.id() for t in suite)\n+  def leaves(group):\n+   if isinstance(group,unittest.TestSuite):\n+    for child in group:yield from leaves(child)\n+   else:yield group\n+  actual=sorted(t.id() for t in leaves(suite))\n   assert actual==sorted(cases),(actual,cases)\n   class Result(unittest.TextTestResult):\n    def startTest(self,test):events.append(dict(event='START',test_id=test.id(),at=now()));super().startTest(test)\n",
+  "product_or_test_edits": false,
+  "diagnosis": "ID observer now traverses nested suites from unittest.loadTestsFromNames without altering test bodies or selection"
+}

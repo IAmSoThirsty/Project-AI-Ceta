@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-20T11:38:46.122013+00:00",
+  "checkpoint": {
+    "repository_relative_path": ".agents/runtime/js9-root-r3-execution-20261020/USER-HALT-CHECKPOINT.json",
+    "sha256": "faccb2f78d5fb1a70751b0efc5e1b2ac22bdc0b601216e2ea6924a8cd478cad0"
+  },
+  "closure_command_exit": 0,
+  "root_claims": {},
+  "root_node_states": {
+    "candidate_cache": "FAILED",
+    "candidate_fixtures": "FAILED",
+    "destination_evidence": "PENDING",
+    "destination_fixtures": "PENDING",
+    "discover": "SUCCEEDED",
+    "implement": "FAILED",
+    "integrate": "PENDING",
+    "plan": "SUCCEEDED",
+    "review": "BLOCKED",
+    "validate": "PENDING"
+  },
+  "metadata_semantic_changes": [
+    {
+      "file": {
+        "repository_relative_path": "build/progress.json",
+        "sha256": "9d8e2e8e2953c3bcae71aa75219c806f770759a298b598d5cce2f95e67c7f05d"
+      },
+      "changed_top_level_fields": [
+        "goal_state",
+        "latest_user_halt_20261020"
+      ],
+      "before_bytes_recoverable": true
+    },
+    {
+      "file": {
+        "repository_relative_path": "handoff/continuity.json",
+        "sha256": "a20091c1ef54daea00c2aebfac842af198ed475692bbd57736d34d6123e2cd8d"
+      },
+      "changed_top_level_fields": [
+        "first_next_action",
+        "goal_status",
+        "latest_user_halt_20261020",
+        "next_action"
+      ],
+      "before_bytes_recoverable": true
+    }
+  ],
+  "agent_halt_receipts": [
+    {
+      "repository_relative_path": ".agents/runtime/real-effect-entrypoint-20261020/SAFE-HALT.json",
+      "sha256": "e438cf661ae7170a39de6e271f5bd8e87c15b21ea80367fb1d2d45773ec686b4"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/js9-r3-candidate-acceptance-review-20261020/HALT-20261020.json",
+      "sha256": "1d7c8f12e659af714781304f61e164d88c98c0a2218a480621ec4983d26b6b04"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/ac7-loader-capture-20261020/HALT-RECEIPT.json",
+      "sha256": "8f2132356f541d403147e7d5b565bee974beb87436fb1b92ce065f6eafb6cb5c"
+    }
+  ],
+  "collaborative_review": {
+    "repository_relative_path": ".agents/runtime/real-effect-entrypoint-20261020/HALT-CHECKPOINT-REVIEW.json",
+    "sha256": "8758ab35f8003013bb21107b364d2f1a2bdb426a9ea2cdeb5ee73986097a12f8"
+  },
+  "Source_before_verified": true,
+  "candidate_full_failed": true,
+  "inner_cleanup_report_unavailable": true,
+  "user_resume_required": true
+}

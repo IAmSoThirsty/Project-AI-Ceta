@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "job": "hp10-20261014",
+  "author": "/root/pressure_review",
+  "frozen_at": "2026-10-14T15:50:22.698703+00:00",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp10-20261014",
+  "source_root": "T:\\00-Active\\Project-AI-CETA",
+  "parent_failed_review": {
+    "repository_relative_path": ".agents/runtime/hp9-20261014/independent-review/review.json",
+    "sha256": "c8c19859aadf883b732b2bb60c6248ec9bce004ee76703cfbc3ecefe5e16a037"
+  },
+  "parent_review_readback": {
+    "repository_relative_path": ".agents/runtime/hp9-20261014/independent-review/actual-review-readback.json",
+    "sha256": "d51bbb55e6694c1c15a8cbdc00a2cee5e1d4c3e88bbbb4db6f44f612544ca909"
+  },
+  "parent_manifest": {
+    "repository_relative_path": ".agents/hp8-20261014/TRANSFER-MANIFEST.json",
+    "sha256": "32fc18d29bd94e24fc1f8fb7a6a34dc5f4b002ec74d304f64138daf0e80fec2b"
+  },
+  "parent_payload_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp8-20261014",
+  "payloads": [
+    {
+      "path": "legacy_cache_validation.py",
+      "action": "EXTEND",
+      "bytes": 24024,
+      "sha256": "e2497f76ee8102852d7ab0570d88e39e37d3a6a170364b456e1a5a76b3dc5420",
+      "source_before_sha256": "b9100525b743c2679abfd64e3da3d7e4718f2d5b86b944f8a4fdbf0164982949",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp10-20261014/diffs/legacy_cache_validation.py.diff",
+        "sha256": "e8e58d8925e2b832539a24e3b87e37d9dbfcd2e6cd2ba5abd865509865b80584"
+      }
+    },
+    {
+      "path": "legacy_cache_worker311.py",
+      "action": "REUSE",
+      "bytes": 6900,
+      "sha256": "f403ceb9345ba1152d4f104cf0091c50a42bb786f4349582829ca11ec0a3c54d",
+      "source_before_sha256": "f403ceb9345ba1152d4f104cf0091c50a42bb786f4349582829ca11ec0a3c54d"
+    },
+    {
+      "path": "preserve_ceta_complete.py",
+      "action": "REUSE",
+      "bytes": 107981,
+      "sha256": "7eb6dc4be074950ad24ad0d5234b3c380e5856c7adff63e63560832c4c4958d2",
+      "source_before_sha256": "7eb6dc4be074950ad24ad0d5234b3c380e5856c7adff63e63560832c4c4958d2"
+    },
+    {
+      "path": "README.md",
+      "action": "EXTEND",
+      "bytes": 23986,
+      "sha256": "aa73f7e4719f03b65441f3ac3c910ea5018eb882d808045d4a23619839ebe95a",
+      "source_before_sha256": "21f20a5995bf34abd0bc46f68c64ac0d56a113d6b83c0c8f7e3c1691641d109c",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp10-20261014/diffs/README.md.diff",
+        "sha256": "7c3f2084c3ae3adc30e8ca92eade63ed8019687f9c80075cc0b2339ff348a270"
+      }
+    },
+    {
+      "path": "run_preservation_tests.py",
+      "action": "REUSE",
+      "bytes": 3760,
+      "sha256": "c5142cd635ae911bf0d9486f2fb1e6b473fb3e80843b3496d9de54764e5c1ae4",
+      "source_before_sha256": "c5142cd635ae911bf0d9486f2fb1e6b473fb3e80843b3496d9de54764e5c1ae4"
+    },
+    {
+      "path": "test_callback_fencing.py",
+      "action": "REUSE",
+      "bytes": 17296,
+      "sha256": "554d5ecf561984f696be53534e08d261bfc1dc75f25ec50fc6e15e5450b0867a",
+      "source_before_sha256": "554d5ecf561984f696be53534e08d261bfc1dc75f25ec50fc6e15e5450b0867a"
+    },
+    {
+      "path": "test_case_alias_fencing.py",
+      "action": "REUSE",
+      "bytes": 24107,
+      "sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d",
+      "source_before_sha256": "d6fe6b698dbf7270384a113878296c57ca864a0144a203bb91fa0d1ab66eda4d"
+    },
+    {
+      "path": "test_current_policy_fencing.py",
+      "action": "REUSE",
+      "bytes": 13808,
+      "sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b",
+      "source_before_sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b"
+    },
+    {
+      "path": "test_exception_handoff.py",
+      "action": "CREATE",
+      "bytes": 12881,
+      "sha256": "4c50138480cf9e2a1b7d4782ec9282de78eb10e3410ec69c4cd53497af9ddd8c",
+      "source_before_sha256": null
+    },
+    {
+      "path": "test_legacy_cache_validation.py",
+      "action": "EXTEND",
+      "bytes": 27092,
+      "sha256": "f986422aea6e90052ec454a98345aaddec7d822550933cc352a99fd98908ff51",
+      "source_before_sha256": "29d3d78ad618f06ca1a9770f4b4f3745ace5c5031fdc46b2def9a1c75086377a",
+      "diff": {
+        "repository_relative_path": ".agents/runtime/hp10-20261014/diffs/test_legacy_cache_validation.py.diff",
+        "sha256": "2632ba1d086e736afb2cc0a12269ecd734902a33a9a2a2f2e1d026cf5b5176f9"
+      }
+    },
+    {
+      "path": "test_ordinary_pending.py",
+      "action": "CREATE",
+      "bytes": 7162,
+      "sha256": "17f11b9abd5f9c3066de51ffa64ae8c3a1d39f2194e83c41f9e94e768a65c28a",
+      "source_before_sha256": null
+    },
+    {
+      "path": "test_preserve_ceta_complete.py",
+      "action": "REUSE",
+      "bytes": 67690,
+      "sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "source_before_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc"
+    },
+    {
+      "path": "test_provenance.py",
+      "action": "REUSE",
+      "bytes": 38615,
+      "sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "source_before_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086"
+    },
+    {
+      "path": "test_startup_custody.py",
+      "action": "REUSE",
+      "bytes": 7523,
+      "sha256": "2a5baf82a86012e07bd687fa2720c132ff28378ca6b28cd7c7beeb4e092454d3",
+      "source_before_sha256": "2a5baf82a86012e07bd687fa2720c132ff28378ca6b28cd7c7beeb4e092454d3"
+    },
+    {
+      "path": "test_transport_recovery.py",
+      "action": "REUSE",
+      "bytes": 12405,
+      "sha256": "0d6b4e738c6cf6ad52102f926d95958c1c2f810621a012d40680b3bcaf168d8c",
+      "source_before_sha256": "0d6b4e738c6cf6ad52102f926d95958c1c2f810621a012d40680b3bcaf168d8c"
+    }
+  ],
+  "payload_count": 15,
+  "tests": {
+    "repository_relative_path": ".agents/runtime/hp10-20261014/final205-r1.json",
+    "sha256": "a18a6ec1a371cd8b9c11c978efcdd21563051f3bc37ad1b2d0cf0c8e9a7bdcc5"
+  },
+  "raw_tests": {
+    "repository_relative_path": ".agents/runtime/hp10-20261014/final205-r1.txt",
+    "sha256": "991afe5a4616c15c2b616f63fdb06019f77c055ff82acc187eb7a439cb6490be"
+  },
+  "tests_run": 205,
+  "reused_original_cases": 197,
+  "reused_hostile_cases": 1,
+  "new_authored_cases": 7,
+  "native_worker_lifetimes": 39,
+  "actual_new_native_methods": 7,
+  "interfaces": {
+    "repository_relative_path": ".agents/runtime/hp10-20261014/interface-checks.json",
+    "sha256": "3c96090eb2f152ec61b3a1b8fabf2e53a1b32adf60447ddb429d1abc621b1980"
+  },
+  "lineage_pins_and_oracle": {
+    "repository_relative_path": ".agents/runtime/hp10-20261014/lineage-and-reused-oracle.json",
+    "sha256": "13d1ecc8c73a474945b5c44a0527e490c821c862d47860689233fb8872fef9e6"
+  },
+  "self_review": {
+    "repository_relative_path": ".agents/runtime/hp10-20261014/self-review.json",
+    "sha256": "7e94dbd4dff5046267338b19808d83619d4b9ac48fe99d2c44912ebec6e4546e"
+  },
+  "closing": {
+    "repository_relative_path": ".agents/runtime/hp10-20261014/closing-qualification-r2.json",
+    "sha256": "9565420f60bc6e8167d6cfca5545eb8d8c17b67a64acabe7670563754d88d836"
+  },
+  "source_and_test_counts": {
+    "legacy_cache_validation.py": {
+      "physical_added": 7,
+      "physical_removed": 4,
+      "meaningful_added": 7,
+      "meaningful_removed": 4
+    },
+    "functional_transport_only": {
+      "physical_added": 6,
+      "physical_removed": 3,
+      "meaningful_added": 6,
+      "meaningful_removed": 3
+    },
+    "README.md": {
+      "physical_added": 28,
+      "physical_removed": 0,
+      "meaningful_added": 23,
+      "meaningful_removed": 0
+    },
+    "new_authored_tests": {
+      "methods": 7,
+      "physical_lines": 219,
+      "meaningful_lines": 204,
+      "actual_native_methods": 7,
+      "caller_seams": "Explicit synthetic local ContentProvenance object and injected legacy.verify boundary"
+    }
+  },
+  "reused_new_LOC": 0,
+  "prior_failures": [
+    {
+      "reference": {
+        "repository_relative_path": ".agents/runtime/hp9-20261014/independent-review/review.json",
+        "sha256": "c8c19859aadf883b732b2bb60c6248ec9bce004ee76703cfbc3ecefe5e16a037"
+      },
+      "classification": "PRIOR_FAILED_CUT",
+      "disposition": "Preserved; successor code fixes exact caller-visible omission"
+    },
+    {
+      "reference": {
+        "repository_relative_path": ".agents/runtime/hp9-20261014/independent-review/ordinary-pending-r1.json",
+        "sha256": "e5ed82fdab6316ebbee04e0046181233843bab53c8fc213d932ec15e6adc7274"
+      },
+      "classification": "PRIOR_NATIVE_ORDINARY_ERROR_CUSTODY_FAILURE",
+      "disposition": "Same unchanged oracle reused"
+    },
+    {
+      "reference": {
+        "repository_relative_path": ".agents/runtime/hp10-20261014/baseline-r1.json",
+        "sha256": "b594da7c017ef3b34e97193a58e5c20d390d86b09595461fa7a9a9018993b345"
+      },
+      "classification": "BASELINE_NATIVE_ORDINARY_ERROR_CUSTODY_FAILURE",
+      "disposition": "Fixed now; closure-r1 and final205 evidence"
+    },
+    {
+      "reference": {
+        "repository_relative_path": ".agents/runtime/hp10-20261014/focused-r1.json",
+        "sha256": "789d944b01379a705525e190449ea1c071f2814db89856364158bff540a68350"
+      },
+      "classification": "AUTHOR_NEW_TEST_FIXTURE_ERROR",
+      "disposition": "Fixed now with fresh own fixture per caller seam; no assertions weakened"
+    },
+    {
+      "reference": {
+        "repository_relative_path": ".agents/runtime/hp10-20261014/focused-before-fixture-fix.py",
+        "sha256": "dd777f5126e4cd5ed96cc71c7084562d6aca0271438ddb821e3cb12e2310c61e"
+      },
+      "classification": "PRESERVED_AUTHOR_FAILED_TEST_BYTES",
+      "disposition": "Retained original failure test identity"
+    },
+    {
+      "reference": {
+        "repository_relative_path": ".agents/runtime/hp8-20261014/implement.json",
+        "sha256": "ddb7d097307e7b7f06c36a889657e203e77734fc98f02832960b39a44a1d511f"
+      },
+      "classification": "PRESERVED_HP8_FAILED_RECEIPT",
+      "disposition": "No reset or historical receipt rewrite"
+    },
+    {
+      "reference": {
+        "repository_relative_path": ".agents/runtime/hp10-20261014/qualification-prior-failures.json",
+        "sha256": "eb52379ffe58bf523e7e0f8ac8711da460feeba285dc7260776e52da39056b46"
+      },
+      "classification": "AUTHOR_QUALIFICATION_AND_DEPENDENT_COMMAND_FAILURES",
+      "disposition": "Original failed helpers preserved; successor proves exact files and retains120directory-size differences plus unknown first after-tree cause"
+    }
+  ],
+  "state": "FROZEN_AUTHOR_TESTED_PENDING_DISTINCT_REVIEW",
+  "Source_application": false,
+  "external_capture_or_policy_activation": false,
+  "remaining": [
+    "Self-review is author evidence; distinct Collaborative/hostile review remains required",
+    "Native startup and kernel IO occupancy are synchronous, without a whole-operation hard OS deadline",
+    "Registered thread references preserve historical custody; cleanup result and actual thread state establish current quiescence",
+    "The injected faults/caller seam do not activate W045 or qualify an actual admitted preservation session",
+    "Canonical owner, Python311/312, same-host administrator and installed runtime are shared trusted dependencies",
+    "Endpoint file hashes/native identities do not establish uninterrupted custody",
+    "W043/W044/W045 remain held; no external capture, Source publication or policy activation",
+    "E3 directory-size field equality is unverified:120differences retained, original first after-tree unavailable, cause unresolved"
+  ]
+}

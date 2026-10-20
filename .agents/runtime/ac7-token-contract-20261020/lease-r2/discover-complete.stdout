@@ -1,0 +1,117 @@
+{
+  "allowed": true,
+  "blocked": {
+    "implement": "plan: predecessor state is PENDING",
+    "integrate": "validate: predecessor state is PENDING",
+    "review": "implement: predecessor state is PENDING",
+    "validate": "review: predecessor state is PENDING"
+  },
+  "fingerprint_matches": true,
+  "graph_fingerprint": "18cdbaaf99341c4b6670211253cca3ed4350fc8f17315f479c2697843139000e",
+  "graph_id": "ceta_ac7_token_contract20",
+  "nodes": {
+    "discover": {
+      "artifact_hash": "7529f8b940dc2c87b3cca5792783f09b3e8ece66dc4d2559f6835352ec358d79",
+      "changed_files": [],
+      "claim": null,
+      "completed_at": "2026-10-20T08:54:01.210773+00:00",
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": "/root",
+      "reason": "receipt and observed execution evidence validated",
+      "receipt_hash": "cbb1e48132aafb597c13bb7209650744a2d6877389c200a77104fdb90d3e2d8e",
+      "receipt_ref": "receipts/discover.json",
+      "state": "SUCCEEDED",
+      "validation_passed": true,
+      "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\fixtures\\ac7-token-observation-20261020"
+    },
+    "implement": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "plan: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "integrate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "validate: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "plan": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "all hard predecessor requirements satisfied",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "READY",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "review": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "implement: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    },
+    "validate": {
+      "artifact_hash": null,
+      "changed_files": [],
+      "claim": null,
+      "completed_at": null,
+      "decision": null,
+      "effective_write_scope": [],
+      "executor_id": null,
+      "reason": "review: predecessor state is PENDING",
+      "receipt_hash": null,
+      "receipt_ref": null,
+      "state": "PENDING",
+      "validation_passed": false,
+      "workspace": null
+    }
+  },
+  "ready_now": [
+    "plan"
+  ],
+  "run_id": "ac7-token-contract-r2-20261020",
+  "sequence": 3,
+  "states": {
+    "discover": "SUCCEEDED",
+    "implement": "PENDING",
+    "integrate": "PENDING",
+    "plan": "READY",
+    "review": "PENDING",
+    "validate": "PENDING"
+  }
+}

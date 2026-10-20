@@ -1,0 +1,197 @@
+{
+  "at": "2026-10-18T01:41:52.488067+00:00",
+  "author": "/root/publication_recovery_review",
+  "preparation": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/PREPARATION.json",
+    "sha256": "b834a705bb446168198c3fbd783a17d0742785fcad080295ef871c30441f6f69"
+  },
+  "probe": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/pure_checks_native_prefix.py",
+    "sha256": "5cf8418728c90c7e3a3638bc34bb258adeb7bfd5dbafda3312e014f8e7bbe001"
+  },
+  "source_AST": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/independent-destination/review_support.py",
+    "sha256": "456ea83d5f082e279b798d8fe1cd37c76ee700a39221accb40a27a7c2eb5a1dd"
+  },
+  "checks": [
+    {
+      "name": "exact_preparation_metadata_passes",
+      "passed": true,
+      "observed": "returned"
+    },
+    {
+      "name": "preparation_rejects_manifest_sha256",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "preparation_rejects_required_ids",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "preparation_rejects_helpers",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "preparation_rejects_expected_payload_hashes",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "preparation_rejects_amendment",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "valid_controlled_release_reaches_claim_fence_only",
+      "passed": true,
+      "observed": "ClaimFenceReached"
+    },
+    {
+      "name": "release_rejects_schema_version_True",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_reviewer_/root",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_manifest_sha256_00000000",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_reviewer_helpers_{}",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_amendment_{}",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_preparation_{}",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_fixture_root_C:/wrong",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_one_attempt_False",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_automatic_retry_True",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_timeout_seconds_True",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_timeout_seconds_601",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_Source_publication_True",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_all_conflicting_Source_runs_released_False",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_profile_operations_True",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_restricted_launch_True",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_native_cpu_case_ids_[]",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "release_rejects_completion_script_sha256_00000000",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "nested_release_path_denied",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "fixture_prefix_routes",
+      "passed": true,
+      "observed": "returned"
+    },
+    {
+      "name": "source_path_remains_exact",
+      "passed": true,
+      "observed": "returned"
+    },
+    {
+      "name": "fixture_rejects_../outside",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "fixture_rejects_C:/outside",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "fixture_rejects_T:/outside",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "readiness_is_required_after_exact_claim",
+      "passed": true,
+      "observed": "ReadinessFenceReached"
+    },
+    {
+      "name": "wrong_claim_rejected_before_readiness",
+      "passed": true,
+      "observed": "AssertionError"
+    },
+    {
+      "name": "actual_validation_receipt_is_required",
+      "passed": true,
+      "observed": "ValidationFenceReached"
+    },
+    {
+      "name": "strict_destination_full_required_before_application",
+      "passed": true,
+      "observed": "DestinationFenceReached"
+    }
+  ],
+  "exit_status": 0,
+  "limitations": [
+    "Exact AST functions with controlled ports; no actual claim, Source or native operations.",
+    "Root must independently review these reviewer-authored helpers before a bounded release."
+  ],
+  "source_imports": false,
+  "native_execution": false,
+  "fixture_created": false,
+  "Source_accepted": false
+}

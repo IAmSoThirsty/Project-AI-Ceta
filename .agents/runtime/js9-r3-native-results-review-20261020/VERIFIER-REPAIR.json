@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-20T11:06:04.715309+00:00",
+  "first_command": [
+    "python.exe",
+    "-I",
+    "-B",
+    "-S",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-r3-native-results-review-20261020\\verify_native_results.py"
+  ],
+  "first_tool_chunk_id": "974649",
+  "first_exit_status": 1,
+  "first_failure": "AssertionError at verify_native_results.py:31; whole os.stat_result equality before/after read_bytes",
+  "old_sha256": "8dad8bff1467998630ec58edcf71adf565d14d003ee535270431087b36c4b68e",
+  "new_sha256": "65554bde8180711aa2b5879e7821bf08a516449568221d6980a93eddbbe22a8a",
+  "exact_before": "raw=path.read_bytes();after=path.lstat();assert before==after",
+  "exact_after": "raw=path.read_bytes();after=path.lstat();fields=('st_size','st_mtime_ns','st_mode','st_dev','st_ino','st_file_attributes');assert all(getattr(before,k)==getattr(after,k) for k in fields)",
+  "reason": "Whole-stat equality includes access time outside the declared source/native CAS contract. The exact changed field was not captured by the first attempt; its failure alone does not identify a product mismatch.",
+  "preserved_old_source": true,
+  "root_receipts_modified": false,
+  "product_or_native_execution": false
+}

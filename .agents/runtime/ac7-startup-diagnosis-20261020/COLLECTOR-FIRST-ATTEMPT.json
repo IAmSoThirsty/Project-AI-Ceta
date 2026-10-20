@@ -1,0 +1,8 @@
+{
+  "command_tool_chunk": "663fe8",
+  "exit_status": 1,
+  "operation": "file-only receipt/hash collection",
+  "target_launched": false,
+  "failure": "Collector incorrectly expected tools/qualify_isolated_worker.py in CANDIDATE-BEFORE.json, which pins candidate payloads. It is absent there and separately pinned by APPROVED-QUALIFICATION.json.",
+  "repair": "Retain three candidate snapshot bindings and separately verify the qualification tool hash using its recorded exact identity; do not relabel missing candidate entry as a mismatch."
+}

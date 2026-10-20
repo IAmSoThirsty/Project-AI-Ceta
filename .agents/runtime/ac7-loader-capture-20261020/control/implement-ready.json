@@ -1,0 +1,63 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "run",
+    "ready",
+    "ac7-loader-capture-20261020",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\control"
+  ],
+  "exit_status": 0,
+  "response": {
+    "allowed": true,
+    "blocked": {},
+    "fingerprint_matches": true,
+    "graph_fingerprint": "34f649bb1be6f0e07a6dae56aabc5aa4515444ab482c8c184a0278e9038c7b06",
+    "graph_id": "ceta_ac7_loader_capture_construction",
+    "nodes": {
+      "evidence": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "all hard predecessor requirements satisfied",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "READY",
+        "validation_passed": false,
+        "workspace": null
+      },
+      "implement": {
+        "artifact_hash": null,
+        "changed_files": [],
+        "claim": null,
+        "completed_at": null,
+        "decision": null,
+        "effective_write_scope": [],
+        "executor_id": null,
+        "reason": "all hard predecessor requirements satisfied",
+        "receipt_hash": null,
+        "receipt_ref": null,
+        "state": "READY",
+        "validation_passed": false,
+        "workspace": null
+      }
+    },
+    "ready_now": [
+      "evidence",
+      "implement"
+    ],
+    "run_id": "ac7-loader-capture-20261020",
+    "sequence": 1,
+    "states": {
+      "evidence": "READY",
+      "implement": "READY"
+    }
+  }
+}

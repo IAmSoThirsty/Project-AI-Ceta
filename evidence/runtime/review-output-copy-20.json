@@ -1,0 +1,981 @@
+{
+  "schema_version": "1",
+  "result": "PASS",
+  "scope": "EXACT_NO_OVERWRITE_REVIEW_DELIVERY_NOT_INSTALLATION_OR_RELEASE",
+  "started_at_utc": "2026-10-08T11:25:49.6339985Z",
+  "observed_at_utc": "2026-10-08T11:26:04.9819531Z",
+  "state_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\increment-20-state-check.json",
+  "state_sha256": "a8a3067a591f4afe5004d98b2731420d2b8b8bbf0902e97795c1533fd0090d4a",
+  "plan_sha256": "b29b92865df0d3b4728bf785fa118de50654de27d913f723cb54d1c6bd6937f0",
+  "copy_script_sha256": "dd56b0f30783a8530e7f71de97d88b6c9b8355071a0741f033d38fa68b0258dc",
+  "copy_script_path": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\copy_review.ps1",
+  "based_on_increment19_copy_helper_sha256": "e8adce7810b2a3d611a31c5baf3563ef0cff49f62fe0973cd4e337cf3bf45440",
+  "checker_binding": "INCREMENT20_HELPER_CREATED_AFTER_BOUND_STATE;EXACT_HELPER_SHA_BOUND_BY_THIS_RECEIPT;STATE_INPUT_BYTES_UNCHANGED",
+  "six_categories_before": {
+    "verified_input_sha256": 209,
+    "verified_source_metadata_sha256": 5,
+    "verified_original_source_sha256": 642,
+    "verified_working_control_sha256": 55,
+    "verified_contract_source_sha256": 109,
+    "verified_retained_source_sha256": 711
+  },
+  "six_categories_after": {
+    "verified_input_sha256": 209,
+    "verified_source_metadata_sha256": 5,
+    "verified_original_source_sha256": 642,
+    "verified_working_control_sha256": 55,
+    "verified_contract_source_sha256": 109,
+    "verified_retained_source_sha256": 711
+  },
+  "files": [
+    {
+      "name": "spec__handoff__durable_history_continuation_20261008_20.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__handoff__durable_history_continuation_20261008_20.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\durable_history_continuation_20261008_20.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__handoff__durable_history_continuation_20261008_20.json",
+      "sha256": "4f8a601b41d584d4f497da02bd4728453747872e8c54141ce9f9ba8c96a93106",
+      "bytes": 11471,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__handoff__unified_contract_continuation_20261008_20.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__handoff__unified_contract_continuation_20261008_20.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\unified_contract_continuation_20261008_20.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__handoff__unified_contract_continuation_20261008_20.json",
+      "sha256": "29fc577314c8103fe1010e4a312b876ba4a45180b959eb9db3064ea940c143d8",
+      "bytes": 5473,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__handoff__source_reconciliation_20261008_20.md",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__handoff__source_reconciliation_20261008_20.md",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\source_reconciliation_20261008_20.md",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__handoff__source_reconciliation_20261008_20.md",
+      "sha256": "f26fd19c90176cece6976817e9f7028b0c4abfb6a87ea5122b38f97ce58d84cb",
+      "bytes": 2955,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__source-integrity-final-22.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__source-integrity-final-22.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\source-integrity-final-22.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__source-integrity-final-22.json",
+      "sha256": "83400412e5134ac9e557723e5348cfaa0fc25a446414d10d230b20cc11485643",
+      "bytes": 1650,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__allocation-integrity-final-08.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__allocation-integrity-final-08.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\allocation-integrity-final-08.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__allocation-integrity-final-08.json",
+      "sha256": "a26a42658fa950a7cd4d9dff4d8b4b27791bb1db7f9525655d5a6aaf55268cfe",
+      "bytes": 2571,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__preservation-and-scope-audit-20.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__preservation-and-scope-audit-20.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\preservation-and-scope-audit-20.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__preservation-and-scope-audit-20.json",
+      "sha256": "54233e3f86cea9d2c194ec96e23303c0d5a3aad5c19dc1ba6114c6447613a88b",
+      "bytes": 105553,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__build-measurements-history-20.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__build-measurements-history-20.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\build-measurements-history-20.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__build-measurements-history-20.json",
+      "sha256": "8ee3fad7eb3c1afe449121e56722313c5e46f2682bc0601b61f3420dce026bae",
+      "bytes": 2826,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-final-20-07.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-final-20-07.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-final-20-07.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-final-20-07.json",
+      "sha256": "7dbf59a41fe44e6db72960cbd0ec55d8eb77c8573e5c086a063ab9d7280bea3a",
+      "bytes": 24098,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__development-inventory-history-20-final.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__development-inventory-history-20-final.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\development-inventory-history-20-final.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__development-inventory-history-20-final.json",
+      "sha256": "9f99e3a924d48d6133c46b4e61df39b3b7fa02c568aca368f13839c57a49c42c",
+      "bytes": 21473,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__sqlite-runtime-loaded-20-01.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__sqlite-runtime-loaded-20-01.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\sqlite-runtime-loaded-20-01.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__sqlite-runtime-loaded-20-01.json",
+      "sha256": "e66fc5480a3daae97830ead6df1adde3f82c77cf91b890429915012010585314",
+      "bytes": 2620,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__sqlite-runtime-loaded-20-02.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__sqlite-runtime-loaded-20-02.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\sqlite-runtime-loaded-20-02.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__sqlite-runtime-loaded-20-02.json",
+      "sha256": "7380c50da39263928fe21caa3f36ae292f67d33eb866ec56ed2d702eaa4cc2c1",
+      "bytes": 2744,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__volume19-semantic-root-validation-20-01.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__volume19-semantic-root-validation-20-01.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\volume19-semantic-root-validation-20-01.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__volume19-semantic-root-validation-20-01.json",
+      "sha256": "d1fe006816f3fbdeea6c07d6a2c64a99afe548520e6f49990273bfecad2c0944",
+      "bytes": 11406,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__volume19-semantic-root-validation-20-02.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__volume19-semantic-root-validation-20-02.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\volume19-semantic-root-validation-20-02.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__volume19-semantic-root-validation-20-02.json",
+      "sha256": "65489085d748499f673c89926da19af3a29f4d4dd56ceb8eefc1c87ed05ddd6e",
+      "bytes": 21103,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-review-regressions-20-03.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-review-regressions-20-03.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-review-regressions-20-03.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-review-regressions-20-03.json",
+      "sha256": "218be872d002dbf54b71e10d9b4de3f22286ec401bc0b961900de1daba3fb759",
+      "bytes": 24516,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-review-regressions-20-03.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-review-regressions-20-03.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-review-regressions-20-03.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-review-regressions-20-03.txt",
+      "sha256": "4952b8f45f36d53aa779dfae9cc0c6129ada9b6ef0415380f8861249b1dc62a1",
+      "bytes": 35968,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__history-writer-profile-first-failure-20-01.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__history-writer-profile-first-failure-20-01.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\history-writer-profile-first-failure-20-01.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__history-writer-profile-first-failure-20-01.txt",
+      "sha256": "a0c43a2174584c6969d064ff6b2a0a76a965798d941f13bbc5bc974288c0bca5",
+      "bytes": 747,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__history-schema-first-failure-20-01.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__history-schema-first-failure-20-01.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\history-schema-first-failure-20-01.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__history-schema-first-failure-20-01.txt",
+      "sha256": "089e47d304143ecab51b047829321d45301323178fe2ed15d85cd4b62e1fbe7b",
+      "bytes": 999,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__standards__lifecycle_coverage.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__standards__lifecycle_coverage.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\standards\\lifecycle_coverage.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__standards__lifecycle_coverage.json",
+      "sha256": "816d692ebf0d5b7b148ff2a021a8c994f59778a38a308542d08342289823e0b8",
+      "bytes": 935943,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__handoff__source_authority_register.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__handoff__source_authority_register.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\source_authority_register.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__handoff__source_authority_register.json",
+      "sha256": "b85adc7b0278906e966bf8b2333f97413a99d233642f6adc314bdc2868f847fa",
+      "bytes": 13533,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__requirements__atomic_tickets.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__requirements__atomic_tickets.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\requirements\\atomic_tickets.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__requirements__atomic_tickets.json",
+      "sha256": "b91f897cc4bba49706dca113bac272c770b840b4eab2aea930f9a58deeb797ab",
+      "bytes": 36889,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__build__progress.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__build__progress.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\build\\progress.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__build__progress.json",
+      "sha256": "68fce656072edce8619064ec5799f622056b96e937439b6fd49de6cb601588a4",
+      "bytes": 13338,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__handoff__continuity.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__handoff__continuity.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\continuity.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__handoff__continuity.json",
+      "sha256": "cca1aa460b6b2adf544132aecaf787e07005561ffc04a52650e58496652d65a0",
+      "bytes": 6127,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__handoff__issues_20261006.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__handoff__issues_20261006.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\issues_20261006.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__handoff__issues_20261006.json",
+      "sha256": "10a2016cfa4f63b1c0654b1b8ed848b7c412f03c5802bedc2aa7ca7e73cf9b8b",
+      "bytes": 40695,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-first-20-01.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-first-20-01.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-first-20-01.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-first-20-01.json",
+      "sha256": "6656b6c870e770419e4b19903730b90b2de95288a105db30b55505ac453c9d5d",
+      "bytes": 23666,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-first-20-01.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-first-20-01.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-first-20-01.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-first-20-01.txt",
+      "sha256": "300d586c98bd0d70b8a3cf191202c015644abbd2929896555e5ee43981858fe3",
+      "bytes": 32148,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-readonly-20-02.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-readonly-20-02.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-readonly-20-02.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-readonly-20-02.json",
+      "sha256": "a9b02cf3fef4a43d9dbc24f331d52e028abb8cd514a29533116128a7ae3e2259",
+      "bytes": 24098,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-readonly-20-02.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-readonly-20-02.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-readonly-20-02.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-readonly-20-02.txt",
+      "sha256": "158854c5a70677788502f399753f6e260aa01b50d5e2d6d49ed586da630d3145",
+      "bytes": 32341,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-remediation-20-04.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-remediation-20-04.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-remediation-20-04.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-remediation-20-04.json",
+      "sha256": "a79210de780a53e09841cc9364a7a6d3b60d3bd1dd0cff2640ee1092eb4fe3af",
+      "bytes": 24098,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-remediation-20-04.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-remediation-20-04.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-remediation-20-04.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-remediation-20-04.txt",
+      "sha256": "c007c792acffc8b01b11381a3f9a8e4aec3a9e5ad58eb62bce2f3cd59db37ac9",
+      "bytes": 32826,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-final-20-05.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-final-20-05.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-final-20-05.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-final-20-05.json",
+      "sha256": "955c7cc10835645f2207b67aecda5ae5aa53b432982e5ce8f45ab1dee76a1c87",
+      "bytes": 24098,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-final-20-05.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-final-20-05.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-final-20-05.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-final-20-05.txt",
+      "sha256": "3df31df225340fb490caf085011210ae534aeee682fb56e4351cb14c6612e11f",
+      "bytes": 32975,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-final-20-06.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-final-20-06.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-final-20-06.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-final-20-06.json",
+      "sha256": "8da8ab78e7f5fe2fa2a916e1a9f41b139e862cf85d54971d1a5e1de27775d7d6",
+      "bytes": 24098,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-final-20-06.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-final-20-06.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-final-20-06.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-final-20-06.txt",
+      "sha256": "756bb512637c07309f1c7d1bf7473b6c0a5d1bbe69132154faa0755857f1e550",
+      "bytes": 33160,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__desktop-history-final-20-07.txt",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__desktop-history-final-20-07.txt",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\desktop-history-final-20-07.txt",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__desktop-history-final-20-07.txt",
+      "sha256": "0e3c37b7c17a2042c780e26a322b06eca78c91a660a26d566ede3f463dc12834",
+      "bytes": 33160,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-001-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-proposal.json",
+      "sha256": "ca62c2b84e7ba779295d701b9a36b45f4a7b8287b4b0545a2cd5bf76f1c96a16",
+      "bytes": 195578,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-read-receipt.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-read-receipt.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-001-read-receipt.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-read-receipt.json",
+      "sha256": "dedc470b5a1e2773ac7391ca20ad59649b49fdf78093afe802d0bcf396472589",
+      "bytes": 48509,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-input-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-input-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-001-input-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-001-input-proposal.json",
+      "sha256": "b62141181afe065edf913bf06e10cd3d906ee6ba836bd0bb86cd3bd7c8c2bedf",
+      "bytes": 78199,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-002-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-proposal.json",
+      "sha256": "c04a94c73f25e705677f9389de84f2b634045717488b77f4b779e4e03a40a7a8",
+      "bytes": 95599,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-read-receipt.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-read-receipt.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-002-read-receipt.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-read-receipt.json",
+      "sha256": "9ff271f90dfdcbd0d39ccacf01d2285badeed40dcf9f4bf042fb7387753b4464",
+      "bytes": 36657,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-input-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-input-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-002-input-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-002-input-proposal.json",
+      "sha256": "925ec74ca43b9ef020facf176fad1bfa0b30f8b4c0360d42c19cdd3e8d562651",
+      "bytes": 40108,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-003-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-proposal.json",
+      "sha256": "3675f30bafea6359ab3ba09621953cd3cc6faae0f8ec736d2a7aded11ec7913f",
+      "bytes": 130394,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-read-receipt.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-read-receipt.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-003-read-receipt.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-read-receipt.json",
+      "sha256": "a8f0e721d94a1b162311c30546d4d09ed649c6dca7c72cbb97c772d8fb857694",
+      "bytes": 41306,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-input-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-input-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-003-input-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-003-input-proposal.json",
+      "sha256": "bd0421e74108db7177ce8224b460fe732f43a1aacc53ff1383fd6c9573ba8140",
+      "bytes": 51296,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-004-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-proposal.json",
+      "sha256": "ac70d842e7c222d6b24e69a7a89a69180604c9d3a284dc750e261e7d8f9d864b",
+      "bytes": 117777,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-read-receipt.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-read-receipt.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-004-read-receipt.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-read-receipt.json",
+      "sha256": "cb649560d0ae65c4c83a9c61773f25a3015e593da1133ee616003aaabeffccb7",
+      "bytes": 40664,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-input-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-input-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-004-input-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-004-input-proposal.json",
+      "sha256": "7947b7c4a2bea8a97efe6ce392b1a15dddb832081ab81c49ab76ad649d13562f",
+      "bytes": 49240,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-005-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-proposal.json",
+      "sha256": "287a3841ee1dba89b3f379597c44972d9fd25b8dfe6bff360a6894535364dfe3",
+      "bytes": 110035,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-read-receipt.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-read-receipt.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-005-read-receipt.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-read-receipt.json",
+      "sha256": "eb53b55fd50b69bb003a3cb44d0586cd64d3bd45fee6b0e3ed35229b138bc54d",
+      "bytes": 40110,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-input-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-input-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-005-input-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-005-input-proposal.json",
+      "sha256": "c1ca273f9b8b85eb33354e242e234892c1c7db5ee790a98f5b31e4b5b106f07b",
+      "bytes": 45973,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-006-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-proposal.json",
+      "sha256": "91ececb275f3630d452b737368f0772cfb4fd5cf1310593ddd7430f99b4e4606",
+      "bytes": 159152,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-read-receipt.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-read-receipt.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-006-read-receipt.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-read-receipt.json",
+      "sha256": "e5262a47e949f13605ed7ff7daf57a5fcb0f141c324a22af152cf18f4b62f169",
+      "bytes": 45653,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-input-proposal.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-input-proposal.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-006-input-proposal.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-006-input-proposal.json",
+      "sha256": "2f5fb5c60328288dc8bab68a33408b78ea761450bbb09527c36400268e74a03c",
+      "bytes": 60683,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-label-correction-001.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-label-correction-001.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\volume19-semantic-continuation-20261008\\checkpoint-label-correction-001.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__volume19-semantic-continuation-20261008__checkpoint-label-correction-001.json",
+      "sha256": "225830b074cf66c1f6c554a2d18800f23ff7344c38f5b193b23935f18d3c036a",
+      "bytes": 6754,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__build__progress.json.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__build__progress.json.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\build__progress.json.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__build__progress.json.before",
+      "sha256": "147f8c6d680026d3a95c2b85a35c14b0f3ece1279ab0de2e71d87e4df1a92051",
+      "bytes": 12867,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__contracts__DURABLE_HISTORY_V1.md.review-before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__contracts__DURABLE_HISTORY_V1.md.review-before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\contracts__DURABLE_HISTORY_V1.md.review-before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__contracts__DURABLE_HISTORY_V1.md.review-before",
+      "sha256": "3aeaabbe5bb408eb2724cae3ccc0245426ca36e3bd1908f5878f9f503899eead",
+      "bytes": 4887,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__dependency_transfer.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__dependency_transfer.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\dependency_transfer.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__dependency_transfer.json",
+      "sha256": "bc56e385556511044b3dc90db27222c47ab767e0a4f2c0a981085c2f9b7f499d",
+      "bytes": 2915,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__desktop_continuity.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__desktop_continuity.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\desktop_continuity.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__desktop_continuity.before",
+      "sha256": "7a3dfd3c823db020c5eae8d3327cf86184157affd825dbbd07cfdb0c67e5c35b",
+      "bytes": 144440,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__finalize.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__finalize.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\finalize.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__finalize.py",
+      "sha256": "9f995cb475c8c768828bccad2980a2cd1c6bd578afceb0568affd3f191e7d106",
+      "bytes": 18427,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__finalize.review-before.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__finalize.review-before.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\finalize.review-before.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__finalize.review-before.py",
+      "sha256": "95e1f4597b6a725027825ee2f0ae1fc2783b49d2191d9189b6d117606a3db2c2",
+      "bytes": 16625,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__handoff__continuity.json.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__handoff__continuity.json.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\handoff__continuity.json.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__handoff__continuity.json.before",
+      "sha256": "4632dfd3b74ffcd365dc42275326f893f5a8286ec8f6c9ea927da24316a4db74",
+      "bytes": 5490,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__handoff__issues_20261006.json.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__handoff__issues_20261006.json.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\handoff__issues_20261006.json.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__handoff__issues_20261006.json.before",
+      "sha256": "2fe388f97c896c9e3e9e43c68bc18b9f1eb4f048c7463c62886fb3f98a8f9471",
+      "bytes": 36967,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__handoff__source_authority_register.json.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__handoff__source_authority_register.json.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\handoff__source_authority_register.json.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__handoff__source_authority_register.json.before",
+      "sha256": "443a5eae6a71261d4ab5f126309587cf80ec327323cb8e9a25f56e9931b579b2",
+      "bytes": 12969,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__integrate.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__integrate.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\integrate.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__integrate.py",
+      "sha256": "2f79889f1580e71c4558387e14305187a5babe0a9d121fcaff6a2c6d97185644",
+      "bytes": 21209,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__integration_receipt.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__integration_receipt.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\integration_receipt.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__integration_receipt.json",
+      "sha256": "369480ec83571ef8260f4eff0b0b7d080d5b0584eb067ee27a7a9f9db268c135",
+      "bytes": 2355,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__integration_scope.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__integration_scope.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\integration_scope.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__integration_scope.json",
+      "sha256": "42202824cbf387342be4649789e819344ef4dbbbdbb40ad315eb7dc4bc951793",
+      "bytes": 1253,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__internal_peer_review_20.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__internal_peer_review_20.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\internal_peer_review_20.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__internal_peer_review_20.json",
+      "sha256": "0cbfe4d36ba24377ee1c61c483561f5bf6d79ee58e3962d6353112d914712b67",
+      "bytes": 3245,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__journal.profile-before.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__journal.profile-before.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\journal.profile-before.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__journal.profile-before.py",
+      "sha256": "2cf45436c6724eb1c0fce7b8e9a371b7ae05f76028e03564b19276ba57e5a5e6",
+      "bytes": 15208,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__journal.schema-before.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__journal.schema-before.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\journal.schema-before.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__journal.schema-before.py",
+      "sha256": "9e146e0555076009eea659d8dc87a9958cf50f3596d85eb1b720e03873b4b86c",
+      "bytes": 15359,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__measurements-command.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__measurements-command.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\measurements-command.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__measurements-command.json",
+      "sha256": "c6799b8bef137d47707475106f09790ade95021087e82c2244feabae636ed9ee",
+      "bytes": 1058,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__modification_scope.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__modification_scope.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\modification_scope.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__modification_scope.json",
+      "sha256": "22270d1868257a071f3a4c1bc4f297ce04496234b1be059ff4e84acd2bd73d85",
+      "bytes": 14887,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__official__backup.html",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__official__backup.html",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\official__backup.html",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__official__backup.html",
+      "sha256": "306b6cca5c7c2f93b648040ae139f14d7d3221c0d16d79b5749e69d808382e04",
+      "bytes": 28195,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__official__copyright.html",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__official__copyright.html",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\official__copyright.html",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__official__copyright.html",
+      "sha256": "44ca9f793055c8e32fc65f65a4f5bcf813a33f5bdaaa084067dd617a4ed3cc70",
+      "bytes": 8351,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__official__cves.html",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__official__cves.html",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\official__cves.html",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__official__cves.html",
+      "sha256": "0ef51a811fdc3dcfcd86692736190db83ef78073892fbe2d89029cbc57ade3a5",
+      "bytes": 40802,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__official__download.html",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__official__download.html",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\official__download.html",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__official__download.html",
+      "sha256": "9cd376c2fb3a04ec2d6ca65bb1f8428631103d4c510d827c23cc979700735326",
+      "bytes": 19324,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__official__releaselog__3_53_4.html",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__official__releaselog__3_53_4.html",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\official__releaselog__3_53_4.html",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__official__releaselog__3_53_4.html",
+      "sha256": "c8d12ef674ac295edba47c341cb18b5913795ba94a78474c68e4213970d128ac",
+      "bytes": 12926,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__official__security.html",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__official__security.html",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\official__security.html",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__official__security.html",
+      "sha256": "55cf2628b79907b1b2e10af9b2caeba09829abedbfdd5f173d166f2058c85047",
+      "bytes": 15269,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__official__wal.html",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__official__wal.html",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\official__wal.html",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__official__wal.html",
+      "sha256": "f3467b530b883d4a00574fe1a898b3d121ed72764ae28cf66941080ac0badb9e",
+      "bytes": 42143,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__prepare_sqlite.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__prepare_sqlite.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\prepare_sqlite.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__prepare_sqlite.py",
+      "sha256": "0317f636928e683bc31c38eaeeb987d63831c4a4f3ae9378652c0fb5bf9658fd",
+      "bytes": 4097,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__probe_sqlite_runtime.first.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__probe_sqlite_runtime.first.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\probe_sqlite_runtime.first.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__probe_sqlite_runtime.first.py",
+      "sha256": "22a20f3bd52ecc70d5cfc1bbc2a145ffc9c64688e3dadec29a273a6e2c9bbb32",
+      "bytes": 1468,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__requirements__atomic_tickets.json.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__requirements__atomic_tickets.json.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\requirements__atomic_tickets.json.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__requirements__atomic_tickets.json.before",
+      "sha256": "c2160a239d21a41d147ad4f1bd1e570b562b64b3efeef8c529a832774c402a3d",
+      "bytes": 34095,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__sqlite-dll-win-x64-3530400.zip",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__sqlite-dll-win-x64-3530400.zip",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\sqlite-dll-win-x64-3530400.zip",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__sqlite-dll-win-x64-3530400.zip",
+      "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+      "bytes": 1370147,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__src__ceta__contracts__history.py.review-before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__src__ceta__contracts__history.py.review-before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\src__ceta__contracts__history.py.review-before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__src__ceta__contracts__history.py.review-before",
+      "sha256": "571462e233366790fd765cfeabe90d2f91cd1cbf31990cd5772f1fd43a53ef84",
+      "bytes": 1172,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__src__ceta__store__journal.py.review-before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__src__ceta__store__journal.py.review-before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\src__ceta__store__journal.py.review-before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__src__ceta__store__journal.py.review-before",
+      "sha256": "3a157c680f7dfb48a18df91a1c834cd8cb8918c16b4f2647a7291db7354f0265",
+      "bytes": 15075,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__tests__contract__test_history.py.review-before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__tests__contract__test_history.py.review-before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\tests__contract__test_history.py.review-before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__tests__contract__test_history.py.review-before",
+      "sha256": "74e64cc81ea00148ba7ac5f8f9b3b464bd0eb5aadda6a1260455aa559522c4d8",
+      "bytes": 12780,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__tools__development_inventory.py.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__tools__development_inventory.py.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\tools__development_inventory.py.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__tools__development_inventory.py.before",
+      "sha256": "c3c87dbf2a128f5ef4e83b88d629885640f6d53663226be4e59d41a616c2bef5",
+      "bytes": 5396,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__tools__run_source_tests.py.before",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__tools__run_source_tests.py.before",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\tools__run_source_tests.py.before",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__tools__run_source_tests.py.before",
+      "sha256": "b3d17c1841d2ec6bf4c5a5bb06952c7cd860668f0d368725878d01347c541886",
+      "bytes": 4150,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__verify_checkpoint.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__verify_checkpoint.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\verify_checkpoint.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__verify_checkpoint.py",
+      "sha256": "bf70ea7077a2eb8db14a62811ed42b753504224e460d2785c166da522bd5d91e",
+      "bytes": 5419,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__.local-build-cache__increment-20-history__verify_checkpoint_r2.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__.local-build-cache__increment-20-history__verify_checkpoint_r2.py",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-20-history\\verify_checkpoint_r2.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__.local-build-cache__increment-20-history__verify_checkpoint_r2.py",
+      "sha256": "839188abe1ba0c00bad23a3c82294919db66c715f648bdbfd8aeb62f1e283e63",
+      "bytes": 5438,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "spec__evidence__runtime__increment-20-state-check.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\spec__evidence__runtime__increment-20-state-check.json",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\increment-20-state-check.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\spec__evidence__runtime__increment-20-state-check.json",
+      "sha256": "a8a3067a591f4afe5004d98b2731420d2b8b8bbf0902e97795c1533fd0090d4a",
+      "bytes": 226878,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__src__ceta__contracts__history.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__src__ceta__contracts__history.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\history.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__src__ceta__contracts__history.py",
+      "sha256": "bea39b6fe7a9e1ece83ec491091fd55e7eaaa5689457ab3cb73cb618d7c89525",
+      "bytes": 1300,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__src__ceta__store____init__.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__src__ceta__store____init__.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\store\\__init__.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__src__ceta__store____init__.py",
+      "sha256": "30bdf88cbc70b141540007cff9c735da94c9a343f258543e9f74d461722e3e4b",
+      "bytes": 68,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__src__ceta__store__sqlite_runtime.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__src__ceta__store__sqlite_runtime.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\store\\sqlite_runtime.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__src__ceta__store__sqlite_runtime.py",
+      "sha256": "e8720d9567440cc0dced5b6c84821321ae2a046e942d3f02156a3164bad7bc47",
+      "bytes": 3079,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__src__ceta__store__journal.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__src__ceta__store__journal.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\store\\journal.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__src__ceta__store__journal.py",
+      "sha256": "ca94f4f06390ff57d19c4d0e255dda05dae9b8c8cb8d30423c1904cf8c736166",
+      "bytes": 15359,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__tests__contract__test_history.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__tests__contract__test_history.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_history.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__tests__contract__test_history.py",
+      "sha256": "f609844afbafafb292575270be7f584d5b6d1634960700f358a048dbb664e6f9",
+      "bytes": 19060,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__tests__contract__test_sqlite_runtime.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__tests__contract__test_sqlite_runtime.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_sqlite_runtime.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__tests__contract__test_sqlite_runtime.py",
+      "sha256": "12720686f04828667565dae97d104049724e98cb64df9bd5f0be7b42732a9171",
+      "bytes": 1948,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__contracts__DURABLE_HISTORY_V1.md",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__contracts__DURABLE_HISTORY_V1.md",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\contracts\\DURABLE_HISTORY_V1.md",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__contracts__DURABLE_HISTORY_V1.md",
+      "sha256": "31a5b76e6d05ec6d58edbcdbcaaeff71576ad052cd282880782946223c437b99",
+      "bytes": 5398,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__contracts__SQLITE_RUNTIME_V1.json",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__contracts__SQLITE_RUNTIME_V1.json",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\contracts\\SQLITE_RUNTIME_V1.json",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__contracts__SQLITE_RUNTIME_V1.json",
+      "sha256": "22f43c6b8389742eb18daf312100101bed177c9fa8350be55395ac739d6c8109",
+      "bytes": 2632,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__tools__probe_sqlite_runtime.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__tools__probe_sqlite_runtime.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tools\\probe_sqlite_runtime.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__tools__probe_sqlite_runtime.py",
+      "sha256": "e3a1fe5a6161084d4aa8e45afd08de898d4b2f6764178185319ddec26f265e5d",
+      "bytes": 1483,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__native__sqlite_runtime__win-x64__sqlite3.dll",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__native__sqlite_runtime__win-x64__sqlite3.dll",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\native\\sqlite_runtime\\win-x64\\sqlite3.dll",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__native__sqlite_runtime__win-x64__sqlite3.dll",
+      "sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+      "bytes": 3285504,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__native__sqlite_runtime__win-x64__sqlite3.def",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__native__sqlite_runtime__win-x64__sqlite3.def",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\native\\sqlite_runtime\\win-x64\\sqlite3.def",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__native__sqlite_runtime__win-x64__sqlite3.def",
+      "sha256": "a93b7867cc1fdb4e1dd0d4eef727cf910fe9f2bb6cd612d933744add1fa7f11b",
+      "bytes": 8722,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__native__sqlite_runtime__README.md",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__native__sqlite_runtime__README.md",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\native\\sqlite_runtime\\README.md",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__native__sqlite_runtime__README.md",
+      "sha256": "6a765ca6a4b08ed25f4a6d3b77c88d86adebdee429e32ddc5a0f6ace25396420",
+      "bytes": 1513,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__tools__development_inventory.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__tools__development_inventory.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tools\\development_inventory.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__tools__development_inventory.py",
+      "sha256": "62c6d56023fea1991308030741e3963e4013dbfd8aa35f4a8a668b162b1fe452",
+      "bytes": 5422,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "app__tools__run_source_tests.py",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\app__tools__run_source_tests.py",
+      "authoritative_source": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tools\\run_source_tests.py",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\app__tools__run_source_tests.py",
+      "sha256": "be1e9980f6d3a8dcb4549a944d6476ab9075763baaa8a00dff33b47b7de9776d",
+      "bytes": 3604,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "CETA_build_execution_20261008_20.md",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\CETA_build_execution_20261008_20.md",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\CETA_build_execution_20261008_20.md",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\CETA_build_execution_20261008_20.md",
+      "sha256": "c859f396fd1b205695f541a03b10d73333d749ff965cf607e1cfde73f7d742ec",
+      "bytes": 3354,
+      "disposition": "CREATED_NEW"
+    },
+    {
+      "name": "CETA_increment20_review_snapshot.zip",
+      "source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\CETA_increment20_review_snapshot.zip",
+      "authoritative_source": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\review-increment-20\\CETA_increment20_review_snapshot.zip",
+      "destination": "C:\\Users\\Quencher\\Documents\\Codex\\2026-10-06\\t-00-active-ceta-intelligence-operating\\outputs\\increment-20-history\\CETA_increment20_review_snapshot.zip",
+      "sha256": "b6ce765f41f26ad41af1cae3a3bc8ddfc75491b28e7d3ca20ae5b471b7e10a5f",
+      "bytes": 3694135,
+      "disposition": "CREATED_NEW"
+    }
+  ],
+  "full_objective": "ACTIVE_NOT_COMPLETE",
+  "gate_a": "OPEN",
+  "runtime_installed_qualification": "NOT_RUN",
+  "previous_outputs": "NOT_OVERWRITTEN"
+}

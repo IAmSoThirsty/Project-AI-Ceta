@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-10-20T09:28:14.615319+00:00",
+  "observation": "Fresh read-only invocation via the E3 venv launcher; no original records rewritten",
+  "sys_executable": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+  "sys_base_executable": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "sys_prefix": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3",
+  "sys_base_prefix": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312",
+  "sys_orig_argv": [
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-"
+  ],
+  "executable_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+  "base_executable_sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+  "original_record_pins": {
+    "controlled_r2/COMMAND.json": "9e79b3266ba1ed07e0e7b8eee03f205d5c1b1b25e5c7b9bdcc3f1c6befb349d1",
+    "controlled_r2/RESULT.json": "0c9d832a432594dc3d6ee0f80bf9ef206c723247f309a3a9ee2d4455deead65f",
+    "TERMINAL-CONTROLLED-R2.json": "b2f7edca21c789e9f804a6e2fa158f91a5062e9276ecc24c93f986785e78b94b",
+    "repair-r1/implement-receipt.json": "d40623ab54609f73491e89cfe97d0844dbf4d25b5c6aa47347f0d0b2cfa70e75"
+  },
+  "finding": "This fresh E3 invocation exposes the base interpreter as sys.orig_argv[0] while retaining E3 as sys.executable and sys.prefix. Original controlled_r2 COMMAND/RESULT recorded sys.orig_argv only; its implement receipt declared the E3 launch command. This explains that observed difference but cannot add fields that the original process did not record.",
+  "native_execution": false,
+  "Source_mutation": false
+}

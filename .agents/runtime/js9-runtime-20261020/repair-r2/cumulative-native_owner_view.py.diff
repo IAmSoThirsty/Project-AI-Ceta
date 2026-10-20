@@ -1,0 +1,87 @@
+--- assembled/src/ceta/identity/native_owner_view.py
++++ js9/src/ceta/identity/native_owner_view.py
+@@ -128,19 +128,30 @@
+     def __init__(self, private_root, *, expected_root=None, expected_database=None):
+         self._lock = threading.RLock()
+         self._closed = False
+-        self._api = _ViewAPI()
++        self._api = None
+         self._pins = []
+-        self._root_path = Path(_path(str(private_root), directory=True))
+-        self._database_path = self._root_path / 'history.sqlite3'
+         try:
++            # These API constructors bind exports and initialize empty cleanup
++            # queues. File handles are acquired only after this publication.
++            self._api = _ViewAPI()
++            self._root_path = Path(_path(str(private_root), directory=True))
++            self._database_path = self._root_path / 'history.sqlite3'
+             ancestors = tuple(reversed(self._root_path.parents)) + (self._root_path, self._database_path)
+             for path in ancestors:
+-                handle = self._api.CreateFileW(str(path), 0x80, 3, None, 3,
++                # Publish storage before acquisition, including the case where
++                # the native return is interrupted before Python receives it.
++                row = {'path': path, 'handle': None, 'identity': None,
++                    'open_state': 'PREPARED', 'enrolled': False}
++                self._pins.append(row)
++                row['open_state'] = 'UNCERTAIN'
++                row['handle'] = self._api.CreateFileW(str(path), 0x80, 3, None, 3,
+                     0x00200000 | 0x02000000, None)
+-                require(handle not in (None, 0, INVALID_HANDLE), 'OWNER_VIEW_NATIVE_OPEN_FAILED')
+-                self._api.queue_handle(handle)
+-                row = {'path': path, 'handle': handle, 'identity': None}
+-                self._pins.append(row)
++                row['open_state'] = 'RETURNED'
++                require(row['handle'] not in (None, 0, INVALID_HANDLE), 'OWNER_VIEW_NATIVE_OPEN_FAILED')
++                # queue_handle allocates its guarded cleanup row. Retain the
++                # returned value above if that allocation/publication fails.
++                self._api.queue_handle(row['handle'])
++                row['enrolled'] = True
+                 row['identity'] = self._read(row)
+             self.private_root = self._pins[-2]['identity']
+             self.database = self._pins[-1]['identity']
+@@ -184,7 +195,19 @@
+ 
+     @property
+     def pending_native_resources(self):
+-        return self._api.pending_native_resources()
++        with self._lock:
++            if self._api is None:
++                require(not self._pins, 'OWNER_VIEW_API_CUSTODY_UNAVAILABLE')
++                return ()
++            pending = list(self._api.pending_native_resources())
++            for row in self._pins:
++                if row['handle'] not in (None, 0, INVALID_HANDLE) and not row['enrolled']:
++                    pending.append({'kind': 'unregistered_file_handle', 'path': str(row['path']),
++                        'handle': row['handle'], 'retry': 'PENDING'})
++                elif row['open_state'] == 'UNCERTAIN' and row['handle'] in (None, 0, INVALID_HANDLE):
++                    pending.append({'kind': 'file_open', 'path': str(row['path']),
++                        'handle': row['handle'], 'retry': 'UNCERTAIN'})
++            return tuple(pending)
+ 
+     @property
+     def closed(self):
+@@ -202,7 +225,24 @@
+     def close(self):
+         with self._lock:
+             if self._closed: return
++            if self._api is None:
++                # API construction failed before the first file acquisition.
++                # A contradictory retained pin cannot be labelled retired.
++                require(not self._pins, 'OWNER_VIEW_API_CUSTODY_UNAVAILABLE')
++                self._closed = True
++                return
+             try:
++                for row in self._pins:
++                    if row['handle'] not in (None, 0, INVALID_HANDLE):
++                        if not row['enrolled']:
++                            # The original API deduplicates a row that was
++                            # appended before an exception. Do not release any
++                            # handles until every known return is enrolled, so
++                            # a retry never registers an already closed value.
++                            self._api.queue_handle(row['handle'])
++                            row['enrolled'] = True
++                    else:
++                        require(row['open_state'] != 'UNCERTAIN', 'OWNER_VIEW_OPEN_CUSTODY_UNCERTAIN')
+                 self._api.retry_cleanup(kinds=('handles',))
+                 require(not self.pending_native_resources, 'OWNER_VIEW_CLEANUP_PENDING')
+             except BaseException as primary:

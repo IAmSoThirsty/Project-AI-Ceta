@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/societal-reasoning/concept.schema.json",
+  "title": "Societal Reasoning Concept v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "label", "summary", "source", "status"],
+  "properties": {
+    "id": {"type": "integer", "minimum": 1, "maximum": 200000},
+    "label": {"type": "string", "minLength": 1},
+    "summary": {"type": "string", "minLength": 1},
+    "domains": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "aliases": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "original_text": {"type": ["string", "null"]},
+    "source": {"type": "object", "minProperties": 1},
+    "status": {"enum": ["seed_summary_pending_transcription", "source_transcribed", "independently_verified"]}
+  }
+}

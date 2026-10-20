@@ -1,0 +1,42 @@
+--- reviewed-r2/wire.py
++++ executed-candidate/wire.py
+@@ -148,10 +148,39 @@
+         return json.loads(self.canonical_wire)
+ 
+ 
++def _schema_bound_types(shape: Any, depth: int = 0) -> None:
++    """Classify malformed bounds before integer-only schema serialization.
++
++    Traverse schema positions only: literal values in const/enum are records,
++    not nested schemas. References and all remaining validation stay in the
++    compiler after the schema has been copied through canonical serialization.
++    """
++    if depth > MAX_DEPTH:
++        raise ContractError("DEPTH_LIMIT")
++    if type(shape) is not dict:
++        return
++    for field in ("minimum", "maximum", "minItems", "maxItems", "minLength", "maxLength"):
++        if field in shape and type(shape[field]) is not int:
++            raise ContractError("INVALID_SCHEMA_BOUND")
++    for group in ("properties", "$defs"):
++        children = shape.get(group)
++        if type(children) is dict:
++            for child in children.values():
++                _schema_bound_types(child, depth + 2)
++    if "items" in shape:
++        _schema_bound_types(shape["items"], depth + 1)
++    for group in ("anyOf", "oneOf"):
++        children = shape.get(group)
++        if type(children) is list:
++            for child in children:
++                _schema_bound_types(child, depth + 2)
++
++
+ class RecordCodec:
+     """An injected schema avoids filesystem or domain dependencies in core."""
+ 
+     def __init__(self, schema: dict[str, Any]) -> None:
++        _schema_bound_types(schema)
+         self._schema = strict_loads(canonical_bytes(schema))
+         self._compile(self._schema)
+         self._definitions = self._schema.get("$defs", {})

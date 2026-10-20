@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "executor": "/root",
+  "run_id": "js9-runtime-20261020",
+  "phase": "native-observer",
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/PACKET.json",
+    "sha256": "eb5f4c993a74f7b378db9b2dd10e039fadc64ebff3c31887c78393ce58157055"
+  },
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/MANIFEST-R4.json",
+    "sha256": "212f1913af6ef24c24041628d2dcca23c7b754849ba79de9db8d75a210b3f532"
+  },
+  "reviewed_scripts": {
+    "bounded_custody.py": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4",
+    "fixture_runtime.py": "c6c91421b85fbf7cc7088cc193abae1b81f2cbc64c0d7219aa175240f18185c3",
+    "gc_observer.py": "92f1a44059e704e84763220fa63990e5a9d093338f41cdd32b777916f7be915f",
+    "js9_support.py": "a5511b3aa7de4710f43d55834db1dd4e869ce0aff1bf22608936b886dfa30cda",
+    "launch_full.py": "512654ab83e937bcd2d973f35ae12ed314a274a754aa4e17ccfc296901bc37fa",
+    "launch_native.py": "c23de7b6164cc001902244061d365f62578fb5b9e55ed34ab2fc1f59c6382852",
+    "native_case_gate.py": "39ae5136f85849855ce60434f5e71d061e3ffc11e784bfd00084d6181b3d1468",
+    "publish_source.py": "90c20b3fcd83eb80707b93373599437f1df9cebfd628777ab471fc10fdf2b7fa",
+    "resource_observer.py": "de5deb609eb8b57b2b52e695ec0b38e1eac05f31ada119e83e74b9157074fd4a",
+    "run_full.py": "28ff1f27cfc673e8e9cc1725aee4b1846b095cf47b76fe884653aa1e17d0d336",
+    "run_native_observer.py": "69193456fc900f9b2f3769f57382ca7dd65495dff87f0dc97891bf2324099090",
+    "run_native_store.py": "415a329a0014d791e5f0088b9719fd24aae8b028e08571786e1d18661b668d3d"
+  },
+  "case_set": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/CASESET.json",
+    "sha256": "eb84271555192021f192906f8f110c943d335009c2eb5c0cd088d38e5837eebb"
+  },
+  "Source_before": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r2/SOURCE-BEFORE.json",
+    "sha256": "a76dbdf4301eb0120bd646430c76e277827de46f888bb38d3a7c2fdad1d6958b"
+  },
+  "automatic_retry": false,
+  "create_profiles": false,
+  "Source_publication": false,
+  "all_conflicting_Source_pinned_runs_released": true,
+  "issued_at_ns": 1792491733908663000,
+  "expires_at_ns": 1792493533908663000,
+  "independent_review": {
+    "repository_relative_path": ".agents/runtime/js9-successor-tools-review-20261020/R2/review.json",
+    "sha256": "c480b380416beee3331ae255151d1a59cbe476f433950787ce85fcc1ff2b6a26"
+  },
+  "execution_lease": {
+    "claims": {
+      "repository_relative_path": ".agents/runtime/js9-root-execution-20261020/js9-root-execution-20261020/claims.json",
+      "sha256": "e468332e2c6400787632658187a0463260521e054c653996fc4f8f057fb54189"
+    },
+    "state": {
+      "repository_relative_path": ".agents/runtime/js9-root-execution-20261020/js9-root-execution-20261020/state.json",
+      "sha256": "7d8c902d24698f1b250f4087ca852fe96c79fc9ebb6b4d9813d3b6e8dee5f66a"
+    },
+    "input_hash": "6fa8de149930445666ab5d05b4a86688f6d69a99c9585db6e11947832f79615c",
+    "node_id": "implement"
+  },
+  "authority_basis": "Existing user-directed implementation and disposable component acceptance tests; no AppContainer profile API",
+  "qualification_scope": "Disposable Windows component gate; no product authorization or full-product acceptance"
+}

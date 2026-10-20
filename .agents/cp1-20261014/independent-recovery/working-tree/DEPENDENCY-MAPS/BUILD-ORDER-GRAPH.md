@@ -1,0 +1,22 @@
+# Validated construction waves
+
+These waves are computed from the declared prerequisite graph. Within a wave, tasks may run in parallel only when source write scopes are disjoint and shared contracts are stable. Foundation declarations and qualification harnesses are introduced early; final product acceptance still covers all approved capabilities.
+
+| Wave | Ready subsystem interfaces |
+| --- | --- |
+| W00 | [00-MASTER-ARCHITECTURE](../00-MASTER-ARCHITECTURE/README.md) |
+| W01 | [19-STATE-AND-RECOVERY](../19-STATE-AND-RECOVERY/README.md) |
+| W02 | [18-SECURITY-AND-ENFORCEMENT](../18-SECURITY-AND-ENFORCEMENT/README.md), [20-RESOURCE-MANAGEMENT](../20-RESOURCE-MANAGEMENT/README.md) |
+| W03 | [02-IDENTITY-AND-AUTHORITY](../02-IDENTITY-AND-AUTHORITY/README.md), [17-EVIDENCE-AND-PROVENANCE](../17-EVIDENCE-AND-PROVENANCE/README.md) |
+| W04 | [01-CONSTITUTIONAL-GOVERNANCE](../01-CONSTITUTIONAL-GOVERNANCE/README.md), [04-PERSISTENT-MEMORY](../04-PERSISTENT-MEMORY/README.md), [23-TESTING-AND-QUALIFICATION](../23-TESTING-AND-QUALIFICATION/README.md) |
+| W05 | [11-EXECUTION-AND-ISOLATION](../11-EXECUTION-AND-ISOLATION/README.md) |
+| W06 | [08-TASK-AND-WORKFLOW-ENGINE](../08-TASK-AND-WORKFLOW-ENGINE/README.md), [09-MODEL-RUNTIME](../09-MODEL-RUNTIME/README.md), [10-TOOLS-AND-CAPABILITIES](../10-TOOLS-AND-CAPABILITIES/README.md) |
+| W07 | [05-CONTEXT-INTELLIGENCE](../05-CONTEXT-INTELLIGENCE/README.md), [06-AGENT-SKILLS-AND-LEARNING](../06-AGENT-SKILLS-AND-LEARNING/README.md), [14-AUTOMATION-AND-SCHEDULING](../14-AUTOMATION-AND-SCHEDULING/README.md), [16-KNOWLEDGE-AND-RESEARCH](../16-KNOWLEDGE-AND-RESEARCH/README.md), [22-DESKTOP-AND-USER-EXPERIENCE](../22-DESKTOP-AND-USER-EXPERIENCE/README.md) |
+| W08 | [07-AGENT-ORCHESTRATION](../07-AGENT-ORCHESTRATION/README.md), [21-EXTENSIONS-AND-INTEROPERABILITY](../21-EXTENSIONS-AND-INTEROPERABILITY/README.md) |
+| W09 | [03-COMPANION-INTELLIGENCE](../03-COMPANION-INTELLIGENCE/README.md), [12-ENGINEERING-INTELLIGENCE](../12-ENGINEERING-INTELLIGENCE/README.md) |
+| W10 | [13-NATIVE-DEVELOPMENT-WORKSPACE](../13-NATIVE-DEVELOPMENT-WORKSPACE/README.md), [15-COMMUNICATION-AND-INTERACTION](../15-COMMUNICATION-AND-INTERACTION/README.md) |
+| W11 | [24-BUILD-AND-RELEASE](../24-BUILD-AND-RELEASE/README.md) |
+
+## Activation versus construction
+
+A compiled interface or minimal shell can be constructed before every feature it will eventually present. Activate effectful behavior only when all its runtime prerequisites are actually ready and qualified. Read-only maintenance and diagnostics have explicit restricted scope. Never bypass authority or evidence to satisfy a build-order dependency.

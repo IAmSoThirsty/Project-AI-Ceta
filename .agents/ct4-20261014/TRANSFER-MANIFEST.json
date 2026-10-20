@@ -1,0 +1,82 @@
+{
+  "schema_version": "ceta.current-status.v1",
+  "author": "/root",
+  "source_root": "T:\\00-Active\\Project-AI-CETA",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\ct4-20261014",
+  "payloads": [
+    {
+      "relative_path": "build/progress.json",
+      "active_before_sha256": "80cda5babc9406bdcd0769f9090eed30a9c40d735a40d63a629ec470c246b9b8",
+      "candidate_sha256": "ae67f41d6974bec5c7ed4240163e9b84c1208f1d26bf38eb0aff2bf834a2ef43",
+      "allowed_changed_keys": [
+        "accepted_source_baseline_20261014",
+        "current_repository_execution_20261014",
+        "metadata_reference_repair_20261014",
+        "repository_execution_history_20261014",
+        "work_packages"
+      ],
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "source_native_identity": {
+        "device": 154504856318070761,
+        "inode": 281474979572455,
+        "mode": 33206,
+        "bytes": 38190,
+        "mtime_ns": 1792009885390547700,
+        "attributes": 32
+      }
+    },
+    {
+      "relative_path": "handoff/continuity.json",
+      "active_before_sha256": "baff6bba93b8f8c277b651f031ee9dc13207d5b84984c0def59e7bda30f2f5c3",
+      "candidate_sha256": "6703d5a901891da4e2a2c326200be35d2df60f771feb3fdf9f0c27922c3e301e",
+      "allowed_changed_keys": [
+        "accepted_source_baseline_20261014",
+        "current_deliverable",
+        "current_increment_tests",
+        "current_repository_execution_20261014",
+        "historical_fields_before_ct4_20261014",
+        "latest_increment_working_record",
+        "latest_source_integrity",
+        "latest_source_tests",
+        "latest_state_check_freshness",
+        "next_action",
+        "repository_execution_history_20261014"
+      ],
+      "application_action": "EXTEND_PRESERVE_BEFORE_IMAGE",
+      "source_native_identity": {
+        "device": 154504856318070761,
+        "inode": 281474979572460,
+        "mode": 33206,
+        "bytes": 121600,
+        "mtime_ns": 1791998193669375300,
+        "attributes": 32
+      }
+    }
+  ],
+  "application_paths": [
+    "build/progress.json",
+    "handoff/continuity.json"
+  ],
+  "runtime_code_changes": 0,
+  "global_gate_or_requirement_changes": 0,
+  "earlier_observations_preserved": true,
+  "source_suite": {
+    "repository_relative_path": ".agents/runtime/perf1-20261014/active-application/destination-full-r1.json",
+    "sha256": "428c4edff050dc130dfe64e15becff1d9167eb6697687e47c208657d7bbf30c4"
+  },
+  "accepted_source_ledger": {
+    "run_id": "perf1-20261014",
+    "sequence": 13,
+    "claims": {},
+    "accepted_at": "2026-10-14T21:51:55.037290+00:00",
+    "integrate_receipt": {
+      "repository_relative_path": ".agents/runtime/perf1-20261014/integrate.json",
+      "sha256": "46b0a293e5ae37f7ea8ff03581fdba48a6b276420a8b0db893289fad044c6b8a"
+    },
+    "acceptance": {
+      "repository_relative_path": ".agents/runtime/perf1-20261014/actual-acceptance.json",
+      "sha256": "b487023ec663a6cb7e545713ad8c759c4b066a0f6a795208939aa4f0b3175204"
+    }
+  },
+  "candidate_state": "PENDING_DISTINCT_REVIEW"
+}

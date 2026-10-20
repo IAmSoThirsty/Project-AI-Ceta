@@ -1,0 +1,53 @@
+{
+  "schema_version": "1",
+  "observed_at_utc": "2026-10-09T00:54:43.557805+00:00",
+  "scope": "DECLARED_BASELINE_ALLOCATION_REFERENCES_AND_DEPENDENCY_GRAPHS_ONLY",
+  "result": "PASS",
+  "errors": [],
+  "registry_counts": {
+    "requirements": 175,
+    "components": 25,
+    "packages": 28,
+    "cases": 128,
+    "gates": 8
+  },
+  "input_sha256": {
+    "PACKAGE_MANIFEST.json": "ea6d515e6437d0933b58e178ac5d9b747b71aba5bcfd54ff70dd463c47bda311",
+    "requirements/requirements.json": "e2992051ff397409e9a4a4a918f31137421315ae990ba851cb0fb5c9e5aeb3ae",
+    "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+    "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+    "acceptance/scenarios.json": "7ab7add1e7889a6a0ce1690ce29be8d7431b6eb4bcfc8a75608f4f0c7148841c",
+    "build/gates.json": "04afba11afa8a707ac70651d2ef26efed65d75b0d6d6edde44c2399c2a36848b",
+    ".local-build-cache/restoration-proof/requirements/requirements.json": "3be25882c32a1aad5ad24e1486b4c2871b716add28af06bb5df81c1efe0a9410",
+    ".local-build-cache/restoration-proof/architecture/components.json": "b15d5d54c510b2b5ffc4093235845ee64ffdd7e2dc210a4bc0b5ef19f813df07",
+    ".local-build-cache/restoration-proof/build/work_packages.json": "b6864656c999d496f1a2c10dcfef2dad8ca3003448d33062802b027811aa69de",
+    ".local-build-cache/restoration-proof/acceptance/scenarios.json": "7ab7add1e7889a6a0ce1690ce29be8d7431b6eb4bcfc8a75608f4f0c7148841c",
+    ".local-build-cache/restoration-proof/build/gates.json": "04afba11afa8a707ac70651d2ef26efed65d75b0d6d6edde44c2399c2a36848b"
+  },
+  "checker_sha256": "8b1ff56c9167eb7c490704c8637e8f5b7699e7d72389dc11826826a7b06a0825",
+  "runtime_qualification": "NOT_RUN",
+  "interface_implementation": "NOT_VERIFIED",
+  "semantic_source_conformance": "NOT_EVALUATED",
+  "independent_review": "NOT_PERFORMED",
+  "gate_a": "NOT_CLOSED",
+  "status_promotion": "NONE",
+  "execution": {
+    "command": [
+      "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\verify_allocations.py"
+    ],
+    "started_at_utc": "2026-10-09T00:54:43.296207+00:00",
+    "ended_at_utc": "2026-10-09T00:54:43.569806+00:00",
+    "returncode": 0,
+    "log": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\allocation-final29.txt",
+    "log_sha256": "4a80356320be58a201a1b4fe484a7025deaa2f161e1c06309743c4927bc56de0",
+    "checker_sha256": "8b1ff56c9167eb7c490704c8637e8f5b7699e7d72389dc11826826a7b06a0825",
+    "interpreter_before_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+    "interpreter_after_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+    "helper_before_sha256": "22169d38c0766281e146eaa5f16b72b9f6f2580165572727ca119655521ab11b",
+    "helper_after_sha256": "22169d38c0766281e146eaa5f16b72b9f6f2580165572727ca119655521ab11b"
+  }
+}

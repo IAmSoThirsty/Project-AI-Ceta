@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-15T18:10:08.105162+00:00",
+  "attempt": "inventory-build-r1",
+  "exit_status": 1,
+  "script_sha256": "8d90983c9ddd22cfceb5c8aed5564d920c5afb848c05b9bca2f683b9ac03ed19",
+  "failure": "ValueError in relative(): historical absolute atomic-ticket implementation path is outside current repository",
+  "exact_path": "T:/00-Active/CETA-desktop-delivery-20260906/rebuild_ios/src/ceta/contracts/wire.py",
+  "effect": "One ordinary source file was read into memory before the boundary check raised; no external bytes were exported and no external mutations occurred",
+  "classification": "author inventory reader scope defect; fixed by checking scope before any file observation and explicitly reconciling old path spelling",
+  "inventory_outputs_created": false,
+  "prior_shell_preparation_error": "New-Item rejects -LiteralPath; no directory was created by that failed command. Exact explicit -Path creation succeeded."
+}

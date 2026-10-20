@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "at": "2026-10-20T10:07:26.365629+00:00",
+  "reviewer": "/root/recovery_join_review20",
+  "author": "/root/recovery_regression20",
+  "decision": "rejected",
+  "exit_status": 1,
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r1/PACKET.json",
+    "sha256": "455efb4d1d30ecd05f7076f32648a44b71f7fc383882945e233f1e2c126810c5"
+  },
+  "reviewed_scripts": {
+    "bounded_custody.py": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4",
+    "fixture_runtime.py": "c6c91421b85fbf7cc7088cc193abae1b81f2cbc64c0d7219aa175240f18185c3",
+    "gc_observer.py": "92f1a44059e704e84763220fa63990e5a9d093338f41cdd32b777916f7be915f",
+    "js9_support.py": "d7d14925c45a47bcd16210ec6586e8ed5a5c4e3a8d0b87b9156115451384858a",
+    "launch_full.py": "512654ab83e937bcd2d973f35ae12ed314a274a754aa4e17ccfc296901bc37fa",
+    "native_case_gate.py": "c80da0dcb898bd7251631f3c32ec22e9cb7842dfc213642774d0e93eeba452b3",
+    "publish_source.py": "90c20b3fcd83eb80707b93373599437f1df9cebfd628777ab471fc10fdf2b7fa",
+    "resource_observer.py": "de5deb609eb8b57b2b52e695ec0b38e1eac05f31ada119e83e74b9157074fd4a",
+    "run_full.py": "28ff1f27cfc673e8e9cc1725aee4b1846b095cf47b76fe884653aa1e17d0d336",
+    "run_native_observer.py": "2ea66926c5fad8164201ef8f169b12b9e085264d6362b6d16bbb5ea60447b734",
+    "run_native_store.py": "bd58d103cd74134af17158a2d40e47f8ec90f1772531e7e127bd1575daa4389f"
+  },
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/MANIFEST-R4.json",
+    "sha256": "212f1913af6ef24c24041628d2dcca23c7b754849ba79de9db8d75a210b3f532"
+  },
+  "host_execution_approved": false,
+  "human_approval_issued": false,
+  "Source_publication_approved": false,
+  "native_execution_performed_by_reviewer": false,
+  "product_tests_executed_by_reviewer": false,
+  "findings": [
+    {
+      "id": "JS9-TOOLS-01",
+      "priority": "P1",
+      "classification": "blocking current task",
+      "title": "Native post-verification invokes Git through an audit-forbidden subprocess before terminal receipt creation",
+      "paths": {
+        "run_native_store.py": [
+          21,
+          33,
+          80,
+          98
+        ],
+        "run_native_observer.py": [
+          38,
+          43,
+          164,
+          186
+        ],
+        "js9_support.py": [
+          120,
+          121
+        ],
+        "preservation_reader.py": [
+          443,
+          453
+        ]
+      },
+      "proof": "POSTVERIFY-BOUNDARY-REPRODUCTION.json",
+      "status": "reproduced with exact AST functions and a synthetic event only",
+      "repair": "Separately reviewed parent default-Git corroboration, mandatory in full/publication gates; child receipts explicitly pending until parent accepts. Keep subprocess boundary."
+    }
+  ],
+  "authority_boundaries": [
+    {
+      "classification": "requires user decision",
+      "case": "test_isolated_worker.NativeIsolatedWorkerTests.test_actual_nonpersistent_launch_denial_and_medium_control_retirement",
+      "phases": [
+        "candidate-full",
+        "destination-full"
+      ],
+      "current_authority": "AC7 excluded post-cleanup regression; generic authority_basis and Root release do not prove a fresh human decision",
+      "required": "Distinct exact current human authorization for two no-profile cases, then separate phase-bound releases; retain every test ID."
+    }
+  ],
+  "partial_disposition": {
+    "native_store18": "blocked on JS9-TOOLS-01",
+    "native_observer6": "blocked on JS9-TOOLS-01",
+    "full": "blocked on repair and distinct current human no-profile scope",
+    "publish": "blocked pending repaired/reviewed execution cut and fresh successful native/full evidence plus actual Source lease",
+    "no_second_blocking_code_defect_established": true
+  },
+  "verified_inventory": {
+    "candidate_payloads": 530,
+    "Source_before_targets": 530,
+    "accepted_Source_payloads": 352,
+    "changed_or_new_application_paths": 31,
+    "full_case_ids": 2622,
+    "retained_original_ids": 2334,
+    "added_ids": 288,
+    "reasoning_integration_ids": 21,
+    "reasoning_repair_ids": 29,
+    "native_store_ids": 18,
+    "native_observer_ids": 6,
+    "case_method_locators": 2622,
+    "current_inputs_stable": 1081
+  },
+  "preserved_parent_method_AST_differences": [
+    {
+      "case": "test_cpu_execution_admission.CpuExecutionAdmissionTests.test_operation_wall_budget_bounds_total_admission_separately_from_native_duration",
+      "old": "b4a67055f17c123597c69bf1266e51be2854ab2e0a4c0118a85ef42b13806d2b",
+      "new": "a4e254da633f5525040293af5af20fdfbb2572dbe0fbf9d372bece88f057ab3e"
+    },
+    {
+      "case": "test_cpu_execution_timing_diagnostics.CpuTimingDiagnosticTests.test_authenticated_stop_and_slow_capacity_retains_timing_cause_without_consumption",
+      "old": "f153443b181e5c98c604d39d5e8bcb04cb3eb00d8919a237558f2cdf70866d2f",
+      "new": "481823fce9f5bae5ab23e4e5460356b32b15da9e80ad37b6560eb0bd5e9f0d7f"
+    }
+  ],
+  "review_controls": {
+    "file_and_AST_only": true,
+    "independent_receipt_controls": 20,
+    "postverify_reproductions": 2,
+    "native_calls": false,
+    "tool_or_product_imports": false
+  },
+  "skill": "epistemic-status-enforcer",
+  "skill_version": "0.1.0",
+  "governing_version": "thirsty-constitution-v0.1",
+  "skill_sources": {
+    "SKILL.md": "ab4e1fc97e6eeebc242832afc6d865fe7408352b5ce0c716539b14e287d85fae",
+    "references/constitutional-rules.md": "fcac1c8ed76418d9ec44b97a057e5ac0c9b654e0f0337d1a255267a5a0867496",
+    "references/handoff-schema.md": "3f8cefccc028af6f37d7ac2b3add59fe6e5079bee86df0453a523443ad0b4823"
+  },
+  "claims": [
+    {
+      "statement": "Both native adapter post-checks reject their own Git subprocess event before writing terminal receipts",
+      "epistemic_status": "verified source/control fact",
+      "sources": [
+        "POSTVERIFY-BOUNDARY-REPRODUCTION.json"
+      ]
+    },
+    {
+      "statement": "Frozen case IDs, Source boundaries and script ancestors match their pins",
+      "epistemic_status": "verified file/AST fact",
+      "sources": [
+        "FROZEN-CUT-RESULT.json"
+      ]
+    },
+    {
+      "statement": "Actual native/full/destination success, publication and accepted successor baseline",
+      "epistemic_status": "unknown",
+      "sources": []
+    }
+  ],
+  "assumptions": [
+    "Trusted host and operator",
+    "Cooperative exclusive Source ownership; no new same-principal/privileged hostile namespace-replacement guarantee"
+  ],
+  "contradictions": [],
+  "risks": [
+    "Native tests could execute before the broken post-check prevents their terminal evidence; keep R1 dormant",
+    "Generic Root engineering authority string must not replace the fresh excluded-case human decision"
+  ],
+  "irreversible_effects": [],
+  "external_actions_taken": [],
+  "recommended_next_skills": [],
+  "recommended_next_action": "Freeze separate R2 repair with mandatory parent corroboration; obtain distinct bounded successor tool review. Native/full/publication remain dormant until applicable gates and authority are established.",
+  "unresolved_questions": [
+    "R2 parent-proof binding and terminal process evidence",
+    "Fresh human decision for the two original no-profile cases",
+    "Actual native18/native6/full2622/destination2622 outcomes",
+    "Canonical accepted successor baseline"
+  ],
+  "evidence": {
+    "REVIEW.md": "a751c4817863f2e6043ba48a0efdc62c9889d641b744519c588118bca0e2eae4",
+    "FROZEN-CUT-RESULT.json": "153ee370e768062f390f3353a4cbc259a6d9f893356f042519235172769417ba",
+    "verify_frozen_cut.py": "411b1c757238c7bd098ec121b58b3e6624a2d198e95554e1a6900fc044b08a71",
+    "POSTVERIFY-BOUNDARY-REPRODUCTION.json": "e9a30b807d7acb17c53363b3fddff9c1ac9db2c98ec788842129b2a5455b9348",
+    "reproduce_postverify_boundary.py": "dd7be46a17c7e1ccd16291cb273604cd5c208ee370f63629128619d8690e3311",
+    "reproduce_postverify_boundary_v2.py": "b488568162cbc8521371937e3d405dc9795ef3887ae7f38e3104b93da8d3c46c",
+    "PURE-RECEIPT-CONTROLS.json": "3d78d80923cc124296c0f815c81a09f6c2a496d2e0fd8fa64e03c1671d15a98f",
+    "pure_receipt_controls.py": "3a2720a94480366c7d871a79a1b67b2db90daa1b7df93b5f3ad91f12ff2da636",
+    "REVIEWER-EXTRACTOR-FAILURE.json": "052305f2cebc7a279311ecaf04840e0f681fcd9113172950cd1c1c8ae0c2942e"
+  }
+}

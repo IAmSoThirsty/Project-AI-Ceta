@@ -1,0 +1,22 @@
+name: Python tests
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install .
+      - run: python -m unittest discover -s tests -v
+      - run: sre demo
+      - run: sre audit
+      - run: python scripts/compile_inventory.py
+      - run: python run.py deliberate examples/deliberation_public.json > /tmp/sre-deliberation.json
+      - run: python run.py compare-deliberations examples/deliberation_public.json examples/deliberation_private.json > /tmp/sre-compare.json

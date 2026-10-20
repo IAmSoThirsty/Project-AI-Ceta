@@ -1,0 +1,105 @@
+{
+  "at": "2026-10-20T08:16:47.491912+00:00",
+  "source": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-token-contract-20261020\\native\\windows_broker\\isolated_worker.rs",
+    "sha256": "689bcfad0c4232351fd253aac08d09d13463f1f39ca3844bd0c07694db4c4805"
+  },
+  "actual_rustc": {
+    "path": "T:\\03-Toolchains\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\rustc.exe",
+    "sha256": "519b058ea84015e8b702cbe2d292ea23eeef46eafe8ce88fe5b2daf015529765"
+  },
+  "version_output": "rustc 1.96.1 (31fca3adb 2026-06-26)\nbinary: rustc\ncommit-hash: 31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd\ncommit-date: 2026-06-26\nhost: x86_64-pc-windows-gnu\nrelease: 1.96.1\nLLVM version: 22.1.2\n",
+  "sysroot": "T:\\03-Toolchains\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu",
+  "native_image": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\build-r1\\isolated_worker.exe",
+    "sha256": "da8b61e6660e2037d607850dc37553cdbf24ed5f84f6e0ccaf4480137523bd7e",
+    "bytes": 4872606
+  },
+  "pure_test_image": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\build-r1\\isolated_worker_token_tests.exe",
+    "sha256": "4c64883b9b94abaa9de4ed3a85c8e5c71217a89ac4f3bb52ebe5e735b89ec48b"
+  },
+  "commands": [
+    {
+      "label": "compiler-version",
+      "started_at": "2026-10-20T08:16:26.154827+00:00",
+      "finished_at": "2026-10-20T08:16:27.401094+00:00",
+      "command": [
+        "T:\\03-Toolchains\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\rustc.exe",
+        "--version",
+        "--verbose"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "c8f5eeb9d50159a0ec69f7c75be5bc83975ceb221ae0509f46f0438878096f8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "compiler-sysroot",
+      "started_at": "2026-10-20T08:16:27.403098+00:00",
+      "finished_at": "2026-10-20T08:16:28.432696+00:00",
+      "command": [
+        "T:\\03-Toolchains\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\rustc.exe",
+        "--print",
+        "sysroot"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "c84dc964f980c371bb65cb6514cd632b9f715627c39dede48740a134df840e66",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "fixed-worker-build",
+      "started_at": "2026-10-20T08:16:28.432696+00:00",
+      "finished_at": "2026-10-20T08:16:45.498388+00:00",
+      "command": [
+        "T:\\03-Toolchains\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\rustc.exe",
+        "--edition=2024",
+        "-C",
+        "target-feature=+crt-static",
+        "-O",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-token-contract-20261020\\native\\windows_broker\\isolated_worker.rs",
+        "-o",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\build-r1\\isolated_worker.exe"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "pure-test-build",
+      "started_at": "2026-10-20T08:16:45.498388+00:00",
+      "finished_at": "2026-10-20T08:16:46.620373+00:00",
+      "command": [
+        "T:\\03-Toolchains\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\rustc.exe",
+        "--edition=2024",
+        "-C",
+        "target-feature=+crt-static",
+        "-O",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-token-contract-20261020\\native\\windows_broker\\isolated_worker.rs",
+        "--test",
+        "-o",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\build-r1\\isolated_worker_token_tests.exe"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "pure-rust-tests",
+      "started_at": "2026-10-20T08:16:46.621378+00:00",
+      "finished_at": "2026-10-20T08:16:47.450262+00:00",
+      "command": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-token-contract-20261020\\build-r1\\isolated_worker_token_tests.exe",
+        "--test-threads=1",
+        "--nocapture"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "427e6f2d51ee940fce0b32011eb174e56583f9f81a00d3720688c757bcb66a19",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "actual_restricted_worker_execution": false,
+  "host_profile_operations": false,
+  "pure_tests": 5,
+  "source352_unchanged": true,
+  "temporary_environment": "Process-local TEMP/TMP only"
+}

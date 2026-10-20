@@ -1,0 +1,117 @@
+{
+  "phase": "candidate-full",
+  "at": "2026-10-20T11:28:52.463796+00:00",
+  "record": {
+    "timeout_seconds": 3600,
+    "native_owner": {
+      "pid": 17832,
+      "creation_time": 134369677281333036,
+      "image_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14"
+    },
+    "child_exit": 1,
+    "primary_error": null,
+    "retirement_error": null,
+    "construction_custody": null,
+    "native_owner_after": {
+      "closed": true,
+      "process_closed": true,
+      "thread_closed": true,
+      "job_closed": true,
+      "startup_handles_closed": true
+    },
+    "child_result": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/RESULT.json",
+      "sha256": "cecf080e81e5d1ace86738f1f0ac05cdccbc704e13e625ffc5471ca2c44f711f"
+    },
+    "automatic_cleanup_retry": false
+  },
+  "primary_error": {
+    "type": "RuntimeError",
+    "message": "FULL_CHILD_FAILED:1"
+  },
+  "argv": [
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\launch_full.py",
+    "candidate-full",
+    "--release-path",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\releases\\candidate-full-r3.json",
+    "--release-sha256",
+    "95786214f12d6819d2f8df0a820d6a36c796ae9d617b5fcc9f57fb633461e1e1"
+  ],
+  "interpreter": {
+    "sys_executable": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+    "sys_base_executable": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "python": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+      "bytes": 274424,
+      "sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+      "native_identity": {
+        "bytes": 274424,
+        "mtime_ns": 1791945362601512900,
+        "mode": 511,
+        "device": 154504856318070761,
+        "inode": 281474979338317,
+        "attributes": 32
+      }
+    },
+    "base_python": {
+      "path": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "bytes": 104952,
+      "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+      "native_identity": {
+        "bytes": 104952,
+        "mtime_ns": 1744142256000000000,
+        "mode": 511,
+        "device": 8375675987628699060,
+        "inode": 1688849860437982,
+        "attributes": 32
+      }
+    }
+  },
+  "child_argv": [
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py",
+    "candidate-full",
+    "--release-path",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\releases\\candidate-full-r3.json",
+    "--release-sha256",
+    "95786214f12d6819d2f8df0a820d6a36c796ae9d617b5fcc9f57fb633461e1e1"
+  ],
+  "child_terminal": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/RESULT.json",
+    "sha256": "cecf080e81e5d1ace86738f1f0ac05cdccbc704e13e625ffc5471ca2c44f711f"
+  },
+  "child_status": {
+    "exit_status": 1,
+    "primary_error": {
+      "type": "KeyError",
+      "message": "'native_after_fixture_cleanup'",
+      "traceback": "Traceback (most recent call last):\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 213, in main\n    report=execute(args,release,v,gate,progress)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 166, in execute\n    physical_proof=physical.finish();native_proof=native.finish()\n                                                  ^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 358, in finish\n    native_capacity_custody_retired=bool(capacity.NATIVE_CUSTODY_RECEIPTS) and all(\n                                                                               ^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 359, in <genexpr>\n    row['native_after_fixture_cleanup']['state']==4 and not row['registered_after_fixture_cleanup']\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'native_after_fixture_cleanup'\n",
+      "secondary_errors": []
+    },
+    "suite_aborted": true,
+    "preflight_complete": true,
+    "expected_inventory_present": true,
+    "failure_stage": "test-execution",
+    "loader_errors": []
+  },
+  "child_primary_error": {
+    "type": "KeyError",
+    "message": "'native_after_fixture_cleanup'",
+    "traceback": "Traceback (most recent call last):\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 213, in main\n    report=execute(args,release,v,gate,progress)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 166, in execute\n    physical_proof=physical.finish();native_proof=native.finish()\n                                                  ^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 358, in finish\n    native_capacity_custody_retired=bool(capacity.NATIVE_CUSTODY_RECEIPTS) and all(\n                                                                               ^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 359, in <genexpr>\n    row['native_after_fixture_cleanup']['state']==4 and not row['registered_after_fixture_cleanup']\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'native_after_fixture_cleanup'\n",
+    "secondary_errors": []
+  },
+  "exit_status": 1,
+  "own_job_only": true,
+  "Source_accepted": false,
+  "release": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/releases/candidate-full-r3.json",
+    "sha256": "95786214f12d6819d2f8df0a820d6a36c796ae9d617b5fcc9f57fb633461e1e1"
+  }
+}

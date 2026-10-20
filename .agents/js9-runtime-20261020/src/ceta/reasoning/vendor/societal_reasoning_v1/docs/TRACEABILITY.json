@@ -1,0 +1,1397 @@
+{
+  "counts": {
+    "blocked_external_or_independent_evidence": 5,
+    "not_implemented_or_not_verified": 39,
+    "partial": 70,
+    "verified_bounded": 6
+  },
+  "planned_requirements": 120,
+  "requirements": [
+    {
+      "acceptance_proof": "not_established",
+      "id": "A01",
+      "implementation": [
+        "docs/OBJECTIVE_AND_BOUNDARIES.md"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Keep the owner-stated purpose as the canonical objective.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "local_test_only",
+      "id": "A02",
+      "implementation": [
+        "src/societal_reasoning/__init__.py"
+      ],
+      "limitations": "Specific local behavior tested; broader intent may require additional evidence.",
+      "requirement": "Keep the release designation exactly Version 1 until explicitly changed by owner.",
+      "status": "verified_bounded",
+      "test_reference": [
+        "tests/test_release_policy.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A03",
+      "implementation": [
+        "src/societal_reasoning/engine.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Preserve one canonical processing path; no undocumented shortcuts.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A04",
+      "implementation": [
+        "src/societal_reasoning/engine.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Maintain read-only advisory behavior unless separately authorized otherwise.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_engine.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A05",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Do not expand a requested task into another project without authorization.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A06",
+      "implementation": [
+        "src/societal_reasoning/input_boundary.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Treat source text, user statement, model conjecture, and instructions as distinct.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A07",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Record owner decisions, changed constraints, and superseding decisions.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A08",
+      "implementation": [
+        "src/societal_reasoning/engine.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Preserve backward-compatible documented interfaces or provide tested migration.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_engine.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A09",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Record ratified versus draft standards and do not claim unverified compliance.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "A10",
+      "implementation": [
+        "docs/REASONING_SPEC.md"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Bound all release and capability claims to observable evidence.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "local_test_only",
+      "id": "B01",
+      "implementation": [
+        "src/societal_reasoning/input_boundary.py"
+      ],
+      "limitations": "Specific local behavior tested; broader intent may require additional evidence.",
+      "requirement": "Store verbatim user statements and exact attributable spans.",
+      "status": "verified_bounded",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "local_test_only",
+      "id": "B02",
+      "implementation": [
+        "src/societal_reasoning/claims.py"
+      ],
+      "limitations": "Specific local behavior tested; broader intent may require additional evidence.",
+      "requirement": "Preserve speaker identity per turn; do not transfer claims between speakers.",
+      "status": "verified_bounded",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B03",
+      "implementation": [
+        "src/societal_reasoning/claims.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Preserve negation, modality, conditionality, quantities, and timing.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B04",
+      "implementation": [
+        "src/societal_reasoning/claims.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Distinguish question, request, instruction, observation, quote, and hypothetical.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B05",
+      "implementation": [
+        "src/societal_reasoning/claims.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Preserve the actual requested deliverable, format, and exclusions.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B06",
+      "implementation": [
+        "src/societal_reasoning/response_review.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Detect paraphrases that add commitments or remove stated qualifications.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B07",
+      "implementation": [
+        "src/societal_reasoning/response_review.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Prevent invented first-person beliefs, motives, preferences and experiences.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B08",
+      "implementation": [
+        "src/societal_reasoning/response_review.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Do not assert another person's unreported internal states as facts.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B09",
+      "implementation": [
+        "src/societal_reasoning/claims.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Attribute statements to their sources when relying on reported information.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "B10",
+      "implementation": [
+        "src/societal_reasoning/response_review.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Review final text, not only intermediate plans, for unsupported additions.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C01",
+      "implementation": [
+        "src/societal_reasoning/semantics.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Use Merriam-Webster as the lexical reference for material English ambiguity.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_semantics.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C02",
+      "implementation": [
+        "src/societal_reasoning/semantics.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Track dictionary URL, editorial sense reference, review date, and licensing boundary.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_semantics.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C03",
+      "implementation": [
+        "src/societal_reasoning/semantics.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Identify ambiguous material expressions from free text when possible.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C04",
+      "implementation": [
+        "src/societal_reasoning/semantics.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Determine whether different meanings materially change the response.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C05",
+      "implementation": [
+        "src/societal_reasoning/semantics.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Resolve meanings from explicit user clarification and reliable local context.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C06",
+      "implementation": [
+        "src/societal_reasoning/semantics.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Retain alternatives or ask one necessary question when meaning remains material.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C07",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Account for idiom, figurative language, slang, irony and sarcasm.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C08",
+      "implementation": [
+        "src/societal_reasoning/claims.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Prevent quoted usages and labels from silently becoming speaker commitments.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C09",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Handle regional and community variation without inventing universal rules.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "C10",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Do not silently substitute a dictionary gloss for a user's explicit definition.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D01",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Represent participants and roles without defining a whole person by one role.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D02",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Identify conversation medium, setting and visible audience.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D03",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Include relationship history only when reported or otherwise established.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D04",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Distinguish playful banter, ridicule, critique, debate and social display as hypotheses.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D05",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Recognize public/private context differences when they change social function.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D06",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Represent power imbalance and coercion when supported by evidence.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D07",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Represent locally relevant cultural norms with explicit limits.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D08",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Detect material changes in tone and interaction purpose over time.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D09",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Record context evidence sources and distinguish supplied from inferred cues.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "D10",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Do not invent missing background, shared history or participant intention.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "local_test_only",
+      "id": "E01",
+      "implementation": [
+        "scripts/compile_inventory.py"
+      ],
+      "limitations": "Specific local behavior tested; broader intent may require additional evidence.",
+      "requirement": "Preserve 1..2000 stable IDs, full source records and hashes.",
+      "status": "verified_bounded",
+      "test_reference": [
+        "tests/test_full_inventory.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E02",
+      "implementation": [],
+      "limitations": "Requires an authoritative original-source export; not provided.",
+      "requirement": "Reconcile transcription against an authenticated original when available.",
+      "status": "blocked_external_or_independent_evidence",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E03",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Distinguish definitions, empirical generalizations, norms and illustrations.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E04",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Validate graph edge type, direction, scope and evidence.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E05",
+      "implementation": [
+        "src/societal_reasoning/relevance.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Keep hypotheses unverified until review; do not boost status by repetition.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_relevance.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E06",
+      "implementation": [
+        "src/societal_reasoning/relevance.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Retrieve concepts by lexical and semantic relevance.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_relevance.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E07",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Integrate verified graph traversal in actual reasoning, not only CLI display.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E08",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Reject unsupported multi-hop inference and invalid causal composition.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E09",
+      "implementation": [
+        "src/societal_reasoning/relevance.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Record appropriate coverage and unknowns, without forcing universal connectivity.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_relevance.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "E10",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Preserve corrections, conflicting sources and temporal applicability.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F01",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Convert the request into an unchanged reasoning objective.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F02",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Generate alternatives where material observations permit competing readings.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F03",
+      "implementation": [
+        "src/societal_reasoning/semantic_support.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Link every inference to premises and an inference method.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_semantic_support.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F04",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Separate deduction, analogy, abduction, and causal hypotheses.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F05",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Recognize evidence against a favored interpretation.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F06",
+      "implementation": [
+        "src/societal_reasoning/reading_support.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Identify causal/correlational confusion and unsupported generalization.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_reading_support.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F07",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Support relevant counterfactual comparison without claiming actual history.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F08",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Reconsider prior conclusions when material context changes.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F09",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Abstain from unsupported personal judgments and ungrounded certainty.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "F10",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Provide a reviewable basis without inventing probabilities or hidden facts.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G01",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Distinguish user report, observed record, quotation, and model proposal.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G02",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Mark externally authenticated versus locally transcribed evidence.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G03",
+      "implementation": [
+        "src/societal_reasoning/semantic_support.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Bind cues and claims to source identifiers and relevant text spans.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_semantic_support.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G04",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Detect duplicate, contradictory, missing and tampered evidence.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G05",
+      "implementation": [
+        "src/societal_reasoning/semantic_support.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Record limitations of each material evidentiary source.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_semantic_support.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G06",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Do not convert unverified testimony into independent confirmation.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G07",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Distinguish established facts, plausible inferences, and unknowns.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G08",
+      "implementation": [
+        "src/societal_reasoning/deliberation.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Surface material counterevidence and competing interpretations.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_deliberation.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G09",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Make revisions attributable and prior states recoverable where applicable.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "G10",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Reject evidence provenance fabrication and unsupported verification claims.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H01",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Examine relevant affected participants, not just the direct user, when material.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H02",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Distinguish direct, indirect, and speculative consequences.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H03",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Consider beneficial, harmful, mixed and uncertain possible effects.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H04",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Include context such as audience, power and reversibility where relevant.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H05",
+      "implementation": [
+        "src/societal_reasoning/effects.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Flag risks of stereotyping or reducing a person to one descriptor.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H06",
+      "implementation": [
+        "src/societal_reasoning/effects.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Never assert the actual emotional effect without adequate source evidence.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H07",
+      "implementation": [
+        "src/societal_reasoning/effects.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Consider effects produced by the AI's wording and unsupported claims.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H08",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Preserve alternative interests when actors may be affected differently.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H09",
+      "implementation": [
+        "src/societal_reasoning/effects.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "State conjectured consequences as conjectures, not discovered outcomes.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "H10",
+      "implementation": [
+        "src/societal_reasoning/effects.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Keep the effect assessment silent unless useful to the requested answer.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I01",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Answer the actual question directly when the answer is supported.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I02",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Differentiate casual exchange from requests for technical investigation.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I03",
+      "implementation": [
+        "src/societal_reasoning/engine.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Select response mode using user objective and contextual evidence.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I04",
+      "implementation": [
+        "src/societal_reasoning/semantics.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Ask for clarification only when materially necessary.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I05",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Limit unsolicited framing, lists, explanations and extra objectives.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I06",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Preserve the user's explicitly requested tone and format when appropriate.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I07",
+      "implementation": [
+        "src/societal_reasoning/response_review.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Prevent unsupported user/person attributions from passing final review.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I08",
+      "implementation": [
+        "src/societal_reasoning/response_review.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Preserve literal quotes, cited material and epistemic qualifiers.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I09",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Permit evidence-supported descriptions without defining the whole person.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "I10",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Produce concise, inspectable explanation when challenged or requested.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J01",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Treat explicit correction as a change to the active interpretation.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J02",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Supersede invalidated assumptions in the current session.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J03",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Never repeat a known-invalid attribution without newly relevant evidence.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J04",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Keep correction, speaker, timestamp, reason and scope traceable.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J05",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Distinguish session context from persistent personal records.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J06",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Do not create a persistent profile merely from a social interpretation.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J07",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Provide local retention limits and optional record deletion mechanisms.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J08",
+      "implementation": [
+        "tests/test_corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Keep sensitive private content out of public test fixtures by default.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J09",
+      "implementation": [
+        "src/societal_reasoning/corrections.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Preserve the distinction between the person's corrections and model opinions.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_corrections.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "J10",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Verify that corrections survive long context and contradictory distractions.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "local_test_only",
+      "id": "K01",
+      "implementation": [
+        "run.py"
+      ],
+      "limitations": "Specific local behavior tested; broader intent may require additional evidence.",
+      "requirement": "Maintain standard-library core and a directly runnable offline path.",
+      "status": "verified_bounded",
+      "test_reference": [
+        "tests/test_launcher.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K02",
+      "implementation": [
+        "src/societal_reasoning/cli.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Provide validated schema-based Python/CLI interfaces.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_cli_text.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K03",
+      "implementation": [
+        "src/societal_reasoning/engine.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Expose structured text assessment and final draft review APIs.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_cli_text.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K04",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Allow optional language interpretation models through constrained adapters.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K05",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Require models to label proposed observations and their provenance.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K06",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Permit optional modality adapters without faking unsupported modalities.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K07",
+      "implementation": [
+        "src/societal_reasoning/response_review.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Declare the enforcement boundary for advisory versus blocking integrations.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K08",
+      "implementation": [
+        "src/societal_reasoning/input_boundary.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Bound time, memory, retrieval size, graph depth and error conditions.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K09",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Ensure malformed or adversarial input cannot grant authority or corrupt sources.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "K10",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Test stated platforms and installation procedures in clean environments.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L01",
+      "implementation": [
+        "scripts/requirement_register.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Trace every requirement to code, tests and evidence receipts.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_release_policy.py"
+      ]
+    },
+    {
+      "acceptance_proof": "local_test_only",
+      "id": "L02",
+      "implementation": [
+        "scripts/build_release.py"
+      ],
+      "limitations": "Specific local behavior tested; broader intent may require additional evidence.",
+      "requirement": "Run existing 131 baseline tests and 18 behavior cases without regressions.",
+      "status": "verified_bounded",
+      "test_reference": [
+        "tests/test_evaluate.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L03",
+      "implementation": [
+        "tests/test_text_contract.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Add synthetic positive, negative, boundary and adversarial test cases.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_text_contract.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L04",
+      "implementation": [],
+      "limitations": "Independent hidden scenario benchmark not constructed.",
+      "requirement": "Evaluate unseen scenarios separately from development fixtures.",
+      "status": "blocked_external_or_independent_evidence",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L05",
+      "implementation": [
+        "src/societal_reasoning/context.py"
+      ],
+      "limitations": "Only named bounded behavior is implemented; full requirement remains open.",
+      "requirement": "Test context-sensitive and context-invariant minimal pairs.",
+      "status": "partial",
+      "test_reference": [
+        "tests/test_context.py"
+      ]
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L06",
+      "implementation": [],
+      "limitations": "Independent blind human review not conducted.",
+      "requirement": "Blindly evaluate outputs with independent and culturally varied reviewers.",
+      "status": "blocked_external_or_independent_evidence",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L07",
+      "implementation": [],
+      "limitations": "Matched AI model comparison not conducted.",
+      "requirement": "Compare assisted versus unassisted models under matched conditions.",
+      "status": "blocked_external_or_independent_evidence",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L08",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Track error rates for attribution, intent, clarification and social mode.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L09",
+      "implementation": [],
+      "limitations": "No acceptance evidence exists for full requirement.",
+      "requirement": "Require zero known blocking failures before any completion declaration.",
+      "status": "not_implemented_or_not_verified",
+      "test_reference": []
+    },
+    {
+      "acceptance_proof": "not_established",
+      "id": "L10",
+      "implementation": [],
+      "limitations": "Redistribution license and publication require owner decisions.",
+      "requirement": "Package reproducible Version 1 source with verified manifests, rights and owner release authorization.",
+      "status": "blocked_external_or_independent_evidence",
+      "test_reference": []
+    }
+  ],
+  "type": "development_traceability_not_conformance_certificate",
+  "version": "1"
+}

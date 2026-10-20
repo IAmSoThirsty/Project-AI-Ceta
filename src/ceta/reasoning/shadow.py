@@ -12,7 +12,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
-from typing import Any
 
 
 class ShadowLevel(str, Enum):
@@ -61,9 +60,14 @@ class ShadowModeController:
     ADVISORY_ATTACHED require explicit owner authorization.
     """
 
-    def __init__(self, initial: ShadowLevel = ShadowLevel.SHADOW_SILENT):
+    def __init__(self, initial: ShadowLevel = ShadowLevel.SHADOW_SILENT, *,
+                 authorized: bool = False):
         if not isinstance(initial, ShadowLevel):
             raise TypeError(f"Expected ShadowLevel, got {type(initial).__name__}")
+        if type(authorized) is not bool:
+            raise TypeError("authorized must be a boolean host attestation")
+        if initial is ShadowLevel.ADVISORY_ATTACHED and not authorized:
+            raise PermissionError("Initial advisory attachment requires host authorization")
         self._level = initial
         self._history: list[ModeTransition] = []
 
@@ -98,12 +102,16 @@ class ShadowModeController:
         """
         if not isinstance(target, ShadowLevel):
             raise TypeError(f"Expected ShadowLevel, got {type(target).__name__}")
+        if type(authorized) is not bool:
+            raise TypeError("authorized must be a boolean host attestation")
+        if type(reason) is not str or "\0" in reason or len(reason.encode("utf-8")) > 1024:
+            raise ValueError("reason must be a string of at most 1024 UTF-8 bytes without NUL")
         if target == self._level:
             raise ValueError(f"Already at {self._level.value}")
 
         pair = (self._level, target)
         if pair in _SAFE_TRANSITIONS:
-            record = ModeTransition(self._level, target, True, reason or "safe_transition")
+            record = ModeTransition(self._level, target, authorized, reason or "safe_transition")
         elif pair in _AUTHORIZED_TRANSITIONS:
             if not authorized:
                 raise PermissionError(

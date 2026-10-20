@@ -1,0 +1,72 @@
+{
+  "supervisor": [
+    "STARTING",
+    "READY",
+    "ACTIVE",
+    "PAUSED",
+    "DEGRADED",
+    "RECOVERING",
+    "STOPPING",
+    "STOPPED"
+  ],
+  "task": [
+    "CREATED",
+    "ACTIVE",
+    "WAITING_FOR_CLARIFICATION",
+    "WAITING_FOR_AUTHORITY",
+    "RUNNING",
+    "PAUSED",
+    "BLOCKED",
+    "COMPLETED",
+    "CANCELLED",
+    "INDETERMINATE"
+  ],
+  "effect": [
+    "PROPOSED",
+    "VALIDATED",
+    "PREPARED",
+    "INTENT_COMMITTED",
+    "ADMISSION_REDEEMED",
+    "DISPATCHED",
+    "RUNNING",
+    "PROCESS_EXITED",
+    "OBSERVED",
+    "VERIFIED",
+    "FAILED",
+    "CANCELLED",
+    "INDETERMINATE"
+  ],
+  "vault": [
+    "UNINITIALIZED",
+    "PROVISIONING",
+    "SEALED",
+    "VERIFYING",
+    "AUTHORIZED_RELEASE",
+    "ZEROIZING",
+    "DEGRADED",
+    "DRIFT_SUSPECTED",
+    "TAMPERED",
+    "RECOVERY",
+    "MIGRATION",
+    "REVOKED",
+    "RETIRED"
+  ],
+  "evidence_results": [
+    "NOT_RUN",
+    "PASS",
+    "FAIL",
+    "SKIP",
+    "BLOCKED",
+    "TIMED_OUT"
+  ],
+  "implementation_status": [
+    "NOT_STARTED",
+    "IN_PROGRESS",
+    "IMPLEMENTED_SOURCE",
+    "CONNECTED",
+    "SOURCE_TESTED",
+    "INSTALLED_QUALIFIED",
+    "ACTIVATED"
+  ],
+  "rule": "Only the responsible kernel transition predicates advance authoritative runtime state. This catalog is a specification, not an implemented transition engine."
+}

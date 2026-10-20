@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/societal-reasoning/deliberation.v1.json",
+  "title": "Societal Reasoning Core Version 1: sourced alternative reading case",
+  "description": "Candidate readings and rationales are submitted claims. Optional digest-bound premises check only exact quoted text or restricted literal propositions. They do NOT establish factual truth or social inference.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario",
+    "hypotheses"
+  ],
+  "properties": {
+    "scenario": {
+      "$ref": "scenario.schema.json"
+    },
+    "context_facts": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "category",
+          "value",
+          "origin"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "category": {
+            "enum": [
+              "audience",
+              "setting",
+              "relationship",
+              "history",
+              "channel",
+              "power",
+              "culture",
+              "stakes",
+              "chronology",
+              "other"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "origin": {
+            "enum": [
+              "user_report",
+              "quoted_material",
+              "external_record",
+              "direct_observation",
+              "model_hypothesis"
+            ]
+          },
+          "source_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "reading",
+          "proposed_by",
+          "warrants"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "reading": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "proposed_by": {
+            "enum": [
+              "caller",
+              "model_proposal"
+            ]
+          },
+          "concept_ids": {
+            "type": "array",
+            "maxItems": 16,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "unknowns": {
+            "type": "array",
+            "maxItems": 16,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            }
+          },
+          "warrants": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 32,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "evidence_id",
+                "role",
+                "rationale"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "role": {
+                  "enum": [
+                    "support",
+                    "challenge"
+                  ]
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2048
+                },
+                "conditions": {
+                  "type": "array",
+                  "maxItems": 8,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "category",
+                      "value"
+                    ],
+                    "properties": {
+                      "category": {
+                        "enum": [
+                          "audience",
+                          "setting",
+                          "relationship",
+                          "history",
+                          "channel",
+                          "power",
+                          "culture",
+                          "stakes",
+                          "chronology",
+                          "other"
+                        ]
+                      },
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1024
+                      }
+                    }
+                  }
+                },
+                "premise": {
+                  "$ref": "premise.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,9 +13,17 @@ not be modified. Integration adapters in this package map their APIs onto
 CETA's existing contract interfaces without creating a second sovereign
 component, execution controller, or authoritative state.
 """
+from .adapter import ProposalProvider, SocietalReasoningAdapter, SyntheticProposer
+from .assessment import AssessmentOutcome, ReasoningAssessment
+from .shadow import ModeTransition, ShadowLevel, ShadowModeController
+
 __all__ = [
     "SocietalReasoningAdapter",
-    "TruthAccountabilityAdapter",
+    "ProposalProvider",
+    "SyntheticProposer",
+    "AssessmentOutcome",
     "ReasoningAssessment",
+    "ShadowLevel",
+    "ModeTransition",
     "ShadowModeController",
 ]

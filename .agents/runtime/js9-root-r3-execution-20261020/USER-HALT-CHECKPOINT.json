@@ -1,0 +1,88 @@
+{
+  "disposition": "FAILED_VERIFICATION_HALTED_AT_USER_REQUEST",
+  "full_result": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/RESULT.json",
+    "sha256": "cecf080e81e5d1ace86738f1f0ac05cdccbc704e13e625ffc5471ca2c44f711f"
+  },
+  "launch_result": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full-LAUNCH-RESULT.json",
+    "sha256": "bd8f78e8e9a4880fb057e7acdacae2e8cdbedd6fe154b7f7368bca2b0e063405"
+  },
+  "terminal": {
+    "repository_relative_path": ".agents/runtime/js9-root-r3-execution-20261020/candidate-full-TERMINAL.json",
+    "sha256": "d5575fe6e43b76a4e8e2f8abe76a6338cda8d1c2c86d34d11ed00d524f0cadd1"
+  },
+  "case_events": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/CASE-EVENTS.jsonl",
+    "sha256": "9315940f1d6f1cc60712e0437aef2c83b44abc26b46f0ddfce8fd6845461bf4c"
+  },
+  "recorded_case_event_counts": {
+    "PREPARE": 2622,
+    "START": 2622,
+    "STOP": 2622,
+    "FAILURE": 1
+  },
+  "event_inventory_matches_expected": true,
+  "final_report_tests_run": 0,
+  "final_report_suite_aborted": true,
+  "reporting_error": {
+    "type": "KeyError",
+    "message": "'native_after_fixture_cleanup'",
+    "traceback": "Traceback (most recent call last):\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 213, in main\n    report=execute(args,release,v,gate,progress)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\run_full.py\", line 166, in execute\n    physical_proof=physical.finish();native_proof=native.finish()\n                                                  ^^^^^^^^^^^^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 358, in finish\n    native_capacity_custody_retired=bool(capacity.NATIVE_CUSTODY_RECEIPTS) and all(\n                                                                               ^^^^\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\js9-runtime-20261020\\successor-r3\\fixture_runtime.py\", line 359, in <genexpr>\n    row['native_after_fixture_cleanup']['state']==4 and not row['registered_after_fixture_cleanup']\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'native_after_fixture_cleanup'\n",
+    "secondary_errors": []
+  },
+  "recorded_case_failures": [
+    {
+      "event": "FAILURE",
+      "test_id": "test_native_effect_observer.NativeEffectObserverTests.test_actual_overlong_native_pipe_output_is_rejected_and_retired",
+      "at": "2026-10-20T11:09:15.465749+00:00",
+      "elapsed_seconds": 393.86360690000583,
+      "traceback": "ceta.contracts.wire.ContractError: OBSERVER_PROCESS_TIMEOUT at $\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\js9-runtime-r5-20261020\\tests\\contract\\test_native_effect_observer.py\", line 422, in test_actual_overlong_native_pipe_output_is_rejected_and_retired\n    with self.assertRaisesRegex(ContractError,'OBSERVER_OUTPUT_OVERLONG'):self.call(observer,self.request(code))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"OBSERVER_OUTPUT_OVERLONG\" does not match \"OBSERVER_PROCESS_TIMEOUT at $\"\n"
+    }
+  ],
+  "outer_owned_runner_and_handles_retired": true,
+  "inner_native_cleanup_summary": "UNAVAILABLE_REPORT_CONSTRUCTION_FAILED",
+  "inner_native_cleanup_accepted": false,
+  "source_before_verification": {
+    "checked_at": "2026-10-20T11:37:51.846918+00:00",
+    "verified": true,
+    "scope": "Exact R3 Source-before targets, candidate541, declared environment, Git and pinned fixture dependencies"
+  },
+  "Source_publication": false,
+  "Source_accepted": false,
+  "product_acceptance": false,
+  "authorization_usage": {
+    "candidate_full_used": 1,
+    "candidate_full_remaining": 0,
+    "destination_full_used": 0,
+    "destination_full_remaining": 1,
+    "native_case_proof": {
+      "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/candidate-full/NATIVE-CASE-PROOF.json",
+      "sha256": "6edebcb7a21e7bc87113290870055400b548b4b25423165e747089e34e614dbb"
+    }
+  },
+  "additional_test_or_diagnostic_started": false,
+  "at": "2026-10-20T11:38:14.050365+00:00",
+  "state": "HALTED_BY_EXPLICIT_USER_REQUEST",
+  "user_resume_required": true,
+  "active_root_claims": [],
+  "actual_coordinator_states": {
+    "candidate_cache": "FAILED",
+    "candidate_fixtures": "FAILED",
+    "destination_evidence": "PENDING",
+    "destination_fixtures": "PENDING",
+    "discover": "SUCCEEDED",
+    "implement": "FAILED",
+    "integrate": "PENDING",
+    "plan": "SUCCEEDED",
+    "review": "BLOCKED",
+    "validate": "PENDING"
+  },
+  "canonical_project": "T:/00-Active/Project-AI-CETA",
+  "next_action": "After explicit user resume: repair the final evidence aggregation against actual receipt shapes; review the frozen observer diagnostic before one ordinary diagnostic; freeze complete negative-image input lineage before any successor full run. A new candidate no-profile execution needs a fresh explicit grant. Preserve the unused destination grant and accepted JS8 baseline.",
+  "preserved_private_lanes": {
+    "manual_runtime": "Implemented private host/ingress cut; positive admission remains blocked by inherited require_admission denial. Review exact cut and implement genuine canonical admission connection before claiming effect execution.",
+    "loader_capture": "Private debug tooling with deterministic tests; no live debugger/profile execution authorized or performed.",
+    "observer_diagnostic": "Frozen dormant one-case diagnostic; not executed."
+  }
+}

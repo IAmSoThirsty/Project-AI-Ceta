@@ -1,0 +1,114 @@
+{
+  "fingerprint": "5770b0555529c24d250e4963168821466cdd074f90a05d025ada34c2731c434a",
+  "graph": {
+    "edges": [
+      {
+        "from": "discover",
+        "id": "discover_entrypoint_plan",
+        "to": "plan",
+        "type": "depends_on"
+      },
+      {
+        "from": "evidence",
+        "id": "entrypoint_evidence_review",
+        "to": "review",
+        "type": "requires_review"
+      },
+      {
+        "from": "implement",
+        "id": "entrypoint_implement_review",
+        "to": "review",
+        "type": "requires_review"
+      },
+      {
+        "from": "review",
+        "id": "entrypoint_review_validate",
+        "to": "validate",
+        "type": "authorizes"
+      },
+      {
+        "from": "validate",
+        "id": "entrypoint_validate_integrate",
+        "to": "integrate",
+        "type": "gates"
+      },
+      {
+        "from": "plan",
+        "id": "plan_entrypoint_evidence",
+        "to": "evidence",
+        "type": "delegates_to"
+      },
+      {
+        "from": "plan",
+        "id": "plan_entrypoint_implement",
+        "to": "implement",
+        "type": "delegates_to"
+      }
+    ],
+    "id": "ceta_private_manual_real_effect_entrypoint",
+    "nodes": {
+      "discover": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "explorer"
+      },
+      "evidence": {
+        "access": "write_scoped",
+        "kind": "agent",
+        "role": "worker",
+        "write_scope": [
+          ".agents/runtime/real-effect-entrypoint-20261020/**"
+        ]
+      },
+      "implement": {
+        "access": "write_scoped",
+        "kind": "agent",
+        "role": "worker",
+        "write_scope": [
+          ".agents/real-effect-entrypoint-20261020/**"
+        ]
+      },
+      "integrate": {
+        "access": "write_scoped",
+        "kind": "integration",
+        "role": "integrator",
+        "write_scope": [
+          ".agents/real-effect-entrypoint-20261020/**"
+        ]
+      },
+      "plan": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "architect"
+      },
+      "review": {
+        "access": "read_only",
+        "kind": "agent",
+        "role": "reviewer"
+      },
+      "validate": {
+        "access": "read_only",
+        "commands": [
+          "git -C \"{workspace}\" diff --check"
+        ],
+        "kind": "gate"
+      }
+    },
+    "policy": {
+      "fail_closed": true,
+      "max_parallel": 4,
+      "prohibit_scope_overlap": true,
+      "prohibit_self_review": true,
+      "require_receipts": true
+    }
+  },
+  "root": "T:\\00-Active\\Project-AI-CETA",
+  "scope": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\real-effect-entrypoint-20261020",
+  "sources": [
+    {
+      "digest": "b79dc8fa478e9892d75b5d205d832232d6c01410e852d2974c2e50323207cbd7",
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\real-effect-entrypoint-20261020\\AGENTS.md"
+    }
+  ],
+  "version": 1
+}

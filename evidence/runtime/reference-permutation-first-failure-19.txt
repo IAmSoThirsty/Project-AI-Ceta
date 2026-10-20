@@ -1,0 +1,21 @@
+COMMAND ["T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe", "-B", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests/contract", "-p", "test_source_references.py", "-v"]
+test_all_twenty_one_actual_guides_resolve_without_rewriting_originals (test_source_references.SourceReferenceTests.test_all_twenty_one_actual_guides_resolve_without_rewriting_originals) ... ok
+test_changed_guide_is_rejected (test_source_references.SourceReferenceTests.test_changed_guide_is_rejected) ... ok
+test_changed_or_invented_schema_is_rejected (test_source_references.SourceReferenceTests.test_changed_or_invented_schema_is_rejected) ... ok
+test_duplicate_missing_and_wrong_witness_maps_are_rejected (test_source_references.SourceReferenceTests.test_duplicate_missing_and_wrong_witness_maps_are_rejected) ... ok
+test_unmapped_or_traversal_reference_is_rejected (test_source_references.SourceReferenceTests.test_unmapped_or_traversal_reference_is_rejected) ... ok
+test_valid_witness_numbers_cannot_be_permuted_between_guide_identities (test_source_references.SourceReferenceTests.test_valid_witness_numbers_cannot_be_permuted_between_guide_identities) ... FAIL
+
+======================================================================
+FAIL: test_valid_witness_numbers_cannot_be_permuted_between_guide_identities (test_source_references.SourceReferenceTests.test_valid_witness_numbers_cannot_be_permuted_between_guide_identities)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\CETA-desktop-delivery-20260906\rebuild_ios\tests\contract\test_source_references.py", line 74, in test_valid_witness_numbers_cannot_be_permuted_between_guide_identities
+    with self.assertRaisesRegex(ContractError, "REFERENCE_MAP_COMMITMENT_MISMATCH"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.010s
+
+FAILED (failures=1)

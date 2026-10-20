@@ -108,9 +108,14 @@
         "B007"
       ],
       "specification_path": "docs/specification/01_source_and_standards_discipline.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ],
+      "evidence_limits": "Source summary/read-snapshot integrity is partial specification-tool evidence only; original source reconciliation, semantic adequacy, unified executable contract and runtime acceptance remain open."
     },
     {
       "id": "REQ-01-02",
@@ -205,9 +210,13 @@
         "B008"
       ],
       "specification_path": "docs/specification/02_locate_and_preserve_the_real_baseline.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-baseline-20261006-01.json",
+        "evidence/runtime/reference-baseline-20261006-01.json",
+        "handoff/source_authority_register.json"
+      ]
     },
     {
       "id": "REQ-02-02",
@@ -226,9 +235,13 @@
         "B008"
       ],
       "specification_path": "docs/specification/02_locate_and_preserve_the_real_baseline.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/OWNER_SCOPE_OVERRIDE.md",
+        "evidence/runtime/contract-transfer-20261006-01.json",
+        "decisions/ADR-017.md"
+      ]
     },
     {
       "id": "REQ-02-03",
@@ -247,9 +260,13 @@
         "B008"
       ],
       "specification_path": "docs/specification/02_locate_and_preserve_the_real_baseline.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-baseline-20261006-01.json",
+        "evidence/runtime/reference-baseline-20261006-01.json",
+        "evidence/runtime/preservation-tests-run-02.txt"
+      ]
     },
     {
       "id": "REQ-02-04",
@@ -268,9 +285,11 @@
         "B008"
       ],
       "specification_path": "docs/specification/02_locate_and_preserve_the_real_baseline.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/live-profile-metadata-20261006-01.json"
+      ]
     },
     {
       "id": "REQ-02-05",
@@ -289,9 +308,12 @@
         "B008"
       ],
       "specification_path": "docs/specification/02_locate_and_preserve_the_real_baseline.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/executor_ledger.json",
+        "evidence/runtime/preservation-tests-run-02.txt"
+      ]
     },
     {
       "id": "REQ-03-01",
@@ -384,9 +406,17 @@
         "B128"
       ],
       "specification_path": "docs/specification/04_one_executable_system_specification.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_06.md",
+        "evidence/runtime/allocation-source-bound-03.json",
+        "evidence/runtime/allocation-integrity-final-02.json",
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "decisions/ADR-021.md",
+        "handoff/source_reconciliation_20261006_08.md"
+      ],
+      "evidence_limits": " Declared allocation/reference/cycle tooling is partial specification evidence; all actual runtime/interfaces/full source/acceptance obligations remain open. Bounded original-record framing is pure source evidence only; all remaining clauses, authenticated transport, current authority and runtime qualification remain open."
     },
     {
       "id": "REQ-04-02",
@@ -403,9 +433,14 @@
         "B128"
       ],
       "specification_path": "docs/specification/04_one_executable_system_specification.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ],
+      "evidence_limits": "Source summary/read-snapshot integrity is partial specification-tool evidence only; original source reconciliation, semantic adequacy, unified executable contract and runtime acceptance remain open."
     },
     {
       "id": "REQ-04-03",
@@ -422,9 +457,13 @@
         "B128"
       ],
       "specification_path": "docs/specification/04_one_executable_system_specification.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-10.json",
+        "decisions/ADR-020.md"
+      ],
+      "evidence_limits": "Partial pure contract predicates, including typed error semantics; actual integrated cycle/authority/effect/store/recovery remain NOT_RUN."
     },
     {
       "id": "REQ-04-04",
@@ -555,9 +594,25 @@
         "B059"
       ],
       "specification_path": "docs/specification/06_identity_and_canonical_objects.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-regressions-repair-run.txt",
+        "evidence/runtime/all-record-shapes-run-01.txt",
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "decisions/ADR-018.md",
+        "evidence/runtime/desktop-contract-source-bound-06.json",
+        "evidence/runtime/desktop-contract-source-bound-10.json",
+        "decisions/ADR-020.md",
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "decisions/ADR-021.md",
+        "handoff/source_reconciliation_20261006_08.md",
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md"
+      ],
+      "evidence_limits": "Partial pure contract predicates, including typed error semantics; actual integrated cycle/authority/effect/store/recovery remain NOT_RUN. Bounded original-record framing is pure source evidence only; all remaining clauses, authenticated transport, current authority and runtime qualification remain open. Pure memory metadata binding is partial contract evidence only; owning memory/privacy domain implementation is not advanced by this leaf, and authentic authority/current store/copy deletion/restoration/full-runtime obligations remain open."
     },
     {
       "id": "REQ-06-03",
@@ -574,9 +629,23 @@
         "B059"
       ],
       "specification_path": "docs/specification/06_identity_and_canonical_objects.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-regressions-repair-run.txt",
+        "evidence/runtime/canonical-comparison-run-02.json",
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "decisions/ADR-018.md",
+        "evidence/runtime/desktop-contract-source-bound-06.json",
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "decisions/ADR-021.md",
+        "handoff/source_reconciliation_20261006_08.md",
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md"
+      ],
+      "evidence_limits": "Pure event/time predicates only; store, signature verification, authenticated time provider, authority, broker and full scenarios not qualified. Bounded original-record framing is pure source evidence only; all remaining clauses, authenticated transport, current authority and runtime qualification remain open. Pure memory metadata binding is partial contract evidence only; owning memory/privacy domain implementation is not advanced by this leaf, and authentic authority/current store/copy deletion/restoration/full-runtime obligations remain open."
     },
     {
       "id": "REQ-06-04",
@@ -593,9 +662,12 @@
         "B059"
       ],
       "specification_path": "docs/specification/06_identity_and_canonical_objects.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-tests-run-02.txt",
+        "handoff/source_reconciliation_20261006.md"
+      ]
     },
     {
       "id": "REQ-07-01",
@@ -708,9 +780,17 @@
         "B016"
       ],
       "specification_path": "docs/specification/07_canonical_history_and_transactions.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "decisions/ADR-018.md",
+        "evidence/runtime/desktop-contract-source-bound-06.json",
+        "evidence/runtime/desktop-contract-source-bound-07.json",
+        "decisions/ADR-019.md"
+      ],
+      "evidence_limits": "Pure relevant-state predicates only; full admission/broker/transaction/consume/race and actual resource evidence remain NOT_RUN."
     },
     {
       "id": "REQ-08-01",
@@ -1131,8 +1211,13 @@
       ],
       "specification_path": "docs/specification/12_memory_the_fates_and_the_graph.md",
       "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "verification_status": "PARTIAL_CONTRACT_SOURCE_EVIDENCE_RUNTIME_NOT_RUN",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md"
+      ],
+      "evidence_limits": "Pure memory metadata binding is partial contract evidence only; owning memory/privacy domain implementation is not advanced by this leaf, and authentic authority/current store/copy deletion/restoration/full-runtime obligations remain open."
     },
     {
       "id": "REQ-12-03",
@@ -1177,8 +1262,13 @@
       ],
       "specification_path": "docs/specification/12_memory_the_fates_and_the_graph.md",
       "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "verification_status": "PARTIAL_CONTRACT_SOURCE_EVIDENCE_RUNTIME_NOT_RUN",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md"
+      ],
+      "evidence_limits": "Pure memory metadata binding is partial contract evidence only; owning memory/privacy domain implementation is not advanced by this leaf, and authentic authority/current store/copy deletion/restoration/full-runtime obligations remain open."
     },
     {
       "id": "REQ-12-05",
@@ -1707,9 +1797,13 @@
         "B114"
       ],
       "specification_path": "docs/specification/19_capabilities_and_authorization_linearization.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-07.json",
+        "decisions/ADR-019.md"
+      ],
+      "evidence_limits": "Pure relevant-state predicates only; full admission/broker/transaction/consume/race and actual resource evidence remain NOT_RUN."
     },
     {
       "id": "REQ-19-02",
@@ -1732,9 +1826,13 @@
         "B114"
       ],
       "specification_path": "docs/specification/19_capabilities_and_authorization_linearization.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-07.json",
+        "decisions/ADR-019.md"
+      ],
+      "evidence_limits": "Pure relevant-state predicates only; full admission/broker/transaction/consume/race and actual resource evidence remain NOT_RUN."
     },
     {
       "id": "REQ-19-03",
@@ -1757,9 +1855,13 @@
         "B114"
       ],
       "specification_path": "docs/specification/19_capabilities_and_authorization_linearization.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-07.json",
+        "decisions/ADR-019.md"
+      ],
+      "evidence_limits": "Pure relevant-state predicates only; full admission/broker/transaction/consume/race and actual resource evidence remain NOT_RUN."
     },
     {
       "id": "REQ-19-04",
@@ -1782,9 +1884,15 @@
         "B114"
       ],
       "specification_path": "docs/specification/19_capabilities_and_authorization_linearization.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "decisions/ADR-018.md",
+        "evidence/runtime/desktop-contract-source-bound-06.json"
+      ],
+      "evidence_limits": "Pure event/time predicates only; store, signature verification, authenticated time provider, authority, broker and full scenarios not qualified."
     },
     {
       "id": "REQ-19-05",
@@ -1831,9 +1939,13 @@
         "B104"
       ],
       "specification_path": "docs/specification/20_effects_verification_and_settlement.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-10.json",
+        "decisions/ADR-020.md"
+      ],
+      "evidence_limits": "Partial pure contract predicates, including typed error semantics; actual integrated cycle/authority/effect/store/recovery remain NOT_RUN."
     },
     {
       "id": "REQ-20-02",
@@ -1903,9 +2015,13 @@
         "B104"
       ],
       "specification_path": "docs/specification/20_effects_verification_and_settlement.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-10.json",
+        "decisions/ADR-020.md"
+      ],
+      "evidence_limits": "Partial pure contract predicates, including typed error semantics; actual integrated cycle/authority/effect/store/recovery remain NOT_RUN."
     },
     {
       "id": "REQ-21-01",
@@ -1975,9 +2091,14 @@
         "B072"
       ],
       "specification_path": "docs/specification/21_windows_process_and_resource_enforcement.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "decisions/ADR-021.md",
+        "handoff/source_reconciliation_20261006_08.md"
+      ],
+      "evidence_limits": " Bounded original-record framing is pure source evidence only; all remaining clauses, authenticated transport, current authority and runtime qualification remain open."
     },
     {
       "id": "REQ-21-04",
@@ -2690,8 +2811,13 @@
       ],
       "specification_path": "docs/specification/29_privacy_retention_export_and_forgetting.md",
       "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "verification_status": "PARTIAL_CONTRACT_SOURCE_EVIDENCE_RUNTIME_NOT_RUN",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md"
+      ],
+      "evidence_limits": "Pure memory metadata binding is partial contract evidence only; owning memory/privacy domain implementation is not advanced by this leaf, and authentic authority/current store/copy deletion/restoration/full-runtime obligations remain open."
     },
     {
       "id": "REQ-29-03",
@@ -3239,9 +3365,23 @@
         "B128"
       ],
       "specification_path": "docs/specification/36_verification_architecture.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_06.md",
+        "evidence/runtime/allocation-source-bound-03.json",
+        "evidence/runtime/allocation-integrity-final-02.json",
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "decisions/ADR-021.md",
+        "handoff/source_reconciliation_20261006_08.md",
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md",
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ],
+      "evidence_limits": "Declared allocation/reference/cycle tooling is partial specification evidence; all actual runtime/interfaces/full source/acceptance obligations remain open. Bounded original-record framing is pure source evidence only; all remaining clauses, authenticated transport, current authority and runtime qualification remain open. Pure memory metadata binding is partial contract evidence only; owning memory/privacy domain implementation is not advanced by this leaf, and authentic authority/current store/copy deletion/restoration/full-runtime obligations remain open. Source summary/read-snapshot integrity is partial specification-tool evidence only; original source reconciliation, semantic adequacy, unified executable contract and runtime acceptance remain open."
     },
     {
       "id": "REQ-36-02",
@@ -3259,9 +3399,14 @@
         "B128"
       ],
       "specification_path": "docs/specification/36_verification_architecture.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_06.md",
+        "evidence/runtime/allocation-source-bound-03.json",
+        "evidence/runtime/allocation-integrity-final-02.json"
+      ],
+      "evidence_limits": " Declared allocation/reference/cycle tooling is partial specification evidence; all actual runtime/interfaces/full source/acceptance obligations remain open."
     },
     {
       "id": "REQ-36-03",
@@ -3508,9 +3653,11 @@
         "B054"
       ],
       "specification_path": "docs/specification/39_implementation_and_coordination.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/executor_ledger.json"
+      ]
     },
     {
       "id": "REQ-39-02",
@@ -3571,9 +3718,16 @@
         "B054"
       ],
       "specification_path": "docs/specification/39_implementation_and_coordination.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "build/progress.json",
+        "handoff/continuity.json",
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ],
+      "evidence_limits": "Source summary/read-snapshot integrity is partial specification-tool evidence only; original source reconciliation, semantic adequacy, unified executable contract and runtime acceptance remain open."
     },
     {
       "id": "REQ-40-01",
@@ -3591,9 +3745,23 @@
         "B126"
       ],
       "specification_path": "docs/specification/40_required_artifacts_and_commands.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_06.md",
+        "evidence/runtime/allocation-source-bound-03.json",
+        "evidence/runtime/allocation-integrity-final-02.json",
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "decisions/ADR-021.md",
+        "handoff/source_reconciliation_20261006_08.md",
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md",
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ],
+      "evidence_limits": "Declared allocation/reference/cycle tooling is partial specification evidence; all actual runtime/interfaces/full source/acceptance obligations remain open. Bounded original-record framing is pure source evidence only; all remaining clauses, authenticated transport, current authority and runtime qualification remain open. Pure memory metadata binding is partial contract evidence only; owning memory/privacy domain implementation is not advanced by this leaf, and authentic authority/current store/copy deletion/restoration/full-runtime obligations remain open. Source summary/read-snapshot integrity is partial specification-tool evidence only; original source reconciliation, semantic adequacy, unified executable contract and runtime acceptance remain open."
     },
     {
       "id": "REQ-40-02",
@@ -3650,9 +3818,14 @@
         "B128"
       ],
       "specification_path": "docs/specification/41_completion_gates.md",
-      "implementation_status": "NOT_STARTED",
-      "verification_status": "NOT_RUN",
-      "evidence_refs": []
+      "implementation_status": "IN_PROGRESS",
+      "verification_status": "PARTIAL_SOURCE_EVIDENCE",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_06.md",
+        "evidence/runtime/allocation-source-bound-03.json",
+        "evidence/runtime/allocation-integrity-final-02.json"
+      ],
+      "evidence_limits": " Declared allocation/reference/cycle tooling is partial specification evidence; all actual runtime/interfaces/full source/acceptance obligations remain open."
     },
     {
       "id": "REQ-41-02",

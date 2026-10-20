@@ -1,0 +1,9 @@
+# Semantic validation and transaction order
+
+The strict schemas describe wire shape. The runtime must additionally verify actual source authenticity, role, scope, relevant revision, current policy, trusted time, resource budget, reviews, consent, operation registration and expected postconditions. Parsing a record labelled ALLOW or QUALIFIED cannot give it authority. transition_rules.json states the prewritten principal transitions and failure consequences; source-specific branches and all race orderings require implementation tests.
+
+For an effect, authenticate the request and determine its current task/objective. Resolve the exact target and candidate against the read set, stage where required, and bind reviews and owner approval. Prepare the permit and commit budget reservation plus durable intent without holding the database transaction over a model call or human wait. The broker rechecks current authority/fence and protected resource identity at the defined irreversible boundary, consumes the permit once, then performs the exact operation. Independent observers supply separate evidence for kernel settlement.
+
+After a crash, replay canonical state as a read-only reconstruction, identify potentially executed operations, and reconcile actual resources. Successful current-state observation does not necessarily establish which historical actor caused it. New compensation is admitted against current bytes and consent. Preserve later user changes and original uncertainty.
+
+The serializer must define an unambiguous canonical profile, domain-separate record/proof types, reject duplicate keys and non-finite values before schema validation, and preserve original signed bytes. Schemas, event heads and signatures must avoid self-referential hash preimages. Permission validity must use relevant authority/resource generations rather than invalidating every operation for unrelated log activity.

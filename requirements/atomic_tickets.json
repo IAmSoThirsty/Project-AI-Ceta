@@ -1,0 +1,1100 @@
+{
+  "schema_version": "1",
+  "identifier_namespace": "CETA_IMPLEMENTATION_TICKETS_NOT_ORIGINAL_CODEX_CLAUSES",
+  "scope": "CURRENT_EXECUTED_INCREMENT_ONLY_REMAINING_PARENT_OBLIGATIONS_PRESERVED",
+  "tickets": [
+    {
+      "id": "CETA-IMPL-001",
+      "parent_requirement_ids": [
+        "REQ-02-01",
+        "REQ-02-03"
+      ],
+      "work_package": "WP-00",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Checkpoint both named worktrees including dirty tracked/untracked bytes, staged and working diffs, and Git references; restore source bytes to new fixture directories and detect source changes.",
+      "implementation": "tools/preserve_ceta_baseline.py",
+      "tests": [
+        "tests/contract/test_preservation.py"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/desktop-baseline-20261006-01.json",
+        "evidence/runtime/reference-baseline-20261006-01.json",
+        "evidence/runtime/preservation-tests-run-02.txt"
+      ],
+      "status": "SOURCE_TESTED_WITH_RESTORATION",
+      "limits": "Ignored assets and reflog-only objects remain in place; normal profile contents not read/copied; no production restore performed."
+    },
+    {
+      "id": "CETA-IMPL-002",
+      "parent_requirement_ids": [
+        "REQ-01-03",
+        "REQ-06-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Reject invented or rebound source identities and wrong maturity namespaces; preserve original source status separately from applicability and conformance.",
+      "implementation": "T:/00-Active/CETA-desktop-delivery-20260906/rebuild_ios/src/ceta/contracts/provenance.py; tools/verify_source_coverage.py",
+      "tests": [
+        "T:/00-Active/CETA-desktop-delivery-20260906/rebuild_ios/tests/contract/test_provenance.py",
+        "tests/contract/test_source_coverage.py"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-tests-final-01.txt",
+        "evidence/runtime/package-source-tests-run-05.txt",
+        "evidence/runtime/source-integrity-run-03.json"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "Injected catalogs require authenticated composition; no source adoption or runtime status promotion implemented."
+    },
+    {
+      "id": "CETA-IMPL-003",
+      "parent_requirement_ids": [
+        "REQ-06-02",
+        "REQ-06-03"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Decode all twenty supplied record shapes, preserve original bytes, reject malformed and ambiguous input, and produce deterministic canonical bytes with a frozen Unicode version.",
+      "implementation": "T:/00-Active/CETA-desktop-delivery-20260906/rebuild_ios/src/ceta/contracts/wire.py",
+      "tests": [
+        "T:/00-Active/CETA-desktop-delivery-20260906/rebuild_ios/tests/contract/test_wire.py",
+        "T:/00-Active/CETA-desktop-delivery-20260906/rebuild_ios/tests/contract/test_all_records.py"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-regressions-first-run.txt",
+        "evidence/runtime/desktop-contract-regressions-repair-run.txt",
+        "evidence/runtime/desktop-contract-tests-final-01.txt"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "Shape validity is not authentication, freshness, authority, signatures, event-head verification or effect admission."
+    },
+    {
+      "id": "CETA-IMPL-004",
+      "parent_requirement_ids": [
+        "REQ-06-03"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Compare accepted/rejected wires and exact canonical bytes with a separately implemented native serializer; retain the integer-negative-zero failure and repaired regression.",
+      "implementation": "T:/00-Active/CETA-desktop-delivery-20260906/rebuild_ios/native/canonical_reference; rebuild_ios/tools/compare_canonical_implementations.py",
+      "tests": [
+        "Native four-test suite and 27511-vector Python/Rust comparison"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/canonical-comparison-run-01.json",
+        "evidence/runtime/canonical-comparison-run-02.json",
+        "evidence/runtime/native-toolchain-locked-build-01.txt"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "Separate implementation, same executor; no independent reviewer claim, broker qualification or complete Unicode normalization standard conformance claim."
+    },
+    {
+      "id": "CETA-IMPL-005",
+      "parent_requirement_ids": [
+        "REQ-01-01",
+        "REQ-01-02",
+        "REQ-01-03",
+        "REQ-04-02"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Read and reconcile all 406 lifecycle sections against the whole rebuild, with original prerequisites, meaningful applicability, traceability, open conflicts and evidence.",
+      "implementation": "standards/lifecycle_coverage.json",
+      "tests": [
+        "tools/verify_source_coverage.py"
+      ],
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006.md",
+        "evidence/runtime/source-integrity-run-03.json",
+        "handoff/source_reconciliation_20261006_02.md",
+        "handoff/source_reconciliation_20261006_03.md",
+        "handoff/source_reconciliation_20261006_04.md",
+        "handoff/source_reconciliation_20261006_05.md",
+        "handoff/domain_feasibility_and_risk_20261006.json",
+        "handoff/source_reconciliation_20261006_06.md",
+        "handoff/source_reconciliation_20261006_07.md",
+        "handoff/architecture_contract_reconciliation_20261006_07.json",
+        "handoff/source_reconciliation_20261006_08.md",
+        "handoff/platform_transport_reconciliation_20261006_08.json",
+        "handoff/source_reconciliation_20261007_09.md",
+        "handoff/privacy_assurance_reconciliation_20261007_09.json",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json",
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/source_reconciliation_20261007_11.md",
+        "handoff/volume_v_reconciliation_20261007_11.json",
+        "handoff/source_reconciliation_20261007_12.md",
+        "handoff/volume_vi_reconciliation_20261007_12.json",
+        "handoff/source_reconciliation_20261007_13.md",
+        "handoff/volume_vii_reconciliation_20261007_13.json",
+        "handoff/source_reconciliation_20261008_14.md",
+        "handoff/volume_viii_reconciliation_20261008_14.json",
+        "handoff/source_reconciliation_20261008_15.md",
+        "handoff/volume_ix_reconciliation_20261008_15.json",
+        "handoff/source_reconciliation_20261008_16.md",
+        "handoff/volumes_x_xi_xii_reconciliation_20261008_16.json",
+        "handoff/supplemental_reconciliation_20261008_17.json",
+        "handoff/source_reconciliation_20261008_17.md",
+        "evidence/runtime/supplemental-read-validation-17.json",
+        "evidence/runtime/edition-witness-byte-provenance-17.json",
+        "handoff/supplemental_reconciliation_20261008_18.json",
+        "handoff/source_reconciliation_20261008_18.md",
+        "evidence/runtime/supplemental-read-validation-18-r3.json",
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/source_reconciliation_20261008_19.md",
+        "handoff/unified_contract_continuation_20261008_19.json"
+      ],
+      "status": "IN_PROGRESS_406_ASSESSED_0_UNRESOLVED_REVIEW_REQUIRED",
+      "limits": "406 applicability classifications complete; working Volume1/19 duties recorded. Whole-source qualifiers/adoption/unified executable contract/Gate A remain open. Source plans unexecuted; no conformance/adoption claim."
+    },
+    {
+      "id": "CETA-IMPL-006",
+      "parent_requirement_ids": [
+        "REQ-06-03",
+        "REQ-07-05"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Construct an event head and signing preimage with distinct domains, excluding only the future signature reference while preserving all other version-1 fields.",
+      "source_refs": [
+        "contracts/records/EventRecord.md",
+        "docs/architecture/STATE_AND_TRANSACTION_MODEL.md"
+      ],
+      "derivation_state": "ENGINEERING_IMPLEMENTATION_FROM_SUPPLIED_REQUIREMENTS",
+      "recorded_date": "2026-10-06",
+      "scope": "PURE_CONTRACTS_IN_MAPPED_DESKTOP_NAMESPACE",
+      "rationale": "Executable contract prerequisite of the complete canonical cycle; no authority is issued here.",
+      "criticality": "SECURITY_RELEVANT_CONTRACT",
+      "priority": "DEPENDENCY_ORDER_NO_OWNER_TRADEOFF_INFERRED",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\events.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_events.py"
+      ],
+      "acceptance_criteria": [
+        "Fixed manual body and separate SHA-256 oracle vector match exactly.",
+        "Attaching signature changes full-record commitment without changing head/signing bytes.",
+        "Every other admitted field is bound; unsupported versions/profiles/final hash are rejected."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "evidence/runtime/desktop-contract-source-bound-06.json"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "Not runtime authority, store/signature/time-provider qualification, real scenario completion, independent review or owner acceptance."
+    },
+    {
+      "id": "CETA-IMPL-007",
+      "parent_requirement_ids": [
+        "REQ-06-02",
+        "REQ-06-03",
+        "REQ-07-05"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Reject a successor event or typed payload substituted against the injected accepted scope, sequence, prior head, payload reference or commitment.",
+      "source_refs": [
+        "contracts/records/EventRecord.md",
+        "docs/specification/07_canonical_history_and_transactions.md"
+      ],
+      "derivation_state": "ENGINEERING_IMPLEMENTATION_FROM_SUPPLIED_REQUIREMENTS",
+      "recorded_date": "2026-10-06",
+      "scope": "PURE_CONTRACTS_IN_MAPPED_DESKTOP_NAMESPACE",
+      "rationale": "Executable contract prerequisite of the complete canonical cycle; no authority is issued here.",
+      "criticality": "SECURITY_RELEVANT_CONTRACT",
+      "priority": "DEPENDENCY_ORDER_NO_OWNER_TRADEOFF_INFERRED",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\events.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_events.py"
+      ],
+      "acceptance_criteria": [
+        "Genesis position is sequence zero/null head; non-genesis position has a hash.",
+        "Each stream or payload substitution produces its exact rejection.",
+        "Original wire bytes remain separately preserved."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "evidence/runtime/desktop-contract-source-bound-06.json"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "Not runtime authority, store/signature/time-provider qualification, real scenario completion, independent review or owner acceptance."
+    },
+    {
+      "id": "CETA-IMPL-008",
+      "parent_requirement_ids": [
+        "REQ-06-02",
+        "REQ-06-03",
+        "REQ-19-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Convert known-offset timestamps to exact bounded Unix nanoseconds and represent clock intervals without rounding or invented trust.",
+      "source_refs": [
+        "policies/POL-07_identity_keys_and_time.md",
+        "docs/specification/19_capabilities_and_authorization_linearization.md"
+      ],
+      "derivation_state": "ENGINEERING_IMPLEMENTATION_FROM_SUPPLIED_REQUIREMENTS",
+      "recorded_date": "2026-10-06",
+      "scope": "PURE_CONTRACTS_IN_MAPPED_DESKTOP_NAMESPACE",
+      "rationale": "Executable contract prerequisite of the complete canonical cycle; no authority is issued here.",
+      "criticality": "SECURITY_RELEVANT_CONTRACT",
+      "priority": "DEPENDENCY_ORDER_NO_OWNER_TRADEOFF_INFERRED",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\temporal.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_temporal.py"
+      ],
+      "acceptance_criteria": [
+        "Nine fractional digits, offsets and pre-epoch values convert exactly.",
+        "Unknown offset, leap second, invalid calendar, greater precision and integer overflow reject.",
+        "Boolean/noninteger counters and malformed trust flags reject."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "evidence/runtime/desktop-contract-source-bound-06.json"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "Not runtime authority, store/signature/time-provider qualification, real scenario completion, independent review or owner acceptance."
+    },
+    {
+      "id": "CETA-IMPL-009",
+      "parent_requirement_ids": [
+        "REQ-19-04",
+        "REQ-30-02"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Bound and invalidate existing deadlines conservatively under injected trusted clock progress and restart/resume/epoch/rollback conditions.",
+      "source_refs": [
+        "policies/POL-07_identity_keys_and_time.md",
+        "docs/specification/30_cancellation_shutdown_and_recovery.md"
+      ],
+      "derivation_state": "ENGINEERING_IMPLEMENTATION_FROM_SUPPLIED_REQUIREMENTS",
+      "recorded_date": "2026-10-06",
+      "scope": "PURE_CONTRACTS_IN_MAPPED_DESKTOP_NAMESPACE",
+      "rationale": "Executable contract prerequisite of the complete canonical cycle; no authority is issued here.",
+      "criticality": "SECURITY_RELEVANT_CONTRACT",
+      "priority": "DEPENDENCY_ORDER_NO_OWNER_TRADEOFF_INFERRED",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\temporal.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_temporal.py"
+      ],
+      "acceptance_criteria": [
+        "Maximum lifetime and latest possible wall instant cap issuance.",
+        "Equality at monotonic or wall expiry rejects; uncertainty cannot extend the cap.",
+        "Missing trust, rollback, boot/epoch/resume change deny; old deadlines are never revived."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-05.json",
+        "evidence/runtime/canonical-comparison-run-04.json",
+        "evidence/runtime/desktop-contract-source-bound-06.json"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "Not runtime authority, store/signature/time-provider qualification, real scenario completion, independent review or owner acceptance."
+    },
+    {
+      "id": "CETA-IMPL-010",
+      "parent_requirement_ids": [
+        "REQ-07-05",
+        "REQ-19-01",
+        "REQ-19-02",
+        "REQ-19-03"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Represent relevant preparation with exact bounded generations, immutable unique resource revisions, explicit version and canonical commitment.",
+      "source_refs": [
+        "docs/architecture/STATE_AND_TRANSACTION_MODEL.md",
+        "contracts/SEMANTIC_VALIDATION.md",
+        "docs/specification/07_canonical_history_and_transactions.md",
+        "docs/specification/19_capabilities_and_authorization_linearization.md"
+      ],
+      "scope": "PURE_RELEVANT_STATE_CONTRACT",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\read_sets.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_read_sets.py"
+      ],
+      "acceptance_criteria": [
+        "Malformed/null revision, duplicate/unbounded resources and boolean/noninteger/overflow generations reject.",
+        "Resource order does not change identity; every relevant field changes commitment.",
+        "The original twenty-record codec rejects this internal metadata type."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-07.json"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "No real authority, IPC, trusted current-state resolver, handle race prevention, consume-once or complete broker/kernel scenario."
+    },
+    {
+      "id": "CETA-IMPL-011",
+      "parent_requirement_ids": [
+        "REQ-07-05",
+        "REQ-19-01",
+        "REQ-19-02",
+        "REQ-19-03"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Reject stale or incomplete preparation against trusted complete dependencies while tolerating unrelated resource changes.",
+      "source_refs": [
+        "docs/architecture/STATE_AND_TRANSACTION_MODEL.md",
+        "contracts/SEMANTIC_VALIDATION.md",
+        "docs/specification/07_canonical_history_and_transactions.md",
+        "docs/specification/19_capabilities_and_authorization_linearization.md"
+      ],
+      "scope": "PURE_RELEVANT_STATE_CONTRACT",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\read_sets.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_read_sets.py"
+      ],
+      "acceptance_criteria": [
+        "Required dependencies exactly match preparation; missing and extra dependencies reject.",
+        "Scope, authority/fence, policy/environment and relevant revision changes reject, including generation rollback.",
+        "Unrelated current resource changes do not invalidate relevant preparation."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-07.json"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "No real authority, IPC, trusted current-state resolver, handle race prevention, consume-once or complete broker/kernel scenario."
+    },
+    {
+      "id": "CETA-IMPL-012",
+      "parent_requirement_ids": [
+        "REQ-04-03",
+        "REQ-06-02",
+        "REQ-20-01",
+        "REQ-20-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Admit registered immutable ErrorEnvelope semantics with exact request/resource context and preserved original bytes.",
+      "source_refs": [
+        "docs/architecture/DEPENDENCIES_AND_IPC.md",
+        "contracts/records/ErrorEnvelope.md",
+        "contracts/error_catalog.json",
+        "contracts/SEMANTIC_VALIDATION.md",
+        "docs/specification/20_effects_verification_and_settlement.md"
+      ],
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\errors.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_errors.py"
+      ],
+      "acceptance_criteria": [
+        "All twenty supplied definitions retain their code/category/guidance and true completion guard.",
+        "Malformed/noncanonical catalog input, duplicate/unknown codes and foreign scope/task/operation reject.",
+        "Internal catalog metadata has explicit version/profile identity and cannot cross public record dispatch."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-09.json",
+        "evidence/runtime/desktop-contract-source-bound-10.json",
+        "decisions/ADR-020.md"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "No runtime authentication, diagnostic authorization, effect evidence, retry/budget/consume, observation or settlement; all full scenarios NOT_RUN."
+    },
+    {
+      "id": "CETA-IMPL-013",
+      "parent_requirement_ids": [
+        "REQ-04-03",
+        "REQ-06-02",
+        "REQ-20-01",
+        "REQ-20-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Preserve effect uncertainty and explicit reconciliation without inventing completed effects or safe retries.",
+      "source_refs": [
+        "docs/architecture/DEPENDENCIES_AND_IPC.md",
+        "contracts/records/ErrorEnvelope.md",
+        "contracts/error_catalog.json",
+        "contracts/SEMANTIC_VALIDATION.md",
+        "docs/specification/20_effects_verification_and_settlement.md"
+      ],
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\errors.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_errors.py"
+      ],
+      "acceptance_criteria": [
+        "Unknown/possible effects require reconciliation; observed effect cannot grant fresh retry.",
+        "Consumed permit, pending stop and indeterminate error retain reconciliation constraints.",
+        "An explicit RECONCILE declaration is honored even for a NOT_STARTED attempt; no dispatch/refund/settlement occurs."
+      ],
+      "verification_method": "DETERMINISTIC_SYNTHETIC_SOURCE_TESTS",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-09.json",
+        "evidence/runtime/desktop-contract-source-bound-10.json",
+        "decisions/ADR-020.md"
+      ],
+      "status": "SOURCE_TESTED",
+      "limits": "No runtime authentication, diagnostic authorization, effect evidence, retry/budget/consume, observation or settlement; all full scenarios NOT_RUN."
+    },
+    {
+      "id": "CETA-IMPL-014",
+      "parent_requirement_ids": [
+        "REQ-04-01",
+        "REQ-36-01",
+        "REQ-36-02",
+        "REQ-40-01",
+        "REQ-41-01"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Detect dropped/unallocated/unknown/duplicate declared requirement, component, work-package, case and gate relationships, dependency cycles and input mutation without promoting any runtime state.",
+      "implementation": "tools/verify_allocations.py",
+      "tests": [
+        "tests/contract/test_allocations.py"
+      ],
+      "verification_method": "SPECIFICATION_TOOL_FAULT_INJECTION_AND_CURRENT_REGISTRY_CHECK",
+      "source_refs": [
+        "sources/codex/canonical_text/03_SECTIONS/020_SYSTEMS_ENGINEERING.txt",
+        "docs/specification/04_one_executable_system_specification.md",
+        "docs/specification/36_verification_architecture.md",
+        "docs/specification/40_required_artifacts_and_commands.md"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/allocation-source-bound-01.json",
+        "evidence/runtime/allocation-source-bound-02.json",
+        "evidence/runtime/allocation-source-bound-03.json",
+        "evidence/runtime/allocation-integrity-final-02.json"
+      ],
+      "status": "SOURCE_TESTED_SPECIFICATION_TOOL_ONLY",
+      "limits": "Specification references/declared graphs only. No runtime interface, actual imports/processes, authorizations, assigned independent reviewer, case adequacy or Gate A completion."
+    },
+    {
+      "id": "CETA-IMPL-015",
+      "parent_requirement_ids": [
+        "REQ-04-01",
+        "REQ-06-02",
+        "REQ-06-03",
+        "REQ-21-03",
+        "REQ-36-01",
+        "REQ-40-01"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Reject invalid/unbounded declared record-frame sizes before body parsing and preserve exact original strict-record bytes.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\framing.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_framing.py"
+      ],
+      "verification_method": "DETERMINISTIC_HOSTILE_INPUT_AND_PARSER_ORDER_TESTS",
+      "source_refs": [
+        "docs/architecture/DEPENDENCIES_AND_IPC.md",
+        "sources/codex/canonical_text/03_SECTIONS/042_API_ARCHITECTURE.txt",
+        "sources/codex/canonical_text/03_SECTIONS/045_SECURITY_ARCHITECTURE.txt"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-11.json",
+        "evidence/runtime/desktop-framing-narrow-01.txt",
+        "decisions/ADR-021.md"
+      ],
+      "status": "SOURCE_TESTED_PURE_FRAMING_ONLY",
+      "limits": "No real transport/session/version negotiation, native authentication, replay state, authority, allocation enforcement in caller, effects or full-system qualification."
+    },
+    {
+      "id": "CETA-IMPL-016",
+      "parent_requirement_ids": [
+        "REQ-06-02",
+        "REQ-06-03",
+        "REQ-12-02",
+        "REQ-12-04",
+        "REQ-29-02",
+        "REQ-36-01",
+        "REQ-40-01"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Bind exact scoped memory/lifecycle/policy metadata and preserve outstanding authority, current-state and independent deletion/copy verification.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\memory_lifecycle.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_memory_lifecycle.py"
+      ],
+      "verification_method": "DETERMINISTIC_CROSS_SCOPE_STALE_BINDING_AND_MISLEADING_DELETION_TESTS",
+      "source_refs": [
+        "contracts/records/MemoryRecord.md",
+        "contracts/records/MemoryLifecycleEvent.md",
+        "policies/POL-05_memory_and_fates.md",
+        "policies/POL-06_privacy_and_egress.md",
+        "docs/specification/12_memory_the_fates_and_the_graph.md",
+        "docs/specification/29_privacy_retention_export_and_forgetting.md",
+        "docs/specification/33_modalities_and_additional_interfaces.md",
+        "sources/codex/canonical_text/03_SECTIONS/047_PRIVACY_ARCHITECTURE.txt",
+        "sources/codex/canonical_text/03_SECTIONS/055_KNOWLEDGE_ARCHITECTURE.txt"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-12.json",
+        "evidence/runtime/desktop-memory-lifecycle-narrow-01.txt",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_09.md",
+        "handoff/privacy_assurance_reconciliation_20261007_09.json"
+      ],
+      "status": "SOURCE_TESTED_PURE_MEMORY_METADATA_BINDING_ONLY",
+      "limits": "No authentic current policy/memory/actor, granted transition, data access or deletion, copy/backup completion, store/graph/runtime/privacy qualification."
+    },
+    {
+      "id": "CETA-IMPL-017",
+      "parent_requirement_ids": [
+        "REQ-01-01",
+        "REQ-04-02",
+        "REQ-36-01",
+        "REQ-39-04",
+        "REQ-40-01"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Reject contradictory source summary and metadata mutation between parsing and first snapshot; bind guarded metadata/tool identity and final unchanged check.",
+      "implementation": "tools/verify_source_coverage.py",
+      "tests": [
+        "tests/contract/test_source_coverage.py"
+      ],
+      "evidence_refs": [
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "evidence/runtime/source-summary-stale-header-01.json",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ],
+      "status": "SOURCE_TESTED_SPECIFICATION_TOOL_ONLY",
+      "limits": "No semantic clause acceptance, actual interface/runtime, independent reviewer, source adoption, installed/hardware evidence or Gate A closure."
+    },
+    {
+      "id": "CETA-IMPL-018",
+      "parent_requirement_ids": [
+        "REQ-01-01",
+        "REQ-01-02",
+        "REQ-06-03",
+        "REQ-36-01"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Exact source inventory and authentic working reference resolution; no original rewrite or authority issuance.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tools\\development_inventory.py; T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\source_references.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_development_inventory.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_source_references.py"
+      ],
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "SOURCE_TESTED_PURE_CHECKS_ONLY;NO_INTEGRATED_RUNTIME_OR_ORIGINAL_ACCEPTANCE_EXECUTION"
+    },
+    {
+      "id": "CETA-IMPL-019",
+      "parent_requirement_ids": [
+        "REQ-04-02",
+        "REQ-18-03",
+        "REQ-20-01",
+        "REQ-25-01",
+        "REQ-30-03",
+        "REQ-31-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Source-bound transition assessments, explicit unresolved denials and source-defined vault sequence; authenticated state engine remains open.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\transitions.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_transitions.py"
+      ],
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "SOURCE_TESTED_PURE_CHECKS_ONLY;NO_INTEGRATED_RUNTIME_OR_ORIGINAL_ACCEPTANCE_EXECUTION"
+    },
+    {
+      "id": "CETA-IMPL-020",
+      "parent_requirement_ids": [
+        "REQ-39-02",
+        "REQ-41-01",
+        "REQ-41-02",
+        "REQ-41-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Preserve all28 construction dependencies/eight gate memberships and actual acceptance; no formal qualification.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\construction.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_construction.py"
+      ],
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "SOURCE_TESTED_PURE_CHECKS_ONLY;NO_INTEGRATED_RUNTIME_OR_ORIGINAL_ACCEPTANCE_EXECUTION"
+    },
+    {
+      "id": "CETA-IMPL-021",
+      "parent_requirement_ids": [
+        "REQ-07-01",
+        "REQ-07-05",
+        "REQ-19-01",
+        "REQ-19-02",
+        "REQ-19-03",
+        "REQ-20-01",
+        "REQ-36-01"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Semantic/evidence binding predicates; authenticated provenance, durable consumption, real verifier and integrated admission remain open.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\evidence_admission.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_evidence_admission.py"
+      ],
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "SOURCE_TESTED_PURE_CHECKS_ONLY;NO_INTEGRATED_RUNTIME_OR_ORIGINAL_ACCEPTANCE_EXECUTION"
+    },
+    {
+      "id": "CETA-IMPL-022",
+      "parent_requirement_ids": [
+        "REQ-01-01",
+        "REQ-36-01",
+        "REQ-39-04",
+        "REQ-41-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Separate applicability/reconciliation/adoption/implementation/conformance/independent acceptance/gate measurements; preserve406 bytes.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tools\\build_measurements.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_build_measurements.py"
+      ],
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "SOURCE_TESTED_PURE_CHECKS_ONLY;NO_INTEGRATED_RUNTIME_OR_ORIGINAL_ACCEPTANCE_EXECUTION"
+    },
+    {
+      "id": "CETA-IMPL-023",
+      "parent_requirement_ids": [
+        "REQ-07-02",
+        "REQ-36-01"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Actually loaded pinned SQLite identity and explicit local fixture settings; preserved installed interpreter",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\store\\sqlite_runtime.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_sqlite_runtime.py"
+      ],
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json",
+        "evidence/runtime/sqlite-runtime-loaded-20-02.json",
+        "evidence/runtime/volume19-semantic-root-validation-20-02.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "No authenticated serialized writer process, OS protected resources, independent checkpoint/signature trust, atomic grants/budgets/intents/queue/projections, IPC authority or broker/effect admission. Fixture scope/time/actor identities are synthetic. Power-loss/frozen/installed/workload qualification NOT_RUN; original acceptance cases NOT_RUN."
+    },
+    {
+      "id": "CETA-IMPL-024",
+      "parent_requirement_ids": [
+        "REQ-06-03",
+        "REQ-07-01",
+        "REQ-07-02",
+        "REQ-07-03",
+        "REQ-07-04",
+        "REQ-07-05"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Real event-only journal CAS/atomic batch/prefix/checkpoint/replay/crash mechanics under open owner contract",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\store\\journal.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_history.py"
+      ],
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json",
+        "evidence/runtime/sqlite-runtime-loaded-20-02.json",
+        "evidence/runtime/volume19-semantic-root-validation-20-02.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "No authenticated serialized writer process, OS protected resources, independent checkpoint/signature trust, atomic grants/budgets/intents/queue/projections, IPC authority or broker/effect admission. Fixture scope/time/actor identities are synthetic. Power-loss/frozen/installed/workload qualification NOT_RUN; original acceptance cases NOT_RUN."
+    },
+    {
+      "id": "CETA-IMPL-025",
+      "parent_requirement_ids": [
+        "REQ-06-03",
+        "REQ-07-01",
+        "REQ-07-03",
+        "REQ-07-04",
+        "REQ-07-05",
+        "REQ-19-03"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Explicit v2 profile; original events across scopes, grants/budget/reservation/permit/intent/queue/projection cells, exact state expectations and immutable reconstruction metadata commit once. V1 default and denial codes preserved; no automatic migration.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\store\\journal.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_store_transactions.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_history.py"
+      ],
+      "evidence_refs": [
+        "handoff/atomic_store_continuation_20261008_21.json",
+        "handoff/unified_contract_continuation_20261008_21.json",
+        "evidence/runtime/desktop-transactions-final-21-05.json",
+        "evidence/runtime/volume19-semantic-root-validation-21-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "Authenticated writer/IPC, complete kernel dependency selection, legal event/transition reducers, budget charging/conservation, single-use consume/revoke, protected resources, actual time/approval and effect admission remain open. Internal metadata and checkpoints confer no authority. Power-loss, installed, independent, hardware and endurance qualification NOT_RUN."
+    },
+    {
+      "id": "CETA-IMPL-026",
+      "parent_requirement_ids": [
+        "REQ-07-01",
+        "REQ-07-03",
+        "REQ-07-04",
+        "REQ-07-05",
+        "REQ-16-01",
+        "REQ-16-03",
+        "REQ-19-01",
+        "REQ-19-02",
+        "REQ-19-03",
+        "REQ-19-04",
+        "REQ-19-05"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "One composition captures the existing store/codec/installation and internal owner ports. Kernel-owned prepare reserves allocation and commits intent/issuance/permit together; consume charges the held ceiling and records immutable consumption; revoke updates grant generation. Exact dependencies/deadline commitments and issuance generation zero prevent stale/ABA reuse. Both transaction orderings remain fixture mechanics. Captured clock guard runs immediately before SQLite COMMIT; post-COMMIT expiry denies the return while preserving spent authority. No fixture owner is claimed as a real owner, and runtime admission always denies.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\kernel\\transactions.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_kernel_transactions.py"
+      ],
+      "evidence_refs": [
+        "handoff/kernel_transactions_continuation_20261008_22.json",
+        "handoff/unified_contract_continuation_20261008_22.json",
+        "handoff/source_reconciliation_20261008_22.md",
+        "evidence/runtime/desktop-kernel-final-22-05.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "Fixture owner ports and one-process model review do not establish authenticated OS principals, trusted approval/time/resource owners, protected effect linearization, independent evidence, installed operation, power-loss, hardware/device/custody/distributed or endurance qualification. Broker/runtime admission stays closed. TR-06/TR-09/TR-11 owner question is unanswered; TR-07/TR-08 mechanics start from an owner-bound PREPARED fixture basis. Source adoption and remaining transition decisions stay open. Seven-dimensional allocation liability is a versioned development engineering profile, not elapsed-time or actual-use billing, settlement or refund."
+    },
+    {
+      "id": "CETA-IMPL-027",
+      "parent_requirement_ids": [
+        "REQ-03-03",
+        "REQ-03-04",
+        "REQ-04-01",
+        "REQ-04-03",
+        "REQ-05-01",
+        "REQ-05-02",
+        "REQ-05-03",
+        "REQ-05-04",
+        "REQ-06-01",
+        "REQ-06-02",
+        "REQ-06-03",
+        "REQ-21-01",
+        "REQ-21-03",
+        "REQ-30-01",
+        "REQ-30-02",
+        "REQ-36-01",
+        "REQ-36-02",
+        "REQ-36-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Versioned bounded envelope preserves exact inner record bytes, scope, operation and commitments. The native receiver binds registered OS process/token/last-message lifetime evidence and its own generation; the sender pins the selected destination. Ingress rejects stale/forged/oversized/replayed requests and invalidates opaque request contexts after handling. One application/composition ingress captures the existing kernel/store with identity-only owners; unfinished authority owners deny. This record derives executed development-test coverage from the exact final log and current AST, not from the failed first run, pre-execution review or narrow subset.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\identity\\windows_pipe.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_local_ipc.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_windows_pipe.py"
+      ],
+      "evidence_refs": [
+        "handoff/local_ipc_continuation_20261008_23.json",
+        "handoff/unified_contract_continuation_20261008_23.json",
+        "handoff/source_reconciliation_20261008_23.md",
+        "evidence/runtime/desktop-ipc-repair-23-02.json",
+        ".local-build-cache/increment-23-ipc/pre_execution_cut.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "Actual final test identities/logs support only the pinned development ingress test profile. Authentication is technical peer evidence, not human consent or positive kernel authority. Trusted approval/time/resource/revocation owners and broker/runtime effect admission remain closed. No full native occupancy bound, token-metadata deadline, restricted worker/production isolation, loaded-code attestation, publisher signing, independent/external/human conformance, installed, power-loss, hardware/device/custody/distributed or endurance qualification is claimed. Same-account ACLs and executable-file hashes do not establish independent trust domains. TR-06/TR-09/TR-11 remains unanswered; source adoption is unchanged and not ratified. Complete original B063/B068 and all128 original cases remain NOT_RUN."
+    },
+    {
+      "id": "CETA-IMPL-028",
+      "parent_requirement_ids": [
+        "REQ-08-01",
+        "REQ-08-03",
+        "REQ-08-04",
+        "REQ-21-02",
+        "REQ-21-03",
+        "REQ-30-01",
+        "REQ-30-02",
+        "REQ-30-03",
+        "REQ-30-04",
+        "REQ-32-01",
+        "REQ-32-03",
+        "REQ-32-04",
+        "REQ-36-01",
+        "REQ-36-02"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Owned Windows service/client lifetimes use atomic job membership and selected process creation/image identity. A single-use controller reserves launch slots and disables dispatch before owned termination; stopped status requires observed primary exit, empty owned jobs, no launch in flight and completed retryable handle cleanup. Authenticated duplex results bind request, route, scope, peer lifetime and fresh receiver generation. Read-only recover_permit returns matching durable current state without replay, refund or authority renewal. The model-free native development inspector calls the existing five kernel routes through one captured kernel/store; identity-only owners and positive effect admission remain closed.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\composition\\owned_service.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_kernel_recovery.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_local_results.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_operator_view.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_owned_service.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_windows_jobs.py"
+      ],
+      "evidence_refs": [
+        "handoff/owned_service_continuation_20261008_24.json",
+        "handoff/unified_contract_continuation_20261008_24.json",
+        "handoff/source_reconciliation_20261008_24.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\root-source-fullsuite-review-24-04.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "This is development execution, IMPLEMENTED_NOT_QUALIFIED. Same-account jobs and image-file hashes do not establish filesystem/network/credential isolation or loaded-code attestation. Synchronous launch and tiny control writes rely on ordinary OS scheduling; no universal native/driver deadline is claimed. Stop does not cancel a kernel COMMIT. Lost or denied results may follow committed consumption and require read-only reconciliation, never automatic replay/refund. Drafts are per-view memory only. Offscreen Qt controls and a hidden native Windows render do not qualify visible UI/accessibility. Trusted time/approval/resource/revocation owners, protected effects, installed/offline, independent/human, power-loss, physical/device/custody/hardware/distributed/endurance lanes and all original cases/gates remain open. Source adoption is unchanged; six transition decisions remain unresolved. Historical V18-GAP-002 records46 blank Owners Cockpit CHAPTER ACCEPTANCE RULE bodies (witness635/rawPDF e8484ea4...,139pages/48headings/two populated), distinct from128 AppendixB scenarios; no new PDF/visual/provenance proof is claimed in this job."
+    },
+    {
+      "id": "CETA-IMPL-029",
+      "parent_requirement_ids": [
+        "REQ-19-01",
+        "REQ-19-02",
+        "REQ-19-03",
+        "REQ-19-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Public consumption evidence retains the exact authenticated context and checks durable subject, proposal/read-set/grant scope, event attribution and coherent generation-bearing cells. Preparation, consumption and revocation repeat exact original owner predicates and context checks immediately before and after COMMIT; preparation/consumption also enforce final deadlines. PostCOMMIT denial preserves issued/held, consumed/charged or revoked state. Internal one-argument historical evidence remains compatible. Positive runtime/effect owners remain closed.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\kernel\\transactions.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_kernel_authority.py"
+      ],
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "Repair STOP reachability during stalled control writes and authenticated proposal-to-issuance recovery; implement typed durable task/draft native workflows and service-owned protected time, approval and resource custody. Continue the complete product scope and original acceptance qualification; no gate or work-package completion is inferred from these development tests."
+    },
+    {
+      "id": "CETA-IMPL-030",
+      "parent_requirement_ids": [
+        "REQ-08-02",
+        "REQ-30-01",
+        "REQ-30-02",
+        "REQ-30-03",
+        "REQ-32-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Tracked background client/service launch and request preservation/control send leave Qt and the Stop state lock free of those blocking operations. Separate send ownership, actual thread-exit observation and input-handle write leases prevent second dispatch or cleanup while a writer remains. Stop wins before logical send admission; late failure cannot revive Stop or replace a validated result. Original attempt, envelope, selected lifetime and deadline remain fixed. Unpersisted exact requests remain in memory through STOPPED. Reservation return is not disk/IPC acknowledgement; logical admission is not physical WriteFile ordering; memory retention is not restart durability.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\composition\\owned_service.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_stop_dispatch.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_owned_service.py"
+      ],
+      "evidence_refs": [
+        "handoff/stop_dispatch_continuation_20261008_26.json",
+        "handoff/unified_contract_continuation_20261008_26.json",
+        "handoff/source_reconciliation_20261008_26.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-26-stop\\contracts-full-26-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "Implement authenticated proposal-to-issuance recovery when the permit selector is lost, typed durable task/draft native workflows, and real service-owned time/approval/resource custody. Qualify native/model/hardware/device/custody/distributed/independent/installed/endurance behavior against the complete product requirements. Universal driver bounds and synchronous result-read occupancy remain unqualified; no original case, formal gate or work-package completion is inferred."
+    },
+    {
+      "id": "CETA-IMPL-031",
+      "parent_requirement_ids": [
+        "REQ-19-01",
+        "REQ-19-03",
+        "REQ-30-04",
+        "REQ-32-01",
+        "REQ-32-03"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Authenticated kernel.recover_preparation selects a durable issuance from the exact original ActionProposal when its generated permit selector was lost. The original message/context, principal/session, issuance event, exact proposal bytes, coherent issuance/permit/intent generations and full historical input commitment are checked before disclosure. New preparations retain the original grant commitment in exact internal intent v2; existing v1 consumption, permit recovery and peer evidence remain supported without migration. Unknown-selector v1 lookup explicitly denies unavailable input evidence. The query observes real PREPARED or CONSUMED state and calls no writer, clock, positive owner, refund, renewal or effect. The sixth route is integrated into the envelope, application, response codec, RECOVERING allowlist and native picker. The original context is checked again after the final union read. An isolated retained pre-repair candidate fails precisely that injected boundary; the corrected suite passes.",
+      "implementation": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\kernel\\transactions.py",
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_preparation_recovery.py"
+      ],
+      "evidence_refs": [
+        "handoff/preparation_recovery_continuation_20261008_27.json",
+        "handoff/unified_contract_continuation_20261008_27.json",
+        "handoff/source_reconciliation_20261008_27.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\contracts-full-27-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\final-context-counterexample-27-01.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "Implement typed durable task/draft native workflows and real service-owned time/approval/resource custody; qualify authenticated session handoff, legacy unknown-selector handling and native occupancy against explicit contracts. Qualify actual model, hardware, device/custody, distributed, independent acceptance, installed and endurance behavior against all175 requirements/25components/128originalcases/28packages/20volumes/406lifecycle/8gates. A fixed selected-cell count or replay row limit does not bound full journal verification or native driver/result-read occupancy. Positive runtime/effect owners remain CLOSED, GateA OPEN, original128 cases NOT_RUN and8 formal gates NOT_EVALUATED."
+    },
+    {
+      "id": "CETA-IMPL-032",
+      "parent_requirement_ids": [
+        "REQ-09-01",
+        "REQ-19-01",
+        "REQ-19-03",
+        "REQ-30-04",
+        "REQ-32-01",
+        "REQ-32-03",
+        "REQ-32-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Typed task.create/save/load/list routes preserve exact original instruction bytes separately from editable title/draft. The injected task owner authenticates the original envelope/context, SID and logical principal; creates CREATED-only snapshots with uninterpreted meaning fields; atomically commits the draft, minimal kernel objective revision, catalog and event to the existing SQLite journal; rejects stale CAS, tombstones, foreign owners and substituted events. Objective generations prevent A-to-B-to-A revision reuse. Exact TASK_ABSENT observes never-present current cells and catalog exclusion without claiming historical rollback. The owned native controller retains uncertain task writes, preserves recovery during unrelated reads, validates current observations for explicit reconciliation and bounds retained history before new dispatch. The native task view keeps late acknowledgments separate from newer edits, offers retained local-draft navigation, explicit remote revision adoption, usable recovery controls, all-cached-draft close consent and editor freeze until observed Stop. The existing kernel inspector remains available through --inspector; no positive production effect authority is added.",
+      "implementation": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\kernel\\task_drafts.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\application\\task_operator.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\desktop\\task_view.py"
+      ],
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_task_drafts.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_task_view.py"
+      ],
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "This is a durable CREATED task/draft lane, not full task semantics or original acceptance. Nine new native Windows methods use isolated owned-service fixtures; history capacity includes controlled padding and current-absence recovery includes a deliberately redirected missing pipe. Ten client and thirteen offscreen Qt methods use controlled delivery; Stop/Esc exercises the real controller with an injected held sender. Native committed-write acknowledgment loss, power-loss recovery, installed UI/accessibility, cross-SID isolation, historical uncertainty receipts and persistence of unconfirmed local edits remain unqualified. Selected-cell and response bounds do not bound full journal verification or native I/O occupancy. Continue semantic task interpretation/clarification, accepted objectives and finite authority, attachments and lifecycle, plus service-owned trusted time/approval/resource custody. Qualify native committed-write result loss, session handoff, legacy recovery, occupancy, actual model/hardware, devices/custody/distributed execution, independent human acceptance, installation/offline/endurance. Preserve all175 requirements/25components/128originalcases/28packages/20volumes/406lifecycle/8gates. Positive production runtime/effect owners stay CLOSED; GateA OPEN, original128 cases NOT_RUN, eight gates NOT_EVALUATED, full objective ACTIVE_NOT_COMPLETE."
+    },
+    {
+      "id": "CETA-IMPL-033",
+      "parent_requirement_ids": [
+        "REQ-09-01",
+        "REQ-11-01",
+        "REQ-11-02",
+        "REQ-19-01",
+        "REQ-19-03",
+        "REQ-30-04",
+        "REQ-32-01",
+        "REQ-32-03",
+        "REQ-32-04"
+      ],
+      "work_package": "WP-01",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Durable, native-owner-attributed UNACCEPTED task interpretation proposals now preserve all ten supplied fields and the exact saved task basis in a separate versioned projection. Original instruction and raw task remain unchanged. Real SQLite CAS checks and native request/result bindings protect proposal capture/read; stale observations and explicit revision selection retain local edits and uncertainty. The Qt modal distinguishes selected/local text from the latest observed proposal or absence, preserves editing history and Stop behavior. Two controlled native post-COMMIT lost-reply cases prove exact committed raw-task recovery without replay in the same controller and after a fresh controller/session.",
+      "implementation": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\kernel\\task_drafts.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\task_meaning.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\application\\task_operator.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\desktop\\meaning_view.py"
+      ],
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_task_meaning.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_task_meaning_view.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_task_ack_loss.py"
+      ],
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ],
+      "status": "IMPLEMENTED_NOT_QUALIFIED",
+      "limits": "Development mechanics only. Manual proposals are not model interpretation, accepted objectives, materiality findings or authority grants. CREATED/UNACCEPTED and positive runtime/effect owners remain closed. Fresh controller content recovery does not import or settle historical uncertain attempts. No production profile, installed release, trusted clock, hardware, security, independent human acceptance or endurance qualification is inferred. Original128 cases remain NOT_RUN, all8 formal gates NOT_EVALUATED, Gate A OPEN, and source adoption unratified. Continue CMP-07/WP-06 actual request/task compilation, source/correction custody and material clarification with exact ContextEnvelope/template/token/prepared-request contracts; then implement authenticated acceptance and finite kernel grants with their time/approval/resource owners and full lifecycle. Implement durable historical-attempt and unconfirmed-edit recovery, qualify actual native occupancy and the remaining full product lanes. Preserve the full175 requirements/25 components/28 packages/20 volumes/406 lifecycle sections/128 cases/8 gates; finish the product rather than treating closed development gates as completion."
+    },
+    {
+      "id": "CETA-IMPL-034",
+      "parent_requirement_ids": [
+        "REQ-09-01",
+        "REQ-09-02",
+        "REQ-09-03",
+        "REQ-09-04",
+        "REQ-11-01",
+        "REQ-11-02",
+        "REQ-11-03",
+        "REQ-11-04",
+        "REQ-11-05"
+      ],
+      "work_package": "WP-06",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Fresh native task.load and exact snapshot/CAS custody; immutable raw original/latest bytes; source-role and derived-dependency separation; material-question outcomes; exact available byte quotations; bounded mandatory overflow and inspectable omissions; full rendered-payload/fixture-special-token commitments; exact runtime/read-set/task/objective/policy/authority/reservation/deadline freshness; shared cancellation and actual worker exit custody. ContextEnvelope v1 remains closed with its existing26 required fields/20 record types.",
+      "implementation": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\request_compiler.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\context\\compiler.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\context\\__init__.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\application\\task_operator.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\contracts\\REQUEST_COMPILER_V1.md"
+      ],
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_request_compiler.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_context_intake.py"
+      ],
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ],
+      "status": "IMPLEMENTED_PARTIAL_NOT_QUALIFIED",
+      "limits": "Controlled compiler ports establish development mechanics only. Actual disposable Windows service/pipe and saved-task custody were exercised. Production interpretation/source completeness/model/runtime/template/tokenizer/time/reservation/resource/policy/authority owners, visible UI composition, common dispatch, authenticated acceptance/finite grants/obligations/budget lifecycle, native occupancy, durable uncertain-attempt/edit recovery, installed release/endurance and independent human acceptance remain unqualified or unfinished. Original128 scenarios NOT_RUN; formal8 NOT_EVALUATED; GateA OPEN; positive runtime/effect owners CLOSED; adoption UNRATIFIED; full goal ACTIVE_NOT_COMPLETE."
+    },
+    {
+      "id": "CETA-IMPL-035",
+      "parent_requirement_ids": [
+        "REQ-09-01",
+        "REQ-09-02",
+        "REQ-09-03",
+        "REQ-09-04",
+        "REQ-11-01",
+        "REQ-11-02",
+        "REQ-11-03",
+        "REQ-11-04",
+        "REQ-11-05"
+      ],
+      "work_package": "WP-06",
+      "owner": "CURRENT_CODEX_EXECUTION_AGENT",
+      "obligation": "Same-session request preparation and revalidation entry; inspectable exact original/latest inputs, all sixteen meaning fields, source attribution, omissions, payload bytes and token IDs; bounded readable previews and clarification questions; retained result separated from latest native observation/status; shared Stop/Esc and actual worker custody. Both owned modal paths schedule destruction after exit. PREVIEW result metadata must agree with its prepared selection, interpretation, sources, omissions and token tuple length. Task-changing token-capacity omissions now retain their material flag in the displayed clarification metadata.",
+      "implementation": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\desktop\\preparation_view.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\desktop\\task_view.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\application\\task_operator.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\contracts\\request_compiler.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\contracts\\PREPARATION_VIEW_V1.md",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\src\\ceta\\context\\compiler.py"
+      ],
+      "tests": [
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_preparation_view.py",
+        "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\tests\\contract\\test_task_meaning_view.py"
+      ],
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ],
+      "status": "IMPLEMENTED_PARTIAL_NOT_QUALIFIED",
+      "limits": "The new UI tests use real offscreen Qt and actual task journal/compiler code with controlled owner ports. Existing native contract tests use disposable Windows fixtures. Normal operator composition still supplies no compiler. No production model, positive owner, installed release, independent human acceptance or full product qualification is inferred. Original 128 cases remain NOT_RUN; eight formal gates NOT_EVALUATED; Gate A OPEN; source adoption UNRATIFIED; full goal ACTIVE_NOT_COMPLETE."
+    }
+  ]
+}

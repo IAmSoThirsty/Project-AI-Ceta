@@ -1,0 +1,11 @@
+{
+  "classification": "fixed review-helper construction error",
+  "script": "reproduce_postverify_boundary.py",
+  "script_sha256": "dd7be46a17c7e1ccd16291cb273604cd5c208ee370f63629128619d8690e3311",
+  "terminal_exit": 1,
+  "error": "AssertionError: selected top-level function set did not include the native-store audit nested in main",
+  "native_operations": false,
+  "repair": "Separate V2 uses ast.walk to select the actual nested audit function without importing or executing its enclosing main",
+  "corrected_script_sha256": "b488568162cbc8521371937e3d405dc9795ef3887ae7f38e3104b93da8d3c46c",
+  "original_preserved": true
+}

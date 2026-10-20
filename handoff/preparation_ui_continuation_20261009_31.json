@@ -1,0 +1,142 @@
+{
+  "schema_version": "1",
+  "increment": 31,
+  "observed_at_utc": "2026-10-09T05:29:14.228627+00:00",
+  "status": "IMPLEMENTED_DEVELOPMENT_UI_NOT_PRODUCTION_COMPOSITION",
+  "authority_ref": "handoff/OWNER_SCOPE_OVERRIDE.md",
+  "source_root": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package",
+  "application_root": "T:\\00-Active\\CETA-desktop-delivery-20260906",
+  "development_root": "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios",
+  "component": "CMP-07",
+  "work_package": "WP-06",
+  "parent_requirement_ids": [
+    "REQ-09-01",
+    "REQ-09-02",
+    "REQ-09-03",
+    "REQ-09-04",
+    "REQ-11-01",
+    "REQ-11-02",
+    "REQ-11-03",
+    "REQ-11-04",
+    "REQ-11-05"
+  ],
+  "original_scenario_bindings": [
+    "B022",
+    "B025",
+    "B026",
+    "B027",
+    "B028",
+    "B029",
+    "B030",
+    "B031",
+    "B032",
+    "B064"
+  ],
+  "implemented": "Same-session request preparation and revalidation entry; inspectable exact original/latest inputs, all sixteen meaning fields, source attribution, omissions, payload bytes and token IDs; bounded readable previews and clarification questions; retained result separated from latest native observation/status; shared Stop/Esc and actual worker custody. Both owned modal paths schedule destruction after exit. PREVIEW result metadata must agree with its prepared selection, interpretation, sources, omissions and token tuple length. Task-changing token-capacity omissions now retain their material flag in the displayed clarification metadata.",
+  "changed_files": {
+    "src/ceta/desktop/preparation_view.py": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-candidates31-r2\\src\\ceta\\desktop\\preparation_view.py",
+      "sha256": "ddea0bb11d2916d26ccdac7ab8e929cf31783d4bbcb1df25bb5648bc2168a3ec"
+    },
+    "src/ceta/desktop/task_view.py": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-candidates31-r2\\src\\ceta\\desktop\\task_view.py",
+      "sha256": "91a61350a5b9109cbb0f8980314f56c38788d956e001b4153f1bfb08ba5d338b"
+    },
+    "src/ceta/application/task_operator.py": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-candidates31-r2\\src\\ceta\\application\\task_operator.py",
+      "sha256": "95853e17e184dd4687faf1d8835cd876dadc1a42c9b6c850edcf9e95b8ed7ce7"
+    },
+    "src/ceta/contracts/request_compiler.py": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-candidates31-r2\\src\\ceta\\contracts\\request_compiler.py",
+      "sha256": "2d1496d633560a2908d231bffd12ccdcdfa3cd45f89acbe61d016729711af2ee"
+    },
+    "contracts/PREPARATION_VIEW_V1.md": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-candidates31-r2\\contracts\\PREPARATION_VIEW_V1.md",
+      "sha256": "b6e082431e02840f5cf0eb3ddfe4025c1344dbb47c32535f8346512fe398f7e2"
+    },
+    "tests/contract/test_preparation_view.py": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\test-candidates31-r3\\tests\\contract\\test_preparation_view.py",
+      "sha256": "5dfde41851aeb3066c535ff312bb424bfa25fa20ba7485967c5f751f38b253c3"
+    },
+    "tests/contract/test_task_meaning_view.py": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\test-candidates31-r2\\tests\\contract\\test_task_meaning_view.py",
+      "sha256": "95e56b9f11ee004dfa9bc6e5775202ebc0b1d9249e96e1ce513e8c11e6eccb05"
+    },
+    "src/ceta/context/compiler.py": {
+      "candidate": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-candidates31-r3\\src\\ceta\\context\\compiler.py",
+      "sha256": "aacb0351ac210bd308de78cb3d29ecf407d011d61810bebf719acc2fb2721f3b"
+    }
+  },
+  "execution": {
+    "full": 707,
+    "prior_rerun": 675,
+    "new": 32,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "receipt": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+    "receipt_sha256": "fe96af276bdcdaf5bf748c3277ba699cad382971ab17aaf5eb0c05e8a19381a4",
+    "raw_sha256": "437705956b754af6c1f183cf680dd4b2a968623e2487af91dfd5fd88c9d7eda8",
+    "started_at_utc": "2026-10-09T05:20:24.768581+00:00",
+    "ended_at_utc": "2026-10-09T05:23:05.729465+00:00",
+    "source_files": 170,
+    "watched_files": 168,
+    "test_time_ledger_sha256": {
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\request_compiler_continuation_20261008_30.json": "c2b0c530589b86788c5325e8c7dc4434ece86e6a35603a960ae0186d5fb0976c",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\unified_contract_continuation_20261008_30.json": "cfaa83becf33aa794f46cc752760acd0c839e45fe6441c25976ce1b9d059def1",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\source_authority_register.json": "10682426df02899130399213193ffea24e10d5fb45bd1dc440ecec48b14ba2ec",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\requirements\\atomic_tickets.json": "541883b59ccecb59c5269530a0f85f0c1c767b0b08a48434883d147d5370a6dd",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\build\\progress.json": "10a8e19ca570b47a13faa60c7b4b280c1a72f42619092c8c054e4b082c78b9fb",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\continuity.json": "5b1fa80dbb4a300ecfeb66518f8ae086450901ab17d9f9438b5bd7b8ece0721d",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\issues_20261006.json": "f7b745225dd4aaf569abbdab7733cff86b87d60609158c674527bf39e4a62a96",
+      "T:\\00-Active\\CETA-desktop-delivery-20260906\\docs\\operations\\CONTINUITY_MAP.md": "6bc9c023ef08c3cc2740487ce6e35fd02a30e8f3279fb548712e3c6ebb6e1fcc"
+    }
+  },
+  "review": {
+    "root": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json",
+    "root_sha256": "d773ba023d844d7ed0c8c731cf8a743986fd9f7dbe0dc74394a6cb8f31398c65",
+    "internal_verifier": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+    "internal_verifier_sha256": "97e04483319772074f8227393e71a278e8d051ea2ab01fe13a77c74aff7e2152",
+    "limit": "Internal agents and root; independent human acceptance not performed."
+  },
+  "history": {
+    "rule": "R1/R2 candidates, static findings and actual first UI failure remain immutable.",
+    "failed_run": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\preparation-ui31-first.json",
+    "failed_run_sha256": "f54ce89af391ffee029b3b91e5c433a26678fa26103a8d1241887f5567b98c75",
+    "first_result": "32 methods;1 failed assertion and3 errors; no skips",
+    "repairs": "One compiler omission material-flag propagation and five manual meaning field-name literals; no test identities or valid assertions removed"
+  },
+  "source_and_ledger_rule": "Tests verified the recorded source and eight pre-integration ledger hashes. These updated records are a later cut; a subsequent state receipt binds their actual bytes.",
+  "full_original_scope": {
+    "requirements": 175,
+    "components": 25,
+    "packages": 28,
+    "volumes": 20,
+    "lifecycle_sections": 406,
+    "cases": 128,
+    "gates": 8
+  },
+  "limits": "The new UI tests use real offscreen Qt and actual task journal/compiler code with controlled owner ports. Existing native contract tests use disposable Windows fixtures. Normal operator composition still supplies no compiler. No production model, positive owner, installed release, independent human acceptance or full product qualification is inferred. Original 128 cases remain NOT_RUN; eight formal gates NOT_EVALUATED; Gate A OPEN; source adoption UNRATIFIED; full goal ACTIVE_NOT_COMPLETE.",
+  "next_action": "Compose the real request compiler with qualified source, interpretation, model, template and tokenizer owners. Repair exceptional launcher-exit worker custody before enabling that composition. Implement authenticated task acceptance, finite grants, obligations, durable budgets, trusted time and resource/approval owners. Complete correction integration, historical-attempt and unconfirmed-edit recovery, native occupancy, model quality, installed/offline/endurance and human acceptance work.",
+  "goal": "ACTIVE_NOT_COMPLETE",
+  "evidence_integrity_incident": {
+    "classification": "FIXED_NOW",
+    "artifact": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-first-failure-review31.json",
+    "description": "A reviewer replaced a report after root pinning. Exact prior18144 bytes were restored from the current chat's recorded visible tool output; distinct late4584 bytes remain preserved.",
+    "restored_sha256": "a391a286995097c70489a28e545cbd2970070610c30e2023b717b1c53dd2fa8e",
+    "late_revision_sha256": "e71c3a1e7ee7cd65a72fa76fbe1b4ff493680e76aeb139c35b1dcc5c513f32cf",
+    "root_recovery": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\review-report-recovery31.json",
+    "root_recovery_sha256": "a59baebd89584a9e0c62f002cd4a1b7dfb251ff6f3729cacf2a93d01ed88db09",
+    "independent_recovery": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\recovery-evidence-verifier31.json",
+    "independent_recovery_sha256": "c55710e13333ff89ead769a944208d4849ca1475bdaf67ea4c30afa5adc4f2a7",
+    "scope": "Source170, eight test-time ledgers and Git state matched completed full run before/after recovery. Session logs were read only for that exact current-chat tool-output record; no session records modified.",
+    "limit": "Recovery does not imply whole-session or machine integrity qualification."
+  },
+  "visual_review": {
+    "report": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-visual-review31.json",
+    "sha256": "7cd7965bc751b6076da98e47cb74817cd7bce4c6e365fdb2eb374d24bde7e36f",
+    "render_receipt": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\ui-render31-r2.json",
+    "render_sha256": "e9ee6090fa303c41d3fcc07a4d30aca207c0cfb8fff549b45c1d6863340b4ec1",
+    "qualification": "Root inspected three1060x900 offscreen fixture captures with explicitly registered installed Segoe UI in that process only. First empty-font/square-glyph captures preserved. No native default-font, DPI/accessibility, installed or independent human acceptance qualification."
+  }
+}

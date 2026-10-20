@@ -1,0 +1,132 @@
+{
+  "schema_version": "ceta.preservation-successor.v1",
+  "job": "HP4",
+  "author": "/root",
+  "frozen_at": "2026-10-14T09:46:58.889175+00:00",
+  "source_root": "T:\\00-Active\\Project-AI-CETA",
+  "candidate_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp4-20261014",
+  "base_cut": "T:\\00-Active\\Project-AI-CETA\\.agents\\hp3-20261014",
+  "base_manifest_sha256": "baeb856cb188655b3b3ad857c548cb3af4c0d24ec8e595910a25898c081f91a2",
+  "payloads": [
+    {
+      "relative_path": "preserve_ceta_complete.py",
+      "category": "functional_tool",
+      "base_sha256": "425cb5ab10af2842e5c154fa69bc018113a09784cef2357ccacbd728e0f69d25",
+      "candidate_sha256": "a6a4e3c2ba47674a8c9b8771e01ac1d6c12333f1e1f9ac464373ff9132d1aa51",
+      "bytes": 102700,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp4-20261014\\originals\\preserve_ceta_complete.py",
+      "physical_LOC": {
+        "added": 45,
+        "removed": 0
+      },
+      "meaningful_physical_delta": {
+        "added": 41,
+        "removed": 0
+      }
+    },
+    {
+      "relative_path": "test_preserve_ceta_complete.py",
+      "category": "test_source",
+      "base_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "candidate_sha256": "9eaf09fd448813f3359cf404f2f81464493dd1d697561b4bede20eafe24688bc",
+      "bytes": 67690,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp4-20261014\\originals\\test_preserve_ceta_complete.py",
+      "physical_LOC": {
+        "added": 0,
+        "removed": 0
+      },
+      "meaningful_physical_delta": {
+        "added": 0,
+        "removed": 0
+      }
+    },
+    {
+      "relative_path": "test_provenance.py",
+      "category": "test_source",
+      "base_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "candidate_sha256": "a4377bba9a3fc3dc41799b0c0f341ac554193dd65e43eb032c3e956978e0b086",
+      "bytes": 38615,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp4-20261014\\originals\\test_provenance.py",
+      "physical_LOC": {
+        "added": 0,
+        "removed": 0
+      },
+      "meaningful_physical_delta": {
+        "added": 0,
+        "removed": 0
+      }
+    },
+    {
+      "relative_path": "test_current_policy_fencing.py",
+      "category": "test_source",
+      "base_sha256": null,
+      "candidate_sha256": "e31bed9e31707292cb76e9535746324df901a31a133b793754a5ed87a2fd564b",
+      "bytes": 13808,
+      "before_image": null,
+      "physical_LOC": {
+        "added": 209,
+        "removed": 0
+      },
+      "meaningful_physical_delta": {
+        "added": 194,
+        "removed": 0
+      }
+    },
+    {
+      "relative_path": "run_preservation_tests.py",
+      "category": "test_automation",
+      "base_sha256": "cb59f0ba2cc0f511a33837e72024da7f63c1806fad04b1737463c3a809f3cf83",
+      "candidate_sha256": "c06c8c06502722ff91371e9b273c2256e09a825d5d2cc881786d1302c7b31991",
+      "bytes": 3608,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp4-20261014\\originals\\run_preservation_tests.py",
+      "physical_LOC": {
+        "added": 1,
+        "removed": 1
+      },
+      "meaningful_physical_delta": {
+        "added": 1,
+        "removed": 1
+      }
+    },
+    {
+      "relative_path": "README.md",
+      "category": "documentation",
+      "base_sha256": "139185f78fecdaf698bb9bb3257ebdf0aa585473629729f7e6e1f1b2c39a4b72",
+      "candidate_sha256": "c036fda20cb8d27d696f1c2268e361f243564604c0aa21a9114dcbd9ac4a43e9",
+      "bytes": 12601,
+      "before_image": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\hp4-20261014\\originals\\README.md",
+      "physical_LOC": {
+        "added": 18,
+        "removed": 1
+      }
+    }
+  ],
+  "independent_findings_repaired": [
+    "HP3-F01",
+    "HP3-F02"
+  ],
+  "prior_failure": {
+    "receipt_sha256": "ce050c96a5937424e7de466aefaa4834b9de974414a72a657b9b295346503940",
+    "raw_sha256": "fbe47f5725bac01cc14dcb6c28510ec4aff04b3febd028ceaac56e20250148e7",
+    "tests": 7,
+    "failures": 4
+  },
+  "tests": {
+    "total": 120,
+    "reused_original": 110,
+    "reused_independent_hostile": 7,
+    "newly_authored": 3,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 184.002,
+    "receipt_sha256": "ec83595a3750043b8607685f9c0cadc57e171812bc61975aaf4cdbe869072749",
+    "raw_sha256": "4e3f76fca29e176fb218627eee175c173cd5718d2ffa2c550532e789ae5ae3fa"
+  },
+  "newly_authored_test_meaningful_LOC": 54,
+  "new_test_file_physical_LOC_includes_reused_review_methods": true,
+  "independent_provenance_review_sha256": "530a634c2c7cf6054178ebf636dc27570e2f3e88aa29a7817d730d40ccecd3e5",
+  "external_capture_or_admission": false,
+  "active_product_changes": 0,
+  "independent_acceptance": "PENDING"
+}

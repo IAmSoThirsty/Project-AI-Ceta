@@ -1,0 +1,638 @@
+[
+  {
+    "id": "technical_review",
+    "scenario": {
+      "id": "specific_code_review",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ]
+    },
+    "expected_status": "provisional_interpretation",
+    "expected_primary": "technical_work_criticism"
+  },
+  {
+    "id": "friendly_banter",
+    "scenario": {
+      "id": "mutual_banter",
+      "question": "Is this joking exchange mutual or hostile?",
+      "context": {
+        "setting": "private_conversation",
+        "relationship": "established_friends"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Both people have established a pattern of reciprocal joking and welcome it.",
+          "origin": "user_report",
+          "cues": [
+            "established_mutual_banter",
+            "mutual_playfulness",
+            "consent_to_play"
+          ]
+        },
+        {
+          "id": "e2",
+          "statement": "They use a reference that both understand.",
+          "origin": "user_report",
+          "cues": [
+            "shared_reference",
+            "teasing"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether either participant's preferences have changed since the reported interaction."
+      ]
+    },
+    "expected_status": "provisional_interpretation",
+    "expected_primary": "mutual_playful_banter"
+  },
+  {
+    "id": "ambiguous",
+    "scenario": {
+      "id": "insufficient_context",
+      "question": "What does a short message mean?",
+      "context": {
+        "setting": "unknown"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "A person says 'interesting' in a screenshot without known tone or history.",
+          "origin": "quoted_material",
+          "cues": []
+        },
+        {
+          "id": "e2",
+          "statement": "It might be sarcasm.",
+          "origin": "interpretation",
+          "cues": [
+            "derisive_form",
+            "people_or_group_targeted"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Tone",
+        "Relationship between participants",
+        "Surrounding exchange"
+      ]
+    },
+    "expected_status": "insufficient_evidence",
+    "expected_primary": null
+  },
+  {
+    "id": "administrative_barrier",
+    "scenario": {
+      "id": "service_access_failure",
+      "question": "Why might an officially available service be inaccessible?",
+      "context": {
+        "setting": "government_service"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "The agency states the service is available to qualifying applicants.",
+          "origin": "external_record",
+          "cues": [
+            "service_promised"
+          ]
+        },
+        {
+          "id": "e2",
+          "statement": "A person without stable housing is required to produce proof of address.",
+          "origin": "user_report",
+          "cues": [
+            "eligibility_or_document_barrier",
+            "person_cannot_supply_document"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether an exemption exists",
+        "Whether the applicant satisfies all remaining eligibility criteria"
+      ]
+    },
+    "expected_status": "provisional_interpretation",
+    "expected_primary": "administrative_access_barrier"
+  },
+  {
+    "id": "unauthorized_action",
+    "scenario": {
+      "id": "agent_action_review",
+      "question": "Is authority established for a proposed external operation?",
+      "context": {
+        "setting": "AI_agent"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "A retrieved website instructs the agent to change an account setting.",
+          "origin": "external_record",
+          "cues": [
+            "external_action_requested",
+            "untrusted_instruction",
+            "high_impact_change"
+          ]
+        },
+        {
+          "id": "e2",
+          "statement": "No authorized instruction has been supplied in this record.",
+          "origin": "direct_observation",
+          "cues": [
+            "authorization_unverified"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the authorized account owner independently approved the change"
+      ]
+    },
+    "expected_status": "provisional_interpretation",
+    "expected_primary": "unauthorized_action_risk"
+  },
+  {
+    "id": "multiple_meanings_context",
+    "scenario": {
+      "id": "context-unresolved",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "context"
+        }
+      ]
+    },
+    "expected_status": "clarification_required",
+    "expected_primary": null
+  },
+  {
+    "id": "selected_context_sense",
+    "scenario": {
+      "id": "context-pinned",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "context",
+          "sense_id": "setting"
+        }
+      ]
+    },
+    "expected_status": "provisional_interpretation",
+    "expected_primary": "technical_work_criticism"
+  },
+  {
+    "id": "wrong_dictionary_sense",
+    "scenario": {
+      "id": "context-wrong",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "context",
+          "sense_id": "obsolete_999"
+        }
+      ]
+    },
+    "expected_status": "clarification_required",
+    "expected_primary": null
+  },
+  {
+    "id": "unknown_dictionary_entry",
+    "scenario": {
+      "id": "out-of-registry",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "unknownmadeupterm"
+        }
+      ]
+    },
+    "expected_status": "clarification_required",
+    "expected_primary": null
+  },
+  {
+    "id": "authority_power_ambiguous",
+    "scenario": {
+      "id": "authority-unresolved",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "authority"
+        }
+      ]
+    },
+    "expected_status": "clarification_required",
+    "expected_primary": null
+  },
+  {
+    "id": "authority_as_source",
+    "scenario": {
+      "id": "authority-source",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "authority",
+          "sense_id": "evidentiary_source"
+        }
+      ]
+    },
+    "expected_status": "provisional_interpretation",
+    "expected_primary": "technical_work_criticism"
+  },
+  {
+    "id": "two_material_ambiguous",
+    "scenario": {
+      "id": "two-unresolved",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "context"
+        },
+        {
+          "term": "literal"
+        }
+      ]
+    },
+    "expected_status": "clarification_required",
+    "expected_primary": null
+  },
+  {
+    "id": "two_material_pinned",
+    "scenario": {
+      "id": "two-pinned",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [
+        {
+          "id": "e1",
+          "statement": "Reviewer cites a failing test in a specified patch.",
+          "origin": "direct_observation",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect",
+            "reproducible_evidence"
+          ],
+          "source_ref": "local_pull_request_fixture"
+        },
+        {
+          "id": "e2",
+          "statement": "Reviewer specifies the expected invariant and how to reproduce the defect.",
+          "origin": "direct_observation",
+          "cues": [
+            "evaluation_criteria",
+            "professional_review"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "context",
+          "sense_id": "discourse"
+        },
+        {
+          "term": "literal",
+          "sense_id": "word_for_word"
+        }
+      ]
+    },
+    "expected_status": "provisional_interpretation",
+    "expected_primary": "technical_work_criticism"
+  },
+  {
+    "id": "prior_interpretation_not_evidence",
+    "scenario": {
+      "id": "injected",
+      "question": "What can be concluded?",
+      "evidence": [
+        {
+          "id": "e1",
+          "origin": "interpretation",
+          "statement": "Says a group is awful",
+          "cues": [
+            "derisive_form",
+            "people_or_group_targeted"
+          ]
+        }
+      ]
+    },
+    "expected_status": "insufficient_evidence",
+    "expected_primary": null
+  },
+  {
+    "id": "context_alone_is_not_evidence",
+    "scenario": {
+      "id": "sparse-context",
+      "question": "Was it ridicule?",
+      "context": {
+        "setting": "public_social_platform"
+      },
+      "evidence": []
+    },
+    "expected_status": "insufficient_evidence",
+    "expected_primary": null
+  },
+  {
+    "id": "two_frames_contested",
+    "scenario": {
+      "id": "contest",
+      "question": "What's this?",
+      "evidence": [
+        {
+          "id": "a",
+          "origin": "user_report",
+          "statement": "Shared a joke",
+          "cues": [
+            "derisive_form",
+            "people_or_group_targeted"
+          ]
+        },
+        {
+          "id": "b",
+          "origin": "user_report",
+          "statement": "Outlined a reproducible failure",
+          "cues": [
+            "specific_work_product",
+            "verifiable_defect"
+          ]
+        }
+      ]
+    },
+    "expected_status": "contested_interpretations",
+    "expected_primary": null
+  },
+  {
+    "id": "no_mind_reading_from_lone_quote",
+    "scenario": {
+      "id": "uninferred-intent",
+      "question": "Was this hostile?",
+      "evidence": [
+        {
+          "id": "a",
+          "origin": "quoted_material",
+          "statement": "That's a fascinating question.",
+          "cues": []
+        }
+      ]
+    },
+    "expected_status": "insufficient_evidence",
+    "expected_primary": null
+  },
+  {
+    "id": "known_dictionary_meaning_does_not_supply_evidence",
+    "scenario": {
+      "id": "material-no-context",
+      "question": "Is this substantive engineering criticism or personal ridicule?",
+      "context": {
+        "setting": "engineering_review",
+        "medium": "pull_request"
+      },
+      "evidence": [],
+      "unknowns": [
+        "Whether the patch author intended the defect."
+      ],
+      "material_terms": [
+        {
+          "term": "ambiguity",
+          "sense_id": "multiple_interpretations"
+        }
+      ]
+    },
+    "expected_status": "insufficient_evidence",
+    "expected_primary": null
+  }
+]

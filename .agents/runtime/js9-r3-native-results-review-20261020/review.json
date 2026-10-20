@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "at": "2026-10-20T11:07:43.477701+00:00",
+  "review_type": "Independent Collaborative Review of actual native engineering results",
+  "reviewer": "/root/recovery_join_review20",
+  "executor": "/root",
+  "tool_author": "/root/recovery_regression20",
+  "decision": "approved",
+  "exit_status": 0,
+  "packet": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/PACKET.json",
+    "sha256": "32575147e478c63ead51c6269af9e22eebe06ccdc74619cdb04e46231fe9ac82"
+  },
+  "candidate_manifest": {
+    "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/MANIFEST-Q5.json",
+    "sha256": "cce2c8e2c3a31fbedf5c2d83b2d15d499a93030c38ebe0c1e4545b868ef99acf"
+  },
+  "scope": "Actual R3 native-store18 and native-observer6 terminal results, retirement and separate parent corroboration only",
+  "verification": {
+    "repository_relative_path": ".agents/runtime/js9-r3-native-results-review-20261020/VERIFICATION.json",
+    "sha256": "871792503cd5c5785664ae92a60edce153916780e0934b423dcf7f63130a9994"
+  },
+  "verification_checks": 65,
+  "cohorts": {
+    "native-store": {
+      "terminal": {
+        "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/native_store_r3/RESULT.json",
+        "sha256": "bc4c312f7fe9aec7a5ff15f02b317c15c41ded466adce4cde1d5110e16c92711"
+      },
+      "parent_corroboration": {
+        "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/native_store_r3-CORROBORATION.json",
+        "sha256": "6ae42ba58f5284ebf429bb84d21056847dae7df8fc63fb4805acc335c7fbddc0"
+      },
+      "root_command": {
+        "repository_relative_path": ".agents/runtime/js9-root-r3-execution-20261020/native-store-COMMAND.json",
+        "sha256": "51f9b90f77a635c83b7b9d4078d8d9455babf511313812dceae04bcb62fc6351"
+      },
+      "root_terminal": {
+        "repository_relative_path": ".agents/runtime/js9-root-r3-execution-20261020/native-store-TERMINAL.json",
+        "sha256": "1019eecf255a25b4dc8ff023233a715f16fd133dfabb86527a46f7175e161309"
+      },
+      "raw": {
+        "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/native_store_r3/RAW.txt",
+        "sha256": "3a504f6ee860fc4a7969d4aff6d6cdb368f75474b79324c2c548cd7dde27f99e"
+      },
+      "tests": 18,
+      "root_started_at": "2026-10-20T10:59:43.207330+00:00",
+      "root_finished_at": "2026-10-20T11:00:30.405365+00:00",
+      "native_child_owner": {
+        "pid": 2444,
+        "creation_time": 134369675927407106,
+        "image_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14"
+      },
+      "native_child_exit": 0,
+      "retirement": {
+        "closed": true,
+        "process_closed": true,
+        "thread_closed": true,
+        "job_closed": true,
+        "startup_handles_closed": true
+      },
+      "details": {
+        "binding_custody": 20,
+        "physical_SQLite_objects": 19,
+        "streams": 4,
+        "SQLite_database_paths_missing": 19
+      }
+    },
+    "native-observer": {
+      "terminal": {
+        "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/native_observer_r3/native.json",
+        "sha256": "21611df819613b92446efaecae4513630782cb33f3c961cae107ce58e15d3a30"
+      },
+      "parent_corroboration": {
+        "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/native_observer_r3-CORROBORATION.json",
+        "sha256": "af5163b7a9ed2fd475c35885c877f80945cccb8b49a79889fd2d541b5346960a"
+      },
+      "root_command": {
+        "repository_relative_path": ".agents/runtime/js9-root-r3-execution-20261020/native-observer-COMMAND.json",
+        "sha256": "cb7088fc6a608f9f9737699353c78add45a274de13ad9ea9c8c53f5f331ce04c"
+      },
+      "root_terminal": {
+        "repository_relative_path": ".agents/runtime/js9-root-r3-execution-20261020/native-observer-TERMINAL.json",
+        "sha256": "5ed182ce4fd5d2c3051b36acd4068b3343d639925f0c6f8e04e549320f0eeeec"
+      },
+      "raw": {
+        "repository_relative_path": ".agents/runtime/js9-runtime-20261020/successor-r3/native_observer_r3/native.txt",
+        "sha256": "fab3d4430e11450b5ca524c7f545239d4a6f241dfad99f0b9d686ef4e27a18cc"
+      },
+      "tests": 6,
+      "root_started_at": "2026-10-20T11:00:18.168592+00:00",
+      "root_finished_at": "2026-10-20T11:01:06.542235+00:00",
+      "native_child_owner": {
+        "pid": 5656,
+        "creation_time": 134369676303550359,
+        "image_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14"
+      },
+      "native_child_exit": 0,
+      "retirement": {
+        "closed": true,
+        "process_closed": true,
+        "thread_closed": true,
+        "job_closed": true,
+        "startup_handles_closed": true
+      },
+      "details": {
+        "nominal_processes": 17,
+        "targets": 8,
+        "observer_helpers": 9,
+        "custody_groups": {
+          "owned_process": 17,
+          "observer_custody": 9,
+          "query_lease": 10,
+          "source_pin": 16,
+          "native_clock": 6,
+          "observer_owner": 7
+        },
+        "native_fixture_receipts": 6,
+        "retained_observations": 9,
+        "raw_frames": 9,
+        "controlled_observation_failures": {
+          "OSError": 1,
+          "ContractError": 1
+        },
+        "exit_codes": {
+          "125": 8,
+          "0": 9
+        }
+      }
+    }
+  },
+  "Source_baseline": {
+    "repository_relative_path": ".agents/runtime/js8-20261015/amendment-report1/ACCEPTED-SOURCE-BASELINE.json",
+    "sha256": "5d001e3144805864048edf165e7124fdba21f8d99fc01b36e1f7463877b68bb0"
+  },
+  "accepted_Source352_bytes_unchanged": true,
+  "actual_execution_receipts_verified": true,
+  "actual_Parent_Git_witness_verified": true,
+  "current_read_only_Source_environment_fixture_native_facts_verified": true,
+  "proof_limits": [
+    "Retirement is verified from exact retained owner/resource records and their source-bound probes. No current process, handle, profile or system-wide scan was performed.",
+    "All19 recorded SQLite objects have positive physical closed probes; their database path fields are null, so this receipt is not an exact SQLite-path inventory.",
+    "Observer negative-case receipts intentionally contain rejected/control observations, including diagnostic failures; actual unittest failures/errors/skips are empty.",
+    "The native observer child receipt has no exit_status field; its actual parent child_exit0 and Root terminal0 establish process termination status.",
+    "This acceptance covers only the two engineering cohorts. Candidate-full, publication, destination-full, governed real effect and whole-product acceptance remain separate."
+  ],
+  "remaining_blocking_findings": [],
+  "existing_issue_classification": [
+    {
+      "id": "R3-NATIVE-EVIDENCE-LIMIT-01",
+      "classification": "not blocking current task",
+      "evidence": "resource_observer.py:_connection_row records a database path only for an exact str; all19 store SQLite rows have database:null.",
+      "consequence": "The physical closed-object probes support closure; these receipts do not establish an exact SQLite database-path inventory."
+    }
+  ],
+  "preserved_verifier_failure": {
+    "repository_relative_path": ".agents/runtime/js9-r3-native-results-review-20261020/VERIFIER-REPAIR.json",
+    "sha256": "97cda82e16b8034c29a606f95214f05cb5f0065b1b5e405321759356153925f2"
+  },
+  "verifier_command_provenance": {
+    "repository_relative_path": ".agents/runtime/js9-r3-native-results-review-20261020/VERIFIER-COMMAND-PROVENANCE.json",
+    "sha256": "7923b51bf026a1cd27cc924d901cbff7002d8c98c995967acfa7f925f832d122"
+  },
+  "skill_used": {
+    "name": "epistemic-status-enforcer",
+    "version": "0.1.0",
+    "governing_version": "thirsty-constitution-v0.1"
+  },
+  "remaining_required_product_gates": [
+    "Terminal accepted candidate-full2622 result and independent review",
+    "Leased CAS publication of exactly31 Source paths and destination verification",
+    "Terminal accepted destination-full2622 and new accepted Source baseline",
+    "Separate application startup, intended-interface operation and governed authorization-to-effect evidence"
+  ],
+  "native_test_rerun": false,
+  "live_process_handle_or_profile_scan": false,
+  "actual_CLI_review_claim": false,
+  "Source_publication": false,
+  "new_Source_accepted": false,
+  "full_product_complete": false,
+  "human_profile_or_no_profile_permission_issued": false
+}

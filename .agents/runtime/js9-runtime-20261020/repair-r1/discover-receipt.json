@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "js9-composition-repair-r1-20261020",
+  "node_id": "discover",
+  "executor_id": "/root/recovery_regression20",
+  "started_at": "2026-10-20T09:15:40.243440+00:00",
+  "finished_at": "2026-10-20T09:15:40.658722+00:00",
+  "input_hash": "0f70230627316e7966bda9ab89aae850c08b94b508280a46df2664c8938b58f0",
+  "changed_files": [],
+  "result": {
+    "blocker": "Independent P2 pre-API partial NativeStoreBinding cannot close",
+    "frozen530_manifest_sha256": "effb6bf037cf3f5d30e487fc19aacfec3bbfff1030275a0bed772c05d6cda13f",
+    "inspected_native_constructors": [
+      "_ViewAPI.__init__",
+      "_IsolationAPI.__init__",
+      "_API.__init__"
+    ],
+    "native_file_handles_acquired_by_API_constructors": false,
+    "allowed_changes": [
+      "src/ceta/identity/native_owner_view.py",
+      "tests/contract/test_native_runtime_composition.py"
+    ],
+    "native_execution": false
+  },
+  "commands": [],
+  "validations": [
+    {
+      "name": "exact_frozen530_pins_and_beforeimages",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

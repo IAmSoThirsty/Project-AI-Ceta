@@ -1,0 +1,77 @@
+{
+  "schema_version": "1",
+  "observed_at_utc": "2026-10-09T03:41:30.866149+00:00",
+  "scope": "DECLARED_BASELINE_ALLOCATION_REFERENCES_AND_DEPENDENCY_GRAPHS_ONLY",
+  "result": "PASS",
+  "errors": [],
+  "registry_counts": {
+    "requirements": 175,
+    "components": 25,
+    "packages": 28,
+    "cases": 128,
+    "gates": 8
+  },
+  "input_sha256": {
+    "PACKAGE_MANIFEST.json": "ea6d515e6437d0933b58e178ac5d9b747b71aba5bcfd54ff70dd463c47bda311",
+    "requirements/requirements.json": "e2992051ff397409e9a4a4a918f31137421315ae990ba851cb0fb5c9e5aeb3ae",
+    "architecture/components.json": "e063e8857f087936218331db1a146c6c6205dc015caacc75e3cc57f7e77e3cda",
+    "build/work_packages.json": "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017",
+    "acceptance/scenarios.json": "7ab7add1e7889a6a0ce1690ce29be8d7431b6eb4bcfc8a75608f4f0c7148841c",
+    "build/gates.json": "04afba11afa8a707ac70651d2ef26efed65d75b0d6d6edde44c2399c2a36848b",
+    ".local-build-cache/restoration-proof/requirements/requirements.json": "3be25882c32a1aad5ad24e1486b4c2871b716add28af06bb5df81c1efe0a9410",
+    ".local-build-cache/restoration-proof/architecture/components.json": "b15d5d54c510b2b5ffc4093235845ee64ffdd7e2dc210a4bc0b5ef19f813df07",
+    ".local-build-cache/restoration-proof/build/work_packages.json": "b6864656c999d496f1a2c10dcfef2dad8ca3003448d33062802b027811aa69de",
+    ".local-build-cache/restoration-proof/acceptance/scenarios.json": "7ab7add1e7889a6a0ce1690ce29be8d7431b6eb4bcfc8a75608f4f0c7148841c",
+    ".local-build-cache/restoration-proof/build/gates.json": "04afba11afa8a707ac70651d2ef26efed65d75b0d6d6edde44c2399c2a36848b"
+  },
+  "checker_sha256": "8b1ff56c9167eb7c490704c8637e8f5b7699e7d72389dc11826826a7b06a0825",
+  "runtime_qualification": "NOT_RUN",
+  "interface_implementation": "NOT_VERIFIED",
+  "semantic_source_conformance": "NOT_EVALUATED",
+  "independent_review": "NOT_PERFORMED",
+  "gate_a": "NOT_CLOSED",
+  "status_promotion": "NONE",
+  "execution": {
+    "command_argv": [
+      "T:\\00-Active\\CETA-desktop-delivery-20260906\\rebuild_ios\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\tools\\verify_allocations.py"
+    ],
+    "cwd": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package",
+    "shell_login": false,
+    "started_at_utc": "2026-10-09T03:41:30.236435+00:00",
+    "ended_at_utc": "2026-10-09T03:41:30.943153+00:00",
+    "returncode": 0,
+    "timed_out": false,
+    "log": "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\allocation-final30.txt",
+    "log_sha256": "49e2324781731fc15fc2e3acfd2cff0be552e3c8f9c1747b6f3e305bc711fb1a",
+    "checker_sha256": "8b1ff56c9167eb7c490704c8637e8f5b7699e7d72389dc11826826a7b06a0825",
+    "interpreter_before_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+    "interpreter_after_sha256": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+    "helper_before_sha256": "bd3ddc8e18eedc196acc1fdfe318d52869d5eb38fdc56885e663d83bf723dd4c",
+    "helper_after_sha256": "bd3ddc8e18eedc196acc1fdfe318d52869d5eb38fdc56885e663d83bf723dd4c",
+    "source_inventory_at_both_boundaries": true,
+    "new30_ledger_sha256_before": {
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\request_compiler_continuation_20261008_30.json": "c2b0c530589b86788c5325e8c7dc4434ece86e6a35603a960ae0186d5fb0976c",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\unified_contract_continuation_20261008_30.json": "cfaa83becf33aa794f46cc752760acd0c839e45fe6441c25976ce1b9d059def1",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\source_authority_register.json": "10682426df02899130399213193ffea24e10d5fb45bd1dc440ecec48b14ba2ec",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\requirements\\atomic_tickets.json": "541883b59ccecb59c5269530a0f85f0c1c767b0b08a48434883d147d5370a6dd",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\build\\progress.json": "10a8e19ca570b47a13faa60c7b4b280c1a72f42619092c8c054e4b082c78b9fb",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\continuity.json": "5b1fa80dbb4a300ecfeb66518f8ae086450901ab17d9f9438b5bd7b8ece0721d",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\issues_20261006.json": "f7b745225dd4aaf569abbdab7733cff86b87d60609158c674527bf39e4a62a96",
+      "T:\\00-Active\\CETA-desktop-delivery-20260906\\docs\\operations\\CONTINUITY_MAP.md": "6bc9c023ef08c3cc2740487ce6e35fd02a30e8f3279fb548712e3c6ebb6e1fcc"
+    },
+    "new30_ledger_sha256_after": {
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\request_compiler_continuation_20261008_30.json": "c2b0c530589b86788c5325e8c7dc4434ece86e6a35603a960ae0186d5fb0976c",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\unified_contract_continuation_20261008_30.json": "cfaa83becf33aa794f46cc752760acd0c839e45fe6441c25976ce1b9d059def1",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\source_authority_register.json": "10682426df02899130399213193ffea24e10d5fb45bd1dc440ecec48b14ba2ec",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\requirements\\atomic_tickets.json": "541883b59ccecb59c5269530a0f85f0c1c767b0b08a48434883d147d5370a6dd",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\build\\progress.json": "10a8e19ca570b47a13faa60c7b4b280c1a72f42619092c8c054e4b082c78b9fb",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\continuity.json": "5b1fa80dbb4a300ecfeb66518f8ae086450901ab17d9f9438b5bd7b8ece0721d",
+      "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\handoff\\issues_20261006.json": "f7b745225dd4aaf569abbdab7733cff86b87d60609158c674527bf39e4a62a96",
+      "T:\\00-Active\\CETA-desktop-delivery-20260906\\docs\\operations\\CONTINUITY_MAP.md": "6bc9c023ef08c3cc2740487ce6e35fd02a30e8f3279fb548712e3c6ebb6e1fcc"
+    }
+  }
+}

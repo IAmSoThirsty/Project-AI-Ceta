@@ -1,0 +1,1583 @@
+{
+  "schema_version": "1",
+  "scope": "OBSERVED_CURRENT_INCREMENT_AND_RETRIEVED_CETA_BASELINE",
+  "issues": [
+    {
+      "issue": "Native reference rejected the integer lexeme -0 accepted by the Python canonical profile.",
+      "classification": "FIXED_NOW",
+      "evidence_refs": [
+        "evidence/runtime/canonical-comparison-run-01.json",
+        "evidence/runtime/canonical-comparison-run-03.json"
+      ],
+      "repair": "Reject fractional/exponent lexemes first, then preserve integer -0 as canonical 0; native regression distinguishes -0.0 and -0e0."
+    },
+    {
+      "issue": "Invalid timezone minute +00:60 was normalized by datetime parsing; malformed schemas raised uncontrolled errors or accepted cycles.",
+      "classification": "FIXED_NOW",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-regressions-first-run.txt",
+        "evidence/runtime/desktop-contract-regressions-repair-run.txt",
+        "evidence/runtime/desktop-contract-source-bound-02.json"
+      ],
+      "repair": "Bound time syntax before calendar validation and validate schema structures, exact numeric bounds and reference cycles at construction."
+    },
+    {
+      "issue": "The shared installed JSON Schema oracle had no date-time checker.",
+      "classification": "ENVIRONMENT_DEPENDENCY_ISSUE_FIXED_NOW",
+      "evidence_refs": [
+        "evidence/runtime/all-record-shapes-run-01.txt",
+        "evidence/runtime/contract-test-dependencies-install-01.json",
+        "evidence/runtime/desktop-contract-source-bound-02.json"
+      ],
+      "repair": "Install declared oracle and RFC3339 dependencies in the new namespace's own isolated test environment; retain hash lock and complete installation report."
+    },
+    {
+      "issue": "293 lifecycle source applicability decisions and the whole executable contract remain unfinished.",
+      "classification": "BLOCKING_GATE_A_AND_DEPENDENT_WP02_WORK_INTERNAL_IMPLEMENTATION_REMAINS",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006.md",
+        "evidence/runtime/source-integrity-final-01.json",
+        "handoff/source_reconciliation_20261006_02.md",
+        "handoff/source_reconciliation_20261006_03.md",
+        "handoff/source_reconciliation_20261006_04.md",
+        "handoff/source_reconciliation_20261006_05.md",
+        "handoff/domain_feasibility_and_risk_20261006.json",
+        "handoff/source_reconciliation_20261006_06.md",
+        "handoff/source_reconciliation_20261006_07.md",
+        "handoff/architecture_contract_reconciliation_20261006_07.json",
+        "handoff/source_reconciliation_20261006_08.md",
+        "handoff/platform_transport_reconciliation_20261006_08.json",
+        "decisions/ADR-021.md",
+        "handoff/source_reconciliation_20261007_09.md",
+        "handoff/privacy_assurance_reconciliation_20261007_09.json",
+        "decisions/ADR-022.md",
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json",
+        "evidence/runtime/source-coverage-tests-source-bound-09.json"
+      ],
+      "next_executable_path": "Read complete original 107 Software Engineering and subsequent Volume V sources; continue all 293 remaining source decisions and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. The full finished-product objective remains active. No external blocker established."
+    },
+    {
+      "issue": "Retained baseline reports show failed strict 0.6B model formatting/quality checks and unqualified 4B inference/latency.",
+      "classification": "REQUIRES_FOLLOW_UP_WITHIN_WP08_WP18_WP19_NOT_BLOCKING_CURRENT_CONTRACT_WORK",
+      "evidence_refs": [
+        "T:/00-Active/CETA-desktop-delivery-20260906/docs/operations/CONTINUITY_MAP.md"
+      ],
+      "next_executable_path": "Qualify the CETA-owned pinned backend and model configuration under the new cycle after prerequisites; retain historical failures without inheriting historical passes."
+    },
+    {
+      "issue": "Nine event tests initially passed the fixture wrapper instead of its record instance to the strict decoder.",
+      "classification": "FIXED_NOW",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-03.json",
+        "evidence/runtime/desktop-contract-source-bound-04.json",
+        "evidence/runtime/desktop-contract-source-bound-05.json"
+      ],
+      "repair": "Unwrap the supplied instance in the test fixture; strict decoder behavior was not weakened."
+    },
+    {
+      "issue": "Initial read-only work-package inspection used the wrong JSON key and a combined source display truncated section 202.",
+      "classification": "FIXED_NOW_INSPECTION_ERRORS",
+      "repair": "Inspected actual keys (packages) and reread complete source 202; neither error changed source or runtime data."
+    },
+    {
+      "issue": "Defender Controlled Folder Access blocked shared Python from creating chat review files in Documents, confirmed by event 1123.",
+      "classification": "ENVIRONMENT_DEPENDENCY_ISSUE_ISOLATED_WITH_SAFE_OUTPUT_PATH",
+      "evidence_refs": [
+        "evidence/runtime/review-output-path-issue-01.json",
+        "evidence/runtime/review-output-copy-02.json"
+      ],
+      "repair": "Stage review bytes in the current specification ignored cache and copy with native PowerShell; twelve copies hash-verified. Protection settings unchanged."
+    },
+    {
+      "issue": "Read-only ActionProposal schema inspection assumed a read_set field and raised KeyError.",
+      "classification": "FIXED_NOW_INSPECTION_ERROR",
+      "evidence_refs": [
+        "decisions/ADR-019.md",
+        "handoff/source_reconciliation_20261006_03.md"
+      ],
+      "repair": "Inspected actual resources/dependencies fields; introduced explicitly versioned internal metadata with negative public-dispatch test rather than silently amending the schema."
+    },
+    {
+      "issue": "Draft source002 allocation referenced nonexistent REQ-29-04; registry validation found the invalid reference before ledger updates.",
+      "classification": "FIXED_NOW_METADATA_REFERENCE",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_03.md"
+      ],
+      "repair": "Checked the complete existing REQ-29-01/02/03 groups and corrected the draft to those actual identifiers. Original requirement texts and obligations were preserved."
+    },
+    {
+      "issue": "Read-only continuity inspection used a nonexistent filename; a later read used desktop cwd for specification build files.",
+      "classification": "FIXED_NOW_INSPECTION_ERROR",
+      "repair": "Located actual handoff/continuity.json and reread specification WP-01/gates using absolute paths in the correct root. No project data changed."
+    },
+    {
+      "issue": "Typed error construction initially admitted noncanonical guidance and ignored explicit RECONCILE for a NOT_STARTED attempt.",
+      "classification": "FIXED_NOW",
+      "evidence_refs": [
+        "evidence/runtime/desktop-contract-source-bound-09.json",
+        "evidence/runtime/desktop-contract-source-bound-10.json"
+      ],
+      "repair": "Applied existing canonical Unicode validation during definition construction and preserved explicit reconciliation in the assessment; two retained failures now pass."
+    },
+    {
+      "issue": "Combined source008/case displays truncated; guessed IPC/status/effect names and a wrong-root test path failed read-only.",
+      "classification": "FIXED_NOW_INSPECTION_ERRORS",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_04.md"
+      ],
+      "repair": "Located actual paths with rg, read complete source008 and exact architecture/status/effect/case documents, and used absolute test paths; no source/data mutation from inspection errors."
+    },
+    {
+      "issue": "Source016 display truncated; read-only checks guessed a nonexistent checker path and absent requirements JSON key.",
+      "classification": "FIXED_NOW_INSPECTION_ERRORS",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_05.md"
+      ],
+      "repair": "Reread all source016 intervals, located verify_source_coverage.py with rg, and inspected actual requirements metadata before updating ledgers. No source or runtime data changed."
+    },
+    {
+      "issue": "Allocation checker initially reported formatted ContractError messages instead of stable error codes in manifest/mutation faults.",
+      "classification": "FIXED_NOW",
+      "evidence_refs": [
+        "evidence/runtime/allocation-source-bound-01.json",
+        "evidence/runtime/allocation-source-bound-02.json"
+      ],
+      "repair": "Preserved the original exception code in the reporting boundary; both injected faults still reject. All15 tests pass; no test weakened."
+    },
+    {
+      "issue": "A multi-file patch used incomplete README context and was rejected before mutation.",
+      "classification": "FIXED_NOW_INSPECTION_ERROR",
+      "repair": "Verified checker remained unchanged, applied exact separate patches and reran source-bound tests. No user work discarded."
+    },
+    {
+      "issue": "Combined source display exceeded model context; read-only path/name guesses and a requirement-field projection were incorrect.",
+      "classification": "FIXED_NOW_INSPECTION_ERRORS",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_07.md",
+        "handoff/architecture_contract_reconciliation_20261006_07.json"
+      ],
+      "repair": "Reread complete bounded original intervals; verified source hashes/line counts; located actual paths with rg and inspected JSON fields before authoring. No source/runtime data mutation."
+    },
+    {
+      "issue": "A PowerShell status-marker wildcard misclassified tracked paths and a guessed test path did not exist.",
+      "classification": "FIXED_NOW_INSPECTION_ERRORS",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261006_08.md"
+      ],
+      "repair": "Used exact StartsWith status classification and rg path discovery before specification mutation; no work was discarded or runtime/source data changed by the inspections."
+    },
+    {
+      "issue": "Preliminary combined metadata/schema displays truncated, a guessed ADR name was absent and a continuity read used specification cwd rather than the desktop root.",
+      "classification": "FIXED_NOW_INSPECTION_ERRORS_NOT_BLOCKING_CONTRACT_WORK",
+      "repair": "Read actual ADR-021, verified metadata fields and untruncated relevant schema projections, and read the authoritative desktop continuity at its absolute path before recording changes. No source/runtime data was changed by these inspections.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_09.md"
+      ]
+    },
+    {
+      "issue": "Increment09 finalizer expected a NOT_STARTED component label although the unchanged memory component is SPECIFIED_NOT_IMPLEMENTED.",
+      "classification": "FIXED_NOW_REPORTING_METADATA_ASSERTION",
+      "evidence_refs": [
+        "evidence/runtime/increment-09-finalization-first-failure.txt",
+        "evidence/runtime/increment-09-state-check.json"
+      ],
+      "repair": "Inspect actual before/current CMP-08, require the entire component to remain unchanged and its actual specified/unimplemented label. No assertion was disabled; first attempt failed before ledger/stage mutation."
+    },
+    {
+      "issue": "Coverage summary cached 53 assessed/353 pending despite 67/339 detailed rows.",
+      "classification": "FIXED_NOW_LEDGER_SUMMARY_AND_REJECTION_GUARD",
+      "repair": "Derive new summary from all detailed rows; reject contradictory or concealed counts without promoting conformance. First real rejection retained.",
+      "evidence_refs": [
+        "evidence/runtime/source-summary-stale-header-01.json",
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/source_reconciliation_20261007_10.md"
+      ]
+    },
+    {
+      "issue": "Source checker previously parsed metadata before its initial hash snapshot without binding those earlier read bytes.",
+      "classification": "FIXED_NOW_INTEGRITY_READ_SNAPSHOT_GAP",
+      "repair": "Guard each metadata path before read, bind parsed bytes to first snapshot, recheck all watched inputs/tool and disclose actual metadata/tool hashes.",
+      "evidence_refs": [
+        "evidence/runtime/source-coverage-tests-source-bound-09.json",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ]
+    },
+    {
+      "issue": "Original 072 has displaced lifecycle bodies; 101\u00e2\u20ac\u201c104 misplace human/AI roles under input/authority headings.",
+      "classification": "NOT_BLOCKING_CURRENT_RECONCILIATION_SOURCE_DEFECT_DOCUMENTED",
+      "next_executable_path": "Retain original identities and exact bodies; use the explicit body-role mapping, preserve authority clauses and keep actual input/cockpit scope and source acceptance review open.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_10.md",
+        "handoff/volume_iv_reconciliation_20261007_10.json"
+      ]
+    },
+    {
+      "issue": "Combined original105/106 display truncated and first patch tool-script syntax failed.",
+      "classification": "FIXED_NOW_INSPECTION_AND_TOOL_SCRIPT_ERRORS",
+      "repair": "Read each original in full with sufficient output budget; no ledger was changed by the syntax failure; corrected patch and verified final tests.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_10.md",
+        "evidence/runtime/source-coverage-tests-source-bound-09.json"
+      ]
+    },
+    {
+      "issue": "Remaining source reconciliation and unified executable contract before WP-02.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK_OPEN_INTERNAL_WORK",
+      "remaining_sources": 249,
+      "next_executable_path": "Read original 151 Data Engineering and the remaining 249 sources; complete full reconciliation and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. The full finished-product objective remains active.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_11.md",
+        "handoff/volume_v_reconciliation_20261007_11.json"
+      ]
+    },
+    {
+      "issue": "Original non-applicability summary fields are null despite substantive full-source clauses in Volume V.",
+      "classification": "FIXED_NOW_IN_WORKING_RECONCILIATION_PRESERVED_DERIVATIVE_LIMIT_DISCLOSED",
+      "repair": "Read complete originals and preserve exact actual clause bodies here; retain supplied original register metadata and source identities. Never interpret a null extracted summary as missing or exempt normative content.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_11.md",
+        "handoff/volume_v_reconciliation_20261007_11.json"
+      ]
+    },
+    {
+      "issue": "Exploration used undeclared guessed paths and a section selector with the wrong identifier representation; one combined requirement/context display truncated.",
+      "classification": "FIXED_NOW_INSPECTION_PATH_AND_SELECTOR_ERRORS",
+      "repair": "Use actual discovered paths and REQ identifiers; read all seven controlling specification documents fully. Every new original source had a complete, untruncated output and verified hash. No application/source mutation resulted.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_11.md",
+        "handoff/volume_v_reconciliation_20261007_11.json"
+      ]
+    },
+    {
+      "issue": "Increment10 review-copy preflight found an already-delivered unchanged historical test report.",
+      "classification": "FIXED_NOW_EXACT_HASH_EXISTING_ARTIFACT_REUSE_NO_OVERWRITE",
+      "evidence_refs": [
+        "evidence/runtime/increment-10-review-copy-first-failure.txt",
+        "evidence/runtime/review-output-copy-10.json"
+      ]
+    },
+    {
+      "issue": "Remaining full source reconciliation and unified executable contract before WP-02.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK_OPEN_INTERNAL_WORK",
+      "remaining_sources": 211,
+      "next_executable_path": "Read original 189 Cybersecurity Engineering and the remaining 211 sources; finish full source reconciliation and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. The full finished-product objective remains active.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_12.md",
+        "handoff/volume_vi_reconciliation_20261007_12.json"
+      ]
+    },
+    {
+      "issue": "Volume VI derivative null non-applicability fields omit substantive full-source clauses.",
+      "classification": "FIXED_NOW_IN_WORKING_RECONCILIATION_PRESERVED_DERIVATIVE_LIMIT_DISCLOSED",
+      "repair": "Preserve exact full-source condition bodies in this working record. Keep original source/register metadata unchanged; null summaries never establish an exemption.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_12.md",
+        "handoff/volume_vi_reconciliation_20261007_12.json"
+      ]
+    },
+    {
+      "issue": "Current continuity mislabeled151; WP-01 source count fields disagreed; SPEC-28 was mistaken for the separate training path.",
+      "classification": "FIXED_NOW_CONTINUITY_SOURCE_LABEL_COUNTS_AND_TRAINING_BOUNDARY",
+      "repair": {
+        "section_151": "Database Engineering; Data Engineering is section153. Historical reports remain preserved.",
+        "wp01_source_applicability": "The prior field stated113/293 while its source_reconciliation_state and coverage stated157/249. Both fields now use actual195/211.",
+        "spec28": "NIRL/Chimera monitor and isolate. Training is the separately authorized/budgeted REQ-23-04 and REQ-24-05 path."
+      },
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_12.md",
+        "handoff/volume_vi_reconciliation_20261007_12.json"
+      ]
+    },
+    {
+      "issue": "One non-normative helper display truncated and exploratory metadata probes requested absent display fields.",
+      "classification": "FIXED_NOW_INSPECTION_DISPLAY_LIMIT_AND_METADATA_KEYS",
+      "repair": "Reread relevant helper tail; use actual original_title and acceptance_ids. All38 new normative originals and18 controls were completely read and hash-bound.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_12.md",
+        "handoff/volume_vi_reconciliation_20261007_12.json"
+      ]
+    },
+    {
+      "issue": "Remaining full-source and executable-contract reconciliation before WP-02.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK_OPEN_INTERNAL_WORK",
+      "remaining_sources": 187,
+      "next_executable_path": "Read original219 Legal and the remaining187 unresolved sources; complete full source reconciliation and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. Full finished-product objective stays active.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_13.md",
+        "handoff/volume_vii_reconciliation_20261007_13.json"
+      ]
+    },
+    {
+      "issue": "Volume VII null derivative condition summaries omit substantive original clauses.",
+      "classification": "FIXED_IN_WORKING_RECORD_PRESERVED_DERIVATIVE_LIMIT_DISCLOSED",
+      "repair": "Preserve exact actual condition bodies in the working record and retain original source/register fields unchanged.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_13.md",
+        "handoff/volume_vii_reconciliation_20261007_13.json"
+      ]
+    },
+    {
+      "issue": "Original198/199 related titles do not match actual lifecycle058\u00e2\u20ac\u201c060; shared-governance/role chapter identifiers have separate namespaces.",
+      "classification": "FIXED_IN_WORKING_REFERENCE_RESOLUTION_ORIGINALS_PRESERVED",
+      "repair": "Keep exact numeric lifecycle targets and actual titles distinct; firmware/embedded engineering references use actual068/069 where their subject applies. Do not rewrite original labels or treat a mistaken related-title as an authority/requirement.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261007_13.md",
+        "handoff/volume_vii_reconciliation_20261007_13.json"
+      ]
+    },
+    {
+      "issue": "Remaining full-source and executable-contract reconciliation before WP-02.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK_OPEN_INTERNAL_WORK",
+      "remaining_sources": 148,
+      "next_executable_path": "Read original259 Source Control Management and the remaining148 unresolved sources (258 was already assessed); complete full source reconciliation and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. Full finished-product objective stays active.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261008_14.md",
+        "handoff/volume_viii_reconciliation_20261008_14.json"
+      ]
+    },
+    {
+      "issue": "Volume VIII null derivative conditions omit39 substantive original non-applicability bodies.",
+      "classification": "FIXED_IN_WORKING_RECORD_PRESERVED_DERIVATIVE_LIMIT_DISCLOSED",
+      "repair": "Exact actual condition bodies are retained in the working record; original source/register fields remain unchanged.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261008_14.md",
+        "handoff/volume_viii_reconciliation_20261008_14.json"
+      ]
+    },
+    {
+      "issue": "Original232/239/247/249/253 related-title labels differ from actual hardware/runtime/accessibility/AI lifecycle targets.",
+      "classification": "FIXED_IN_WORKING_REFERENCE_RESOLUTION_ORIGINALS_PRESERVED",
+      "repair": "Keep original labels and numeric targets; bind actual substantive target paths and hashes in the four working resolutions.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261008_14.md",
+        "handoff/volume_viii_reconciliation_20261008_14.json"
+      ]
+    },
+    {
+      "issue": "Increment15 helper generator exact occurrence guard expected4 occurrences of3705 but inspected source has3; discovered117 count is6 rather than7.",
+      "classification": "FIXED_NOW",
+      "repair": "Exact expected counts corrected after inspection; all equality guards and AST validation retained. Failed attempt created no target or ledger changes; rerun succeeded.",
+      "evidence_refs": [
+        "evidence/runtime/increment-15-helper-repair.json"
+      ]
+    },
+    {
+      "issue": "Remaining full-source and executable-contract reconciliation before WP-02.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK_OPEN_INTERNAL_WORK",
+      "remaining_sources": 106,
+      "next_executable_path": "Read original301 Site Reliability Engineering and the remaining106 unresolved sources; complete full source reconciliation and the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. Full finished-product objective stays active.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261008_15.md",
+        "handoff/volume_ix_reconciliation_20261008_15.json"
+      ]
+    },
+    {
+      "issue": "Volume IX null derivative conditions omit43 substantive original non-applicability bodies.",
+      "classification": "FIXED_IN_WORKING_RECORD_PRESERVED_DERIVATIVE_LIMIT_DISCLOSED",
+      "repair": "Exact actual condition bodies are retained in the working record; original source/register fields remain unchanged.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261008_15.md",
+        "handoff/volume_ix_reconciliation_20261008_15.json"
+      ]
+    },
+    {
+      "issue": "Volume IX has five mismatched related-label groups resolved by actual titles/paths; Field Operations298 has no exact lifecycle title match.",
+      "classification": "FIVE_WORKING_RESOLUTIONS_FIXED_ONE_UNRESOLVED_LABEL_NOT_BLOCKING_CURRENT_TASK",
+      "repair": "Preserve original labels/numeric targets, five exact working resolutions and the ambiguous Field Operations label. Reconcile its substantive duties through the remaining operating/device sources without inventing an identifier.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261008_15.md",
+        "handoff/volume_ix_reconciliation_20261008_15.json"
+      ]
+    },
+    {
+      "issue": "Increment15 finalizer generator two exact occurrence guards mismatched inspected source counts.",
+      "classification": "FIXED_NOW",
+      "repair": "Corrected1 to2 and2 to3 after inspection; all equality/AST guards retained; failed attempts created no target or ledger mutations.",
+      "evidence_refs": [
+        "evidence/runtime/increment-15-helper-repair.json"
+      ]
+    },
+    {
+      "issue": "Vols X\u2013XII106 substantive original non-applicability bodies omitted by derivative metadata.",
+      "classification": "FIXED_IN_WORKING_RECORD_PRESERVED_DERIVATIVE_LIMIT_DISCLOSED",
+      "repair": "106 exact substantive non-applicability bodies retained; null original metadata unchanged.",
+      "evidence_refs": [
+        "handoff/source_reconciliation_20261008_16.md",
+        "handoff/volumes_x_xi_xii_reconciliation_20261008_16.json"
+      ]
+    },
+    {
+      "issue": "Working related-title and shared/front/role namespace mappings need exact path identity; prior298 Field Operations has no exact lifecycle title.",
+      "classification": "WORKING_MAPPINGS_FIXED_ONE_UNRESOLVED_LABEL_NOT_BLOCKING_INTERNAL_WORK",
+      "repair": "Retain exact reference proposal bytes and source hashes; preserve unresolved prior label and actual related duty sources. No original rewrite or false381/224 Licensing conflict.",
+      "evidence_refs": [
+        "handoff/volumes_x_xi_xii_reconciliation_20261008_16.json"
+      ]
+    },
+    {
+      "issue": "406 lifecycle assessment count alone does not establish full20-volume source reconciliation or unified executable contract.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK_OPEN_INTERNAL_WORK",
+      "next_executable_path": "Complete supplemental/front/reference/embedded-source reconciliation of the supplied 20-volume corpus, then finish the unified executable identity, policy, authenticated IPC, effect and migration contract before Gate A and WP-02. All406 lifecycle applicability assessments are working allocations, not full-source adoption or runtime qualification. Full finished-product objective stays active.",
+      "evidence_refs": [
+        "handoff/volumes_x_xi_xii_reconciliation_20261008_16.json",
+        "evidence/runtime/supplemental-corpus-provenance-16.json"
+      ]
+    },
+    {
+      "issue": "Root read-only metadata inspection used nonexistent entries key and mixed display exceeded budget.",
+      "classification": "FIXED_NOW",
+      "repair": "Correct sections key inspected; proposal rows/reference groups reread completely in bounded output. Failed inspection caused no file changes.",
+      "evidence_refs": [
+        "handoff/volumes_x_xi_xii_reconciliation_20261008_16.json"
+      ]
+    },
+    {
+      "issue": "Increment16 helper initially compared authorized current working files to immutable original package-manifest hashes.",
+      "classification": "FIXED_NOW",
+      "repair": "Failed preflight changed no ledgers or target records. Immutable source/specification guards retained; working controls bind exact current delegate/prior-record/allocation-evidence hashes instead of false original-byte equality.",
+      "evidence_refs": [
+        "evidence/runtime/increment-16-helper-repair.json",
+        "handoff/volumes_x_xi_xii_reconciliation_20261008_16.json"
+      ]
+    },
+    {
+      "issue": "Fresh source17 check rejected the formatted406-entry working ledger: WIRE_SIZE_LIMIT at $,1101499 bytes exceeds existing1048576 byte limit.",
+      "classification": "FIXED_NOW",
+      "repair": "Preserved oversized bytes and failed source17 report; compactly serialized the identical JSON object to935943 bytes. Strict loader accepted all content; checker limits and implementation unchanged. Fresh source18 check required.",
+      "evidence_refs": [
+        "evidence/runtime/source-integrity-final-17.json",
+        "evidence/runtime/increment-16-ledger-format-repair.json",
+        "evidence/runtime/source-integrity-final-18.json"
+      ],
+      "validation": "Fresh source18PASS642 original files/0unresolved; unchanged checker/limits; semantic content preserved."
+    },
+    {
+      "issue": "Supplemental review exposes five historical roadmap label groups, unresolved symbol/blank-source fidelity and qualified-version/native conformance gaps.",
+      "classification": "NOT_BLOCKING_CURRENT_INTERNAL_WORK_REQUIRES_FULL_CONTRACT_RECONCILIATION",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_17.json",
+        "evidence/runtime/supplemental-read-validation-17.json",
+        "evidence/runtime/edition-witness-byte-provenance-17.json"
+      ],
+      "next_executable_action": "Read exact supplied raw companions where present; preserve original labels and blanks, map actual identities/qualifiers, and retain remaining uncertainty. No invented owner intent or source repair."
+    },
+    {
+      "issue": "689full-witness metadata and471canonical-text witnesses describe different representation domains.",
+      "classification": "RESOLVED_COUNT_DOMAIN_AND_RAW_BYTE_IDENTITY_NOT_SEMANTIC_ADOPTION",
+      "evidence_refs": [
+        "evidence/runtime/edition-witness-byte-provenance-17.json"
+      ],
+      "resolution": "689=3embeddedinputs+510outermembers+176nestedmembers; allbytes/path/SHA/spans verified. Subtraction alone is not a missing-source proof."
+    },
+    {
+      "issue": "V16 historical evaluator does not acquire/hash referenced external artifacts; nonce and caller-revision mechanism does not establish durable concurrent authority; plaintext/sequential ratification tooling lacks current Windows custody proof. Operational labels require lossless scoped mapping.",
+      "classification": "NOT_BLOCKING_CURRENT_SOURCE_REVIEW_REQUIRES_EXECUTABLE_CONTRACT_AND_RUNTIME_QUALIFICATION",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_18.json",
+        "evidence/runtime/supplemental-read-validation-18-r3.json"
+      ],
+      "next_executable_action": "Specify actual authenticated identities, protected-resource snapshots, atomic durable permit consumption, independent readback, lossless status namespaces and Windows custody before activating effects."
+    },
+    {
+      "issue": "V17 structural359record review does not establish semantic/source-family leakage clearance, source-content hash recipe or actual training/evaluation;193source-status variants and definition-only state exception must remain explicit.",
+      "classification": "NOT_BLOCKING_CURRENT_INTERNAL_WORK_REQUIRES_CONTENT_AND_TRAINING_QUALIFICATION",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_18.json",
+        "evidence/runtime/supplemental-read-validation-18-r3.json"
+      ],
+      "next_executable_action": "Preserve exact namespaces/status variants, immutable definition projections and source hash domains; qualify content-based admission and heldout exposure independently before training or competence promotion."
+    },
+    {
+      "issue": "V14 missing glyphs are resolved from authentic embedded Markdown;46blank cockpit chapter acceptance boxes are verified source content gaps, while actual144IDs/two populated criteria/40OAT remain intact.",
+      "classification": "GLYPH_UNCERTAINTY_RESOLVED_SOURCE_CONTENT_GAP_RETAINED",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_18.json",
+        "evidence/runtime/supplemental-read-validation-18-r3.json"
+      ],
+      "next_executable_action": "Use exact17source glyphs in current contract interpretations; retain blank source evidence and qualify actual owner journeys without invented acceptance criteria."
+    },
+    {
+      "issue": "Initial root validation checker wrongly required a substring absent from the shortened owner source mark; two failed reports preserved, exact verified source-mark matching now passes.",
+      "classification": "FIXED_NOW_CHECKER_ONLY_NO_SOURCE_OR_LEDGER_DAMAGE_ESTABLISHED",
+      "evidence_refs": [
+        "evidence/runtime/supplemental-read-validation-18.json",
+        "evidence/runtime/supplemental-read-validation-18-r2.json",
+        "evidence/runtime/supplemental-read-validation-18-r3.json"
+      ],
+      "next_executable_action": "Use passing r3 checker bound to its exact helper/source/ledger bytes; never erase historical failed receipts."
+    },
+    {
+      "issue": "Inventory exclusion casing and silent os.walk traversal failures could produce incomplete/inappropriately broad observations.",
+      "classification": "FIXED_NOW",
+      "repair": "Casefold exclusions/onerror denial; peer confirmation and six passing tests.",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "issue": "Witness-set checking admitted a permutation of guide identities.",
+      "classification": "FIXED_NOW",
+      "repair": "Exact receipt-bound map commitment; first regression failure and corrected pass preserved.",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "issue": "Root reference module initially imported pathlib/types outside existing pure-leaf allowlist.",
+      "classification": "FIXED_NOW",
+      "repair": "Exact former module/raw failure preserved; pure string/tuple implementation passes unchanged boundary.",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "issue": "Six principal transition entries have unestablished direct/intermediate semantics.",
+      "classification": "BLOCKING_DEPENDENT_RUNTIME_AUTHORIZATION",
+      "repair": "TR04/06/09/11/13/20 denied; record exact source-backed amendment before dependent activation.",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "issue": "New evidence predicates do not authenticate owner callbacks, establish durable state or real qualification.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "repair": "Implement real identity/resource/store/verifier ownership and integrated atomic kernel/store/broker success/denial/replay/interruption tests; runtime remains explicitly unavailable.",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "issue": "Volume I retains14 undecided ratification matters; Volume19 retains analyzer/version/license/threshold/grammar qualifications and621 non-human-semantic catalog entries.",
+      "classification": "REQUIRES_SOURCE_RECONCILIATION_BEFORE_RELEVANT_ADOPTION",
+      "repair": "Retain exact source questions and decide only adopted duties; unselected technologies remain conditional and no historic analyzer result becomes current proof.",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "issue": "46 original owner acceptance bodies are blank; applicability completion is not conformance.",
+      "classification": "SOURCE_CONTENT_GAP_RETAINED_NOT_COMPLETION",
+      "repair": "Preserve exact original bytes; record real executable/owner acceptance evidence separately. Seven axes implemented without percentage inflation.",
+      "evidence_refs": [
+        "handoff/supplemental_reconciliation_20261008_19.json",
+        "handoff/unified_contract_continuation_20261008_19.json",
+        "evidence/runtime/desktop-contract-remediation-19-01.json"
+      ]
+    },
+    {
+      "issue": "Checkpoint validation separated from later replay/append",
+      "classification": "FIXED_NOW",
+      "repair": "Optional anchors checked in each actual transaction",
+      "failure": "evidence/runtime/desktop-history-review-regressions-20-03.json",
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json"
+      ]
+    },
+    {
+      "issue": "WAL assert removed by optimized Python",
+      "classification": "FIXED_NOW",
+      "repair": "Explicit storage-profile denial",
+      "failure": "evidence/runtime/desktop-history-review-regressions-20-03.json",
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json"
+      ]
+    },
+    {
+      "issue": "WAL changes between read-only and writer connections",
+      "classification": "FIXED_NOW",
+      "repair": "Actual WAL mode checked in every validation transaction",
+      "failure": "evidence/runtime/history-writer-profile-first-failure-20-01.txt",
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json"
+      ]
+    },
+    {
+      "issue": "LIKE underscore wildcard hid sqliteXcorrupt trigger",
+      "classification": "FIXED_NOW",
+      "repair": "Literal reserved-prefix GLOB; unknown schema rejected before insertion",
+      "failure": "evidence/runtime/history-schema-first-failure-20-01.txt",
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json"
+      ]
+    },
+    {
+      "issue": "First SQLite probe command array omitted output argument",
+      "classification": "FIXED_NOW",
+      "repair": "First source/receipt preserved; new20-02 probe records complete argument array",
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json"
+      ]
+    },
+    {
+      "issue": "Volume19 receipt002/003 labels retained literal1",
+      "classification": "FIXED_NOW",
+      "repair": "Separate correction receipt; original bytes preserved",
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json"
+      ]
+    },
+    {
+      "issue": "No authenticated serialized writer process, OS protected resources, independent checkpoint/signature trust, atomic grants/budgets/intents/queue/projections, IPC authority or broker/effect admission. Fixture scope/time/actor identities are synthetic.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "repair": "Continue complete Volume19 rule semantics and source decisions; extend existing store transaction to grants/reservations/intents/queue/projections, then actual kernel consume/revoke and authenticated IPC/resource/time owners with integrated tests; no unresolved edge receives runtime authority.",
+      "evidence_refs": [
+        "handoff/durable_history_continuation_20261008_20.json",
+        "handoff/unified_contract_continuation_20261008_20.json",
+        "evidence/runtime/desktop-history-final-20-07.json"
+      ]
+    },
+    {
+      "issue": "BaseException transaction unwind",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_FIXED",
+      "repair": "evidence/runtime/desktop-transactions-final-21-05.json",
+      "evidence_refs": [
+        "handoff/atomic_store_continuation_20261008_21.json",
+        "handoff/unified_contract_continuation_20261008_21.json",
+        "evidence/runtime/desktop-transactions-final-21-05.json",
+        "evidence/runtime/volume19-semantic-root-validation-21-01.json"
+      ]
+    },
+    {
+      "issue": "transaction/event chronology",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_FIXED",
+      "repair": "evidence/runtime/desktop-transactions-final-21-05.json",
+      "evidence_refs": [
+        "handoff/atomic_store_continuation_20261008_21.json",
+        "handoff/unified_contract_continuation_20261008_21.json",
+        "evidence/runtime/desktop-transactions-final-21-05.json",
+        "evidence/runtime/volume19-semantic-root-validation-21-01.json"
+      ]
+    },
+    {
+      "issue": "Boolean persisted counters",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_FIXED",
+      "repair": "evidence/runtime/desktop-transactions-final-21-05.json",
+      "evidence_refs": [
+        "handoff/atomic_store_continuation_20261008_21.json",
+        "handoff/unified_contract_continuation_20261008_21.json",
+        "evidence/runtime/desktop-transactions-final-21-05.json",
+        "evidence/runtime/volume19-semantic-root-validation-21-01.json"
+      ]
+    },
+    {
+      "issue": "mutable commit containers",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_FIXED",
+      "repair": "evidence/runtime/desktop-transactions-final-21-05.json",
+      "evidence_refs": [
+        "handoff/atomic_store_continuation_20261008_21.json",
+        "handoff/unified_contract_continuation_20261008_21.json",
+        "evidence/runtime/desktop-transactions-final-21-05.json",
+        "evidence/runtime/volume19-semantic-root-validation-21-01.json"
+      ]
+    },
+    {
+      "issue": "Volume19 source text/predicate/licensing/engine qualification conflicts",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Implement actual kernel-owned prepare/consume/revoke transactions against this store with complete owner-selected read sets, exact budget/intent semantics and both revoke/consume orderings; connect authenticated identity/resource/time/approval owners before any effect admission. Continue remaining source decisions and all qualification lanes.",
+      "evidence_refs": [
+        "handoff/atomic_store_continuation_20261008_21.json",
+        "handoff/unified_contract_continuation_20261008_21.json",
+        "evidence/runtime/desktop-transactions-final-21-05.json",
+        "evidence/runtime/volume19-semantic-root-validation-21-01.json"
+      ]
+    },
+    {
+      "issue": "Authenticated writer/IPC, complete kernel dependency selection, legal event/transition reducers, budget charging/conservation, single-use consume/revoke, protected resources, actual time/approval and effect admission remain open. Internal metadata and checkpoints confer no authority. Power-loss, installed, independent, hardware and endurance qualification NOT_RUN.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Implement actual kernel-owned prepare/consume/revoke transactions against this store with complete owner-selected read sets, exact budget/intent semantics and both revoke/consume orderings; connect authenticated identity/resource/time/approval owners before any effect admission. Continue remaining source decisions and all qualification lanes.",
+      "evidence_refs": [
+        "handoff/atomic_store_continuation_20261008_21.json",
+        "handoff/unified_contract_continuation_20261008_21.json",
+        "evidence/runtime/desktop-transactions-final-21-05.json",
+        "evidence/runtime/volume19-semantic-root-validation-21-01.json"
+      ]
+    },
+    {
+      "issue": "TR-06/TR-09/TR-11 owner question unanswered; fixture TR-07/TR-08 do not resolve other source transitions.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Resolve the outstanding source transition and allocation/settlement decisions; implement and test authenticated principal, trusted approval/time/resource owners and protected broker boundaries before runtime admission. Continue all agreed-scope source, physical/device/custody/distributed, installed, independent, hardware and endurance lanes; Gate A remains open.",
+      "evidence_refs": [
+        "handoff/kernel_transactions_continuation_20261008_22.json",
+        "handoff/unified_contract_continuation_20261008_22.json",
+        "handoff/source_reconciliation_20261008_22.md",
+        "evidence/runtime/desktop-kernel-final-22-05.json"
+      ]
+    },
+    {
+      "issue": "Seven-dimensional development allocation liability is not actual-use settlement, elapsed-time billing or refund policy.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Resolve the outstanding source transition and allocation/settlement decisions; implement and test authenticated principal, trusted approval/time/resource owners and protected broker boundaries before runtime admission. Continue all agreed-scope source, physical/device/custody/distributed, installed, independent, hardware and endurance lanes; Gate A remains open.",
+      "evidence_refs": [
+        "handoff/kernel_transactions_continuation_20261008_22.json",
+        "handoff/unified_contract_continuation_20261008_22.json",
+        "handoff/source_reconciliation_20261008_22.md",
+        "evidence/runtime/desktop-kernel-final-22-05.json"
+      ]
+    },
+    {
+      "issue": "Fixture owner ports and one-process model review do not establish authenticated OS principals, trusted approval/time/resource owners, protected effect linearization, independent evidence, installed operation, power-loss, hardware/device/custody/distributed or endurance qualification. Broker/runtime admission stays closed. TR-06/TR-09/TR-11 owner question is unanswered; TR-07/TR-08 mechanics start from an owner-bound PREPARED fixture basis. Source adoption and remaining transition decisions stay open. Seven-dimensional allocation liability is a versioned development engineering profile, not elapsed-time or actual-use billing, settlement or refund.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Resolve the outstanding source transition and allocation/settlement decisions; implement and test authenticated principal, trusted approval/time/resource owners and protected broker boundaries before runtime admission. Continue all agreed-scope source, physical/device/custody/distributed, installed, independent, hardware and endurance lanes; Gate A remains open.",
+      "evidence_refs": [
+        "handoff/kernel_transactions_continuation_20261008_22.json",
+        "handoff/unified_contract_continuation_20261008_22.json",
+        "handoff/source_reconciliation_20261008_22.md",
+        "evidence/runtime/desktop-kernel-final-22-05.json"
+      ]
+    },
+    {
+      "issue": "TR-06/TR-09/TR-11 and broker subject/caller/event attribution remain unresolved; technical peer evidence is not consent.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Complete authenticated UI/approval, trusted time, protected resource/broker ownership and the unanswered transition contract before positive runtime/effect admission. Complete enforceable native I/O/token-query occupancy and supervisor containment, restricted workers, independent observation and correlated result delivery. Continue the full20-volume/full28-package goal and physical/device/custody/distributed, installed, independent, hardware and endurance lanes.",
+      "evidence_refs": [
+        "handoff/local_ipc_continuation_20261008_23.json",
+        "handoff/unified_contract_continuation_20261008_23.json",
+        "handoff/source_reconciliation_20261008_23.md",
+        "evidence/runtime/desktop-ipc-repair-23-02.json",
+        ".local-build-cache/increment-23-ipc/pre_execution_cut.json"
+      ]
+    },
+    {
+      "issue": "Full native occupancy/token-query deadlines, restricted worker isolation and actual supervisor containment remain unqualified.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Complete authenticated UI/approval, trusted time, protected resource/broker ownership and the unanswered transition contract before positive runtime/effect admission. Complete enforceable native I/O/token-query occupancy and supervisor containment, restricted workers, independent observation and correlated result delivery. Continue the full20-volume/full28-package goal and physical/device/custody/distributed, installed, independent, hardware and endurance lanes.",
+      "evidence_refs": [
+        "handoff/local_ipc_continuation_20261008_23.json",
+        "handoff/unified_contract_continuation_20261008_23.json",
+        "handoff/source_reconciliation_20261008_23.md",
+        "evidence/runtime/desktop-ipc-repair-23-02.json",
+        ".local-build-cache/increment-23-ipc/pre_execution_cut.json"
+      ]
+    },
+    {
+      "issue": "Actual final test identities/logs support only the pinned development ingress test profile. Authentication is technical peer evidence, not human consent or positive kernel authority. Trusted approval/time/resource/revocation owners and broker/runtime effect admission remain closed. No full native occupancy bound, token-metadata deadline, restricted worker/production isolation, loaded-code attestation, publisher signing, independent/external/human conformance, installed, power-loss, hardware/device/custody/distributed or endurance qualification is claimed. Same-account ACLs and executable-file hashes do not establish independent trust domains. TR-06/TR-09/TR-11 remains unanswered; source adoption is unchanged and not ratified. Complete original B063/B068 and all128 original cases remain NOT_RUN.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Complete authenticated UI/approval, trusted time, protected resource/broker ownership and the unanswered transition contract before positive runtime/effect admission. Complete enforceable native I/O/token-query occupancy and supervisor containment, restricted workers, independent observation and correlated result delivery. Continue the full20-volume/full28-package goal and physical/device/custody/distributed, installed, independent, hardware and endurance lanes.",
+      "evidence_refs": [
+        "handoff/local_ipc_continuation_20261008_23.json",
+        "handoff/unified_contract_continuation_20261008_23.json",
+        "handoff/source_reconciliation_20261008_23.md",
+        "evidence/runtime/desktop-ipc-repair-23-02.json",
+        ".local-build-cache/increment-23-ipc/pre_execution_cut.json"
+      ]
+    },
+    {
+      "issue": "Marker publication fixture repaired using closed sibling file/atomic rename and forced parent-child barrier. Exact initial marker bytes/interleaving were not retained; no application STOP defect established.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_FIXTURE_FIRST_FAILURE_PRESERVED",
+      "repair": "Complete protected current time, approval and resource/broker owners and unresolved source decisions before positive runtime/effect admission. Qualify complete supervisor/event/queue/lease/recovery behavior, independent evidence, visible native UI/durable drafts and the whole installed/offline/physical/device/custody/hardware/distributed/endurance scope. Final source/allocation/state checks and delivery require later exact receipts.",
+      "evidence_refs": [
+        "handoff/owned_service_continuation_20261008_24.json",
+        "handoff/unified_contract_continuation_20261008_24.json",
+        "handoff/source_reconciliation_20261008_24.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\root-source-fullsuite-review-24-04.json"
+      ]
+    },
+    {
+      "issue": "Request/result uncertainty may follow committed consumption; Stop does not cancel COMMIT, read-only recovery does not replay/refund or complete effects.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Complete protected current time, approval and resource/broker owners and unresolved source decisions before positive runtime/effect admission. Qualify complete supervisor/event/queue/lease/recovery behavior, independent evidence, visible native UI/durable drafts and the whole installed/offline/physical/device/custody/hardware/distributed/endurance scope. Final source/allocation/state checks and delivery require later exact receipts.",
+      "evidence_refs": [
+        "handoff/owned_service_continuation_20261008_24.json",
+        "handoff/unified_contract_continuation_20261008_24.json",
+        "handoff/source_reconciliation_20261008_24.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\root-source-fullsuite-review-24-04.json"
+      ]
+    },
+    {
+      "issue": "Synchronous launch/tiny control I/O depend on ordinary OS scheduling; owned service containment does not qualify universal native/driver occupancy or worker security isolation.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Complete protected current time, approval and resource/broker owners and unresolved source decisions before positive runtime/effect admission. Qualify complete supervisor/event/queue/lease/recovery behavior, independent evidence, visible native UI/durable drafts and the whole installed/offline/physical/device/custody/hardware/distributed/endurance scope. Final source/allocation/state checks and delivery require later exact receipts.",
+      "evidence_refs": [
+        "handoff/owned_service_continuation_20261008_24.json",
+        "handoff/unified_contract_continuation_20261008_24.json",
+        "handoff/source_reconciliation_20261008_24.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\root-source-fullsuite-review-24-04.json"
+      ]
+    },
+    {
+      "issue": "This is development execution, IMPLEMENTED_NOT_QUALIFIED. Same-account jobs and image-file hashes do not establish filesystem/network/credential isolation or loaded-code attestation. Synchronous launch and tiny control writes rely on ordinary OS scheduling; no universal native/driver deadline is claimed. Stop does not cancel a kernel COMMIT. Lost or denied results may follow committed consumption and require read-only reconciliation, never automatic replay/refund. Drafts are per-view memory only. Offscreen Qt controls and a hidden native Windows render do not qualify visible UI/accessibility. Trusted time/approval/resource/revocation owners, protected effects, installed/offline, independent/human, power-loss, physical/device/custody/hardware/distributed/endurance lanes and all original cases/gates remain open. Source adoption is unchanged; six transition decisions remain unresolved. Historical V18-GAP-002 records46 blank Owners Cockpit CHAPTER ACCEPTANCE RULE bodies (witness635/rawPDF e8484ea4...,139pages/48headings/two populated), distinct from128 AppendixB scenarios; no new PDF/visual/provenance proof is claimed in this job.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Complete protected current time, approval and resource/broker owners and unresolved source decisions before positive runtime/effect admission. Qualify complete supervisor/event/queue/lease/recovery behavior, independent evidence, visible native UI/durable drafts and the whole installed/offline/physical/device/custody/hardware/distributed/endurance scope. Final source/allocation/state checks and delivery require later exact receipts.",
+      "evidence_refs": [
+        "handoff/owned_service_continuation_20261008_24.json",
+        "handoff/unified_contract_continuation_20261008_24.json",
+        "handoff/source_reconciliation_20261008_24.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\contracts-full-repair-24-04.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-24-owned-service\\root-source-fullsuite-review-24-04.json"
+      ]
+    },
+    {
+      "issue": "Public evidence query lacked durable principal/session binding.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Public consumption evidence retains the exact authenticated context and checks durable subject, proposal/read-set/grant scope, event attribution and coherent generation-bearing cells. Preparation, consumption and revocation repeat exact original owner predicates and context checks immediately before and after COMMIT; preparation/consumption also enforce final deadlines. PostCOMMIT denial preserves issued/held, consumed/charged or revoked state. Internal one-argument historical evidence remains compatible. Positive runtime/effect owners remain closed.",
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ]
+    },
+    {
+      "issue": "Final transaction checks omitted current context and owner predicates.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Public consumption evidence retains the exact authenticated context and checks durable subject, proposal/read-set/grant scope, event attribution and coherent generation-bearing cells. Preparation, consumption and revocation repeat exact original owner predicates and context checks immediately before and after COMMIT; preparation/consumption also enforce final deadlines. PostCOMMIT denial preserves issued/held, consumed/charged or revoked state. Internal one-argument historical evidence remains compatible. Positive runtime/effect owners remain closed.",
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ]
+    },
+    {
+      "issue": "Final authentication could overrun the authority deadline; PREPARED recovery omitted supported scope bindings.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Public consumption evidence retains the exact authenticated context and checks durable subject, proposal/read-set/grant scope, event attribution and coherent generation-bearing cells. Preparation, consumption and revocation repeat exact original owner predicates and context checks immediately before and after COMMIT; preparation/consumption also enforce final deadlines. PostCOMMIT denial preserves issued/held, consumed/charged or revoked state. Internal one-argument historical evidence remains compatible. Positive runtime/effect owners remain closed.",
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ]
+    },
+    {
+      "issue": "First collector omitted prelaunch interpreter hash; later collector captures before/after pins, first evidence retains its limit.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "First baseline lacked its own prelaunch interpreter hash; preserved, not retroactively upgraded. Later runner records before/after helper/interpreter hashes.",
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ]
+    },
+    {
+      "issue": "Controller holds the Stop lock across synchronous control writes; stalled-write Stop reachability remains untested/unrepaired.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Separate potentially blocking send from Stop dispatch-disable locking while retaining exact attempt and lifetime ownership.",
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ]
+    },
+    {
+      "issue": "Lost preparation result cannot be recovered from retained proposal when generated permit ID is unknown.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Add authenticated readonly proposal/attempt-to-issuance recovery; never reissue, refund or replay.",
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ]
+    },
+    {
+      "issue": "Durable task/draft native workflow and real time/approval/resource custody remain unfinished.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Repair STOP reachability during stalled control writes and authenticated proposal-to-issuance recovery; implement typed durable task/draft native workflows and service-owned protected time, approval and resource custody. Continue the complete product scope and original acceptance qualification; no gate or work-package completion is inferred from these development tests.",
+      "evidence_refs": [
+        "handoff/authority_freshness_continuation_20261008_25.json",
+        "handoff/unified_contract_continuation_20261008_25.json",
+        "handoff/source_reconciliation_20261008_25.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-25-authority\\contracts-full-25-01.json"
+      ]
+    },
+    {
+      "issue": "Synchronous control writes and client/service launch occupied the Qt path or Stop lock.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Tracked background client/service launch and request preservation/control send leave Qt and the Stop state lock free of those blocking operations. Separate send ownership, actual thread-exit observation and input-handle write leases prevent second dispatch or cleanup while a writer remains. Stop wins before logical send admission; late failure cannot revive Stop or replace a validated result. Original attempt, envelope, selected lifetime and deadline remain fixed. Unpersisted exact requests remain in memory through STOPPED. Reservation return is not disk/IPC acknowledgement; logical admission is not physical WriteFile ordering; memory retention is not restart durability.",
+      "evidence_refs": [
+        "handoff/stop_dispatch_continuation_20261008_26.json",
+        "handoff/unified_contract_continuation_20261008_26.json",
+        "handoff/source_reconciliation_20261008_26.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-26-stop\\contracts-full-26-01.json"
+      ]
+    },
+    {
+      "issue": "Worker constructor interruption could leave an absent worker reservation; Stop could drop an unpersisted exact request.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Tracked background client/service launch and request preservation/control send leave Qt and the Stop state lock free of those blocking operations. Separate send ownership, actual thread-exit observation and input-handle write leases prevent second dispatch or cleanup while a writer remains. Stop wins before logical send admission; late failure cannot revive Stop or replace a validated result. Original attempt, envelope, selected lifetime and deadline remain fixed. Unpersisted exact requests remain in memory through STOPPED. Reservation return is not disk/IPC acknowledgement; logical admission is not physical WriteFile ordering; memory retention is not restart durability.",
+      "evidence_refs": [
+        "handoff/stop_dispatch_continuation_20261008_26.json",
+        "handoff/unified_contract_continuation_20261008_26.json",
+        "handoff/source_reconciliation_20261008_26.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-26-stop\\contracts-full-26-01.json"
+      ]
+    },
+    {
+      "issue": "New test expected a disk file after thread-start failure and Qt cleanup could skip window disposal after an assertion.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Corrected exact memory assertions, nested cleanup, preadmission Stop/file-failure/constructor-interruption tests and actual offscreen Esc checks.",
+      "evidence_refs": [
+        "handoff/stop_dispatch_continuation_20261008_26.json",
+        "handoff/unified_contract_continuation_20261008_26.json",
+        "handoff/source_reconciliation_20261008_26.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-26-stop\\contracts-full-26-01.json"
+      ]
+    },
+    {
+      "issue": "Universal native driver bounds, synchronous result reads and durable workflow/custody remain unqualified.",
+      "classification": "BLOCKING_CURRENT_RUNTIME_QUALIFICATION",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Implement authenticated proposal-to-issuance recovery when the permit selector is lost, typed durable task/draft native workflows, and real service-owned time/approval/resource custody. Qualify native/model/hardware/device/custody/distributed/independent/installed/endurance behavior against the complete product requirements. Universal driver bounds and synchronous result-read occupancy remain unqualified; no original case, formal gate or work-package completion is inferred.",
+      "evidence_refs": [
+        "handoff/stop_dispatch_continuation_20261008_26.json",
+        "handoff/unified_contract_continuation_20261008_26.json",
+        "handoff/source_reconciliation_20261008_26.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-26-stop\\contracts-full-26-01.json"
+      ]
+    },
+    {
+      "issue": "Two follow-up agents reported workspace credit exhaustion and did not finish their assigned confirmations/helpers.",
+      "classification": "ENVIRONMENT_DEPENDENCY_ISSUE",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Root personally completed source/diff/AST/raw review and integration helpers; incomplete agent jobs are not counted as confirmations.",
+      "evidence_refs": [
+        "handoff/stop_dispatch_continuation_20261008_26.json",
+        "handoff/unified_contract_continuation_20261008_26.json",
+        "handoff/source_reconciliation_20261008_26.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-26-stop\\contracts-full-26-01.json"
+      ]
+    },
+    {
+      "issue": "Unknown generated permit selector prevented preparation recovery from the original proposal.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Authenticated kernel.recover_preparation selects a durable issuance from the exact original ActionProposal when its generated permit selector was lost. The original message/context, principal/session, issuance event, exact proposal bytes, coherent issuance/permit/intent generations and full historical input commitment are checked before disclosure. New preparations retain the original grant commitment in exact internal intent v2; existing v1 consumption, permit recovery and peer evidence remain supported without migration. Unknown-selector v1 lookup explicitly denies unavailable input evidence. The query observes real PREPARED or CONSUMED state and calls no writer, clock, positive owner, refund, renewal or effect. The sixth route is integrated into the envelope, application, response codec, RECOVERING allowlist and native picker. The original context is checked again after the final union read. An isolated retained pre-repair candidate fails precisely that injected boundary; the corrected suite passes.",
+      "evidence_refs": [
+        "handoff/preparation_recovery_continuation_20261008_27.json",
+        "handoff/unified_contract_continuation_20261008_27.json",
+        "handoff/source_reconciliation_20261008_27.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\contracts-full-27-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\final-context-counterexample-27-01.json"
+      ]
+    },
+    {
+      "issue": "Existing intent metadata omitted the original grant commitment needed to reconstruct full historical input for unknown-selector recovery.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "New exact internal intent v2 retains that commitment. Explicit v1 support remains for prior APIs; no invented legacy proof or migration.",
+      "evidence_refs": [
+        "handoff/preparation_recovery_continuation_20261008_27.json",
+        "handoff/unified_contract_continuation_20261008_27.json",
+        "handoff/source_reconciliation_20261008_27.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\contracts-full-27-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\final-context-counterexample-27-01.json"
+      ]
+    },
+    {
+      "issue": "Prepared recovery candidate performed its last union read after its last context check; the first regression hook invalidated an earlier read instead.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Root inspected both, added the post-final-read context check and refined the hook. Actual retained-candidate failure and corrected24/full494 PASS are preserved.",
+      "evidence_refs": [
+        "handoff/preparation_recovery_continuation_20261008_27.json",
+        "handoff/unified_contract_continuation_20261008_27.json",
+        "handoff/source_reconciliation_20261008_27.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\contracts-full-27-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\final-context-counterexample-27-01.json"
+      ]
+    },
+    {
+      "issue": "The baseline runner parsed only complete top-level status rows and could not join failing subtest parent identities.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Original identities_join=false receipt and complete raw log remain. Separate pinned baseline analysis joins24 unique header/AST identities and records the actual3failures/61errors; repaired/full passes have complete raw joins.",
+      "evidence_refs": [
+        "handoff/preparation_recovery_continuation_20261008_27.json",
+        "handoff/unified_contract_continuation_20261008_27.json",
+        "handoff/source_reconciliation_20261008_27.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\contracts-full-27-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\final-context-counterexample-27-01.json"
+      ]
+    },
+    {
+      "issue": "Legacy v1 unknown-selector recovery, qualified cross-session handoff, universal occupancy and full workflow/runtime custody qualification remain unfinished.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Implement typed durable task/draft native workflows and real service-owned time/approval/resource custody; qualify authenticated session handoff, legacy unknown-selector handling and native occupancy against explicit contracts. Qualify actual model, hardware, device/custody, distributed, independent acceptance, installed and endurance behavior against all175 requirements/25components/128originalcases/28packages/20volumes/406lifecycle/8gates. A fixed selected-cell count or replay row limit does not bound full journal verification or native driver/result-read occupancy. Positive runtime/effect owners remain CLOSED, GateA OPEN, original128 cases NOT_RUN and8 formal gates NOT_EVALUATED.",
+      "evidence_refs": [
+        "handoff/preparation_recovery_continuation_20261008_27.json",
+        "handoff/unified_contract_continuation_20261008_27.json",
+        "handoff/source_reconciliation_20261008_27.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\contracts-full-27-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\final-context-counterexample-27-01.json"
+      ]
+    },
+    {
+      "issue": "The test writer's first large command exceeded the Windows process command limit before creation (os error206).",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Agent checked candidate absence and used exclusive creation and patches; static handoff and root executed evidence are separately preserved.",
+      "evidence_refs": [
+        "handoff/preparation_recovery_continuation_20261008_27.json",
+        "handoff/unified_contract_continuation_20261008_27.json",
+        "handoff/source_reconciliation_20261008_27.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\contracts-full-27-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-27-proposal-recovery\\final-context-counterexample-27-01.json"
+      ]
+    },
+    {
+      "issue": "Durable typed task/draft capture and native editing workflow were missing from the governed IPC.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Typed task.create/save/load/list routes preserve exact original instruction bytes separately from editable title/draft. The injected task owner authenticates the original envelope/context, SID and logical principal; creates CREATED-only snapshots with uninterpreted meaning fields; atomically commits the draft, minimal kernel objective revision, catalog and event to the existing SQLite journal; rejects stale CAS, tombstones, foreign owners and substituted events. Objective generations prevent A-to-B-to-A revision reuse. Exact TASK_ABSENT observes never-present current cells and catalog exclusion without claiming historical rollback. The owned native controller retains uncertain task writes, preserves recovery during unrelated reads, validates current observations for explicit reconciliation and bounds retained history before new dispatch. The native task view keeps late acknowledgments separate from newer edits, offers retained local-draft navigation, explicit remote revision adoption, usable recovery controls, all-cached-draft close consent and editor freeze until observed Stop. The existing kernel inspector remains available through --inspector; no positive production effect authority is added.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "Review identified static counterexamples in prepared task/native paths for malformed generation/kind values, incomplete event binding, stale/wrong-scope reconciliation or unrelated recovery clearing.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Strict typed decoding, complete event semantics, final identity/state checks and scoped current-observation reconciliation are applied and exercised by new tests; source review is distinct from runtime reproduction.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "Retained local drafts had no return route; picker polling overwrote selections; close consent missed hidden drafts and permitted post-consent edits; action errors disabled recovery.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Local picker, polling preservation, all-cached-draft close checks, editor freeze and separate text/action errors applied; controlled Qt regressions pass.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "Two tombstone fixtures deleted absent cells and one stale-permit assertion expected a later guard than the implementation reaches.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Real present-to-delete transitions preserve the store invariant; fresh-proposal stale-objective and old-permit changed-read-set denial paths are checked separately. Failed run retained.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "The initial runner omitted the header/result of a test using a first-line docstring.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Original runner/receipts remain; v2 recognizes exact AST docstring results. Separate raw analysis joins64 headers without inventing failing parent statuses.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "First full regression recorded PermissionError reading the disposable foreign marker; its underlying access-denial mechanism is unproven.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "The marker was later readable. The specific test handoff now acknowledges completed publication after rename and cleans up its bounded reader. Targeted24 and second full558 pass; initial failure retained. A rename/handle race remains a hypothesis, not an established cause.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "Native committed-write acknowledgment loss, semantic activation, persistent unconfirmed local drafts, qualified trust boundaries and full product lanes remain unfinished.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "This is a durable CREATED task/draft lane, not full task semantics or original acceptance. Nine new native Windows methods use isolated owned-service fixtures; history capacity includes controlled padding and current-absence recovery includes a deliberately redirected missing pipe. Ten client and thirteen offscreen Qt methods use controlled delivery; Stop/Esc exercises the real controller with an injected held sender. Native committed-write acknowledgment loss, power-loss recovery, installed UI/accessibility, cross-SID isolation, historical uncertainty receipts and persistence of unconfirmed local edits remain unqualified. Selected-cell and response bounds do not bound full journal verification or native I/O occupancy. Continue semantic task interpretation/clarification, accepted objectives and finite authority, attachments and lifecycle, plus service-owned trusted time/approval/resource custody. Qualify native committed-write result loss, session handoff, legacy recovery, occupancy, actual model/hardware, devices/custody/distributed execution, independent human acceptance, installation/offline/endurance. Preserve all175 requirements/25components/128originalcases/28packages/20volumes/406lifecycle/8gates. Positive production runtime/effect owners stay CLOSED; GateA OPEN, original128 cases NOT_RUN, eight gates NOT_EVALUATED, full objective ACTIVE_NOT_COMPLETE.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "A candidate preparation assertion and two read-only evidence lookups failed before any associated live mutation.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Candidate preparation failure retained; corrected contract import used. Authority and raw-log paths were resolved from repository instructions and receipts and read successfully.",
+      "evidence_refs": [
+        "handoff/task_drafts_continuation_20261008_28.json",
+        "handoff/unified_contract_continuation_20261008_28.json",
+        "handoff/source_reconciliation_20261008_28.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\contracts-full-28-02.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-28-task-drafts\\root-execution-review28.json"
+      ]
+    },
+    {
+      "issue": "The inherited unified record described five inspector kernel routes, but the current picker declares six including kernel.recover_preparation.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Preserve the previous description in a historical field and correct the current sentence to six. Source operator_view.py lines16-17 and its unchanged baseline hash support the count; no application or test behavior changed.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "Revision-bound durable unaccepted interpretation capture and inspection were absent.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Durable, native-owner-attributed UNACCEPTED task interpretation proposals now preserve all ten supplied fields and the exact saved task basis in a separate versioned projection. Original instruction and raw task remain unchanged. Real SQLite CAS checks and native request/result bindings protect proposal capture/read; stale observations and explicit revision selection retain local edits and uncertainty. The Qt modal distinguishes selected/local text from the latest observed proposal or absence, preserves editing history and Stop behavior. Two controlled native post-COMMIT lost-reply cases prove exact committed raw-task recovery without replay in the same controller and after a fresh controller/session.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "Static prepared-source review found stopped parent editors remained editable, equal-text refresh cleared undo history, and stale proposal status compared against an older raw task cache.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "H29 source counterexamples were personally inspected and repaired; applied stopped-parent, undo/cursor/selection and current/stale-basis regressions pass. Prior runtime reproduction is not claimed.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "Dirty proposal inspection hid the newest observed proposal/basis; malformed list/dict result kinds could raise an untyped exception.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "C29 source counterexamples were personally inspected. Readonly observed proposal/absence preview is separate from selected/local fields; exact string-kind guards retain typed rejection. Applied regression evidence supports repaired behavior.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "The first native committed-save restart regression compared tuple controller positions with a list.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Convert only that container to list, preserving exact ordered scope IDs/sequences/heads. Original failing run and source bytes retained; corrected baseline and applied native cases pass.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "The first applied native meaning test expected the unavailable preparation owner, but kernel.prepare rejects its absent prepared basis first.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Assert the actual KERNEL_REQUIRED_STATE_MISSING denial, null record/event and unchanged complete six-table/store-position cut. No production owner or kernel check changed. The existing seeded native closed-owner denial remains separately covered.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "A programmatic stale-dialog text signal survived when the original task was selected again because the cached rendered dictionary matched the session.",
+      "classification": "FIXED_NOW",
+      "status": "REPAIRED_DEVELOPMENT_ONLY",
+      "repair": "Refresh compares actual widget text whenever its captured task is selected, retaining per-widget equal-text and invalid-text guards. Unchanged39 session/Qt methods pass, including task isolation, editing history, Stop and preview.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "Fresh-controller content recovery does not import or settle historical uncertain attempts, and local unconfirmed drafts are not durable.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Native restart proves exact committed content/no replay only; historical-attempt and edit persistence still require implementation and qualification.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "Actual request compilation, material clarification, authenticated acceptance/finite grants, native occupancy and full product qualification remain unfinished.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Development mechanics only. Manual proposals are not model interpretation, accepted objectives, materiality findings or authority grants. CREATED/UNACCEPTED and positive runtime/effect owners remain closed. Fresh controller content recovery does not import or settle historical uncertain attempts. No production profile, installed release, trusted clock, hardware, security, independent human acceptance or endurance qualification is inferred. Original128 cases remain NOT_RUN, all8 formal gates NOT_EVALUATED, Gate A OPEN, and source adoption unratified. Continue CMP-07/WP-06 actual request/task compilation, source/correction custody and material clarification with exact ContextEnvelope/template/token/prepared-request contracts; then implement authenticated acceptance and finite kernel grants with their time/approval/resource owners and full lifecycle. Implement durable historical-attempt and unconfirmed-edit recovery, qualify actual native occupancy and the remaining full product lanes. Preserve the full175 requirements/25 components/28 packages/20 volumes/406 lifecycle sections/128 cases/8 gates; finish the product rather than treating closed development gates as completion.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "Some preparation reads were truncated or used missing paths, and a Writer report command exceeded Windows argument limits.",
+      "classification": "NOT_BLOCKING_CURRENT_TASK",
+      "status": "VERIFIED_UNRESOLVED",
+      "repair": "Relevant material was reread in bounded ranges, actual paths resolved, and the exclusive handoff was written through apply_patch. Diagnostics retained in writer/root evidence; no runtime/source success inferred from rejected commands.",
+      "evidence_refs": [
+        "handoff/task_meaning_continuation_20261008_29.json",
+        "handoff/unified_contract_continuation_20261008_29.json",
+        "handoff/source_reconciliation_20261008_29.md",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\contracts-full-29-01.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-29-task-meaning\\root-execution-review29.json"
+      ]
+    },
+    {
+      "issue": "Profile-excluded derived sources or token reduction could orphan mandatory meaning in prior static candidates.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Current dependency closure/profile tests pass; prior static snapshot retained.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "Dedicated worker BaseException could leave compilation without terminal outcome in a prior candidate.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Bounded terminal error/cancel and actual worker-exit custody; both injected exceptions pass.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "Service-originated Stop could leave a live uncancelled compiler in a prior candidate.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Shared cancellation from service Stop; actual session remains STOPPING while worker lives; controlled/native Stop tests pass.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "Malformed or underscore-leading owner error codes could make typed denial construction fail in prior candidates.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Closed bounded grammar and generic malformed-code denial; direct tests pass.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "Unavailable optional quotation metadata could falsely overflow assembly in a prior candidate.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Check actual availability before byte capacity; unavailable quote and preallocation tests pass.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "First controlled intake run had13 setup-error parents/15 entries because the test imported sqlite3 before the declared loader.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Only test import ordering repaired; exact foreign DLL path remains unrecorded; first failure preserved and repaired17/full675 pass.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "Initial application helper described preserved copies as unchanged after application while checking only before it.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Old helpers retained; final helper rehashes all167 preserved copies after application; Git cut is also an executed PASS predicate.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "Current continuity label described Increment24/427; inherited current progress/test/failure/working-record fields and integrity pointers still described older increments in the first prepared30 draft.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Preserve old live bytes and the complete first30 candidate cut. Correct all affected current fields to the executed30/675/38/637/167/165 facts; preserve prior field values explicitly. Qualify old29 corrected state as historical, and later30 source/allocation/state checks as pending at this immutable integration cut.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\ledger-candidates30\\manifest.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-ledger-candidate-repair30.json"
+      ]
+    },
+    {
+      "issue": "Normal operator entry supplies no compiler and preview/clarification UI is not composed.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Connect inspectable preparation UI and qualified compiler composition; current API/tests do not establish normal user flow.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "Production semantics, trusted owners, common dispatch, acceptance/grants/lifecycle and full original qualification remain unfinished.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_SCOPED_CURRENT_INCREMENT",
+      "repair": "Controlled compiler ports establish development mechanics only. Actual disposable Windows service/pipe and saved-task custody were exercised. Production interpretation/source completeness/model/runtime/template/tokenizer/time/reservation/resource/policy/authority owners, visible UI composition, common dispatch, authenticated acceptance/finite grants/obligations/budget lifecycle, native occupancy, durable uncertain-attempt/edit recovery, installed release/endurance and independent human acceptance remain unqualified or unfinished. Original128 scenarios NOT_RUN; formal8 NOT_EVALUATED; GateA OPEN; positive runtime/effect owners CLOSED; adoption UNRATIFIED; full goal ACTIVE_NOT_COMPLETE.",
+      "evidence_refs": [
+        "handoff/request_compiler_continuation_20261008_30.json",
+        "handoff/unified_contract_continuation_20261008_30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\contracts-full30-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-execution-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\applied-cut-verifier30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-verifier-confirmation30.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-30-request-compiler\\root-native-full-readback30.json"
+      ]
+    },
+    {
+      "issue": "A reviewer replaced a diagnostic report after root had pinned it.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Recovered exact prior bytes/hash from recorded visible output, preserved late revision and independently confirmed restoration; application source/eight ledgers/Git unchanged during recovery. See preparation continuation evidence_integrity_incident.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "Qt offscreen capture process initially had no font families and rendered square glyphs.",
+      "classification": "ENVIRONMENT_DEPENDENCY_ISSUE",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Fixed only for disposable captures by registering the installed Segoe UI font in that process; original captures preserved. Native installed/default-font and human usability qualification remain follow-up.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "Task-changing token-capacity omission requested clarification but published material=False.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Propagate the source task-changing flag into the Omission value; preserved independent UI regression asserts True and clarification with no prepared request.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "Three new UI tests used compiler objective field in the manual meaning API.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Correct only five setup/assertion literals to clarified_meaning; retain all32 test identities and every valid omission assertion.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "Closed modal dialogs could remain parent-owned and retain old preparation payloads.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Both owned modal paths stop timers and schedule destruction; actual DeferredDelete regressions verify destruction and shared session custody.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "PREVIEW redundant meaning/source/omission/count values could disagree with its prepared request.",
+      "classification": "FIXED_NOW",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Typed PREVIEW coherence guard rejects each substituted field; independent replacement regressions cover count None/zero and meaning/source/selection/omission conflicts.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "Normal operator launcher supplies no compiler; production preparation remains unavailable.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Compose and qualify real ports. UI displays unavailable and disables preparation until actual composition is supplied.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "Exceptional launcher exit currently stops the service without explicit future compiler-worker ownership through actual exit.",
+      "classification": "REQUIRES_SEPARATE_FOLLOW_UP_WORK",
+      "status": "VERIFIED_SCOPED_INCREMENT31",
+      "repair": "Repair launcher/session cleanup and execute exceptional-exit tests before production compiler composition.",
+      "evidence_refs": [
+        "handoff/preparation_ui_continuation_20261009_31.json",
+        "handoff/unified_contract_continuation_20261009_31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\contracts-full31-r3-first.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\applied-execution-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\root-review31-r3.json"
+      ]
+    },
+    {
+      "issue": "Increment31 current continuity fields retained Increment30 test totals, latest-record/failure pointers and stale integrity freshness text despite the correct707 latest_source_tests record.",
+      "classification": "FIXED_NOW",
+      "status": "INCREMENT31_METADATA_REPAIR_SOURCE_UNCHANGED",
+      "repair": "Update only current continuity fields, preserve every replaced value under an explicitly historical key and exact original ledger bytes, retain all139 previous issues, and verify a separately named successor state. No application source or tests changed.",
+      "evidence_refs": [
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\final-state-verifier31.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\.local-build-cache\\increment-31-preparation-ui\\continuity-repair31\\application.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\increment-31-state-check.json",
+        "T:\\00-Active\\CETA_Intelligence_Operating_System_Build_Package\\evidence\\runtime\\increment-31-state-check-r2.json"
+      ]
+    }
+  ],
+  "external_blocker_established": false,
+  "all_128_acceptance_scenarios": "PRESERVED_NOT_EXECUTED_AS_COMPLETE_SCENARIOS",
+  "independent_review": "NOT_PERFORMED",
+  "normal_profile_migration": "NOT_PERFORMED",
+  "production_cutover": "NOT_AUTHORIZED_OR_PERFORMED"
+}
