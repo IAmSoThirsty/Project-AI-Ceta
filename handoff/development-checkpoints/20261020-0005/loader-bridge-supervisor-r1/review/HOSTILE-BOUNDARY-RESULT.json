@@ -1,0 +1,143 @@
+{
+  "argv": [
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\review\\hostile_boundary_probe.py"
+  ],
+  "controlled_requests": "Deliberately partial DATA ONLY requests establish the early refusal boundary; not human consent or positive admission",
+  "denied_effect_calls": [],
+  "earlier_draft_reproductions": [
+    {
+      "admitted_bytes": 6,
+      "bound": 3,
+      "tool_chunk": "6e0f56"
+    },
+    {
+      "admitted_bytes": 4,
+      "bound": 3,
+      "tool_chunk": "a9daf7"
+    }
+  ],
+  "exact_draft_beforeimage": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/before-bound-ready-r1/child_entry.py.before",
+    "sha256": "35a249912896b5490ccdc3420c835dfdecac356b231a305dd2ff3bb7957f1247"
+  },
+  "exact_final_child_source": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/child_entry.py",
+    "sha256": "cccd1a0f18af875b479146b651a2cf50dc6453028937f53456b8a12d3f26f378"
+  },
+  "exit_status": 0,
+  "finished_at": "2026-10-20T20:35:54.905099+00:00",
+  "human_grant_created": false,
+  "kind": "INDEPENDENT_OUTER_PRODUCTION_REFUSAL_AND_OUTPUT_REGRESSIONS_V1",
+  "native_execution": false,
+  "native_qualification": false,
+  "null_ingress_refusal": {
+    "bridge_directory_created": false,
+    "code": "BRIDGE_TRUSTED_ROOT_INGRESS_NOT_BOUND_NO_EFFECTS",
+    "error_type": "BridgeError",
+    "native_dependency_modules_imported": false,
+    "outer_attempt_entered": false,
+    "outer_directory_created": false,
+    "source_predicates_patched": false,
+    "supplied_grant_read": false
+  },
+  "output_regressions": {
+    "concurrent": {
+      "after": {
+        "admitted_bytes": 3,
+        "bound": 3,
+        "counter": 3,
+        "errors": [
+          {
+            "message": "OUTER_STDIO_BOUND_EXCEEDED",
+            "type": "OutputBoundError"
+          }
+        ],
+        "second_write_entered_before_first_release": false,
+        "threads_remaining": 0
+      },
+      "before": {
+        "admitted_bytes": 6,
+        "bound": 3,
+        "counter": 6,
+        "errors": [],
+        "second_write_entered_before_first_release": true,
+        "threads_remaining": 0
+      }
+    },
+    "raising_partial_write": {
+      "after": {
+        "admitted_bytes": 1,
+        "bound": 3,
+        "counter": 0,
+        "errors": [
+          {
+            "message": "CONTROLLED partial write unknown",
+            "type": "OSError"
+          },
+          {
+            "message": "OUTER_OUTPUT_FAILED_OR_UNCERTAIN_NO_RETRY",
+            "type": "OutputBoundError"
+          }
+        ],
+        "target_write_calls": 1,
+        "uncertain": true
+      },
+      "before": {
+        "admitted_bytes": 4,
+        "bound": 3,
+        "counter": 3,
+        "errors": [
+          {
+            "message": "CONTROLLED partial write unknown",
+            "type": "OSError"
+          }
+        ],
+        "target_write_calls": 2,
+        "uncertain": null
+      }
+    },
+    "short_write": {
+      "after": {
+        "admitted_bytes": 1,
+        "bound": 3,
+        "counter": 1,
+        "errors": [
+          {
+            "message": "OUTER_SHORT_OUTPUT_WRITE",
+            "type": "OSError"
+          },
+          {
+            "message": "OUTER_OUTPUT_FAILED_OR_UNCERTAIN_NO_RETRY",
+            "type": "OutputBoundError"
+          }
+        ],
+        "target_write_calls": 1,
+        "uncertain": true
+      },
+      "before": {
+        "admitted_bytes": 4,
+        "bound": 3,
+        "counter": 3,
+        "errors": [
+          {
+            "message": "OUTER_SHORT_OUTPUT_WRITE",
+            "type": "OSError"
+          }
+        ],
+        "target_write_calls": 2,
+        "uncertain": null
+      }
+    }
+  },
+  "product_acceptance": false,
+  "sourcework_files_unchanged": 31,
+  "started_at": "2026-10-20T20:35:54.487433+00:00",
+  "supervisor_freeze": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/FROZEN.json",
+    "sha256": "b5e3b4372c2b604f7d1a8c4414785e553870ee29457d13c3a53be90cb9b4643b"
+  }
+}

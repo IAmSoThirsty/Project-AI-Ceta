@@ -1,0 +1,361 @@
+{
+  "all_work_files_unchanged": 31,
+  "author": "/root/review",
+  "complete_source_inspection": [
+    "supervisor.py (458 lines)",
+    "child_entry.py (154 lines)",
+    "owned_interpreter.py (226 lines)",
+    "test_supervisor.py (562 lines)",
+    "run_guarded_controls.py (91 lines)",
+    "verify_frozen.py (68 lines)",
+    "Pinned bounded_custody.run_owned/retire and prior launch_full caller",
+    "Pinned canonical WindowsOwnedProcess construction/job/wait/poll/terminate/close and image/query helpers",
+    "Previously accepted exact canonical bridge entrypoint/preflight/capture/profile/custody interfaces"
+  ],
+  "controlled_results": {
+    "command_records": [
+      {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/frozen-verifier-COMMAND.json",
+        "sha256": "d10140ac1198b2a8bcadb80d6eb8ab3a8d2c87e6d3440de9ee0c5bd620482b35"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/guarded-63-COMMAND.json",
+        "sha256": "540534d9d35d94fffce1cf6ed0d8e598a0843fa0b4fdc59322b56da3dc741f6a"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/hostile-boundary-COMMAND.json",
+        "sha256": "e5e83059b46adcdd5e1bee19f93fec75e1896d6ead28499d895fbfb3bfa2c121"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/codex-independent-verifier-prompt-COMMAND.json",
+        "sha256": "eb8aa87d536554d10af6a8a0664bedbec66d78aa634da5ef09abfdccfc58bf57"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/codex-source-integrity-prompt-COMMAND.json",
+        "sha256": "af2e08828a1d9863394b5a4fd2bb63f2e846a795c24e45ba1e4ba02fbb3785dd"
+      }
+    ],
+    "errors": 0,
+    "exact_author_case_order": true,
+    "failures": 0,
+    "guard_violations": [],
+    "independent_cases": 63,
+    "independent_result": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/data-cut/controls/independent-review/RESULT.json",
+      "sha256": "8517e1541a88f9dd622254b9212074622f6375110a4c4a0a2834cf864eda5840"
+    },
+    "independent_unpatched_and_before_after_result": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/HOSTILE-BOUNDARY-RESULT.json",
+      "sha256": "af9d5ca62e7ec257794a7ec935ebfa993440ee0db61b1957ecf83c1bb5bfcb99"
+    },
+    "observation_limit": "The guarded suite imports standard ctypes before installing guards and uses ctypes storage with explicit Python data ports. It is not an external OS DLL-load trace. No reviewed native provider/API/process/profile/listener/debug/memory operation was executed. The independent current-refusal/output probe did not import ctypes or native adapter modules.",
+    "remaining_threads": [],
+    "skips": 0,
+    "source_api_basis": "Canonical API signatures and x64 list/rights source checked; official Microsoft URLs retained in PROVENANCE. Reviewer did not acquire or execute native documentation/payloads over the network."
+  },
+  "current_native_admission": "REFUSED_MISSING_ORIGINAL_ROOT_INGRESS",
+  "decision": "approved",
+  "dependency_bindings": {
+    "base_python_pin": {
+      "bytes": 104952,
+      "path": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a"
+    },
+    "bridge_acceptance_records": [
+      {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/delivery/CANONICAL-BRIDGE-CONSTRUCTION-HANDOFF.json",
+        "sha256": "e0858f33ebecb2d4ccd252e94af5ac1ac6a42349a5cb9a92143641f7456eedb8"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/REVIEW.json",
+        "sha256": "67b14fd4daca62a5638923c75ce608f3eb5fc2a845961177139324445f1a04c1"
+      }
+    ],
+    "bridge_base_freeze": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/FROZEN.json",
+      "sha256": "749aeb4a9b66a522e9f86ac37007d463d5a786ef4c645958443bd8537811ee4c"
+    },
+    "bridge_review": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/control/ceta-loader-canonical-bridge-r1-20261020/receipts/review.json",
+      "sha256": "1203c8a2eb634a1f3633daeafc35b5d0af8d3e1d88b24fffeacae783b906b2fb"
+    },
+    "bridge_terminal_verification": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/control/final-run-verify.json",
+      "sha256": "92d0b24af9a008df5397e3529f9831256cba4943ad8e7abe44cce880f2b6deb9"
+    },
+    "existing_custody_primitive": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/runner-repair-r1/work/tools/bounded_custody.py",
+      "sha256": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4"
+    },
+    "guarded_runner_reused_from": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/run_guarded_controls.py",
+      "sha256": "e9a087aef0c7bd782da40c56eada15e076200690379acf353a85d3aa7ada27eb"
+    },
+    "interpreter_identity_observation": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/ROOT-INTERPRETER-PID-OBSERVATION.json",
+      "sha256": "2f855242fb6e7eeb14843c87d6f22eb59f20a0002d91cf239776e13f32ed9fe3"
+    },
+    "packet": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/packet/INPUTS.json",
+      "sha256": "6a8376f7a80c3db497133833700951d40436f8b42ce4ee1cf086ced343a3ed55"
+    },
+    "volume_observation": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/T-VOLUME-READONLY-OBSERVATION.json",
+      "sha256": "75a808ec2bb91177da80c94f1803f16f681b56277dec3526b029b083e38c826e"
+    }
+  },
+  "disposition": "APPROVED_EXACT_FROZEN_SOURCE_CONSTRUCTION_ONLY",
+  "distinct_reviewer": true,
+  "exact_python_hashes": {
+    "child_entry.py": "cccd1a0f18af875b479146b651a2cf50dc6453028937f53456b8a12d3f26f378",
+    "owned_interpreter.py": "22dce4d7036e46baca17d7d31b6cc8ebe5f75dd9ddb95ae3b887c70c63ae71f8",
+    "run_guarded_controls.py": "c7e44d518471d18cd0e01311573ac92716b45f23f9feba8f45bbab9af9ae4d7c",
+    "supervisor.py": "6187e0450a23d0c851e8a93daca125b5011a5fad942483879b87df9a9d5bc4a8",
+    "test_supervisor.py": "ff501f960a749c8ecd38694e1945f027caa5ae151d589eaf0e69c36b14250992",
+    "verify_frozen.py": "958c413c5291e64cc0817cf57c68779cc7b2b4d7288dda87b14685e6c6836d1d"
+  },
+  "frozen_payloads": 30,
+  "inputs": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/INPUTS.json",
+    "sha256": "2554435e44749cfab1a3217845b461a87d682d6ec7e369bf0bbca78318582361"
+  },
+  "kind": "CETA_OUTER_SUPERVISOR_INDEPENDENT_CONSTRUCTION_REVIEW_V1",
+  "lexical_gate_limit": "Both offline skill prompt checks exited zero; retained results explicitly report full_dictionary_coverage=false. No universal dictionary or sense-disambiguation claim.",
+  "native_effect_authority_conferred": false,
+  "native_execution": false,
+  "native_qualification": false,
+  "preservation": {
+    "all31_work_files_unchanged": true,
+    "all_six_author_control_runs_and_beforeimages_preserved": true,
+    "bootstrap_error": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/BOOTSTRAP-ERROR.json",
+      "sha256": "732b57438ba70e44277e8d033bf9e381270f7c0d603c074f15bc29ecb45f5798"
+    },
+    "claim_observation": "Legal actual claim retained through empty-directory bootstrap error; no duplicate claim/completion or source replay.",
+    "review_write_root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\review",
+    "reviewer_discovery_errors": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/READ-ERRORS.json",
+      "sha256": "347d4c2dcc08f93b2dd1624d5d8b8dcb094e21508f3b36d946674cb01fdc0986"
+    },
+    "source_git_config_or_host_mutations_performed": false
+  },
+  "product_acceptance": false,
+  "remaining_issues": [
+    {
+      "classification": "requires user decision",
+      "id": "OUTER-DEPENDENCY-AUTHORITY",
+      "issue": "Original human ingress remains null. Fresh actual question/reply provenance, exact Root anchor with supervisor/query/effect/destination binding, separately reviewed successor bridge inputs/freeze and final action review are required before native effects."
+    },
+    {
+      "classification": "requires separate follow-up work",
+      "id": "OUTER-DEPENDENCY-NATIVE",
+      "issue": "Actual own-job interpreter membership/image/creation/exit queries, readiness hard links, process/timeout behavior and original bridge profile/debug/capture/cleanup remain NOT_RUN. Their source construction does not establish Windows/native or product qualification."
+    },
+    {
+      "classification": "requires separate follow-up work",
+      "id": "OUTER-DEPENDENCY-LEASE",
+      "issue": "Any later action requires the exact current Root live lease covering original bridge paths plus the outer nonce directory, complete HELLO/OWNER links, logs, results and temporary files. Root anchor and action review must include the new read-only identity stage."
+    },
+    {
+      "classification": "environment/dependency issue",
+      "evidence": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/T-VOLUME-READONLY-OBSERVATION.json",
+        "sha256": "75a808ec2bb91177da80c94f1803f16f681b56277dec3526b029b083e38c826e"
+      },
+      "id": "OUTER-ENVIRONMENT-T-VOLUME",
+      "issue": "Read-only retained Root observation reports Warning / Spot Fix Needed. No reviewer disk scan, repair, elevation, corruption finding or loader-causality conclusion was performed. Future native eligibility must adjudicate this environment state.",
+      "observation": {
+        "file_system_type": "NTFS",
+        "health_status": "Warning",
+        "operational_status": "Spot Fix Needed"
+      },
+      "observed_at": "2026-10-20T20:21:44.2323359Z"
+    },
+    {
+      "classification": "not blocking current construction",
+      "id": "OUTER-OBSERVATION-LIMITS",
+      "issue": "The primary wait and several custody waits are bounded, but synchronous filesystem/native constructor calls have no hard real-time guarantee. Bootstrap refusal before authenticated logging may leave the original child exception unknown. Hostile ancestor replacement, privileged writers and writable mappings remain unqualified."
+    },
+    {
+      "classification": "requires separate follow-up work",
+      "id": "OUTER-HISTORICAL-LOADER",
+      "issue": "The retained historical 0xC0000142 startup failure and product authorization-to-effect acceptance remain unresolved; this construction supplies no new native diagnostic outcome."
+    }
+  ],
+  "review_claimed_at": "2026-10-20T20:33:16.462575+00:00",
+  "reviewed_at": "2026-10-20T20:38:11.629069+00:00",
+  "reviewer": "/root/admission",
+  "run_id": "ceta-loader-bridge-supervisor-r1-20261020",
+  "schema_version": 1,
+  "source_freeze": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/FROZEN.json",
+    "sha256": "b5e3b4372c2b604f7d1a8c4414785e553870ee29457d13c3a53be90cb9b4643b"
+  },
+  "subject_records": [
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/SELF-REVIEW.json",
+      "sha256": "07d0fef07143b5a207ea01cfb36f0e82b81743c77844e72e7cc2758d4cd80129"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/PROVENANCE.json",
+      "sha256": "951db8bb0e2d8a1794179fc967f57846a86e041da287ee6b99b23434b7ef642f"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/README.md",
+      "sha256": "7ee3ac4dd1bafec487df2bcfd28bb16883f0b952d6f5a6be0a084c4a9577bbac"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/controls/TEST006/RESULT.json",
+      "sha256": "f8d298e27803cc18d1f499bebd08a4b0f0538d789787b281da29d92500f79395"
+    }
+  ],
+  "unchanged_canonical_owner": {
+    "repository_relative_path": ".agents/ac7-token-contract-20261020/src/ceta/supervisor/windows_jobs.py",
+    "sha256": "3266711e69db72a479039e7160f2a37abf51e68aa6e4ff6ca3d0c0f961942eb5"
+  },
+  "verified_findings": [
+    {
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "8517e1541a88f9dd622254b9212074622f6375110a4c4a0a2834cf864eda5840"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/before-success-r1/supervisor.py.before",
+          "sha256": "48465e9d0e7c671139bf7b28746980ba6f29b70912d71dec0db16a3e19238716"
+        }
+      ],
+      "finding": "Final succeeded predicate requires physical root/interpreter and recorded child exit agreement with both status records zero, valid custody/capture/cleanup evidence, no original error and no unresolved profile inspection. The draft partial success rule was replaced before freeze.",
+      "id": "OUTER-REVIEW-01",
+      "limit": "The success join was exercised with controlled process/query ports; actual Windows exit propagation remains NOT_RUN.",
+      "source": "supervisor.py:258-290,311-374,425-443,446-458"
+    },
+    {
+      "after": {
+        "admitted_bytes": 3,
+        "bound": 3
+      },
+      "before": {
+        "admitted_bytes": 6,
+        "bound": 3
+      },
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/HOSTILE-BOUNDARY-RESULT.json",
+          "sha256": "af9d5ca62e7ec257794a7ec935ebfa993440ee0db61b1957ecf83c1bb5bfcb99"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "8517e1541a88f9dd622254b9212074622f6375110a4c4a0a2834cf864eda5840"
+        }
+      ],
+      "finding": "The exact draft admitted six bytes at a three-byte concurrent limit. Final write reservation, target write and accounting are serialized; the independently forced interleaving admits exactly three bytes and reports the excess.",
+      "id": "OUTER-REVIEW-02",
+      "source": "child_entry.py:19-48"
+    },
+    {
+      "after": {
+        "admitted_bytes": 1,
+        "target_write_calls": 1
+      },
+      "before": {
+        "admitted_bytes": 4,
+        "target_write_calls": 2
+      },
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/HOSTILE-BOUNDARY-RESULT.json",
+          "sha256": "af9d5ca62e7ec257794a7ec935ebfa993440ee0db61b1957ecf83c1bb5bfcb99"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "8517e1541a88f9dd622254b9212074622f6375110a4c4a0a2834cf864eda5840"
+        }
+      ],
+      "finding": "The exact draft admitted a second target write after short/raising partial output. Final sticky uncertainty preserves the original error and refuses subsequent writes/flushes. Each independent recovery control retains one physical target write and one admitted byte.",
+      "id": "OUTER-REVIEW-03",
+      "source": "child_entry.py:24-48,118-139"
+    },
+    {
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "8517e1541a88f9dd622254b9212074622f6375110a4c4a0a2834cf864eda5840"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/before-bound-ready-r1/child_entry.py.before",
+          "sha256": "35a249912896b5490ccdc3420c835dfdecac356b231a305dd2ff3bb7957f1247"
+        }
+      ],
+      "finding": "Complete owner and HELLO data are written, flushed, fsynced and closed before create-only hard-link readiness publication. The counterpart waits for that ready name; collisions propagate without overwrite/retry.",
+      "id": "OUTER-REVIEW-04",
+      "limit": "Source ordering and injected-port controls establish this construction change. Actual Windows hard-link semantics and ancestor races have not been qualified here.",
+      "source": "supervisor.py:95-98,251-255,413-424; child_entry.py:85-102"
+    },
+    {
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "8517e1541a88f9dd622254b9212074622f6375110a4c4a0a2834cf864eda5840"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/PROVENANCE.json",
+          "sha256": "951db8bb0e2d8a1794179fc967f57846a86e041da287ee6b99b23434b7ef642f"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/ROOT-INTERPRETER-PID-OBSERVATION.json",
+          "sha256": "2f855242fb6e7eeb14843c87d6f22eb59f20a0002d91cf239776e13f32ed9fe3"
+        }
+      ],
+      "finding": "The concrete interpreter adapter keeps redirector launch and actual base-interpreter argv separate. It selects only bounded IDs from the exact retained job, requires same-job membership before metadata, verifies unique physical image/creation identity, retains the selected query/synchronize handle through physical exit, and closes known query/image handles once.",
+      "id": "OUTER-REVIEW-05",
+      "intended_rights": "0x101000 (query limited information and synchronize)",
+      "limit": "The ordinary-tool observation records differing executable/original-argv and PID/parent values. It does not identify the parent executable or prove a canonical WindowsOwnedProcess launch. The new native adapter remains unexecuted.",
+      "maximum_members": 64,
+      "source": "owned_interpreter.py:26-226; supervisor.py:305-322,401-443; child_entry.py:85-102,132-138"
+    },
+    {
+      "classification": "not blocking current task",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "8517e1541a88f9dd622254b9212074622f6375110a4c4a0a2834cf864eda5840"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/runner-repair-r1/work/tools/bounded_custody.py",
+          "sha256": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4"
+        }
+      ],
+      "finding": "Full failure-chain inspection confirms run_owned invokes read_child after its retirement path even when launch/emit/wait fail. O retires Selection before reading child evidence, closes independently known rows from partial selections, and preserves uncertain acquisition/close plus original exceptions without adoption or retry.",
+      "id": "OUTER-REVIEW-06",
+      "limit": "A failed constructor retaining its own partial owner stays outside automatic query-owner adoption. Missing or uncertain physical custody cannot produce success.",
+      "source": "Pinned bounded_custody.py run_owned/retire; supervisor.py:425-443; owned_interpreter.py:52-132"
+    },
+    {
+      "classification": "not blocking current task",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/HOSTILE-BOUNDARY-RESULT.json",
+          "sha256": "af9d5ca62e7ec257794a7ec935ebfa993440ee0db61b1957ecf83c1bb5bfcb99"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/frozen-verifier-COMMAND.json",
+          "sha256": "d10140ac1198b2a8bcadb80d6eb8ab3a8d2c87e6d3440de9ee0c5bd620482b35"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/INPUTS.json",
+          "sha256": "2554435e44749cfab1a3217845b461a87d682d6ec7e369bf0bbca78318582361"
+        }
+      ],
+      "finding": "Unpatched actual supervisor.supervise reaches the accepted bridge null-ingress refusal before outer attempt creation, custody/native imports, supplied grant read or child launch. Accepted bridge report/runtime receipt/freeze and terminal six-node records are hash-bound in final inputs.",
+      "id": "OUTER-REVIEW-07",
+      "limit": "The deliberately partial data requests prove this early denial only; they do not establish positive action admission.",
+      "source": "supervisor.py:134-171,215-248,377-400"
+    }
+  ]
+}

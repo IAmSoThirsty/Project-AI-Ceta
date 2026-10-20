@@ -1,0 +1,113 @@
+{
+  "changed_files": [],
+  "commands": [
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\work\\verify_frozen.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\review\\data-cut\\run_guarded_controls.py --attempt independent-review",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\review\\hostile_boundary_probe.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 C:\\Users\\Quencher\\.codex\\skills\\thirstys-codex-21-edition\\skills\\codex-independent-verifier\\scripts\\run.py prompt-check --prompt-file T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\review\\TASK.txt",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 C:\\Users\\Quencher\\.codex\\skills\\thirstys-codex-21-edition\\skills\\codex-source-integrity\\scripts\\run.py prompt-check --prompt-file T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\review\\TASK.txt",
+      "exit_status": 0
+    }
+  ],
+  "decision": "approved",
+  "executor_id": "/root/admission",
+  "exit_status": 0,
+  "finished_at": "2026-10-20T20:38:11.692549+00:00",
+  "git_baseline": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "input_hash": "f20f8168d31eba2406705cb631127ec2c00d8e956de7a4458e80f5252ecb72f1",
+  "node_id": "review",
+  "observed_git": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "receipt_hash": "37eb4fc6d4ac2dff38b781e8f080ebc8ed8876788b5d657c530802a231ccc6ce",
+  "result": {
+    "disposition": "APPROVED_EXACT_FROZEN_SOURCE_CONSTRUCTION_ONLY",
+    "environment_dependency": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/T-VOLUME-READONLY-OBSERVATION.json",
+      "sha256": "75a808ec2bb91177da80c94f1803f16f681b56277dec3526b029b083e38c826e"
+    },
+    "exact_python_hashes": {
+      "child_entry.py": "cccd1a0f18af875b479146b651a2cf50dc6453028937f53456b8a12d3f26f378",
+      "owned_interpreter.py": "22dce4d7036e46baca17d7d31b6cc8ebe5f75dd9ddb95ae3b887c70c63ae71f8",
+      "run_guarded_controls.py": "c7e44d518471d18cd0e01311573ac92716b45f23f9feba8f45bbab9af9ae4d7c",
+      "supervisor.py": "6187e0450a23d0c851e8a93daca125b5011a5fad942483879b87df9a9d5bc4a8",
+      "test_supervisor.py": "ff501f960a749c8ecd38694e1945f027caa5ae151d589eaf0e69c36b14250992",
+      "verify_frozen.py": "958c413c5291e64cc0817cf57c68779cc7b2b4d7288dda87b14685e6c6836d1d"
+    },
+    "guarded_cases": 63,
+    "inputs": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/INPUTS.json",
+      "sha256": "2554435e44749cfab1a3217845b461a87d682d6ec7e369bf0bbca78318582361"
+    },
+    "native_effect_authority_conferred": false,
+    "native_execution": false,
+    "native_qualification": false,
+    "product_acceptance": false,
+    "report": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/REVIEW.json",
+      "sha256": "fdc3bb8e708366e1f4f6fc02335ba8fc83d248a2691d5e8b1c92f97a255a7af9"
+    },
+    "source_freeze": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/FROZEN.json",
+      "sha256": "b5e3b4372c2b604f7d1a8c4414785e553870ee29457d13c3a53be90cb9b4643b"
+    },
+    "unpatched_null_ingress_refusal": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/review/HOSTILE-BOUNDARY-RESULT.json",
+      "sha256": "af9d5ca62e7ec257794a7ec935ebfa993440ee0db61b1957ecf83c1bb5bfcb99"
+    }
+  },
+  "run_id": "ceta-loader-bridge-supervisor-r1-20261020",
+  "schema_version": 1,
+  "started_at": "2026-10-20T20:33:16.462575+00:00",
+  "validations": [
+    {
+      "name": "exact_30_frozen_payloads_31_work_files_unchanged",
+      "passed": true
+    },
+    {
+      "name": "independent_63_guarded_cases_exact_order_zero_violations",
+      "passed": true
+    },
+    {
+      "name": "actual_unpatched_null_ingress_before_outer_child",
+      "passed": true
+    },
+    {
+      "name": "exact_draft_and_final_concurrent_short_and_partial_write_regressions",
+      "passed": true
+    },
+    {
+      "name": "held_job_query_custody_full_failure_chain_source_and_control_review",
+      "passed": true
+    },
+    {
+      "name": "native_authority_and_environment_limits_preserved",
+      "passed": true
+    }
+  ]
+}

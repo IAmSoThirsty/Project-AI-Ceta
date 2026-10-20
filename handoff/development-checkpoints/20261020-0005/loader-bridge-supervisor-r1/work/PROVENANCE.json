@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "kind": "CETA_OUTER_SUPERVISOR_SOURCE_PROVENANCE_V1",
+  "recorded_at": "2026-10-20T20:30:23.748711+00:00",
+  "author": "/root/review",
+  "source_files": {
+    "supervisor.py": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/supervisor.py",
+      "sha256": "6187e0450a23d0c851e8a93daca125b5011a5fad942483879b87df9a9d5bc4a8"
+    },
+    "child_entry.py": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/child_entry.py",
+      "sha256": "cccd1a0f18af875b479146b651a2cf50dc6453028937f53456b8a12d3f26f378"
+    },
+    "owned_interpreter.py": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/owned_interpreter.py",
+      "sha256": "22dce4d7036e46baca17d7d31b6cc8ebe5f75dd9ddb95ae3b887c70c63ae71f8"
+    }
+  },
+  "unchanged_canonical_owner": {
+    "repository_relative_path": ".agents/ac7-token-contract-20261020/src/ceta/supervisor/windows_jobs.py",
+    "sha256": "3266711e69db72a479039e7160f2a37abf51e68aa6e4ff6ca3d0c0f961942eb5"
+  },
+  "existing_custody_primitive": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/runner-repair-r1/work/tools/bounded_custody.py",
+    "sha256": "715b88ab286a524f5815ec3c47b987ba82cc50709272fdc467b7ddc76eeba1b4"
+  },
+  "accepted_bridge_review": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/control/ceta-loader-canonical-bridge-r1-20261020/receipts/review.json",
+    "sha256": "1203c8a2eb634a1f3633daeafc35b5d0af8d3e1d88b24fffeacae783b906b2fb"
+  },
+  "accepted_bridge_freeze": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/FROZEN.json",
+    "sha256": "749aeb4a9b66a522e9f86ac37007d463d5a786ef4c645958443bd8537811ee4c"
+  },
+  "accepted_bridge_terminal": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/control/final-run-verify.json",
+    "sha256": "92d0b24af9a008df5397e3529f9831256cba4943ad8e7abe44cce880f2b6deb9"
+  },
+  "interpreter_observation": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/ROOT-INTERPRETER-PID-OBSERVATION.json",
+    "sha256": "2f855242fb6e7eeb14843c87d6f22eb59f20a0002d91cf239776e13f32ed9fe3"
+  },
+  "base_python_pin": {
+    "path": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "bytes": 104952,
+    "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a"
+  },
+  "volume_observation": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/T-VOLUME-READONLY-OBSERVATION.json",
+    "sha256": "75a808ec2bb91177da80c94f1803f16f681b56277dec3526b029b083e38c826e"
+  },
+  "physical_source_lines": {
+    "supervisor.py": 458,
+    "child_entry.py": 154,
+    "owned_interpreter.py": 226
+  },
+  "physical_test_lines": 562,
+  "qualification_tool_lines": {
+    "run_guarded_controls.py": 91,
+    "verify_frozen.py": 68
+  },
+  "guarded_runner_reuse": {
+    "original": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/run_guarded_controls.py",
+      "sha256": "e9a087aef0c7bd782da40c56eada15e076200690379acf353a85d3aa7ada27eb"
+    },
+    "line_additions": 2,
+    "line_removals": 2,
+    "method": "SequenceMatcher UTF8 splitlines autojunk=False; shared runner retained except report kind and test discovery name"
+  },
+  "primary_api_sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_process_id_list",
+    "https://learn.microsoft.com/en-us/windows/win32/api/jobapi2/nf-jobapi2-queryinformationjobobject",
+    "https://learn.microsoft.com/en-us/windows/win32/api/jobapi/nf-jobapi-isprocessinjob",
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess",
+    "https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights",
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-queryfullprocessimagenamew",
+    "https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject"
+  ],
+  "source_api_rule": "X64 DWORD/DWORD/ULONG_PTR list, explicit retained job infoClass3, bounded64 complete members, query-limited+synchronize0x101000; same explicit job membership before metadata, no NULL job or privileges, handle-bound PID/time/image/exit with explicit per-handle custody.",
+  "preservation": "No canonical source, predecessor cut, Git object/index/ref or host configuration authored by this job. Old controlled records and before-images are retained; earlier passes describe earlier draft bytes.",
+  "execution_limit": "This is source construction and synthetic guarded testing only. All actual native queries, child launch, hard-link readiness qualification, profiles, DLL/API/provider/debug/memory operations remain NOT_RUN. No current original human ingress exists."
+}

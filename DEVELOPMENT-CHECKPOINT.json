@@ -25,7 +25,8 @@
     "Independently approved R5 preloaded-caller, exact seven-member native-control and bounded no-hook default-validation source; 96 guarded data cases",
     "Independently reviewed installed-SDK NuGet package signature evidence with explicit repository policy; original NU3034 failure retained",
     "Reviewed V2 pure-data derivation preserves exact GUID and image/info/DBI ages1/4/1 and approved R5 source binding;11 guarded data cases",
-    "Reviewed canonical bridge source construction;57 guarded cases and five unpatched refusal/preload observations; current trusted ingress null and native admission refused"
+    "Reviewed canonical bridge source construction;57 guarded cases and five unpatched refusal/preload observations; current trusted ingress null and native admission refused",
+    "Reviewed exact outer supervisor source construction;63 guarded cases and unpatched refusal/output controls; native adapter/launch/profile effects NOT_RUN"
   ],
   "open_issues": [
     "Actual AC7 restricted image exited 0xC0000142; exact loader cause remains unknown and worker facts are null",
@@ -34,7 +35,8 @@
     "Remaining established application/model/runtime/offline/recovery/seven-day/human acceptance requirements remain open",
     "Actual DbgHelp/type-offset/own-child loader capture and causality remain unverified",
     "Reviewed diagnostic tools require original host-bound pins, inputs and separately approved effects; this is not clean-clone product integration",
-    "Current bridge requires a fresh exact owner ingress/action grant, independently reviewed outer supervisor and native action lease before effects"
+    "Outer supervisor construction is reviewed; fresh exact owner ingress/action grant, separately reviewed successor/action join and native action lease remain required before effects",
+    "Retained T-volume observation reports Warning / Spot Fix Needed; environment state requires adjudication before future native eligibility; no repair or corruption/causality finding established"
   ],
   "scan_scope": "Bounded skill scan plus every exact exported blob checked for configured credential patterns; no universal secrecy or ACL claim",
   "permissions": "Windows ACL spot-check allows Authenticated Users Modify; generic POSIX world-writable labels do not by themselves establish Windows effective access",
@@ -63,8 +65,8 @@
   ],
   "generated_cache_or_environment_exported": false,
   "whitespace_check": "CRLF-aware Git check; trailing blanks/EOF blanks/space-before-tab remain checked",
-  "checkpoint_sequence": 4,
-  "checkpoint_parent": "6786afeed7587a1c62d59d7984a51cb2d4bd1800",
+  "checkpoint_sequence": 5,
+  "checkpoint_parent": "030b0c091e451c871e260cac845e376af225d2da",
   "publication_follow_up": {
     "original_integration": "FAILED_WRITE_SCOPE_VIOLATION_PRESERVED",
     "independent_read_only_verification": "SUCCEEDED",
@@ -80,9 +82,9 @@
   "host_bound_qualification_tooling": true,
   "clean_clone_product_execution_claim": false,
   "newly_published_engineering_snapshot": {
-    "engineering_source": 1184,
-    "engineering_test": 500,
-    "engineering_validation_infrastructure": 164
+    "engineering_source": 838,
+    "engineering_test": 562,
+    "engineering_validation_infrastructure": 159
   },
   "authored_during_checkpoint_preparation": {
     "product_source": 0,
@@ -90,8 +92,8 @@
     "engineering_source": 0,
     "engineering_test": 0
   },
-  "engineering_loc_reference": "handoff/development-checkpoints/20261020-0004/ENGINEERING-LOC.json",
-  "qualification_source_provenance": "handoff/development-checkpoints/20261020-0004/SOURCE-PROVENANCE.json",
+  "engineering_loc_reference": "handoff/development-checkpoints/20261020-0005/ENGINEERING-LOC.json",
+  "qualification_source_provenance": "handoff/development-checkpoints/20261020-0005/SOURCE-PROVENANCE.json",
   "reviewed_engineering_components": [
     {
       "name": "loader-capture-r5",
@@ -120,6 +122,15 @@
       "trusted_owner_ingress_reference": null,
       "native_admission": "REFUSED",
       "native_execution": false
+    },
+    {
+      "name": "loader-bridge-supervisor-r1",
+      "review_sha256": "fdc3bb8e708366e1f4f6fc02335ba8fc83d248a2691d5e8b1c92f97a255a7af9",
+      "guarded_cases": 63,
+      "scope": "SOURCE_CONSTRUCTION_ONLY",
+      "trusted_owner_ingress_reference": null,
+      "native_admission": "REFUSED_MISSING_ORIGINAL_ROOT_INGRESS",
+      "native_execution": false
     }
   ],
   "checkpoint_0003_publication_evidence": {
@@ -130,5 +141,36 @@
     "anonymous_public_byte_samples": 7,
     "actual_all_six_nodes_succeeded": true,
     "product_acceptance": false
+  },
+  "checkpoint_0004_publication_evidence": {
+    "commit": "030b0c091e451c871e260cac845e376af225d2da",
+    "result_reference": "handoff/development-checkpoints/20261020-0005/checkpoint-0004-publication/control/INTEGRATION-RESULT.json",
+    "supplemental_reference": "handoff/development-checkpoints/20261020-0005/checkpoint-0004-publication/control/SUPPLEMENTAL-PUBLIC-READBACK.json",
+    "normal_index_reference": "handoff/development-checkpoints/20261020-0005/checkpoint-0004-publication/control/POST-PUBLICATION-NORMAL-INDEX.json",
+    "anonymous_public_byte_samples": 7,
+    "actual_all_six_nodes_succeeded": true,
+    "product_acceptance": false
+  },
+  "environment_issue": {
+    "classification": "environment/dependency issue",
+    "observation": {
+      "observed_at": "2026-10-20T20:21:44.2323359Z",
+      "command": "Get-Volume -DriveLetter T",
+      "drive_letter": "T",
+      "file_system_type": "NTFS",
+      "health_status": "Warning",
+      "operational_status": "Spot Fix Needed",
+      "classification": "environment/dependency issue",
+      "current_checkpoint": "030b0c091e451c871e260cac845e376af225d2da",
+      "repair_performed": false,
+      "native_ceta_qualification": false
+    },
+    "evidence": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/control/T-VOLUME-READONLY-OBSERVATION.json",
+      "sha256": "75a808ec2bb91177da80c94f1803f16f681b56277dec3526b029b083e38c826e"
+    },
+    "volume_repair_performed": false,
+    "source_corruption_established": false,
+    "loader_causality_established": false
   }
 }
