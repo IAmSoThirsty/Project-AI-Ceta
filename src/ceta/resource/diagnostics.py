@@ -690,10 +690,31 @@ class PerformanceDiagnostics:
     def analyze_process_current(self, samples: tuple[TelemetrySample, ...], envelope: PerformanceEnvelope, *,
                                 now_monotonic_ns: int, maximum_age_ns: int, scope_digest: str,
                                 environment_digest: str) -> ProcessPerformanceAnalysis:
+        """Measure one coherent process window from owned, validated value copies.
+
+        Supplied source bindings are declared facts, not source authentication.
+        A fresh wrapper cannot qualify a counter from a different probe window.
+        """
+        require(type(samples) is tuple and len(samples) <= MAX_DIAGNOSTIC_SAMPLES
+                and type(envelope) is PerformanceEnvelope, "RESOURCE_CURRENT_DIAGNOSTIC_INPUT_INVALID")
+        samples = tuple(self._copy_process_sample(sample) for sample in samples)
+        envelope = replace(envelope)
         telemetry = self.analyze_current(samples, envelope, now_monotonic_ns=now_monotonic_ns,
             maximum_age_ns=maximum_age_ns, scope_digest=scope_digest, environment_digest=environment_digest)
         findings = []
         if telemetry.measurement_state == "CURRENT_INPUT_REJECTED": findings.extend(telemetry.findings)
+        if len({sample.sample_id for sample in samples}) != len(samples):
+            findings.append("PROCESS_SAMPLE_REUSED_OR_DUPLICATED")
+        for sample in samples:
+            usage = sample.process_usage
+            if usage is None:
+                continue
+            if any(item.observed_monotonic_ns != sample.observed_monotonic_ns for item in
+                   (sample.memory_bytes, usage.cpu_time_100ns, usage.private_bytes,
+                    usage.read_io_bytes, usage.write_io_bytes)):
+                findings.append("PROCESS_COUNTER_WINDOW_INCOHERENT")
+            if not 0 <= now_monotonic_ns - usage.window_started_monotonic_ns <= maximum_age_ns:
+                findings.append("PROCESS_COUNTER_WINDOW_STALE_OR_FUTURE")
         if len(samples) < 2: findings.append("PROCESS_COUNTER_BASELINE_REQUIRED")
         if any(item.source is None or item.process_usage is None for item in samples):
             findings.append("PROCESS_USAGE_UNAVAILABLE")
