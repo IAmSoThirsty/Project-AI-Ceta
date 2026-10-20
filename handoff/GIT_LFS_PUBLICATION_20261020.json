@@ -1,0 +1,79 @@
+{
+  "schema": "ceta.git-lfs-source-migration.v1",
+  "phase": "PRE_PUBLICATION_LOCAL_MIGRATION",
+  "verification_status": "PASS",
+  "checked_utc": "2026-10-20T16:31:54.180925+00:00",
+  "owner_instruction": "Use the git LFS or split it in half and re merge if possible, if not just use LFS",
+  "remote_target": "git@github.com:IAmSoThirsty/Project-AI-Ceta.git",
+  "original_refs": {
+    "refs/heads/build/standalone": "8ac404cdb2dd64c2dae974fbd25e13975b09295b",
+    "refs/heads/candidate/societal-reasoning-v1": "629890e5d3f2dc37766ed3ac077095738723bfcf"
+  },
+  "migrated_refs": {
+    "refs/heads/build/standalone": "a4de4487c404c21a4d7c3cd3e688bfd4049550ab",
+    "refs/heads/candidate/societal-reasoning-v1": "90dbcd718b3853a7e408ba0daeca255502d1b316"
+  },
+  "original_to_migrated_commits": {
+    "8ac404cdb2dd64c2dae974fbd25e13975b09295b": "a4de4487c404c21a4d7c3cd3e688bfd4049550ab",
+    "83fc9432b4a37ee7f91d6c5b0d358a015548aed4": "7bceabeabea68711c0c222da2b987101e05771d2",
+    "629890e5d3f2dc37766ed3ac077095738723bfcf": "90dbcd718b3853a7e408ba0daeca255502d1b316"
+  },
+  "history_comparisons": [
+    {
+      "original": "8ac404cdb2dd64c2dae974fbd25e13975b09295b",
+      "migrated": "a4de4487c404c21a4d7c3cd3e688bfd4049550ab",
+      "changed_paths": [
+        ".gitattributes",
+        "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf"
+      ],
+      "unchanged_entries": 898,
+      "parents_mapped": true,
+      "author_committer_message_preserved": true
+    },
+    {
+      "original": "83fc9432b4a37ee7f91d6c5b0d358a015548aed4",
+      "migrated": "7bceabeabea68711c0c222da2b987101e05771d2",
+      "changed_paths": [
+        ".gitattributes",
+        "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf"
+      ],
+      "unchanged_entries": 1055,
+      "parents_mapped": true,
+      "author_committer_message_preserved": true
+    },
+    {
+      "original": "629890e5d3f2dc37766ed3ac077095738723bfcf",
+      "migrated": "90dbcd718b3853a7e408ba0daeca255502d1b316",
+      "changed_paths": [
+        ".gitattributes",
+        "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf"
+      ],
+      "unchanged_entries": 34229,
+      "parents_mapped": true,
+      "author_committer_message_preserved": true
+    }
+  ],
+  "pdf": {
+    "path": "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf",
+    "bytes": 143878071,
+    "sha256": "072721b27af19ffa909eae0b4e564e7c56db81269fb121102bc82cb9d293edb8",
+    "working_file_hash_preserved": true,
+    "lfs_object_hash_verified": true
+  },
+  "original_history_backup": {
+    "file": "PRE-LFS-ORIGINAL-HISTORY.bundle",
+    "bytes": 86494848,
+    "sha256": "e06fc99c1d77d95482c13303d8167c28cb5ef6fe34340556e067142e6b797740",
+    "complete_restoration_and_strict_git_fsck": "PASS",
+    "retention": "Local project evidence; original history retained"
+  },
+  "working_file_verification": {
+    "paths": 34231,
+    "changed_original_paths": [
+      ".gitattributes"
+    ],
+    "all_other_original_raw_sha256_preserved": true
+  },
+  "product_execution_status": "PAUSED; existing product acceptance requirements and failed integration evidence preserved",
+  "verification_scope": "Local source/history migration. Remote publication outcome is recorded separately after actual upload."
+}
