@@ -1,0 +1,151 @@
+{
+  "schema": "ceta.git-pdf-split-publication.v1",
+  "phase": "PRE_PUBLICATION_SPLIT_VERIFIED",
+  "checked_utc": "2026-10-20T16:51:25.051398+00:00",
+  "owner_instruction": "Use the git LFS or split it in half and re merge if possible, if not just use LFS",
+  "remote_target": "git@github.com:IAmSoThirsty/Project-AI-Ceta.git",
+  "transport": "ordinary Git; two parts; no Git LFS required",
+  "lfs_attempt": {
+    "exit_status": 2,
+    "exact_stderr": "batch response: This repository exceeded its LFS budget. The account responsible for the budget should increase it to restore access.",
+    "git_refs_uploaded": false,
+    "local_publication_commit": "db8b976b77b08f0ca97a31eda722a9ff76fe9ba9"
+  },
+  "pdf": {
+    "original_path": "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf",
+    "bytes": 143878071,
+    "sha256": "072721b27af19ffa909eae0b4e564e7c56db81269fb121102bc82cb9d293edb8",
+    "original_local_bytes_unchanged": true,
+    "manifest_path": "assets/reference-parts/codex-foundations.parts.json",
+    "parts": [
+      {
+        "file": "Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part01",
+        "bytes": 71939036,
+        "sha256": "ceafdae64c8ab3391fe39539aebe9bef64979fd4f4582c5b0205951fa269f9ef"
+      },
+      {
+        "file": "Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part02",
+        "bytes": 71939035,
+        "sha256": "666684fc6c60556686e6bc8c3c647f27931ec8ce1e158eee0bb24cf227b5bf00"
+      }
+    ],
+    "full_reassembly_verified": true
+  },
+  "lfs_to_split_commits": {
+    "a4de4487c404c21a4d7c3cd3e688bfd4049550ab": "e7abb428b331f0361ee67b0716a9d859647aa6eb",
+    "7bceabeabea68711c0c222da2b987101e05771d2": "217900def59675d8a29570b2e88264aba48f32b5",
+    "90dbcd718b3853a7e408ba0daeca255502d1b316": "578e3fb40996419d00f2641bfdf8667b1fe425e5",
+    "db8b976b77b08f0ca97a31eda722a9ff76fe9ba9": "bf930dc22a71fada233e1b2cc523584c2450c0a0"
+  },
+  "original_to_split_commits": {
+    "8ac404cdb2dd64c2dae974fbd25e13975b09295b": "e7abb428b331f0361ee67b0716a9d859647aa6eb",
+    "83fc9432b4a37ee7f91d6c5b0d358a015548aed4": "217900def59675d8a29570b2e88264aba48f32b5",
+    "629890e5d3f2dc37766ed3ac077095738723bfcf": "578e3fb40996419d00f2641bfdf8667b1fe425e5"
+  },
+  "history_comparisons": [
+    {
+      "before": "a4de4487c404c21a4d7c3cd3e688bfd4049550ab",
+      "after": "e7abb428b331f0361ee67b0716a9d859647aa6eb",
+      "changed_paths": [
+        ".gitattributes",
+        ".gitignore",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part01",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part02",
+        "assets/reference-parts/codex-foundations.parts.json",
+        "handoff/PDF_REASSEMBLY.md",
+        "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf",
+        "tests/publication/test_pdf_reassembly.py",
+        "tools/reassemble_codex_pdf.py"
+      ],
+      "unchanged_paths": 897,
+      "author_committer_message_preserved": true,
+      "parents_mapped": true
+    },
+    {
+      "before": "7bceabeabea68711c0c222da2b987101e05771d2",
+      "after": "217900def59675d8a29570b2e88264aba48f32b5",
+      "changed_paths": [
+        ".gitattributes",
+        ".gitignore",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part01",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part02",
+        "assets/reference-parts/codex-foundations.parts.json",
+        "handoff/PDF_REASSEMBLY.md",
+        "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf",
+        "tests/publication/test_pdf_reassembly.py",
+        "tools/reassemble_codex_pdf.py"
+      ],
+      "unchanged_paths": 1054,
+      "author_committer_message_preserved": true,
+      "parents_mapped": true
+    },
+    {
+      "before": "90dbcd718b3853a7e408ba0daeca255502d1b316",
+      "after": "578e3fb40996419d00f2641bfdf8667b1fe425e5",
+      "changed_paths": [
+        ".gitattributes",
+        ".gitignore",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part01",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part02",
+        "assets/reference-parts/codex-foundations.parts.json",
+        "handoff/PDF_REASSEMBLY.md",
+        "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf",
+        "tests/publication/test_pdf_reassembly.py",
+        "tools/reassemble_codex_pdf.py"
+      ],
+      "unchanged_paths": 34228,
+      "author_committer_message_preserved": true,
+      "parents_mapped": true
+    },
+    {
+      "before": "db8b976b77b08f0ca97a31eda722a9ff76fe9ba9",
+      "after": "bf930dc22a71fada233e1b2cc523584c2450c0a0",
+      "changed_paths": [
+        ".gitattributes",
+        ".gitignore",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part01",
+        "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part02",
+        "assets/reference-parts/codex-foundations.parts.json",
+        "handoff/PDF_REASSEMBLY.md",
+        "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf",
+        "tests/publication/test_pdf_reassembly.py",
+        "tools/reassemble_codex_pdf.py"
+      ],
+      "unchanged_paths": 34230,
+      "author_committer_message_preserved": true,
+      "parents_mapped": true
+    }
+  ],
+  "original_history_backup": {
+    "file": "PRE-LFS-ORIGINAL-HISTORY.bundle",
+    "bytes": 86494848,
+    "sha256": "e06fc99c1d77d95482c13303d8167c28cb5ef6fe34340556e067142e6b797740",
+    "restoration_and_strict_fsck": "PASS; preserved prior independently verified evidence"
+  },
+  "lfs_history_backup": {
+    "file": "PRE-SPLIT-LFS-HISTORY.bundle",
+    "bytes": 55035188,
+    "sha256": "a4abc05cb5faead6c0a5ab3c8fd1f86e54a6bbe8c619538ca3c680e8cd001cc6",
+    "git_bundle_verify": "PASS"
+  },
+  "utility_tests": {
+    "cases": 12,
+    "exit_status": 0,
+    "real_full_size_reassembly": "PASS"
+  },
+  "intentional_existing_path_changes": [
+    "sources/codex/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf (Git storage only; original working file retained)",
+    ".gitattributes",
+    ".gitignore"
+  ],
+  "added_transport_paths": [
+    "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part01",
+    "assets/reference-parts/Thirstys_Codex_Standards_Edition_Volume_01_Foundations_and_Governance.pdf.part02",
+    "assets/reference-parts/codex-foundations.parts.json",
+    "tools/reassemble_codex_pdf.py",
+    "tests/publication/test_pdf_reassembly.py",
+    "handoff/PDF_REASSEMBLY.md"
+  ],
+  "product_implementation_remains_paused": true,
+  "verification_scope": "Source/history transport, exact reference recovery; remote publication recorded after actual upload"
+}
