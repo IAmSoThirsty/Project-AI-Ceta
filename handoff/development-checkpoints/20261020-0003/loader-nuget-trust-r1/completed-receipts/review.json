@@ -1,0 +1,98 @@
+{
+  "changed_files": [],
+  "commands": [
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\bootstrap_review.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\work\\verify_frozen.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\independent_evidence_check.py",
+      "exit_status": 0
+    }
+  ],
+  "decision": "approved",
+  "executor_id": "/root/admission",
+  "exit_status": 0,
+  "finished_at": "2026-10-20T19:15:01.788564+00:00",
+  "git_baseline": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "input_hash": "6b6615746fafc7d71370b4e2a0096ba2bf161ec9dbf892bc01e1095d0fe6e63e",
+  "node_id": "review",
+  "observed_git": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "receipt_hash": "76ab7f5ad129256631e7001bf1f227d3af03c1fafc0854b44d9bc581d08bce92",
+  "result": {
+    "archived_package_signature_sdk_exit_status": 0,
+    "author": "/root/review",
+    "disposition": "EXACT_RETAINED_PACKAGE_SIGNATURE_EVIDENCE_APPROVED",
+    "findings": [],
+    "frozen_data_verifier_exit_status": 0,
+    "historical_S1_files_preserved": 61,
+    "native_acceptance": false,
+    "product_acceptance": false,
+    "receipt_format_corrections": {
+      "evidence_disposition_unchanged": true,
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\RECEIPT-FORMAT-CORRECTION-R3.json",
+      "sha256": "87acd7d51e44a96e9b4a4196cf5e960ea1d4312841ca217b00cf66a76a5ea95a"
+    },
+    "review": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-nuget-trust-r1\\review\\REVIEW.json",
+      "sha256": "eb030a95a658462db691b0cf49f31191d0dbe5e1d53fe801c7848ef22155c9e0"
+    },
+    "reviewer": "/root/admission",
+    "work_files_unchanged": 41
+  },
+  "run_id": "ceta-loader-nuget-trust-r1-20261020",
+  "schema_version": 1,
+  "started_at": "2026-10-20T19:10:45.896966+00:00",
+  "validations": [
+    {
+      "name": "exact_archive_and_frozen_evidence_integrity",
+      "passed": true
+    },
+    {
+      "name": "actual_sdk_argv_environment_and_success_log",
+      "passed": true
+    },
+    {
+      "name": "independent_official_metadata_policy_derivation",
+      "passed": true
+    },
+    {
+      "name": "required_owner_root_and_revocation_policy",
+      "passed": true
+    },
+    {
+      "name": "signer_repository_timestamp_chain_observations",
+      "passed": true
+    },
+    {
+      "name": "original_NU3034_and_all_S1_history_preserved",
+      "passed": true
+    },
+    {
+      "name": "revocation_cache_native_and_product_limits_explicit",
+      "passed": true
+    },
+    {
+      "name": "distinct_author_and_actual_reviewer",
+      "passed": true
+    }
+  ]
+}

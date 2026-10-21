@@ -93,6 +93,18 @@ class _ShutdownSettlementWitness:
         return "<OwnedService shutdown settlement witness>"
 
 
+@dataclass(frozen=True, repr=False)
+class OwnedDiagnosticsSnapshot:
+    """Ephemeral borrowed observation ports; never a wire record or grant."""
+    generation: str
+    installation_scope_id: str
+    scopes: tuple[str, ...]
+    profile_root: Path
+    codec: RecordCodec
+    service_process: object
+    client_process: object
+
+
 class OwnedService:
     _TERMINATION_ATTEMPT_LIMIT = 3
 
@@ -867,6 +879,61 @@ class OwnedService:
             return {"state": self._state, "detail": self._detail, "generation": self._generation,
                     "positions": self._positions, "call": self._last, "authority": "CLOSED",
                     "pending_attempt": None if self._pending is None else self._pending["attempt"]}
+
+    def _diagnostics_binding_available(self):
+        # Controller metadata only. Physical lifetime/currentness is checked
+        # through the borrowed process ports by the collector outside this lock.
+        return (self._state == "READY" and self._pending is None and self._send_task is None
+                and self._uncertain_task_request is None and not self._workers
+                and self._launches_in_progress == 0 and not self._service_launch_pending
+                and not self._launch_slots and getattr(self, "_unresolved_launch", None) is None
+                and type(self._installation) is str and self._installation.startswith("installation:")
+                and len(self._installation) > len("installation:")
+                and type(self._scopes) is tuple and 1 <= len(self._scopes) <= 8
+                and all(type(scope) is str and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._:/-]{0,159}", scope)
+                        for scope in self._scopes)
+                and len(set(self._scopes)) == len(self._scopes)
+                and self._installation in self._scopes
+                and self._service is not None and self._client is not None
+                and self._service is not self._client
+                and all(id(channel) not in self._closed_channels
+                        and not getattr(channel, "_closed", False)
+                        and not getattr(channel, "_process_closed", False)
+                        and getattr(channel, "process", None) is not None
+                        for channel in (self._service, self._client))
+                and self._service.process is not self._client.process)
+
+    def _diagnostics_owner_snapshot(self, expected_generation):
+        require(type(expected_generation) is str
+                and re.fullmatch(r"[0-9a-f]{64}", expected_generation) is not None,
+                "SERVICE_DIAGNOSTICS_GENERATION_INVALID")
+        with self._lock:
+            require(self._generation == expected_generation, "SERVICE_DIAGNOSTICS_GENERATION_CHANGED")
+            require(self._diagnostics_binding_available(), "SERVICE_DIAGNOSTICS_OWNER_UNAVAILABLE")
+            return OwnedDiagnosticsSnapshot(self._generation, self._installation, self._scopes,
+                self._root, self._codec, self._service.process, self._client.process)
+
+    def _diagnostics_owner_current(self, snapshot):
+        if (type(snapshot) is not OwnedDiagnosticsSnapshot
+                or type(snapshot.generation) is not str
+                or re.fullmatch(r"[0-9a-f]{64}", snapshot.generation) is None
+                or type(snapshot.installation_scope_id) is not str):
+            return False
+        with self._lock:
+            return (self._diagnostics_binding_available()
+                    and snapshot.generation == self._generation
+                    and snapshot.installation_scope_id == self._installation
+                    and snapshot.scopes is self._scopes and snapshot.profile_root is self._root
+                    and snapshot.codec is self._codec
+                    and snapshot.service_process is self._service.process
+                    and snapshot.client_process is self._client.process)
+
+    def resource_diagnostics(self, *, expected_generation, envelope, maximum_age_ns=1_000_000_000,
+                             sample_interval_ns=100_000_000, cancelled=None):
+        """Explicit finite observation; collector owns timing and safe output."""
+        from ceta.composition.resource_diagnostics import collect_owned_diagnostics
+        return collect_owned_diagnostics(self, expected_generation=expected_generation, envelope=envelope,
+            maximum_age_ns=maximum_age_ns, sample_interval_ns=sample_interval_ns, cancelled=cancelled)
 
     def acknowledge_task_reconciliation(self, task_id, revision):
         """Explicit local task edit decision; never settles kernel/effect uncertainty.

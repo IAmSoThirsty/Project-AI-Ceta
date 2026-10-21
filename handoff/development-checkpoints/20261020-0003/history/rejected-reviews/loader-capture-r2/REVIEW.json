@@ -1,0 +1,134 @@
+{
+  "schema": "ceta.loader-capture-independent-construction-review.v1",
+  "at": "2026-10-20T18:38:49.818795+00:00",
+  "reviewer": "/root/admission",
+  "author": "/root/implement",
+  "decision": "rejected",
+  "disposition": "LOCAL_CONSTRUCTION_CUT_REJECTED_PENDING_CALLER_BINDING_REPAIR",
+  "frozen": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\work\\FROZEN.json",
+    "sha256": "cd35ffb521cb43a90ce4b2aae4482cf85c7318e1ceb9d7f0c2b2ee284d7f2c26"
+  },
+  "code_manifest": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\work\\CODE-MANIFEST-c020fc27945687ca.json",
+    "sha256": "122a1154fca433e547121035b5eab22b1a71ae5168b1ba5812d6a8bda701fb89"
+  },
+  "five_source_files": {
+    "capture_core.py": "c48b02a17dbdf883f99fdc697cda8f84ff292998533b8a201a8911ec02197278",
+    "win32_debug.py": "cbe43333d9bbe34599153b12c2ae26b4082bce5d231a4c63dace8e8cd448e7ad",
+    "isolated_adapter.py": "184f9ca445794cd91dbe26ef8acb845fff0f41d49bb1e162b2aab7f9d28ab0ba",
+    "loader_snaps.py": "a4620d44dcdb0568db94cccad34b47b198237bcadf7b1a3d23d7a70e45eb5dc6",
+    "owned_caller.py": "53de0dca6ce805a123aae765b454be2fabaebe082e71e317c3aac4de0106594e"
+  },
+  "files_inspected": [
+    "capture_core.py",
+    "isolated_adapter.py",
+    "loader_snaps.py",
+    "owned_caller.py",
+    "win32_debug.py",
+    "test_loader_capture.py",
+    "test_loader_snaps.py",
+    "verify_frozen.py",
+    "run_data_controls.py",
+    "INPUTS.json",
+    "ACTION-PACKET.json",
+    "README.md",
+    "Original canonical native_fixture_support.py and exact AC7 qualification driver preparation/entry callers"
+  ],
+  "findings": [
+    {
+      "id": "LOADER-R2-01",
+      "priority": "P1",
+      "classification": "BLOCKING_CURRENT_CONSTRUCTION_HANDOFF",
+      "title": "Prepared canonical caller rejected by the blanket cold-module guard",
+      "location": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\work\\isolated_adapter.py",
+      "lines": [
+        362,
+        363
+      ],
+      "prescribed_caller": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\work\\owned_caller.py",
+      "caller_lines": [
+        10,
+        20,
+        21
+      ],
+      "requirement_evidence": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\work\\ACTION-PACKET.json",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\work\\README.md"
+      ],
+      "actual_fixture": "T:/00-Active/Project-AI-CETA/.agents/runtime/ac1-20261014/native_fixture_support.py:8-10",
+      "current_driver": "T:/00-Active/Project-AI-CETA/.agents/ac7-token-contract-20261020/tools/qualify_isolated_worker.py:84-93",
+      "reproduction": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\review\\CALLER-CONFLICT.json",
+        "sha256": "381fbbc19a85dfa21e5a09374839edd46ca1f9cc2d6a6638e7c749efdcd6a886"
+      },
+      "observed": "CAPTURE_FRESH_QUALIFICATION_INTERPRETER_REQUIRED",
+      "consequence": "The exact in-process caller described by the packet cannot reach capture. Admission precedes this guard, so an actual otherwise valid attempt would already create its once-only attempt record before rejecting the mandatory prepared module state.",
+      "test_gap": "Caller tests replace launch_isolated_capture entirely. Existing release tests exercise validate_release shape; they do not execute this existing-caller admission transition.",
+      "root_personal_inspection": "Root independently confirmed the exact source/caller conflict and instructed preservation plus separate successor repair.",
+      "repair_scope_requested": "Separate successor source/test/input/action packet. Preserve this cut and failures; apply only the reviewed pinned-module and exact fixture binding repair described in CALLER-BOUNDARY-ASSESSMENT.json."
+    }
+  ],
+  "verified_bounded_checks": [
+    "Exact frozen file hashes and read-only verifier passed; source and originals remain unchanged.",
+    "All 60 exact existing case IDs passed independently with zero failures/errors/skips; all 28 predecessor test method ASTs remain exact.",
+    "Controlled reproduction with real byte-exact frozen AC7 imports demonstrates the mandatory-caller conflict before any native provider/child operation.",
+    "Construction retains original owner process handle/creation identity and limits the debug creation delta to bit 0x2 for one child; native debugger/event/PBI structure declarations checked against available official documentation and controlled layout assertions.",
+    "Loader flags path resolves the field from pinned PDB types, checks local PE/PDB GUID-age and bounds, changes at most one four-byte DWORD, requires readback, and retains unknown query/write/continue/close states without replay.",
+    "Creator-thread guards, original process identity checks, borrowed-pipe custody, explicit retirement and primary/secondary error preservation have controlled coverage.",
+    "Attribution remains UNKNOWN for module order/status alone, unverified producer, partial/truncated/unrecognized/ambiguous text. The narrower recognized result explicitly remains a child-origin initialization report with root_cause UNKNOWN.",
+    "Symbol inputs and private/native loader timing remain unqualified; current action packet is dormant and does not authorize effects."
+  ],
+  "controls": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\review\\CONTROLLED-RESULT.json",
+    "sha256": "acced42c3da4c365455b0a0de0580ac7295c68ab12f803b13264d65b5692a5ee",
+    "tests": 60,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "original_ast_preservation": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\review\\AST-PRESERVATION.json",
+    "sha256": "6e2b65c103797dadfc8335aa7228aff36ae7dd5af54a39934ec6c37206dadf07",
+    "unchanged_methods": 28
+  },
+  "exact_gate": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\review\\EXACT-GATE.json",
+    "sha256": "48d1afab070c5923ac8852e6c9ce892c53143ebd9b149d1e4456b1776289acb0",
+    "exit_status": 0
+  },
+  "repair_boundary": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r2\\review\\CALLER-BOUNDARY-ASSESSMENT.json",
+    "sha256": "69268f2a7639688d670697987465104e91a3e8efd410cf76f0e1afe1a18f2182"
+  },
+  "evidence_limit": "Named Python native/process/network/registry/SQLite entry points and audit hooks; no complete Windows loader trace; local Python buffer fixture reads/writes are controlled data.",
+  "binary_extension_origins": {
+    "_ctypes": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_ctypes.pyd",
+    "_hashlib": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_hashlib.pyd",
+    "_socket": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_socket.pyd",
+    "select": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\select.pyd",
+    "_ssl": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_ssl.pyd",
+    "_asyncio": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_asyncio.pyd",
+    "_overlapped": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_overlapped.pyd",
+    "_bz2": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_bz2.pyd",
+    "_lzma": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_lzma.pyd",
+    "unicodedata": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\unicodedata.pyd"
+  },
+  "official_sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/dbghelp/nf-dbghelp-symloadmoduleexw",
+    "https://learn.microsoft.com/en-us/windows/win32/api/debugapi/nf-debugapi-waitfordebugeventex",
+    "https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-output_debug_string_info",
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/show-loader-snaps",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-ntqueryinformationprocess"
+  ],
+  "source_mutation": false,
+  "source_cutover": false,
+  "native_execution": false,
+  "native_memory_effects": false,
+  "action_authorization": false,
+  "native_symbol_qualification": false,
+  "actual_failed_module": "UNKNOWN",
+  "actual_root_cause": "UNKNOWN",
+  "product_acceptance": false,
+  "next": "Root reviews this finding/assessment, assigns a separate bounded successor repair, then requests distinct rereview of the refreshed exact cut."
+}

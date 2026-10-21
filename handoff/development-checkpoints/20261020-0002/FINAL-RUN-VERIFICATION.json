@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "run",
+    "verify",
+    "ceta-post-publication-check-r1-20261020",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\development-checkpoint-20261020\\post-publication-check-r1\\control"
+  ],
+  "exit_status": 0,
+  "response": {
+    "allowed": true,
+    "event_count": 15,
+    "graph_fingerprint": "fb4638bc02ec4f91e59ea35c3b7718a67c5d6f2eeb436aad71390c05fd718178",
+    "ledger_head": "5cf01cbf48cde81c0c510ed2a712d4776c397e5f346a66ac86b31d2014ef1bbf",
+    "receipts_valid": true,
+    "run_id": "ceta-post-publication-check-r1-20261020",
+    "states": {
+      "discover": "SUCCEEDED",
+      "implement": "SUCCEEDED",
+      "integrate": "SUCCEEDED",
+      "plan": "SUCCEEDED",
+      "review": "SUCCEEDED",
+      "validate": "SUCCEEDED"
+    },
+    "terminal_success": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-20T19:11:03.008978+00:00",
+  "status": "REPRODUCED_CALLER_BLOCKER",
+  "finding": "LOADER-R3-01",
+  "helper_pin": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac1-20261014\\native_fixture_support.py",
+    "sha256": "a7247426deee70890107b9d826c7cda9209015edd5f1192f93ee3bd1e5a4314f"
+  },
+  "validator_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r3\\work\\caller_boundary.py",
+  "validator_sha256": "269a4aba57b35ed2292d259c09c04a1104db0074c488de2c4a8c266a04fb5e34",
+  "validator_line": 408,
+  "exact_required_members": [
+    "CreatePipe",
+    "SetHandleInformation",
+    "PeekNamedPipe",
+    "ReadFile",
+    "WriteFile",
+    "CloseHandle"
+  ],
+  "canonical_added_members": [
+    {
+      "name": "CreateEventW",
+      "line": 121
+    }
+  ],
+  "declared_transform_retains_CreateEventW_lines": [
+    123
+  ],
+  "actual_control_members": [
+    "CloseHandle",
+    "CreateEventW",
+    "CreatePipe",
+    "PeekNamedPipe",
+    "ReadFile",
+    "SetHandleInformation",
+    "WriteFile"
+  ],
+  "extra_members": [
+    "CreateEventW"
+  ],
+  "observed_error": "CALLER_NATIVE_CONTROL_MEMBERS_CHANGED",
+  "method": "Exact frozen line408 guard AST with data-only descriptor namespace; helper and transform AST inspected, no constructor, native API, acquired DLL or fixture execution.",
+  "native_effects_executed": false
+}

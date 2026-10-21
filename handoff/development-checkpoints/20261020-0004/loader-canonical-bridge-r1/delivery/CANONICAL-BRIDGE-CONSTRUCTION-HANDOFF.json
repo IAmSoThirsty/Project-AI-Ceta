@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "at": "2026-10-20T20:08:07.912997+00:00",
+  "scope": "Exact independently reviewed executable canonical bridge construction with native action denied",
+  "run_id": "ceta-loader-canonical-bridge-r1-20261020",
+  "freeze": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-canonical-bridge-r1\\work\\FROZEN.json",
+    "sha256": "749aeb4a9b66a522e9f86ac37007d463d5a786ef4c645958443bd8537811ee4c"
+  },
+  "inputs": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-canonical-bridge-r1\\work\\BRIDGE-INPUTS.json",
+    "sha256": "a3822870f1c63125f5700e498ae1859c7a9f4f95148445b39373d8a3c1d9bd3e"
+  },
+  "independent_review": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-canonical-bridge-r1\\review\\REVIEW.json",
+    "sha256": "67b14fd4daca62a5638923c75ce608f3eb5fc2a845961177139324445f1a04c1"
+  },
+  "actual_review_receipt": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-canonical-bridge-r1\\control\\ceta-loader-canonical-bridge-r1-20261020\\receipts\\review.json",
+    "sha256": "1203c8a2eb634a1f3633daeafc35b5d0af8d3e1d88b24fffeacae783b906b2fb"
+  },
+  "current_production_refusal_evidence": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-canonical-bridge-r1\\review\\HOSTILE-BOUNDARY-RESULT.json",
+    "sha256": "19ebc2bd12a389cc4371aa1cf85e9c70e7a4dbb653d49122e9b7acd78edbd3a3"
+  },
+  "guarded_cases": 57,
+  "additional_unpatched_boundary_observations": 5,
+  "resolved_findings": [
+    {
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/HOSTILE-BOUNDARY-RESULT.json",
+          "sha256": "19ebc2bd12a389cc4371aa1cf85e9c70e7a4dbb653d49122e9b7acd78edbd3a3"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/before-ingress-r1.diff",
+          "sha256": "8cfbdf4e34f1d7a949d5ea7161a539b2abb0ffef721ecce3b6d2f8d16b0b31cd"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "99662be2a62c2c6f2ad2d845311c1443f86543768a9e01d886415ddd37e208ac"
+        }
+      ],
+      "finding": "Draft self-described human JSON no longer admits effects. Frozen inputs have no Root ingress anchor; actual production run refuses before supplied grant read or native adapter import.",
+      "id": "BRIDGE-REVIEW-01",
+      "limit": "A future Root anchor remains an operator provenance boundary, not cryptographic message authentication or Windows role separation.",
+      "source": "capture_bridge.py:337-375,384-394,511-519"
+    },
+    {
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/HOSTILE-BOUNDARY-RESULT.json",
+          "sha256": "19ebc2bd12a389cc4371aa1cf85e9c70e7a4dbb653d49122e9b7acd78edbd3a3"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "99662be2a62c2c6f2ad2d845311c1443f86543768a9e01d886415ddd37e208ac"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/before-ingress-r1.diff",
+          "sha256": "8cfbdf4e34f1d7a949d5ea7161a539b2abb0ffef721ecce3b6d2f8d16b0b31cd"
+        }
+      ],
+      "finding": "Preloaded canonical driver/helper/reader names are refused; a same-file driver label does not admit a forged module. Only dependencies imported within the fresh pinned six-module loader cut can be reused by load_exact.",
+      "id": "BRIDGE-REVIEW-02",
+      "source": "native_port.py:21-38,142-169"
+    },
+    {
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "99662be2a62c2c6f2ad2d845311c1443f86543768a9e01d886415ddd37e208ac"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/before-unwrapped-r1.diff",
+          "sha256": "905acfb058bf6ef59c7607ae5abe0108784ff9fc6d86a617308e4fccf49a6169"
+        }
+      ],
+      "finding": "Full R5 validate_definitions without constructor overrides now runs for every admitted canonical module before original driver import. Both altered original constructors reject without invoking their replacement; original canonical definitions pass.",
+      "id": "BRIDGE-REVIEW-03",
+      "native_constructor_calls_in_controls": 0,
+      "source": "native_port.py:74-81,165-167",
+      "tests": [
+        "ZCanonicalConstructors.test_actual_unwrapped_source_before_driver",
+        "ZCanonicalConstructors.test_mutated_isolation_constructor_rejected_before_driver",
+        "ZCanonicalConstructors.test_mutated_owned_process_constructor_rejected_before_driver"
+      ]
+    },
+    {
+      "classification": "fixed now",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "99662be2a62c2c6f2ad2d845311c1443f86543768a9e01d886415ddd37e208ac"
+        }
+      ],
+      "finding": "Listener cleanup requires an observed closed descriptor; uncertain allocation/pipe close or missing capture retirement retains custody and prevents profile deletion. Known handle cleanup is single-attempt and does not repoll closed capture handles.",
+      "id": "BRIDGE-REVIEW-04",
+      "limit": "Cleanup success/uncertainty was tested through controlled resource objects; actual Windows cleanup remains unexecuted.",
+      "source": "native_port.py:58-71,277-314,344-424"
+    },
+    {
+      "classification": "not blocking current task",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/SELF-REVIEW.json",
+          "sha256": "846d1ff93e5a4d55926bb54216a99157fca9ddde44671e01980e07484d159525"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "99662be2a62c2c6f2ad2d845311c1443f86543768a9e01d886415ddd37e208ac"
+        }
+      ],
+      "finding": "The full preflight already checked R5 action code_manifest/inputs before effects in the draft. Root retracted its partial-helper bypass concern. Final explicit helper preserves that boundary; four missing/wrong reference controls pass.",
+      "id": "BRIDGE-REVIEW-05",
+      "source": "capture_bridge.py:378-381,395-398,447-451"
+    },
+    {
+      "classification": "not blocking current task",
+      "evidence": [
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/frozen-verifier-COMMAND.json",
+          "sha256": "4c1abd924579a972225b4ab00063cf28c50a6d37e564aec23e78023a7e414905"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/review/data-cut/controls/independent-review/RESULT.json",
+          "sha256": "99662be2a62c2c6f2ad2d845311c1443f86543768a9e01d886415ddd37e208ac"
+        },
+        {
+          "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/BRIDGE-INPUTS.json",
+          "sha256": "a3822870f1c63125f5700e498ae1859c7a9f4f95148445b39373d8a3c1d9bd3e"
+        }
+      ],
+      "finding": "Own bridge freeze, exact accepted R5/V2/signature records, current raw canonical bytes, lease state/scopes/executor, nonce/time/effects and persisted result identity/hash/custody checks are present. Derived R5 binding retains original grant/message references and explicitly disclaims new consent.",
+      "id": "BRIDGE-REVIEW-06",
+      "limit": "Positive admission/effect execution is not established by these data and source checks.",
+      "source": "capture_bridge.py:212-310,324-334,384-508"
+    }
+  ],
+  "remaining": [
+    {
+      "blocks": "Any future native attempt",
+      "classification": "requires user decision",
+      "id": "BRIDGE-DEPENDENCY-INGRESS",
+      "issue": "Current trusted_owner_ingress_reference is null. Fresh actual human question/reply with IDs and evidence references, exact effect/code/destination binding, Root-preserved anchor and a separately reviewed successor input/freeze are required."
+    },
+    {
+      "blocks": "Any future native attempt",
+      "classification": "requires separate follow-up work",
+      "current_other_scope": "Root reports separate loader-bridge-supervisor-r1 construction in progress; no approval or behavior from that work is incorporated here.",
+      "id": "BRIDGE-DEPENDENCY-SUPERVISOR",
+      "issue": "This bridge has phase/deadline checks but cannot preempt a Windows call that fails to return. A separate reviewed bounded outer process/custody supervisor and exact action release must be bound before effects."
+    },
+    {
+      "blocks": "Native/action-specific acceptance",
+      "classification": "requires separate follow-up work",
+      "id": "BRIDGE-DEPENDENCY-NATIVE",
+      "issue": "Actual fixture/profile/debug/PEB/capture/retirement path remains NOT_RUN for this bridge. Exact fresh grant, action review, live multi-path lease, current source pins and approved supervisor are needed. Controlled resources do not qualify Windows integration."
+    },
+    {
+      "blocks": "Explanation of historical AC7 loader failure and product runtime acceptance",
+      "classification": "requires separate follow-up work",
+      "id": "BRIDGE-DIAGNOSTIC-UNKNOWN",
+      "issue": "The original 0xC0000142 worker startup failure and null worker facts are retained. This construction neither explains that event nor demonstrates the governed product authorization-to-effect path."
+    }
+  ],
+  "exact_python_hashes": {
+    "capture_bridge.py": "dfe79ff614a91998aac94ad4373320354b3628d301f0b3ecd47aed05aa0399b5",
+    "native_port.py": "38604a79783f7e18d46b8fad11190bb4c6fae5ea571ce065f25f9f2a93691b47",
+    "run_guarded_controls.py": "e9a087aef0c7bd782da40c56eada15e076200690379acf353a85d3aa7ada27eb",
+    "test_bridge.py": "6fa3bbddf06b3784ac374967bc15ccbb732e555de37b1c1c149f96c8f6e974ad",
+    "verify_frozen.py": "09f703ae5005969f7ad1900b1d150c7acec1289715d0bfbd90e59eec0c49c1d9"
+  },
+  "source_loc": {
+    "engineering_implementation": 1028,
+    "qualification_tools": 151,
+    "test": 459,
+    "product_source": 0,
+    "product_test": 0
+  },
+  "native_effects_authorized": false,
+  "native_execution": false,
+  "native_qualification": false,
+  "canonical_source_promotion": false,
+  "product_acceptance": false
+}

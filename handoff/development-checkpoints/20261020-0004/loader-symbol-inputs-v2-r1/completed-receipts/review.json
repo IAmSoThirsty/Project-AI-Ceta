@@ -1,0 +1,126 @@
+{
+  "changed_files": [],
+  "commands": [
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-symbol-inputs-v2-r1\\review\\review_checks.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-symbol-inputs-v2-r1\\review\\guarded_check.py frozen",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-symbol-inputs-v2-r1\\review\\guarded_check.py tests",
+      "exit_status": 0
+    },
+    {
+      "command": "powershell -NoProfile -File T:/02-Config/agents/taar-orchestrate.ps1 run verify ceta-loader-capture-r5-20261020 --runtime-root T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\control",
+      "exit_status": 0
+    }
+  ],
+  "decision": "approved",
+  "executor_id": "/root/admission",
+  "exit_status": 0,
+  "finished_at": "2026-10-20T19:39:16.902878+00:00",
+  "git_baseline": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "input_hash": "1f5c345e775dd4fd73ba206fee657a10ac7ebea1f746fa03a3a7d73090e89b46",
+  "node_id": "review",
+  "observed_git": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "receipt_hash": "0a60a5056fe56c5ce7f16e9fb4327ae3b2c4485dabe4c2a99a0178d21663a849",
+  "result": {
+    "ages": [
+      1,
+      4,
+      1
+    ],
+    "disposition": "EXACT_V2_SYMBOL_DATA_DERIVATION_APPROVED",
+    "freeze": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-symbol-inputs-v2-r1\\work\\FROZEN.json",
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/FROZEN.json",
+      "sha256": "0dbca53df9f0a3ae1e511c197041381e74b00df69df77782330ee3b0d951a863"
+    },
+    "guarded_tests_passed": 11,
+    "loader_freeze": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/FROZEN.json",
+      "sha256": "61e36c35c0e07eb2c9b5c3c5baec5a51fc93fb2b576518d32a6e23a4c7aee070"
+    },
+    "loader_review": {
+      "author": "/root/implement",
+      "receipt": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/control/ceta-loader-capture-r5-20261020/receipts/review.json",
+        "sha256": "24425dfaa6ccd0118978480b91aa79bf2af761c6ee73ea546bfe211f64ebd044"
+      },
+      "review": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/review/REVIEW.json",
+        "sha256": "7ecbf2d0b60d6258ab144e0e1beb973d1a66cfdfce5d5ff69c0ace432e92a797"
+      },
+      "reviewer": "/root/admission",
+      "run_id": "ceta-loader-capture-r5-20261020",
+      "runtime_receipt_identity": "69ad941fcf9824b0dff578516639d5d3e88b58d0a1da66026719cffa3f5a1d89",
+      "source_freeze": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/FROZEN.json",
+        "sha256": "61e36c35c0e07eb2c9b5c3c5baec5a51fc93fb2b576518d32a6e23a4c7aee070"
+      }
+    },
+    "native_authority": false,
+    "native_qualification": false,
+    "product_acceptance": false,
+    "review": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-symbol-inputs-v2-r1\\review\\REVIEW.json",
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/review/REVIEW.json",
+      "sha256": "d33a5706b27281459e1ba9744eff3f1a18c4f9c325879ae5dcdae4ad9ac1082c"
+    },
+    "supplement": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-symbol-inputs-v2-r1\\work\\CETA_OWNED_LOADER_SYMBOL_INPUTS_V2.json",
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/CETA_OWNED_LOADER_SYMBOL_INPUTS_V2.json",
+      "sha256": "53598ef4ac21fc26c0a5afafda005c777b67571713e26311fcb4a8b250858a8d"
+    }
+  },
+  "run_id": "ceta-loader-symbol-v2-r1-20261020",
+  "schema_version": 1,
+  "started_at": "2026-10-20T19:37:46.113490+00:00",
+  "validations": [
+    {
+      "name": "exact_V2_supplement_and17payload_freeze",
+      "passed": true
+    },
+    {
+      "name": "actual_distinct_approved_R5_runtime_and_source_binding",
+      "passed": true
+    },
+    {
+      "name": "same_four_S1_inputs_and_three_pure_parser_ASTs",
+      "passed": true
+    },
+    {
+      "name": "actual_GUID_and1_4_1_ages_preserved",
+      "passed": true
+    },
+    {
+      "name": "rejected_predecessors_and_original_blocked_V1_preserved",
+      "passed": true
+    },
+    {
+      "name": "guarded_frozen_verifier_tests_and_R5_pure_consumer_compatibility",
+      "passed": true
+    },
+    {
+      "name": "literal_execution_records_and_no_native_authority",
+      "passed": true
+    }
+  ]
+}

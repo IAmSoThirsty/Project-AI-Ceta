@@ -1,5 +1,6 @@
 """Launch native CETA tasks in an explicit disposable development profile."""
 import argparse
+import json
 from pathlib import Path
 import sys
 import time
@@ -14,10 +15,10 @@ from ceta.application.lifecycle import (
     LauncherShutdownCustody, ShutdownCoordinator, ShutdownIncomplete,
 )
 from ceta.composition.owned_service import OwnedService
-from ceta.contracts.wire import RecordCodec, strict_loads
+from ceta.contracts.wire import ContractError, RecordCodec, strict_loads
 
 
-def _run_owned_ui(service, setup_ui, *, custody=None):
+def _run_owned_operation(service, prepare, *, custody=None):
     """Run one owned UI lifetime and preserve the real owner on failure.
 
     ``custody`` is a restart fence only.  It must be marked before the ambiguous
@@ -33,14 +34,13 @@ def _run_owned_ui(service, setup_ui, *, custody=None):
     shutdown = ShutdownCoordinator(service, custody_binding=binding)
     primary = None
     try:
-        application, window = setup_ui(shutdown)
-        window.show()
+        run = prepare(shutdown)
         if custody is not None:
             custody.mark_start_requested()
         service.start()
         if custody is not None:
             custody.mark_start_returned()
-        return application.exec()
+        return run()
     except BaseException as error:
         primary = error
         raise
@@ -74,6 +74,66 @@ def _run_owned_ui(service, setup_ui, *, custody=None):
             # Preserve the original failure. Cleanup failure is separately
             # visible and must not be relabelled as a successful process exit.
             shutdown.retain_failure(primary, incomplete)
+
+
+def _run_owned_ui(service, setup_ui, *, custody=None):
+    """Preserve the existing UI setup/start/cleanup contract."""
+    def prepare(shutdown):
+        application, window = setup_ui(shutdown)
+        window.show()
+        return application.exec
+    return _run_owned_operation(service, prepare, custody=custody)
+
+
+def _run_owned_diagnostics(service, codec, envelope, *, custody=None, emit=True):
+    """One explicit finite observation with the same retained shutdown owner."""
+    def prepare(shutdown):
+        session = OperatorSession(service, codec)
+        shutdown.capture_session(session)
+        def run():
+            deadline = time.monotonic() + 15.0
+            for _ in range(1501):
+                observed = service.poll()
+                if observed["state"] == "READY":
+                    break
+                if observed["state"] != "STARTING" or time.monotonic() >= deadline:
+                    return 2, {"startup": "UNAVAILABLE", "operation": "NOT_EXECUTED",
+                               "code": "DIAGNOSTICS_STARTUP_UNAVAILABLE"}
+                time.sleep(0.01)
+            else:
+                return 2, {"startup": "UNAVAILABLE", "operation": "NOT_EXECUTED",
+                           "code": "DIAGNOSTICS_STARTUP_DEADLINE"}
+            try:
+                result = session.resource_diagnostics(envelope)
+            except ContractError as error:
+                data = BaseException.__dict__["__dict__"].__get__(error)
+                if "journal_custody" in data or "diagnostics_journal_custody" in data:
+                    raise
+                code = error.code.split(":", 1)[0]
+                return 2, {"startup": "READY", "operation": "UNAVAILABLE",
+                           "code": code if code.isidentifier() else "DIAGNOSTICS_UNAVAILABLE"}
+            return (0 if result["state"] == "COMPLETE_PROCESS_USAGE" else 2), {
+                "startup": "READY", "operation": result["state"], "diagnostics": result}
+        return run
+    try:
+        code, report = _run_owned_operation(service, prepare, custody=custody)
+    except ContractError as error:
+        data = BaseException.__dict__["__dict__"].__get__(error)
+        if (_attached_shutdown_incomplete(error) is not None
+                or "journal_custody" in data or "diagnostics_journal_custody" in data):
+            raise
+        safe_code = error.code.split(":", 1)[0]
+        code, report = 2, {"startup": "UNAVAILABLE", "operation": "NOT_EXECUTED",
+                           "code": safe_code if safe_code.isidentifier() else "DIAGNOSTICS_STARTUP_UNAVAILABLE"}
+    # Only successful owned shutdown can publish the final operation result.
+    report["cleanup"] = "STOPPED"
+    wire = json.dumps(report, separators=(",", ":"))
+    if len(wire.encode("utf8")) > 32768:
+        raise ContractError("DIAGNOSTICS_OUTPUT_BOUND")
+    if emit:
+        print(wire)
+        return code
+    return code, report
 
 
 def _attached_shutdown_incomplete(error):
@@ -208,7 +268,21 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--profile", type=Path)
     parser.add_argument("--inspector", action="store_true", help="Open the existing typed record inspector instead of task controls.")
+    parser.add_argument("--diagnostics", action="store_true", help="Explicit finite installation process measurements; no GUI or background sampler.")
+    parser.add_argument("--diagnostics-envelope", nargs=3, type=int, metavar=("LATENCY_MS", "CPU_MILLI", "MEMORY_BYTES"),
+                        help="Required caller-declared, unqualified comparison limits for diagnostics.")
     args = parser.parse_args()
+    if args.diagnostics and (args.inspector or args.diagnostics_envelope is None):
+        parser.error("--diagnostics requires --diagnostics-envelope LATENCY_MS CPU_MILLI MEMORY_BYTES and excludes --inspector")
+    if not args.diagnostics and args.diagnostics_envelope is not None:
+        parser.error("--diagnostics-envelope requires --diagnostics")
+    envelope = None
+    if args.diagnostics:
+        from ceta.resource.diagnostics import PerformanceEnvelope
+        try:
+            envelope = PerformanceEnvelope(*args.diagnostics_envelope)
+        except ContractError:
+            parser.error("diagnostic envelope values must be nonnegative integers")
     if args.profile is None:
         root = ROOT / ".agents/fixtures/operator-24" / uuid.uuid4().hex
         root.mkdir(parents=True, exist_ok=False)
@@ -218,14 +292,16 @@ def main():
     # Import failures occur before a service is constructed, so no owned native
     # lifetime exists yet.  Once custody is reserved below, every setup failure
     # must flow through _run_owned_ui and its actual ShutdownCoordinator.
-    from PySide6.QtWidgets import QApplication
-    from ceta.desktop.operator_view import create_operator_window
-    from ceta.desktop.task_view import TaskView
+    if not args.diagnostics:
+        from PySide6.QtWidgets import QApplication
+        from ceta.desktop.operator_view import create_operator_window
+        from ceta.desktop.task_view import TaskView
     root = _validate_profile_root(root)
     codec = RecordCodec(strict_loads((ROOT / "contracts/schemas/records.schema.json").read_bytes()))
     custody = LauncherShutdownCustody(root)
     custody.reserve_launch()
     primary = None
+    diagnostics_report = None
     try:
         try:
             service = OwnedService(root, codec, "installation:operator-development",
@@ -254,6 +330,9 @@ def main():
         # Setup, showing the window, launch and event-loop failures all share the
         # same owner-aware shutdown path. Development profile selection is unchanged.
         try:
+            if args.diagnostics:
+                exit_status, diagnostics_report = _run_owned_diagnostics(service, codec, envelope, custody=custody, emit=False)
+                return exit_status
             return _run_owned_ui(service, setup_ui, custody=custody)
         except BaseException as error:
             primary = error
@@ -278,6 +357,9 @@ def main():
             if primary is None:
                 raise
             _attach_custody_close_failure(primary, close_error)
+        else:
+            if primary is None and diagnostics_report is not None:
+                print(json.dumps(diagnostics_report, separators=(",", ":")))
 
 
 if __name__ == "__main__":

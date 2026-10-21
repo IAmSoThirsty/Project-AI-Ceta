@@ -1,0 +1,61 @@
+{
+  "argv": [
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-canonical-bridge-r1\\review\\hostile_boundary_probe.py"
+  ],
+  "bridge_freeze": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/FROZEN.json",
+    "sha256": "749aeb4a9b66a522e9f86ac37007d463d5a786ef4c645958443bd8537811ee4c"
+  },
+  "denied_effect_calls": [],
+  "exit_status": 0,
+  "finished_at": "2026-10-20T20:04:42.326463+00:00",
+  "human_approval_record_created": false,
+  "kind": "INDEPENDENT_FROZEN_BRIDGE_NULL_INGRESS_AND_PRELOAD_CONTROLS_V1",
+  "native_execution": false,
+  "observations": [
+    {
+      "actual_code": "BRIDGE_TRUSTED_ROOT_INGRESS_NOT_BOUND_NO_EFFECTS",
+      "control": "minimal-request",
+      "evidence_paths_created": false,
+      "native_port_imported": false,
+      "process_attempt_entered": false,
+      "supplied_grant_read": false
+    },
+    {
+      "actual_code": "BRIDGE_TRUSTED_ROOT_INGRESS_NOT_BOUND_NO_EFFECTS",
+      "control": "self-attested-request",
+      "evidence_paths_created": false,
+      "native_port_imported": false,
+      "process_attempt_entered": false,
+      "supplied_grant_read": false
+    },
+    {
+      "actual_code": "BRIDGE_TRUSTED_ROOT_INGRESS_NOT_BOUND_NO_EFFECTS",
+      "authorized": false,
+      "control": "direct-concrete-port-execute",
+      "evidence_paths_created": false,
+      "native_dependencies_loaded": false,
+      "profile_create_called": false,
+      "profile_delete_called": false
+    },
+    {
+      "actual_code": "BRIDGE_NATIVE_PORT_NOT_ADMITTED",
+      "control": "direct-concrete-port-live"
+    },
+    {
+      "actual_code": "BRIDGE_FOREIGN_MODULE_ALREADY_LOADED:ac6_single_attempt_preflight",
+      "control": "same-file-forged-preloaded-driver",
+      "forged_function_calls": [],
+      "original_driver_imported": false
+    }
+  ],
+  "original_work_files_unchanged": 29,
+  "product_acceptance": false,
+  "source_predicates_patched": false,
+  "started_at": "2026-10-20T20:04:42.118619+00:00",
+  "synthetic_requests": "CONTROLLED DATA ONLY; not real consent; deliberately invalid without Root ingress"
+}

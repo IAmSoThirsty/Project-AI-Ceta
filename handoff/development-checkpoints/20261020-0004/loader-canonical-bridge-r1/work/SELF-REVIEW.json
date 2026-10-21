@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "kind": "AUTHOR_SELF_REVIEW_NOT_INDEPENDENT",
+  "author": "/root/review",
+  "at": "2026-10-20T19:56:44.690495+00:00",
+  "input_packet": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/packet/INPUTS.json",
+    "sha256": "d63c51bd67b58dd5a4804edecd741796b7a4becca1e5117195c49a643f007b65"
+  },
+  "controlled_tests": 57,
+  "final_control_receipt": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/controls/TEST005/RESULT.json",
+    "sha256": "a1c577f6c53ebedf8a32b049803aee94e7dd828506a22e133ed1804459bbf6f9"
+  },
+  "preserved_control_runs": [
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/controls/TEST001/RESULT.json",
+      "sha256": "5db247108836275330723981ed6c16ea5f96611952ad9c0225d15a69f6be6313"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/controls/TEST002/RESULT.json",
+      "sha256": "379fb956345096e1250e988e09a22bab76438b053bc3eae2c9a85895378d9896"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/controls/TEST003/RESULT.json",
+      "sha256": "8da125a886de775528184ee4e5379e5fa15e0f2cc56dd69813960bda7decd2ce"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/controls/TEST004/RESULT.json",
+      "sha256": "07108e1fe428b66777cce191a765c6a5e2bb5be353a9e87651508e48c65fb38e"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/controls/TEST005/RESULT.json",
+      "sha256": "a1c577f6c53ebedf8a32b049803aee94e7dd828506a22e133ed1804459bbf6f9"
+    }
+  ],
+  "findings": [
+    {
+      "id": "BRIDGE-DRAFT-01",
+      "classification": "fixed now",
+      "problem": "Self-described human JSON was insufficient trusted provenance",
+      "change": "Frozen inputs null anchor forces refusal before grant read; exact separately Root-recorded question/reply/code/effect/destination binding implemented for a reviewed successor",
+      "evidence": [
+        "test_absent_root_anchor_is_actual_preflight_refusal",
+        "test_self_described_human_record_has_no_trusted_ingress",
+        "test_exact_controlled_ingress_binding"
+      ]
+    },
+    {
+      "id": "BRIDGE-DRAFT-02",
+      "classification": "fixed now",
+      "problem": "Preloaded canonical driver reuse checked file label too weakly",
+      "change": "Reject stale bridge/driver/helper/reader names and default existing-module reuse before import/preparation; canonical CETA identity/defaults/aliases checked before driver",
+      "evidence": [
+        "test_preloaded_driver_file_label_does_not_admit_it",
+        "test_native_port_cannot_be_called_before_admission"
+      ]
+    },
+    {
+      "id": "BRIDGE-DRAFT-03",
+      "classification": "fixed now",
+      "problem": "General R5 module admission intentionally defers two constructors",
+      "change": "Run full validate_definitions with no overrides on every admitted module before original driver import",
+      "evidence": [
+        "test_actual_unwrapped_source_before_driver",
+        "test_mutated_isolation_constructor_rejected_before_driver",
+        "test_mutated_owned_process_constructor_rejected_before_driver"
+      ]
+    },
+    {
+      "id": "BRIDGE-DRAFT-04",
+      "classification": "fixed now",
+      "problem": "Socket close call return alone did not record its closed descriptor",
+      "change": "Require exact fileno==-1 after close, preserve failure; exact original handle list plus closure removal prevents parent/child double-close",
+      "evidence": [
+        "test_listener_close_requires_descriptor_observation",
+        "test_listener_closed_descriptor_recorded",
+        "test_child_handles_already_removed_are_never_closed_twice"
+      ]
+    },
+    {
+      "id": "BRIDGE-COMPAT-01",
+      "classification": "not blocking current task",
+      "problem": "Initial Root concern inspected validate_authorizations without following remaining preflight; full path already checked R5 code_manifest/inputs before effects",
+      "change": "Boundary retained and four missing/wrong-reference controls added; original claim of production bypass retracted by Root",
+      "evidence": [
+        "test_r5_action_code_and_inputs_exact_before_effects"
+      ]
+    }
+  ],
+  "remaining": [
+    {
+      "classification": "blocking any future native action",
+      "issue": "Current trusted_owner_ingress_reference=null; no fresh human question/reply or action grant exists"
+    },
+    {
+      "classification": "blocking current acceptance handoff",
+      "issue": "Distinct Collaborative Review of exact frozen bridge not yet performed"
+    },
+    {
+      "classification": "blocking any future native action",
+      "issue": "Separate reviewed successor input/Root release, exact approved action scope, live multi-path write lease and bounded outer supervisor required"
+    },
+    {
+      "classification": "requires separate follow-up work",
+      "issue": "Concrete native fixture/profile/debug/PEB/capture/cleanup path remains NOT_RUN; protected action requires exact fresh human decision"
+    },
+    {
+      "classification": "not blocking current construction",
+      "issue": "120-second checks gate new phases and do not preempt a nonreturning Win32 call; no hard timeout/native or hostile same-principal filesystem-race qualification claimed"
+    }
+  ],
+  "independence": "Author self-review only. Actual implement completion will make review READY; no self-approval.",
+  "prior_failed_commands": [],
+  "native_effects_authorized": false,
+  "native_execution": false,
+  "native_qualification": false,
+  "product_acceptance": false
+}

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "T:/02-Config/agents/taar-orchestrate.ps1",
+    "node",
+    "complete",
+    "ceta-development-checkpoint-r2-20261020",
+    "integrate",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\development-checkpoint-20261020\\control-r2\\integrate-receipt.json",
+    "--runtime-root",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\development-checkpoint-20261020\\control-r2"
+  ],
+  "exit_status": 1,
+  "response": {
+    "allowed": false,
+    "code": "WRITE_SCOPE_VIOLATION",
+    "details": {
+      "files": [
+        "00-Active/Project-AI-CETA/.git/lfs/cache/locks/refs/heads/development/checkpoints/verifiable"
+      ]
+    },
+    "message": "Actual changed files exceed assigned scope"
+  }
+}

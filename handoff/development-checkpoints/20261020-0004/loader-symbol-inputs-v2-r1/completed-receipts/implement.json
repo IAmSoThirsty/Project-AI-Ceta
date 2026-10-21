@@ -1,0 +1,86 @@
+{
+  "changed_files": [
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/CETA_OWNED_LOADER_SYMBOL_INPUTS_V2.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/DERIVATION-001.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/DERIVATION-001.stderr.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/DERIVATION-001.stdout.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/FROZEN.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/SELF-REVIEW.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/SOURCE-CUT-UPDATE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/TEST-001.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/TEST-001.stderr.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/TEST-001.stdout.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/TEST-002.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/TEST-002.stderr.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/TEST-002.stdout.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/derive_v2.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/derive_v2.py.before-r5-binding",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/test_derive_v2.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/test_derive_v2.py.before-r5-binding",
+    "00-Active/Project-AI-CETA/.agents/runtime/operational-resume-20261020/loader-symbol-inputs-v2-r1/work/verify_frozen.py"
+  ],
+  "commands": [
+    {
+      "command": "python -B -X utf8 -m unittest -v test_derive_v2",
+      "exit_status": 0
+    },
+    {
+      "command": "derive_v2.py derive exactV2 --review exactR5 --review-sha256 7ecbf2d0b60d6258ab144e0e1beb973d1a66cfdfce5d5ff69c0ace432e92a797",
+      "exit_status": 0
+    },
+    {
+      "command": "verify_frozen.py",
+      "exit_status": 0
+    }
+  ],
+  "executor_id": "/root",
+  "exit_status": 0,
+  "finished_at": "2026-10-20T19:35:11.662106+00:00",
+  "git_baseline": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "input_hash": "ff9151a7d789eead52e666e9b4ec9a7ccfce7e84f00f4e64da3054bcb67e704e",
+  "node_id": "implement",
+  "observed_git": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "receipt_hash": "7579ea1c4c92bef715e6b7cf1fce7aa069820bf2e03c2aa40bd023f6ad1bb91c",
+  "result": {
+    "ages": [
+      1,
+      4,
+      1
+    ],
+    "engineering_source_physical_loc": 169,
+    "engineering_test_physical_loc": 41,
+    "freeze_sha256": "0dbca53df9f0a3ae1e511c197041381e74b00df69df77782330ee3b0d951a863",
+    "native_qualification": false,
+    "product_acceptance": false,
+    "product_source_loc": 0,
+    "product_test_loc": 0,
+    "supplement_sha256": "53598ef4ac21fc26c0a5afafda005c777b67571713e26311fcb4a8b250858a8d"
+  },
+  "run_id": "ceta-loader-symbol-v2-r1-20261020",
+  "schema_version": 1,
+  "started_at": "2026-10-20T19:04:33.471006+00:00",
+  "validations": [
+    {
+      "name": "same_retained_four_inputs_and_approved_final_parser_exact_data_derivation",
+      "passed": true
+    },
+    {
+      "name": "rejected_predecessors_refused_no_native_authority",
+      "passed": true
+    }
+  ]
+}

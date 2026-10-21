@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-10-20T20:35:11.788793+00:00",
+  "original_failure": "Traceback <stdin> line7 AssertionError",
+  "cause": "Read-only Git-root comparison normalized separators on actual output but omitted Windows Path separators on expected operand.",
+  "effects_before_failure": "Only read-only git rev-parse --show-toplevel; assert preceded all new checkpoint paths and coordinator writes.",
+  "correction": "Normalize separators on both operands and rerun exact checks before bootstrap.",
+  "native_execution": false
+}

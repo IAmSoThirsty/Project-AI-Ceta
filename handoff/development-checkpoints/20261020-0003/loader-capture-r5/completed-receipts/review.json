@@ -1,0 +1,106 @@
+{
+  "changed_files": [],
+  "commands": [
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\review\\review_checks.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\verify_frozen.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\review\\data-cut\\run_data_controls.py tests --attempt independent-review",
+      "exit_status": 0
+    }
+  ],
+  "decision": "approved",
+  "executor_id": "/root/admission",
+  "exit_status": 0,
+  "finished_at": "2026-10-20T19:32:18.138559+00:00",
+  "git_baseline": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "input_hash": "7622df4ab4338cf4d9e7e7c6e526ebf2bcde00aee7b15846175561ee31728796",
+  "node_id": "review",
+  "observed_git": {
+    "available": true,
+    "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_changed_files": [],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "receipt_hash": "69ad941fcf9824b0dff578516639d5d3e88b58d0a1da66026719cffa3f5a1d89",
+  "result": {
+    "code_manifest": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\CODE-MANIFEST.json",
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/CODE-MANIFEST.json",
+      "sha256": "b144bab280609bfe0530af2cdf94bf279f07048d0fae68ec8b4d4d09b6de88eb"
+    },
+    "controlled_cases_passed": 96,
+    "decision": "approved",
+    "disposition": "EXACT_R5_SOURCE_REPAIR_APPROVED_UNDER_CONTROLLED_EVIDENCE",
+    "freeze": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\FROZEN.json",
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/FROZEN.json",
+      "sha256": "61e36c35c0e07eb2c9b5c3c5baec5a51fc93fb2b576518d32a6e23a4c7aee070"
+    },
+    "frozen_parser_sha256": "608ed2a4dc0057721b70673a15342a79fdc1f83cd5be4fbf64a79dc18b299e5d",
+    "inputs": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\INPUTS.json",
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/INPUTS.json",
+      "sha256": "f1f92caf541544e35cda84841936fbaf6c88f4c0570b68e7224a3a84d495a19f"
+    },
+    "native_authority": false,
+    "native_execution": false,
+    "product_acceptance": false,
+    "resolved_findings": [
+      "LOADER-R3-01",
+      "LOADER-R3-02"
+    ],
+    "review": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\review\\REVIEW.json",
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/review/REVIEW.json",
+      "sha256": "7ecbf2d0b60d6258ab144e0e1beb973d1a66cfdfce5d5ff69c0ace432e92a797"
+    }
+  },
+  "run_id": "ceta-loader-capture-r5-20261020",
+  "schema_version": 1,
+  "started_at": "2026-10-20T19:30:40.142730+00:00",
+  "validations": [
+    {
+      "name": "exact_frozen_source_and_input_bindings",
+      "passed": true
+    },
+    {
+      "name": "real_canonical_positional_and_keyword_default_refusal_zero_hooks",
+      "passed": true
+    },
+    {
+      "name": "bounded_safe_builtin_and_identity_normalization",
+      "passed": true
+    },
+    {
+      "name": "all96_guarded_cases_and_prior88_original28_preserved",
+      "passed": true
+    },
+    {
+      "name": "seventh_member_and_PDB_parser_rule_retained",
+      "passed": true
+    },
+    {
+      "name": "both_complete_predecessor_failed_reviews_preserved",
+      "passed": true
+    },
+    {
+      "name": "distinct_review_qualified_without_native_authority",
+      "passed": true
+    }
+  ]
+}

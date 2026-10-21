@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "method": "Physical splitlines of exact newly exported top-level authored Python; source/test/validation roles separated; before-images/generated data excluded",
+  "newly_published_whole_engineering_files": 6,
+  "newly_published_whole_engineering_snapshot": {
+    "engineering_source": 838,
+    "engineering_test": 562,
+    "engineering_validation_infrastructure": 159
+  },
+  "total_whole_engineering_python_physical": 1559,
+  "files": [
+    {
+      "path": "handoff/development-checkpoints/20261020-0005/loader-bridge-supervisor-r1/work/child_entry.py",
+      "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\work\\child_entry.py",
+      "sha256": "cccd1a0f18af875b479146b651a2cf50dc6453028937f53456b8a12d3f26f378",
+      "role": "engineering_source",
+      "physical_lines": 154,
+      "nonblank_noncomment_lines": 135
+    },
+    {
+      "path": "handoff/development-checkpoints/20261020-0005/loader-bridge-supervisor-r1/work/owned_interpreter.py",
+      "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\work\\owned_interpreter.py",
+      "sha256": "22dce4d7036e46baca17d7d31b6cc8ebe5f75dd9ddb95ae3b887c70c63ae71f8",
+      "role": "engineering_source",
+      "physical_lines": 226,
+      "nonblank_noncomment_lines": 193
+    },
+    {
+      "path": "handoff/development-checkpoints/20261020-0005/loader-bridge-supervisor-r1/work/run_guarded_controls.py",
+      "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\work\\run_guarded_controls.py",
+      "sha256": "c7e44d518471d18cd0e01311573ac92716b45f23f9feba8f45bbab9af9ae4d7c",
+      "role": "engineering_validation_infrastructure",
+      "physical_lines": 91,
+      "nonblank_noncomment_lines": 84
+    },
+    {
+      "path": "handoff/development-checkpoints/20261020-0005/loader-bridge-supervisor-r1/work/supervisor.py",
+      "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\work\\supervisor.py",
+      "sha256": "6187e0450a23d0c851e8a93daca125b5011a5fad942483879b87df9a9d5bc4a8",
+      "role": "engineering_source",
+      "physical_lines": 458,
+      "nonblank_noncomment_lines": 385
+    },
+    {
+      "path": "handoff/development-checkpoints/20261020-0005/loader-bridge-supervisor-r1/work/test_supervisor.py",
+      "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\work\\test_supervisor.py",
+      "sha256": "ff501f960a749c8ecd38694e1945f027caa5ae151d589eaf0e69c36b14250992",
+      "role": "engineering_test",
+      "physical_lines": 562,
+      "nonblank_noncomment_lines": 472
+    },
+    {
+      "path": "handoff/development-checkpoints/20261020-0005/loader-bridge-supervisor-r1/work/verify_frozen.py",
+      "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-bridge-supervisor-r1\\work\\verify_frozen.py",
+      "sha256": "958c413c5291e64cc0817cf57c68779cc7b2b4d7288dda87b14685e6c6836d1d",
+      "role": "engineering_validation_infrastructure",
+      "physical_lines": 68,
+      "nonblank_noncomment_lines": 63
+    }
+  ],
+  "authored_during_checkpoint_preparation": {
+    "product_source": 0,
+    "product_test": 0,
+    "engineering_source": 0,
+    "engineering_test": 0
+  },
+  "prior_author_recorded_scope": {
+    "basis": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/PROVENANCE.json",
+      "sha256": "951db8bb0e2d8a1794179fc967f57846a86e041da287ee6b99b23434b7ef642f"
+    },
+    "physical_source_lines": {
+      "supervisor.py": 458,
+      "child_entry.py": 154,
+      "owned_interpreter.py": 226
+    },
+    "physical_test_lines": 562,
+    "qualification_tool_lines": {
+      "run_guarded_controls.py": 91,
+      "verify_frozen.py": 68
+    },
+    "guarded_runner_reuse": {
+      "original": {
+        "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-canonical-bridge-r1/work/run_guarded_controls.py",
+        "sha256": "e9a087aef0c7bd782da40c56eada15e076200690379acf353a85d3aa7ada27eb"
+      },
+      "line_additions": 2,
+      "line_removals": 2,
+      "method": "SequenceMatcher UTF8 splitlines autojunk=False; shared runner retained except report kind and test discovery name"
+    },
+    "limit": "Whole original construction counts and runner reuse are separate from this preparation authored delta"
+  },
+  "prior_final_repair_delta_against_retained_before_success_draft": {
+    "supervisor": {
+      "before_physical_lines": 343,
+      "current_physical_lines": 458,
+      "lines_added": 128,
+      "lines_removed": 13,
+      "net_lines": 115
+    },
+    "child": {
+      "before_physical_lines": 124,
+      "current_physical_lines": 154,
+      "lines_added": 52,
+      "lines_removed": 22,
+      "net_lines": 30
+    },
+    "test": {
+      "before_physical_lines": 219,
+      "current_physical_lines": 562,
+      "lines_added": 344,
+      "lines_removed": 1,
+      "net_lines": 343
+    },
+    "limit": "Exact intermediate repair delta only; not total original author effort",
+    "basis": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-bridge-supervisor-r1/work/FROZEN.json",
+      "sha256": "b5e3b4372c2b604f7d1a8c4414785e553870ee29457d13c3a53be90cb9b4643b"
+    }
+  },
+  "transported_evidence_files": 0,
+  "transport_loc": 0,
+  "product_source_payload_count": 552,
+  "product_source_manifest_unchanged": true
+}

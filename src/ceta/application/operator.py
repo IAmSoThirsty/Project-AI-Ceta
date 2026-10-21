@@ -14,6 +14,15 @@ class OperatorSession:
         self._attempt, self._attempt_view, self._handled = None, None, None
         self.status, self.detail, self.result_text = "STARTING", "Inspecting service state.", ""
 
+    def resource_diagnostics(self, envelope, *, maximum_age_ns=1_000_000_000,
+                             sample_interval_ns=100_000_000, cancelled=None):
+        """Explicit read-only runtime observation; task drafts are unaffected."""
+        observed = self._service.snapshot()
+        require(observed.get("state") == "READY", "OPERATOR_DIAGNOSTICS_OWNER_UNAVAILABLE")
+        return self._service.resource_diagnostics(expected_generation=observed.get("generation"),
+            envelope=envelope, maximum_age_ns=maximum_age_ns,
+            sample_interval_ns=sample_interval_ns, cancelled=cancelled)
+
     @property
     def draft(self): return self._drafts[self._view]
 

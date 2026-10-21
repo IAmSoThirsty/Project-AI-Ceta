@@ -1,0 +1,48 @@
+{
+  "exact_source_AST": true,
+  "hook_calls": [],
+  "native_effects": false,
+  "positive_bytes": 65536,
+  "positive_integer_bits": 4096,
+  "rejected_cases": [
+    {
+      "case": "opaque",
+      "code": "CALLER_DEFAULTS_UNSUPPORTED_VALUE"
+    },
+    {
+      "case": "nested-key",
+      "code": "CALLER_DEFAULTS_UNSUPPORTED_VALUE"
+    },
+    {
+      "case": "nested-value",
+      "code": "CALLER_DEFAULTS_UNSUPPORTED_VALUE"
+    },
+    {
+      "case": "trusted-other-object",
+      "code": "CALLER_DEFAULTS_UNSUPPORTED_VALUE"
+    },
+    {
+      "case": "huge-int",
+      "code": "CALLER_DEFAULTS_INTEGER_BOUND"
+    },
+    {
+      "case": "container",
+      "code": "CALLER_DEFAULTS_CONTAINER_BOUND"
+    },
+    {
+      "case": "utf8-bytes",
+      "code": "CALLER_DEFAULTS_SCALAR_BOUND"
+    },
+    {
+      "case": "trust-list-not-tuple",
+      "code": "CALLER_DEFAULTS_TRUST_BOUND"
+    },
+    {
+      "case": "trusted-limit",
+      "code": "CALLER_DEFAULTS_TRUST_BOUND"
+    }
+  ],
+  "source_referenced_identity": true,
+  "status": "PASS",
+  "valid_nested_defaults": true
+}

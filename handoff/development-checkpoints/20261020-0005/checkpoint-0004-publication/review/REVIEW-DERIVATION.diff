@@ -1,0 +1,109 @@
+--- checkpoint0003_review
++++ checkpoint0004_review
+@@ -2,7 +2,7 @@
+ from datetime import datetime, timezone
+ import ast, hashlib, importlib.util, io, json, subprocess, sys, zipfile
+ F=Path(r'T:/00-Active/Project-AI-CETA')
+-C=F/'.agents/runtime/development-checkpoint-20261020/checkpoint-0003'
++C=F/'.agents/runtime/development-checkpoint-20261020/checkpoint-0004'
+ W=C/'work'; D=C/'review'
+ sys.path.insert(0,str(W))
+ import prepare_checkpoint as e
+@@ -11,15 +11,15 @@
+     with (D/name).open('x',encoding='utf-8',newline='\n') as s:
+         json.dump(value,s,indent=2); s.write('\n')
+ freeze=json.loads((W/'WORK-FREEZE.json').read_bytes())
+-assert sha(W/'WORK-FREEZE.json')=='4722e126992fd05e1e0129d219b21e4786ab9aba57a5b5f3327bcee64c6ac5a8'
++assert sha(W/'WORK-FREEZE.json')=='dbea5501c5fc7a72454237379cb2a7a308769cc9ec1ed6b5627e672994680b98'
+ def frozen():
+     observed={str(p.relative_to(W)).replace('\\','/'):sha(p) for p in W.rglob('*') if p.is_file() and p.name!='WORK-FREEZE.json'}
+     assert observed==freeze['files'], 'frozen work changed'
+ frozen()
+ prepared=json.loads((W/'prepared-0001/PREPARED.json').read_bytes())
+-assert sha(W/'prepared-0001/PREPARED.json')=='7e4e4f4a30021a8b68e3e8700bcf1c66167d1883828a39756782a6e621f80c5f'
+-assert prepared['commit']=='6786afeed7587a1c62d59d7984a51cb2d4bd1800'
+-assert prepared['parent']=='3f73bf0188890bfcfd442aca6cca1a063e94f84f'
++assert sha(W/'prepared-0001/PREPARED.json')=='9c25b226c3bb92aa2bdecac95ac678861de423f3cbdaa262adfa156b16df62c6'
++assert prepared['commit']=='030b0c091e451c871e260cac845e376af225d2da'
++assert prepared['parent']=='6786afeed7587a1c62d59d7984a51cb2d4bd1800'
+ before=e.checkout_state(F)
+ argv=[sys.executable,'-B','-X','utf8',str(W/'verify_prepared.py')]
+ done=subprocess.run(argv,cwd=F,capture_output=True,timeout=60)
+@@ -37,11 +37,11 @@
+ old=tree(prepared['parent']); new=tree(prepared['commit'])
+ assert set(old)<=set(new)
+ changed={n for n in set(old)|set(new) if old.get(n)!=new.get(n)}
+-assert sorted(changed)==prepared['changed_paths'] and len(changed)==81
++assert sorted(changed)==prepared['changed_paths'] and len(changed)==111
+ assert {n for n in old if old[n]!=new[n]}=={'DEVELOPMENT-CHECKPOINT.json','DEVELOPMENT-CHECKPOINT.md'}
+-assert len(new)-len(old)==79
+-prior=json.loads((C.parent/'checkpoint-0002/work/prepared-0001/PREPARED.json').read_bytes())
+-assert len(prior['exports'])==577 and len(prepared['exports'])==656
++assert len(new)-len(old)==109
++prior=json.loads((C.parent/'checkpoint-0003/work/prepared-0001/PREPARED.json').read_bytes())
++assert len(prior['exports'])==656 and len(prepared['exports'])==765
+ assert set(prior['exports'])<=set(prepared['exports'])
+ for name,item in prior['exports'].items():
+     if name not in {'DEVELOPMENT-CHECKPOINT.json','DEVELOPMENT-CHECKPOINT.md'}:
+@@ -64,7 +64,7 @@
+ with zipfile.ZipFile(archive) as z:
+     assert not z.comment and z.testzip() is None
+     assert z.namelist()==sorted(z.namelist())==[v['member'] for v in transport['members']]
+-    assert len(z.namelist())==3
++    assert len(z.namelist())==2
+     for info,item in zip(z.infolist(),transport['members'],strict=True):
+         name=info.filename
+         assert not name.startswith('/') and '..' not in PurePosixPath(name).parts
+@@ -85,7 +85,7 @@
+ provenance=json.loads((W/'public/SOURCE-PROVENANCE.json').read_bytes())
+ loc=json.loads((W/'public/ENGINEERING-LOC.json').read_bytes())
+ counts={}
+-assert len(provenance['exact_authored_python_exports'])==15
++assert len(provenance['exact_authored_python_exports'])==8
+ for item in provenance['exact_authored_python_exports']:
+     raw=Path(item['source']).read_bytes()
+     assert e.digest(raw)==item['sha256']==prepared['exports'][item['path']]['sha256']
+@@ -93,18 +93,23 @@
+     count=len(raw.decode('utf-8-sig').splitlines()); assert count==item['physical_lines']
+     counts[item['role']]=counts.get(item['role'],0)+count
+ assert counts==loc['newly_published_whole_engineering_snapshot']==status['newly_published_engineering_snapshot']
+-assert counts=={'engineering_source':2526,'engineering_test':1121,'engineering_validation_infrastructure':497}
++assert counts=={'engineering_source':1184,'engineering_test':500,'engineering_validation_infrastructure':164}
+ assert status['new_product_source_loc']==status['new_product_test_loc']==0
+ for name in ('prepare_checkpoint.py','publish_checkpoint.py','verify_prepared.py'):
+-    assert (W/name).read_bytes()==(C.parent/'checkpoint-0002/work'/name).read_bytes()
++    assert (W/name).read_bytes()==(C.parent/'checkpoint-0003/work'/name).read_bytes()
+ remote=e.git(F,['ls-remote','--refs','origin','refs/heads/development/checkpoints']).decode().strip()
+ assert remote==prepared['parent']+'\trefs/heads/development/checkpoints'
+ historical={}
+ for item in provenance['eligible_completed_roots']:
+     p=Path(item['root']); state=json.loads((p/'control'/item['run_id']/'state.json').read_bytes())
+     assert all(v['state']=='SUCCEEDED' for v in state['nodes'].values())
+-    assert sha(p/'review/REVIEW.json')==item['review_sha256']
+-    historical[item['run_id']]={'states':{k:v['state'] for k,v in state['nodes'].items()},'review_sha256':item['review_sha256']}
++    if 'review_sha256' in item:
++        assert sha(p/'review/REVIEW.json')==item['review_sha256']
++        proof={'review_sha256':item['review_sha256']}
++    else:
++        assert sha(p/'control/INTEGRATION-RESULT.json')==item['publication_result_sha256']
++        proof={'publication_result_sha256':item['publication_result_sha256']}
++    historical[item['run_id']]={'states':{k:v['state'] for k,v in state['nodes'].items()},**proof}
+ for name in ('native_worker_qualification','full_joined_suite_acceptance','destination_acceptance','installed_product_acceptance','governed_authorization_to_effect_acceptance','endurance_acceptance','human_acceptance','full_product_operational'):
+     assert status[name] is False
+ assert before==e.checkout_state(F)==prepared['checkout_before']
+@@ -113,11 +118,11 @@
+ result={'at':datetime.now(timezone.utc).isoformat(),'status':'PASS','reviewer':'/root','author':freeze['author'],
+ 'commit':prepared['commit'],'tree':prepared['tree'],'parent':prepared['parent'],
+ 'freeze_sha256':sha(W/'WORK-FREEZE.json'),'prepared_sha256':sha(W/'prepared-0001/PREPARED.json'),
+-'frozen_payloads':len(freeze['files']),'exports':656,'changed_paths':81,'new_paths':79,
+-'parent_paths_retained':len(old),'source_payloads_unchanged':552,'prior_exports_unchanged_except_status':575,
++'frozen_payloads':len(freeze['files']),'exports':765,'changed_paths':111,'new_paths':109,
++'parent_paths_retained':len(old),'source_payloads_unchanged':552,'prior_exports_unchanged_except_status':654,
+ 'registry_fixtures':fixtures,'pdf_paths_unchanged':len(pdfs),'engineering_snapshot_physical_loc':counts,
+-'transported_evidence_members':3,'stored_archive_exact_reconstruction':True,
+-'raw_and_all_export_credential_scans':'PASS_CONFIGURED_PATTERNS_ONLY','compiled_without_import':15,
++'transported_evidence_members':2,'stored_archive_exact_reconstruction':True,
++'raw_and_all_export_credential_scans':'PASS_CONFIGURED_PATTERNS_ONLY','compiled_without_import':8,
+ 'completed_component_evidence':historical,'active_checkout_and_normal_index_unchanged':True,
+ 'remote_before':remote,'native_execution':False,'product_acceptance':False}
+ save('INDEPENDENT-RESULT.json',result)

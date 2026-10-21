@@ -136,6 +136,7 @@ class _ObservationClock:
     def finish(self, started_ns: int) -> tuple[int, str | None]:
         ended_ns, reason = self.read()
         self._finished_elapsed_ns, elapsed_reason = self._elapsed()
+        self._current_elapsed_ns = self._finished_elapsed_ns
         reason = reason or elapsed_reason
         elapsed = (self._finished_elapsed_ns - self._started_elapsed_ns
                    if self._started_elapsed_ns is not None else 0)
@@ -371,7 +372,19 @@ class WindowsComputeAvailabilityMonitor:
                 now_ns, reason = self._timeline.begin()
                 if reason is None and self._cached is not None and self._timeline.cache_is_recent(self._cached, now_ns) \
                         and self._timeline.minimum_interval_pending(self._cached, now_ns):
-                    return self._cached
+                    if not self._native_reader or not self._cached.reservable.measured:
+                        return self._cached
+                    scope = self._native_processor_scope()
+                    checked_ns, reason = self._timeline.finish(now_ns)
+                    # Affinity is a native read too: qualify cached capacity
+                    # using time after that read, including the elapsed fence.
+                    if reason is None and scope == (1, self._cached.total.value // 1000) \
+                            and self._timeline.cache_is_recent(self._cached, checked_ns):
+                        return self._cached
+                    if reason is None and scope != (1, self._cached.total.value // 1000):
+                        reason = "CPU_PROCESSOR_GROUP_SCOPE_UNAVAILABLE"
+                    if reason is not None:
+                        now_ns = checked_ns
                 require(self._sequence < _MAX_QUANTITY, "RESOURCE_SEQUENCE_EXHAUSTED")
                 self._sequence += 1
                 sequence = self._sequence
@@ -435,7 +448,7 @@ class WindowsComputeAvailabilityMonitor:
 
     @staticmethod
     def _native_processor_scope() -> tuple[int, int] | None:
-        """GetSystemTimes is global only when exactly one group is observed."""
+        """Qualify group-wide counters against the current process affinity."""
         if os.name != "nt":
             return None
         try:
@@ -448,7 +461,23 @@ class WindowsComputeAvailabilityMonitor:
             if group_count != 1:
                 return None
             processors = int(count(0))
-            return (group_count, processors) if 1 <= processors <= 64 else None
+            if not 1 <= processors <= 64:
+                return None
+            current = kernel.GetCurrentProcess
+            current.argtypes, current.restype = (), ctypes.c_void_p
+            affinity = kernel.GetProcessAffinityMask
+            affinity.argtypes = (ctypes.c_void_p, ctypes.POINTER(ctypes.c_size_t),
+                                 ctypes.POINTER(ctypes.c_size_t))
+            affinity.restype = ctypes.c_int
+            process_mask, system_mask = ctypes.c_size_t(), ctypes.c_size_t()
+            # GetSystemTimes describes every active processor in the group.
+            # Those idle counters cannot establish available capacity for a
+            # process restricted to a subset; do not scale a global sample.
+            if not affinity(current(), ctypes.byref(process_mask), ctypes.byref(system_mask)) \
+                    or process_mask.value != system_mask.value \
+                    or system_mask.value.bit_count() != processors:
+                return None
+            return group_count, processors
         except (AttributeError, OSError):
             return None
 

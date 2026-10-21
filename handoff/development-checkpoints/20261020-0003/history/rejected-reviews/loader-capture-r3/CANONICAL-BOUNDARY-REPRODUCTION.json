@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "default_validation": {
+    "status": "CANONICAL_CHANGED_DEFAULT_ACCEPTED",
+    "canonical_module_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-token-contract-20261020\\src\\ceta\\supervisor\\windows_jobs.py",
+    "canonical_method": "WindowsOwnedProcess._cpu_window",
+    "expected_default_type": "NoneType",
+    "actual_default_type": "UnexpectedDefault",
+    "untrusted_equality_hook_calls": [
+      "NoneType"
+    ],
+    "full_validate_prepared_returned_without_error": true
+  },
+  "actual_caller_guard": {
+    "status": "REJECTED_REAL_FROZEN_MEMBER_GUARD",
+    "observed_error": "CALLER_NATIVE_CONTROL_MEMBERS_CHANGED",
+    "extra_member": "CreateEventW",
+    "exact_control_class": "_ControlApi",
+    "member_predicate_replaced": false,
+    "attempt_or_native_provider_calls": []
+  },
+  "native_effect_denials": [],
+  "native_constructor_calls": 0,
+  "limitations": "Real source/caller descriptors with controlled admission and placeholder native members; no production/native success claim."
+}

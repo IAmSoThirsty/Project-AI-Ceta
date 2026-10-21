@@ -1,0 +1,98 @@
+{
+  "executor": "/root/implement",
+  "performed_at": "2026-10-20T19:27:53.285119+00:00",
+  "decision": "READY_FOR_DISTINCT_REVIEW_NOT_NATIVE_EXECUTION",
+  "source_delta": "Only default comparison, associated deterministic controls, required R5 identity/inventory/gate metadata",
+  "predecessor_freeze": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r4/work/FROZEN.json",
+    "sha256": "24489889db30e6e19057306c3e6c41e6f329e55c9447e395c4de60a8d3c4fb5d"
+  },
+  "predecessor_reviews": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/PREDECESSOR-REVIEWS.json",
+    "sha256": "bd2d04eff265b6c86bcfd4259b357e3b66e1f7510ea81b023226443c29c75483"
+  },
+  "predecessor_findings": [
+    {
+      "finding": "LOADER-R3-01",
+      "status": "Retained independently verified R4 source repair; five exact-guard controlled cases unchanged; native behavior unverified"
+    },
+    {
+      "finding": "LOADER-R3-02",
+      "status": "R5 source repair implemented and eight new controlled cases pass, including full canonical zero-hook negative regressions; distinct R5 review pending"
+    }
+  ],
+  "code_manifest": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/CODE-MANIFEST.json",
+    "sha256": "b144bab280609bfe0530af2cdf94bf279f07048d0fae68ec8b4d4d09b6de88eb"
+  },
+  "inputs": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/INPUTS.json",
+    "sha256": "f1f92caf541544e35cda84841936fbaf6c88f4c0570b68e7224a3a84d495a19f"
+  },
+  "tests": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/controls/tests-final/RESULT.json",
+    "sha256": "4b4e29402f14a2a72c064d8973becff65690c30498f7ba40a5584a3631df5bf0"
+  },
+  "test_preservation": {
+    "retained_r4_case_ids": 88,
+    "retained_r3_case_ids": 83,
+    "retained_r2_case_ids": 60,
+    "new_case_ids": [
+      "test_loader_caller.DefaultDataGuardTests.test_container_subclasses_and_hostile_metaclass_never_run_hooks",
+      "test_loader_caller.DefaultDataGuardTests.test_cycles_depth_node_container_and_scalar_limits_are_refused",
+      "test_loader_caller.DefaultDataGuardTests.test_full_real_cpu_keyword_default_rejected_without_any_hook",
+      "test_loader_caller.DefaultDataGuardTests.test_full_real_cpu_window_positional_default_rejected_without_any_hook",
+      "test_loader_caller.DefaultDataGuardTests.test_nested_hostile_values_and_mapping_keys_never_run_hooks",
+      "test_loader_caller.DefaultDataGuardTests.test_source_referenced_objects_use_identity_without_hooks",
+      "test_loader_caller.DefaultDataGuardTests.test_supported_nested_builtin_data_and_keyword_order_remain_valid",
+      "test_loader_caller.DefaultDataGuardTests.test_untrusted_opaque_identity_is_not_a_cycle_or_type_bypass"
+    ],
+    "changed_r4_methods": [],
+    "original_method_count": 28,
+    "changed_original_28_methods": [],
+    "historical_r4_test_preservation": {
+      "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r4/work/LOC.json",
+      "sha256": "2aefb4425e4107ebb3d9a4c4274a7a19fef6f3d85606eb56d43d7706719e29a8"
+    },
+    "new_control_provenance": "Full validate_prepared on real pinned WindowsOwnedProcess._cpu_window and apply_cpu_rate_limit; supplied eq/bool/iter/len hooks remain uncalled; nested builtin data, opaque trusted identity, subclasses/metaclasses, bounds and cycles covered"
+  },
+  "checks": [
+    {
+      "name": "Both complete predecessor terminal reviews personally read and exact failure states/receipts pinned before freeze",
+      "passed": true
+    },
+    {
+      "name": "All96 guarded data controls pass with no skips, denied native calls or remaining threads",
+      "passed": true
+    },
+    {
+      "name": "All88 R4 test ASTs and original28 ASTs unchanged; seven-member/PDB repairs retained",
+      "passed": true
+    },
+    {
+      "name": "Full canonical _cpu_window and apply_cpu_rate_limit hostile defaults rejected with zero supplied hook calls",
+      "passed": true
+    },
+    {
+      "name": "Exact builtin normalization bounds cycles, nodes, depth, containers, scalar bytes and integer bits; opaque references use identity only",
+      "passed": true
+    },
+    {
+      "name": "357AC7 payloads and immutable R3/R4 predecessor inputs unchanged",
+      "passed": true
+    }
+  ],
+  "prior_failures": {
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/PRIOR-FAILURES.json",
+    "sha256": "dab4291480bdb93a648017f02931f13de7700a677cc2c04e5828b6e658413440"
+  },
+  "native_execution": false,
+  "function_pointer_invocations": false,
+  "canonical_source_application": false,
+  "remaining": [
+    "Independent Collaborative Review of exact R5 freeze and predecessor dispositions",
+    "Root-reviewed final V2 supplement",
+    "Fresh approved exact in-process caller context and action-specific owner approval",
+    "Actual native symbol/debug/capture/cleanup behavior unverified"
+  ]
+}

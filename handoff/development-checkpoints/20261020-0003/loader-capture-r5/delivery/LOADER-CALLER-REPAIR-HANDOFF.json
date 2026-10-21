@@ -1,0 +1,65 @@
+{
+  "at": "2026-10-20T19:33:30.777406+00:00",
+  "scope": "Reviewed caller/default qualification-source repair only",
+  "code_manifest": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\CODE-MANIFEST.json",
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/CODE-MANIFEST.json",
+    "sha256": "b144bab280609bfe0530af2cdf94bf279f07048d0fae68ec8b4d4d09b6de88eb"
+  },
+  "freeze": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\FROZEN.json",
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/FROZEN.json",
+    "sha256": "61e36c35c0e07eb2c9b5c3c5baec5a51fc93fb2b576518d32a6e23a4c7aee070"
+  },
+  "inputs": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\INPUTS.json",
+    "repository_relative_path": ".agents/runtime/operational-resume-20261020/loader-capture-r5/work/INPUTS.json",
+    "sha256": "f1f92caf541544e35cda84841936fbaf6c88f4c0570b68e7224a3a84d495a19f"
+  },
+  "independent_review": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\review\\REVIEW.json",
+    "sha256": "7ecbf2d0b60d6258ab144e0e1beb973d1a66cfdfce5d5ff69c0ace432e92a797"
+  },
+  "resolved_findings": [
+    {
+      "behavior": "Exact builtin normalization produces only safe tagged builtin records before equality. Unsupported defaults are refused before their equality, truth, iteration, length or hash hooks can run.",
+      "code": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261020\\loader-capture-r5\\work\\caller_boundary.py",
+      "evidence": "96-case guarded rerun includes full validate_prepared for real pinned WindowsOwnedProcess._cpu_window positional defaults and apply_cpu_rate_limit keyword defaults, both rejected with zero supplied-hook calls; restored valid defaults pass.",
+      "id": "LOADER-R3-02",
+      "lines": "139-199",
+      "status": "fixed now"
+    },
+    {
+      "behavior": "Exact seven-member CreateEventW guard unchanged from R4; actual guard and controlled adapter-boundary positives and missing/extra/wrong-ABI negatives remain intact.",
+      "id": "LOADER-R3-01",
+      "status": "retained verified repair"
+    }
+  ],
+  "source_delta_against_r4": {
+    "added": 62,
+    "removed": 4,
+    "physical": true,
+    "product_source": 0
+  },
+  "test_delta_against_r4": {
+    "added": 89,
+    "removed": 0,
+    "physical": true
+  },
+  "predecessor_dispositions": [
+    "R3 FAILED / REVIEW_REJECTED remains unchanged, including both original P1 findings.",
+    "R4 FAILED / EXECUTION_FAILED remains unchanged, including useful seventh-member repair and inherited default blocker."
+  ],
+  "limitations": [
+    "Approval is for this exact frozen source repair and recorded controlled evidence, not a universal security assessment.",
+    "Canonical methods are imported from pinned source; the full caller tests use controlled fixture state and no native constructors/effects.",
+    "Typed pointer wrappers in retained member controls are data only and were never invoked; no native control provenance or runtime success is inferred.",
+    "Actual PE/PDB1/4/1 parsing establishes retained data identity/rule behavior; DbgHelp loading, symbol/type lookup and loader behavior remain unverified.",
+    "Any V2 input derivation must bind this actual approved report and receipt plus exact frozen parser/source bytes.",
+    "No native action, profile/listener/debug session, process-memory write, installed product or application acceptance is authorized or established."
+  ],
+  "native_effects_authorized": false,
+  "native_qualification": false,
+  "canonical_source_promotion": false,
+  "product_acceptance": false
+}
