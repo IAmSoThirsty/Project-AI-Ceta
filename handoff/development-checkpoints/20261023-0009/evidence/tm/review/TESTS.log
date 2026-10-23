@@ -1,0 +1,39 @@
+test_cause_cycle_is_bounded (controls.ObserverControls.test_cause_cycle_is_bounded) ... ok
+test_code_identity_substitution_does_not_capture_foreign_frame (controls.ObserverControls.test_code_identity_substitution_does_not_capture_foreign_frame) ... ok
+test_collector_fault_is_secondary_and_superclass_runs_once (controls.ObserverControls.test_collector_fault_is_secondary_and_superclass_runs_once) ... ok
+test_colliding_nonstring_error_key_never_compares (controls.ObserverControls.test_colliding_nonstring_error_key_never_compares) ... ok
+test_context_substitution_is_rejected (controls.ObserverControls.test_context_substitution_is_rejected) ... ok
+test_deadline_margins_are_derived_only_from_control_scalars (controls.ObserverControls.test_deadline_margins_are_derived_only_from_control_scalars) ... ok
+test_elapsed_terms_come_from_completed_control_frame (controls.ObserverControls.test_elapsed_terms_come_from_completed_control_frame) ... ok
+test_failure_chain_keeps_outer_failure_and_inner_guard (controls.ObserverControls.test_failure_chain_keeps_outer_failure_and_inner_guard) ... ok
+test_hostile_primary_formatter_cannot_replace_error (controls.ObserverControls.test_hostile_primary_formatter_cannot_replace_error) ... ok
+test_missing_and_wrong_exact_types_are_explicitly_not_captured (controls.ObserverControls.test_missing_and_wrong_exact_types_are_explicitly_not_captured) ... ok
+test_nonstring_exception_keys_never_invoke_dictionary_hooks (controls.ObserverControls.test_nonstring_exception_keys_never_invoke_dictionary_hooks) ... ok
+test_raw_metaclass_and_instance_properties_never_run (controls.ObserverControls.test_raw_metaclass_and_instance_properties_never_run) ... ok
+test_report_encoder_failure_cannot_publish_complete_coverage (controls.ObserverControls.test_report_encoder_failure_cannot_publish_complete_coverage) ... ok
+test_storage_fault_retains_original_and_superclass_outcome (controls.ObserverControls.test_storage_fault_retains_original_and_superclass_outcome) ... ok
+test_subtest_primitive_identity_is_captured_without_formatting (controls.ObserverControls.test_subtest_primitive_identity_is_captured_without_formatting) ... ok
+test_success_has_no_inferred_positive_timings (controls.ObserverControls.test_success_has_no_inferred_positive_timings) ... ok
+test_superclass_fault_retains_exact_secondary_and_failure_outcome (controls.ObserverControls.test_superclass_fault_retains_exact_secondary_and_failure_outcome) ... ok
+test_superclass_receives_identical_triple_once (controls.ObserverControls.test_superclass_receives_identical_triple_once) ... ok
+test_unrelated_error_has_no_fabricated_guard_data (controls.ObserverControls.test_unrelated_error_has_no_fabricated_guard_data) ... ok
+test_unsupported_subtest_value_is_never_repr_formatted_by_collector (controls.ObserverControls.test_unsupported_subtest_value_is_never_repr_formatted_by_collector) ... ok
+test_failure_preserves_counter_fields_and_failure_exit (engine_controls.CustodyControls.test_failure_preserves_counter_fields_and_failure_exit) ... ok
+test_report_fault_cannot_replace_captured_guard_failure (engine_controls.CustodyControls.test_report_fault_cannot_replace_captured_guard_failure) ... ok
+test_result_storage_fault_keeps_original_baseexception (engine_controls.CustodyControls.test_result_storage_fault_keeps_original_baseexception) ... ok
+test_seal_storage_fault_keeps_captured_guard_failure (engine_controls.CustodyControls.test_seal_storage_fault_keeps_captured_guard_failure) ... ok
+test_success_is_one_body_not_a_positive_timing_measure (engine_controls.CustodyControls.test_success_is_one_body_not_a_positive_timing_measure) ... ok
+test_unrelated_failure_message_is_persisted_in_full_failure_evidence (__main__.IndependentControls.test_unrelated_failure_message_is_persisted_in_full_failure_evidence) ... FAIL
+
+======================================================================
+FAIL: test_unrelated_failure_message_is_persisted_in_full_failure_evidence (__main__.IndependentControls.test_unrelated_failure_message_is_persisted_in_full_failure_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\tm\review\run_review_controls.py", line 30, in test_unrelated_failure_message_is_persisted_in_full_failure_evidence
+    self.assertTrue(retained,'full failure evidence lost the original RuntimeError message')
+AssertionError: False is not true : full failure evidence lost the original RuntimeError message
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.065s
+
+FAILED (failures=1)

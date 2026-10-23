@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-ds23-r2-gate-r2",
+  "node_id": "review",
+  "executor_id": "/root/status_packet_review",
+  "started_at": "2026-10-23T08:15:04.326579+00:00",
+  "finished_at": "2026-10-23T08:25:28.700948+00:00",
+  "input_hash": "66f409b518a5839c2fb3bdb9907fabf98649fb38bea56af09b830cee5d131da4",
+  "changed_files": [
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/ACTUAL-REVIEW-CLAIM.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/ADMISSION-READBACK-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/ADMISSION-READBACK-R2-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/ADMISSION-READBACK-R3-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/ADMISSION-READBACK-R4-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/CLAIM-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/EXACT-DS2-VERIFIER-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/INDEPENDENT-ADMISSION-READBACK.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/MANIFEST.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/READBACK-HASH-DOMAIN-FAILURE-R3.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/READBACK-PARSE-FAILURE-R1.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/READBACK-SCHEMA-FAILURE-R2.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/REVIEW-RECEIPT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/REVIEW.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/ROOT-HELPER-BOUNDARY-CONTROLS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/ROOT-HELPER-CONTROLS-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/finalize_approved_review.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/inspect_admission.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/inspect_admission_r2.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/inspect_admission_r3.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/inspect_admission_r4.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/root_helper_boundary_controls.py"
+  ],
+  "decision": "approved",
+  "result": {
+    "decision": "approved",
+    "manifest_sha256": "736a2a3ef8639bf99acced85d0ce3950b74b01bf9f23d856148ca7a7061df2f6",
+    "review_sha256": "e0f9fa2de9e2addc8d24ccd2757c5bc1715a1b224b132c4baaf4535f34103db3",
+    "root_candidate_closure_sha256": "f17cd2b8214f9076cdcfa87683253a5a486bbd31c6d41d2f4887dd0cd9ccd858",
+    "root_closure_relocation_amendment_sha256": "83713b152c26a24624ec6de6ef3243a58b8b1bd6303fa3a2092a1b369292a658",
+    "graph_fingerprint": "997829e1616609bafc88eea12f601eba7d715ad0e03b27e55a3f1af59a0d51ed",
+    "review_evidence_manifest": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\review-r2\\MANIFEST.json",
+    "root_candidate_closure_approved": true,
+    "original_DS2_review_remains_rejected": true,
+    "retained_source_controls": 50,
+    "retained_independent_provider_repair_cases": 6,
+    "current_synthetic_helper_boundary_cases": 10,
+    "no_retained_source_control_or_full_F_replay": true,
+    "canonical_test_bodies_executed": 0,
+    "ST2_execution_authorized": false,
+    "full_product_acceptance": false
+  },
+  "commands": [
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/inspect_admission_r4.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/verify_prepared.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review-r2/root_helper_boundary_controls.py",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "Exact frozen source and prior independent repair controls, successful source qualification and all historical rejections conserved",
+      "passed": true
+    },
+    {
+      "name": "Corrected graph declares exact pinned DS2 verifier and read-only adoption is actually SUCCEEDED and closed",
+      "passed": true
+    },
+    {
+      "name": "Exact relocated Root helper origin/approval/receipt boundaries and amendment bindings independently checked",
+      "passed": true
+    },
+    {
+      "name": "All failed independent probe attempts retained, separately named successor checks passed",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

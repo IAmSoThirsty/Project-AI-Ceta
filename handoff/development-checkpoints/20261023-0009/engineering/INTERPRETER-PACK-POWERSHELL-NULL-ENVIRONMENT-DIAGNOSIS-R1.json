@@ -1,0 +1,26 @@
+{
+  "reproduction": "Same PowerShell SetEnvironmentVariable(name,$null,Process) used before failed R8",
+  "parent_variables": [
+    {
+      "name": "PYTHONOPTIMIZE",
+      "value": ""
+    }
+  ],
+  "observations": [
+    {
+      "kind": "native_inherit",
+      "actual_exit_status": 0,
+      "stdout": "{\"optimization\": 0, \"variables\": [{\"name\": \"PYTHONOPTIMIZE\", \"value\": \"\"}]}\r\n",
+      "stderr": ""
+    },
+    {
+      "kind": "explicit_scrub",
+      "actual_exit_status": 0,
+      "stdout": "{\"optimization\": 0, \"variables\": []}\r\n",
+      "stderr": ""
+    }
+  ],
+  "optimization": 0,
+  "original_R8_environment_value": "NOT_CAPTURED; current reproduction only",
+  "historical_JR2_TM2_BR3_optimization_not_inferred": true
+}

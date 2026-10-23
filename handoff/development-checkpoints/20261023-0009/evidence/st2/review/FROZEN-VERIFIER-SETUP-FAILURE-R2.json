@@ -1,0 +1,8 @@
+{
+  "scope": "INDEPENDENT_REVIEW_COMMAND_SETUP_ONLY",
+  "error": "Importing module node:process is not allowed in node_repl",
+  "actual_child_process_created": false,
+  "canonical_test_bodies_executed": 0,
+  "canonical_or_fixture_or_Git_writes": false,
+  "correction": "Use ordinary child environment; the inspected accepted observer already invokes every Git read with --no-optional-locks and core.fsmonitor=false, and refuses redirected Git environments."
+}

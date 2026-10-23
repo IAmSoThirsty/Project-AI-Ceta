@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-10-23T04:43:09.707022+00:00",
+  "author": "/root",
+  "reviewer": "/root/status_packet_review",
+  "formal_acceptance": false,
+  "finding": "Missing equality between closed prepared manifest and actual frozen manifest; missing equality between authorized and closed verification graph fingerprint",
+  "disposition": "FIXED_IN_UNFROZEN_PREPARATION",
+  "repairs": [
+    "closed_cohort requires closure.prepared_manifest_sha256 equal actual work/MANIFEST SHA",
+    "returned closed record pins verification, prepared manifest and graph fingerprint",
+    "BR3 graph, root and control must equal explicit additive authority binding",
+    "verify_prepared repeats graph and prepared-manifest binding before gate"
+  ],
+  "source_sha256": {
+    "record_candidates.py": "3eb9b7cf74eeced063a45d04fb098434bc7f2360f05c1940fd1a54c9841c8eac",
+    "verify_prepared.py": "c63daa1f1ba73c19c1f0c3bc1f82e70739353ba1522308497de1db7a27b40f12"
+  },
+  "canonical_writes": false,
+  "full_product_acceptance": false
+}

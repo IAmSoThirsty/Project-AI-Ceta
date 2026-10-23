@@ -1,0 +1,137 @@
+--- seed/src/ceta/identity/native_approval.py
++++ candidate/src/ceta/identity/native_approval.py
+@@ -875,21 +875,32 @@
+             time.sleep(min(0.01, max(0, (end - time.perf_counter_ns()) / 1_000_000_000)))
+ 
+     def transcript(self):
+-        with self._io_lock:
+-            require(self.mode == 'interactive' and not self._closed and self._result is not None
+-                and self._result.reported_verified and not self._stop.is_set(), 'APPROVAL_VERIFIED_CEREMONY_REQUIRED')
+-            current = self._require_current()
+-            require(not self._stop.is_set(), 'APPROVAL_CANCELLED')
+-            helper = self.helper_evidence.identity
+-            code = digest('native-owner-approval-build-v1', {'image_digest': helper.image_digest,
+-                'source_commitment': self._owner.helper_source_commitment, 'protocol': PROTOCOL,
+-                'interop_library_sha256': self.native_facts['interop_library']['sha256']})
+-            if self._enrollment:
+-                require(code == self.request.helper_commitment == self.request.ui_commitment,
+-                        'APPROVAL_ENROLLMENT_CODE_BINDING_CHANGED')
+-            return NativeApprovalTranscript(self.challenge_id, self.ceremony_nonce, self.request.input_commitment,
+-                _display_commitment(self.request), self.request.principal_id, self.request.actor_session,
+-                helper, code, helper, code, current, self._result.native_hresult, self._result.native_result)
++        try:
++            with self._io_lock:
++                # Consuming a cached result is an authorization boundary too.
++                # poll() need not have been called since verification completed.
++                self._require_gate_budget()
++                require(self.mode == 'interactive' and not self._closed and self._result is not None
++                    and self._result.reported_verified and not self._stop.is_set(), 'APPROVAL_VERIFIED_CEREMONY_REQUIRED')
++                current = self._require_current()
++                self._require_gate_budget()  # All native/currentness work is charged.
++                require(not self._stop.is_set(), 'APPROVAL_CANCELLED')
++                helper = self.helper_evidence.identity
++                code = digest('native-owner-approval-build-v1', {'image_digest': helper.image_digest,
++                    'source_commitment': self._owner.helper_source_commitment, 'protocol': PROTOCOL,
++                    'interop_library_sha256': self.native_facts['interop_library']['sha256']})
++                if self._enrollment:
++                    require(code == self.request.helper_commitment == self.request.ui_commitment,
++                            'APPROVAL_ENROLLMENT_CODE_BINDING_CHANGED')
++                transcript = NativeApprovalTranscript(self.challenge_id, self.ceremony_nonce, self.request.input_commitment,
++                    _display_commitment(self.request), self.request.principal_id, self.request.actor_session,
++                    helper, code, helper, code, current, self._result.native_hresult, self._result.native_result)
++                self._require_gate_budget()  # No newly computed authorizing value after expiry.
++                require(not self._stop.is_set(), 'APPROVAL_CANCELLED')
++                return transcript
++        except BaseException as primary:
++            self._expose(primary,())
++            raise
+ 
+     def _close_children(self):
+         errors = []
+--- seed/src/ceta/identity/owner_session.py
++++ candidate/src/ceta/identity/owner_session.py
+@@ -382,16 +382,28 @@
+             and session.native_facts.get('exit_code') == 0 and not session._closed
+             and type(session._result) is NativeApprovalResult and session._result.reported_verified,
+             'OWNER_SESSION_GENUINE_CEREMONY_REQUIRED')
+-        transcript = session.transcript()
+-        require(type(transcript) is NativeApprovalTranscript, 'OWNER_SESSION_TRANSCRIPT_REQUIRED')
+-        observed = self._require_native(self._expected,original_context,allow_expired=False)
+-        require(self._anchor is not None, 'OWNER_SESSION_CEREMONY_CLOCK_ANCHOR_REQUIRED')
+-        require_enrollment_transcript_binding(self._expected,self._expected,transcript,
+-            self._anchor,observed.current_clock)
+-        witness = _CeremonyWitness(session,original_context,self._expected.canonical_wire,
+-            enrollment_transcript_bytes(transcript))
+-        self._proof = witness
+-        return transcript,witness
++        try:
++            NativeApprovalSession._require_gate_budget(session)
++            transcript = session.transcript()
++            NativeApprovalSession._require_gate_budget(session)
++            require(type(transcript) is NativeApprovalTranscript, 'OWNER_SESSION_TRANSCRIPT_REQUIRED')
++            observed = self._require_native(self._expected,original_context,allow_expired=False)
++            NativeApprovalSession._require_gate_budget(session)
++            require(self._anchor is not None, 'OWNER_SESSION_CEREMONY_CLOCK_ANCHOR_REQUIRED')
++            require_enrollment_transcript_binding(self._expected,self._expected,transcript,
++                self._anchor,observed.current_clock)
++            NativeApprovalSession._require_gate_budget(session)
++            witness = _CeremonyWitness(session,original_context,self._expected.canonical_wire,
++                enrollment_transcript_bytes(transcript))
++            # Cached verification cannot renew the original helper allowance.
++            NativeApprovalSession._require_gate_budget(session)
++            require(not session._stop.is_set() and not session._closed and not self._stopped.is_set(),
++                'OWNER_SESSION_STOPPED')
++            self._proof = witness
++            return transcript,witness
++        except BaseException as primary:
++            NativeApprovalSession._expose(session,primary,())
++            raise
+ 
+     def require_owner_authority_current(self, phase, enrollment, effect_request, transcript,
+                                         native_proof, peer, original_context):
+@@ -1310,20 +1322,42 @@
+             and session._result.reported_verified,'OWNER_EFFECT_GENUINE_CEREMONY_REQUIRED')
+         self._effect_retaining = True
+         try:
++            NativeApprovalSession._require_gate_budget(session)
+             transcript = session.transcript()  # Repeats only the actual retained NA2 lease.
+-            with self._effect_operation(original_context, retained_current=True):
++            NativeApprovalSession._require_gate_budget(session)
++            operation = self._effect_operation(original_context, retained_current=True)
++            operation.__enter__()
++            try:
+                 from ceta.contracts.real_effect import require_approval_binding
+                 request,_ = self._require_effect(designation,original_context)
++                NativeApprovalSession._require_gate_budget(session)
+                 require(type(transcript) is NativeApprovalTranscript,'OWNER_EFFECT_TRANSCRIPT_REQUIRED')
+                 require_approval_binding(request,transcript,*self.clock())
++                NativeApprovalSession._require_gate_budget(session)
+                 require(self._effect_lease is session._lease and self._effect_lease is not None
+                     and self._effect_lease.active and self._effect_lease.helper is session.helper_evidence,
+                     'OWNER_EFFECT_NATIVE_LEASE_INVALID')
+                 wire = transcript.canonical_wire
+                 self._effect_fence(designation,session)
++                NativeApprovalSession._require_gate_budget(session)
+                 proof = _NativeEffectWitness(designation,session,original_context,wire)
+-                self._effect_proof = proof
+-                return transcript,proof
++            except BaseException as primary:
++                # This local guard only unwinds its busy flag. Normal generator
++                # exit avoids contextlib assigning a hostile primary traceback.
++                try: operation.__exit__(None,None,None)
++                except BaseException as secondary:
++                    NativeApprovalSession._expose(session,primary,(secondary,))
++                raise
++            else:
++                operation.__exit__(None,None,None)
++            NativeApprovalSession._require_gate_budget(session)
++            require(not session._stop.is_set() and not session._closed and not self._stopped.is_set(),
++                'OWNER_EFFECT_STOPPED_OR_CHANGED')
++            self._effect_proof = proof
++            return transcript,proof
++        except BaseException as primary:
++            NativeApprovalSession._expose(session,primary,())
++            raise
+         finally:self._effect_retaining = False
+ 
+     def require_owner_authority_current(self, phase, enrollment, effect_request, transcript,

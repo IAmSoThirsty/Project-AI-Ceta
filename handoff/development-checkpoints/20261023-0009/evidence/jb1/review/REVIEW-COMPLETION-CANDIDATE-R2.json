@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "decision": "rejected",
+  "run_id": "ceta-jb23-r1",
+  "node_id": "review",
+  "executor_id": "/root/independent_broader_review",
+  "started_at": "2026-10-23T06:00:49.038967+00:00",
+  "finished_at": "2026-10-23T06:15:30.049328+00:00",
+  "input_hash": "dc4bb494579524590b71666bdf77a75661a569acd39366809d2b8b18237e253e",
+  "changed_files": [
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/ACTUAL-REVIEW-CLAIM.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/CLAIM-SUMMARY-FAILURE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/CONSERVATION-AND-RECEIPT-AUDIT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/FORMAL-REVIEW-PROMPT.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/MANIFEST-SUCCESSOR-R2.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/MANIFEST.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/PREPARED-CHECK-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/PREPARED-CHECK.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/PREPARED-CHECK.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/PROMPT-CHECK-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/PROMPT-CHECK.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/PROMPT-CHECK.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/PROMPT-SENSE-ASSESSMENT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/REVIEW-COMPLETION-CANDIDATE-R2.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/REVIEW-COMPLETION-CANDIDATE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/REVIEW-COMPLETION-FAILURE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/REVIEW.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/SKILL-SELF-TEST-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/SKILL-SELF-TEST.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/SKILL-SELF-TEST.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/SKILL-STATIC-SCAN-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/SKILL-STATIC-SCAN.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/SKILL-STATIC-SCAN.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/TRANSCRIPT-BUDGET-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/TRANSCRIPT-BUDGET-WITNESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/TRANSCRIPT-BUDGET.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/TRANSCRIPT-BUDGET.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/capture_transcript_budget.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/complete_rejected_review.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/complete_rejected_review_r2.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/finish_readonly_audit.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/freeze_review.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/freeze_review_r2.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/reproduce_transcript_budget.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/run_skill_checks.py"
+  ],
+  "result": {
+    "decision": "rejected",
+    "manifest_sha256": "647e7d8df955ca4eefddc808e924ff7c32b8968d8b43cff23ef3021d7cee09d1",
+    "review_manifest_sha256": "6fb6f5dcb8abeeb61a67946322e7ebd8ba1422d456e875e120e10d01dc397552",
+    "review_sha256": "4503cb0f99329b80819bb7c4dff0000878eebba8f38bc178238023d47afe74fb",
+    "finding": "JB1-BUDGET-01",
+    "independent_focused_cases": 4,
+    "failed_expectations": 2,
+    "errors": 0,
+    "skips": 0,
+    "actual_independent_control_exit_status": 1,
+    "native_or_canonical_execution": false,
+    "canonical_or_fixture_or_Git_changes": false,
+    "full_product_acceptance": false
+  },
+  "commands": [
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -E -B -X utf8 C:\\Users\\Quencher\\.codex\\skills\\thirstys-codex-21-edition\\skills\\codex-independent-verifier\\scripts\\run.py prompt-check --prompt-file T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\FORMAL-REVIEW-PROMPT.txt",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -E -B -X utf8 C:\\Users\\Quencher\\.codex\\skills\\thirstys-codex-21-edition\\skills\\codex-independent-verifier\\scripts\\run.py self-test",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -E -B -X utf8 C:\\Users\\Quencher\\.codex\\skills\\thirstys-codex-21-edition\\skills\\codex-independent-verifier\\scripts\\run.py scan --repo T:\\00-Active\\Project-AI-CETA --prompt-file T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\FORMAL-REVIEW-PROMPT.txt",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -E -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\verify_prepared.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -E -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\reproduce_transcript_budget.py",
+      "exit_status": 1
+    }
+  ],
+  "validations": [
+    {
+      "name": "Four focused pure control cases: original helper cutoff must guard direct cached transcript and currentness overrun",
+      "passed": false
+    },
+    {
+      "name": "Frozen candidate, original failed receipt and all560 canonical source/Git/index inputs conserved",
+      "passed": true
+    }
+  ],
+  "exit_status": 1
+}

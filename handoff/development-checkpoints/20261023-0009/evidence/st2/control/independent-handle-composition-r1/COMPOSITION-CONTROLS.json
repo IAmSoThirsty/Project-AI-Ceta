@@ -1,0 +1,625 @@
+{
+  "classification": "EXACT_ACTUAL_BINDING_LOADER_AND_PARTIAL_PROVIDER_COMPOSITION_CONTROLS",
+  "amendment_sha256": "3d2edaa37528d2d38d6cb7ecace953eebfbef6c8dde4f221c0c5c1866eda640f",
+  "runner_sha256": "0923c3b1ec7081489d8c9f4dcee17083b3df6d65801215d6c4b27a288640bbf8",
+  "launcher_sha256": "727a150fc63889a1a1cb9b158f90a99adbf76388edeef4c6b3224d232bfb498d",
+  "loader_cases": [
+    {
+      "id": "exact_actual_A_support_and_proposed_approval_accepts",
+      "passed": true,
+      "accepted": true,
+      "error": null,
+      "inert_loader_count": 1,
+      "actual_record_bytes": true,
+      "synthetic_overlay": false,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "wrong_named_reviewer_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "stale_approval_amendment_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "stale_approval_runner_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "stale_approval_launcher_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "required_provider_support_omission_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "critical_support_drift_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "original_preparation_drift_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "failed_qualification_closure_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "old_qualification_run_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "failed_qualification_node_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "different_verified_graph_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "old_amendment_graph_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "pinned_rejected_DS1_provider_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "different_DS2_source_file_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 0,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "different_ignored_profile_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 1,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    },
+    {
+      "id": "different_provider_F_refused",
+      "passed": true,
+      "accepted": false,
+      "error": "AssertionError",
+      "inert_loader_count": 1,
+      "actual_record_bytes": false,
+      "synthetic_overlay": true,
+      "real_provider_import_or_execution": false
+    }
+  ],
+  "loader_case_count": 17,
+  "explicit_guard_cases": [
+    {
+      "id": "run_handle_qualified.py_optimized_mode_refused",
+      "passed": true
+    },
+    {
+      "id": "execute_handle_qualified_once.py_optimized_mode_refused",
+      "passed": true
+    }
+  ],
+  "partial_provider_cases": [
+    {
+      "id": "DS2_partial_class_1_through_exact_current_caller",
+      "passed": true,
+      "exact_primary_identity": true,
+      "all_inner_outer_custodians_preserved": true,
+      "inner_close_attempts": 1,
+      "raw_partial_query_rows_retained": true,
+      "capture": {
+        "recorded_at": "2026-10-23T08:42:13.029250+00:00",
+        "amendment_sha256": "3d2edaa37528d2d38d6cb7ecace953eebfbef6c8dde4f221c0c5c1866eda640f",
+        "provider_sha256": "3727f857cd6cb7324a8b93ad16d070d4a403678ac071cd94c32954edbd203bde",
+        "elapsed_ns": 969900,
+        "original_exception": {
+          "type": "Hostile",
+          "args": [
+            "CONTROLLED_DS2_NATIVE_PARTIAL"
+          ],
+          "custom_formatter_called": false
+        },
+        "partial_directory_provenance": [
+          {
+            "function": "provide",
+            "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\independent-handle-composition-r1\\test_composition.py",
+            "line": 111,
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\CONTROLLED_OUTER_PATH_ONLY",
+            "raw_path_observations": [
+              {
+                "stage": "BEFORE_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              },
+              {
+                "stage": "AFTER_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              }
+            ],
+            "raw_handle_observations": [
+              {
+                "stage": "AFTER_OPEN",
+                "metadata": {
+                  "basic": {
+                    "CreationTime": 134357913298342063,
+                    "LastAccessTime": 134372121040449260,
+                    "LastWriteTime": 134369884524851075,
+                    "ChangeTime": 134369884524851075,
+                    "FileAttributes": 16
+                  },
+                  "standard": {
+                    "AllocationSize": 8192,
+                    "EndOfFile": 8192,
+                    "NumberOfLinks": 1,
+                    "DeletePending": 0,
+                    "Directory": 1
+                  },
+                  "identity": {
+                    "VolumeSerialNumber": 154504856318070761,
+                    "FileId": "b0c72600000016000000000000000000"
+                  }
+                }
+              }
+            ],
+            "entered": true,
+            "closed": true
+          },
+          {
+            "function": "__enter__",
+            "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\directory_snapshot.py",
+            "line": 144,
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\CONTROLLED_INNER_PATH_ONLY",
+            "raw_path_observations": [
+              {
+                "stage": "BEFORE_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              }
+            ],
+            "raw_handle_observations": [
+              {
+                "stage": "AFTER_OPEN",
+                "complete": false,
+                "metadata": {
+                  "basic": {
+                    "CreationTime": 134357913298342063,
+                    "LastAccessTime": 134372121040449260,
+                    "LastWriteTime": 134369884524851075,
+                    "ChangeTime": 134369884524851075,
+                    "FileAttributes": 16
+                  }
+                },
+                "completed_classes": [
+                  0
+                ],
+                "failed_class": 1
+              }
+            ],
+            "entered": true,
+            "closed": false
+          },
+          {
+            "function": "checkpoint",
+            "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\directory_snapshot.py",
+            "line": 124,
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\CONTROLLED_INNER_PATH_ONLY",
+            "raw_path_observations": [
+              {
+                "stage": "BEFORE_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              }
+            ],
+            "raw_handle_observations": [
+              {
+                "stage": "AFTER_OPEN",
+                "complete": false,
+                "metadata": {
+                  "basic": {
+                    "CreationTime": 134357913298342063,
+                    "LastAccessTime": 134372121040449260,
+                    "LastWriteTime": 134369884524851075,
+                    "ChangeTime": 134369884524851075,
+                    "FileAttributes": 16
+                  }
+                },
+                "completed_classes": [
+                  0
+                ],
+                "failed_class": 1
+              }
+            ],
+            "entered": true,
+            "closed": false
+          }
+        ],
+        "partial_observation_complete": false,
+        "full_product_acceptance": false
+      },
+      "synthetic_not_native": true
+    },
+    {
+      "id": "DS2_partial_class_18_through_exact_current_caller",
+      "passed": true,
+      "exact_primary_identity": true,
+      "all_inner_outer_custodians_preserved": true,
+      "inner_close_attempts": 1,
+      "raw_partial_query_rows_retained": true,
+      "capture": {
+        "recorded_at": "2026-10-23T08:42:13.029250+00:00",
+        "amendment_sha256": "3d2edaa37528d2d38d6cb7ecace953eebfbef6c8dde4f221c0c5c1866eda640f",
+        "provider_sha256": "3727f857cd6cb7324a8b93ad16d070d4a403678ac071cd94c32954edbd203bde",
+        "elapsed_ns": 686200,
+        "original_exception": {
+          "type": "Hostile",
+          "args": [
+            "CONTROLLED_DS2_NATIVE_PARTIAL"
+          ],
+          "custom_formatter_called": false
+        },
+        "partial_directory_provenance": [
+          {
+            "function": "provide",
+            "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\independent-handle-composition-r1\\test_composition.py",
+            "line": 111,
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\CONTROLLED_OUTER_PATH_ONLY",
+            "raw_path_observations": [
+              {
+                "stage": "BEFORE_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              },
+              {
+                "stage": "AFTER_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              }
+            ],
+            "raw_handle_observations": [
+              {
+                "stage": "AFTER_OPEN",
+                "metadata": {
+                  "basic": {
+                    "CreationTime": 134357913298342063,
+                    "LastAccessTime": 134372121040449260,
+                    "LastWriteTime": 134369884524851075,
+                    "ChangeTime": 134369884524851075,
+                    "FileAttributes": 16
+                  },
+                  "standard": {
+                    "AllocationSize": 8192,
+                    "EndOfFile": 8192,
+                    "NumberOfLinks": 1,
+                    "DeletePending": 0,
+                    "Directory": 1
+                  },
+                  "identity": {
+                    "VolumeSerialNumber": 154504856318070761,
+                    "FileId": "b0c72600000016000000000000000000"
+                  }
+                }
+              }
+            ],
+            "entered": true,
+            "closed": true
+          },
+          {
+            "function": "__enter__",
+            "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\directory_snapshot.py",
+            "line": 144,
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\CONTROLLED_INNER_PATH_ONLY",
+            "raw_path_observations": [
+              {
+                "stage": "BEFORE_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              }
+            ],
+            "raw_handle_observations": [
+              {
+                "stage": "AFTER_OPEN",
+                "complete": false,
+                "metadata": {
+                  "basic": {
+                    "CreationTime": 134357913298342063,
+                    "LastAccessTime": 134372121040449260,
+                    "LastWriteTime": 134369884524851075,
+                    "ChangeTime": 134369884524851075,
+                    "FileAttributes": 16
+                  },
+                  "standard": {
+                    "AllocationSize": 8192,
+                    "EndOfFile": 8192,
+                    "NumberOfLinks": 1,
+                    "DeletePending": 0,
+                    "Directory": 1
+                  }
+                },
+                "completed_classes": [
+                  0,
+                  1
+                ],
+                "failed_class": 18
+              }
+            ],
+            "entered": true,
+            "closed": false
+          },
+          {
+            "function": "checkpoint",
+            "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\directory_snapshot.py",
+            "line": 124,
+            "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\CONTROLLED_INNER_PATH_ONLY",
+            "raw_path_observations": [
+              {
+                "stage": "BEFORE_OPEN",
+                "metadata": {
+                  "st_atime": 1792738504.044926,
+                  "st_atime_ns": 1792738504044926000,
+                  "st_birthtime": 1791317729.8342063,
+                  "st_birthtime_ns": 1791317729834206300,
+                  "st_ctime": 1791317729.8342063,
+                  "st_ctime_ns": 1791317729834206300,
+                  "st_dev": 154504856318070761,
+                  "st_file_attributes": 16,
+                  "st_gid": 0,
+                  "st_ino": 6192449490175920,
+                  "st_mode": 16895,
+                  "st_mtime": 1792514852.4851074,
+                  "st_mtime_ns": 1792514852485107500,
+                  "st_nlink": 1,
+                  "st_reparse_tag": 0,
+                  "st_size": 8192,
+                  "st_uid": 0
+                }
+              }
+            ],
+            "raw_handle_observations": [
+              {
+                "stage": "AFTER_OPEN",
+                "complete": false,
+                "metadata": {
+                  "basic": {
+                    "CreationTime": 134357913298342063,
+                    "LastAccessTime": 134372121040449260,
+                    "LastWriteTime": 134369884524851075,
+                    "ChangeTime": 134369884524851075,
+                    "FileAttributes": 16
+                  },
+                  "standard": {
+                    "AllocationSize": 8192,
+                    "EndOfFile": 8192,
+                    "NumberOfLinks": 1,
+                    "DeletePending": 0,
+                    "Directory": 1
+                  }
+                },
+                "completed_classes": [
+                  0,
+                  1
+                ],
+                "failed_class": 18
+              }
+            ],
+            "entered": true,
+            "closed": false
+          }
+        ],
+        "partial_observation_complete": false,
+        "full_product_acceptance": false
+      },
+      "synthetic_not_native": true
+    }
+  ],
+  "total_cases": 21,
+  "actual_approval_file_created": false,
+  "no_actual_provider_snapshot_or_native_or_coordinator_or_canonical_execution": true,
+  "full_product_acceptance": false
+}

@@ -36,9 +36,15 @@ Results describe installation runtime aggregates. Task/project attribution,
 workload latency, causal bottlenecks and qualification remain explicitly unavailable
 or unestablished. The envelope is labeled `CALLER_DECLARED_UNQUALIFIED`. These
 separately checked boundaries are not an atomic snapshot of live native and
-SQLite state. Deadline/cancellation checks occur between synchronous calls;
-existing SQLite validation and its busy timeout cannot be interrupted internally
-by this collector, and strict wall-time/cancellation qualification remains open.
+SQLite state. The explicitly budgeted read-only Journal uses a SQLite VM progress
+handler, Python history-verification checkpoints, a finite instruction/check budget,
+and zero SQLite busy wait. Cancellation, deadline and clock validity are checked
+during construction, integrity/position/state reads and before/after cleanup.
+Callback exceptions retain their exact identity and connection/handler custody;
+cleanup is attempted without letting cancelled progress abort rollback. Ordinary
+writer and unbudgeted reader behavior is unchanged. DLL hashing/loading,
+filesystem and native calls remain outside a universal hard wall-time bound;
+cooperative checks detect overshoot at the next supported observation boundary.
 
 Requirement contributions: CETA-20.05.01/02, REQ-35-01/03 and bounded observation
 under REQ-34-03. Controlled process-port tests plus real disposable SQLite prove

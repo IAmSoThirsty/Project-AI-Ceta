@@ -1,0 +1,32 @@
+{
+  "classification": "READ_ONLY_PRIMARY_DOCUMENTATION_CHECK",
+  "sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getfileinformationbyhandleex",
+      "checked_contract": "Nonzero success, zero failure, Basic0/Standard1/Id18 structure classes; returned classes may vary with drivers/OS."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_standard_info",
+      "checked_contract": "Allocation, EOF, links, deletion and directory fields match declared structure."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_id_info",
+      "checked_contract": "Volume serial plus 128-bit identifier form the identity pair."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_basic_info",
+      "checked_contract": "Creation/access/write/change raw FILETIME fields and attributes retained."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+      "checked_contract": "Existing directory handle flags and closing obligations checked."
+    }
+  ],
+  "initial_lookup_failure": {
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfileinformationbyhandleex",
+    "status": 404,
+    "resolved_by": "The documented winbase URL above."
+  },
+  "no_API_documentation_claim_of_original_ST2_failure_cause": true,
+  "no_runtime_acceptance_from_documentation": true
+}

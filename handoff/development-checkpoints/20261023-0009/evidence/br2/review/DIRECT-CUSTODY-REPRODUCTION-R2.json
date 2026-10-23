@@ -1,0 +1,244 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "contextlib_source": {
+    "path": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+    "sha256": "a53b1db774f19c6b1e4320c2bc64058c49e3fba58b20b9c1158e5a8d02069890",
+    "line": 191,
+    "statement": "                exc.__traceback__ = traceback"
+  },
+  "manifest_sha256": "72028d628d5ede1db9d39637910be2da47908faeb3eb0dbffbab98385bdcac6e",
+  "results": [
+    {
+      "control": "file_stream read plus close",
+      "original_type": "Original",
+      "observed_type": "RuntimeError",
+      "original_identity_retained": false,
+      "observed_args": [
+        "INDEPENDENT_TRACEBACK_ASSIGNMENT_REFUSED"
+      ],
+      "traceback": [
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 44,
+          "function": "<module>"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+          "line": 92,
+          "function": "stable"
+        },
+        {
+          "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+          "line": 191,
+          "function": "__exit__"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 13,
+          "function": "__setattr__"
+        }
+      ],
+      "original_has_custody_attrs": true,
+      "original_args": [
+        "exact file read primary"
+      ],
+      "original_traceback": [
+        {
+          "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+          "line": 158,
+          "function": "__exit__"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+          "line": 86,
+          "function": "file_stream"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+          "line": 75,
+          "function": "file_stream"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+          "line": 95,
+          "function": "stable"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 39,
+          "function": "read"
+        }
+      ],
+      "observed_context_is_original": true,
+      "preserved_primary_frames": {
+        "observer_primary_exc_info": [
+          {
+            "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+            "line": 75,
+            "function": "file_stream"
+          },
+          {
+            "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+            "line": 95,
+            "function": "stable"
+          },
+          {
+            "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+            "line": 39,
+            "function": "read"
+          }
+        ]
+      },
+      "secondary": [
+        {
+          "type": "OSError",
+          "args": [
+            "secondary file close"
+          ],
+          "traceback": [
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+              "line": 78,
+              "function": "file_stream"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 40,
+              "function": "close"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "control": "observation_port body plus hook conflict",
+      "original_type": "Original",
+      "observed_type": "RuntimeError",
+      "original_identity_retained": false,
+      "observed_args": [
+        "INDEPENDENT_TRACEBACK_ASSIGNMENT_REFUSED"
+      ],
+      "traceback": [
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 49,
+          "function": "<module>"
+        },
+        {
+          "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+          "line": 191,
+          "function": "__exit__"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 13,
+          "function": "__setattr__"
+        }
+      ],
+      "original_has_custody_attrs": true,
+      "original_args": [
+        "exact scope body primary"
+      ],
+      "original_traceback": [
+        {
+          "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+          "line": 158,
+          "function": "__exit__"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\bound_runtime.py",
+          "line": 111,
+          "function": "observation_port"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\bound_runtime.py",
+          "line": 94,
+          "function": "observation_port"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 51,
+          "function": "<module>"
+        }
+      ],
+      "observed_context_is_original": true,
+      "preserved_primary_frames": {
+        "snapshot_primary_exc_info": [
+          {
+            "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\bound_runtime.py",
+            "line": 94,
+            "function": "observation_port"
+          },
+          {
+            "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+            "line": 51,
+            "function": "<module>"
+          }
+        ]
+      },
+      "secondary": [
+        {
+          "type": "RuntimeError",
+          "args": [
+            "BR_SNAPSHOT_HOOK_CHANGED; original restored"
+          ],
+          "traceback": []
+        }
+      ]
+    },
+    {
+      "control": "reporter_observation body",
+      "original_type": "Original",
+      "observed_type": "RuntimeError",
+      "original_identity_retained": false,
+      "observed_args": [
+        "INDEPENDENT_TRACEBACK_ASSIGNMENT_REFUSED"
+      ],
+      "traceback": [
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 56,
+          "function": "<module>"
+        },
+        {
+          "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+          "line": 191,
+          "function": "__exit__"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 13,
+          "function": "__setattr__"
+        }
+      ],
+      "original_has_custody_attrs": false,
+      "original_args": [
+        "exact reporter body primary"
+      ],
+      "original_traceback": [
+        {
+          "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+          "line": 158,
+          "function": "__exit__"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\run_broader.py",
+          "line": 97,
+          "function": "reporter_observation"
+        },
+        {
+          "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+          "line": 56,
+          "function": "<module>"
+        }
+      ],
+      "observed_context_is_original": true,
+      "preserved_primary_frames": {},
+      "secondary": []
+    }
+  ],
+  "candidate_primary_custody_requirement_passed": false,
+  "canonical_test_bodies_executed": false,
+  "canonical_fixture_writes": false,
+  "only_disposable_review_scope": true
+}

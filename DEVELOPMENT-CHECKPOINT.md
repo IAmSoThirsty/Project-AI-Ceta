@@ -1,9 +1,9 @@
-# Project-AI: CETA development checkpoint 8
+Project-AI: CETA development checkpoint9
 
-Canonical559 payloads are unchanged from checkpoint7. A separately reviewed560-payload Journal read-budget candidate is preserved under this checkpoint's handoff archive, with113 passing scoped tests and exact source/review pins. It has not been promoted to canonical product source. Candidate source+220/-9,tests+377/-0,docs+9/-3;copied product LOC0.
+Canonical integration and evidence consistency have progressed. No defensible overall completion percentage is established.
 
-The retained actual canonical Windows CLI evidence reports exit0,READY,COMPLETE_PROCESS_USAGE,STOPPED and five closed outer handles. Its envelope remains caller-unqualified;CPU/latency unavailable;no positive governed consequential effect is established. The formal workflow validation path is missing and that gate has not passed.
+The retained status register contains the actual closed journal, timing, broader successor and status-application outcomes. BR1 remains failed despite510 completed test bodies with no test failures: required post-execution observation failed and no success seal exists. BR2 preparation was independently rejected before canonical execution: zero test bodies and no execution intent. Historical halt, failed reviews and the consumed AC7 native attempt remain preserved.
 
-Preserved failures include the636-test initial integration,638-test successor and rejected27-test fixture-runner review. Canonical508 still has two timing-priority failures. The50ms admission bound is unchanged. Full product,installed,offline,isolation,recovery,endurance,hardware and human acceptance remain open. The original first-checkpoint FAILED receipt remains FAILED.
+Reliable admission timing, genuine attributable authorization-to-native-effect, remaining application/model requirements, installed, offline, migration, endurance and human/hardware acceptance remain open.
 
-Preparation uses a temporary index/object database;normal HEAD,index,canonical files and every parent path/mode, PDF part/reassembly tool and exactly five immutable registry source fixtures remain preserved. Environments,generated caches,disposable fixtures,live coordinator state,secrets and original oversized PDF are excluded. A separately reviewed local correction narrows the installed coordinator's Git lease;no installed tool is edited.
+Preparation uses an isolated index and private objects. Actual publication requires its own fresh exact Git scope and ordinary pre-push hook. This disclosure is development evidence and does not establish full-product acceptance.

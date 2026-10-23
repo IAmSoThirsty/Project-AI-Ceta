@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/independent_broader_review",
+  "decision": "rejected",
+  "run_id": "ceta-br23-r2",
+  "manifest_sha256": "72028d628d5ede1db9d39637910be2da47908faeb3eb0dbffbab98385bdcac6e",
+  "binding_sha256": "3f19599b65d15d5f9edfb9f2476add954f7af5bca2813f975627c6446ed77554",
+  "recorded_at": "2026-10-23T04:19:42.155Z",
+  "canonical_execution_authorized": false,
+  "canonical_test_bodies_executed": 0,
+  "canonical_fixture_writes": false,
+  "full_product_acceptance": false,
+  "findings": [
+    {
+      "id": "BR2-CUSTODY-01",
+      "priority": "P1",
+      "classification": "blocking current runner execution",
+      "title": "Generator context-manager exit replaces the exact original exception",
+      "files": [
+        {
+          "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/br2/work/complete_observer.py",
+          "lines": [
+            70,
+            71,
+            72,
+            86,
+            92
+          ]
+        },
+        {
+          "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/br2/work/bound_runtime.py",
+          "lines": [
+            69,
+            70,
+            95,
+            111
+          ]
+        },
+        {
+          "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/br2/work/run_broader.py",
+          "lines": [
+            93,
+            94,
+            98
+          ]
+        }
+      ],
+      "trigger": "A KeyboardInterrupt subclass rejects __traceback__ assignment in __setattr__; read/body failure is propagated through generator context manager, including read+close or body+hook conflict.",
+      "expected": "Original exception identity and original traceback remain primary; cleanup faults remain explicit secondary evidence.",
+      "observed": "All three direct controls received a new RuntimeError from contextlib.__exit__ assigning exc.__traceback__, instead of the original KeyboardInterrupt subclass.",
+      "python_source": {
+        "path": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+        "sha256": "a53b1db774f19c6b1e4320c2bc64058c49e3fba58b20b9c1158e5a8d02069890",
+        "line": 191,
+        "statement": "                exc.__traceback__ = traceback"
+      },
+      "evidence": "DIRECT-CUSTODY-REPRODUCTION-R2.json",
+      "exact_exception_and_traceback_records": [
+        {
+          "control": "file_stream read plus close",
+          "original_type": "Original",
+          "observed_type": "RuntimeError",
+          "original_identity_retained": false,
+          "observed_args": [
+            "INDEPENDENT_TRACEBACK_ASSIGNMENT_REFUSED"
+          ],
+          "traceback": [
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 44,
+              "function": "<module>"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+              "line": 92,
+              "function": "stable"
+            },
+            {
+              "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+              "line": 191,
+              "function": "__exit__"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 13,
+              "function": "__setattr__"
+            }
+          ],
+          "original_has_custody_attrs": true,
+          "original_args": [
+            "exact file read primary"
+          ],
+          "original_traceback": [
+            {
+              "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+              "line": 158,
+              "function": "__exit__"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+              "line": 86,
+              "function": "file_stream"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+              "line": 75,
+              "function": "file_stream"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+              "line": 95,
+              "function": "stable"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 39,
+              "function": "read"
+            }
+          ],
+          "observed_context_is_original": true,
+          "preserved_primary_frames": {
+            "observer_primary_exc_info": [
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+                "line": 75,
+                "function": "file_stream"
+              },
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+                "line": 95,
+                "function": "stable"
+              },
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+                "line": 39,
+                "function": "read"
+              }
+            ]
+          },
+          "secondary": [
+            {
+              "type": "OSError",
+              "args": [
+                "secondary file close"
+              ],
+              "traceback": [
+                {
+                  "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\complete_observer.py",
+                  "line": 78,
+                  "function": "file_stream"
+                },
+                {
+                  "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+                  "line": 40,
+                  "function": "close"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control": "observation_port body plus hook conflict",
+          "original_type": "Original",
+          "observed_type": "RuntimeError",
+          "original_identity_retained": false,
+          "observed_args": [
+            "INDEPENDENT_TRACEBACK_ASSIGNMENT_REFUSED"
+          ],
+          "traceback": [
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 49,
+              "function": "<module>"
+            },
+            {
+              "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+              "line": 191,
+              "function": "__exit__"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 13,
+              "function": "__setattr__"
+            }
+          ],
+          "original_has_custody_attrs": true,
+          "original_args": [
+            "exact scope body primary"
+          ],
+          "original_traceback": [
+            {
+              "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+              "line": 158,
+              "function": "__exit__"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\bound_runtime.py",
+              "line": 111,
+              "function": "observation_port"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\bound_runtime.py",
+              "line": 94,
+              "function": "observation_port"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 51,
+              "function": "<module>"
+            }
+          ],
+          "observed_context_is_original": true,
+          "preserved_primary_frames": {
+            "snapshot_primary_exc_info": [
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\bound_runtime.py",
+                "line": 94,
+                "function": "observation_port"
+              },
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+                "line": 51,
+                "function": "<module>"
+              }
+            ]
+          },
+          "secondary": [
+            {
+              "type": "RuntimeError",
+              "args": [
+                "BR_SNAPSHOT_HOOK_CHANGED; original restored"
+              ],
+              "traceback": []
+            }
+          ]
+        },
+        {
+          "control": "reporter_observation body",
+          "original_type": "Original",
+          "observed_type": "RuntimeError",
+          "original_identity_retained": false,
+          "observed_args": [
+            "INDEPENDENT_TRACEBACK_ASSIGNMENT_REFUSED"
+          ],
+          "traceback": [
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 56,
+              "function": "<module>"
+            },
+            {
+              "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+              "line": 191,
+              "function": "__exit__"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 13,
+              "function": "__setattr__"
+            }
+          ],
+          "original_has_custody_attrs": false,
+          "original_args": [
+            "exact reporter body primary"
+          ],
+          "original_traceback": [
+            {
+              "file": "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextlib.py",
+              "line": 158,
+              "function": "__exit__"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\work\\run_broader.py",
+              "line": 97,
+              "function": "reporter_observation"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\review\\reproduce_primary_custody_r2.py",
+              "line": 56,
+              "function": "<module>"
+            }
+          ],
+          "observed_context_is_original": true,
+          "preserved_primary_frames": {},
+          "secondary": []
+        }
+      ],
+      "required_repair": "Create a fresh successor; replace these generator context-manager boundaries with explicit context-manager objects or another mechanism that does not assign untrusted exception attributes. Preserve primary triple and secondary faults without altering the rejected preparation; add deterministic controls for all three boundaries and combined faults."
+    }
+  ],
+  "positive_checks": [
+    "Directional Win32 regular-file executable suffix synthesis only; no mode mask; raw path/handle before/after fields retained",
+    "Full same-API metadata equality, read bound, real read-only mode mutation rejection, nonmode/type/link mismatches, unsupported suffix and non-Windows rejection",
+    "Complete ignored/empty/long-path traversal, explicit enumeration errors, reparse and alias refusal",
+    "Exact corrected control-r2/run/fingerprint; stock admission/receipt/event/overlap/capacity/self-review rules; eight exact Root execution workspaces",
+    "Exact ordered510 canonical IDs from28 selectors/26 modules,562source/native/Git/index conserved; prior failed BR1 data and raw oldJS9 preserved",
+    "Fresh Root launcher/release/close bindings inspected; required approved review/gate/live exact claims and actual exit0/current postcheck/seal for success"
+  ],
+  "validation": {
+    "frozen_integrity": {
+      "process": "FROZEN-INTEGRITY-PROCESS.json",
+      "actual_exit_status": 0,
+      "files": 924,
+      "entries": 1750,
+      "external_pins": 183
+    },
+    "author_controls": {
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "actual_exit_status": 0
+    },
+    "independent_reexecution": {
+      "all44_author_controls_passed_before_later_independent_failure": true,
+      "source": "INDEPENDENT-CONTROLS.stderr",
+      "overall_process_exit_status": 1,
+      "full_summary_absent": true,
+      "last_control": "test_hostile_primary_accessors_do_not_replace_read_exception",
+      "ordinary_unittest_secondary_formatting_failure_also_preserved": true
+    },
+    "focused_independent": {
+      "process": "INDEPENDENT-FOCUSED-R3-PROCESS.json",
+      "tests": 12,
+      "failures": 1,
+      "errors": 0,
+      "skips": 0,
+      "actual_exit_status": 1,
+      "all_selected_started_stopped": true,
+      "work_unchanged": true
+    },
+    "direct_isolation": {
+      "process": "DIRECT-CUSTODY-R2-PROCESS.json",
+      "boundaries": 3,
+      "original_identity_retained": 0,
+      "actual_exit_status": 1
+    }
+  },
+  "root_script_pins": {
+    "execute_once.py": "3d236a32248bc9634df7b86dfd5a95db74d44b7fb9ea5e5b4fb8ed88aed565dc",
+    "ROOT-SELF-REVIEW.py": "f8f7c09d81b072524dd360dd85ee85276f067191140e00fc9da14b666ae7a2e5",
+    "ROOT-RELEASE.py": "c74942edb6a174d58afb5234e810a359e18e9a28e9f4a67ecbeeefcfdfccce5b",
+    "ROOT-CLOSE.py": "ad3f4fce2457fbbf1bd27d0bad255c771f3ae80ba751b2b553b94a3827a64fb4"
+  },
+  "preserved_harness_issue": {
+    "file": "INDEPENDENT-HARNESS-SETUP-R1.json",
+    "issue": "Pre-test argv slash string comparison",
+    "canonical_bodies": 0,
+    "repair": "Fresh r2 harness resolves both paths; original capture/source retained"
+  },
+  "acceptance_limits": [
+    "BR1 remains FAILED exit1/no success seal; original failed file path UNKNOWN",
+    "This rejected BR2 preparation executed zero canonical test bodies",
+    "A fresh successor and exact review/gate/claims are required before any broader canonical cohort",
+    "Reliable unchanged50ms admission and genuine authorization-to-native-effect remain open",
+    "Whole product, installed/offline/migration/endurance/human/hardware/model acceptance remains false; no completion percentage"
+  ],
+  "cross_project_material": "Installed TAAR and Python runtime inspected read-only as existing tools; no other project source imported into application"
+}

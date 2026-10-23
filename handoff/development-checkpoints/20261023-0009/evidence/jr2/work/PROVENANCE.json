@@ -1,0 +1,69 @@
+{
+  "predecessor_manifest_sha256": "3f1d85ecebf50c72b17d6761284f950083db0c0963faa3927eada7e462ecec7d",
+  "predecessor_review_manifest_sha256": "fdc88fda803e22bbed64ef792c820a094995493555f9c0e511d6ac015542715b",
+  "predecessor_review": "FAILED",
+  "predecessor_validate": "BLOCKED",
+  "predecessor_replay": false,
+  "claim": {
+    "baseline_snapshot": {},
+    "capabilities": [],
+    "claimed_at": "2026-10-23T00:38:55.995032+00:00",
+    "effective_write_scope": [
+      "00-Active/Project-AI-CETA/.agents/runtime/oq23/jr2/work/**"
+    ],
+    "executor_id": "/root/fixture_runner_r2",
+    "git_baseline": {
+      "available": true,
+      "diff_hash": "a3dbed61d97de75f2f90358996667cd3cd5b6f0e4b2abe0baf8fe07b2f2bdab7",
+      "git_changed_files": [
+        "build/gates.json",
+        "build/progress.json",
+        "contracts/ISOLATED_WORKER_V1.md",
+        "contracts/KERNEL_TRANSACTIONS_V1.md",
+        "contracts/LOCAL_IPC_V1.md",
+        "contracts/NATIVE_OWNER_SESSION_V1.md",
+        "contracts/OWNED_SERVICE_V1.md",
+        "handoff/continuity.json",
+        "native/windows_broker/isolated_worker.rs",
+        "src/ceta/application/operator.py",
+        "src/ceta/composition/ipc_service.py",
+        "src/ceta/composition/owned_service.py",
+        "src/ceta/composition/service_process.py",
+        "src/ceta/contracts/construction.py",
+        "src/ceta/contracts/local_ipc.py",
+        "src/ceta/contracts/local_results.py",
+        "src/ceta/effects/native_observer.py",
+        "src/ceta/identity/native_owner_view.py",
+        "src/ceta/identity/owner_session.py",
+        "src/ceta/identity/windows_pipe.py",
+        "src/ceta/kernel/cpu_execution.py",
+        "src/ceta/kernel/effect_transactions.py",
+        "src/ceta/kernel/transactions.py",
+        "src/ceta/resource/diagnostics.py",
+        "src/ceta/resource/hardware.py",
+        "src/ceta/store/journal.py",
+        "src/ceta/supervisor/isolated_worker.py",
+        "tests/contract/test_cpu_execution_admission.py",
+        "tests/contract/test_isolated_worker.py",
+        "tests/contract/test_isolation_token_diagnostics.py",
+        "tests/contract/test_native_owner_preparation.py",
+        "tools/ceta_operator.py"
+      ],
+      "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+      "repo_root": "T:\\00-Active\\Project-AI-CETA",
+      "status_hash": "b2a3e5f277d839cd93bc797f7ababbe5baf7e575fc12bbe5a0555f4bba436faf"
+    },
+    "input_hash": "5fb1b2c3a3e3d3dd58c0ca069a6c264b6d96fbfd11d1836b682f1ee04804b227",
+    "node_id": "implement",
+    "workspace": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\work"
+  },
+  "source_hashes": {
+    "run_canonical_journal.py": "86ce4dc01d67c18e981e78755b186dbf861f7b41bb03d4c7f1f3fe8d000987d8",
+    "prepare.py": "9ca638d1b197b16b2032ddafb70124f639088f93fb59c99be0e43eb25e983893",
+    "test_jr_controls.py": "0d4561574bca8a4220a5fa268fee9d5dddd981de5f05d7c06780d9374e319d6c",
+    "run_controls.py": "820dd3c33b90dfea099279a047e3f3e92f73a07641f776cbd286dc696f5a27c5",
+    "verify_prepared.py": "951feaa453a177976bc2a073a6676f93d9bd586e19f35ab197ae557b9f1ceb08",
+    "freeze.py": "0e4959e6eb80db833fa5e9ae022c8826eef0bddc40fd86894a1c0a8739392f07",
+    "README.md": "d3bb69d268b83628a17694cbd8832ff044c0a5bef0c7b48d5b4a87b64359f80b"
+  }
+}

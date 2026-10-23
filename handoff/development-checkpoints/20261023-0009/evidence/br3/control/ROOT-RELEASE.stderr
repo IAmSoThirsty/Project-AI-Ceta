@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\br3\control\ROOT-RELEASE.py", line 20, in <module>
+    response=runtime.claim(RUN,node,'/root',workspace=Path(workspace));assert response['allowed'];b.r.save(C/('ROOT-'+node+'-claim-api.json'),dict(api='BoundRuntime.claim(stock transition with exact complete snapshot port)',response=response))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\br3\work\bound_runtime.py", line 75, in claim
+    with self.observation_port(run):return super().claim(run,node,executor,capabilities,workspace)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\01-Projects/TAAR-Agent-Taskforce/TAAR-Agent-Taskforce\taar\orchestration_runtime.py", line 389, in claim
+    baseline = _snapshot_workspace(Path(workspace_text), Path(graph.root))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\br3\work\bound_runtime.py", line 122, in snapshot
+    return o.projection(workspace,bound.root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\br3\work\complete_observer.py", line 176, in projection
+    for key,record in snapshot(base).items():
+                      ^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\br3\work\complete_observer.py", line 156, in snapshot
+    visit(base,'.')
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\br3\work\complete_observer.py", line 155, in visit
+    assert native(first)==native(last) and before==children(directory),('directory changed during observation',str(directory))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('directory changed during observation', 'T:\\00-Active\\Project-AI-CETA\\.agents\\fixtures\\outer-process-custody-00')

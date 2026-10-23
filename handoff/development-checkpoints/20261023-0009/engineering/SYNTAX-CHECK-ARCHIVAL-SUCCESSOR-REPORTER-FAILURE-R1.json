@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-10-23T18:54:24.329516+00:00",
+  "author": "/root/status_packet_review",
+  "classification": "REPORTER_FIELD_LOOKUP_FAILURE_AFTER_VALID_SYNTAX_AND_COLLECTION_RECORD",
+  "actual_exec_exit_status": 1,
+  "tool_chunk_id": "b7611e",
+  "actual_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 16, in <module>\nKeyError: 'states'\n",
+  "cause": "The final print indexed claim['states']; preparation_claim returns the live claim object, not the whole verification response.",
+  "completed_record_sha256": "429a091f6a423d65aab3d847bb06bf47d4ce258b5f529f57dfa70fc5b70e619b",
+  "test_bodies_executed": 0,
+  "canonical_or_Git_mutation": false,
+  "disposition": "Retained original record and failure; no syntax or test body replay needed."
+}

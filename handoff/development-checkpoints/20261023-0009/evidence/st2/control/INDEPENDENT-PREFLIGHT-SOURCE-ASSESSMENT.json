@@ -1,0 +1,101 @@
+{
+  "recorded_at": "2026-10-23T17:59:36.578919+00:00",
+  "reviewer": "/root/status_packet_review",
+  "decision": "APPROVED_EXACT_HISTORICAL_PREFLIGHT_SOURCE",
+  "review_kind": "SEPARATE_STATIC_SOURCE_AND_CAPTURE_ASSESSMENT",
+  "source": {
+    "repository_relative_path": ".agents/runtime/oq23/st2/control/ROOT-HANDLE-COMPOSITION-PREFLIGHT.py",
+    "sha256": "896f11f47c06495bf5a0dac21e7e73e34339d65bba33d0f9ad13cbed9007286b"
+  },
+  "historical_result": {
+    "repository_relative_path": ".agents/runtime/oq23/st2/control/ROOT-HANDLE-COMPOSITION-PREFLIGHT.json",
+    "sha256": "6dfaa1da3f325f9184612977858abdbc213532a7d70231980fa5e504a65651c6"
+  },
+  "historical_process": {
+    "repository_relative_path": ".agents/runtime/oq23/st2/control/ROOT-HANDLE-COMPOSITION-PREFLIGHT-R2-PROCESS.json",
+    "sha256": "db5354b432f2b9ffe7c3eee21157b5fefc1d471d1b8a1bc3b0290b0799f2e944"
+  },
+  "historical_stdout": {
+    "repository_relative_path": ".agents/runtime/oq23/st2/control/ROOT-HANDLE-COMPOSITION-PREFLIGHT-R2.stdout",
+    "sha256": "c5700d23778c88888665882de8f702a5e09f2b710f12a5884fe1b50ba48ee5bc"
+  },
+  "historical_stderr": {
+    "repository_relative_path": ".agents/runtime/oq23/st2/control/ROOT-HANDLE-COMPOSITION-PREFLIGHT-R2.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "supporting_sources": [
+    {
+      "repository_relative_path": ".agents/runtime/oq23/st2/work/run_status.py",
+      "sha256": "2e9376e2c40d56277f89489f32adf6c93e5ca6986fe0f0285453d2d2e06ada6a"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/st2/work/status_core.py",
+      "sha256": "19668309370195f7d6c765d0da708e9159844814c40cd6a56bd8f8f7dcd40691"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/jr2/work/run_canonical_journal.py",
+      "sha256": "37ca7bbfa361475ea42398c5d3bda42f8c1f95a0f3329154176f286a262d17ed"
+    }
+  ],
+  "assessment": [
+    "Literal composition manifest, approval and review hashes are cross-bound; actual amendment/runner/launcher hashes must equal both reviewed records.",
+    "Physical inventory is restricted to frozen composition review and preparation work; exact file membership/hash/native data and directory identities are checked.",
+    "All 1291 external support hashes are read; source/native and Git/index checks use the already reviewed read-only journal observer.",
+    "The four allowed mutation inputs must still equal their before hashes and candidate hashes; temporary paths, prior claims, intent and delivery are checked before admission.",
+    "Coordinator state and claims are file reads; this source invokes no coordinator API, application, native worker, canonical test body or stock F-tree snapshot.",
+    "The only explicit output is the create-only preflight result written through the frozen status_core.save."
+  ],
+  "interpreter_limit": {
+    "classification": "NOT_BLOCKING_CAPTURED_HISTORICAL_RUN; FOLLOW_UP_REQUIRED_BEFORE_GENERAL_REUSE",
+    "source_has_non_assert_optimization_guard": false,
+    "assert_checks_and_save_require_optimize_zero": true,
+    "actual_capture_argv_uses_E_and_no_O": true,
+    "actual_sys_flags_value_was_not_separately_recorded": true,
+    "explanation": "The preserved actual command uses -E and no -O/-OO, so PYTHONOPTIMIZE is ignored for the historical invocation. Under optimized Python the assertions and assert-contained write are unsafe; this assessment grants no future optimized-use approval."
+  },
+  "postcheck_coverage": {
+    "original_postcheck_did_not_review_this_preflight_source": true,
+    "original_postcheck_unchanged": {
+      "repository_relative_path": ".agents/runtime/oq23/st2/control/INDEPENDENT-POSTRUN-CHECK.json",
+      "sha256": "a029c0f9f8d20c86c186627b24bd08208c75ff3db46482dd35be822ef76eab7a"
+    },
+    "source_and_capture_exports": [
+      {
+        "repository_relative_path": ".agents/runtime/oq23/st2/control/independent_postrun_20261023T174922388Z.py",
+        "sha256": "8f617b9f71263f4ebceba4c0c42b88770808715603dafd394da7ee60a0c921da"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/oq23/st2/control/INDEPENDENT-POSTRUN-20261023T174922388Z.stdout",
+        "sha256": "82850306bc0bf0d3a6c5224f52b5c30ba880d8e9dce56914b5f96e77db93ac3d"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/oq23/st2/control/INDEPENDENT-POSTRUN-20261023T174922388Z.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/oq23/st2/control/INDEPENDENT-POSTRUN-20261023T174922388Z-PROCESS.json",
+        "sha256": "95635d211dbda50a8c71d8ef0f2104623e09d7a4e557eed771b16eb8d77e8c47"
+      },
+      {
+        "repository_relative_path": ".agents/runtime/oq23/st2/control/INDEPENDENT-POSTRUN-CHECK.json",
+        "sha256": "a029c0f9f8d20c86c186627b24bd08208c75ff3db46482dd35be822ef76eab7a"
+      }
+    ]
+  },
+  "validation": {
+    "source_hash_verified": true,
+    "syntax_compiled_without_execution": true,
+    "actual_historical_process_exit_status": 0,
+    "captured_output_hashes_match": true,
+    "stdout_equals_historical_result": true,
+    "new_test_bodies_executed": 0,
+    "preflight_reexecuted": false,
+    "test_or_application_replayed": false,
+    "stock_F_snapshot_or_runtime_API_called": false,
+    "canonical_mutation_by_reviewer": false
+  },
+  "historical_failed_interruption_is_preserved": true,
+  "source_review_after_application": true,
+  "full_product_acceptance": false,
+  "completion_percentage": null
+}

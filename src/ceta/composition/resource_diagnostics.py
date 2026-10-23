@@ -9,7 +9,7 @@ from ceta.contracts.store_transactions import STORE_PROFILE
 from ceta.contracts.wire import ContractError
 from ceta.resource.diagnostics import (OwnedProcessTelemetrySampler, PerformanceDiagnostics,
     PerformanceEnvelope, ResourceTelemetryRecorder)
-from ceta.store.journal import SqliteJournal
+from ceta.store.journal import JournalReadBudget, SqliteJournal
 
 
 def _digest(value):
@@ -57,7 +57,8 @@ def collect_owned_diagnostics(service, *, expected_generation, envelope,
     primary = None
     try:
         journal = SqliteJournal(snapshot.profile_root, snapshot.codec, snapshot.scopes,
-                                profile=STORE_PROFILE, read_only=True)
+                                profile=STORE_PROFILE, read_only=True,
+                                read_budget=JournalReadBudget(deadline, clock=_clock, cancelled=cancelled))
         state_before = journal.store_position()
         before = journal.position(snapshot.installation_scope_id)
         environment = _digest(["ceta.installation.diagnostics.environment.v1", snapshot.generation,
@@ -137,7 +138,7 @@ def collect_owned_diagnostics(service, *, expected_generation, envelope,
                 "latency": "UNOBSERVED", "causal_bottleneck": "NOT_ESTABLISHED",
                 "qualification": "NOT_ESTABLISHED",
                 "consistency": "SEPARATE_VALIDATED_OBSERVATION_BOUNDARIES_NOT_ATOMIC_LIVE_SNAPSHOT",
-                "deadline": "CHECKED_BETWEEN_SYNCHRONOUS_SQLITE_AND_NATIVE_CALLS", "processes": analyses}
+                "deadline": "COOPERATIVE_SQLITE_VM_AND_VERIFICATION_CHECKS_NATIVE_CALLS_NOT_HARD_PREEMPTIBLE", "processes": analyses}
     except BaseException as error:
         primary = error
         raise

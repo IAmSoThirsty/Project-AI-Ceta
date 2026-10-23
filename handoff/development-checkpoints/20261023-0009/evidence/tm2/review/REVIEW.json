@@ -1,0 +1,39 @@
+{
+  "decision": "approved",
+  "reviewer": "/root/operational_review22",
+  "review_type": "Independent Collaborative Review",
+  "recorded_at": "2026-10-23T01:41:36.856201+00:00",
+  "manifest_sha256": "166de8c2e98d588a1040a3c13ba21093f1d7b90a99e18fc2e2acba5a3615e426",
+  "tested_sources": {
+    "run_challenge.py": "20514b36cdb6ff6863deaa280b5c2db9cb9c1897520c8adf5fdcee0cea3e4dd8",
+    "owner_timing_observer.py": "75e595990e485ea07980f76e01f2fdebe8953fd6623d98b3240d186f050f34cc",
+    "controls.py": "de90d983959869fc54db39c9ac5ca645f290cf8fb4642929300acd609739ba6f",
+    "engine_controls.py": "d354aaad81fc4581220e79530b1f34d40c95d82b3820ca8f7decca97b3309fcd"
+  },
+  "tests": 31,
+  "passed": 31,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "findings": [],
+  "approval_scope": "Exact frozen one-case postmortem runner and pinned launcher, subject to actual gate and two Root execution claims",
+  "prior_rejection": {
+    "review_state": "FAILED",
+    "validate_state": "BLOCKED",
+    "receipt_hash": "75fee97336877eea4ffe94d03e1ff06f98b05634e87db1ad9cedd64eb46d0cc5",
+    "review_evidence_manifest_sha256": "437b40cf73ddeda825a8d805b2c286e57bc7a5a4d5556e15be81719a0eced31a"
+  },
+  "frozen_integrity_passed": true,
+  "launcher_sha256": "394395ad012fd23d1c5d169fc6bf59522a780b63c0457e761284d003c55c0726",
+  "launcher_executed": false,
+  "canonical_test_bodies_executed": false,
+  "canonical_fixture_writes": false,
+  "full_product_acceptance": false,
+  "reviewer_tooling_failure": {
+    "record": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm2\\review\\SETUP-ERROR.json",
+    "exit_status": 1,
+    "classification": "FIXED_REVIEWER_SETUP_QUOTING_ERROR",
+    "candidate_or_test_executed": false,
+    "recovery": "prepare_review.py actual exit 0"
+  }
+}

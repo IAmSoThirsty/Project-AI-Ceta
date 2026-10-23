@@ -1,0 +1,7 @@
+Independent review: REJECTED for this exact frozen journal runner.
+
+All 22 original disposable controls pass independently. One additional primary-retention control fails: an exact KeyboardInterrupt carrying a legal non-string exception-storage key is replaced by AttributeError in diagnostic(), because key.endswith is called unconditionally. run_observed invokes diagnostic(primary) while building the report outside the report-write exception handler. The observed exception is not the original primary, its context is not the original, and RESULT.json is absent. This violates the runner failure-preservation contract; process failure alone does not preserve the missing original evidence.
+
+Repair requires a fresh successor, bounded safe diagnostic extraction and containment of formatting failures as secondary while retaining the original exact exception/outcome. Cover both primary and cleanup formatter faults. Do not edit this frozen candidate or reinterpret the failed review as success.
+
+The separate frozen-input integrity command passes. Source560, both mutable-status pins, Git/index/native identities and all prepared inputs remain unchanged. Ordinary canonical imports/ROOT checks, explicit directory/file observations, three actual-claim controls and report seal semantics were inspected; their original controls pass. No canonical test body or fixture write ran in review. Full product qualification remains open.

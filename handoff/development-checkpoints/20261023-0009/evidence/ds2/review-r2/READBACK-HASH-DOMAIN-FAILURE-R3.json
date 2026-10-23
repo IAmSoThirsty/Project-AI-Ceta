@@ -1,0 +1,11 @@
+{
+  "classification": "INDEPENDENT_REVIEW_PROBE_HASH_DOMAIN_MISMATCH_PRESERVED",
+  "actual_process_exit_status": 1,
+  "source": "inspect_admission_r3.py",
+  "error": "Review probe compared supplied normalized receipt_hash to raw-file SHA256.",
+  "expected_normalized_receipt_hash": "3e6cb75417624e25a0fb4f731a01f2a0facd495fb5fedab322ce60c6d11aad1b",
+  "actual_raw_file_sha256": "f808d74ff706578cb6d6cca9936da673ba60addc2349d475427f71a667426160",
+  "actual_normalized_receipt_hash": "3e6cb75417624e25a0fb4f731a01f2a0facd495fb5fedab322ce60c6d11aad1b",
+  "candidate_or_provider_defect": false,
+  "disposition": "Separately named inspect_admission_r4.py requires both exact hash domains plus persisted result equality and stock receipts_valid."
+}

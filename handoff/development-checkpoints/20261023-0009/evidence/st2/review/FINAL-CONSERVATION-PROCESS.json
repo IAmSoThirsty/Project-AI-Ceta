@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe",
+    "-E",
+    "-B",
+    "-X",
+    "utf8",
+    "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/st2/review/verify_final_conservation.py"
+  ],
+  "cwd": "T:/00-Active/Project-AI-CETA",
+  "actual_exit_status": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\review\\verify_final_conservation.py\", line 14, in <module>\r\n    full=s.snapshot(R,F,ignored=frozenset());policy=s.file_map(s.snapshot(R,F));ordinary=runtime._snapshot_workspace(R,F)\r\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\work\\status_core.py\", line 66, in snapshot\r\n    visit(workspace)\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\work\\status_core.py\", line 63, in visit\r\n    if stat.S_ISDIR(item['mode']):visit(path)\r\n                                  ^^^^^^^^^^^\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\work\\status_core.py\", line 63, in visit\r\n    if stat.S_ISDIR(item['mode']):visit(path)\r\n                                  ^^^^^^^^^^^\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\work\\status_core.py\", line 44, in visit\r\n    info,names=listing(directory);rel=directory.relative_to(graph_root).as_posix();identity=(info['device'],info['inode'])\r\n               ^^^^^^^^^^^^^^^^^^\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\work\\status_core.py\", line 40, in listing\r\n    assert native(directory)==before,'directory changed during enumeration'\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: directory changed during enumeration\r\n",
+  "canonical_test_bodies_executed": 0,
+  "canonical_fixture_writes": false,
+  "canonical_or_Git_writes": false
+}

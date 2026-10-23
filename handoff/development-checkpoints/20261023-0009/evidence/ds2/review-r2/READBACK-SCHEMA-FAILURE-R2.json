@@ -1,0 +1,11 @@
+{
+  "classification": "INDEPENDENT_REVIEW_PROBE_SCHEMA_MISMATCH_PRESERVED",
+  "actual_process_exit_status": 1,
+  "source": "inspect_admission_r2.py",
+  "error": "KeyError: write_scope",
+  "installed_schema": "orchestration_graph normalizes empty scopes away; read_only access forbids nonempty scopes and includes write_scope only when scopes are present.",
+  "primary_source": "T:/01-Projects/TAAR-Agent-Taskforce/TAAR-Agent-Taskforce/taar/orchestration_graph.py",
+  "primary_source_lines": "249-258",
+  "candidate_or_provider_defect": false,
+  "disposition": "Separately named inspect_admission_r3.py asserts exact normalized read_only node with absent write_scope."
+}

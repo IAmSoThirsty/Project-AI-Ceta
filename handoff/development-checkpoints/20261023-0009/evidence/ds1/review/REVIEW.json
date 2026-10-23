@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-23T07:39:57.679Z",
+  "reviewer": "/root/status_packet_review",
+  "author": "/root/broader_successor_author",
+  "decision": "rejected",
+  "manifest_sha256": "ad0776389aff69c36ada882028a163f25d401a918224ae8c4ab622e6653a7cad",
+  "provider_sha256": "a285e445b1d61acaf9c1c0539c5f836e52bdaa7913011be6494e5042758a621f",
+  "root_candidate_closure_sha256": "8f44a801d0cf44376795785e35676101dcdcd2fcdf96cd30dc7bf7c8eff5669b",
+  "root_candidate_closure_approved": false,
+  "findings": [
+    {
+      "id": "DS1-CUSTODY-01",
+      "priority": "P1",
+      "blocking": true,
+      "file": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/work/directory_snapshot.py",
+      "function": "custody",
+      "problem": "Nested Directory unwinding overwrites directory_snapshot_secondary_exc_info and the explicit observation/handle on the same primary error. A successful outer close clears the inner close failure and replaces its unclosed handle record.",
+      "actual_reproduction": {
+        "primary_identity_preserved": true,
+        "outer_handle": 101,
+        "inner_failed_close_handle": 202,
+        "outer_close_calls": 1,
+        "inner_close_calls": 1,
+        "explicit_secondary_errors_after_outer_exit": 0,
+        "explicit_final_handle": 101,
+        "inner_close_fault_retained": false
+      },
+      "required_repair": "Retain a non-overwriting custody chain for every directory boundary, every attempted close and its exact primary/secondary exc_info, including failed inner handles even when outer cleanup succeeds; do not retry or replace the original exception."
+    },
+    {
+      "id": "DS1-PROVENANCE-01",
+      "priority": "P2",
+      "blocking": true,
+      "file": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/work/directory_snapshot.py",
+      "function": "Directory.checkpoint",
+      "problem": "Successful handle query metadata is appended only after the following path_stat succeeds. If path_stat fails, that returned handle sample is omitted from raw provenance.",
+      "actual_reproduction": {
+        "successful_handle_queries": 2,
+        "recorded_raw_handle_samples": 1,
+        "path_error_identity_preserved": true,
+        "close_calls": 1
+      },
+      "required_repair": "Append each successful raw handle observation immediately after query returns, then append each successful raw path observation immediately after path_stat returns, before further binding; preserve earlier samples when a later provider step fails."
+    }
+  ],
+  "independent_actual_checks": {
+    "frozen_files_and_native_checked": 69,
+    "external_pins_checked": 11,
+    "frozen_verifier_process_exit_status": 0,
+    "boundary_reproduction_process_exit_status": 0,
+    "recorded_evidence_readback_process_exit_status": 0,
+    "no_full_F_or_native_replay": true,
+    "source562_Git_index_conserved": true
+  },
+  "preserved_author_results": {
+    "controls": 41,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "selected_started_stopped_equal": true,
+    "full_F_snapshot_actual_process_exit_status": 0,
+    "files": 14355,
+    "directories": 2859,
+    "excluded_symlinks": 1,
+    "raw_directory_records": 2859,
+    "successful_sample_not_relabelled_failed": true,
+    "sample_does_not_cover_confirmed_error_path_defects": true,
+    "whole_tree_elapsed_ns": 117087479400,
+    "no_admission_timing_inference": true
+  },
+  "historical_failures_preserved": {
+    "first_all_fields_LastAccess_probe_exit_status": 1,
+    "earlier_controls_exit_status": 1,
+    "earlier_syntax_only_full_qualification_launch_exit_status": 1,
+    "original_ST2_failed_claim_paths_and_scalars": "NOT_CAPTURED",
+    "original_ST2_failed_claim_causes": "UNKNOWN"
+  },
+  "next_successor_requirements": [
+    "Fresh graph and write scope; preserve all DS1 frozen work and actual rejected receipt.",
+    "Narrow provider repairs for both findings; keep all existing API, directory/file identity and metadata predicates, membership/subtree and reparse/alias protections, explicit LastAccess policy and no retries.",
+    "Retain all 41 existing ordered controls and add nested cleanup/body/setup combinations, outer successful and failed cleanup, exact hostile exception/traceback plus all handle custodians, and successful-query/failing-path preservation cases.",
+    "Bind new provider and controls bytes; obtain a new actual broader physical qualification and canonical/Git/ST2 conservation appropriate to the changed provider, with exact process captures.",
+    "Fresh independent successor review and ordinary gate/closure before any concrete ST2 execution-amendment approval."
+  ],
+  "canonical_test_bodies_executed": 0,
+  "canonical_or_Git_or_installed_mutation": false,
+  "ST2_execution_amendment_approved": false,
+  "full_product_acceptance": false,
+  "completion_percentage": null
+}

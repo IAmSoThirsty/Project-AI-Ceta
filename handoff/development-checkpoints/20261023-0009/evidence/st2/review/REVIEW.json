@@ -1,0 +1,196 @@
+{
+  "recorded_at": "2026-10-23T06:22:22.546Z",
+  "reviewer": "/root/status_packet_review",
+  "author": "/root",
+  "independent_review": true,
+  "decision": "approved",
+  "decision_scope": "Exact immutable ST2 record preparation combined with the additive execution amendment and designated closure successor only.",
+  "manifest_sha256": "5729a01e71127efd8d9970e8b5d1405f9b297eb12e421e94946983f125c6ff32",
+  "source_manifest_sha256": "7d91f5f641a8da953c9b8e57ba69b40a41a256a4efc68a47063899bdd88e425d",
+  "execution_amendment_sha256": "cc7de6e2547f9b566d4dc6c3880c6a0ce3b4cbf13f5a82ebee7f7d42921efbff",
+  "closure_successor_sha256": "9543dcaca98f74ec2836401cbbfc263a6521771f981b664b921caa4b261e2484",
+  "graph_fingerprint": "d910dc965aeb7397df6e2bf9d23ef3a31f34ade6d171ffd972185d41aa94b62b",
+  "original_manifest_file_count": 178,
+  "original_external_pin_count": 758,
+  "independent_original_content_readbacks": 936,
+  "exact_targets": {
+    "build/progress.json": {
+      "before_sha256": "ed44fa1e47122ca7b03ea921ec4b76236f06a1955b9c9141c2c7d75fa6f860f0",
+      "candidate_sha256": "98dd51c4863a5016159d22b617350d969d95936d947fc4ef9b96520fd8284426",
+      "changed_old_fields": []
+    },
+    "handoff/continuity.json": {
+      "before_sha256": "9f2950b4ae97b8711ea60be5d3e373020e76315d348a841b646f701657353435",
+      "candidate_sha256": "282222c7ab9f4aedecaeb50b74e571954c7c0f32f6c1598313180f9452b88351",
+      "changed_old_fields": [
+        "current_deliverable",
+        "first_next_action",
+        "next_action"
+      ]
+    },
+    "build/gates.json": {
+      "before_sha256": "fc51fb4b8e64cc8b896136e20b30545018e20d0be98a1ea1ae0390ef06838e5f",
+      "candidate_sha256": "ea7b9075da8374f763a8bf9c7bc28ee9317106dcc73898e555996dbc9d9bda24",
+      "changed_old_fields": []
+    },
+    "src/ceta/contracts/construction.py": {
+      "before_sha256": "6f16f9244098f14ae9aa6b2f26219ce72916fb0f10c9b34afe6182e785ee4c50",
+      "candidate_sha256": "03f2f9547935932a5aef3bdedd70aa3bdd9fe9d9f7ef25fa290c2a0cf8aa9d95",
+      "source_delta": "STRICT_GATE_HASH_LITERAL_ONLY"
+    }
+  },
+  "source_manifest_changes": [
+    "build/gates.json",
+    "src/ceta/contracts/construction.py"
+  ],
+  "source_delta": "Requested three register refresh plus only the required strict construction gate-hash literal; no runtime behavior or test-body changes.",
+  "all_original_json_values_preserved_or_exact_typed_continuity_history": true,
+  "continuity_current_fields_refreshed": [
+    "current_deliverable",
+    "first_next_action",
+    "next_action"
+  ],
+  "all_eight_gate_rows_unchanged_NOT_EVALUATED": true,
+  "strict_construction_literal_only": true,
+  "canonical_payloads": 560,
+  "extra_status_source_inputs": 2,
+  "immutable_restoration_source_fixtures_preserved": 5,
+  "source562_Git_index_native_preserved": true,
+  "completed_cohort_evidence": {
+    "JR2": {
+      "canonical_tests": 33,
+      "actual_exit_status": 0
+    },
+    "TM2": {
+      "canonical_tests": 1,
+      "actual_exit_status": 0,
+      "reproduction": "NOT_REPRODUCED",
+      "historical_elapsed_and_deadline": "NOT_CAPTURED",
+      "successful_guard_timings": "NOT_MEASURED",
+      "reliable50ms": "NOT_ESTABLISHED"
+    },
+    "BR3": {
+      "canonical_tests": 510,
+      "actual_exit_status": 0,
+      "scope": "Exact28selectors/26modules; controlled contracts only",
+      "original_ordered_ids_equal_BR1": true,
+      "all_actual_scopes_SUCCEEDED": true
+    }
+  },
+  "controls": {
+    "frozen_verifier_actual_exit_status": 0,
+    "independent_execution_of_author_controls": 36,
+    "author_controls_replay_actual_exit_status": 0,
+    "independently_authored_controls": 13,
+    "independent_controls_successful_attempt": "independent-controls-r2",
+    "independent_controls_actual_exit_status": 0,
+    "tests_run_are_review_tooling_only": true,
+    "canonical_test_bodies_executed_by_this_review": 0
+  },
+  "findings": [
+    {
+      "id": "ST2-CLOSE-METADATA-01",
+      "original_source": ".agents/runtime/oq23/st2/control/ROOT-CLOSE.py",
+      "original_sha256": "8174315abc34152ce883f9fd380735bd0688b45f2e9810895aa5ff5107a6778a",
+      "original_status": "SUPERSEDED_UNEXECUTED_AND_NOT_APPROVED",
+      "observed_failure": "Pure metadata-expression reproduction: TypeError duplicate recorded_at with ordinary independent report metadata.",
+      "resolution": "The separately pinned ROOT-CLOSE-R2.py keeps original proof checks/transitions, uses a non-colliding descriptive merge, checks actual approved review pins for original manifest/amendment/successor, and refuses completion replay.",
+      "exact_diff_and_positive_negative_controls_passed": true
+    }
+  ],
+  "open_candidate_findings": [],
+  "preserved_failures": {
+    "historical_halt_AC7_and_previous_failures": "All original register values/history retained; consumed native attempt remains consumed.",
+    "BR1": "Actual execution exit1 despite510 completed bodies/zero body failures; required observation failed; no success seal; original path UNKNOWN.",
+    "BR2": "Independently rejected preparation before canonical execution:0bodies/no intent; reviewFAILED/validateBLOCKED, unclaimed stagesPENDING.",
+    "BR3_admission": "Original release exit1 before bodies; exact original scalars NOT_CAPTURED/cause UNKNOWN; lost first diagnostic retained; one reviewed continuation preserved separately.",
+    "BR3_closure": "Original helper exit1 duplicate metadata retained; separately named reviewed successor exit0; no relabeling.",
+    "review_harness": "First independent run13controls/1schema error on TM2, then JSON reporter serialization refusal; source/log/partial result/exit1 preserved. Corrected fresh r2 retains all13 controls and exact TM2 schema, exit0.",
+    "review_snapshot": "Original generic directory-enumeration failure retained with original path/scalars/cause UNKNOWN. Separate current witness records only attribute268435472->16 with stable identity/size/mtime/mode; full diagnostic recorded39 current changes, with no original-cause inference.",
+    "review_ordinary_snapshot": "Actual failed stock51-vs-complete-policy52 comparison and raw premature PASS report retained; explicit overall-FAIL classification governs it."
+  },
+  "preserved_BR3_closure_inputs": [
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE.py",
+      "sha256": "9c2145d7e23cbcd5b2b5410e8c60375e1c7459a6f1e9ad7874805226f8f4716e"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE-PROCESS.json",
+      "sha256": "34cf1e38fffbacc61b8e16e99d9ef7f7e7cd8fd6ace83fe48e8621117f7bd114"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE.stderr",
+      "sha256": "690fbc4add6c55a4341f2bdb43649193f6b8127fb0039acb1ac509a5c92db712"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE-R2.py",
+      "sha256": "b4a26b0c19117ab0b94ea5218c37d8165ff885d3d3341355f640bae565221ca7"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE-R2-PROCESS.json",
+      "sha256": "0cdfec3c2d04e5c12048244e6888b2c22ef3166d6b6ee9f5378e29919239971e"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE-R2.stdout",
+      "sha256": "fe685d02c9ef1fd27edae5b775411a17c3ed576c624eb7b463eabcdc443dfa02"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/ROOT-CLOSE-R2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/INDEPENDENT-CLOSURE-SUCCESSOR.json",
+      "sha256": "1cf40da3bc636237e0e0bef4886bdba8bd749d8ec3608cef09bc64734b83647a"
+    },
+    {
+      "repository_relative_path": ".agents/runtime/oq23/br3/control/INDEPENDENT-POSTRUN-CHECK.json",
+      "sha256": "c58d4050e3f4d07b7cc28cff9c9d10a7751cf26d8ef4a0ee36c1b9a24bd16939"
+    }
+  ],
+  "supplemental_review_inventory": {
+    "authority": {
+      "repository_relative_path": ".agents/runtime/oq23/st2/review/SUPPLEMENTAL-COVERAGE-AUTHORITY.json",
+      "sha256": "ea4d213c38d7a78b93e43ee370f3f063cf10e493b7fadd7979f703cabd396f52"
+    },
+    "successful_complete_physical_verification": {
+      "repository_relative_path": ".agents/runtime/oq23/st2/review/SUPPLEMENTAL-COMPLETE-PHYSICAL-VERIFICATION.json",
+      "sha256": "756f0933494e75fcf04abbc3d1d911e23922b86dec01cb3a35d80ba97d1c4f72"
+    },
+    "historical_failed_counts": {
+      "ordinary_stock": 51,
+      "complete_policy": 52,
+      "complete_physical": 53,
+      "actual_exit_status": 1
+    },
+    "verified_current_counts_at_check": {
+      "full_physical_files": 58,
+      "complete_policy_files": 57,
+      "ordinary_stock_files": 56,
+      "ordinary_missing": [
+        ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_long_windows_file_observed/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/long.txt"
+      ],
+      "ordinary_missing_sha256": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9",
+      "complete_physical_minus_policy": [
+        ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_ignored_directories_are_explicit/.agents/hidden"
+      ]
+    },
+    "full_physical_manifest_required": true,
+    "receipt_changed_files": "Actual installed-stock observed set only; complete physical manifest separately pins every omitted/in-policy-excluded leaf.",
+    "snapshot_or_library_override": false,
+    "general_coordinator_coverage_claim": false
+  },
+  "native_assessment": "Static pinned source trace only; existing physical owned-client transport retained. Genuine child-owned provisioning/durable epoch, strict manual readiness, original-wire uncertainty custody and joint nonrenewing timing budget remain engineering obligations. No runtime/native qualification inferred.",
+  "remaining_acceptance": "Reliable admission timing, genuine authorization-to-native-effect, remaining application/model requirements, installed/offline/migration/endurance and human/hardware acceptance remain open.",
+  "actual_gate_Root_two_claims_application_and_postrun_still_required": true,
+  "only_designated_successor_closer_may_be_used": true,
+  "canonical_writes_performed": false,
+  "canonical_fixture_writes": false,
+  "CP9_implement_claim_and_work_untouched": true,
+  "completion_percentage": null,
+  "full_product_complete": false,
+  "full_product_acceptance": false
+}

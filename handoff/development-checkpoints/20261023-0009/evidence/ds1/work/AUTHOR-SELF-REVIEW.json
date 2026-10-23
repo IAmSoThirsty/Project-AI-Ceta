@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-ds23-r1",
+  "reviewer": "/root/broader_successor_author",
+  "review_type": "AUTHOR_SELF_REVIEW_ONLY",
+  "independent_approval": false,
+  "parsed_current_tools": {
+    "AUTHOR-COMPLETE.py": "6c6520efd02e22d82191e4a5d9d97d111bbece42451ee333ab8fc1f1284d84e5",
+    "capture.py": "a5f7db44e9c48b009dfeec4067def20a02b7ecff69b5cddefd56b6585c9a68d2",
+    "complete_candidate.py": "8f44a801d0cf44376795785e35676101dcdcd2fcdf96cd30dc7bf7c8eff5669b",
+    "conservation.py": "969c72e09299e641efb4268024ab1cd77f0335a3fbe14008bc1cddd7ad7b1988",
+    "directory_snapshot.py": "a285e445b1d61acaf9c1c0539c5f836e52bdaa7913011be6494e5042758a621f",
+    "freeze.py": "c269845e7f77946b20ad715145e58444998ae5ec6387d9823b48a5451e406633",
+    "probe_directory_handles.py": "92b310e3a04652182df5273f1460595e8f353c2b01f4c4b1007d2fa2f692d765",
+    "qualify_full_F.py": "4cf70337eba7fb7a0ba553e7456d311a236d9ec6374485ee2ad553bdeb758cbe",
+    "qualify_retained_probe.py": "8ca4093d4acabd99e4bc8043b007d733a2d39cf15084115031e7e2d79dea4b55",
+    "run_controls.py": "00f9c266191e67f7ad9c5f0f3285abadce98563fcb306abeafc65bd6fd3837b6",
+    "seed_inputs.py": "0f62e81ac937e9fb37d923fe5c2ed7f7a9d8748b760735b9a4ca144e4f804c48",
+    "test_directory_snapshot.py": "a0cefde284d86621d1763ee8303934d5584163aaf684f9ec58464a261472eb4e",
+    "verify_prepared.py": "6e1216affbb44cdd5f700367fbd7d3ca0af40b978030ebbf5288c2fb66821076"
+  },
+  "controlled_tests": 41,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "provider_sha256": "a285e445b1d61acaf9c1c0539c5f836e52bdaa7913011be6494e5042758a621f",
+  "root_candidate_closure_sha256": "8f44a801d0cf44376795785e35676101dcdcd2fcdf96cd30dc7bf7c8eff5669b",
+  "root_helper_executed": false,
+  "full_F": {
+    "files": 14355,
+    "directories": 2859,
+    "excluded_symlinks": 1,
+    "raw_directory_provenance": 2859,
+    "qualification_sha256": "4f103d456df7596cb84124f68310501841a9fe0efb62d5587a8ba11da5963a8a",
+    "process_sha256": "4a1321de308fee08069178ac2ecd852e563acff461ff21431b7fefde7d50199a"
+  },
+  "access_time_policy_sha256": "5d0c1ead3cfe6d7893874bcda7f8a508764d99c9b37e50994ca1b33de5d4662c",
+  "canonical_inputs": 562,
+  "canonical_Git_ST2_and_original_evidence_conserved": true,
+  "file_native_hash_function": "Exact original frozen status_core.stable; unchanged file record shape and policy",
+  "directory_provider": "Same held Win32 attribute handle Basic/Standard/Id across enumeration and subtree",
+  "original_failed_claim_cause": "UNKNOWN",
+  "original_failures_relabelled": false,
+  "preserved_attempts": [
+    {
+      "label": "DIRECTORY-HANDLE-PROBE",
+      "actual_exit": 1,
+      "classification": "Strict all-fields probe; separate policy-bound qualification later"
+    },
+    {
+      "label": "CONTROLS",
+      "actual_exit": 1,
+      "classification": "Injected membership name was unordered; corrected fixture only"
+    },
+    {
+      "label": "FULL-F-QUALIFICATION",
+      "actual_exit": 1,
+      "classification": "Unmatched-parenthesis parse error; no snapshot/native calls executed"
+    }
+  ],
+  "no_installed_or_ST2_snapshot_hook": true,
+  "no_canonical_Git_or_ST2_mutation": true,
+  "native_workers": false,
+  "AC7_replay": false,
+  "limits": [
+    "Independent approval and ordinary candidate gate/integration still required",
+    "Later ST2 use requires a separate explicit execution amendment",
+    "Stable sampled tree, not atomic filesystem/ACL/alternate-stream evidence",
+    "LastAccessTime/path atime retained as observation-only under explicit policy; all other raw handle security fields must remain equal",
+    "No product acceptance or overall completion percentage"
+  ]
+}

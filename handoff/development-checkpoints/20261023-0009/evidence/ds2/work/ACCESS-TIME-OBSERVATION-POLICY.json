@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-23T06:57:55.880Z",
+  "recorded_by": "/root",
+  "run_id": "ceta-ds23-r1",
+  "authority": "Current user authorizes repair of fixture traversal/coordinator snapshot coverage; this is a bounded observation contract matching the existing native predicate, which does not compare access time.",
+  "original_packet_sha256": "f93f57f68c6d4d0ab9c4d5798d1fe65fa3c9b126b3c795811f1e26395719853a",
+  "preserved_probe_sha256": "83e54680fea5b7f497d444f25a01050eb5ad0cc36195f34ab2fcf4d9dbbc45bd",
+  "preserved_failed_probe_process_sha256": "010782cdd102b143d6be9455dc1e017f2c4bba79c8d0b196a57442f432f7a1c9",
+  "probe_retains_actual_exit_status": 1,
+  "stability_contract": {
+    "observed_reference_only": [
+      "FILE_BASIC_INFO.LastAccessTime",
+      "path st_atime and st_atime_ns"
+    ],
+    "required_equal_handle_fields": [
+      "VolumeSerialNumber",
+      "FileId128",
+      "CreationTime",
+      "LastWriteTime",
+      "ChangeTime",
+      "FileAttributes",
+      "AllocationSize",
+      "EndOfFile",
+      "NumberOfLinks",
+      "DeletePending",
+      "Directory"
+    ],
+    "raw_access_time_values_retained": true,
+    "no_timestamp_values_synthesized_or_rewritten": true,
+    "last_access_is_not_a_source_mutation_or_authorization_clock": true,
+    "all_existing_file_native_hash_checks_unchanged": true,
+    "directory_names_and_path_handle_identity_bindings_unchanged": true,
+    "reparse_alias_and_outside_policy_refusals_unchanged": true
+  },
+  "authorization": "Proceed to candidate implementation only after a separately named security-field qualification of the retained exact9-directory probe; retain the failed all-fields qualification. Do not claim original failure cause. No generic size/time masking, retries, policy exclusions or canonical/installed/Git writes. Independent review still required.",
+  "scope_unchanged": "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/work/**",
+  "full_product_acceptance": false
+}

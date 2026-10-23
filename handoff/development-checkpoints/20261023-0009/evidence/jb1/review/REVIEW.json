@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/independent_broader_review",
+  "author": "/root/broader_successor_author",
+  "run_id": "ceta-jb23-r1",
+  "decision": "rejected",
+  "manifest_sha256": "647e7d8df955ca4eefddc808e924ff7c32b8968d8b43cff23ef3021d7cee09d1",
+  "candidate_manifest_path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/work/MANIFEST-R2.json",
+  "graph_fingerprint": "f998cbfcd99ca34d461b8afac8d3accba6c48de33fddd3f493dc4b8edce33c20",
+  "finding": {
+    "id": "JB1-BUDGET-01",
+    "severity": "blocking",
+    "source": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/work/candidate/src/ceta/identity/native_approval.py",
+    "function": "NativeApprovalSession.transcript",
+    "line": 877,
+    "end_line": 892,
+    "title": "Original helper cutoff is not enforced when consuming a cached verified transcript",
+    "required": "A cached verification must not be published or consumed after the original nonrenewing helper elapsed allowance; currentness work must be charged before transcript publication.",
+    "observed": "transcript() checks cached reported_verified and Stop plus native request currentness, but never the helper _deadline_at budget. The native request deadline can be longer than the20ms helper timeout. Direct transcript at25ms returns REPORTED_VERIFIED; a call at10ms whose actual currentness port consumes20ms returns REPORTED_VERIFIED at30ms. Stop remains false in both. Calling expired poll() first cancels and transcript then refuses.",
+    "call_sites": [
+      "src/ceta/identity/owner_session.py: retain_verified_effect invokes session.transcript() directly after inspecting the retained result",
+      "src/ceta/identity/owner_session.py: retain_verified_enrollment similarly consumes session.transcript()"
+    ],
+    "evidence": {
+      "witness": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/TRANSCRIPT-BUDGET-WITNESS.json",
+      "witness_sha256": "666804b69ff520a832c059c1bef24cfb2f7e1fc7908ccdaebfc82346a91f9610",
+      "process": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/jb1/review/TRANSCRIPT-BUDGET-PROCESS.json",
+      "process_sha256": "bc20eceec0be646c680121ac6d614c08edd12da456052b891b96cdd7911d12e7",
+      "actual_exit_status": 1,
+      "focused_cases": 4,
+      "expectation_failures": 2,
+      "errors": 0,
+      "skips": 0
+    },
+    "qualification": "Controlled existing pure seams only. Cached result/clock/canonical-currentness ports are labelled controlled; this is not genuine authentication, native provenance, a completed approval/effect, or an exploit demonstration.",
+    "nearest_repair": "A fresh candidate scope must enforce original elapsed budget before and after transcript currentness and immediately before publishing the transcript; inspect direct owner consumption fences. Preserve exact primary/cancellation/cleanup custody and original deadline. Add direct expired-cache and expiry-during-currentness controls."
+  },
+  "checks": {
+    "author112_controls": "Retained exact actualexit0 evidence; not independently replayed after a blocking focused defect was established",
+    "frozen_work_integrity": "Read-only verify_prepared actualexit0,86 frozen files match",
+    "canonical_conservation": "7 candidate inputs,66 dependencies, all560 source payloads, Git root/HEAD/branch/origin/status/index match packet",
+    "failed_author_receipt": "Original malformed argv-list command receipt and original manifest/process/stderr preserved; repaired strings match Windows list2cmdline of actual successful commands",
+    "prompt": "Exact original prompt preserved; skill self-test and bounded static scan actualexit0. Unverified dictionary terms remain unverified. Critical send sense recorded from official entry; no material ambiguity."
+  },
+  "independent_verification_scope": "Four focused pure seam cases plus read-only exact code/callsite/manifest/receipt/conservation assessment; no full-product, native timing, auth or effect qualification",
+  "acceptance_limits": [
+    "No integration or publication of this rejected candidate",
+    "50ms admission bound unchanged and not qualified",
+    "One-second response/settlement reserves remain unmeasured engineering policy",
+    "Genuine epoch/provider,AC7 consumed/native failure,hardware/human/installed/offline/migration/endurance/model requirements remain open"
+  ],
+  "canonical_tests_or_native_workers_run": false,
+  "canonical_or_fixture_or_Git_writes": false,
+  "full_product_acceptance": false
+}

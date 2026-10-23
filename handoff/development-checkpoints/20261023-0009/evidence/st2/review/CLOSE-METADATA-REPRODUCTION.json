@@ -1,0 +1,25 @@
+{
+  "status": "REPRODUCED_BLOCKER",
+  "finding_id": "ST2-CLOSE-METADATA-01",
+  "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\ROOT-CLOSE.py",
+  "source_sha256": "8174315abc34152ce883f9fd380735bd0688b45f2e9810895aa5ff5107a6778a",
+  "line": 21,
+  "normal_independent_report_keys": [
+    "recorded_at",
+    "recorded_by",
+    "reviewer",
+    "decision",
+    "process_sha256",
+    "result_sha256"
+  ],
+  "failure": {
+    "type": "TypeError",
+    "message": "dict() got multiple values for keyword argument 'recorded_at'"
+  },
+  "evaluated_only_one_pure_metadata_expression": true,
+  "Root_tool_executed": false,
+  "canonical_test_bodies_executed": 0,
+  "canonical_or_fixture_or_Git_writes": false,
+  "repair": "Use an explicit non-colliding metadata wrapper or reviewed deterministic merge preserving the original report; bind a fresh exact candidate and review it independently.",
+  "full_product_acceptance": false
+}

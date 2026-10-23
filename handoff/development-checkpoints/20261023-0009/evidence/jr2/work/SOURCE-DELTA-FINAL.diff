@@ -1,0 +1,547 @@
+--- J1/run_canonical_journal.py
++++ J2/run_canonical_journal.py
+@@ -10,9 +10,9 @@
+ F=Path('T:/00-Active/Project-AI-CETA')
+ W=Path(__file__).resolve().parent
+ J=W.parent
+-RUN='ceta-jr23-r1'
+-PACKET_SHA='d7ab2787251278b7f50bcc9ebbbe84a39716876549f90f3b4dab8a9bab1777a2'
+-PLAN_SHA='757c5fe5d2553c961a39d7da639dd92a1fae53b63bb71904978f204ffaeab13f'
++RUN='ceta-jr23-r2'
++PACKET_SHA='b19574893637649e56879f87a552b81d744694405e5c08313a1a5f0888d0ddd4'
++PLAN_SHA='a453efc079f4096b992b28a9c9a27778f8f79c8c84aee1481baf17c84ca82c2f'
+ sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+ 
+ def plain(path):
+@@ -169,22 +169,62 @@
+         claims[node]=claim
+     return claims
+ 
+-def diagnostic(error,seen=None):
+-    if error is None:return None
+-    seen=set() if seen is None else seen
+-    if id(error) in seen:return dict(type=type(error).__name__,cycle=True)
+-    seen.add(id(error))
+-    try:message=str(error)
+-    except BaseException:message='<exception message unavailable>'
+-    attrs=BaseException.__dict__['__dict__'].__get__(error)
+-    secondary={}
+-    for key,value in dict.items(attrs):
+-        if isinstance(value,BaseException):secondary[str(key)]=diagnostic(value,seen)
+-        elif isinstance(value,(tuple,list)) and any(isinstance(v,BaseException) for v in value):
+-            secondary[str(key)]=[diagnostic(v,seen) if isinstance(v,BaseException) else type(v).__name__ for v in value]
+-        elif key.endswith(('state','code')) and isinstance(value,(str,int,bool,type(None))):secondary[str(key)]=value
+-    return dict(type=type(error).__name__,message=message,
+-        traceback=''.join(traceback.format_exception(type(error),error,error.__traceback__)),secondary=secondary)
++def diagnostic(error):
++    """Bounded raw exception facts: never call an exception/provider formatter.
++
++    Exact scalar types only; arbitrary values are typed, never str/repr'd. Raw
++    BaseException descriptors bypass subclass properties and hostile dictionaries.
++    The single node budget also bounds shared/cyclic storage, args and chains.
++    Tracebacks contain code names/positions only, without reading source lines.
++    """
++    seen=set();remaining=[64]
++    def typename(value):return str.__getitem__(type.__dict__['__name__'].__get__(type(value)),slice(0,128))
++    def scalar(value):
++        kind=type(value)
++        if kind is str:return value[:512]
++        if kind is bool or kind is type(None):return value
++        if kind is int and int.bit_length(value)<=64:return value
++        return dict(type=typename(value),unsupported=True)
++    def raw(name,value):return BaseException.__dict__[name].__get__(value)
++    def visit(value,depth=0):
++        if remaining[0]<=0 or depth>=6:return dict(truncated=True)
++        remaining[0]-=1
++        if type(value) is str or type(value) is int or type(value) is bool or type(value) is type(None):return scalar(value)
++        if id(value) in seen:return dict(type=typename(value),cycle=True)
++        seen.add(id(value))
++        if issubclass(type(value),BaseException):
++            args=raw('args',value);attrs=raw('__dict__',value)
++            storage=[]
++            for key,item in dict.items(attrs):
++                if len(storage)>=16 or remaining[0]<=0:break
++                storage.append(dict(key=scalar(key),value=visit(item,depth+1)))
++            frames=[];tb=raw('__traceback__',value)
++            while tb is not None and len(frames)<16:
++                code=tb.tb_frame.f_code
++                frames.append(dict(file=str.__getitem__(code.co_filename,slice(0,512)),
++                    name=str.__getitem__(code.co_name,slice(0,128)),line=tb.tb_lineno))
++                tb=tb.tb_next
++            return dict(type=typename(value),message=args[0][:512] if args and type(args[0]) is str else '<raw args only>',
++                args=visit(args,depth+1),storage=storage,storage_truncated=dict.__len__(attrs)>len(storage),
++                traceback=frames,traceback_truncated=tb is not None,
++                cause=visit(raw('__cause__',value),depth+1),context=visit(raw('__context__',value),depth+1),
++                suppress_context=raw('__suppress_context__',value))
++        if type(value) is tuple or type(value) is list:
++            return dict(type=typename(value),items=[visit(item,depth+1) for item in value[:16]],truncated=len(value)>16)
++        return scalar(value)
++    return visit(error)
++
++def result_fields(result):
++    """Called inside the report guard; its failures cannot replace a body error."""
++    return dict(started_test_ids=[] if result is None else result.started,
++        stopped_test_ids=[] if result is None else result.stopped,
++        tests_run=None if result is None else result.testsRun,
++        failures=None if result is None else len(result.failures),errors=None if result is None else len(result.errors),
++        skips=None if result is None else [dict(test_id=t.id(),reason=reason) for t,reason in result.skipped],
++        expected_failures=None if result is None else [dict(test_id=t.id(),traceback=trace) for t,trace in result.expectedFailures],
++        unexpected_successes=None if result is None else [t.id() for t in result.unexpectedSuccesses],
++        early_stop=None if result is None else result.shouldStop,
++        test_error_details=[] if result is None else result.details)
+ 
+ def run_observed(suite,selected,output,fixtures,observe_source,authorize,*,metadata=None):
+     """Reusable observation engine; controls use only disposable synthetic cases."""
+@@ -194,20 +234,29 @@
+     assert authorize()==claims,'authority changed before first test/report write'
+     save(output/'START.json',dict(test_ids=selected,claims=claims,source_before=before_source,
+         fixtures_before=before,metadata=metadata,full_product_acceptance=False))
+-    result=None;created_result=[];primary=None;secondary=[];after={};after_source=None;events=None;log=None
++    result=None;created_result=[];primary=None;primary_info=None;secondary=[];after={};after_source=None;events=None;log=None
+     started=time.monotonic_ns()
++    def describe(error,exc_info=None):
++        nonlocal primary,primary_info
++        try:return diagnostic(error)
++        except BaseException as fault:
++            # When formatting a unittest body error, preserve that exact triple.
++            if primary is None and exc_info is not None:primary=exc_info[1];primary_info=exc_info
++            secondary.append(fault)
++            return dict(diagnostic_unavailable=True)
+     def event(kind,test=None,error=None):
+         raw=(json.dumps(dict(kind=kind,test_id=None if test is None else test.id(),
+-            at=datetime.now(timezone.utc).isoformat(),error=diagnostic(error)),allow_nan=False)+'\n').encode()
++            at=datetime.now(timezone.utc).isoformat(),error=describe(error)),allow_nan=False)+'\n').encode()
+         assert events.write(raw)==len(raw);events.flush();os.fsync(events.fileno())
+     class Result(unittest.TextTestResult):
+         def __init__(self,*a,**kw):super().__init__(*a,**kw);self.started=[];self.stopped=[];self.details=[];created_result.append(self)
+         def startTest(self,test):self.started.append(test.id());event('started',test);super().startTest(test)
+         def stopTest(self,test):self.stopped.append(test.id());event('stopped',test);super().stopTest(test)
+-        def addError(self,test,error):self.details.append(dict(test_id=test.id(),kind='error',error=diagnostic(error[1])));super().addError(test,error)
+-        def addFailure(self,test,error):self.details.append(dict(test_id=test.id(),kind='failure',error=diagnostic(error[1])));super().addFailure(test,error)
++        def _exc_info_to_string(self,error,test):return json.dumps(describe(error[1],error),allow_nan=False)
++        def addError(self,test,error):self.details.append(dict(test_id=test.id(),kind='error',error=describe(error[1],error)));super().addError(test,error)
++        def addFailure(self,test,error):self.details.append(dict(test_id=test.id(),kind='failure',error=describe(error[1],error)));super().addFailure(test,error)
+         def addSubTest(self,test,subtest,error):
+-            if error is not None:self.details.append(dict(test_id=test.id(),subtest_id=subtest.id(),kind='subtest',error=diagnostic(error[1])))
++            if error is not None:self.details.append(dict(test_id=test.id(),subtest_id=subtest.id(),kind='subtest',error=describe(error[1],error)))
+             super().addSubTest(test,subtest,error)
+     try:
+         events=(output/'events.jsonl').open('xb')
+@@ -215,7 +264,9 @@
+         # The exact same three live claims are checked immediately before cases.
+         assert authorize()==claims,'authority changed before test bodies'
+         result=unittest.TextTestRunner(stream=log,verbosity=2,resultclass=Result).run(suite)
+-    except BaseException as error:primary=error
++    except BaseException as error:
++        if primary is None:primary=error;primary_info=sys.exc_info()
++        else:secondary.append(error)
+     finally:
+         if result is None and created_result:result=created_result[0]
+         for handle in (log,events):
+@@ -230,40 +281,49 @@
+             try:after[name]=snapshot(path);preservation(before[name],after[name])
+             except BaseException as error:secondary.append(error)
+     if primary is None and secondary:primary=secondary[0]
+-    complete=(result is not None and result.testsRun==len(selected) and result.started==result.stopped==selected
+-        and result.wasSuccessful() and not result.skipped and not result.expectedFailures
+-        and not result.unexpectedSuccesses and not result.shouldStop and primary is None
+-        and before_source==after_source and len(after)==len(before))
+-    report=dict(test_cohort_passed=complete,execution_success_requires_process_exit_zero_and_seal=True,
+-        selected_test_ids=selected,started_test_ids=[] if result is None else result.started,
+-        stopped_test_ids=[] if result is None else result.stopped,
+-        tests_run=None if result is None else result.testsRun,
+-        failures=None if result is None else len(result.failures),errors=None if result is None else len(result.errors),
+-        skips=None if result is None else [dict(test_id=t.id(),reason=reason) for t,reason in result.skipped],
+-        expected_failures=None if result is None else [dict(test_id=t.id(),traceback=trace) for t,trace in result.expectedFailures],
+-        unexpected_successes=None if result is None else [t.id() for t in result.unexpectedSuccesses],
+-        early_stop=None if result is None else result.shouldStop,
+-        test_error_details=[] if result is None else result.details,primary=diagnostic(primary),
+-        cleanup=[diagnostic(e) for e in secondary],source_after=after_source,fixtures_after=after,
+-        elapsed_ns=time.monotonic_ns()-started,full_product_acceptance=False,native_process_execution=False)
++    complete=False
++    try:
++        complete=(result is not None and result.testsRun==len(selected) and result.started==result.stopped==selected
++            and result.wasSuccessful() and not result.skipped and not result.expectedFailures
++            and not result.unexpectedSuccesses and not result.shouldStop and primary is None
++            and before_source==after_source and len(after)==len(before))
++        report=dict(test_cohort_passed=complete,execution_success_requires_process_exit_zero_and_seal=True,
++            selected_test_ids=selected,**result_fields(result),primary=describe(primary),
++            cleanup=[describe(e) for e in tuple(secondary)],source_after=after_source,fixtures_after=after,
++            elapsed_ns=time.monotonic_ns()-started,full_product_acceptance=False,native_process_execution=False)
++    except BaseException as error:
++        secondary.append(error)
++        if primary is None:primary=error;primary_info=sys.exc_info()
++        report=dict(test_cohort_passed=False,report_assembly_failed=True,primary=describe(primary),
++            cleanup=[describe(e) for e in tuple(secondary)],source_after=after_source,fixtures_after=after,
++            full_product_acceptance=False,native_process_execution=False)
++    if primary is None and secondary:primary=secondary[0]
++    complete=complete and primary is None and not secondary
++    report['test_cohort_passed']=complete
+     try:save(output/'RESULT.json',report)
+     except BaseException as error:
+         secondary.append(error)
+-        if primary is None:primary=error
+-        try:save(output/'REPORT-ERROR.json',dict(phase='RESULT',error=diagnostic(error),full_product_acceptance=False))
++        if primary is None:primary=error;primary_info=sys.exc_info()
++        try:save(output/'REPORT-ERROR.json',dict(phase='RESULT',error=describe(error),full_product_acceptance=False))
+         except BaseException as extra:secondary.append(extra)
+     if primary is not None:
+-        dict.__setitem__(BaseException.__dict__['__dict__'].__get__(primary),'runner_secondary_errors',tuple(secondary))
+-        raise primary
++        if primary_info is None:primary_info=(type(primary),primary,BaseException.__dict__['__traceback__'].__get__(primary))
++        attrs=BaseException.__dict__['__dict__'].__get__(primary)
++        dict.__setitem__(attrs,'runner_secondary_errors',tuple(secondary))
++        dict.__setitem__(attrs,'runner_primary_exc_info',primary_info)
++        raise BaseException.with_traceback(primary,primary_info[2])
+     try:
+         save(output/'REPORT-SEAL.json',dict(result_sha256=sha(output/'RESULT.json'),
+             start_sha256=sha(output/'START.json'),events_sha256=sha(output/'events.jsonl'),log_sha256=sha(output/'TESTS.log'),
+             test_cohort_passed=complete,requires_actual_process_exit_zero=True,full_product_acceptance=False))
+     except BaseException as error:
+-        try:save(output/'REPORT-ERROR.json',dict(phase='REPORT-SEAL',error=diagnostic(error),full_product_acceptance=False))
+-        except BaseException as extra:
+-            dict.__setitem__(BaseException.__dict__['__dict__'].__get__(error),'runner_secondary_errors',(extra,))
+-        raise
++        info=sys.exc_info()
++        try:save(output/'REPORT-ERROR.json',dict(phase='REPORT-SEAL',error=describe(error),full_product_acceptance=False))
++        except BaseException as extra:secondary.append(extra)
++        attrs=BaseException.__dict__['__dict__'].__get__(error)
++        dict.__setitem__(attrs,'runner_secondary_errors',tuple(secondary))
++        dict.__setitem__(attrs,'runner_primary_exc_info',info)
++        raise BaseException.with_traceback(error,info[2])
+     return 0 if complete else 1
+ 
+ def execution_complete(output,actual_exit_status):
+@@ -288,7 +348,7 @@
+     except (OSError,ValueError,KeyError,AssertionError):return False
+ 
+ def load_prepared(pin):
+-    assert J==F/'.agents/runtime/oq23/jr'
++    assert J==F/'.agents/runtime/oq23/jr2'
+     assert sha(W/'MANIFEST.json')==pin
+     manifest=json.loads((W/'MANIFEST.json').read_bytes())
+     for name,value in manifest['work_hashes'].items():assert sha(W/name)==value
+--- J1/prepare.py
++++ J2/prepare.py
+@@ -11,7 +11,7 @@
+ claim=json.loads((J/'control'/r.RUN/'claims.json').read_bytes())['implement']
+ assert claim['executor_id']=='/root/fixture_runner_r2' and Path(claim['workspace'])==W
+ assert claim['effective_write_scope']==[W.relative_to(Path('T:/')).as_posix()+'/**']
+-assert claim['input_hash']=='d6756005b4e132628fbb3a6411e36c8b7b42b466f29ff2ee1d8bbfdb493daee3'
++assert claim['input_hash']=='5fb1b2c3a3e3d3dd58c0ca069a6c264b6d96fbfd11d1836b682f1ee04804b227'
+ manifest=Path(packet['source_manifest']);assert r.sha(manifest)==packet['source_manifest_sha256']
+ payload=json.loads(manifest.read_bytes())['payload_hashes'];assert len(payload)==560
+ source_native={}
+--- J1/test_jr_controls.py
++++ J2/test_jr_controls.py
+@@ -217,4 +217,124 @@
+         with self.assertRaises(Exception):self.engine(authorize=lambda:r.require_live(binding))
+         self.assertEqual(list(self.output.iterdir()),[])
+ 
++    def test_original_nonstring_exception_storage_keeps_primary_and_writes_result(self):
++        primary=KeyboardInterrupt('original exact body failure')
++        dict.__setitem__(BaseException.__dict__['__dict__'].__get__(primary),7,'legal storage')
++        with self.assertRaises(KeyboardInterrupt) as caught:self.engine(lambda:(_ for _ in ()).throw(primary))
++        self.assertIs(caught.exception,primary)
++        attrs=BaseException.__dict__['__dict__'].__get__(primary)
++        self.assertIs(attrs['runner_primary_exc_info'][1],primary)
++        self.assertIsNotNone(attrs['runner_primary_exc_info'][2])
++        report=json.loads((self.output/'RESULT.json').read_bytes())
++        self.assertEqual(report['primary']['message'],'original exact body failure')
++        self.assertIn({'key':7,'value':'legal storage'},report['primary']['storage'])
++        self.assertFalse(report['test_cohort_passed']);self.assertFalse(r.execution_complete(self.output,0))
++
++    def test_diagnostic_uses_raw_descriptors_and_never_hostile_formatters(self):
++        called=[]
++        class HostileError(Exception):
++            def __str__(self):called.append('str');raise AssertionError('str called')
++            def __repr__(self):called.append('repr');raise AssertionError('repr called')
++            def __getattribute__(self,key):
++                if key in ('args','__dict__','__traceback__','__cause__','__context__','__suppress_context__'):
++                    called.append(key);raise AssertionError('property called')
++                return super().__getattribute__(key)
++        class HostileMeta(type):
++            def __eq__(cls,other):called.append('type equality');raise RuntimeError('type equality called')
++            def __hash__(cls):called.append('type hash');raise RuntimeError('type hash called')
++            @property
++            def __name__(cls):called.append('type name provider');raise AssertionError('type name provider called')
++        class HostileValue(metaclass=HostileMeta):
++            @property
++            def __class__(self):called.append('class provider');raise RuntimeError('class provider called')
++            def __str__(self):called.append('value str');raise AssertionError('value str called')
++            def __repr__(self):called.append('value repr');raise AssertionError('value repr called')
++        class HostileName(str):
++            def __getitem__(self,key):called.append('name slice');raise AssertionError('name slice called')
++        type.__dict__['__name__'].__set__(HostileValue,HostileName('HostileValue'))
++        class HostileDictionary(dict):
++            def __len__(self):called.append('dict len');raise AssertionError('dict len called')
++            def items(self):called.append('dict items');raise AssertionError('dict items called')
++        error=HostileError('raw message',HostileValue())
++        BaseException.__dict__['__dict__'].__set__(error,HostileDictionary())
++        attrs=BaseException.__dict__['__dict__'].__get__(error)
++        dict.__setitem__(attrs,HostileValue(),HostileValue())
++        observation=r.diagnostic(error);json.dumps(observation,allow_nan=False)
++        self.assertEqual(observation['message'],'raw message');self.assertEqual(called,[])
++        self.assertEqual(self.engine(lambda:(_ for _ in ()).throw(error)),1)
++        self.assertEqual(called,[]);self.assertTrue((self.output/'RESULT.json').is_file())
++
++    def test_diagnostic_bounds_cycles_large_storage_and_unsupported_values(self):
++        error=ValueError('x'*2000);items=[];items.append(items)
++        attrs=BaseException.__dict__['__dict__'].__get__(error)
++        dict.__setitem__(attrs,'self',error);dict.__setitem__(attrs,'loop',items)
++        for i in range(1000):dict.__setitem__(attrs,i,[object(),10**10000]*100)
++        BaseException.__dict__['__cause__'].__set__(error,error)
++        observation=r.diagnostic(error);wire=json.dumps(observation,allow_nan=False)
++        self.assertLess(len(wire),20000);self.assertEqual(len(observation['message']),512)
++        self.assertTrue(observation['storage_truncated']);self.assertIn('"cycle": true',wire)
++
++    def test_primary_formatter_fault_is_secondary_with_exact_original_triple(self):
++        primary=KeyboardInterrupt('original');fault=RuntimeError('primary formatter fault');original=r.diagnostic
++        def formatter(error):
++            if error is primary:raise fault
++            return original(error)
++        with patch.object(r,'diagnostic',formatter),self.assertRaises(KeyboardInterrupt) as caught:
++            self.engine(lambda:(_ for _ in ()).throw(primary))
++        self.assertIs(caught.exception,primary)
++        attrs=BaseException.__dict__['__dict__'].__get__(primary)
++        self.assertIs(attrs['runner_secondary_errors'][0],fault)
++        triple=attrs['runner_primary_exc_info'];self.assertIs(triple[0],KeyboardInterrupt);self.assertIs(triple[1],primary)
++        self.assertTrue((self.output/'RESULT.json').is_file());self.assertFalse(r.execution_complete(self.output,0))
++
++    def test_secondary_formatter_fault_keeps_body_and_all_secondary_objects(self):
++        primary=KeyboardInterrupt('original');cleanup=PermissionError('cleanup');fault=RuntimeError('secondary formatter')
++        original_diag=r.diagnostic;calls=[0]
++        def source():
++            calls[0]+=1
++            if calls[0]>1:raise cleanup
++            return {'source':'pin'}
++        def formatter(error):
++            if error is cleanup:raise fault
++            return original_diag(error)
++        with patch.object(r,'diagnostic',formatter),self.assertRaises(KeyboardInterrupt) as caught:
++            self.engine(lambda:(_ for _ in ()).throw(primary),source=source)
++        self.assertIs(caught.exception,primary)
++        errors=BaseException.__dict__['__dict__'].__get__(primary)['runner_secondary_errors']
++        self.assertEqual(len(errors),2);self.assertIs(errors[0],cleanup);self.assertIs(errors[1],fault)
++        self.assertTrue((self.output/'RESULT.json').is_file())
++
++    def test_report_assembly_fault_is_secondary_and_fallback_result_is_create_only(self):
++        primary=KeyboardInterrupt('original');fault=RuntimeError('report assembly')
++        with patch.object(r,'result_fields',side_effect=fault),self.assertRaises(KeyboardInterrupt) as caught:
++            self.engine(lambda:(_ for _ in ()).throw(primary))
++        self.assertIs(caught.exception,primary)
++        self.assertIs(BaseException.__dict__['__dict__'].__get__(primary)['runner_secondary_errors'][0],fault)
++        report=json.loads((self.output/'RESULT.json').read_bytes());self.assertTrue(report['report_assembly_failed'])
++        self.assertFalse(r.execution_complete(self.output,0));before=(self.output/'RESULT.json').read_bytes()
++        with self.assertRaises(AssertionError):self.engine()
++        self.assertEqual((self.output/'RESULT.json').read_bytes(),before)
++
++    def test_formatter_fault_for_unittest_error_retains_body_object(self):
++        primary=ValueError('unittest body');fault=RuntimeError('formatter');original=r.diagnostic
++        def formatter(error):
++            if error is primary:raise fault
++            return original(error)
++        with patch.object(r,'diagnostic',formatter),self.assertRaises(ValueError) as caught:
++            self.engine(lambda:(_ for _ in ()).throw(primary))
++        self.assertIs(caught.exception,primary)
++        self.assertTrue(any(e is fault for e in BaseException.__dict__['__dict__'].__get__(primary)['runner_secondary_errors']))
++        self.assertTrue((self.output/'RESULT.json').is_file())
++
++    def test_nonstring_storage_subtest_failure_is_recorded_without_formatting_error(self):
++        primary=AssertionError('subtest body');BaseException.__dict__['__dict__'].__get__(primary)[7]='legal'
++        class Case(unittest.TestCase):
++            def runTest(self):
++                with self.subTest(index=7):raise primary
++        case=Case()
++        status=r.run_observed(unittest.TestSuite([case]),[case.id()],self.output,{'fixture':self.fixture},lambda:{},lambda:{})
++        self.assertEqual(status,1);report=json.loads((self.output/'RESULT.json').read_bytes())
++        self.assertEqual(report['failures'],1);self.assertEqual(report['test_error_details'][0]['kind'],'subtest')
++        self.assertFalse(r.execution_complete(self.output,0))
++
+ if __name__=='__main__':unittest.main(verbosity=2)
+--- J1/freeze.py
++++ J2/freeze.py
+@@ -4,12 +4,15 @@
+ import json
+ import run_canonical_journal as r
+ W=Path(__file__).resolve().parent
+-t=json.loads((W/'CONTROLS-FINAL.json').read_bytes());assert t['tests']==22 and t['successful'] and t['process_exit_status']==0
++t=json.loads((W/'CONTROLS-STABLE.json').read_bytes());assert t['tests']==30 and t['successful'] and t['process_exit_status']==0
+ assert t['source_before']==t['source_after']
+ for name,pin in t['source_after'].items():assert r.sha(W/name)==pin
+ b=json.loads((W/'BINDING.json').read_bytes());fresh=r.source_observation(b)
+ baseline=json.loads((W/'BASELINE-REFRESH.json').read_bytes());assert baseline['source_before']==baseline['source_after']==fresh
+ prep=json.loads((W/'PREPARATION.json').read_bytes());external=dict(prep['external_pins'])
++for path in [W.parent.parent/'jr/work/MANIFEST.json',W.parent.parent/'jr/review/MANIFEST.json',W.parent.parent/'jr/review/REVIEW.json']:
++    external[str(path)]=r.sha(path)
++assert external[str(W.parent.parent/'jr/review/MANIFEST.json')]=='fdc88fda803e22bbed64ef792c820a094995493555f9c0e511d6ac015542715b'
+ c=json.loads((W/'COLLECTION.json').read_bytes())
+ for identity in c['dependencies'].values():
+     if identity['file']:
+@@ -17,24 +20,26 @@
+         external[identity['origin']]=identity['native']['sha256']
+ r.save(W/'IMPLEMENTATION-RECEIPT.json',dict(created_at=datetime.now(timezone.utc).isoformat(),
+     run_id=r.RUN,node_id='implement',executor='/root/fixture_runner_r2',binding_sha256=r.sha(W/'BINDING.json'),
+-    current_author_controls=dict(total=22,passed=22,failures=0,errors=0,skips=0,raw='CONTROLS-FINAL.stderr',ids='CONTROLS-FINAL.json'),
+-    prior_author_controls=dict(total=21,errors=1,actual_exit_status=1,raw='CONTROLS-R1.stderr',classification='fixed skip-serialization error; original result retained'),
++    current_author_controls=dict(total=30,passed=30,failures=0,errors=0,skips=0,raw='CONTROLS-STABLE.stderr',ids='CONTROLS-STABLE.json'),
++    predecessor_rejection=dict(work_manifest_sha256='3f1d85ecebf50c72b17d6761284f950083db0c0963faa3927eada7e462ecec7d',review_manifest_sha256='fdc88fda803e22bbed64ef792c820a094995493555f9c0e511d6ac015542715b',decision='rejected',validate='BLOCKED',raw_negative='PRE-REPAIR-NEGATIVE.json'),
++    earlier_current_control_runs=[json.loads((W/(label+'.json')).read_bytes()) for label in ('CONTROLS-R2','CONTROLS-FINAL')],
++    earlier_current_control_classification='CONTROLS-R2:30 cases pass but exit1 from in-flight source conservation; CONTROLS-FINAL:30 cases pass exit0 on superseded source; both raw outcomes retained; only CONTROLS-STABLE binds current source.',
+     canonical_tests_collected=33,canonical_tests_executed=0,
+     create_only_report_contract='Actual process exit0 plus exact report seal and no REPORT-ERROR are required; test outcome alone is insufficient.',
+     execution_requires_actual_three_Root_claims=True,source560_plus_two_status_native_before_after_equal=True,
+     actual_Git_root_branch_HEAD_origin_NULstatus_normal_index_checked=True,
+     SQLite_binary_static_only_during_preparation=True,fixture_bootstrap=False,canonical_fixture_writes=False,
+     source_overlay=False,ROOT_override=False,Git_mutation=False,native_process_execution=False,
+-    commands=[dict(command='prepare.py',exit_status=0),dict(command='run_controls.py CONTROLS-FINAL',exit_status=0)],
+-    existing_issues=[dict(issue='Initial author control skip object was not JSON serializable',classification='fixed now; current22 controls pass and earlier21-case failure preserved'),
+-        dict(issue='Initial Git preflight used LF status instead of pinned NUL wire',classification='fixed now; original pin preserved and deterministic argv regression passed'),
+-        dict(issue='Canonical33 execution and subsequent broader/native/installed/full r6 qualification',classification='requires separate authorized follow-up after formal review and actual gate')],
++    commands=[dict(command='prepare.py',exit_status=0),dict(command='run_controls.py CONTROLS-STABLE',exit_status=0)],
++    existing_issues=[dict(issue='J1 diagnostic masked exact original KeyboardInterrupt for legal nonstring raw storage',classification='fixed now in J2 only; J1 rejection and exact negative witness preserved'),
++        dict(issue='Additional diagnostic class/type provider callbacks found before freeze',classification='fixed now using actual-type subclass and identity checks, raw type-name descriptor, unbound string slicing; exact negative witnesses retained'),
++        dict(issue='Canonical33 execution and broader/native/installed/full r6 qualification',classification='requires separate authorized follow-up after formal review and actual gate')],
+     full_product_acceptance=False))
+ observation=r.snapshot(W)
+ hashes={name:item['sha256'] for name,item in observation.items() if item['kind']=='file'}
+ r.save(W/'MANIFEST.json',dict(schema_version=1,run_id=r.RUN,work_hashes=hashes,work_observation=observation,
+     external_pins=external,python_sources=[name for name in hashes if '/' not in name and name.endswith('.py')],
+-    collected_tests=33,canonical_tests_executed=0,author_controls=22,full_product_acceptance=False,
++    collected_tests=33,canonical_tests_executed=0,author_controls=30,full_product_acceptance=False,
+     post_freeze_outputs=['MANIFEST.json','PREPARED.stdout','PREPARED.stderr','PREPARED.json']))
+ print(json.dumps(dict(manifest_sha256=r.sha(W/'MANIFEST.json'),binding_sha256=r.sha(W/'BINDING.json'),
+     work_files=len(hashes),work_entries=len(observation),support_pins=len(external)),indent=2))
+--- J1/verify_prepared.py
++++ J2/verify_prepared.py
+@@ -25,14 +25,15 @@
+     if identity['file']:assert r.stable(Path(identity['origin']))[0]==identity['native']
+ assert r.stable(Path(c['sqlite_static_binary']['path']))[0]==c['sqlite_static_binary']['native']
+ assert not c['sqlite_static_binary']['loaded_by_preparation']
+-t=json.loads((W/'CONTROLS-FINAL.json').read_bytes())
+-assert t['tests']==22 and t['successful'] and t['process_exit_status']==0
++t=json.loads((W/'CONTROLS-STABLE.json').read_bytes())
++assert t['tests']==30 and t['successful'] and t['process_exit_status']==0
+ assert t['failures']==t['errors']==t['skips']==0 and t['selected']==t['started']==t['stopped']
+-assert len(set(t['selected']))==22 and t['source_before']==t['source_after']
++assert len(set(t['selected']))==30 and t['source_before']==t['source_after']
+ for name,pin in t['source_after'].items():assert r.sha(W/name)==pin
+ assert not t['canonical_test_bodies_executed'] and not t['canonical_fixture_writes']
+-prior=json.loads((W/'CONTROLS-R1.json').read_bytes())
+-assert prior['tests']==21 and prior['errors']==1 and prior['process_exit_status']==1
++negative=json.loads((W/'PRE-REPAIR-NEGATIVE.json').read_bytes())
++assert negative['observed_type']=='AttributeError' and negative['raw_nonstring_key']==7 and negative['exact_predecessor_function_AST']
++assert negative['product_test_executed'] is False
+ for name in m['python_sources']:compile((W/name).read_bytes(),str(W/name),'exec')
+ assert m['full_product_acceptance'] is False
+-print('PREPARED PASS:22 disposable author controls;33 canonical cases collected only;complete directory/file observations;actual source560+2status/Git/native pins unchanged;no canonical bodies or fixture writes;full acceptance false')
++print('PREPARED PASS:30 disposable author controls;J1 rejection and exact negative witness retained;bounded raw diagnostics and protected report assembly;33 canonical cases collected only;complete directory/file observations;actual source560+2status/Git/native pins unchanged;no canonical bodies or fixture writes;full acceptance false')
+--- J1/README.md
++++ J2/README.md
+@@ -1,59 +1,54 @@
+-# Canonical journal runtime preparation
++# Fresh canonical journal runtime preparation r2
+ 
+-This fresh preparation collected 33 exact unique cases from the two current
+-canonical modules: test_journal_read_budget and test_operator_resource_diagnostics.
+-It imported F/src and F/tests/contract ordinarily and checked their actual paths
+-and ROOT values. No canonical test body, fixture bootstrap or fixture write ran.
+-Real SQLite/controlled process-port execution remains a separate Root action.
++J1 remains rejected, validate BLOCKED and frozen. Its exact diagnostic function
++was executed alone with KeyboardInterrupt("original exact body failure") and raw
++storage key 7: AttributeError reproduced. PRE-REPAIR-NEGATIVE.json and the exact
++function text preserve that witness without running any J1 runner or product case.
++J2 changes only run/path/input bindings, bounded diagnostics and report containment,
++plus their controls and fresh preparation evidence.
+ 
+-run_canonical_journal.py requires the frozen manifest SHA. It checks current
+-canonical560 plus the two status pins by bytes and native identity, the exact
+-interpreter, and actual Git root/branch/HEAD/origin/NUL status hash/normal index.
+-Those source and Git observations run before and after the cohort. The initial
+-Git preflight refusal was a harness wire mismatch: -z was omitted. The original
+-packet hash was preserved and the original NUL serialization restored; a
+-deterministic control covers the exact command. GIT-PREFLIGHT-REFUSAL.json retains
+-that failure separately. No baseline was replaced to hide a change.
++Diagnostics read raw BaseException descriptors, exact scalar types and raw type
++names. They never invoke arbitrary str/repr/property or traceback source readers.
++Type checks use actual types with identity/subclass checks, never instance __class__
++lookups, metaclass equality/hash or metaclass name properties. Storage/args/chains are bounded by 64 nodes, depth 6, 16 storage/sequence/frame
++entries and 512-character text fields. Cycles and unsupported values are explicit.
++Tracebacks record code file/name/line facts, without source-line lookup. Non-string
++storage keys are represented as typed scalar observations; huge integers and
++arbitrary provider objects are marked unsupported. These are bounded diagnostics,
++not a claim to serialize every arbitrary exception attribute.
+ 
+-Root must first complete a distinct formal review and actual gate. The runner
+-verifies the runtime event chain and stored receipts, reviewed manifest identity,
+-actual gate command results, current graph fingerprint and three actual RUNNING
+-Root claims with exact workspace/scope/input bindings: J/delivery, read-budget,
+-and opdiag. READY is insufficient. Authority is re-read immediately before report
+-and test writes. Root alone may bootstrap the absent empty read-budget directory
+-after the gate; the runner never bootstraps either fixture base.
++The original exception object and caught exception triple remain authoritative.
++Injected diagnostic and report assembly faults are retained as exact secondary
++objects. All report assembly is guarded, with a bounded fallback RESULT on assembly
++failure; create-only persistence/seal failures refuse success. The normal unittest
++exception rendering port uses the same safe diagnostics. Test failures/subtests
++remain failures, and a formatter fault cannot replace their original body error.
+ 
+-Complete fixture observations include the base directory, ignored names, nested
+-directories and empty directories. Root or nested enumeration errors propagate
+-as their exact exceptions. Existing file content/native metadata and directory
+-device/inode/type must survive. Parent-directory mtime may change as fresh UUID
+-children are added; it is recorded but not claimed immutable. No parent fixture
+-history is traversed outside the two exact claimed bases.
++Preparation collects 33 unique current canonical cases using ordinary F/src and
++F/tests/contract imports and actual ROOT/path checks. It executes no canonical
++test bodies and writes no canonical fixtures. SOURCE560 plus two status native
++pins, actual Git root/branch/HEAD/origin/NUL status and normal index are checked
++before and after. SQLite is pinned statically during preparation; actual execution
++must record the loaded SQLite DLL/wrapper and dependencies via existing loader.
+ 
+-START.json, events.jsonl, TESTS.log, RESULT.json and REPORT-SEAL.json are create-only
+-inside the fresh delivery workspace. RESULT records selected/started/stopped IDs,
+-failures/errors/skips/early stop, exception/cleanup diagnostics, source/Git and
+-fixture observations, preservation and elapsed time. A report alone is never
+-success: execution_complete requires the caller's actual process exit0 and exact
+-seal hashes. A reporting fault records REPORT-ERROR when possible and propagates;
+-even an error after complete RESULT or seal bytes were written cannot establish
+-success. Replays are refused. Root closes every actual claim even on failure.
++Execution requires distinct approved exact-manifest review, actual gate and three
++RUNNING Root claims with exact run/root/control/fingerprint/input/workspace/scope:
++J2/delivery, read-budget and opdiag. READY is insufficient. Claims are re-read
++immediately before report and test writes. Only Root may bootstrap the absent
++empty read-budget base after gate; the runner performs no bootstrap.
+ 
+-Preparation records the pinned SQLite DLL statically. Authorized execution calls
+-the existing SQLite loader's runtime_identity to record the actual loaded DLL,
+-version and wrapper identities without starting native helpers. Loaded dependency
+-identity uses module.__file__ or the string spec.origin. No source/module/ROOT
+-substitution or copied candidate is used as canonical evidence.
++Fixture observations cover base/all directories, ignored names and empty dirs,
++and every file in the two exact claimed bases. Enumeration errors raise exactly;
++links/reparse entries refuse; file bytes/native metadata and directory identities
++must survive. All after-observations are attempted despite earlier faults.
+ 
+-CONTROLS-R1 retains an actual 21-case author run with one skip-serialization error.
+-The report now serializes skip IDs/reasons explicitly. CONTROLS-FINAL is a fresh
+-22-case passing run, with exact start/stop identities and unchanged tested source.
+-Controls use only disposable files and synthetic cases, plus installed TAAR
+-disposable claims/gates. They cover root/nested errors, ignored/empty directories,
+-replacement identity, a second fixture after-observation despite the first error,
+-authority/refused receipts, source/ROOT guards, report faults and create-only use.
+-
+-verify_prepared.py is a preparation integrity gate. It does not run the canonical
+-cohort or establish product/native/installed/full acceptance. Prior R22 failures,
+-rejected utilities and earlier frozen cuts remain unchanged; rejected runners are
+-never executed here. Full r6 remains open and is not reduced by this preparation.
++START/events/full log/RESULT/seal are create-only. Cohort success requires the
++actual process exit0, exact seal and no REPORT-ERROR in addition to all selected
++IDs starting/stopping once, no failures/skips/early stop, conserved source and
++fixtures. No retries or discarded samples. All raw author outcomes are retained. CONTROLS-R2 retains its source-conservation exit1 despite 30 passing cases.
++CONTROLS-FINAL retains 30 passing cases and exit0 on its superseded source cut.
++Only CONTROLS-STABLE binds the final source.
++Exact isolated pre-repair class-provider/type-equality witnesses are also retained.
++verify_prepared is preparation integrity, not product execution or acceptance.
++Full r6 remains open. No source overlay, ROOT substitution, Git mutation, worker
++launch, live-profile/native effect or installed qualification occurs here.

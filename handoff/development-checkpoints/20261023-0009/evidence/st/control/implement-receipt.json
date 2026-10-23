@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-st23-r1",
+  "node_id": "implement",
+  "executor_id": "/root",
+  "started_at": "2026-10-23T01:22:08.889193+00:00",
+  "finished_at": "2026-10-23T01:28:46.251684+00:00",
+  "input_hash": "f3f5823215865f8ca8036b7ad9efac14f0b5c79c78b79db75880486a6d0ab675",
+  "changed_files": [],
+  "commands": [],
+  "validations": [
+    {
+      "name": "minimal correctly bound preparation inputs",
+      "passed": false
+    }
+  ],
+  "exit_status": 1,
+  "result": {
+    "classification": "REJECTED_PREPARATION_INPUT_AMBIGUITY",
+    "reason": "Inherited unrelated JR2 selected and fixture_bootstrap fields are stale for this status-only workload. No canonical write, source candidate, test execution or fixture write occurred; minimal explicit ST2 packet follows.",
+    "canonical_mutation": false,
+    "full_product_acceptance": false
+  }
+}

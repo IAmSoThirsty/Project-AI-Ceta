@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\cp9\work\assemble_checkpoint.py", line 90, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--final-sha256',required=True);assemble(p.parse_args().final_sha256)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\cp9\work\assemble_checkpoint.py", line 37, in assemble
+    c.preparation_claim();value,manifest,pins,canonical=c.load_final(final_pin);module=c.engine()
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\cp9\work\checkpoint_core.py", line 143, in load_final
+    reference(row['review_reference'],pins)
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\cp9\work\checkpoint_core.py", line 48, in reference
+    path=local(item['path']);raw,native=stable(path);assert native['sha256']==item['sha256'],'frozen reference drift'
+         ^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\cp9\work\checkpoint_core.py", line 42, in local
+    path=Path(path);assert path.is_absolute() and path.is_relative_to(F) and '..' not in path.parts and not str(path).startswith('\\\\'),'input outside this normalized local project'
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: input outside this normalized local project

@@ -1,0 +1,90 @@
+{
+  "recorded_at": "2026-10-23T06:34:32.207259+00:00",
+  "reviewer": "/root/independent_broader_review",
+  "script_sha256": "7666aa386c0a8d518d9a49eaa09497e7fbcc9629c2a341222b85b4edf5a0db4e",
+  "cases": [
+    {
+      "name": "other_real_git_claim_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 1,
+        "permitted_current_publication_claim": 0,
+        "existing_Git_lock_files": 0
+      },
+      "active": [
+        {
+          "scope": [
+            "00-Active/Project-AI-CETA/.git/**"
+          ],
+          "node": "integrate"
+        }
+      ]
+    },
+    {
+      "name": "legacy_compile_scope_differs_from_store_is_retained",
+      "passed": true,
+      "expected_clear": true,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 0,
+        "existing_Git_lock_files": 0
+      },
+      "active": [
+        {
+          "scope": [
+            "00-Active/Project-AI-CETA/.agents/local-candidate/**"
+          ],
+          "node": "integrate"
+        }
+      ]
+    },
+    {
+      "name": "node_git_scope_and_claim_work_scope_disagreement_must_not_clear",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 0,
+        "existing_Git_lock_files": 0
+      },
+      "active": [
+        {
+          "scope": [
+            "00-Active/Project-AI-CETA/.agents/local-candidate/**"
+          ],
+          "node": "integrate"
+        }
+      ]
+    },
+    {
+      "name": "own_allowance_without_current_claim_denied",
+      "passed": true,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    }
+  ],
+  "selected": 4,
+  "failed": 1,
+  "canonical_or_coordinator_writes": false,
+  "claims_gates_verify_invoked": false,
+  "qualification": "Pure in-memory synthetic JSON controls of the audit; no actual coordinator state or product runtime executed."
+}

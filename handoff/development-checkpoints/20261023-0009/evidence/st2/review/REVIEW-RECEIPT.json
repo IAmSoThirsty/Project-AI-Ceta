@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-st23-r2",
+  "node_id": "review",
+  "executor_id": "/root/status_packet_review",
+  "started_at": "2026-10-23T05:53:50.583654+00:00",
+  "finished_at": "2026-10-23T06:26:04.931725+00:00",
+  "input_hash": "1f06722fdb525d2882331ae8f552752f6fc7c458c020d361e47c0becd006e0a8",
+  "changed_files": [
+    ".agents/runtime/oq23/st2/review/ACTUAL-REVIEW-CLAIM.json",
+    ".agents/runtime/oq23/st2/review/AUTHOR-CONTROLS-REPLAY-BINDING.json",
+    ".agents/runtime/oq23/st2/review/AUTHOR-CONTROLS-REPLAY-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/CLAIM-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/CLOSE-METADATA-REPRODUCTION-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/CLOSE-METADATA-REPRODUCTION.json",
+    ".agents/runtime/oq23/st2/review/FINAL-CONSERVATION-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/FINAL-CONSERVATION-R2-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/FINAL-SOURCE-AND-POLICY-CONSERVATION-R2.json",
+    ".agents/runtime/oq23/st2/review/FROZEN-VERIFIER-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/FROZEN-VERIFIER-SETUP-FAILURE-R1.json",
+    ".agents/runtime/oq23/st2/review/FROZEN-VERIFIER-SETUP-FAILURE-R2.json",
+    ".agents/runtime/oq23/st2/review/INDEPENDENT-CONTROLS-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/INDEPENDENT-CONTROLS-R1-DIAGNOSIS.json",
+    ".agents/runtime/oq23/st2/review/INDEPENDENT-CONTROLS-R2-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/INDEPENDENT-HASH-READBACK.json",
+    ".agents/runtime/oq23/st2/review/MANIFEST.json",
+    ".agents/runtime/oq23/st2/review/REVIEW-FULL-DIAGNOSTIC-INVENTORY.json",
+    ".agents/runtime/oq23/st2/review/REVIEW-FULL-DIAGNOSTIC-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/REVIEW-RECEIPT.json",
+    ".agents/runtime/oq23/st2/review/REVIEW-SNAPSHOT-COVERAGE-FAILURE-CLASSIFICATION.json",
+    ".agents/runtime/oq23/st2/review/REVIEW-SNAPSHOT-DIAGNOSIS-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/REVIEW-SNAPSHOT-DIAGNOSIS.json",
+    ".agents/runtime/oq23/st2/review/REVIEW.json",
+    ".agents/runtime/oq23/st2/review/SUPPLEMENTAL-COMPLETE-PHYSICAL-VERIFICATION.json",
+    ".agents/runtime/oq23/st2/review/SUPPLEMENTAL-COVERAGE-AUTHORITY.json",
+    ".agents/runtime/oq23/st2/review/SUPPLEMENTAL-VERIFICATION-PROCESS.json",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/RESULT.json",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/TESTS.log",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_application_close_fault_keeps_original/ops.jsonl",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_application_diagnostic_fault_keeps_original/ops.jsonl",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_application_event_fault_keeps_original/ops.jsonl",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_application_hostile_close_only_is_not_success/ops.jsonl",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_application_hostile_original_automatic_propagation/ops.jsonl",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_application_hostile_original_with_diagnostic_and_close_faults/ops.jsonl",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_application_prior_progress_retained_on_failure/ops.jsonl",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_file_mutation_during_read_refused/x",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_hook_other_workspaces_keep_stock_semantics/x",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_ignored_directories_are_explicit/visible",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_ignored_name_regular_file_is_not_ignored/.agents",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_project_automation_policy/.project-ai/automation/x",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_project_automation_policy/.project-ai/visible",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_stock_file_hash_compatibility/child/x",
+    ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_unignored_reparse_refused/x",
+    ".agents/runtime/oq23/st2/review/diagnose_review_snapshot.py",
+    ".agents/runtime/oq23/st2/review/diagnose_review_tree.py",
+    ".agents/runtime/oq23/st2/review/finalize_review.py",
+    ".agents/runtime/oq23/st2/review/independent-controls-r1/RESULT.json",
+    ".agents/runtime/oq23/st2/review/independent-controls-r1/TESTS.log",
+    ".agents/runtime/oq23/st2/review/independent-controls-r1/test_explicit_journal_preserves_hostile_original_traceback_and_close_fault/operations.jsonl",
+    ".agents/runtime/oq23/st2/review/independent-controls-r1/test_snapshot_refuses_own_scope_same_api_metadata_drift/controlled.txt",
+    ".agents/runtime/oq23/st2/review/independent-controls-r2/RESULT.json",
+    ".agents/runtime/oq23/st2/review/independent-controls-r2/TESTS.log",
+    ".agents/runtime/oq23/st2/review/independent-controls-r2/test_explicit_journal_preserves_hostile_original_traceback_and_close_fault/operations.jsonl",
+    ".agents/runtime/oq23/st2/review/independent-controls-r2/test_snapshot_refuses_own_scope_same_api_metadata_drift/controlled.txt",
+    ".agents/runtime/oq23/st2/review/replay_author_controls.py",
+    ".agents/runtime/oq23/st2/review/reproduce_close_metadata.py",
+    ".agents/runtime/oq23/st2/review/test_independent_st2.py",
+    ".agents/runtime/oq23/st2/review/test_independent_st2_r2.py",
+    ".agents/runtime/oq23/st2/review/verify_final_conservation.py",
+    ".agents/runtime/oq23/st2/review/verify_final_conservation_r2.py",
+    ".agents/runtime/oq23/st2/review/verify_supplemental_conservation.py"
+  ],
+  "decision": "approved",
+  "result": {
+    "decision": "approved",
+    "manifest_sha256": "5729a01e71127efd8d9970e8b5d1405f9b297eb12e421e94946983f125c6ff32",
+    "execution_amendment_sha256": "cc7de6e2547f9b566d4dc6c3880c6a0ce3b4cbf13f5a82ebee7f7d42921efbff",
+    "closure_successor_sha256": "9543dcaca98f74ec2836401cbbfc263a6521771f981b664b921caa4b261e2484",
+    "review": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\review\\REVIEW.json",
+    "review_sha256": "40d58c5e21d4206a99d71467d7b7c7fb6f5e7a07ab33d7d5f9e03380bc2e5d84",
+    "review_evidence_manifest": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\review\\MANIFEST.json",
+    "review_manifest_hash_bound_by_Root_independent_readback": true,
+    "review_manifest_not_embedded_to_avoid_receipt_manifest_hash_cycle": true,
+    "independent_controls": 13,
+    "author_controls_independent_reexecution": 36,
+    "superseded_old_closer_not_approved": true,
+    "stock_snapshot_coverage": {
+      "historical_failed_comparison": {
+        "stock51": 51,
+        "complete_policy52": 52,
+        "full_physical53": 53,
+        "actual_exit_status": 1,
+        "raw_premature_PASS_overridden_by_explicit_OVERALL_FAIL": true
+      },
+      "at_completion_predicted": {
+        "ordinary_stock_files": 62,
+        "complete_policy_files": 63,
+        "full_physical_files": 64
+      },
+      "ordinary_stock_is_not_complete_policy_coverage": true,
+      "exact_omitted_disposable_path": ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_long_windows_file_observed/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/long.txt",
+      "exact_omitted_sha256": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9",
+      "complete_physical_minus_policy": [
+        ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_ignored_directories_are_explicit/.agents/hidden"
+      ],
+      "authority": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\review\\SUPPLEMENTAL-COVERAGE-AUTHORITY.json",
+      "snapshot_or_library_override": false
+    },
+    "all_failed_attempts_preserved": true,
+    "actual_gate_and_Root_two_claims_and_postrun_still_required": true,
+    "canonical_test_bodies_executed": 0,
+    "canonical_writes": false,
+    "full_product_acceptance": false
+  },
+  "commands": [
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/st2/work/verify_prepared.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/st2/review/replay_author_controls.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/st2/review/test_independent_st2_r2.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/st2/review/verify_supplemental_conservation.py",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "Exact immutable preparation, four candidate targets and typed historical preservation",
+      "passed": true
+    },
+    {
+      "name": "Additive closer exact diff, metadata/three-pin/replay controls",
+      "passed": true
+    },
+    {
+      "name": "Complete physical review evidence with the explicit one-file ordinary-stock limitation",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

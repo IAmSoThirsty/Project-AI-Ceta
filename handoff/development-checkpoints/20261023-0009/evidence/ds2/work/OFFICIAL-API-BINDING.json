@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-23T07:04:50.818254+00:00",
+  "provider": "Microsoft Learn official Win32 API documentation",
+  "sources": [
+    "https://learn.microsoft.com/en-us/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_standard_info",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_id_info",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_basic_info"
+  ],
+  "selected_contracts": {
+    "CreateFileW": "Existing directory only, read attributes, shared read/write/delete, noninheritable, backup semantics and open reparse point flags",
+    "GetFileInformationByHandleEx": "Basic0, Standard1 and Id18; nonzero success, otherwise capture GetLastError",
+    "Basic": "All four raw FILETIME ticks and attributes retained; security comparison excludes only policy-bound LastAccessTime",
+    "Standard": "AllocationSize, EndOfFile, NumberOfLinks, DeletePending and Directory retained and compared",
+    "Identity": "VolumeSerialNumber and complete128-bit FileId retained; combined identity binds path and handle"
+  },
+  "normative_authority_policy_sha256": "5d0c1ead3cfe6d7893874bcda7f8a508764d99c9b37e50994ca1b33de5d4662c",
+  "documented_limit": "Driver and OS release can affect returned classes; physical current-provider qualification is required"
+}

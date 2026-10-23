@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-jb23-r2",
+  "reviewer": "/root/broader_successor_author",
+  "review_type": "AUTHOR_SELF_REVIEW_ONLY",
+  "independent_approval": false,
+  "canonical_integration": false,
+  "source_method_delta_from_rejected_seed": {
+    "src/ceta/identity/native_approval.py": [
+      "NativeApprovalSession.transcript"
+    ],
+    "src/ceta/identity/owner_session.py": [
+      "NativeCpuOwnerSession.retain_verified_effect",
+      "NativeOwnerSession.retain_verified_enrollment"
+    ]
+  },
+  "candidate_files": 8,
+  "controls": {
+    "original_ids_retained": 112,
+    "new_ids": [
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_already_expired_retention_never_calls_cached_transcript",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_consumer_exact_conservative_boundary_is_not_renewed",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_effect_binding_expiry_never_enters_later_currentness_fence",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_effect_cleanup_only_failure_precedes_proof_publication",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_effect_guard_cleanup_consumes_the_original_budget",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_effect_hostile_body_and_guard_cleanup_keep_original_primary",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_expiry_during_binding_or_final_currentness_never_publishes",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_expiry_during_cached_transcript_denies_further_native_work",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_expiry_during_native_retention_observation_never_publishes",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_expiry_during_witness_construction_is_charged_before_publication",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_hostile_elapsed_primary_keeps_cancel_secondary_at_both_consumers",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_hostile_retention_body_error_survives_actual_local_guard",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_on_time_effect_publishes_only_after_original_guard_unwinds",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_on_time_enrollment_publishes_only_retained_local_witness",
+      "test_joint_budget_controls.OwnerConsumptionBudgetTests.test_stop_during_witness_construction_never_publishes",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_conservative_boundary_and_exact_cutoff_never_round_up",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_expiry_in_transcript_construction_denies_publication",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_independent_witness_currentness_10_plus20ms_refused",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_independent_witness_direct_cached_verification_25ms_refused",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_independent_witness_expired_poll_control_still_refuses",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_independent_witness_valid_control_5ms",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_transcript_currentness_hostile_primary_is_not_replaced",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_transcript_expiry_preserves_cancel_failure_and_actual_session",
+      "test_joint_budget_controls.TranscriptConsumptionBudgetTests.test_transcript_hostile_clock_primary_preserves_cancel_secondary"
+    ],
+    "total": 136,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "report_sha256": "5235653e3eade28a8854337ef12acd765950125c0ba9774928686594a2e4f8b3",
+    "process_sha256": "f3d19e6f68b5fc9d64b365a84e44892ed5d606a24df1b8f586e3513d0057742c"
+  },
+  "four_case_witness": {
+    "cases": [
+      {
+        "case": "valid_control",
+        "elapsed_before_ns": 5000000,
+        "currentness_duration_ns": 0,
+        "original_deadline_perf_ns": 900000020000000,
+        "finished_perf_ns": 900000005000000,
+        "stop_set": false,
+        "native_currentness_calls": 1,
+        "returned_reported_verified": true,
+        "error": null,
+        "expected_refusal": false,
+        "case_passed": true,
+        "original_deadline_unchanged": true,
+        "native_authentication_performed": false
+      },
+      {
+        "case": "expired_before_direct_transcript",
+        "elapsed_before_ns": 25000000,
+        "currentness_duration_ns": 0,
+        "original_deadline_perf_ns": 900000020000000,
+        "finished_perf_ns": 900000025000000,
+        "stop_set": true,
+        "native_currentness_calls": 0,
+        "returned_reported_verified": false,
+        "error": {
+          "type": "ContractError",
+          "args": [
+            "APPROVAL_JOINT_BUDGET_EXPIRED at $"
+          ]
+        },
+        "expected_refusal": true,
+        "case_passed": true,
+        "original_deadline_unchanged": true,
+        "native_authentication_performed": false
+      },
+      {
+        "case": "expiry_inside_transcript_currentness",
+        "elapsed_before_ns": 10000000,
+        "currentness_duration_ns": 20000000,
+        "original_deadline_perf_ns": 900000020000000,
+        "finished_perf_ns": 900000030000000,
+        "stop_set": true,
+        "native_currentness_calls": 1,
+        "returned_reported_verified": false,
+        "error": {
+          "type": "ContractError",
+          "args": [
+            "APPROVAL_JOINT_BUDGET_EXPIRED at $"
+          ]
+        },
+        "expected_refusal": true,
+        "case_passed": true,
+        "original_deadline_unchanged": true,
+        "native_authentication_performed": false
+      },
+      {
+        "case": "expired_cached_poll_control",
+        "elapsed_before_ns": 25000000,
+        "currentness_duration_ns": 0,
+        "original_deadline_perf_ns": 900000020000000,
+        "finished_perf_ns": 900000025000000,
+        "stop_set": true,
+        "native_currentness_calls": 0,
+        "returned_reported_verified": false,
+        "error": {
+          "type": "ContractError",
+          "args": [
+            "APPROVAL_JOINT_BUDGET_EXPIRED at $"
+          ]
+        },
+        "expected_refusal": true,
+        "case_passed": true,
+        "original_deadline_unchanged": true,
+        "native_authentication_performed": false
+      }
+    ],
+    "report_sha256": "5ec2c4ab62baf0660dc79430c2025cc33af4f69a6309c5031766f54338a5bc9a",
+    "process_sha256": "2a735e69c867dd6764bae06f2284074cec70a4ca01d89936b77dfb04673d0929"
+  },
+  "controls_are_pure_simulation": true,
+  "no_native_person_or_hardware_acceptance": true,
+  "original_joint_budget_semantics_retained": true,
+  "hot_effect_fence_and_shared_operation_AST_unchanged": true,
+  "native_epoch_provider_gap": "Unresolved; genuine measured epoch/code/peer provisioning remains required",
+  "prior_AC7_attempt": "Consumed; worker exit 0xC0000142; failing DLL/main/API order unknown; no replay",
+  "admission_bound_ns": 50000000,
+  "admission_timing_qualified": false,
+  "response_and_settlement_reserves": "One second each; unmeasured engineering policy, not established native capacity",
+  "previous_failure": {
+    "path": "TRANSCRIPT-CONTROLS-PROCESS.json",
+    "exit_status": 1,
+    "cause": "Test method was temporarily attached to the new class rather than original registry class",
+    "resolution": "Original class/112 exact IDs restored; failed output and before-image preserved"
+  },
+  "limits": [
+    "Rejected JB1 remains rejected and immutable",
+    "Fresh candidate awaits named independent review",
+    "No canonical writes, Git mutation, fixture writes, process/native/socket test effects or installed dependency changes",
+    "Genuine native authorization-to-effect, installed/offline/migration/endurance/human/hardware acceptance remain open",
+    "No overall product completion percentage is supported"
+  ]
+}

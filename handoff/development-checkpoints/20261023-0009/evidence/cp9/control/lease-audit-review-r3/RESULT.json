@@ -1,0 +1,271 @@
+{
+  "recorded_at": "2026-10-23T06:39:14.650246+00:00",
+  "reviewer": "/root/independent_broader_review",
+  "reviewed_script_sha256": "d16df63e2be3c858a8c8e9ee6aa0286a281e08d178a91c43d528f463841bedb1",
+  "exact_scope_source_sha256": "a717705b7ab621d5e864d68656e214e012cae025242b003451512a11cf48fe59",
+  "actual_packet_validator_used": true,
+  "packet_file_read_seam": "SYNTHETIC_BYTES_ONLY",
+  "cases": [
+    {
+      "name": "valid_exact17_own_packet_and_current_claim_allowed",
+      "passed": true,
+      "expected_clear": true,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "contradictory_node_mirror_effective_write_scope",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "contradictory_node_mirror_executor_id",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "contradictory_node_mirror_workspace",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "other_git_writer_without_own_exception_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 1,
+        "permitted_current_publication_claim": 0,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "own_claim_absent_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "own_claim_path_outside_packet_control_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": ""
+    },
+    {
+      "name": "packet_wrong_parent_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "TransitionDenied",
+      "message": "Wrong publication identity"
+    },
+    {
+      "name": "packet_broadened17scope_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "TransitionDenied",
+      "message": "Exactly17 Git declarations required; no unrelated metadata"
+    },
+    {
+      "name": "actual_declaration_differs_from_packet_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "review_not_approved_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "gate_not_successful_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "gate_validation_bool_required",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "review_packet_result_drift_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "review_workfreeze_drift_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "gate_command_status_drift_denied",
+      "passed": true,
+      "expected_clear": false,
+      "actual_clear": false,
+      "exception_type": "AssertionError",
+      "message": "current exact publication claim not established"
+    },
+    {
+      "name": "normalized_gate_exit1_must_not_allow_own_exception",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "normalized_gate_boolean_exit_must_not_allow_own_exception",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "normalized_gate_failed_validation_must_not_allow_own_exception",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "normalized_gate_other_run_must_not_allow_own_exception",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "normalized_review_other_node_must_not_allow_own_exception",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "normalized_review_receipt_hash_drift_must_not_allow_own_exception",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    },
+    {
+      "name": "state_gate_receipt_hash_mismatch_must_not_allow_own_exception",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 1,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      }
+    }
+  ],
+  "selected": 23,
+  "failed_expectations": 7,
+  "native_or_canonical_or_coordinator_execution": false,
+  "claims_verify_gates_invoked": false,
+  "qualification": "In-memory positive/negative audit controls; real exact_git_scope.packet validates synthetic bytes via patched read seam. No live publication packet or claim exists or was created by this review."
+}

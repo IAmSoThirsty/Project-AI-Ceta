@@ -1,0 +1,160 @@
+{
+  "recorded_at": "2026-10-23T18:24:38.156108+00:00",
+  "author": "/root",
+  "independent_review": false,
+  "source_pins": {
+    "ROOT-CLOSE-PREPARATION.py": "efeec5603e53f00e2e21d6f7571121d99db0f78b1e0d60579f9f08ad4ebb5eff",
+    "SETUP-PUBLICATION.py": "8a3557126c41cf416e4f6d6bdc88ededf05336ffa673191d7b0dd36929946e90",
+    "ROOT-PUBLICATION.py": "7cecf4f135faf05d1a063154b3d1d89f97f7fa561a60332fcf4c67c8a0edf147"
+  },
+  "controls": 9,
+  "rows": [
+    {
+      "name": "ROOT-CLOSE-PREPARATION.py explicit -O",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-O",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-CLOSE-PREPARATION.py"
+      ],
+      "actual_exit_status": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-CLOSE-PREPARATION.py\", line 4, in <module>\r\n    raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\r\nRuntimeError: CP9 requires unoptimized Python before imports or effects\r\n",
+      "passed": true
+    },
+    {
+      "name": "ROOT-CLOSE-PREPARATION.py explicit -OO",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-OO",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-CLOSE-PREPARATION.py"
+      ],
+      "actual_exit_status": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-CLOSE-PREPARATION.py\", line 4, in <module>\r\n    raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\r\nRuntimeError: CP9 requires unoptimized Python before imports or effects\r\n",
+      "passed": true
+    },
+    {
+      "name": "ROOT-CLOSE-PREPARATION.py exact prefix child environment scrub",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "\"\"\"Root completion of accepted private preparation; canonical Git remains unchanged.\"\"\"\nimport os,sys\nif sys.flags.optimize != 0:\n raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\nos.environ.pop('PYTHONOPTIMIZE',None)\nimport json;print(json.dumps(dict(optimize=sys.flags.optimize,inherited='PYTHONOPTIMIZE' in os.environ)))"
+      ],
+      "actual_exit_status": 0,
+      "stdout": "{\"optimize\": 0, \"inherited\": false}\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "SETUP-PUBLICATION.py explicit -O",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-O",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\SETUP-PUBLICATION.py"
+      ],
+      "actual_exit_status": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\SETUP-PUBLICATION.py\", line 4, in <module>\r\n    raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\r\nRuntimeError: CP9 requires unoptimized Python before imports or effects\r\n",
+      "passed": true
+    },
+    {
+      "name": "SETUP-PUBLICATION.py explicit -OO",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-OO",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\SETUP-PUBLICATION.py"
+      ],
+      "actual_exit_status": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\SETUP-PUBLICATION.py\", line 4, in <module>\r\n    raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\r\nRuntimeError: CP9 requires unoptimized Python before imports or effects\r\n",
+      "passed": true
+    },
+    {
+      "name": "SETUP-PUBLICATION.py exact prefix child environment scrub",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "\"\"\"Compile a fresh later publication scope only after accepted closed preparation.\"\"\"\nimport os,sys\nif sys.flags.optimize != 0:\n raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\nos.environ.pop('PYTHONOPTIMIZE',None)\nimport json;print(json.dumps(dict(optimize=sys.flags.optimize,inherited='PYTHONOPTIMIZE' in os.environ)))"
+      ],
+      "actual_exit_status": 0,
+      "stdout": "{\"optimize\": 0, \"inherited\": false}\r\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "ROOT-PUBLICATION.py explicit -O",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-O",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-PUBLICATION.py"
+      ],
+      "actual_exit_status": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-PUBLICATION.py\", line 4, in <module>\r\n    raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\r\nRuntimeError: CP9 requires unoptimized Python before imports or effects\r\n",
+      "passed": true
+    },
+    {
+      "name": "ROOT-PUBLICATION.py explicit -OO",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-OO",
+        "-X",
+        "utf8",
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-PUBLICATION.py"
+      ],
+      "actual_exit_status": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\ROOT-PUBLICATION.py\", line 4, in <module>\r\n    raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\r\nRuntimeError: CP9 requires unoptimized Python before imports or effects\r\n",
+      "passed": true
+    },
+    {
+      "name": "ROOT-PUBLICATION.py exact prefix child environment scrub",
+      "argv": [
+        "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe",
+        "-E",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "\"\"\"Root ordinary gates, exact Git claim, one publication, and evidence-backed closure.\"\"\"\nimport os,sys\nif sys.flags.optimize != 0:\n raise RuntimeError('CP9 requires unoptimized Python before imports or effects')\nos.environ.pop('PYTHONOPTIMIZE',None)\nimport json;print(json.dumps(dict(optimize=sys.flags.optimize,inherited='PYTHONOPTIMIZE' in os.environ)))"
+      ],
+      "actual_exit_status": 0,
+      "stdout": "{\"optimize\": 0, \"inherited\": false}\r\n",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "canonical_mutation": false,
+  "publication": false
+}

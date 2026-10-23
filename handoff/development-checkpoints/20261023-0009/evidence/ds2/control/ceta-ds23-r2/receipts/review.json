@@ -1,0 +1,162 @@
+{
+  "changed_files": [
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/ACTUAL-REVIEW-CLAIM.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/CLAIM-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/EVIDENCE-READBACK-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/FROZEN-DS2-VERIFIER-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/GRAPH-ADMISSION-FINDING.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/INDEPENDENT-CONTROLS-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/INDEPENDENT-EVIDENCE-READBACK.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/INDEPENDENT-REPAIR-CONTROLS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/MANIFEST.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/REVIEW-RECEIPT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/REVIEW.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/SOURCE-DELTA-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/UNCHANGED-VALIDATION-SURFACE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/check_source_delta.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/finalize_rejected_review.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/inspect_recorded_evidence.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/review_provider_boundaries.py"
+  ],
+  "commands": [
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/review_provider_boundaries.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/verify_prepared.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/inspect_recorded_evidence.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/check_source_delta.py",
+      "exit_status": 0
+    }
+  ],
+  "decision": "rejected",
+  "executor_id": "/root/status_packet_review",
+  "exit_status": 0,
+  "finished_at": "2026-10-23T08:04:12.499781+00:00",
+  "git_baseline": {
+    "available": true,
+    "diff_hash": "a3dbed61d97de75f2f90358996667cd3cd5b6f0e4b2abe0baf8fe07b2f2bdab7",
+    "git_changed_files": [
+      "build/gates.json",
+      "build/progress.json",
+      "contracts/ISOLATED_WORKER_V1.md",
+      "contracts/KERNEL_TRANSACTIONS_V1.md",
+      "contracts/LOCAL_IPC_V1.md",
+      "contracts/NATIVE_OWNER_SESSION_V1.md",
+      "contracts/OWNED_SERVICE_V1.md",
+      "handoff/continuity.json",
+      "native/windows_broker/isolated_worker.rs",
+      "src/ceta/application/operator.py",
+      "src/ceta/composition/ipc_service.py",
+      "src/ceta/composition/owned_service.py",
+      "src/ceta/composition/service_process.py",
+      "src/ceta/contracts/construction.py",
+      "src/ceta/contracts/local_ipc.py",
+      "src/ceta/contracts/local_results.py",
+      "src/ceta/effects/native_observer.py",
+      "src/ceta/identity/native_owner_view.py",
+      "src/ceta/identity/owner_session.py",
+      "src/ceta/identity/windows_pipe.py",
+      "src/ceta/kernel/cpu_execution.py",
+      "src/ceta/kernel/effect_transactions.py",
+      "src/ceta/kernel/transactions.py",
+      "src/ceta/resource/diagnostics.py",
+      "src/ceta/resource/hardware.py",
+      "src/ceta/store/journal.py",
+      "src/ceta/supervisor/isolated_worker.py",
+      "tests/contract/test_cpu_execution_admission.py",
+      "tests/contract/test_isolated_worker.py",
+      "tests/contract/test_isolation_token_diagnostics.py",
+      "tests/contract/test_native_owner_preparation.py",
+      "tools/ceta_operator.py"
+    ],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "b2a3e5f277d839cd93bc797f7ababbe5baf7e575fc12bbe5a0555f4bba436faf"
+  },
+  "input_hash": "74ae2718cec8ae98edff68e1d0b57c413c321c95ceb8a3d9347a43c3809d25dd",
+  "node_id": "review",
+  "observed_git": {
+    "available": true,
+    "diff_hash": "a3dbed61d97de75f2f90358996667cd3cd5b6f0e4b2abe0baf8fe07b2f2bdab7",
+    "git_changed_files": [
+      "build/gates.json",
+      "build/progress.json",
+      "contracts/ISOLATED_WORKER_V1.md",
+      "contracts/KERNEL_TRANSACTIONS_V1.md",
+      "contracts/LOCAL_IPC_V1.md",
+      "contracts/NATIVE_OWNER_SESSION_V1.md",
+      "contracts/OWNED_SERVICE_V1.md",
+      "handoff/continuity.json",
+      "native/windows_broker/isolated_worker.rs",
+      "src/ceta/application/operator.py",
+      "src/ceta/composition/ipc_service.py",
+      "src/ceta/composition/owned_service.py",
+      "src/ceta/composition/service_process.py",
+      "src/ceta/contracts/construction.py",
+      "src/ceta/contracts/local_ipc.py",
+      "src/ceta/contracts/local_results.py",
+      "src/ceta/effects/native_observer.py",
+      "src/ceta/identity/native_owner_view.py",
+      "src/ceta/identity/owner_session.py",
+      "src/ceta/identity/windows_pipe.py",
+      "src/ceta/kernel/cpu_execution.py",
+      "src/ceta/kernel/effect_transactions.py",
+      "src/ceta/kernel/transactions.py",
+      "src/ceta/resource/diagnostics.py",
+      "src/ceta/resource/hardware.py",
+      "src/ceta/store/journal.py",
+      "src/ceta/supervisor/isolated_worker.py",
+      "tests/contract/test_cpu_execution_admission.py",
+      "tests/contract/test_isolated_worker.py",
+      "tests/contract/test_isolation_token_diagnostics.py",
+      "tests/contract/test_native_owner_preparation.py",
+      "tools/ceta_operator.py"
+    ],
+    "head": "d0ee29ce75f99fe974e10ec9baf38c5a516dd2df",
+    "repo_root": "T:\\00-Active\\Project-AI-CETA",
+    "status_hash": "b2a3e5f277d839cd93bc797f7ababbe5baf7e575fc12bbe5a0555f4bba436faf"
+  },
+  "receipt_hash": "d4d013c27d9a16cb1e42ede424f9eb71f65651f6d85bd1c5ed2abe767423ad0b",
+  "result": {
+    "ST2_execution_authorized": false,
+    "canonical_test_bodies_executed": 0,
+    "decision": "rejected",
+    "finding_ids": [
+      "DS2-GATE-TARGET-01"
+    ],
+    "full_product_acceptance": false,
+    "manifest_sha256": "736a2a3ef8639bf99acced85d0ce3950b74b01bf9f23d856148ca7a7061df2f6",
+    "provider_body_failure": false,
+    "provider_repair_cases_passed": 6,
+    "review_evidence_manifest": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\review\\MANIFEST.json",
+    "review_sha256": "3bc07a220bdb02020f904e2ae57a8807f8e2b2f2906e0f68b4fee52aee112134",
+    "root_candidate_closure_approved": false,
+    "root_candidate_closure_sha256": "64f81f235284f4a1e6222c09c407e1ff4a25acc96412fee7b71d27bdf97703ad",
+    "successful_author_controls_and_full_snapshot_preserved": true
+  },
+  "run_id": "ceta-ds23-r2",
+  "schema_version": 1,
+  "started_at": "2026-10-23T07:57:42.428223+00:00",
+  "validations": [
+    {
+      "name": "Exact frozen source, recorded evidence and canonical/Git/ST2 conservation",
+      "passed": true
+    },
+    {
+      "name": "Bounded independent repaired custody and partial native/path provenance controls",
+      "passed": true
+    },
+    {
+      "name": "Declared current graph gate targets exact current DS2 verifier",
+      "passed": false
+    }
+  ]
+}

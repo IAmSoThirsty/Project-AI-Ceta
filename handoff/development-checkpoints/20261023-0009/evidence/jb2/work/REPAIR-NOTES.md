@@ -1,0 +1,13 @@
+# JB2 original allowance consumption repair
+
+Status: authored and controlled-tested, awaiting independent review; not applied to canonical source.
+
+The fresh candidate retains the rejected JB1 seven-file seed and its joint-budget behavior. Only NativeApprovalSession.transcript changes within those seven files. A separately authorized eighth source input adds checks in NativeOwnerSession.retain_verified_enrollment and NativeCpuOwnerSession.retain_verified_effect. The original packet and actual implement scope are unchanged; OWNER-CONSUMER-INPUT-AMENDMENT.json binds that additional input.
+
+Transcript consumption checks the original helper elapsed cutoff before cached verification, after native currentness and after transcript construction. Both owner consumers check the same nonrenewing allowance before use, after transcript return, after observation/binding/currentness work and before publishing the retained local witness. Effect retention finishes the existing operation guard before proof publication. Its local explicit normal-unwind path preserves the exact body exception when Python contextlib would otherwise assign a hostile exception traceback, retaining any guard cleanup fault separately. The shared guard and hot effect fence are unchanged.
+
+The final controlled cohort contains all 112 original test IDs and 24 new tests, with 136 passes and no failures/errors/skips. A separate four-case witness checks 5 ms success, direct cached verification at 25 ms refusal, currentness advancing 10 + 20 ms refusal and expired-poll cancellation. Both executions route exactly five runtime modules to this candidate and prohibit actual native, process and socket activity. Native facts and binding ports in consumer controls are recordings, not genuine authority facts or grants. Original failed test setup and rejected JB1 evidence remain preserved.
+
+All clocks retain their own domains. The original session/wire deadline, decreasing ceremony allowances, WAITING/cache behavior, observer clamp, uncertainty custody, no retries/refunds/extensions and 50,000,000 ns admission contract remain unchanged. One-second response and one-second settlement reserves remain an unmeasured engineering policy. Neither these checks nor prior broader regressions qualify native admission timing or complete the genuine authorization-to-native-effect route.
+
+Genuine native epoch/provider provisioning, the consumed AC7 attempt (exit 0xC0000142, exact failing DLL/main/API order unknown), remaining application/model requirements and installed, offline, migration, endurance and human/hardware acceptance remain open. There is no defensible overall completion percentage.

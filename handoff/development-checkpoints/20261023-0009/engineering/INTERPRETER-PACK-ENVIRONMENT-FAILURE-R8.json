@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-10-23T18:10:58.636854+00:00",
+  "reviewer": "/root/status_packet_review",
+  "actual_process_exit_status": 1,
+  "tests_run": 61,
+  "failures": 1,
+  "errors": 6,
+  "skips": 0,
+  "result_sha256": "5384b66912ed4123a06b0874546242179a9160e288c8d0cfe69c3c5d4a08a65b",
+  "process_sha256": "ece9e908c42229b4c6398c21d5d6f987d33603b23a10bd955aaeeee52ab7bcc1",
+  "log_sha256": "1e179ca6e61f16e957f1a251e2baf0c84c27333ee1bef3c94638adfd5ce31039",
+  "failure_ids": [
+    "test_checkpoint_controls.PackConsumptionControls.test_pack_substitution_is_refused_before_importing_Git_call"
+  ],
+  "error_ids": [
+    "test_checkpoint_controls.ConservationControls.test_full_scan_detects_addition_and_byte_change",
+    "test_checkpoint_controls.HostileCustodyControls.test_manual_publisher_custody_preserves_hostile_original",
+    "test_checkpoint_controls.HostileCustodyControls.test_manual_publisher_postcheck_and_persistence_preserve_hostile_original",
+    "test_checkpoint_controls.InputControls.test_reference_one_byte_mutation_detected",
+    "test_checkpoint_controls.InputControls.test_stable_receipt_has_size_hash_and_path_binding",
+    "test_checkpoint_controls.PackConsumptionControls.test_same_checked_pack_bytes_are_imported_without_a_second_read"
+  ],
+  "observed_failure": "engine admission refused presence of an optimization environment key before utility import; one pack negative therefore saw the earlier environment refusal instead of its intended pack refusal.",
+  "environment_value_during_failed_attempt": "NOT_CAPTURED",
+  "why_PowerShell_deletion_did_not_remove_child_key": "UNKNOWN",
+  "all_test_details_serialized_as_stable_ID_and_original_traceback": true,
+  "reporter_failure": false,
+  "disposition": "FAILED_ATTEMPT_PRESERVED; explicit case-insensitive environment scrub at Popen boundary for separately named R9; no validation guard weakened",
+  "source_before_images": "before-interpreter-pack-r9/BEFORE-IMAGES.json",
+  "canonical_or_Git_mutation": false,
+  "full_product_acceptance": false
+}

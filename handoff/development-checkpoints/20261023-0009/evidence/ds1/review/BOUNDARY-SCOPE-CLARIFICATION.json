@@ -1,0 +1,10 @@
+{
+  "classification": "BOUNDARY_REPRODUCTION_SCOPE_CLARIFICATION",
+  "original_report": "INDEPENDENT-BOUNDARY-REPRODUCTION.json",
+  "actual_read_only_Git_subprocesses": "Accepted source_observation called before and after fake-provider controls to verify root/branch/HEAD/origin/dirty/index conservation.",
+  "real_native_worker_or_process_fixture_or_Win32_provider_actions": false,
+  "provider_faults_and_handles": "Controlled fake provider values only; no real handles were leaked or closed by these controls.",
+  "candidate_import_native_entry_guards": "ctypes.WinDLL/CDLL, subprocess.run/Popen and socket.socket patched only during fake-provider controls; stopped before final accepted Git readback.",
+  "full_F_snapshot_replay": false,
+  "canonical_test_bodies_executed": 0
+}

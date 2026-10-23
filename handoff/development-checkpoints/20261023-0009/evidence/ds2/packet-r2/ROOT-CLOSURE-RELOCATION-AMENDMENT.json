@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-23T08:09:39.846Z",
+  "run_id": "ceta-ds23-r2-gate-r2",
+  "authority": "/root",
+  "reason": "Correct verifier module origin after Root helper relocation; original helper never executed.",
+  "original_packet_sha256": "3d249901dc59431ffe30d25a44996a01400b7bcf3ab91415922a74b1813dccc7",
+  "original_helper": {
+    "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/control-r2/ROOT-CLOSE-QUALIFICATION.py",
+    "sha256": "adb9c2afb81aa7a7ea2d8d74b2456bdfd33882f8a50da5646ea45263643e027f",
+    "state": "UNEXECUTED_NOT_APPROVED"
+  },
+  "successor_helper": {
+    "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/control-r2/ROOT-CLOSE-QUALIFICATION-R2.py",
+    "sha256": "f17cd2b8214f9076cdcfa87683253a5a486bbd31c6d41d2f4887dd0cd9ccd858"
+  },
+  "delta": "Add exact frozen work directory to verifier import path and require exact module origin; source bytes, gate and scopes unchanged. Original CRLF copied into LF successor.",
+  "graph_fingerprint": "997829e1616609bafc88eea12f601eba7d715ad0e03b27e55a3f1af59a0d51ed",
+  "independent_review_required": true,
+  "canonical_or_Git_or_installed_or_ST2_or_native_mutation": false,
+  "full_product_acceptance": false
+}

@@ -88,6 +88,47 @@ class OperatorResourceDiagnosticsTests(unittest.TestCase):
         self.assertTrue(all(p.calls == 2 for p in self.ports))
         self.assertEqual(self.writer.store_position().next_commit, 0)
 
+    def test_public_collector_cancels_inside_constructor_sqlite_vm(self):
+        from ceta.store.journal import SqliteJournal
+        query = "WITH RECURSIVE n(x) AS (SELECT 0 UNION ALL SELECT x+1 FROM n WHERE x<100000000) SELECT sum(x) FROM n"
+        original, calls = SqliteJournal._verify, [0]
+        def cancel():
+            calls[0] += 1
+            return calls[0] > 30
+        def costly(instance, *args, **kwargs):
+            instance._connection.execute(query).fetchone()
+            return original(instance, *args, **kwargs)
+        with patch.object(SqliteJournal, "_verify", new=costly):
+            with self.assertRaisesRegex(ContractError, "JOURNAL_READ_CANCELLED") as caught:
+                self.collect(cancelled=cancel)
+        custody = caught.exception.journal_custody
+        self.assertGreater(custody._read_budget.vm_steps, 0)
+        self.assertTrue(custody._closed)
+        self.assertEqual(self.writer.store_position().next_commit, 0)
+        self.assertEqual([x.calls for x in self.ports], [0, 0])
+        self.assertEqual(self.collect()["state"], "COMPLETE_PROCESS_USAGE")
+
+    def test_collector_vm_control_exception_retains_exact_primary_and_closed_journal(self):
+        from ceta.store.journal import SqliteJournal
+        query = "WITH RECURSIVE n(x) AS (SELECT 0 UNION ALL SELECT x+1 FROM n WHERE x<100000000) SELECT sum(x) FROM n"
+        original = SqliteJournal._verify
+        def costly(instance, *args, **kwargs):
+            instance._connection.execute(query).fetchone()
+            return original(instance, *args, **kwargs)
+        for primary in (KeyboardInterrupt("collector VM"), SystemExit(43)):
+            calls = [0]
+            def cancel():
+                calls[0] += 1
+                if calls[0] > 30: raise primary
+                return False
+            with patch.object(SqliteJournal, "_verify", new=costly):
+                with self.assertRaises(type(primary)) as caught: self.collect(cancelled=cancel)
+            self.assertIs(caught.exception, primary)
+            self.assertTrue(primary.journal_custody._closed)
+            self.assertGreater(primary.journal_custody._read_budget.vm_steps, 0)
+            self.assertEqual([x.calls for x in self.ports], [0, 0])
+        self.assertEqual(self.collect()["state"], "COMPLETE_PROCESS_USAGE")
+
     def test_changed_global_other_scope_and_installation_journal_refused(self):
         for scope in SCOPES:
             with self.subTest(scope=scope):

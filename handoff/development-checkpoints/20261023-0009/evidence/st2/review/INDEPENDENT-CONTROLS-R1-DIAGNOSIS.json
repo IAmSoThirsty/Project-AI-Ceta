@@ -1,0 +1,14 @@
+{
+  "classification": "REVIEW_HARNESS_SCHEMA_AND_SERIALIZATION_FAULT",
+  "original_source_sha256": "a6bf0f7df2819e55a7078c7da28f09ece4d789f62d7eb5aff249e6ad4d9ea1eb",
+  "corrected_source_sha256": "17a9dbf5a2f80a7c533aef523b08734a5c7a73417c2bf7e350fdd7b90653c2e6",
+  "original_process_exit_status": 1,
+  "original_review_controls_ran": 13,
+  "original_control_errors": 1,
+  "canonical_test_bodies_executed": 0,
+  "cause": "TM2 timing RESULT uses observation/formatted_outcomes/secondary rather than journal reporter test_error_details/cleanup. The first harness also tried to serialize unittest TestCase objects after that error.",
+  "correction": "Retain first source/log/partial result and exit1; require the exact existing timing schema fields, preserve the original failure checks, serialize case IDs and rerun only review controls under fresh r2 label.",
+  "first_commentary_schema_name_correction": "The differing result was TM2, not JR2.",
+  "frozen_preparation_changed": false,
+  "canonical_or_fixture_or_Git_writes": false
+}

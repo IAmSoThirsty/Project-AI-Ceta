@@ -1,0 +1,129 @@
+{
+  "reviewer": "/root/independent_broader_review",
+  "candidate_manifest_sha256": "647e7d8df955ca4eefddc808e924ff7c32b8968d8b43cff23ef3021d7cee09d1",
+  "source_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\identity\\native_approval.py",
+  "source_sha256": "f1dcadece80b237fbff3cc8def067dfa3be395f9dde85f89797bf9505c851bc7",
+  "cases": [
+    {
+      "case": "valid_control",
+      "controlled_elapsed_before_call_ns": 5000000,
+      "controlled_currentness_duration_ns": 0,
+      "original_deadline_perf_ns": 900000020000000,
+      "finished_perf_ns": 900000005000000,
+      "after_original_cutoff": false,
+      "stop_set": false,
+      "native_request_current": true,
+      "native_currentness_calls": 1,
+      "returned_transcript_reported_verified": true,
+      "error": null,
+      "expected_refusal": false,
+      "case_passed": true,
+      "poll_first": false,
+      "native_authentication_performed": false
+    },
+    {
+      "case": "expired_before_direct_transcript",
+      "controlled_elapsed_before_call_ns": 25000000,
+      "controlled_currentness_duration_ns": 0,
+      "original_deadline_perf_ns": 900000020000000,
+      "finished_perf_ns": 900000025000000,
+      "after_original_cutoff": true,
+      "stop_set": false,
+      "native_request_current": true,
+      "native_currentness_calls": 1,
+      "returned_transcript_reported_verified": true,
+      "error": null,
+      "expected_refusal": true,
+      "case_passed": false,
+      "poll_first": false,
+      "native_authentication_performed": false
+    },
+    {
+      "case": "expiry_inside_transcript_currentness",
+      "controlled_elapsed_before_call_ns": 10000000,
+      "controlled_currentness_duration_ns": 20000000,
+      "original_deadline_perf_ns": 900000020000000,
+      "finished_perf_ns": 900000030000000,
+      "after_original_cutoff": true,
+      "stop_set": false,
+      "native_request_current": true,
+      "native_currentness_calls": 1,
+      "returned_transcript_reported_verified": true,
+      "error": null,
+      "expected_refusal": true,
+      "case_passed": false,
+      "poll_first": false,
+      "native_authentication_performed": false
+    },
+    {
+      "case": "expired_cached_poll_control",
+      "controlled_elapsed_before_call_ns": 25000000,
+      "controlled_currentness_duration_ns": 0,
+      "original_deadline_perf_ns": 900000020000000,
+      "finished_perf_ns": 900000025000000,
+      "after_original_cutoff": true,
+      "stop_set": true,
+      "native_request_current": true,
+      "native_currentness_calls": 0,
+      "returned_transcript_reported_verified": false,
+      "error": {
+        "type": "ContractError",
+        "args": [
+          "APPROVAL_VERIFIED_CEREMONY_REQUIRED at $"
+        ]
+      },
+      "expected_refusal": true,
+      "case_passed": true,
+      "poll_first": true,
+      "native_authentication_performed": false
+    }
+  ],
+  "selected": [
+    "valid_control",
+    "expired_before_direct_transcript",
+    "expiry_inside_transcript_currentness",
+    "expired_cached_poll_control"
+  ],
+  "started": [
+    "valid_control",
+    "expired_before_direct_transcript",
+    "expiry_inside_transcript_currentness",
+    "expired_cached_poll_control"
+  ],
+  "stopped": [
+    "valid_control",
+    "expired_before_direct_transcript",
+    "expiry_inside_transcript_currentness",
+    "expired_cached_poll_control"
+  ],
+  "tests_run": 4,
+  "failures": 2,
+  "errors": 0,
+  "skips": 0,
+  "canonical_candidate_inputs_and_dependencies_unchanged": true,
+  "normal_HEAD_index_unchanged": true,
+  "frozen_work_unchanged": true,
+  "candidate_origins": {
+    "ceta.identity.windows_pipe": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\identity\\windows_pipe.py",
+      "sha256": "7e4a5ead5d72480794044b441617561377df710494eb82c7795f3c66e1327296"
+    },
+    "ceta.composition.real_effect_service": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\composition\\real_effect_service.py",
+      "sha256": "020ac65a20c0de1201aae1fe9586d574c8002aec39aae303e44b55530e4a3414"
+    },
+    "ceta.identity.native_approval": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\identity\\native_approval.py",
+      "sha256": "f1dcadece80b237fbff3cc8def067dfa3be395f9dde85f89797bf9505c851bc7"
+    },
+    "ceta.effects.native_observer": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\effects\\native_observer.py",
+      "sha256": "a9600709fd2518fd5e62b460dc74553ce3d98062a432887dd83c185e2c5a5c84"
+    }
+  },
+  "pure_controls_only": true,
+  "forbidden_calls": [],
+  "native_process_socket_fixture_effects": false,
+  "full_product_acceptance": false,
+  "finding": "Direct transcript() lacks the original helper elapsed-budget guard; cached verification and a current native request can produce reported-verified transcript after the helper cutoff, including when currentness consumes the final allowance."
+}

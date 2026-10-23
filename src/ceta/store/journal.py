@@ -7,9 +7,13 @@ Unknown/corrupt stores are preserved and rejected, never reset or regenerated.
 import ctypes
 from ctypes import wintypes
 import hashlib
+import math
 import os
 from pathlib import Path
 import threading
+import time
+from dataclasses import dataclass, replace
+from functools import wraps
 
 from ceta.contracts.events import EventContract, StreamPosition
 from ceta.contracts.history import JournalCommit, JournalEntry
@@ -58,6 +62,93 @@ def _location(root):
     return path.resolve()
 
 
+@dataclass(frozen=True, slots=True)
+class JournalReadBudget:
+    """Cooperative limits for one explicitly read-only connection lifetime.
+
+    VM progress, Python verification checkpoints and lock refusal are bounded.
+    DLL loading, hashing, filesystem and native calls are not hard-preemptible.
+    """
+    deadline_monotonic_ns: int
+    clock: object = time.monotonic_ns
+    cancelled: object = None
+    maximum_vm_steps: int = 10_000_000
+    maximum_checks: int = 100_000
+
+    def __post_init__(self):
+        if (type(self.deadline_monotonic_ns) is not int or not 0 <= self.deadline_monotonic_ns <= 2**63 - 1
+                or not callable(self.clock) or self.cancelled is not None and not callable(self.cancelled)
+                or type(self.maximum_vm_steps) is not int or not 1 <= self.maximum_vm_steps <= 100_000_000
+                or type(self.maximum_checks) is not int or not 1 <= self.maximum_checks <= 1_000_000):
+            raise ContractError("JOURNAL_READ_BUDGET_INVALID")
+
+
+class _ReadBudgetState:
+    def __init__(self, specification):
+        self.specification = replace(specification)
+        self.failure, self.last_clock = None, -1
+        self.checks = self.vm_steps = 0
+        self.interval = math.gcd(1000, self.specification.maximum_vm_steps)
+        self.started = None
+        self.elapsed_start = time.perf_counter_ns()
+        self.check()
+
+    def check(self, vm_steps=0):
+        try:
+            if self.failure is not None:
+                raise self.failure
+            self.checks += 1
+            self.vm_steps += vm_steps
+            if self.checks > self.specification.maximum_checks or self.vm_steps >= self.specification.maximum_vm_steps:
+                raise ContractError("JOURNAL_READ_BUDGET_EXHAUSTED")
+            stop = False if self.specification.cancelled is None else self.specification.cancelled()
+            if type(stop) is not bool:
+                raise ContractError("JOURNAL_READ_CANCELLATION_INVALID")
+            if stop:
+                raise ContractError("JOURNAL_READ_CANCELLED")
+            now = self.specification.clock()
+            if type(now) is not int or not 0 <= now <= 2**63 - 1 or now < self.last_clock:
+                raise ContractError("JOURNAL_READ_CLOCK_INVALID")
+            self.last_clock = now
+            if self.started is None:
+                self.started = now
+                if self.specification.deadline_monotonic_ns - now > 60_000_000_000:
+                    raise ContractError("JOURNAL_READ_BUDGET_INVALID")
+            if (now >= self.specification.deadline_monotonic_ns or time.perf_counter_ns() - self.elapsed_start
+                    >= self.specification.deadline_monotonic_ns - self.started):
+                raise ContractError("JOURNAL_READ_DEADLINE_EXCEEDED")
+        except BaseException as error:
+            self.failure = error
+            raise
+
+
+def _budgeted_read(method):
+    @wraps(method)
+    def observed(self, *args, **kwargs):
+        if self._read_budget is None:
+            return method(self, *args, **kwargs)
+        if not self._lock.acquire(blocking=False):
+            raise ContractError("JOURNAL_READ_BUDGET_BUSY")
+        try:
+            # An unusable owner has precedence over callback/time diagnostics.
+            # In particular, never invoke caller callbacks after known closure.
+            self._require_open()
+            self._check_read_budget()
+            try:
+                result = method(self, *args, **kwargs)
+                self._check_read_budget()
+                return result
+            except BaseException as error:
+                primary = self._read_error(error)
+                self._retain_failure(primary)
+                if primary is not error:
+                    raise primary from error
+                raise
+        finally:
+            self._lock.release()
+    return observed
+
+
 class SqliteJournal:
     """Serialized append/CAS implementation of HistoryPort in an owned root.
 
@@ -67,7 +158,7 @@ class SqliteJournal:
     """
 
     def __init__(self, root, codec, scopes, *, create=False, before_commit=None, profile=_PROFILE, read_only=False,
-                 outcome_runtime=None):
+                 outcome_runtime=None, read_budget=None):
         if type(codec) is not RecordCodec:
             raise ContractError("JOURNAL_RECORD_CODEC_REQUIRED")
         if (type(scopes) is not tuple or not 1 <= len(scopes) <= 1024
@@ -86,6 +177,12 @@ class SqliteJournal:
             from .outcome_capacity import OutcomeCapacityRuntime
             if type(outcome_runtime) is not OutcomeCapacityRuntime or read_only:
                 raise ContractError("JOURNAL_OUTCOME_RUNTIME_INVALID")
+        if read_budget is not None and (not read_only or type(read_budget) is not JournalReadBudget):
+            raise ContractError("JOURNAL_READ_BUDGET_INVALID")
+        self._read_budget = None if read_budget is None else _ReadBudgetState(read_budget)
+        self._read_cleanup = 0
+        self._progress_state = "ABSENT"
+        self._progress_error = None
         self._read_only = read_only
         self._profile = profile
         self._schema = {**_SCHEMA, **STATE_SCHEMA} if profile == STORE_PROFILE else _SCHEMA
@@ -123,17 +220,26 @@ class SqliteJournal:
             if outcome_runtime is not None:
                 self._capacity_vfs = outcome_runtime._prepare()
                 outcome_runtime._create(self._capacity_vfs)
+            self._check_read_budget()
             self._connection = self._sqlite.connect(self._connection_uri("rw" if create else "ro"), uri=True,
-                timeout=5, isolation_level=None, check_same_thread=False)
+                timeout=0 if self._read_budget is not None else 5, isolation_level=None, check_same_thread=False)
             self._constructor_close_state = "OPEN"
             self._connection_close_state = "OPEN"
             self._closed = False
+            if self._read_budget is not None:
+                self._progress_state = "UNCERTAIN"
+                response = self._connection.set_progress_handler(self._read_progress, self._read_budget.interval)
+                if response is not None:
+                    raise ContractError("JOURNAL_READ_PROGRESS_RESULT_INVALID")
+                self._progress_state = "INSTALLED"
+                self._check_read_budget()
             self._state = TransactionState(self._connection, codec, self._scopes) if profile == STORE_PROFILE else None
             self._connection.setconfig(self._sqlite.SQLITE_DBCONFIG_DEFENSIVE, True)
             self._connection.setconfig(self._sqlite.SQLITE_DBCONFIG_TRUSTED_SCHEMA, False)
             self._connection.enable_load_extension(False)
             for pragma in ("foreign_keys=ON", "trusted_schema=OFF", "synchronous=FULL",
-                           "busy_timeout=5000", "locking_mode=NORMAL", "wal_autocheckpoint=1000"):
+                           "busy_timeout=0" if self._read_budget is not None else "busy_timeout=5000",
+                           "locking_mode=NORMAL", "wal_autocheckpoint=1000"):
                 self._connection.execute("PRAGMA " + pragma)
             if create:
                 if self._connection.execute("PRAGMA journal_mode=WAL").fetchone()[0] != "wal":
@@ -164,7 +270,8 @@ class SqliteJournal:
                                "busy_timeout=5000", "locking_mode=NORMAL", "wal_autocheckpoint=1000"):
                     self._connection.execute("PRAGMA " + pragma)
                 self.validate()
-        except BaseException as primary:
+        except BaseException as caught:
+            primary = self._read_error(caught)
             self._constructor_failed = True
             cleanup_error = None
             if self._connection is not None and self._constructor_close_state == "OPEN":
@@ -187,6 +294,8 @@ class SqliteJournal:
                     dict.update(data, outcome_capacity_cleanup_error=secondary,
                                 outcome_capacity_custody=self._capacity_vfs)
             self._retain_failure(primary)
+            if primary is not caught:
+                raise primary from caught
             raise
 
     def _connection_uri(self, mode):
@@ -207,9 +316,54 @@ class SqliteJournal:
             retained._after_commit(entries, result)
         return result
 
+    def _check_read_budget(self):
+        if self._read_budget is not None and not self._read_cleanup:
+            self._read_budget.check()
+
+    def _read_progress(self):
+        if self._read_cleanup:
+            return 0
+        try:
+            self._read_budget.check(self._read_budget.interval)
+            return 0
+        except BaseException:
+            # sqlite3 translates callback exceptions into SQLITE_INTERRUPT.
+            # Keep the exact exception in the budget owner for the API boundary.
+            return 1
+
+    def _read_error(self, error):
+        if self._read_budget is not None and isinstance(error, self._sqlite.Error):
+            raw_code = getattr(error, "sqlite_errorcode", None)
+            code = raw_code & 255 if type(raw_code) is int else None
+            if code == self._sqlite.SQLITE_INTERRUPT and self._read_budget.failure is not None:
+                return self._read_budget.failure
+            if code in (self._sqlite.SQLITE_BUSY, self._sqlite.SQLITE_LOCKED):
+                return ContractError("JOURNAL_READ_BUDGET_BUSY")
+        return error
+
+    def _remove_read_progress(self):
+        if self._read_budget is None or self._progress_state in {"ABSENT", "REMOVED"}:
+            return
+        if self._progress_state == "REMOVE_UNCERTAIN":
+            raise ContractError("JOURNAL_READ_PROGRESS_CLEANUP_UNCERTAIN")
+        self._progress_state = "REMOVE_UNCERTAIN"
+        try:
+            response = self._connection.set_progress_handler(None, 0)
+            if response is not None:
+                raise ContractError("JOURNAL_READ_PROGRESS_RESULT_INVALID")
+        except BaseException as error:
+            self._progress_error = error
+            raise
+        self._progress_state = "REMOVED"
+
     def _close_constructor_connection(self):
         # An invocation/response failure cannot prove that close did not happen.
         # Record uncertainty before method lookup/call; never automatically replay.
+        cleanup = None
+        try:
+            self._remove_read_progress()
+        except BaseException as error:
+            cleanup = error
         self._constructor_close_state = "UNCERTAIN"
         self._connection_close_state = "UNCERTAIN"
         response = self._connection.close()
@@ -218,6 +372,8 @@ class SqliteJournal:
         self._constructor_close_state = "CLOSED"
         self._connection_close_state = "CLOSED"
         self._closed = True
+        if cleanup is not None:
+            raise cleanup
 
     def _require_open(self):
         if self._constructor_failed:
@@ -239,14 +395,17 @@ class SqliteJournal:
                     journal_close_state=self._connection_close_state,
                     journal_close_error=self._connection_close_error,
                     journal_transaction_state=self._transaction_cleanup_state,
-                    journal_rollback_error=self._rollback_error)
+                    journal_rollback_error=self._rollback_error,
+                    journal_progress_state=self._progress_state, journal_progress_error=self._progress_error)
         return data
 
     def _rollback_after_error(self, primary, *, projection=False):
         # A getter, invocation or response failure cannot prove rollback. Poison
         # further operations, but retain the distinct right to close this owner.
+        primary = self._read_error(primary)
         self._transaction_cleanup_state = "UNCERTAIN"
         self._rollback_error = None
+        self._read_cleanup += 1
         try:
             active = self._connection.in_transaction
             if type(active) is not bool:
@@ -261,6 +420,8 @@ class SqliteJournal:
             self._transaction_cleanup_state = "READY"
         except BaseException as secondary:
             self._rollback_error = secondary
+        finally:
+            self._read_cleanup -= 1
         data = self._retain_failure(primary)
         if projection and self._rollback_error is not None:
             # Preserve the established diagnostic without invoking exception
@@ -286,6 +447,7 @@ class SqliteJournal:
         if type(scope) is not str or scope not in self._scopes:
             raise ContractError("JOURNAL_SCOPE_NOT_REGISTERED")
 
+    @_budgeted_read
     def _verify(self, checkpoints=(), state_checkpoint=None):
         if self._connection.execute("PRAGMA journal_mode").fetchone()[0] != "wal":
             raise ContractError("JOURNAL_STORAGE_PROFILE_MISMATCH")
@@ -311,6 +473,7 @@ class SqliteJournal:
         matched = {scope for scope, point in anchors.items() if point == positions[scope]}
         cursor = self._connection.execute("SELECT scope_id,sequence,event_id,event_wire,payload_wire,event_head,original_event_sha256,original_payload_sha256 FROM history_events ORDER BY scope_id,sequence")
         for scope, sequence, event_id, event_wire, payload_wire, head, event_sha, payload_sha in cursor:
+            self._check_read_budget()
             if scope not in positions or type(event_wire) is not bytes or type(payload_wire) is not bytes:
                 raise ContractError("JOURNAL_INVALID_ROW")
             event = self._events.require_successor(event_wire, positions[scope])
@@ -332,6 +495,7 @@ class SqliteJournal:
             raise ContractError("STORE_PROFILE_REQUIRED")
         return tuple(positions[scope] for scope in self._scopes)
 
+    @_budgeted_read
     def validate(self, checkpoints=()):
         """Rehash the complete prefix; checkpoints are inputs, not trust proofs."""
         with self._lock:
@@ -538,6 +702,7 @@ class SqliteJournal:
             position, new_cells)
         return self._capacity_commit(entries, result, retained)
 
+    @_budgeted_read
     def snapshot(self, keys, *, state_checkpoint=None):
         if self._state is None:
             raise ContractError("STORE_PROFILE_REQUIRED")
@@ -558,6 +723,7 @@ class SqliteJournal:
                 self._rollback_after_error(primary)
                 raise
 
+    @_budgeted_read
     def store_position(self):
         if self._state is None:
             raise ContractError("STORE_PROFILE_REQUIRED")
@@ -573,6 +739,7 @@ class SqliteJournal:
                 self._rollback_after_error(primary)
                 raise
 
+    @_budgeted_read
     def replay(self, scope_id, start=0, limit=128, *, checkpoints=()):
         self._require_scope(scope_id)
         if type(start) is not int or not 0 <= start <= 2**53 - 1 or type(limit) is not int or not 1 <= limit <= 128:
@@ -589,6 +756,7 @@ class SqliteJournal:
                 self._rollback_after_error(primary)
                 raise
 
+    @_budgeted_read
     def projection(self, scope_id, *, expected_position=None, checkpoints=(), registrations=()):
         """Read one scope's derivable references in a validated SQLite snapshot.
 
@@ -616,6 +784,7 @@ class SqliteJournal:
                 entries, byte_count = [], 0
                 cursor = self._connection.execute("SELECT event_wire,payload_wire FROM history_events WHERE scope_id=? ORDER BY sequence", (scope_id,))
                 for event_wire, payload_wire in cursor:
+                    self._check_read_budget()
                     byte_count += len(event_wire) + len(payload_wire)
                     if len(entries) >= MAX_PROJECTION_EVENTS or byte_count > MAX_PROJECTION_BYTES:
                         raise ContractError("JOURNAL_PROJECTION_BOUND_EXCEEDED")
@@ -635,6 +804,7 @@ class SqliteJournal:
             state_checkpoint=state_checkpoint, pages_per_step=pages_per_step,
             timeout_seconds=timeout_seconds, progress=progress)
 
+    @_budgeted_read
     def storage_identity(self):
         with self._lock:
             self._require_open()
@@ -644,7 +814,7 @@ class SqliteJournal:
                     "filesystem": "LOCAL_FIXED_NTFS", "power_loss_qualification": "NOT_RUN",
                     "protected_writer_or_independent_anchor": "NOT_ESTABLISHED", "read_only": self._read_only}
 
-    def close(self):
+    def _close_connection(self):
         with self._lock:
             if self._capacity_active is not None:
                 denied = ContractError("JOURNAL_OUTCOME_CAPACITY_RETAINED")
@@ -675,3 +845,43 @@ class SqliteJournal:
                 except BaseException as primary:
                     self._retain_failure(primary)
                     raise
+
+    def close(self):
+        if self._read_budget is None:
+            return self._close_connection()
+        if not self._lock.acquire(blocking=False):
+            raise ContractError("JOURNAL_READ_BUDGET_BUSY")
+        try:
+            if self._connection_close_state == "UNCERTAIN" or self._constructor_close_state == "UNCERTAIN":
+                return self._close_connection()
+            primary = None
+            if not self._closed:
+                try:
+                    self._check_read_budget()
+                except BaseException as error:
+                    primary = error
+                self._read_cleanup += 1
+                try:
+                    try:
+                        self._remove_read_progress()
+                    except BaseException as error:
+                        if primary is None:
+                            primary = error
+                    self._close_connection()
+                except BaseException as error:
+                    if primary is None:
+                        primary = error
+                finally:
+                    self._read_cleanup -= 1
+                if primary is None:
+                    try:
+                        self._check_read_budget()
+                    except BaseException as error:
+                        primary = error
+                if primary is not None:
+                    self._retain_failure(primary)
+                    raise primary
+            else:
+                self._close_connection()
+        finally:
+            self._lock.release()

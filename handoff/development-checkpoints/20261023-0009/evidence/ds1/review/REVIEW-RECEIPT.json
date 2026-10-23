@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-ds23-r1",
+  "node_id": "review",
+  "executor_id": "/root/status_packet_review",
+  "started_at": "2026-10-23T07:26:58.311545+00:00",
+  "finished_at": "2026-10-23T07:39:58.459999+00:00",
+  "input_hash": "5f3cae7a2ccc0713aa9be40f7e4d8208a424619dab0ce51b4f378f6785c035d5",
+  "changed_files": [
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/ACTUAL-REVIEW-CLAIM.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/BOUNDARY-REPRODUCTION-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/BOUNDARY-SCOPE-CLARIFICATION.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/CLAIM-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/EVIDENCE-READBACK-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/FROZEN-VERIFIER-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/INDEPENDENT-BOUNDARY-REPRODUCTION.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/INDEPENDENT-EVIDENCE-READBACK.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/MANIFEST.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/OFFICIAL-API-CHECK.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/REVIEW-RECEIPT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/REVIEW.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/finalize_rejected_review.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/independent_boundary_reproduction.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/inspect_recorded_evidence.py"
+  ],
+  "decision": "rejected",
+  "result": {
+    "decision": "rejected",
+    "manifest_sha256": "ad0776389aff69c36ada882028a163f25d401a918224ae8c4ab622e6653a7cad",
+    "review_sha256": "71d5f68a85fa1664570e6a10c1c71e78684e29eb7757510023bd5d01bc87b8f4",
+    "root_candidate_closure_sha256": "8f44a801d0cf44376795785e35676101dcdcd2fcdf96cd30dc7bf7c8eff5669b",
+    "root_candidate_closure_approved": false,
+    "review_evidence_manifest": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds1\\review\\MANIFEST.json",
+    "finding_ids": [
+      "DS1-CUSTODY-01",
+      "DS1-PROVENANCE-01"
+    ],
+    "successful_author_controls_and_full_snapshot_preserved": true,
+    "canonical_test_bodies_executed": 0,
+    "ST2_execution_authorized": false,
+    "full_product_acceptance": false
+  },
+  "commands": [
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/independent_boundary_reproduction.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/work/verify_prepared.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/inspect_recorded_evidence.py",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "Exact frozen source, recorded evidence and canonical/Git/ST2 conservation",
+      "passed": true
+    },
+    {
+      "name": "Every nested cleanup error and failed handle custodian retained",
+      "passed": false
+    },
+    {
+      "name": "Every successful native query preserved before a later path-provider failure",
+      "passed": false
+    }
+  ],
+  "exit_status": 0
+}

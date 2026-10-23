@@ -1,0 +1,23 @@
+{
+  "reviewer": "/root/independent_broader_review",
+  "decision": "APPROVED_BOUNDED_CLOSURE_SUCCESSOR",
+  "recorded_at": "2026-10-23T05:45:06.863042+00:00",
+  "recorded_by": "/root",
+  "basis": "Named independent exact-diff and current-state review after original failure; transcription",
+  "script_sha256": "b4a26b0c19117ab0b94ea5218c37d8165ff885d3d3341355f640bae565221ca7",
+  "original_script_sha256": "9c2145d7e23cbcd5b2b5410e8c60375e1c7459a6f1e9ad7874805226f8f4716e",
+  "failed_original_process_sha256": "34cf1e38fffbacc61b8e16e99d9ef7f7e7cd8fd6ace83fe48e8621117f7bd114",
+  "failed_original_actual_exit_status": 1,
+  "failure": "TypeError duplicate recorded_at at original line21 before completion write",
+  "postrun_check_sha256": "c58d4050e3f4d07b7cc28cff9c9d10a7751cf26d8ef4a0ee36c1b9a24bd16939",
+  "changes": [
+    "four preflight guards requiring exact failed helper and untouched delivery",
+    "dict(post,Root metadata...) avoids duplicate metadata keywords"
+  ],
+  "all_original_proof_checks_and_eight_completion_transitions_unchanged": true,
+  "one_invocation_only": true,
+  "canonical_test_calls_added": 0,
+  "no_partial_completion_writes": true,
+  "original_failed_helper_not_relabelled": true,
+  "full_product_acceptance": false
+}

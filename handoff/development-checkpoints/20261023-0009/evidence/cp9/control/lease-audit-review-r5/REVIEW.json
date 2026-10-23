@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-23T06:50:14.987938+00:00",
+  "reviewer": "/root/broader_successor_author",
+  "independent_review": true,
+  "decision": "approved",
+  "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\lease_audit_r5.py",
+  "source_sha256": "67fc28f556e0657dee127c062aa8228009732c5d7c1ce20751052ca52fc66cae",
+  "assessment": "Approved as the bounded current-project lease-audit prerequisite for the exact CP9 publication path; no publication or product acceptance is granted by this review.",
+  "controls": {
+    "selected": 46,
+    "passed": 46,
+    "failed_expectations": 0,
+    "actual_process_exit_status": 0,
+    "result_sha256": "395f05be556684ba56861c293da854a43e4e723a80b3f0093838a8675cadd38a",
+    "process_sha256": "2f441ca81d5267499170c86addf717efac2536702dbe260e27687e6f7afa5856",
+    "controls_sha256": "8e99788f33d9e60cba28f33aa5903b33726dfe21d89fb4eed5276d7e2a137463",
+    "all_46_prior_R4_case_ids_and_order_retained": true,
+    "actual_exact17_packet_validator_used": true,
+    "actual_stock_canonical_receipt_hash_used": true,
+    "normalized_actual_receipt_shape": true,
+    "packet_read_seam": "Synthetic bytes only"
+  },
+  "resolved_findings": [
+    {
+      "id": "LEASE-AUDIT-R2-01",
+      "status": "Claim/node mirror contradictions rejected"
+    },
+    {
+      "id": "LEASE-AUDIT-R3-01",
+      "status": "Own receipt payload/state hashes, refs, run/node/executor identity, integer-zero exits and validation policy enforced"
+    },
+    {
+      "id": "LEASE-AUDIT-R4-01",
+      "status": "Recorded RUNNING nodes without a matching non-null claim now classify unresolved and block clearance"
+    }
+  ],
+  "reviewed_semantics": [
+    "Pinned packet identity and exact17 scope validated through real exact_git_scope.packet",
+    "Own allowance requires exactly one current integrate claim with Root executor and explicit .git workspace",
+    "Independent review executor matches stored node and differs from Root; validation executor is Root",
+    "Review validation records may be empty; gate records must be nonempty with exact True passed values",
+    "Receipt canonical hashes bind payloads to stored node hashes; all statuses require integer zero",
+    "Other overlapping Git writers, contradictory mirrors, missing RUNNING custody and existing Git lock files fail closed",
+    "Closed nodes without claims and non-Git writers remain consistent with the disclosed bounded policy"
+  ],
+  "prior_rejections": {
+    "R2": {
+      "review_sha256": "04095a2c9b0b6693a2986a68f5a4b5c1247394aa6514a1644a3a55ed547e9f1b",
+      "manifest_sha256": "c6e4b809b2afe2f9cdb345d18f3c0a51ceb309ec596a1ca5db736e949c15562d",
+      "historical_rejection_preserved": true
+    },
+    "R3": {
+      "review_sha256": "c5d51e54c860cc1c7447da7593db58895ecc43020949afc1724d1a9747e90040",
+      "manifest_sha256": "0f748c9dd9ba4f0ea7dfd5189c219589e0f81d2ab55bdf457b03ea946fc1c6d8",
+      "historical_rejection_preserved": true
+    },
+    "R4": {
+      "review_sha256": "9bf1a47aa21175d72bd1ce9ea6847bf04511d9ca245bbc7fa3170fead11bb637",
+      "manifest_sha256": "6416f63403de6a408220d6ae64e96a9a4eb48a9541cb3e1cae2ee502cb9524d8",
+      "historical_rejection_preserved": true
+    }
+  },
+  "only_behavioral_delta_from_rejected_R4": "Complete RUNNING-node set must equal persisted claim keys",
+  "source_and_prior_conservation": true,
+  "canonical_or_coordinator_or_Git_mutation": false,
+  "real_inventory_or_native_execution": false,
+  "claims_verify_gates_invoked": false,
+  "limitations": [
+    "In-memory controlled inventory and packet read seams; no live publication packet or claim created or consumed",
+    "Current-project depth<=8 inventory and exact disclosed exclusions; not a machine-wide lease registry or process-liveness determination",
+    "Root still must perform actual exact packet review, stock verification, current-claim/lease and Git-lock readbacks, ordinary hook execution and remote/public readbacks",
+    "This approval applies only to the exact source hash and bounded prerequisite purpose"
+  ],
+  "global_clearance": false,
+  "publication_approval": false,
+  "product_acceptance": false
+}

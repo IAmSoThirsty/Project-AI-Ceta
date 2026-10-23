@@ -1,0 +1,55 @@
+{
+  "recorded_at": "2026-10-23T04:34:21.052020+00:00",
+  "project": "T:\\00-Active\\Project-AI-CETA",
+  "status": "ADDITIVE_EXACT_BROADER_CUSTODY_SUCCESSOR_INPUT",
+  "original_packet_sha256": "a2b78b2695c6325a86d1fddcb09a97002a2a50e05ccde39e44afff1dbd996936",
+  "original_plan_sha256": "7fad091703018241a9b909dfb05509aea93c6178289472db4376ec8b64325947",
+  "failed_predecessor": {
+    "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br",
+    "control": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br\\control",
+    "run_id": "ceta-br23-r1",
+    "closure_sha256": "59abce80bd41b9c1570abee6fafeb9b4316e2e0f020d495803e1a2847e621304",
+    "whole_validation": "FAILED_EXIT1_POST_JS9_SNAPSHOT_NO_SEAL",
+    "test_bodies_selected_started_stopped": 510,
+    "failures": 0,
+    "errors": 0,
+    "original_failed_file_path": "UNKNOWN"
+  },
+  "current_successor": {
+    "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3",
+    "control": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\control",
+    "run_id": "ceta-br23-r3",
+    "packet_sha256": "fd4593d75ff3c6ea5e6badad9edeed67b5247089c591087a8e7a5957e34d0eb9",
+    "plan_sha256": "8e6bae1857e2b02e2f1558e883f77d6e2b2f4aaf5646f5e5ff8d25f735ec45db",
+    "graph_fingerprint": "38a70f9069edec1aeb7daff0dbd491a474891ac5997d9a69a7ceda296aa4740e",
+    "actual_closed_outcome_required": true
+  },
+  "constraints": {
+    "source_manifest_sha256": "d1bf22faa306ba620b6a284d037015e3041ae7319961f51951d84f3762992cf9",
+    "source_payloads": 560,
+    "status_registers": 2,
+    "full_ordered_test_ids_equal_predecessor": true,
+    "canonical_source_native_and_Git_equal": true,
+    "unchanged_50ms_contract": true,
+    "failed_predecessor_must_never_drive_valid_broader_state": true,
+    "bounded_disposable_Python_custody_helpers": true,
+    "native_worker_qualification": false,
+    "full_product_acceptance": false,
+    "three_context_boundaries_require_original_exception_custody": true
+  },
+  "reviewer": "/root/independent_broader_review",
+  "independent_read_only_findings": "BR3 plan accepted for authoring; exact frozen review and all prior scope/byte/50ms limits remain required.",
+  "prior_input_preserved": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\AUTHORIZED-BROADER-SUCCESSOR-INPUT.json",
+    "sha256": "a908f1b1862b9acbb9b1ff2ebac47716413c614fd10f26246c08f4759c14a5fe"
+  },
+  "rejected_preparation": {
+    "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2",
+    "control": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br2\\control-r2",
+    "run_id": "ceta-br23-r2",
+    "closure_sha256": "3422752d9491ba972a564157fefa8e0ae568fdcac1491b45776b088b544e2b6c",
+    "classification": "REJECTED_PREPARATION_BEFORE_CANONICAL_EXECUTION",
+    "canonical_test_bodies_executed": 0,
+    "execution_intent_present": false
+  }
+}

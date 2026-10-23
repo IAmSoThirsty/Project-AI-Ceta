@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-23T08:25:07.278633+00:00",
+  "reviewer": "/root/independent_broader_review",
+  "decision": "APPROVED_METADATA_GENERATOR_PREFLIGHT_ONLY",
+  "source_sha256": "12ecd4e5b56d0c10081bbdc23248922e26106ef72a04d1383cae1413bea280ff",
+  "actual_execution_approval": false,
+  "actual_ST2_composition_approval": false,
+  "actual_Q_closure_inferred": false,
+  "controls": {
+    "count": 30,
+    "passed": 30,
+    "actual_process_exit_status": 0,
+    "controls_sha256": "ac73021aec96ae9ee865f8e6a254d335dc7dd6dfb7162b7a94deb1cea99b1387",
+    "process_sha256": "2393b653e426878d21710f125a45294c5f26040835cb79ca61444706c059d6f8",
+    "valid_linked_synthetic_future_reaches_metadata_value": true,
+    "synthetic_future_support_pins": 27,
+    "qualification_run_id": "ceta-ds23-r2-gate-r2"
+  },
+  "named_refusals": [
+    "provider_member_drift",
+    "original_status_core_drift",
+    "original_review_member_drift",
+    "qualification_review_candidate_drift",
+    "qualification_review_manifest_member_drift",
+    "accepted_artifact_drift",
+    "closure_verification_link_drift",
+    "qualification_gate_flag_false",
+    "qualification_review_receipt_bad_hash",
+    "qualification_gate_wrong_command",
+    "qualification_bool_exit_status",
+    "qualification_failed_validation",
+    "qualification_other_completed_receipt_bad_hash",
+    "qualification_other_completed_node_claim_present",
+    "qualification_current_claims_present",
+    "qualification_state_verification_state_mismatch",
+    "original_gate_validation_false",
+    "original_gate_receipt_link_bad",
+    "original_gate_wrong_command_with_valid_hash",
+    "original_gate_empty_commands_with_valid_hash",
+    "original_gate_wrong_graph",
+    "original_review_receipt_candidate_drift_valid_hash",
+    "original_claim_present",
+    "historical_failed_admission_relabel",
+    "accepted_provider_wrong_with_relinked_closure",
+    "accepted_controls_sha256_wrong_with_relinked_closure",
+    "accepted_full_F_snapshot_sha256_wrong_with_relinked_closure",
+    "accepted_access_time_policy_sha256_wrong_with_relinked_closure",
+    "accepted_root_candidate_closure_sha256_wrong_with_relinked_closure"
+  ],
+  "physical_reader": {
+    "witness_sha256": "bcec6ded2dd3cd05850fb136623eea8d72ce5e10ebd5962865ee119a7aab6630",
+    "ordinary_path_failures": 7,
+    "final_exact_reader_passes": 7,
+    "Swork_long_members": 6,
+    "Sreview_long_members": 1,
+    "characters_each": 319,
+    "bytes_match_original_manifest": true,
+    "relative_and_UNC_inputs_refused": true,
+    "failed_ordinary_read_and_current_extended_success_both_preserved": true,
+    "no_member_dropped": true
+  },
+  "historical_source_cuts": {
+    "pins": {
+      "BUILD-HANDLE-EXECUTION-AMENDMENT-before-original-review-links.py": "389ba58e9117771d8762208745a3c76ab2298ddf89ad4143bd695678f9e98b65",
+      "BUILD-HANDLE-EXECUTION-AMENDMENT-before-original-gate-command.py": "2827232408ba19e4900b4978fd5ab3f52a97aaead1245f4f7fb09f914d59e5b9",
+      "BUILD-HANDLE-EXECUTION-AMENDMENT-before-long-read.py": "4219b7c97ef2fa1b95b0694ae5030ef99ef5b61733245e01ffccf02bb49aafe6"
+    },
+    "all_unexecuted": true,
+    "not_labelled_process_failures": true
+  },
+  "findings": [
+    {
+      "id": "AMENDMENT-LONG-PATH-03",
+      "status": "FIXED_IN_EXACT_12EC_SUCCESSOR",
+      "affected_prior_source_sha256": [
+        "389ba58e9117771d8762208745a3c76ab2298ddf89ad4143bd695678f9e98b65",
+        "2827232408ba19e4900b4978fd5ab3f52a97aaead1245f4f7fb09f914d59e5b9",
+        "4219b7c97ef2fa1b95b0694ae5030ef99ef5b61733245e01ffccf02bb49aafe6"
+      ],
+      "problem": "Ordinary Path.read_bytes failed on frozen319character Swork/review members although exact extended paths existed and matched their pins. Prior sha/load would fail before a valid metadata value.",
+      "repair": "Explicit absolute extended drive-path reader for both sha/load; ordinary UNC and relative paths refuse; all original members remain checked. Exact reader independently verified on all seven real long members."
+    },
+    {
+      "id": "AMENDMENT-S-GATE-COMMAND-04",
+      "status": "FIXED_BEFORE_FINAL_CONTROLS",
+      "affected_prior_source_sha256": [
+        "389ba58e9117771d8762208745a3c76ab2298ddf89ad4143bd695678f9e98b65",
+        "2827232408ba19e4900b4978fd5ab3f52a97aaead1245f4f7fb09f914d59e5b9"
+      ],
+      "problem": "Earlier metadata guards checked original S normalized gate receipt and validation flags but did not compare its commands with the actual declared exact gate.",
+      "repair": "Pinned stored S graph/state fingerprint plus exact declared command and normalized receipt command equality. Final negative with changed command or empty commands and recomputed valid receipt hashes refuses. This prior finding was source inspection; no old builder was executed."
+    }
+  ],
+  "scope": {
+    "real_input_files_conserved": 312,
+    "write_tail_excluded": true,
+    "actual_metadata_file_created": false,
+    "real_claims_or_coordinator_actions": false,
+    "native_or_product_or_Fscan": false,
+    "canonical_or_Git_writes": false
+  },
+  "remaining": [
+    "After actual DS2 corrected-run independent review and ordinary gate/delivery closure, obtain actual qualification/review-manifest pins; the synthetic review manifest is not execution evidence.",
+    "Status reviewer must separately review exact generated amendment, runner/launcher, caller composition and actual support pins before any ST2 application/claims.",
+    "Original failed ST2 admission paths/scalars remain NOT_CAPTURED and causes UNKNOWN. Old DS2 gate setup rejection and DS1 rejection remain preserved.",
+    "Final CP9 preparation and publication review remains separate after concrete final inputs."
+  ],
+  "full_product_acceptance": false
+}

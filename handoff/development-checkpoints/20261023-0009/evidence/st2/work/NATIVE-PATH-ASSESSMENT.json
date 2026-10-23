@@ -1,0 +1,141 @@
+{
+  "recorded_at": "2026-10-23T04:35:56.454831+00:00",
+  "recorded_by": "/root",
+  "reviewer": "/root/broader_successor_author",
+  "basis": "Named independent read-only source/caller trace with Root readback of exact selected source lines; static findings, no native execution",
+  "canonical_mutation": false,
+  "tests_executed": false,
+  "prior_assessment_preserved": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\work\\before-br3-NATIVE-PATH-ASSESSMENT.json",
+    "sha256": "521b1381ca81bc1e0d799fdc7280bd23c0c979dd173a7ec619e3a4774633386c",
+    "correction": "Existing owned-client transport already provides the physically bound peer route; no launcher ManualEffectClient should be added."
+  },
+  "current_findings": [
+    {
+      "classification": "FOLLOW_UP_ENGINEERING",
+      "finding": "Extend the existing owned-client transport with strict trusted selected-manual readiness and exact original-wire uncertainty custody across lost response, Stop, close and reconciliation. Preserve physical client PID/creation/image binding; manual RUN/RESTORE must not be retried, refunded or inferred to have had no effect.",
+      "source_locations": {
+        "src/ceta/composition/owned_service.py": [
+          418,
+          461,
+          474,
+          487,
+          721,
+          729
+        ],
+        "src/ceta/composition/client_process.py": [
+          35,
+          39,
+          56
+        ],
+        "src/ceta/identity/windows_pipe.py": [
+          512,
+          602,
+          704
+        ]
+      },
+      "test_surface": [
+        "tests/contract/test_owned_service.py",
+        "tests/contract/test_real_effect_entrypoint.py"
+      ]
+    },
+    {
+      "classification": "BLOCKING_GENUINE_CHILD_PROVISIONING",
+      "finding": "The ordinary child entry calls main without a ManualRuntimeSelection. Genuine child-owned native provisioning still needs actual deployment/code/native assets, policy/adapter/limits and durable epoch provenance. No durable epoch provisioning/persistence owner was found in the targeted canonical trace; test epoch7, placeholder digests and controlled AppContainer facts are not deployment evidence.",
+      "source_locations": {
+        "src/ceta/composition/service_process.py": [
+          75,
+          119,
+          178
+        ],
+        "src/ceta/composition/real_effect_runtime.py": [
+          27,
+          38,
+          62,
+          127
+        ],
+        "src/ceta/identity/native_clock.py": [
+          258
+        ]
+      },
+      "existing_transport": "OwnedService launches/retains the physical client, conveys its PID/creation/image to the service and sends original bounded wire through that client. This retained route is the implementation surface."
+    },
+    {
+      "classification": "STATIC_TIMING_BUDGET_CONFLICT_REQUIRES_REPAIR",
+      "finding": "The same manual RUN path performs enrollment and approval ceremonies with separate full20s allowances inside an original transport window capped at30s; the default canonical enrollment session span is30s. Two20s ceremony allowances already exceed30s before other work. Ordinary owned transport is stricter: call_seconds<=10, command timeout_ms<=10000, envelope lifetime10s. Use one nonrenewing joint budget, recompute each stage remaining time through its own clock API, reserve later effect/observer/settlement/response work and reject incompatible limits before helper admission.",
+      "source_locations": {
+        "src/ceta/composition/real_effect_service.py": [
+          52,
+          55,
+          181,
+          223,
+          232,
+          302,
+          335,
+          340
+        ],
+        "src/ceta/composition/real_effect_host.py": [
+          99,
+          101,
+          115,
+          117
+        ],
+        "src/ceta/identity/windows_pipe.py": [
+          594,
+          602,
+          609,
+          616,
+          830
+        ],
+        "src/ceta/composition/owned_service.py": [
+          123,
+          490
+        ],
+        "src/ceta/composition/client_process.py": [
+          39
+        ]
+      },
+      "measurements": "NOT_MEASURED_STATIC_SOURCE_ANALYSIS",
+      "historical_CHALLENGE_cause": "NOT_ESTABLISHED",
+      "reliable_50ms_admission": "NOT_ESTABLISHED",
+      "unchanged_admission_bound_ns": 50000000,
+      "limits": [
+        "Never renew original transport/envelope/canonical deadlines or compare absolute readings from different clock domains.",
+        "Budget admission cannot preempt synchronous native calls or prove scheduler latency.",
+        "No timeout extension, deadline reset, expanded retry or native helper launch was performed."
+      ]
+    },
+    {
+      "classification": "BLOCKING_NATIVE_QUALIFICATION",
+      "finding": "AC7 one-attempt authorization is consumed; worker exit0xC0000142, failing DLL/main/API order UNKNOWN; incomplete loader-capture work must be completed/reviewed before a separately authorized native attempt.",
+      "preserve": [
+        ".agents/runtime/ac7-token-contract-20261020/EXECUTION-CLAIM.json",
+        ".agents/runtime/ac7-startup-diagnosis-20261020/HANDOFF-DISPOSITION.json",
+        ".agents/runtime/ac7-loader-capture-20261020/HALT-RECEIPT.json"
+      ]
+    },
+    {
+      "classification": "ACTUAL_JOURNEY_EVIDENCE_REQUIRED",
+      "finding": "Historical ownerIngressReference is missing journey evidence, not a current source literal or authority flag. Genuine human/native/worker/observer/epoch/peer facts remain unverified."
+    }
+  ],
+  "source_pins": {
+    "src/ceta/composition/real_effect_runtime.py": "6c40837689a79aed77a5de5fe497eed74c6d15fa65b0292b99808efc32a906ba",
+    "src/ceta/composition/service_process.py": "0fcad83f2ea223b1b9409299f720cca16a3a3aa326f098fa26016125239f0ea8",
+    "src/ceta/composition/owned_service.py": "e67580753483a722aeebae1fcd41f4f0d7e9b1eb9cd6f025504383069b55ef9f",
+    "src/ceta/composition/real_effect_cli.py": "dead2d6eb93523516d134fff98c3d968239981f37b29a95633c14a544c8d7c66",
+    "tools/ceta_operator.py": "f5cbaa181e046cfa53e6d08b1fab7ae4d043872957ce2effda02374bf277d436",
+    "tests/contract/test_real_effect_entrypoint.py": "91d8b8e3b214ce5beea2b2593c557ace866a7b216f5e89f40c651415bae542a0",
+    "src/ceta/identity/owner_session.py": "b1ac4d6a75388101a854b70ea6ffa7d5d0911cd7dcfcb54feebdf11752b1dcf6",
+    ".agents/runtime/ac7-token-contract-20261020/EXECUTION-CLAIM.json": "575dd0074f573a4060f4f9145c1a041c14baec0a602b0cebfdbe3c7fded48af1",
+    ".agents/runtime/ac7-startup-diagnosis-20261020/HANDOFF-DISPOSITION.json": "de473ea2aa94e073c5bbab8ec24d5133562e1c5f3ebbeb9c5f7bd4c668d0fa80",
+    ".agents/runtime/ac7-loader-capture-20261020/HALT-RECEIPT.json": "8f2132356f541d403147e7d5b565bee974beb87436fb1b92ce065f6eafb6cb5c",
+    "src/ceta/composition/client_process.py": "6ebe58e849e8b7a560b1604ab42cbb4b18d7739d2315f6413bea0d947f5a9516",
+    "src/ceta/composition/real_effect_host.py": "68804d6b0e52f09135c3b97546f5f8050410b48d3570043b4be4fcc84a950d30",
+    "src/ceta/composition/real_effect_service.py": "adb3c35f19c3f1da0274dccd460fb3a3d26f04a6e4d11797590c99638492b9dd",
+    "src/ceta/identity/windows_pipe.py": "4bb72373827fea7001d173061078cd3ab768400744079eb6b759290477958c1c",
+    "src/ceta/identity/native_clock.py": "92981b3b62fea365f927542d795a058d035b80949248126b9cbb9d129fb5715c"
+  },
+  "full_product_acceptance": false,
+  "completion_percentage": null
+}

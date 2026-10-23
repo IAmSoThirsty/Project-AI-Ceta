@@ -1,0 +1,53 @@
+test_Git_status_wire_uses_original_NUL_serialization_exactly (test_jr_controls.Controls.test_Git_status_wire_uses_original_NUL_serialization_exactly) ... ok
+test_READY_only_authority_refuses_before_first_test_or_report_write (test_jr_controls.Controls.test_READY_only_authority_refuses_before_first_test_or_report_write) ... ok
+test_actual_three_Root_claims_accept_and_wrong_contexts_refuse (test_jr_controls.Controls.test_actual_three_Root_claims_accept_and_wrong_contexts_refuse) ... ok
+test_complete_tree_includes_root_empty_and_nested_ignored_directories (test_jr_controls.Controls.test_complete_tree_includes_root_empty_and_nested_ignored_directories) ... ok
+test_create_only_replay_refused_before_test_body (test_jr_controls.Controls.test_create_only_replay_refused_before_test_body) ... ok
+test_empty_directory_disappearance_is_not_preservation (test_jr_controls.Controls.test_empty_directory_disappearance_is_not_preservation) ... ok
+test_failure_and_skip_never_report_cohort_success (test_jr_controls.Controls.test_failure_and_skip_never_report_cohort_success) ... ok
+test_invalid_actual_stored_receipt_refuses_before_first_write (test_jr_controls.Controls.test_invalid_actual_stored_receipt_refuses_before_first_write) ... ok
+test_module_copy_and_ROOT_substitution_refused_before_case_loading (test_jr_controls.Controls.test_module_copy_and_ROOT_substitution_refused_before_case_loading) ... ok
+test_module_spec_origin_is_a_path_not_the_spec_object (test_jr_controls.Controls.test_module_spec_origin_is_a_path_not_the_spec_object) ... ok
+test_nested_scandir_permission_error_is_exact (test_jr_controls.Controls.test_nested_scandir_permission_error_is_exact) ... ok
+test_preexisting_file_bytes_and_native_identity_must_stay_exact (test_jr_controls.Controls.test_preexisting_file_bytes_and_native_identity_must_stay_exact) ... ok
+test_primary_and_fixture_observation_error_keep_exact_objects (test_jr_controls.Controls.test_primary_and_fixture_observation_error_keep_exact_objects) ... ok
+test_replaced_empty_directory_identity_is_not_preservation (test_jr_controls.Controls.test_replaced_empty_directory_identity_is_not_preservation) ... ok
+test_result_writer_failure_after_bytes_written_never_becomes_success (test_jr_controls.Controls.test_result_writer_failure_after_bytes_written_never_becomes_success) ... ok
+test_root_scandir_permission_error_is_exact_and_never_partial_success (test_jr_controls.Controls.test_root_scandir_permission_error_is_exact_and_never_partial_success) ... ok
+test_seal_failure_after_bytes_written_never_becomes_success (test_jr_controls.Controls.test_seal_failure_after_bytes_written_never_becomes_success) ... ok
+test_second_fixture_after_observation_runs_when_first_fails (test_jr_controls.Controls.test_second_fixture_after_observation_runs_when_first_fails) ... ok
+test_skip_is_retained_and_not_success (test_jr_controls.Controls.test_skip_is_retained_and_not_success) ... ok
+test_source_after_fault_is_not_silently_accepted (test_jr_controls.Controls.test_source_after_fault_is_not_silently_accepted) ... ok
+test_synthetic_success_requires_process_zero_and_exact_seal (test_jr_controls.Controls.test_synthetic_success_requires_process_zero_and_exact_seal) ... ok
+test_wrong_actual_executor_refuses_before_first_write (test_jr_controls.Controls.test_wrong_actual_executor_refuses_before_first_write) ... ok
+test_nonstring_exception_attribute_preserves_original_body_failure (__main__.IndependentControls.test_nonstring_exception_attribute_preserves_original_body_failure) ... FAIL
+
+======================================================================
+FAIL: test_nonstring_exception_attribute_preserves_original_body_failure (__main__.IndependentControls.test_nonstring_exception_attribute_preserves_original_body_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\jr\review\run_review_controls.py", line 16, in test_nonstring_exception_attribute_preserves_original_body_failure
+    try:self.engine(lambda:(_ for _ in ()).throw(primary))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\jr\review\test_jr_controls.py", line 19, in engine
+    return r.run_observed(suite,[case.id()],self.output,{'fixture':self.fixture},
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\jr\review\run_canonical_journal.py", line 246, in run_observed
+    test_error_details=[] if result is None else result.details,primary=diagnostic(primary),
+                                                                        ^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\jr\review\run_canonical_journal.py", line 185, in diagnostic
+    elif key.endswith(('state','code')) and isinstance(value,(str,int,bool,type(None))):secondary[str(key)]=value
+         ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'endswith'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\jr\review\run_review_controls.py", line 22, in test_nonstring_exception_attribute_preserves_original_body_failure
+    self.assertIs(observed,primary,'diagnostic formatting replaced the original primary')
+AssertionError: AttributeError("'int' object has no attribute 'endswith'") is not KeyboardInterrupt('original exact body failure') : diagnostic formatting replaced the original primary
+
+----------------------------------------------------------------------
+Ran 23 tests in 19.278s
+
+FAILED (failures=1)

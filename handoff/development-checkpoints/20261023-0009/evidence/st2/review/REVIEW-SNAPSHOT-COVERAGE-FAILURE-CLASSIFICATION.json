@@ -1,0 +1,29 @@
+{
+  "classification": "OVERALL_VERIFICATION_FAILED_ORDINARY_REVIEW_COVERAGE_GAP",
+  "actual_process": "FINAL-CONSERVATION-R2-PROCESS.json",
+  "actual_exit_status": 1,
+  "raw_report": "FINAL-SOURCE-AND-POLICY-CONSERVATION-R2.json",
+  "raw_report_status": "PASS",
+  "raw_report_status_is_not_a_valid_whole_check_success": true,
+  "reason": "The report was persisted before its final ordinary-vs-complete snapshot assertion, which failed. Preserve the raw report and failure; do not relabel it successful.",
+  "verified_components": {
+    "all178_frozen_files_758_external_pins_and_two_amendment_inputs_unchanged": true,
+    "canonical562_Git_index_native_unchanged": true,
+    "current_full_extended_review_snapshot_succeeded": true
+  },
+  "failed_component": {
+    "ordinary_snapshot_equals_complete_policy": false,
+    "ordinary_missing": [
+      ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_long_windows_file_observed/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/long.txt"
+    ],
+    "ordinary_missing_sha256": {
+      ".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_long_windows_file_observed/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/long.txt": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9"
+    }
+  },
+  "proposed_supplemental_route": "Ordinary receipt reports only its actual observed changes; a separately verified full physical review manifest pins every omitted in-scope control artifact and explicitly records the stock coverage limit. No runtime override or weakened source check.",
+  "route_not_yet_authorized_at_recording": true,
+  "canonical_test_bodies_executed": 0,
+  "canonical_fixture_writes": false,
+  "canonical_or_Git_writes": false,
+  "full_product_acceptance": false
+}

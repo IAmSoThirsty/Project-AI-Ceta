@@ -1,0 +1,336 @@
+--- before/checkpoint_core.py
++++ after/checkpoint_core.py
+@@ -1,4 +1,7 @@
+ """Checkpoint9 preparation boundaries; no mutation on import."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path,PurePosixPath
+ from datetime import datetime,timezone
+ import hashlib,importlib.util,json,os,re,stat,sys
+@@ -24,9 +27,12 @@
+ def save(path,value):
+     raw=(json.dumps(value,indent=2,allow_nan=False)+'\n').encode()
+     with Path(path).open('xb') as stream:
+-        assert stream.write(raw)==len(raw);stream.flush();os.fsync(stream.fileno())
++        written=stream.write(raw)
++        if written!=len(raw):raise OSError('short checkpoint JSON write')
++        stream.flush();os.fsync(stream.fileno())
+ 
+ def engine():
++    if any(name.casefold()=='pythonoptimize' for name in os.environ):raise RuntimeError('CP9_INHERITED_OPTIMIZATION_FORBIDDEN: scrub PYTHONOPTIMIZE before child commands')
+     assert sha(UTILITY.read_bytes())==UTILITY_SHA,'reviewed preparation utility changed'
+     spec=importlib.util.spec_from_file_location('_cp9_reviewed_preparation_utility',UTILITY)
+     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
+--- before/assemble_checkpoint.py
++++ after/assemble_checkpoint.py
+@@ -1,4 +1,7 @@
+ """Assemble exact checkpoint9 inputs only after Root supplies its final closed evidence."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path
+ from datetime import datetime,timezone
+ import argparse,difflib,hashlib,json,platform,subprocess,sys
+@@ -58,12 +61,17 @@
+     c.save(public/'EVIDENCE-LOCATIONS.json',evidence_locations(value,final_pin))
+     c.save(public/'STATUS.json',dict(checkpoint_sequence=9,parent=c.PARENT,prepared_at=datetime.now(timezone.utc).isoformat(),publication='NOT_EXECUTED; REQUIRES_SEPARATE_REVIEW_GATE_EXACT_GIT_CLAIM',canonical_payloads=560,status_register_exports=2,current_repository_execution=status,current_source_test_delta=source_delta,preserved_registry_fixtures=sorted(c.IMMUTABLE_FIXTURES),preserved_parent_pdf_exports=sorted(c.PDF_PATHS),historical_C1_integration_state='FAILED',historical_C1_failed_receipt_sha256=c.HISTORICAL_C1_FAILED_RECEIPT_SHA,closed_prerequisites=value['closed_prerequisites'],current_broader=value['current_broader'],preserved_broader_attempts=value['preserved_broader_attempts'],full_product_acceptance=False,completion_percentage=None))
+     md='Project-AI: CETA development checkpoint9\n\nCanonical integration and evidence consistency have progressed. No defensible overall completion percentage is established.\n\nThe retained status register contains the actual closed journal, timing, broader successor and status-application outcomes. BR1 remains failed despite510 completed test bodies with no test failures: required post-execution observation failed and no success seal exists. BR2 preparation was independently rejected before canonical execution: zero test bodies and no execution intent. Historical halt, failed reviews and the consumed AC7 native attempt remain preserved.\n\nReliable admission timing, genuine attributable authorization-to-native-effect, remaining application/model requirements, installed, offline, migration, endurance and human/hardware acceptance remain open.\n\nPreparation uses an isolated index and private objects. Actual publication requires its own fresh exact Git scope and ordinary pre-push hook. This disclosure is development evidence and does not establish full-product acceptance.\n'
+-    with (public/'STATUS.md').open('xb') as stream:stream.write(md.encode());stream.flush();__import__('os').fsync(stream.fileno())
++    raw_md=md.encode()
++    with (public/'STATUS.md').open('xb') as stream:
++        written=stream.write(raw_md)
++        if written!=len(raw_md):raise OSError('short checkpoint status Markdown write')
++        stream.flush();__import__('os').fsync(stream.fileno())
+     selected={}
+     for rel in manifest['payload_hashes']:
+         raw,pin=c.stable(c.F/rel);selected[rel]=dict(input_path=str(c.F/rel),input_pin=pin)
+     extras=[dict(source=str(c.F/rel),destination=rel,sha256=pin) for rel,pin in value['status_pins'].items()]+[{k:row[k] for k in ('source','destination','sha256')} for row in value['exports']]
+     engineering=('checkpoint_core.py','assemble_checkpoint.py','run_prepare.py','verify_prepared.py','verify_publication.py','freeze_preparation.py','exact_git_scope.py','publish_checkpoint.py','test_checkpoint_controls.py','run_controls.py','README.md','SELF-REVIEW.json','FINAL-INPUT-CONTRACT.json','CONTROLS-RESULT.json','CONTROLS.stdout','CONTROLS.stderr','CONTROLS-PROCESS.json','SOURCE-MANIFEST.json')
++    engineering+=('INTERPRETER-PACK-INDEPENDENT-FINDINGS.json','INTERPRETER-PACK-REVIEW-RESPONSE.json','INTERPRETER-PACK-SOURCE-DELTA.patch','INTERPRETER-PACK-PATCH-SETUP-FAILURE-R1.json','INTERPRETER-PACK-ENVIRONMENT-FAILURE-R8.json','INTERPRETER-PACK-IMPORT-ENVIRONMENT-DIAGNOSIS-R1.json','INTERPRETER-PACK-CLAIM-ENVIRONMENT-DIAGNOSIS-R1.json','INTERPRETER-PACK-POPEN-ENVIRONMENT-DIAGNOSIS-R1.json','INTERPRETER-PACK-POWERSHELL-NULL-ENVIRONMENT-DIAGNOSIS-R1.json','CONTROL-ENVIRONMENT-RELEASE-R9.json','SYNTAX-CHECK-INTERPRETER-PACK-R2.json','POST-INTERPRETER-PACK-CONTROLS-PRESERVATION.json','ROOT-INTERPRETER-INPUT-LINEAGE.json',*[f'controls-r{attempt}/{name}' for attempt in (7,8,9) for name in ('START.json','RESULT.json','TESTS.log')],*[f'CONTROLS-ATTEMPT{attempt}{suffix}' for attempt in (7,8,9) for suffix in ('-PROCESS.json','.stdout','.stderr')],*[f'root-interpreter-inputs/{name}' for name in ('ROOT-CLOSE-PREPARATION.py','ROOT-PUBLICATION.py','SETUP-PUBLICATION.py','ROOT-INTERPRETER-GUARD-AMENDMENT.json','test_root_interpreter_guards.py','ROOT-INTERPRETER-CONTROLS.json','ROOT-INTERPRETER-CONTROLS-PROCESS.json','ROOT-INTERPRETER-CONTROLS.stdout','ROOT-INTERPRETER-CONTROLS.stderr')])
+     for name in engineering:
+         path=c.W/name;extras.append(dict(source=str(path),destination=c.PREFIX+'engineering/'+name,sha256=c.stable(path)[1]['sha256']))
+     extras.append(dict(source=str(c.UTILITY),destination=c.PREFIX+'engineering/prepare_checkpoint_engine.py',sha256=c.UTILITY_SHA))
+--- before/run_prepare.py
++++ after/run_prepare.py
+@@ -1,4 +1,7 @@
+ """One private preparation attempt; no canonical refs/index/object writes."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from datetime import datetime,timezone
+ import argparse,json,os,sys
+ import checkpoint_core as c
+@@ -10,7 +13,9 @@
+     def audit(args,result):
+         nonlocal sequence
+         sequence+=1;entry=dict(sequence=sequence,at=datetime.now(timezone.utc).isoformat(),argv=result.args,exit_status=result.returncode,stdout_bytes=len(result.stdout),stdout_sha256=c.sha(result.stdout),stderr_bytes=len(result.stderr),stderr_sha256=c.sha(result.stderr),stdout=result.stdout.decode('utf8',errors='replace') if len(result.stdout)<65536 and args[0]!='cat-file' else 'EXACT_BYTES_RETAINED_IN_PRIVATE_OBJECTS_OR_HASH_ONLY',stderr=result.stderr.decode('utf8',errors='replace') if len(result.stderr)<65536 else 'HASH_ONLY; OVER_CAPTURE_BOUND')
+-        raw=(json.dumps(entry,allow_nan=False)+'\n').encode();assert journal.write(raw)==len(raw);journal.flush();os.fsync(journal.fileno())
++        raw=(json.dumps(entry,allow_nan=False)+'\n').encode();written=journal.write(raw)
++        if written!=len(raw):raise OSError('short preparation command journal write')
++        journal.flush();os.fsync(journal.fileno())
+     module.COMMAND_AUDITOR=audit
+     try:outcome=module.prepare(c.W/'CHECKPOINT-INPUTS.json')
+     except BaseException:primary=sys.exc_info()
+--- before/verify_prepared.py
++++ after/verify_prepared.py
+@@ -1,4 +1,7 @@
+ """Read-only exact checkpoint9 conservation audit; no canonical effects."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path
+ import argparse,json,os,stat
+ import checkpoint_core as c
+@@ -35,7 +38,7 @@
+     locator=c.W/'public/EVIDENCE-LOCATIONS.json';assert json.loads(locator.read_bytes())==evidence_locations(value,final_pin),'evidence locator differs from explicit Root final exports'
+     assert exports[c.PREFIX+'EVIDENCE-LOCATIONS.json']['sha256']==c.sha(locator.read_bytes()),'evidence locator is not exported exactly'
+     scan=json.loads((c.W/'prepared-0001/EXACT-EXPORT-SECRET-SCAN.json').read_bytes());assert scan['result']=='PASS' and not scan['findings']
+-    controls=json.loads((c.W/'CONTROLS-RESULT.json').read_bytes());assert controls['successful'] and controls['tests_run']==51 and controls['failures']==controls['errors']==controls['skips']==0
++    controls=json.loads((c.W/'CONTROLS-RESULT.json').read_bytes());assert controls['successful'] and controls['tests_run']==61 and controls['failures']==controls['errors']==controls['skips']==0
+     for name,pin in controls['tested_sources'].items():assert c.sha((c.W/name).read_bytes())==pin,('control evidence belongs to different draft bytes',name)
+     process=json.loads((c.W/'CONTROLS-PROCESS.json').read_bytes());assert process['actual_exit_status']==0 and process['result_sha256']==c.sha((c.W/'CONTROLS-RESULT.json').read_bytes())
+     if require_freeze:
+--- before/verify_publication.py
++++ after/verify_publication.py
+@@ -1,4 +1,7 @@
+ """Future publication gate: exact reviewed packet and closed preparation, no writes."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path
+ import json
+ import checkpoint_core as c
+--- before/freeze_preparation.py
++++ after/freeze_preparation.py
+@@ -1,4 +1,7 @@
+ """Freeze current private checkpoint preparation only; never publish or move refs."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ import argparse,json
+ import checkpoint_core as c
+ from verify_prepared import audit,files
+--- before/exact_git_scope.py
++++ after/exact_git_scope.py
+@@ -1,4 +1,7 @@
+ """One later checkpoint9 Git claim; stock admission runs before exact narrowing."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path
+ import json,re,sys
+ import checkpoint_core as c
+--- before/publish_checkpoint.py
++++ after/publish_checkpoint.py
+@@ -1,4 +1,7 @@
+ """Fresh checkpoint9 publisher. Requires later exact review/gate/claim; never replay."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path
+ from datetime import datetime,timezone
+ import argparse,json,os,sys,urllib.request
+@@ -30,6 +33,12 @@
+ def refs(module):return dict(row.split(' ',1) for row in module.git(c.F,['for-each-ref','--format=%(refname) %(objectname)']).decode().splitlines())
+ def valid_readback(raw,expected):assert len(raw)<=8_000_000 and c.sha(raw)==expected
+ 
++def import_reviewed_pack(module,pack,expected_sha256):
++    """Hash and consume one stable byte object at the canonical import boundary."""
++    pack_bytes,_=c.stable(pack)
++    if c.sha(pack_bytes)!=expected_sha256:raise RuntimeError('reviewed pack bytes changed before canonical import')
++    return module.git(c.F,['index-pack','--stdin'],data=pack_bytes).decode('ascii')
++
+ def publish(packet_pin):
+     spec=e.packet(packet_pin);assert c.sha((c.W/'WORK-FREEZE.json').read_bytes())==spec['work_freeze_sha256']
+     audit(spec['final_input_sha256']);prepared_path=c.W/'prepared-0001/PREPARED.json';assert c.sha(prepared_path.read_bytes())==spec['prepared_sha256']
+@@ -37,7 +46,7 @@
+     module=c.engine();claim=current_claim(spec,packet_pin)
+     pack=next(Path(name) for name in p['pack_files'] if name.endswith('.pack'));pack_id=pack.stem.removeprefix('checkpoint-');assert pack_id==spec['pack_id']
+     destinations=[c.F/'.git/objects/pack'/('pack-'+pack_id+'.'+suffix) for suffix in ('pack','idx','rev')];assert all(not path.exists() for path in destinations)
+-    assert c.sha(c.stable(pack)[0])==p['pack_files'][str(pack)] and module.checkout_state(c.F)==p['checkout_before']
++    assert module.checkout_state(c.F)==p['checkout_before']
+     before=json.loads((c.W/'CANONICAL-BEFORE.json').read_bytes());before_refs=refs(module);tracking='refs/remotes/origin/development/checkpoints';assert before_refs[c.REF]==before_refs[tracking]==c.PARENT
+     assert module.git(c.F,['ls-remote','--refs','origin',c.REF]).decode().splitlines()==[c.PARENT+'\t'+c.REF]
+     hook=c.F/'.git/hooks/pre-push';hook_path=module.git(c.F,['config','--get','core.hooksPath'],allowed=(0,1)).decode().strip();assert not hook_path or Path(hook_path).resolve()==hook.parent.resolve()
+@@ -53,7 +62,7 @@
+     primary=None;secondary=[];module.COMMAND_AUDITOR=audit_command
+     try:
+         current_claim(spec,packet_pin,claim)
+-        result['index_pack_stdout']=module.git(c.F,['index-pack','--stdin'],data=c.stable(pack)[0]).decode('ascii')
++        result['index_pack_stdout']=import_reviewed_pack(module,pack,p['pack_files'][str(pack)])
+         child=c.tree(module,p['commit']);names=list(p['exports'])
+         for name,raw in zip(names,module.batch_blobs(c.F,[child[name][2] for name in names],{}),strict=True):assert c.sha(raw)==p['exports'][name]['sha256']
+         module.git(c.F,['merge-base','--is-ancestor',c.PARENT,p['commit']]);current_claim(spec,packet_pin,claim)
+--- before/test_checkpoint_controls.py
++++ after/test_checkpoint_controls.py
+@@ -1,8 +1,11 @@
+ """Disposable checkpoint controls; no canonical Git or publication operations."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path
+ from types import SimpleNamespace
+-from unittest.mock import patch
+-import ast,copy,hashlib,json,os,stat,sys,unittest,uuid
++from unittest.mock import Mock,patch
++import ast,copy,hashlib,json,os,stat,subprocess,sys,unittest,uuid
+ import checkpoint_core as c
+ import exact_git_scope as e
+ from assemble_checkpoint import blob_oid,evidence_locations
+@@ -235,6 +238,102 @@
+             with self.subTest(field=field),self.assertRaises(AssertionError):c.check_historical_closure(item,changed,verification)
+         changed=copy.deepcopy(verification);changed['states']['review']='RUNNING'
+         with self.assertRaises(AssertionError):c.check_historical_closure(item,closure,changed)
++
++class InterpreterSafetyControls(unittest.TestCase):
++    ENTRYPOINTS=('checkpoint_core.py','assemble_checkpoint.py','run_prepare.py','verify_prepared.py','verify_publication.py','freeze_preparation.py','exact_git_scope.py','publish_checkpoint.py','test_checkpoint_controls.py','run_controls.py')
++    def optimized_refusals(self,option):
++        harness='''import builtins,json,sys
++path=sys.argv[1]
++with open(path,'rb') as stream:code=compile(stream.read(),path,'exec')
++original_import=builtins.__import__
++calls=[]
++def guarded_import(name,*args,**kwargs):
++    calls.append(name)
++    if name!='sys':raise AssertionError('authority or other import reached before optimization refusal: '+name)
++    return original_import(name,*args,**kwargs)
++def forbidden_open(*args,**kwargs):raise AssertionError('effect reached before optimization refusal')
++builtins.__import__=guarded_import
++builtins.open=forbidden_open
++try:
++    exec(code,{'__name__':'__main__','__file__':path})
++except RuntimeError as error:
++    if not str(error).startswith('CP9_OPTIMIZATION_FORBIDDEN:'):raise
++    if calls!=['sys']:raise AssertionError(('unexpected imports',calls))
++    print(json.dumps(dict(optimization=sys.flags.optimize,entrypoint_refused=True,imports=calls,effects=False)))
++else:raise AssertionError('optimized entrypoint did not refuse')
++'''
++        environment={key:value for key,value in os.environ.items() if key.casefold()!='pythonoptimize'}
++        output=directory()
++        for name in self.ENTRYPOINTS:
++            with self.subTest(option=option,entrypoint=name):
++                argv=[sys.executable,'-E','-B',option,'-X','utf8','-c',harness,str(c.W/name)]
++                process=subprocess.run(argv,env=environment,cwd=output,stdin=subprocess.DEVNULL,capture_output=True,timeout=20)
++                (output/(name+'.stdout')).write_bytes(process.stdout);(output/(name+'.stderr')).write_bytes(process.stderr)
++                c.save(output/(name+'.json'),dict(argv=argv,actual_process_exit_status=process.returncode,stdout_sha256=c.sha(process.stdout),stderr_sha256=c.sha(process.stderr),inherited_PYTHONOPTIMIZE=False,controlled_execution_only=True))
++                self.assertEqual(process.returncode,0,process.stderr.decode('utf8',errors='replace'))
++                outcome=json.loads(process.stdout);self.assertEqual(outcome,dict(optimization=1 if option=='-O' else 2,entrypoint_refused=True,imports=['sys'],effects=False))
++    def test_all_entrypoints_refuse_O_before_authority_or_effects(self):self.optimized_refusals('-O')
++    def test_all_entrypoints_refuse_OO_before_authority_or_effects(self):self.optimized_refusals('-OO')
++    def test_create_only_save_writes_exact_bytes_and_refuses_overwrite(self):
++        path=directory()/'exact.json';value=dict(exact='checkpoint bytes',count=3);c.save(path,value)
++        self.assertEqual(path.read_bytes(),(json.dumps(value,indent=2,allow_nan=False)+'\n').encode())
++        with self.assertRaises(FileExistsError):c.save(path,dict(replacement=True))
++        self.assertEqual(json.loads(path.read_bytes()),value)
++    def test_save_short_write_is_explicit_and_not_flushed_as_success(self):
++        calls=[]
++        class ShortStream:
++            def __enter__(self):return self
++            def __exit__(self,*args):return False
++            def write(self,raw):calls.append(('write',raw));return len(raw)-1
++            def flush(self):raise AssertionError('short write must refuse before flush')
++        with patch.object(Path,'open',return_value=ShortStream()),patch.object(c.os,'fsync') as sync:
++            with self.assertRaisesRegex(OSError,'short checkpoint JSON write'):c.save(Path('controlled.json'),dict(exact=True))
++        self.assertEqual(len(calls),1);sync.assert_not_called()
++    def test_preparation_command_journal_write_is_retained(self):
++        import run_prepare
++        root=directory();c.save(root/'CANONICAL-BEFORE.json',dict(final_input_sha256='f'*64))
++        class Engine:
++            COMMAND_AUDITOR=None
++            def prepare(self,path):
++                self.COMMAND_AUDITOR(['status'],SimpleNamespace(args=['git','status'],returncode=0,stdout=b'exact output',stderr=b''))
++                return dict(controlled=True)
++        with patch.object(c,'W',root),patch.object(c,'preparation_claim',return_value={}),patch.object(c,'load_final',return_value=None),patch.object(c,'engine',return_value=Engine()):run_prepare.prepare('f'*64)
++        rows=(root/'PREPARATION-COMMANDS.jsonl').read_bytes().splitlines();self.assertEqual(len(rows),1)
++        row=json.loads(rows[0]);self.assertEqual(row['argv'],['git','status']);self.assertEqual(row['stdout_sha256'],c.sha(b'exact output'));self.assertEqual(row['stdout'],'exact output')
++        self.assertEqual(json.loads((root/'PRIVATE-PREPARATION-RESULT.json').read_bytes())['commands'],1)
++    def test_control_child_uses_E_B_and_scrubs_inherited_optimization(self):
++        inherited=dict(os.environ,PYTHONOPTIMIZE='2');environment={key:value for key,value in inherited.items() if key.casefold()!='pythonoptimize'}
++        argv=[sys.executable,'-E','-B','-X','utf8','-c',"import json,os,sys;print(json.dumps(dict(optimize=sys.flags.optimize,no_bytecode=sys.dont_write_bytecode,ignore_environment=sys.flags.ignore_environment,optimization_environment_absent=not any(k.casefold()=='pythonoptimize' for k in os.environ))))"]
++        process=subprocess.run(argv,env=environment,cwd=directory(),stdin=subprocess.DEVNULL,capture_output=True,timeout=20)
++        self.assertEqual(process.returncode,0,process.stderr.decode('utf8',errors='replace'))
++        self.assertEqual(json.loads(process.stdout),dict(optimize=0,no_bytecode=True,ignore_environment=1,optimization_environment_absent=True))
++    def test_engine_refuses_residual_optimization_before_utility_import_or_child(self):
++        for spelling in ('PYTHONOPTIMIZE','PythonOptimize'):
++            with self.subTest(spelling=spelling),patch.dict(os.environ,{spelling:'2'}),patch.object(Path,'read_bytes',side_effect=AssertionError('utility import must not be reached')):
++                with self.assertRaisesRegex(RuntimeError,'CP9_INHERITED_OPTIMIZATION_FORBIDDEN'):c.engine()
++
++class PackConsumptionControls(unittest.TestCase):
++    def test_pack_substitution_is_refused_before_importing_Git_call(self):
++        import publish_checkpoint as publisher
++        root=directory();pack=root/'controlled.pack';pack.write_bytes(b'substituted bytes')
++        engine=SimpleNamespace(git=Mock(side_effect=AssertionError('Git import forbidden on substituted pack')))
++        with self.assertRaisesRegex(RuntimeError,'reviewed pack bytes changed before canonical import'):publisher.import_reviewed_pack(engine,pack,c.sha(b'reviewed pack bytes'))
++        engine.git.assert_not_called()
++    def test_pack_hash_is_computed_from_consumed_bytes_not_metadata_claim(self):
++        import publish_checkpoint as publisher
++        engine=SimpleNamespace(git=Mock(side_effect=AssertionError('Git import forbidden on forged metadata')))
++        with patch.object(c,'stable',return_value=(b'wrong bytes',dict(sha256=c.sha(b'reviewed bytes')))):
++            with self.assertRaisesRegex(RuntimeError,'reviewed pack bytes changed before canonical import'):publisher.import_reviewed_pack(engine,Path('controlled.pack'),c.sha(b'reviewed bytes'))
++        engine.git.assert_not_called()
++    def test_same_checked_pack_bytes_are_imported_without_a_second_read(self):
++        import publish_checkpoint as publisher
++        pack=directory()/'controlled.pack';reviewed=b'exact reviewed pack bytes';pack.write_bytes(reviewed);calls=[];reads=[];stable=c.stable
++        def observe(path):
++            value=stable(path);reads.append(value[0]);return value
++        def importing(root,args,**kwargs):
++            calls.append((root,args,kwargs['data']));pack.write_bytes(b'later substitution that must never be consumed');return b'controlled-index-result\n'
++        with patch.object(c,'stable',new=observe):result=publisher.import_reviewed_pack(SimpleNamespace(git=importing),pack,c.sha(reviewed))
++        self.assertEqual(result,'controlled-index-result\n');self.assertEqual(len(reads),1);self.assertEqual(calls[0][:2],(c.F,['index-pack','--stdin']));self.assertIs(calls[0][2],reads[0]);self.assertEqual(calls[0][2],reviewed);self.assertNotEqual(pack.read_bytes(),reviewed)
+ 
+ class HostileCustodyControls(unittest.TestCase):
+     def preparation_failure(self,close_fault):
+--- before/run_controls.py
++++ after/run_controls.py
+@@ -1,4 +1,7 @@
+ """Run disposable checkpoint tooling controls with complete retained outcomes."""
++import sys
++if sys.flags.optimize != 0:
++    raise RuntimeError('CP9_OPTIMIZATION_FORBIDDEN: optimize=0 is required before imports or effects')
+ from pathlib import Path
+ import argparse,json,sys,unittest
+ import checkpoint_core as c
+@@ -13,13 +16,13 @@
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--attempt',required=True);args=p.parse_args();assert args.attempt.isdecimal()
+     c.preparation_claim();output=c.W/('controls-r'+args.attempt);output.mkdir(exist_ok=False)
+-    suite=unittest.defaultTestLoader.loadTestsFromModule(controls);selected=ids(suite);assert len(selected)==len(set(selected))==51
++    suite=unittest.defaultTestLoader.loadTestsFromModule(controls);selected=ids(suite);assert len(selected)==len(set(selected))==61
+     c.save(output/'START.json',dict(selected_ids=selected,test_count=len(selected),canonical_or_Git_mutation=False,scope='DISPOSABLE_CHECKPOINT_TOOLING_CONTROLS_ONLY'))
+     with (output/'TESTS.log').open('x',encoding='utf8') as stream:result=unittest.TextTestRunner(stream=stream,verbosity=2).run(suite)
+-    outcome=dict(selected_ids=selected,tests_run=result.testsRun,failures=len(result.failures),errors=len(result.errors),skips=len(result.skipped),failure_details=result.failures,error_details=result.errors,successful=result.wasSuccessful(),canonical_or_Git_mutation=False,product_tests=False,tested_sources={name:c.sha((c.W/name).read_bytes()) for name in ('checkpoint_core.py','assemble_checkpoint.py','run_prepare.py','verify_prepared.py','verify_publication.py','freeze_preparation.py','exact_git_scope.py','publish_checkpoint.py','test_checkpoint_controls.py','run_controls.py')})
++    outcome=dict(selected_ids=selected,tests_run=result.testsRun,failures=len(result.failures),errors=len(result.errors),skips=len(result.skipped),failure_details=[dict(test_id=test.id(),traceback=trace) for test,trace in result.failures],error_details=[dict(test_id=test.id(),traceback=trace) for test,trace in result.errors],successful=result.wasSuccessful(),canonical_or_Git_mutation=False,product_tests=False,tested_sources={name:c.sha((c.W/name).read_bytes()) for name in ('checkpoint_core.py','assemble_checkpoint.py','run_prepare.py','verify_prepared.py','verify_publication.py','freeze_preparation.py','exact_git_scope.py','publish_checkpoint.py','test_checkpoint_controls.py','run_controls.py')})
+     c.save(output/'RESULT.json',outcome)
+     if outcome['successful']:
+-        assert outcome['tests_run']==51 and outcome['failures']==outcome['errors']==outcome['skips']==0
++        assert outcome['tests_run']==61 and outcome['failures']==outcome['errors']==outcome['skips']==0
+         # Each attempt keeps its own immutable result; this current summary can advance only after a new complete pass.
+         target=c.W/'CONTROLS-RESULT.json'
+         if target.exists():
+--- before/README.md
++++ after/README.md
+@@ -2,11 +2,11 @@
+ 
+ This work belongs only to T:/00-Active/Project-AI-CETA. The actual author claim is ceta-cp9-preparation-20261023 / implement / /root/status_packet_review, workspace this work directory. It grants preparation writes here, with no canonical Git effects.
+ 
+-Final input is absent while these templates and disposable controls are authored. Root must create control/FINAL-CANONICAL-INPUTS.json according to FINAL-INPUT-CONTRACT.json after actual successful ST2 application and closure of the explicitly bound BR3 successor. The failed BR1 canonical execution and rejected BR2 preparation with zero canonical bodies/no intent are preserved separately. Pass its exact SHA256 to each preparation command. Root lists explicit completed reviewed exports, including eligible ignored engineering artifacts. The code does not discover or accept arbitrary ignored contents.
++Final input was absent while the templates and disposable controls were authored. Root has now supplied control/FINAL-CANONICAL-INPUTS.json SHA5475335bd3b891e463837285cc22f4aed3b1ac1ac26c003e57753e9a05abe0ec after actual successful ST2 application and closure of the explicitly bound BR3 successor. The failed BR1 canonical execution and rejected BR2 preparation with zero canonical bodies/no intent are preserved separately. Pass this exact SHA256 to each preparation command. Root lists explicit completed reviewed exports, including eligible ignored engineering artifacts. The code does not discover or accept arbitrary ignored contents.
+ 
+ The final-input consumer independently requires both current BR3 success flags and every current BR3 stage to be SUCCEEDED. Both future publication consumers also require publication-packet commit equality with PREPARED.commit before admitting that authorization. These checks preserve failed historical attempts while refusing a failed current successor or a mismatched publication target.
+ 
+-Preparation sequence, not yet run:
++Authorized preparation sequence; actual outcomes are retained in ASSEMBLY-RESULT.json, PRIVATE-PREPARATION-RESULT.json and WORK-FREEZE.json when each stage completes:
+ 
+ 1. Run assemble_checkpoint.py --final-sha256 ACTUAL_ROOT_FINAL_SHA. This observes canonical560 plus two status registers and the current branch/HEAD/index/remote/checkpoint ancestry, conserves parent paths/modes and emits the explicit spec. No eligible content change stops before creating disclosure-only checkpoint data.
+ 2. Run run_prepare.py --final-sha256 ACTUAL_ROOT_FINAL_SHA exactly once. It calls only the reviewed prepare_checkpoint.py utility758a9c...cf4e with a fresh explicit spec. The index and new objects remain under prepared-0001. Commands, exit codes and output hashes are captured. The utility never updates canonical refs or pushes.
+@@ -22,4 +22,8 @@
+ 
+ Root alone may claim that later integrate node with the exact .git workspace, then invoke publish_checkpoint.py --publication-packet-sha256 ACTUAL_REVIEWED_PACKET_SHA once. Its exclusive durable start marker consumes the attempt before any canonical Git write. It retains ordinary hooks, imports the one new pack, performs a compare-and-swap descendant ref update, pushes the exact public development branch, and reads the remote plus anonymous commit-pinned public blobs. Failure preserves partial Git state and actual receipts; there is no reset, clean, rollback, force, hook bypass or publisher replay.
+ 
+-The current code has only disposable checkpoint-tooling control evidence. No canonical product tests, private checkpoint preparation, publication, native worker or full-product acceptance is established by those controls. Historical C1 integration remains FAILED. The completion assessment remains qualitative, with no defensible overall percentage.
++All ten CP9 entrypoint modules reject optimized Python with a non-assert guard before other imports or effects. Invoke child Python with -E -B -X utf8 and an explicit environment copy that removes PYTHONOPTIMIZE case-insensitively. The private engine also refuses a residual optimization key before loading the accepted utility or admitting child Git commands. JSON, command-journal and status Markdown writes execute unconditionally and explicitly refuse short writes. Pack import reads one stable byte object, hashes that object against the frozen pack hash and supplies that same object to index-pack without a second read.
++
++The updated disposable cohort retains the original51 control IDs and adds10 targeted cases, including both -O and -OO refusal for all ten entrypoints, exact create-only writes, short-write refusal, child environment custody and pack substitution. The former51-pass result remains a distinct predecessor receipt. Failed controls-r8 remains failed with1failure/6errors caused by the additional environment guard observing a residual key. A fresh reproduction shows the PowerShell null-value deletion expression creates PYTHONOPTIMIZE='' on this host while sys.flags.optimize remains0; an explicit scrubbed Popen environment removes it. The original R8 value was not captured, and no historical runtime optimization is inferred. All failed setup/diagnostic records and the separately named controls-r9 result are retained and explicitly exported with source/test deltas and finding responses.
++
++These tooling controls do not establish canonical product tests, publication, native worker or full-product acceptance. Private preparation has separate actual outcome records and requires independent review. Historical C1 integration remains FAILED. The completion assessment remains qualitative, with no defensible overall percentage.

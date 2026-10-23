@@ -1,0 +1,85 @@
+{
+  "recorded_at": "2026-10-23T08:25:27.775Z",
+  "reviewer": "/root/status_packet_review",
+  "author": "/root/broader_successor_author",
+  "decision": "approved",
+  "manifest_sha256": "736a2a3ef8639bf99acced85d0ce3950b74b01bf9f23d856148ca7a7061df2f6",
+  "candidate_scope": "EXACT_FROZEN_DS2_UTILITY_PLUS_CORRECTED_ADMISSION_QUALIFICATION_ONLY",
+  "graph_fingerprint": "997829e1616609bafc88eea12f601eba7d715ad0e03b27e55a3f1af59a0d51ed",
+  "run_id": "ceta-ds23-r2-gate-r2",
+  "source_qualification_run_id": "ceta-ds23-r2",
+  "source_qualification_graph_fingerprint": "b848fefb7c69a06d4ffc32f71bac48ac316edc03755773ec0c6103365d2b4c0b",
+  "provider_sha256": "3727f857cd6cb7324a8b93ad16d070d4a403678ac071cd94c32954edbd203bde",
+  "root_candidate_closure_sha256": "f17cd2b8214f9076cdcfa87683253a5a486bbd31c6d41d2f4887dd0cd9ccd858",
+  "root_closure_relocation_amendment_sha256": "83713b152c26a24624ec6de6ef3243a58b8b1bd6303fa3a2092a1b369292a658",
+  "root_candidate_closure_approved": true,
+  "findings": [],
+  "resolved_in_new_admission": {
+    "id": "DS2-GATE-TARGET-01",
+    "original_review_remains_rejected": true,
+    "original_graph_and_helpers_remain_unchanged": true,
+    "current_gate_targets_exact_DS2_verifier": true,
+    "relocated_import_origin_guard_checked": true
+  },
+  "retained_source_evidence": {
+    "frozen_files": 46,
+    "external_pins": 106,
+    "original_author_controls": 50,
+    "original_retained_ordered_prior_controls": 41,
+    "original_independent_provider_repair_cases": 6,
+    "original_full_F_files": 14355,
+    "original_full_F_directories": 2859,
+    "original_excluded_symlinks": 1,
+    "original_full_F_elapsed_ns": 147478296300,
+    "elapsed_domain": "WHOLE_TREE_QUALIFICATION_NOT_ADMISSION_OR_CHALLENGE_TIMING",
+    "all_prior_cases_and_full_snapshot_reused_without_replay": true,
+    "source562_Git_index_ST2_and_DS1_conserved": true
+  },
+  "current_review_checks": {
+    "readback_actual_exit_status": 0,
+    "exact_DS2_read_only_verifier_actual_exit_status": 0,
+    "Root_helper_synthetic_boundary_cases": 10,
+    "Root_helper_boundary_process_exit_status": 0,
+    "actual_adoption_SUCCEEDED_closed": true,
+    "adoption_changed_files": [],
+    "persisted_adoption_raw_file_sha256": "f808d74ff706578cb6d6cca9936da673ba60addc2349d475427f71a667426160",
+    "persisted_adoption_normalized_receipt_hash": "3e6cb75417624e25a0fb4f731a01f2a0facd495fb5fedab322ce60c6d11aad1b"
+  },
+  "preserved_review_probe_failures": [
+    {
+      "source": "inspect_admission.py",
+      "actual_exit_status": 1,
+      "cause": "Review-authored quoting SyntaxError; no candidate code executed."
+    },
+    {
+      "source": "inspect_admission_r2.py",
+      "actual_exit_status": 1,
+      "cause": "Review harness expected write_scope key omitted by installed normalization of read_only empty scope."
+    },
+    {
+      "source": "inspect_admission_r3.py",
+      "actual_exit_status": 1,
+      "cause": "Review harness compared supplied normalized receipt_hash to raw-file SHA; both domains now independently checked."
+    }
+  ],
+  "superseded_unexecuted_unapproved_helpers": [
+    {
+      "path": "work/complete_candidate.py",
+      "sha256": "64f81f235284f4a1e6222c09c407e1ff4a25acc96412fee7b71d27bdf97703ad"
+    },
+    {
+      "path": "control-r2/ROOT-CLOSE-QUALIFICATION.py",
+      "sha256": "adb9c2afb81aa7a7ea2d8d74b2456bdfd33882f8a50da5646ea45263643e027f"
+    }
+  ],
+  "limits": {
+    "Root_helper_main_or_gate_not_executed_by_reviewer": true,
+    "actual_ordinary_gate_and_Root_qualification_delivery_still_required": true,
+    "ST2_execution_amendment_approved": false,
+    "snapshot_override_installed": false,
+    "canonical_test_bodies_executed": 0,
+    "native_worker_or_AC7_activity": false,
+    "original_ST2_claim_failure_causes": "UNKNOWN; original paths and scalars NOT_CAPTURED",
+    "full_product_acceptance": false
+  }
+}

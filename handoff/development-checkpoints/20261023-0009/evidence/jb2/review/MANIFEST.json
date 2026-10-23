@@ -1,0 +1,2270 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-jb23-r2",
+  "reviewer": "/root/independent_broader_review",
+  "decision": "approved",
+  "candidate_manifest_sha256": "e9b0ac804a3bcebad266e400e6ce41a8fbb113749026230baf6e4ed59f93db72",
+  "root_candidate_closure_sha256": "c9065cdc7dde212da9b9840dfb4615805c41d32837ab7bc354eb3f30aad5d973",
+  "review_sha256": "ac1e4397157bcbed0f70e4999bc9af67aa70fbfd2ccebe677bd788df9bfc32b4",
+  "files": {
+    "ACTUAL-REVIEW-CLAIM.json": "a9d0ed1203bcea7126dba4ce5b9eb18e5d174b14fead6bb2e48d2f6caf1010c1",
+    "FINAL-AUDIT-PROCESS.json": "47a07679f73b82ec8ae3f5c8f7ef50b831561d19ada9d2c045cb6af170835c58",
+    "FINAL-AUDIT.json": "224616d4b25747f486c0e458212f6305c3af6881f3b82a25d249fbb10657bd77",
+    "FINAL-AUDIT.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "FINAL-AUDIT.stdout": "d145e54e8421d4215f8c2d444979f792cc4baf6bf4b4c38fb9343b1d52624900",
+    "FORMAL-REVIEW-PROMPT.txt": "a1ea50f15ad3e3c83934e20eb0cd2d3581e6ae1cac4f39cd6d61e45acc26b928",
+    "INDEPENDENT-CONSUMPTION-PROCESS.json": "2f85e142f732642a387e4d8f530c8d9403e4f2bd80096d99adf783b6ec6d3a73",
+    "INDEPENDENT-CONSUMPTION.json": "ae151ed92464b2623393e2b5b0caaf9d88abf2507bacc0b8868df9663aca05a6",
+    "INDEPENDENT-CONSUMPTION.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "INDEPENDENT-CONSUMPTION.stdout": "c43419df441873db788f53af25e229e2d4dbafa716c38171156cf68ae9ee9cd6",
+    "INDEPENDENT-CONSUMPTION.unittest.log": "c1ac9c1bfbed2f59c661b09d43d0026d9ae00ec35dc7766c83ba4a8771a2ec97",
+    "INDEPENDENT-RETAINED-COHORT-PROCESS.json": "a72116e6d513348e26eadc9a33c3ad1581902bc999bbe5fd6e6d412567ab2659",
+    "INDEPENDENT-RETAINED-COHORT.json": "60d0a9ec36b3a189dd1f40116b00d18ea91278dd0060e887fb10f9b8b1e3d8b4",
+    "INDEPENDENT-RETAINED-COHORT.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "INDEPENDENT-RETAINED-COHORT.stdout": "135e8e3b7e59cbcbd0832b3a868fb8606373f1ba2c142565ea4ddd7c069d05a9",
+    "INDEPENDENT-RETAINED-COHORT.unittest.log": "e6af136f534fa619dcbbbe49848456599736951b23b619695762db189b65a427",
+    "PREPARED-CHECK-PROCESS.json": "959cf82952985b74a72dfab016ada53ebca7472058203755742672f437a4b161",
+    "PREPARED-CHECK.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PREPARED-CHECK.stdout": "cb4804737da822a474e40f232db5d635c5d3bbcf730535ef9640784e9989ea6a",
+    "PROMPT-CHECK-INLINE.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PROMPT-CHECK-INLINE.stdout": "baf6b9fad244dbdf803d24e9049f910f11cd3f3ca645754a580c7edc0d8b3260",
+    "PROMPT-CHECK-PROCESS.json": "6fe9182140cfc4c43186974e029843c0c26883f44417cc26b838f372326dfe1c",
+    "PROMPT-CHECK.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PROMPT-CHECK.stdout": "111db64b1a5574786ebd0fa015bf439ee51e5d8bfac6e38d7ea559785ea0f6f6",
+    "PROMPT-SENSE-ASSESSMENT.json": "0a4d9d0ad478a2791d4066f697f4cf1e79be107e0edb838df1c27db1590c9c9f",
+    "REVIEW.json": "ac1e4397157bcbed0f70e4999bc9af67aa70fbfd2ccebe677bd788df9bfc32b4",
+    "SKILL-SELF-TEST-PROCESS.json": "950c332169f50e3b76bd2535c6bf8237e46d1c986a9b8acd6557eb4c32682d9c",
+    "SKILL-SELF-TEST.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "SKILL-SELF-TEST.stdout": "ad7b98fc4078439895e118227130e38081d6ca32a66d8d531959fd991b983242",
+    "SKILL-STATIC-SCAN-PROCESS.json": "8d8427e6e4c7614c685ae166f9af6ebd27bb411979e66bbbc76ae8d514ae52ab",
+    "SKILL-STATIC-SCAN.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "SKILL-STATIC-SCAN.stdout": "48004774094ff4041805868b55f662fee5d019e89402380536b243ffdd59c465",
+    "SUPPLEMENTAL-PROMPT-CHECK.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "SUPPLEMENTAL-PROMPT-CHECK.stdout": "2be1fdb9c58bdf274610845041717c57322f63705c749d3902fc416d96b856cd",
+    "SUPPLEMENTAL-REVIEW-INSTRUCTION.txt": "ace9593ac718afee5e68d2c51f27434ab5be2916ad9901e355524a46e8695783",
+    "capture.py": "8709efad3cf905cede746910462a8673e1f3a2367b8c99f0510df205b85a2588",
+    "complete_review.py": "1af2029f41e524b536f4c870655549a0c6304b8708579130fe5da988e0300ef3",
+    "final_audit.py": "9d15f5fd234b561726b4551fed533e2c7b8d3e32c9f9362a2cc0169fc61e9822",
+    "freeze_review.py": "6a28175fbe0a868f21d236ec081a13e0d0be403b4af8bca8505ae1e2c9a4db73",
+    "independent_consumption_controls.py": "6b42a8d85c3d626eaefd3c65e33c4cb0086fb437514314e5d68ad0992bb217e4",
+    "run_retained_cohort.py": "cfa1a2363df18e48ff1907982c76755fd029358cea2f138768ed39b8e0c7ca4a",
+    "run_skill_checks.py": "a20283860577496e5a1c08b5bc21e1e4ff5e2f256edb3d4b116b3af9e3e2f390"
+  },
+  "observation": {
+    ".": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980033657,
+      "bytes": 8192,
+      "mtime_ns": 1792738689192217500,
+      "mode": 16895,
+      "links": 1
+    },
+    "ACTUAL-REVIEW-CLAIM.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 844424933454999,
+      "bytes": 2460,
+      "mtime_ns": 1792737857805126500,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "a9d0ed1203bcea7126dba4ce5b9eb18e5d174b14fead6bb2e48d2f6caf1010c1",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 844424933454999,
+          "bytes": 2460,
+          "mtime_ns": 1792737857805126500,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 844424933454999,
+          "bytes": 2460,
+          "mtime_ns": 1792737857805126500,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 844424933454999,
+          "bytes": 2460,
+          "mtime_ns": 1792737857805126500,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 844424933454999,
+          "bytes": 2460,
+          "mtime_ns": 1792737857805126500,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "FINAL-AUDIT-PROCESS.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 1125899910165987,
+      "bytes": 803,
+      "mtime_ns": 1792738504154697300,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "47a07679f73b82ec8ae3f5c8f7ef50b831561d19ada9d2c045cb6af170835c58",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 1125899910165987,
+          "bytes": 803,
+          "mtime_ns": 1792738504154697300,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 1125899910165987,
+          "bytes": 803,
+          "mtime_ns": 1792738504154697300,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 1125899910165987,
+          "bytes": 803,
+          "mtime_ns": 1792738504154697300,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 1125899910165987,
+          "bytes": 803,
+          "mtime_ns": 1792738504154697300,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "FINAL-AUDIT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 1970324840297954,
+      "bytes": 4329,
+      "mtime_ns": 1792738504112816600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "224616d4b25747f486c0e458212f6305c3af6881f3b82a25d249fbb10657bd77",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 1970324840297954,
+          "bytes": 4329,
+          "mtime_ns": 1792738504112816600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 1970324840297954,
+          "bytes": 4329,
+          "mtime_ns": 1792738504112816600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 1970324840297954,
+          "bytes": 4329,
+          "mtime_ns": 1792738504112816600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 1970324840297954,
+          "bytes": 4329,
+          "mtime_ns": 1792738504112816600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "FINAL-AUDIT.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 1970324840297953,
+      "bytes": 0,
+      "mtime_ns": 1792738503320250100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 1970324840297953,
+          "bytes": 0,
+          "mtime_ns": 1792738503320250100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 1970324840297953,
+          "bytes": 0,
+          "mtime_ns": 1792738503320250100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 1970324840297953,
+          "bytes": 0,
+          "mtime_ns": 1792738503320250100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 1970324840297953,
+          "bytes": 0,
+          "mtime_ns": 1792738503320250100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "FINAL-AUDIT.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 3940649677272543,
+      "bytes": 206,
+      "mtime_ns": 1792738504114646100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "d145e54e8421d4215f8c2d444979f792cc4baf6bf4b4c38fb9343b1d52624900",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 3940649677272543,
+          "bytes": 206,
+          "mtime_ns": 1792738504114646100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 3940649677272543,
+          "bytes": 206,
+          "mtime_ns": 1792738504114646100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 3940649677272543,
+          "bytes": 206,
+          "mtime_ns": 1792738504114646100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 3940649677272543,
+          "bytes": 206,
+          "mtime_ns": 1792738504114646100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "FORMAL-REVIEW-PROMPT.txt": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 844424933455221,
+      "bytes": 1075,
+      "mtime_ns": 1792737900564745600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "a1ea50f15ad3e3c83934e20eb0cd2d3581e6ae1cac4f39cd6d61e45acc26b928",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 844424933455221,
+          "bytes": 1075,
+          "mtime_ns": 1792737900564745600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 844424933455221,
+          "bytes": 1075,
+          "mtime_ns": 1792737900564745600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 844424933455221,
+          "bytes": 1075,
+          "mtime_ns": 1792737900564745600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 844424933455221,
+          "bytes": 1075,
+          "mtime_ns": 1792737900564745600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-CONSUMPTION-PROCESS.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980034013,
+      "bytes": 845,
+      "mtime_ns": 1792738341459833900,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "2f85e142f732642a387e4d8f530c8d9403e4f2bd80096d99adf783b6ec6d3a73",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034013,
+          "bytes": 845,
+          "mtime_ns": 1792738341459833900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034013,
+          "bytes": 845,
+          "mtime_ns": 1792738341459833900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034013,
+          "bytes": 845,
+          "mtime_ns": 1792738341459833900,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034013,
+          "bytes": 845,
+          "mtime_ns": 1792738341459833900,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-CONSUMPTION.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980034012,
+      "bytes": 8595,
+      "mtime_ns": 1792738341408940000,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "ae151ed92464b2623393e2b5b0caaf9d88abf2507bacc0b8868df9663aca05a6",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034012,
+          "bytes": 8595,
+          "mtime_ns": 1792738341408940000,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034012,
+          "bytes": 8595,
+          "mtime_ns": 1792738341408940000,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034012,
+          "bytes": 8595,
+          "mtime_ns": 1792738341408940000,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034012,
+          "bytes": 8595,
+          "mtime_ns": 1792738341408940000,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-CONSUMPTION.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980034010,
+      "bytes": 0,
+      "mtime_ns": 1792738340750358800,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034010,
+          "bytes": 0,
+          "mtime_ns": 1792738340750358800,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034010,
+          "bytes": 0,
+          "mtime_ns": 1792738340750358800,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034010,
+          "bytes": 0,
+          "mtime_ns": 1792738340750358800,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034010,
+          "bytes": 0,
+          "mtime_ns": 1792738340750358800,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-CONSUMPTION.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956744664,
+      "bytes": 125,
+      "mtime_ns": 1792738341409935200,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "c43419df441873db788f53af25e229e2d4dbafa716c38171156cf68ae9ee9cd6",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744664,
+          "bytes": 125,
+          "mtime_ns": 1792738341409935200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744664,
+          "bytes": 125,
+          "mtime_ns": 1792738341409935200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744664,
+          "bytes": 125,
+          "mtime_ns": 1792738341409935200,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744664,
+          "bytes": 125,
+          "mtime_ns": 1792738341409935200,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-CONSUMPTION.unittest.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980034011,
+      "bytes": 3459,
+      "mtime_ns": 1792738341377680600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "c1ac9c1bfbed2f59c661b09d43d0026d9ae00ec35dc7766c83ba4a8771a2ec97",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034011,
+          "bytes": 3459,
+          "mtime_ns": 1792738341377680600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034011,
+          "bytes": 3459,
+          "mtime_ns": 1792738341377680600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034011,
+          "bytes": 3459,
+          "mtime_ns": 1792738341377680600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034011,
+          "bytes": 3459,
+          "mtime_ns": 1792738341377680600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-RETAINED-COHORT-PROCESS.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033968,
+      "bytes": 907,
+      "mtime_ns": 1792738166296622600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "a72116e6d513348e26eadc9a33c3ad1581902bc999bbe5fd6e6d412567ab2659",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033968,
+          "bytes": 907,
+          "mtime_ns": 1792738166296622600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033968,
+          "bytes": 907,
+          "mtime_ns": 1792738166296622600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033968,
+          "bytes": 907,
+          "mtime_ns": 1792738166296622600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033968,
+          "bytes": 907,
+          "mtime_ns": 1792738166296622600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-RETAINED-COHORT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033967,
+      "bytes": 60748,
+      "mtime_ns": 1792738166257255000,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "60d0a9ec36b3a189dd1f40116b00d18ea91278dd0060e887fb10f9b8b1e3d8b4",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033967,
+          "bytes": 60748,
+          "mtime_ns": 1792738166257255000,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033967,
+          "bytes": 60748,
+          "mtime_ns": 1792738166257255000,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033967,
+          "bytes": 60748,
+          "mtime_ns": 1792738166257255000,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033967,
+          "bytes": 60748,
+          "mtime_ns": 1792738166257255000,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-RETAINED-COHORT.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033965,
+      "bytes": 0,
+      "mtime_ns": 1792738164734172700,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033965,
+          "bytes": 0,
+          "mtime_ns": 1792738164734172700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033965,
+          "bytes": 0,
+          "mtime_ns": 1792738164734172700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033965,
+          "bytes": 0,
+          "mtime_ns": 1792738164734172700,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033965,
+          "bytes": 0,
+          "mtime_ns": 1792738164734172700,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-RETAINED-COHORT.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956744620,
+      "bytes": 1340,
+      "mtime_ns": 1792738166259379100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "135e8e3b7e59cbcbd0832b3a868fb8606373f1ba2c142565ea4ddd7c069d05a9",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744620,
+          "bytes": 1340,
+          "mtime_ns": 1792738166259379100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744620,
+          "bytes": 1340,
+          "mtime_ns": 1792738166259379100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744620,
+          "bytes": 1340,
+          "mtime_ns": 1792738166259379100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744620,
+          "bytes": 1340,
+          "mtime_ns": 1792738166259379100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "INDEPENDENT-RETAINED-COHORT.unittest.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033966,
+      "bytes": 26119,
+      "mtime_ns": 1792738166133583600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e6af136f534fa619dcbbbe49848456599736951b23b619695762db189b65a427",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033966,
+          "bytes": 26119,
+          "mtime_ns": 1792738166133583600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033966,
+          "bytes": 26119,
+          "mtime_ns": 1792738166133583600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033966,
+          "bytes": 26119,
+          "mtime_ns": 1792738166133583600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033966,
+          "bytes": 26119,
+          "mtime_ns": 1792738166133583600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PREPARED-CHECK-PROCESS.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033963,
+      "bytes": 807,
+      "mtime_ns": 1792738164630277900,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "959cf82952985b74a72dfab016ada53ebca7472058203755742672f437a4b161",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033963,
+          "bytes": 807,
+          "mtime_ns": 1792738164630277900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033963,
+          "bytes": 807,
+          "mtime_ns": 1792738164630277900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033963,
+          "bytes": 807,
+          "mtime_ns": 1792738164630277900,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033963,
+          "bytes": 807,
+          "mtime_ns": 1792738164630277900,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PREPARED-CHECK.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033962,
+      "bytes": 0,
+      "mtime_ns": 1792738164392551200,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033962,
+          "bytes": 0,
+          "mtime_ns": 1792738164392551200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033962,
+          "bytes": 0,
+          "mtime_ns": 1792738164392551200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033962,
+          "bytes": 0,
+          "mtime_ns": 1792738164392551200,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033962,
+          "bytes": 0,
+          "mtime_ns": 1792738164392551200,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PREPARED-CHECK.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033961,
+      "bytes": 256,
+      "mtime_ns": 1792738164619237700,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "cb4804737da822a474e40f232db5d635c5d3bbcf730535ef9640784e9989ea6a",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033961,
+          "bytes": 256,
+          "mtime_ns": 1792738164619237700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033961,
+          "bytes": 256,
+          "mtime_ns": 1792738164619237700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033961,
+          "bytes": 256,
+          "mtime_ns": 1792738164619237700,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033961,
+          "bytes": 256,
+          "mtime_ns": 1792738164619237700,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PROMPT-CHECK-INLINE.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033911,
+      "bytes": 0,
+      "mtime_ns": 1792737900568256900,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033911,
+          "bytes": 0,
+          "mtime_ns": 1792737900568256900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033911,
+          "bytes": 0,
+          "mtime_ns": 1792737900568256900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033911,
+          "bytes": 0,
+          "mtime_ns": 1792737900568256900,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033911,
+          "bytes": 0,
+          "mtime_ns": 1792737900568256900,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PROMPT-CHECK-INLINE.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033910,
+      "bytes": 2824,
+      "mtime_ns": 1792737900565746300,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "baf6b9fad244dbdf803d24e9049f910f11cd3f3ca645754a580c7edc0d8b3260",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033910,
+          "bytes": 2824,
+          "mtime_ns": 1792737900565746300,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033910,
+          "bytes": 2824,
+          "mtime_ns": 1792737900565746300,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033910,
+          "bytes": 2824,
+          "mtime_ns": 1792737900565746300,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033910,
+          "bytes": 2824,
+          "mtime_ns": 1792737900565746300,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PROMPT-CHECK-PROCESS.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033919,
+      "bytes": 1149,
+      "mtime_ns": 1792737900999200100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "6fe9182140cfc4c43186974e029843c0c26883f44417cc26b838f372326dfe1c",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033919,
+          "bytes": 1149,
+          "mtime_ns": 1792737900999200100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033919,
+          "bytes": 1149,
+          "mtime_ns": 1792737900999200100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033919,
+          "bytes": 1149,
+          "mtime_ns": 1792737900999200100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033919,
+          "bytes": 1149,
+          "mtime_ns": 1792737900999200100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PROMPT-CHECK.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033918,
+      "bytes": 0,
+      "mtime_ns": 1792737900847614600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033918,
+          "bytes": 0,
+          "mtime_ns": 1792737900847614600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033918,
+          "bytes": 0,
+          "mtime_ns": 1792737900847614600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033918,
+          "bytes": 0,
+          "mtime_ns": 1792737900847614600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033918,
+          "bytes": 0,
+          "mtime_ns": 1792737900847614600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PROMPT-CHECK.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033917,
+      "bytes": 2824,
+      "mtime_ns": 1792737900983183400,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "111db64b1a5574786ebd0fa015bf439ee51e5d8bfac6e38d7ea559785ea0f6f6",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033917,
+          "bytes": 2824,
+          "mtime_ns": 1792737900983183400,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033917,
+          "bytes": 2824,
+          "mtime_ns": 1792737900983183400,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033917,
+          "bytes": 2824,
+          "mtime_ns": 1792737900983183400,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033917,
+          "bytes": 2824,
+          "mtime_ns": 1792737900983183400,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "PROMPT-SENSE-ASSESSMENT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033912,
+      "bytes": 641,
+      "mtime_ns": 1792737900569258100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "0a4d9d0ad478a2791d4066f697f4cf1e79be107e0edb838df1c27db1590c9c9f",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033912,
+          "bytes": 641,
+          "mtime_ns": 1792737900569258100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033912,
+          "bytes": 641,
+          "mtime_ns": 1792737900569258100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033912,
+          "bytes": 641,
+          "mtime_ns": 1792737900569258100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033912,
+          "bytes": 641,
+          "mtime_ns": 1792737900569258100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "REVIEW.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 3377699723851243,
+      "bytes": 4495,
+      "mtime_ns": 1792738689189713700,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "ac1e4397157bcbed0f70e4999bc9af67aa70fbfd2ccebe677bd788df9bfc32b4",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 3377699723851243,
+          "bytes": 4495,
+          "mtime_ns": 1792738689189713700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 3377699723851243,
+          "bytes": 4495,
+          "mtime_ns": 1792738689189713700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 3377699723851243,
+          "bytes": 4495,
+          "mtime_ns": 1792738689189713700,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 3377699723851243,
+          "bytes": 4495,
+          "mtime_ns": 1792738689189713700,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SKILL-SELF-TEST-PROCESS.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033916,
+      "bytes": 911,
+      "mtime_ns": 1792737900846615600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "950c332169f50e3b76bd2535c6bf8237e46d1c986a9b8acd6557eb4c32682d9c",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033916,
+          "bytes": 911,
+          "mtime_ns": 1792737900846615600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033916,
+          "bytes": 911,
+          "mtime_ns": 1792737900846615600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033916,
+          "bytes": 911,
+          "mtime_ns": 1792737900846615600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033916,
+          "bytes": 911,
+          "mtime_ns": 1792737900846615600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SKILL-SELF-TEST.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033915,
+      "bytes": 0,
+      "mtime_ns": 1792737900698483200,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033915,
+          "bytes": 0,
+          "mtime_ns": 1792737900698483200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033915,
+          "bytes": 0,
+          "mtime_ns": 1792737900698483200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033915,
+          "bytes": 0,
+          "mtime_ns": 1792737900698483200,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033915,
+          "bytes": 0,
+          "mtime_ns": 1792737900698483200,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SKILL-SELF-TEST.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033914,
+      "bytes": 317,
+      "mtime_ns": 1792737900832492200,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "ad7b98fc4078439895e118227130e38081d6ca32a66d8d531959fd991b983242",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033914,
+          "bytes": 317,
+          "mtime_ns": 1792737900832492200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033914,
+          "bytes": 317,
+          "mtime_ns": 1792737900832492200,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033914,
+          "bytes": 317,
+          "mtime_ns": 1792737900832492200,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033914,
+          "bytes": 317,
+          "mtime_ns": 1792737900832492200,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SKILL-STATIC-SCAN-PROCESS.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956744578,
+      "bytes": 1225,
+      "mtime_ns": 1792737905384779700,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "8d8427e6e4c7614c685ae166f9af6ebd27bb411979e66bbbc76ae8d514ae52ab",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744578,
+          "bytes": 1225,
+          "mtime_ns": 1792737905384779700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744578,
+          "bytes": 1225,
+          "mtime_ns": 1792737905384779700,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744578,
+          "bytes": 1225,
+          "mtime_ns": 1792737905384779700,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744578,
+          "bytes": 1225,
+          "mtime_ns": 1792737905384779700,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SKILL-STATIC-SCAN.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033921,
+      "bytes": 0,
+      "mtime_ns": 1792737901000199400,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033921,
+          "bytes": 0,
+          "mtime_ns": 1792737901000199400,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033921,
+          "bytes": 0,
+          "mtime_ns": 1792737901000199400,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033921,
+          "bytes": 0,
+          "mtime_ns": 1792737901000199400,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033921,
+          "bytes": 0,
+          "mtime_ns": 1792737901000199400,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SKILL-STATIC-SCAN.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033920,
+      "bytes": 5657,
+      "mtime_ns": 1792737905369482400,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "48004774094ff4041805868b55f662fee5d019e89402380536b243ffdd59c465",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033920,
+          "bytes": 5657,
+          "mtime_ns": 1792737905369482400,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033920,
+          "bytes": 5657,
+          "mtime_ns": 1792737905369482400,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033920,
+          "bytes": 5657,
+          "mtime_ns": 1792737905369482400,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033920,
+          "bytes": 5657,
+          "mtime_ns": 1792737905369482400,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SUPPLEMENTAL-PROMPT-CHECK.stderr": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033928,
+      "bytes": 0,
+      "mtime_ns": 1792737976092400100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033928,
+          "bytes": 0,
+          "mtime_ns": 1792737976092400100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033928,
+          "bytes": 0,
+          "mtime_ns": 1792737976092400100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033928,
+          "bytes": 0,
+          "mtime_ns": 1792737976092400100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033928,
+          "bytes": 0,
+          "mtime_ns": 1792737976092400100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SUPPLEMENTAL-PROMPT-CHECK.stdout": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033927,
+      "bytes": 2308,
+      "mtime_ns": 1792737976090613900,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "2be1fdb9c58bdf274610845041717c57322f63705c749d3902fc416d96b856cd",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033927,
+          "bytes": 2308,
+          "mtime_ns": 1792737976090613900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033927,
+          "bytes": 2308,
+          "mtime_ns": 1792737976090613900,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033927,
+          "bytes": 2308,
+          "mtime_ns": 1792737976090613900,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033927,
+          "bytes": 2308,
+          "mtime_ns": 1792737976090613900,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "SUPPLEMENTAL-REVIEW-INSTRUCTION.txt": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 1125899910165894,
+      "bytes": 738,
+      "mtime_ns": 1792737975938947100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "ace9593ac718afee5e68d2c51f27434ab5be2916ad9901e355524a46e8695783",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 1125899910165894,
+          "bytes": 738,
+          "mtime_ns": 1792737975938947100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 1125899910165894,
+          "bytes": 738,
+          "mtime_ns": 1792737975938947100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 1125899910165894,
+          "bytes": 738,
+          "mtime_ns": 1792737975938947100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 1125899910165894,
+          "bytes": 738,
+          "mtime_ns": 1792737975938947100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "capture.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033960,
+      "bytes": 966,
+      "mtime_ns": 1792738164290364100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "8709efad3cf905cede746910462a8673e1f3a2367b8c99f0510df205b85a2588",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033960,
+          "bytes": 966,
+          "mtime_ns": 1792738164290364100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033960,
+          "bytes": 966,
+          "mtime_ns": 1792738164290364100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033960,
+          "bytes": 966,
+          "mtime_ns": 1792738164290364100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033960,
+          "bytes": 966,
+          "mtime_ns": 1792738164290364100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "complete_review.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 844424933455340,
+      "bytes": 4460,
+      "mtime_ns": 1792738689191713000,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "1af2029f41e524b536f4c870655549a0c6304b8708579130fe5da988e0300ef3",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 844424933455340,
+          "bytes": 4460,
+          "mtime_ns": 1792738689191713000,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 844424933455340,
+          "bytes": 4460,
+          "mtime_ns": 1792738689191713000,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 844424933455340,
+          "bytes": 4460,
+          "mtime_ns": 1792738689191713000,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 844424933455340,
+          "bytes": 4460,
+          "mtime_ns": 1792738689191713000,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "final_audit.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 15762598699120094,
+      "bytes": 8012,
+      "mtime_ns": 1792738503213669600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "9d15f5fd234b561726b4551fed533e2c7b8d3e32c9f9362a2cc0169fc61e9822",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 15762598699120094,
+          "bytes": 8012,
+          "mtime_ns": 1792738503213669600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 15762598699120094,
+          "bytes": 8012,
+          "mtime_ns": 1792738503213669600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 15762598699120094,
+          "bytes": 8012,
+          "mtime_ns": 1792738503213669600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 15762598699120094,
+          "bytes": 8012,
+          "mtime_ns": 1792738503213669600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "freeze_review.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980034029,
+      "bytes": 1905,
+      "mtime_ns": 1792738689192217500,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "6a28175fbe0a868f21d236ec081a13e0d0be403b4af8bca8505ae1e2c9a4db73",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034029,
+          "bytes": 1905,
+          "mtime_ns": 1792738689192217500,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980034029,
+          "bytes": 1905,
+          "mtime_ns": 1792738689192217500,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034029,
+          "bytes": 1905,
+          "mtime_ns": 1792738689192217500,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980034029,
+          "bytes": 1905,
+          "mtime_ns": 1792738689192217500,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "independent_consumption_controls.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 1125899910165972,
+      "bytes": 17194,
+      "mtime_ns": 1792738340654194300,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "6b42a8d85c3d626eaefd3c65e33c4cb0086fb437514314e5d68ad0992bb217e4",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 1125899910165972,
+          "bytes": 17194,
+          "mtime_ns": 1792738340654194300,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 1125899910165972,
+          "bytes": 17194,
+          "mtime_ns": 1792738340654194300,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 1125899910165972,
+          "bytes": 17194,
+          "mtime_ns": 1792738340654194300,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 1125899910165972,
+          "bytes": 17194,
+          "mtime_ns": 1792738340654194300,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "run_retained_cohort.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956744615,
+      "bytes": 5637,
+      "mtime_ns": 1792738164288247100,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "cfa1a2363df18e48ff1907982c76755fd029358cea2f138768ed39b8e0c7ca4a",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744615,
+          "bytes": 5637,
+          "mtime_ns": 1792738164288247100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 562949956744615,
+          "bytes": 5637,
+          "mtime_ns": 1792738164288247100,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744615,
+          "bytes": 5637,
+          "mtime_ns": 1792738164288247100,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 562949956744615,
+          "bytes": 5637,
+          "mtime_ns": 1792738164288247100,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    },
+    "run_skill_checks.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980033913,
+      "bytes": 1459,
+      "mtime_ns": 1792737900570257600,
+      "mode": 33206,
+      "links": 1,
+      "sha256": "a20283860577496e5a1c08b5bc21e1e4ff5e2f256edb3d4b116b3af9e3e2f390",
+      "api_metadata": {
+        "path_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033913,
+          "bytes": 1459,
+          "mtime_ns": 1792737900570257600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_before": {
+          "device": 154504856318070761,
+          "inode": 281474980033913,
+          "bytes": 1459,
+          "mtime_ns": 1792737900570257600,
+          "mode": 33206,
+          "links": 1
+        },
+        "handle_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033913,
+          "bytes": 1459,
+          "mtime_ns": 1792737900570257600,
+          "mode": 33206,
+          "links": 1
+        },
+        "path_after": {
+          "device": 154504856318070761,
+          "inode": 281474980033913,
+          "bytes": 1459,
+          "mtime_ns": 1792737900570257600,
+          "mode": 33206,
+          "links": 1
+        }
+      },
+      "cross_api_qualification": "EXACT"
+    }
+  },
+  "external_pins": {
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\packet\\INPUTS.json": "966e8f42a38b7b0a891deab5cd71657b1246bb88a00a62cf773084f7fc23bee2",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\packet\\PLAN.md": "677398065cf1b37742ebe84c25e99629119cd49a161f446fe5d690f3635c002f",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\windows_pipe.py": "4bb72373827fea7001d173061078cd3ab768400744079eb6b759290477958c1c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\real_effect_service.py": "adb3c35f19c3f1da0274dccd460fb3a3d26f04a6e4d11797590c99638492b9dd",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\native_approval.py": "a764f9738877e649e58acbebc0124defb1bcbd33539d1e08b19bb80051516da6",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\effects\\native_observer.py": "658cc277dcda70547150a39eb76de45ea4a2e0ec36652c94741cb59d290e6e7f",
+    "T:\\00-Active\\Project-AI-CETA\\tests\\contract\\test_real_effect_entrypoint.py": "91d8b8e3b214ce5beea2b2593c557ace866a7b216f5e89f40c651415bae542a0",
+    "T:\\00-Active\\Project-AI-CETA\\tests\\contract\\test_native_owner_approval.py": "2fbe54c72b3a2e2556341e49345ed5ef139fc053e31c1560ba864b87acd782e0",
+    "T:\\00-Active\\Project-AI-CETA\\tests\\contract\\test_native_observer_origin.py": "80c67236f335b80042e3913ab9882d98cfc4489aa9d6ec26651139fb5fa2365b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\control\\OWNER-CONSUMER-INPUT-AMENDMENT.json": "6ea1f1e8384d2377ce27285c94dc7048a8b6ceb4f645eb45fe07aeadf541c920",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\owner_session.py": "b1ac4d6a75388101a854b70ea6ffa7d5d0911cd7dcfcb54feebdf11752b1dcf6",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\__init__.py": "09ebb86780abd7a9c66ad952bcfcdeff3929142e11032fcb398f03c655fe70b5",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\__init__.py": "9f32c5524363e677e310befaac5adbf7a0c98429f79866c67d136066579af0be",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\wire.py": "eeca384a2cb0e103fe657ea95a0bd2a6039c371b79863fd7e734b63d8b82a2b1",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\framing.py": "4a63d85fca04592276c8c9f7c0a9ad53c5b3629a5190b6042071bdb0dc48a71d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\__init__.py": "3c3f815d0e9f143ecfcf4b5b67c25778cbe7a6c0b8aa7cac05d45fb6a1d34568",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\events.py": "e58c332a9214335b93baa0ec9fef05892ef9f8e9c8f42739c18ffa35df25c6fa",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\history.py": "bea39b6fe7a9e1ece83ec491091fd55e7eaaa5689457ab3cb73cb618d7c89525",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\read_sets.py": "eb4b0f0cecc48908556a5163f6ab040d60109192feb5c5b13634f269a26bba7c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\store_transactions.py": "8531ead603b354ded7ce5341d28cd7d2a23a77f18198d39c74985768012b9bb1",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\temporal.py": "df3a3c2e28945bf75c998521b3d717cdf3b2218b2947052c07e5709bf0e6631d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\kernel_transactions.py": "cdc812a1ae0c545fc31b4a75466a8f942eafe63b4bf41a8576225f354f944a8c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\resource_management.py": "88ccb6ffbd2eb58eef856a8cbec42f710648413002b19a1bf317cf2433aeb14d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\resource_reservations.py": "9d6694e39aff9d3ef49f0a4452e12e2975356dc0e276cb7ce0fc5b9b1d368529",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\workload_throttling.py": "910baa28c3bbf5ba1870e80dc7a46684e6fc777b532ba61727582689181ef25b",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\real_effect.py": "72a4d9769b162eec871a78abf772feadd12c7293f5f33e5f60d78cd751af00e3",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\real_effect_cli.py": "dead2d6eb93523516d134fff98c3d968239981f37b29a95633c14a544c8d7c66",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\application\\__init__.py": "7c369261895a6eda3b91a9c8984eaed0556352ad95acf0ebf23a24d17e429ee0",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\evidence_admission.py": "ff22392ca43ae011bf0891742cf3edb39ffd46a1bb56f219e59c80e1143d0904",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\application\\use_cases.py": "7cd8674eb6cb14aab966ebf3c92d9514d2484b524d7ce4a2166f6b4494cc82d8",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\__init__.py": "a2827036371c8f93fb6aca456cf1628c104e72ac9268f0d5356427a0bed80548",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\__init__.py": "ed69e2c43a11331febb88fbf5dc9f02b127067918078e02681ad49ef4b3711ce",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\native_clock.py": "92981b3b62fea365f927542d795a058d035b80949248126b9cbb9d129fb5715c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\supervisor\\__init__.py": "9303aa2127cbc0e3bce69bcf2802c8b0ad5204725fb14a2d52d498903af45f99",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\supervisor\\windows_jobs.py": "3266711e69db72a479039e7160f2a37abf51e68aa6e4ff6ca3d0c0f961942eb5",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\effects\\native_cpu_binding.py": "82c40c78ef6042f1c9e7b948dc7da3be5850e80661e736ce892aca3c43af65f3",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\__init__.py": "30bdf88cbc70b141540007cff9c735da94c9a343f258543e9f74d461722e3e4b",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\sqlite_runtime.py": "e8720d9567440cc0dced5b6c84821321ae2a046e942d3f02156a3164bad7bc47",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\state.py": "117172514d904dfc7ec50b46cfbf71972feecbcfafd3c1e5cf3917863604510a",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\memory_lifecycle.py": "d666da5890a425c6e3c9e845a07f83512c8910945ac04a5d82f36c190b56e5c1",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\projections.py": "f453cea4226e00dc4770b69231d717e6bf1800bc16296023075c57ba6206418f",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\journal.py": "c0efdcd06d60e8648c9ca0733e236c3499a694b6fa8976ce7f40389718340c0d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\outcome_capacity.py": "3856b2fe6c2c5e5ed51c72e2935dd7a9a9fa30d4bf59d6d2213cccdf15ba3bb9",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\cpu_outcome_capacity.py": "2bdd6b4e668aa196fa91d59faaadee1de6c35d99d7de4dbe711b00a3cb986ae4",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\owner_enrollment.py": "51631374202a012b5d11fecd5f44b14304581ae0874035f60cffb7b6246465d5",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\owner_authority.py": "b9e0ea17a92181d20f8fa54711bd06821edc7624cfa62ce85449a4258d6a62ab",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\effect_transactions.py": "ffff64f1135605827ca6607c3cb494e1580dd5aeebfab41b4ec8cccc741a4fbc",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\cpu_execution.py": "5d1b386723a45a9bd9c9e21461ed04913df10145af0fd9d2ba2f730c23736004",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\transactions.py": "c1805cd3544c2e54a86a3721b1c484a4935cced05a00a33f3a08e69812b93892",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\kernel_service.py": "a695721b458c3b4b84fbe0d009fb0e0eaf4273da6f6248f40b83d86f9b723244",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\supervisor\\service.py": "95a7b3c4d8ce7b3ea0a5367f391dffc1d423be65b183dd3ef604a240595daf5a",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\task_meaning.py": "27dfffaa25502e246f8c7d8fbc3c41fe173a22a16a4eaf24a2f57fc184aee673",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\editor_recovery.py": "f8d906140dae05d1e175908bfa6020f3c6d6ee680f6eef1d9471e55e8e9304c1",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\task_drafts.py": "5d93de856467f0086cd4e494c4857c1572e37ab1a6d0f7dda8cb82d0fb135b5b",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\manual_effect.py": "a5caf8d590af8202cccd3a36421b24cf5a90a340dccaf48c1a20c6253b01e754",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\local_ipc.py": "e271cd52e097c1cb2867794a9e0c1e2d345c2c5142ffc6273c11ef1129f926bf",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\supervisor\\isolated_worker.py": "868ad9b53e793cd0a5b5eb92ad43939bcf4a0c103d2d95ee2ccef7d4a8d966a8",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\native_owner_view.py": "139b089eb651eb8f52c5e101009e1f408043b64edceaca677ccb14eea7d7545e",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\native_code_binding.py": "c7cfe0b8b9618cac528573472df90dfd7230501a92be75cbee52fa9b1c146169",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\owners.py": "c53bea224f4bba9f409ecf71d56bb43b80fb49b3ca32541f33486e20d85fdc43",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\native_cpu_outcome.py": "dda8aa59ea88fb0f09a01b147c38459243a5979b1d47a5a35fcec464e9fd0690",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\native_cpu_outcome.py": "446e81a8990b9ab197ff767a373567071844796968b81820069c3e17fc4b5aa8",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\native_cpu_runtime.py": "39741b181eb5c7632c8b9db2b82d1bad3c03ffd4c174b51bd98783818ec8d276",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\real_effect_runtime.py": "6c40837689a79aed77a5de5fe497eed74c6d15fa65b0292b99808efc32a906ba",
+    "T:\\00-Active\\Project-AI-CETA\\tests\\contract\\test_owner_authority_transactions.py": "f8a38f138b28fe474a1ab76d3c9188059e531111eac963ed131954f82fcd8252",
+    "T:\\00-Active\\Project-AI-CETA\\tests\\contract\\test_native_effect_observer.py": "671262ede1e04253bb5e276a913c85c673ff7dd46a7d884cb091fa7760bb0ecf",
+    "T:\\00-Active\\Project-AI-CETA\\tests\\contract\\test_native_cpu_outcome_provenance.py": "b3d8ea47f72e20b2a54133f0de1ea4044a0830b92c06aa5963ba56c3c79a2a0c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\local_results.py": "4b6a7e19c08b77e9f9dc09dc59bc4803a6f195ddf3c5bcf509fad22f91f78adc",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\real_effect_host.py": "68804d6b0e52f09135c3b97546f5f8050410b48d3570043b4be4fcc84a950d30",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\application\\ipc_service.py": "ce7e395fc2dff7519b3a92440ebd95bbe2bd577c3b42a5f6b4ec65094b86cb64",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\editor_recovery.py": "2f3abb9196c836d1ba36c32af066df8b3bca032d36aee3f5438f4c3202bd90d6",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\task_drafts.py": "756cea6e41a4fc7f0b0cda41854ae6d46a3a31d247bada735f8a4fd8fa3cd8dd",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\ipc_service.py": "0877f3303cb011dc06ceb878f23eda7664a9a76139e30a4ef68b06f8bbae2f98",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\service_process.py": "0fcad83f2ea223b1b9409299f720cca16a3a3aa326f098fa26016125239f0ea8",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\composition\\real_effect_client.py": "b4c46d2b988b06fbaf2f606c4b59459d550b5cfe78db186a46900b447461bd46",
+    "T:\\00-Active\\Project-AI-CETA\\tests\\contract\\test_owner_enrollment.py": "3498a6a0660392ace449523801b93a8bceefc28084025c204fe23feb1d1f1527",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-CLAIM.json": "f6a70c07ac6780041955fc8dc94e4e4422238af5f9f385038bef57f5ff9f8d1e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE-PROCESS.json": "53d4dc6c577816a85580205b07441eae1f612f4a89a758de60c5edf21a662457",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE-R2-PROCESS.json": "2af9d4cb061dffaae13adb50aa3dd1939fa008df19d9d6b6d2ec11e029b0b5c2",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE-R2.py": "d463c10cc4438d2d2560c052c4990416551087548603e999a7cfd2f8af856833",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE-R2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE-R2.stdout": "f41d4a89f3a6dd7e1b40a30c2e6d244ba5cd8d16a4b76ceefc24496a53f2d5f3",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE.py": "51272809c41a23c175fd0d2c3f17bb1f25e152952a667784f3b0a693f9f4feb8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE.stderr": "4fda9bf3d2263401cbc3d91bb876ab629a00fd4e64ec95f3666d698d65f59076",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETE.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETION-RECEIPT-R2.json": "8c657f6277b83f41945cb031cbcfe991c229cc732d149a220a9543a2357ca2b1",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-COMPLETION-RECEIPT.json": "c8364b720966faa7abc4afe3b2ee5924878871848f368218619d2e3be6554df7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-FINDING-RECEIPT-R2.json": "0926cfccbadf26f89a947a1790da3357c24385e73c01a895c6bafbac6badf449",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\AUTHOR-SELF-REVIEW.json": "490c402052c5f945aa6f87c4951c44460fcd6a6dd258b7e20b667a0dd9735f85",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-PROCESS.json": "94a0086b045fe9ce076184c8dba6957f2305dd4485da996c11b85a7c9a2eec89",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R2-PROCESS.json": "6c3651977a2f651deb0256f6deab62b8d45e125b413c455aafe5292815a4cc08",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R2.json": "1ca79dd32820a186f347e49aba7e2eab497c6e87343b21f155c523b8a7e23ded",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R2.stdout": "4b6f47977e58475bda230b59225f8a6cd7ac8b5df127d4beb5b2b3c8dfe9e621",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R2.unittest.log": "f8c3ef2c40a2b54e18fd69b49d64b87a7c28fb6d8cba9b2b8fa8fae72307df71",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R3-PROCESS.json": "cdb6d02db24c85be5881acf2997a1018b906eb00182f70e046a17fd50e3435fa",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R3.json": "5188d2146a96ea10c8c03978eafd1d7a59cd9fa27cda966a2af881ace2e16c7b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R3.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R3.stdout": "6343a014a029a00dddeac8469cdd852a772f9f64861307f86d70169b4031ee89",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS-R3.unittest.log": "50cc19d7fc9d39bc6daf17b1703f1b8530820e3da394afd1bd5a0398d200323a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS.stderr": "1c93f5f1a2d59fa600d3af729276492b4853854b9a576ebc1974def7b3f85513",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\BASE-CONTROLS.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before\\src\\ceta\\composition\\real_effect_service.py": "adb3c35f19c3f1da0274dccd460fb3a3d26f04a6e4d11797590c99638492b9dd",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before\\src\\ceta\\effects\\native_observer.py": "658cc277dcda70547150a39eb76de45ea4a2e0ec36652c94741cb59d290e6e7f",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before\\src\\ceta\\identity\\native_approval.py": "a764f9738877e649e58acbebc0124defb1bcbd33539d1e08b19bb80051516da6",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before\\src\\ceta\\identity\\windows_pipe.py": "4bb72373827fea7001d173061078cd3ab768400744079eb6b759290477958c1c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before\\tests\\contract\\test_native_observer_origin.py": "80c67236f335b80042e3913ab9882d98cfc4489aa9d6ec26651139fb5fa2365b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before\\tests\\contract\\test_native_owner_approval.py": "2fbe54c72b3a2e2556341e49345ed5ef139fc053e31c1560ba864b87acd782e0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before\\tests\\contract\\test_real_effect_entrypoint.py": "91d8b8e3b214ce5beea2b2593c557ace866a7b216f5e89f40c651415bae542a0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\capture-argument-parser.py": "d5ff6d8ff22e3dd31c1688f598c936a8d4f2ea972cc8b47ef71934915066e8b1",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\entrypoint-before-schema-binding.py": "ad680529473ad188feda3313f7117c91215dd5dc74916884029599e721427184",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\joint-controls-before-final-gate-current.py": "790f13afc9a461aa2b5c24e3897f9539c243a94dfdbc20660129b6c8608b5035",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\joint-controls-first-run.py": "b6e82226895d721515d03e214321e07e1d9565ecb9ac07d5bbf0a1b085dd35d3",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\native_approval-before-custody-hardening.py": "42edefe37a8f2b9c1f3e8e8c817e750772da5ca058931071d119ea6bdae6c1ff",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\native_approval-before-final-gate-current.py": "8dedc7c7f2cef59be40f8d498e4722c7ad557a8ec7fd82c046a9a61f702af22b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\run_controls-bootstrap.py": "1cb01c2b72f125e73a75b6340671af93e60e04dccb1b484bb9b89ba1a9f237e4",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\before-tools\\verify_prepared-first-freeze.py": "f33c271048e8b8223e9acd7d4f39ee653c2af3770ae20ca3e1ef12abd40f2fb9",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\composition\\real_effect_service.py": "020ac65a20c0de1201aae1fe9586d574c8002aec39aae303e44b55530e4a3414",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\effects\\native_observer.py": "a9600709fd2518fd5e62b460dc74553ce3d98062a432887dd83c185e2c5a5c84",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\identity\\native_approval.py": "f1dcadece80b237fbff3cc8def067dfa3be395f9dde85f89797bf9505c851bc7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\src\\ceta\\identity\\windows_pipe.py": "7e4a5ead5d72480794044b441617561377df710494eb82c7795f3c66e1327296",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\tests\\contract\\test_native_observer_origin.py": "80c67236f335b80042e3913ab9882d98cfc4489aa9d6ec26651139fb5fa2365b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\tests\\contract\\test_native_owner_approval.py": "2fbe54c72b3a2e2556341e49345ed5ef139fc053e31c1560ba864b87acd782e0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\candidate\\tests\\contract\\test_real_effect_entrypoint.py": "cf98722d8ed1430bdb80e3ba9676a4f3f4bd419ab598b265c45fe93507b6a360",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\CANDIDATE-R2.diff": "4f23544ddbf0b7b3bf622f9981c1c9d7d7cdd14022571a1352c9c19bc6274043",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\CANDIDATE.diff": "4f23544ddbf0b7b3bf622f9981c1c9d7d7cdd14022571a1352c9c19bc6274043",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\CANONICAL-BEFORE.json": "3938d0192c72d63aeeb4e871f2f8c2aaa76c761e068d80c70dcab35db896ddc8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\CAPTURE-ARGUMENT-FAILURE.json": "6451a32d886a61cd76a40f3acf75d3c61aa46e81b15f2e1e07c136bfea282b89",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\capture.py": "b152b53053abfeffb0d8ed67b99b3fda1c8a11648bb1298a99fc8bda2eb85d83",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\CONSERVATION-R2.json": "ec7d4f1a3172da3dfd610020eeb50717be6cd3cba73a9e18df1bed1a816b3f49",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\CONSERVATION.json": "ec7d4f1a3172da3dfd610020eeb50717be6cd3cba73a9e18df1bed1a816b3f49",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\FREEZE-PROCESS.json": "651d23c49e988f4bdd92eb9a01e48eb56d0f337835b8d09058f71cb13ccc6414",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\FREEZE-R2-PROCESS.json": "77e3ed8464d517b22f8bca48f17b0e41ad4edc4a9e1f336f8d7c36d92b284cd1",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\FREEZE-R2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\FREEZE-R2.stdout": "3367eb62ad8a3afb672ce7ab0e45b6b83975d8293bb8a713cc9a05f7b596f168",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\freeze.py": "69a8c3733ff6e87d72dd3ade2bd82234d642ccc48e95563929916f0d0734e536",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\FREEZE.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\FREEZE.stdout": "22d27aacedc53079d6d9235f35ff100d76c9bdfc78c4f7b462fe646ec319dd35",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\freeze_r2.py": "35e6a18541b1a2620d46f464379caedf4e4ab4a5f0ec35220b1602d7d4b39683",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\INITIAL-CLAIM-CALL-FAILURE.json": "f5fcdea96f879fc63fce4e16ede1a3c695903d4fd5a43d605ab05879d7fcf423",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-PROCESS.json": "b5ea669723719db2237d752f468025f05fb6214c0bbe8400f3ce8480e82bffd4",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R2-PROCESS.json": "016a527cf95d2e7d8fc3237df999a840f15e7e700446524a14a8301706b04dc8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R2.json": "8180ca7fe489815f2f97699b3391895af254613ecd5594ab88cdd4b0461e9354",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R2.stdout": "230ed738e610e685bdcfc5f84a804cbd51f80d2c5b737e0c1315749b94193891",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R2.unittest.log": "b21be38799c5aa0ca38df56f26b27a6b6ad27b0181af980099a532bdda69b395",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R3-PROCESS.json": "ea13710cbf4331dfe8a948a6c83b9739d991c7addf044fdbc935952a8c6dd024",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R3.json": "92e4d1f6049ea289c7c17c93c48fa792657b766bc493c0ff760c5984075814c3",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R3.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R3.stdout": "88a855dc762992cbe73b471599469d89420a06fcea8688789be4b2d72a5a7dd0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS-R3.unittest.log": "f516e85d889da45229f78816b54a137777a566c364f411c4c483c3bb09432e78",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS.json": "3401c0d62d22a4a514e8a24277b5968f5df65557f64e0b2da92d0c1c671d6387",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS.stdout": "4398d6fee53c7dbec178132e9e2032301fc022afcc663bd697ac61ecbf0f647e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\JOINT-CONTROLS.unittest.log": "6d3f814f0645ba12f0ce98ec9c1a80bc46c923ff3346ab2fa70c55dea9bb15e7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\MANIFEST-R2.json": "647e7d8df955ca4eefddc808e924ff7c32b8968d8b43cff23ef3021d7cee09d1",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\MANIFEST.json": "0da7d9335cd9a33c91be523f98d48721b31a13356a13da4295adf82088b0b6d3",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\PREPARED-PROCESS.json": "fdf09937aa980d8ce0493396c80ae44226b88a66935261e0f17ca1c4d0fffe8a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\PREPARED-R2-PROCESS.json": "4252350c3f0a29c64396310eaf19d7ae1625ae1db1c319cd1e89ac8aa2c9da9b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\PREPARED-R2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\PREPARED-R2.stdout": "0752099a8eea0fae5e49247e56e440b3c088c93f49fa33593ebfc36d72db33cd",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\PREPARED.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\PREPARED.stdout": "c0f009a00f558347b2f044760c88d6d6d39c4475728b7bd15b7a43feae43eae2",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\README.md": "389be6eaf07f73cf3998b94c35af888025d81573b30ae28959f6ab8fbc6fecdd",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\repair_receipt.py": "a5b0a7f7831633b0c64c90ea97770de36427aa9811e373640348a8eebcaf3ee9",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\run_controls.py": "7e70796ce391aa864010b61926863fdcdb2c1d1d87902e58fa967de3b5122be5",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\seed.py": "4689451ce9e4bad33f046ebc80dba567401e3ad9dc1011d30e694b9fb30b8ce7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\SOURCE-DELTA-R2.json": "d1f149a15a48b06f6527654e64171544120d59bce1e5fb990ba62570f64b25d7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\SOURCE-DELTA.json": "d1f149a15a48b06f6527654e64171544120d59bce1e5fb990ba62570f64b25d7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\STATIC-CHECKS-R2.json": "35a11a4d3ce52303581aa7b3afefb82ef994809399e2885af30f5cab02c9f94e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\STATIC-CHECKS.json": "333c25271ddc9f44ee28a0f695ec603dd4188ad4dc2b1ce5d63c88f011c5b3cc",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\test_joint_budget_controls.py": "369e42678758f4cd0c3101b467f311cb1dd935043d50d91456db4aa61fc7741e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\work\\verify_prepared.py": "fc9365895e7e877589443b28b425a27ef9c9f1d5a4f265cb9b94858fc68b670a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\ACTUAL-REVIEW-CLAIM.json": "507fecc48063e7c0842d204c4771a4994040147c5f868404c5b825ee0428fddf",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\capture_transcript_budget.py": "7ab87974a17bf990758066ee972121dd1ea6bf78087fde4f108520d29547944e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\CLAIM-SUMMARY-FAILURE.json": "0c801a3d138de25b8d8926e5dab40bfc6bfbeb0ee4ed98d1ac45fb029137c92c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\complete_rejected_review.py": "575385ba1025f48cc5fd080f79bd234d9ba71d806a188d69e3ce108dbf65163c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\complete_rejected_review_r2.py": "a77aefa4a9e1b146c7412dc7ec521b0268ba69e0cd6855abff1689b5753b11b9",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\CONSERVATION-AND-RECEIPT-AUDIT.json": "ed8f4b7a32c538650cc734d81111e8a78c9101cc166cef3cc45569535ab214cc",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\finish_readonly_audit.py": "4b3a22fbd0779c6c56491870d152ba85d9aaa178f3de80b8261eafec78e1476e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\FORMAL-REVIEW-PROMPT.txt": "60668b32c1aee1de5a7664ddceb9eb6aee63f55d92d4ad0ef41a384378316503",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\freeze_review.py": "3d0482672b7efeea2e7b13010b26638f6edb4ecfd7bd57bc45b12a5431213a15",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\freeze_review_r2.py": "df55df8c2dcdb652f0cc84b1cd82f7c2bd9510301728c1b3315d418595fe0d0d",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\MANIFEST-SUCCESSOR-R2.json": "6fb6f5dcb8abeeb61a67946322e7ebd8ba1422d456e875e120e10d01dc397552",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\MANIFEST.json": "703f5681d57264478e983887526ecbacca7e5f8490c9814fb07fe0288d77135d",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\PREPARED-CHECK-PROCESS.json": "edda070d358a623e5d1aaf4b4658c83654745ac2752ef4601d49f032c053dbe8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\PREPARED-CHECK.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\PREPARED-CHECK.stdout": "0752099a8eea0fae5e49247e56e440b3c088c93f49fa33593ebfc36d72db33cd",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\PROMPT-CHECK-PROCESS.json": "929018a5d66715b91d72de162a693241a58310810e1e065e17a040e6758059cb",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\PROMPT-CHECK.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\PROMPT-CHECK.stdout": "977f2f12851f49d25fec1c0e8b25241aafcc61d4439602fb6212e02bc4c8263d",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\PROMPT-SENSE-ASSESSMENT.json": "347def0b31dea7fcc37547cd0b5f887008e14cae4e3e72c011a09ef103747f11",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\reproduce_transcript_budget.py": "363b301cbbd78300d6fbe41b244c8242ab63afe49d762d128b530075a9756026",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\REVIEW-COMPLETION-CANDIDATE-R2.json": "f9b15fa45493215f451e9a29fe066d59c8eac89c027ba724fa8b621d23e626b7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\REVIEW-COMPLETION-CANDIDATE.json": "da6f844a74ee03f4936932e27598056d7914be3c6bcf1924f3365b6478507d5c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\REVIEW-COMPLETION-FAILURE.json": "d818da9765dd9099fdcc93296ce6bd806a693071949ce23eb5fac7afd4d9a216",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\REVIEW.json": "4503cb0f99329b80819bb7c4dff0000878eebba8f38bc178238023d47afe74fb",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\run_skill_checks.py": "163a19cf042ceeed75725c2004e25c56dd4314162aa501144982e59211036d7f",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\SKILL-SELF-TEST-PROCESS.json": "a6560960ea7ce49a531f775d521eba5afaec28faca1beaff8cc3f3b9f2433a08",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\SKILL-SELF-TEST.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\SKILL-SELF-TEST.stdout": "ad7b98fc4078439895e118227130e38081d6ca32a66d8d531959fd991b983242",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\SKILL-STATIC-SCAN-PROCESS.json": "71aea02d7965cb3f2fa129fde81594653992ae739244f8678e947222170dc735",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\SKILL-STATIC-SCAN.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\SKILL-STATIC-SCAN.stdout": "39daa02ae40fc10faa7c843d8b82fee4e8c729ac5c9be4dcfeeb04848bf21a2e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\TRANSCRIPT-BUDGET-PROCESS.json": "bc20eceec0be646c680121ac6d614c08edd12da456052b891b96cdd7911d12e7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\TRANSCRIPT-BUDGET-WITNESS.json": "666804b69ff520a832c059c1bef24cfb2f7e1fc7908ccdaebfc82346a91f9610",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\TRANSCRIPT-BUDGET.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb1\\review\\TRANSCRIPT-BUDGET.stdout": "1293b08de8938d59500c031bbda307f6313afc1bb9e58d645afe0a705accefa0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\MANIFEST.json": "e9b0ac804a3bcebad266e400e6ce41a8fbb113749026230baf6e4ed59f93db72",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-CLAIM.json": "7a3f1f206aea6c5152b33682fbdf25035dd81339bb2ca6968b9ec87bea8476ea",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-COMPLETE.py": "1057c89ed1f61a1c075cede9137d9e027c72265ab87e25e6b32739062907c421",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-REVIEW-PROCESS.json": "0b6476ce90707a4b3ddece8de36c1a2d873034b2ed507798277f947ae7648b7b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-REVIEW.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-REVIEW.stdout": "c7c7a0f6a830071a49cd6233cce9e39c7f66cde71be0f821c94994976efbe1b0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-SELF-REVIEW.json": "e306078b345f09d5296fffacba3099d7947251143a3729e729a5ba2ae18d106b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\before-tools\\controls-before-class-binding.py": "6df21a0bbc537ef33d72a6a59c90d7be97b411476290c30181542a2784f6ab64",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\before-tools\\owner-consumer-135.py": "fa8921cc839ef172684d1dcd0d7b946d6d66b48aa5625764bd05053badff7839",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\before-tools\\OWNER-CONTROLS-SOURCE-RECOVERY.json": "7479633e024b5852fdfe86eedd41713db90f6af5f015eb8b184fe8567995999b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\src\\ceta\\composition\\real_effect_service.py": "020ac65a20c0de1201aae1fe9586d574c8002aec39aae303e44b55530e4a3414",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\src\\ceta\\effects\\native_observer.py": "a9600709fd2518fd5e62b460dc74553ce3d98062a432887dd83c185e2c5a5c84",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\src\\ceta\\identity\\native_approval.py": "6de4b1d81dda4c4d4dfaa5c7ec03cd124862de76d437dc72c8641b04dbf2be77",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\src\\ceta\\identity\\owner_session.py": "c2e2e29ce76f396ec254489f85ecbd852e992bcd131d9bc23dcceb18cd3a2cac",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\src\\ceta\\identity\\windows_pipe.py": "7e4a5ead5d72480794044b441617561377df710494eb82c7795f3c66e1327296",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\tests\\contract\\test_native_observer_origin.py": "80c67236f335b80042e3913ab9882d98cfc4489aa9d6ec26651139fb5fa2365b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\tests\\contract\\test_native_owner_approval.py": "2fbe54c72b3a2e2556341e49345ed5ef139fc053e31c1560ba864b87acd782e0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\candidate\\tests\\contract\\test_real_effect_entrypoint.py": "cf98722d8ed1430bdb80e3ba9676a4f3f4bd419ab598b265c45fe93507b6a360",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CANDIDATE.diff": "9034be7fc92dff0504dc422118a2e529b1e2b61b60b17a44ee098cc61bc998a7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\src\\ceta\\composition\\real_effect_service.py": "adb3c35f19c3f1da0274dccd460fb3a3d26f04a6e4d11797590c99638492b9dd",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\src\\ceta\\effects\\native_observer.py": "658cc277dcda70547150a39eb76de45ea4a2e0ec36652c94741cb59d290e6e7f",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\src\\ceta\\identity\\native_approval.py": "a764f9738877e649e58acbebc0124defb1bcbd33539d1e08b19bb80051516da6",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\src\\ceta\\identity\\owner_session.py": "b1ac4d6a75388101a854b70ea6ffa7d5d0911cd7dcfcb54feebdf11752b1dcf6",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\src\\ceta\\identity\\windows_pipe.py": "4bb72373827fea7001d173061078cd3ab768400744079eb6b759290477958c1c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\tests\\contract\\test_native_observer_origin.py": "80c67236f335b80042e3913ab9882d98cfc4489aa9d6ec26651139fb5fa2365b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\tests\\contract\\test_native_owner_approval.py": "2fbe54c72b3a2e2556341e49345ed5ef139fc053e31c1560ba864b87acd782e0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\canonical-before\\tests\\contract\\test_real_effect_entrypoint.py": "91d8b8e3b214ce5beea2b2593c557ace866a7b216f5e89f40c651415bae542a0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CANONICAL-BEFORE.json": "52309af0f55eb4444fdd096a81777f989ebb4e260774d5344f3f27e36e394fdf",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\capture.py": "b152b53053abfeffb0d8ed67b99b3fda1c8a11648bb1298a99fc8bda2eb85d83",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CONSERVATION.json": "3b29990d95a567e53d12a9f276b3f6f34682fba5fa5d5732d68cd2ddbb2daf51",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CONTROL-COVERAGE.json": "82706de6a1c3a158f4c6a53829eb0689ab0c99051448df73725a4667d9d40918",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CONTROLS-FINAL-PROCESS.json": "f3d19e6f68b5fc9d64b365a84e44892ed5d606a24df1b8f586e3513d0057742c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CONTROLS-FINAL.json": "5235653e3eade28a8854337ef12acd765950125c0ba9774928686594a2e4f8b3",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CONTROLS-FINAL.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CONTROLS-FINAL.stdout": "3eaea2a41b3ec22b694e49731fc1ed418566a0f2e08468455639ead8f4f7aeae",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\CONTROLS-FINAL.unittest.log": "45e546422a1c26766672c1aa38bb99d80f40aa8d4686a2ccae33cacc0ee1e1f2",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FINAL-TOOLS-PROCESS.json": "34ff8c5f4705647880d654c3b1c3329eec1325663bc4f074b4bacbf8188a16ce",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FINAL-TOOLS.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FINAL-TOOLS.stdout": "eea1be965b42b909a170baafb76e96a5559e23e3ceecbabc791fe67a379d04f8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FOUR-CASE-WITNESS-PROCESS.json": "8113062d3881d37a2800e8113ae45f0b14f50d8bac8ec100899f679022ca84bb",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FOUR-CASE-WITNESS-R2-PROCESS.json": "2a735e69c867dd6764bae06f2284074cec70a4ca01d89936b77dfb04673d0929",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FOUR-CASE-WITNESS-R2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FOUR-CASE-WITNESS-R2.stdout": "4ac76812add808ffb0b27f29fdb37eb3729f35816a4ec945caeab969b3349b23",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FOUR-CASE-WITNESS.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FOUR-CASE-WITNESS.stdout": "4ac76812add808ffb0b27f29fdb37eb3729f35816a4ec945caeab969b3349b23",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\freeze.py": "fc044a16b0b3a6bcb4729a2322e06931a22b9d0d8d472b5a179c6a6295d1708e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\OWNER-CONSUMER-INPUT-AMENDMENT.json": "6ea1f1e8384d2377ce27285c94dc7048a8b6ceb4f645eb45fe07aeadf541c920",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\OWNER-CONTROLS-PROCESS.json": "6941e62568a9244c6f55d23460c7a4097d58522b34353bb74f26e0c5f55ba494",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\OWNER-CONTROLS.json": "a2d9795d97ebbe4db2bbb4fa102bf3a76ebaa072a4f3a6796e59c27034fd924d",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\OWNER-CONTROLS.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\OWNER-CONTROLS.stdout": "527ff83adb86fcdcae103c6191a78f04697eca373bb40ae8cf60803e95c51e54",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\OWNER-CONTROLS.unittest.log": "7ec7e53deced90574f94a0c20df4f7d8a225b09796add7e796b367e62e628d32",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\prepare_final_tools.py": "5aac78275f0e3c6ccdede48ec56a09806bc7611d9f9e432c995b3c726479bef1",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\PRIOR-REJECTED-JB1.json": "228e78663e28241daf477165d07469df0b4e4b3cbd158a357d03a7d5552e3b43",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\record_author_review.py": "9751619d010ff5709a9a726e7cbe7509b31397cbd72c780d162d7065de598adb",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\REPAIR-NOTES.md": "a8df8f1ba9ea32e5d2ad84421f68f94c6bde532a5ba56148f858b6797179ae59",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\run_controls.py": "489f711fb076627558faae37f310130f1c0375c35d9e119da3e4abf406f62b6a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\src\\ceta\\composition\\real_effect_service.py": "020ac65a20c0de1201aae1fe9586d574c8002aec39aae303e44b55530e4a3414",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\src\\ceta\\effects\\native_observer.py": "a9600709fd2518fd5e62b460dc74553ce3d98062a432887dd83c185e2c5a5c84",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\src\\ceta\\identity\\native_approval.py": "f1dcadece80b237fbff3cc8def067dfa3be395f9dde85f89797bf9505c851bc7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\src\\ceta\\identity\\owner_session.py": "b1ac4d6a75388101a854b70ea6ffa7d5d0911cd7dcfcb54feebdf11752b1dcf6",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\src\\ceta\\identity\\windows_pipe.py": "7e4a5ead5d72480794044b441617561377df710494eb82c7795f3c66e1327296",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\tests\\contract\\test_native_observer_origin.py": "80c67236f335b80042e3913ab9882d98cfc4489aa9d6ec26651139fb5fa2365b",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\tests\\contract\\test_native_owner_approval.py": "2fbe54c72b3a2e2556341e49345ed5ef139fc053e31c1560ba864b87acd782e0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed-before\\tests\\contract\\test_real_effect_entrypoint.py": "cf98722d8ed1430bdb80e3ba9676a4f3f4bd419ab598b265c45fe93507b6a360",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\seed.py": "cd7642b154faedb56dfbff073f2af38bada0b097886abb31b99bc82e9621da02",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\SOURCE-DELTA.json": "de5bddd4be3bd28ae5a4944b5b9fe8bfbf90412b28cd87a9a80b82d641c91346",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\STATIC-CHECKS.json": "5010bcd7b6141be16992b3e5398672e058e77e0a8e609ffb12cd1cb295e76a6c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\test_joint_budget_controls.py": "57e9d1818151ced6098a9f0607f12faf2539f1048a32fc852edb8b1ae3f9397d",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-BUDGET-WITNESS-R2.json": "5ec2c4ab62baf0660dc79430c2025cc33af4f69a6309c5031766f54338a5bc9a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-BUDGET-WITNESS.json": "9361d3cd1129edb9ab66fbb78c755539412b3593ce0627649158e34fa80aebc4",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS-PROCESS.json": "1509643218c2a2f8a8fd2bf0255ec66561546e0011e32faa3d429ac922608645",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS-R2-PROCESS.json": "6f9b740165f5229bad979b298a8e886fdd80d99aed55c92e2e181dda87a0b271",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS-R2.json": "f5eec1da2c8482410d82e51dcc47fbac6c929039892f6060f6b96186beb23517",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS-R2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS-R2.stdout": "8d1a26163c204f19f70e8c676e6575fa63b62b76176b41adfddbcc9b13779bdd",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS-R2.unittest.log": "e3ad86f6f1117989a3cf921b340ae38d607a513771618dd4625bf51752cf1ece",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS.json": "45325fb644c294d2cd12f8ed9dc16f5ad278363a83b50b0325551814a596a2c8",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS.stdout": "3b8f89320ce7295b751821287ef982fe7e61247ad04b6648d8e0fa1b734cee6e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\TRANSCRIPT-CONTROLS.unittest.log": "d38dafdd1c4e327b05a5cf0d288b5ed2111a444e88c0e687266f5fcbbb4799d7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\verify_prepared.py": "13371624e1ed059874525ba82f47069eaf29319291937e41f2a6c0d7aa08009f",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\witness_four.py": "769713c5634622735028c0793b181bc87596b9010a1647c8bb02fa3ae67f7745",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\witness_four_r2.py": "c75d1ce77df4d4dc5cc57d8a0440d84a37adc179ace98f329cf18ef6526eff44",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-COMPLETE-PROCESS.json": "daa2d085001d289719ecab7311d426eea8ad48d769df49ad851b0e3778f6abaf",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-COMPLETE.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-COMPLETE.stdout": "713c037aa7435cb9c00b63f6c13bb3ed4a279a3edaa24eb8cf6d090803f05f8e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\AUTHOR-COMPLETION-RECEIPT.json": "bbde98f5e55afcf59bfea8ef042dd8bef6af4a371d9f21c53a852c4a3528a2ae",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FREEZE-PROCESS.json": "59d9ec15917f1402b193e02ea9dde9ef6b6ca75a77ac1ab931fcfa50e52eca4c",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FREEZE.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\FREEZE.stdout": "ed02296279549303dce7fb92aa37549cae5c2f079254e4f6bdf566cabe242532",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\PREPARED-PROCESS.json": "a2537a6303fa13d9b5b318eab6bb7cc9ab35af663487cb6c2f026375e65b78bc",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\PREPARED.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\work\\PREPARED.stdout": "cb4804737da822a474e40f232db5d635c5d3bbcf730535ef9640784e9989ea6a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\control\\ROOT-CLOSE-CANDIDATE.py": "c9065cdc7dde212da9b9840dfb4615805c41d32837ab7bc354eb3f30aad5d973",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\control\\AGENTS.md": "fef340a999c665efa9438e819d99f82e966b6353745e22fa8b9e9185357bcbfa",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\control\\OWNER-INPUT-BINDING-R1-FAILURE.json": "9d665c0e541e94b92c9990d6b1b3f8f62f428a9a0e500f01c272926c4ca2bc95",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jb2\\control\\OWNER-INPUT-BINDING-R1.py": "327eeea4920404d6e17b535d01de9a248824c88db489b264f78f2459ce96c5a9",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\work\\complete_observer.py": "cfd9e4e51e0e5d8436d19a5d1a5017103f703cb698113a16e49558cae9489ef8"
+  },
+  "post_freeze_outputs": [
+    "MANIFEST.json",
+    "REVIEW-COMPLETION-CANDIDATE.json"
+  ],
+  "sources_frozen_before_completion": true,
+  "canonical_or_native_execution": false,
+  "full_product_acceptance": false
+}

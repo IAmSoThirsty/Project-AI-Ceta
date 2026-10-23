@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe",
+    "-E",
+    "-B",
+    "-X",
+    "utf8",
+    "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/st2/control/independent-handle-composition-r1/read_actual_composition.py"
+  ],
+  "cwd": "T:/00-Active/Project-AI-CETA",
+  "started_at": "2026-10-23T08:36:10.163Z",
+  "finished_at": "2026-10-23T08:36:11.630Z",
+  "actual_process_exit_status": 1,
+  "signal": null,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\independent-handle-composition-r1\\read_actual_composition.py\", line 68, in <module>\r\n    qlive=OrchestrationRuntime(Q/'control-r2').verify(QRUN);slive=OrchestrationRuntime(C).verify('ceta-st23-r2')\r\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"T:\\01-Projects/TAAR-Agent-Taskforce/TAAR-Agent-Taskforce\\taar\\orchestration_runtime.py\", line 874, in verify\r\n    state = self._invalidate_mutated_artifacts(store, graph, state)\r\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"T:\\01-Projects/TAAR-Agent-Taskforce/TAAR-Agent-Taskforce\\taar\\orchestration_runtime.py\", line 630, in _invalidate_mutated_artifacts\r\n    snapshot = _snapshot_workspace(Path(node_state[\"workspace\"]), Path(graph.root))\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\mock.py\", line 1139, in __call__\r\n    return self._mock_call(*args, **kwargs)\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\mock.py\", line 1143, in _mock_call\r\n    return self._execute_mock_call(*args, **kwargs)\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\mock.py\", line 1204, in _execute_mock_call\r\n    result = effect(*args, **kwargs)\r\n             ^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\independent-handle-composition-r1\\read_actual_composition.py\", line 66, in denied\r\n    def denied(*args,**kwargs):raise AssertionError('Composition review forbids snapshot/native/coordinator mutation')\r\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: Composition review forbids snapshot/native/coordinator mutation\r\n"
+}

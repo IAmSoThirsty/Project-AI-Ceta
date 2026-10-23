@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/independent_broader_review",
+  "recorded_at": "2026-10-23T06:35:31.108Z",
+  "decision": "rejected_as_publication_prerequisite",
+  "reviewed_script": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/cp9/control/lease_audit_r2.py",
+  "reviewed_script_sha256": "7666aa386c0a8d518d9a49eaa09497e7fbcc9629c2a341222b85b4edf5a0db4e",
+  "finding": {
+    "id": "LEASE-AUDIT-R2-01",
+    "classification": "blocking_current_audit_prerequisite",
+    "location": "audit: active node claim loop",
+    "problem": "The persisted node effective_write_scope, executor_id and workspace mirrors are not compared to the embedded/current claim. Scope overlap is computed only from the claim, while installed TAAR uses the node effective_write_scope for admission overlap.",
+    "witness": "Synthetic RUNNING node scope .git/** with embedded/current claim scope local-candidate/** returned clear=true and unresolved=0.",
+    "repair": "Require exact state-node effective_write_scope, executor_id and workspace equality with current claim before classification. Preserve contradictory inputs as unresolved; do not discard them."
+  },
+  "additional_requirement": {
+    "status": "Root has accepted and is implementing separately named R3",
+    "problem": "Own exception compares stored claim with caller supplied expected claim/fingerprint, but does not itself bind the immutable exact17 publication packet or approved review/gate.",
+    "repair": "Read pinned exact_git_scope.packet; bind actual storage path/run/fingerprint/effective17scope/current claim and required reviewed/gated state. No live publication packet exists yet; no own publication claim was created in this review."
+  },
+  "controls": {
+    "selected": 4,
+    "failed_expectations": 1,
+    "actual_process_exit_status": 1,
+    "result_sha256": "ead74553f3d1c6e50366786c5b7bfbbf85d58707b8cae913226cb8272c4c6257",
+    "process_sha256": "b3932b542e2fe62f48615d58e41de1125ec30d2170c496d7666f3c498856fb51",
+    "script_sha256": "ccb9f57f3721731aadcbda219ce57156a42f1a12426ce0ed9cf5aa58bae6064e",
+    "qualification": "In-memory synthetic audit inputs only; no real coordinator claim, gate, verify or product runtime executed."
+  },
+  "preserved": {
+    "original_failed_audit_sha256": "42c153637966c0b66908962b23237f66580a8c9854a08cd55780af2dd51a4cf3",
+    "r2_script_sha256": "7666aa386c0a8d518d9a49eaa09497e7fbcc9629c2a341222b85b4edf5a0db4e",
+    "diagnostic_report_sha256": "93f5661122237c3a4e74d7d3e9ea358705067b6e454eb73d58c52d508a016670"
+  },
+  "writes": "Only new cp9/control/lease-audit-review outputs",
+  "canonical_or_coordinator_or_git_mutation": false,
+  "global_clearance": false,
+  "product_acceptance": false
+}

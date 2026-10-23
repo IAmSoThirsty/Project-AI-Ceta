@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "purpose": "Root writes final concrete input only after applied and closed ST2success plus the explicit closed BR3 successor. BR1executionFAILED and BR2rejectedpreparation are preserved separately; this template is not an execution result.",
+  "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/cp9/control/FINAL-CANONICAL-INPUTS-R2.json",
+  "required_example": {
+    "schema_version": 1,
+    "project": "T:\\00-Active\\Project-AI-CETA",
+    "run_id": "ceta-cp9-preparation-20261023",
+    "parent": "2c8f73eb354915d0328e227121436259a9592446",
+    "source_manifest": {
+      "path": "ABSOLUTE_FINAL_ST2_SOURCE_MANIFEST",
+      "sha256": "ACTUAL_SHA256"
+    },
+    "source_payload_count": 560,
+    "status_pins": {
+      "build/progress.json": "ACTUAL_SHA256",
+      "handoff/continuity.json": "ACTUAL_SHA256"
+    },
+    "current_status_key": "current_repository_execution_20261023",
+    "closed_prerequisites": [
+      {
+        "run_id": "ceta-st23-r2",
+        "closure": {
+          "path": "ACTUAL_CLOSED_ST2_ROOT_COMPLETION",
+          "sha256": "ACTUAL_SHA256"
+        },
+        "verification": {
+          "path": "ACTUAL_ST2_FINAL_VERIFY_API_JSON",
+          "sha256": "ACTUAL_SHA256"
+        }
+      }
+    ],
+    "exports": [
+      {
+        "source": "ABSOLUTE_EXACT_COMPLETED_REVIEWED_FILE",
+        "destination": "handoff/development-checkpoints/20261023-0009/evidence/EXACT_RELATIVE_PATH",
+        "sha256": "ACTUAL_SHA256",
+        "kind": "accepted_engineering",
+        "review_reference": {
+          "path": "ABSOLUTE_REVIEW_OR_EXACT_FAILED_DISPOSITION",
+          "sha256": "ACTUAL_SHA256"
+        }
+      }
+    ],
+    "message": "Concrete source/test delta and acceptance limits; development checkpoint9.",
+    "full_product_acceptance": false,
+    "current_broader": {
+      "root": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3",
+      "control": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\control",
+      "run_id": "ceta-br23-r3",
+      "closure": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\control\\ROOT-EXECUTION-COMPLETION.json",
+        "sha256": "ACTUAL_SHA256"
+      },
+      "verification": {
+        "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\control\\verify-final-api.json",
+        "sha256": "ACTUAL_SHA256"
+      }
+    },
+    "preserved_broader_attempts": [
+      {
+        "run_id": "ceta-br23-r1",
+        "stage": "EXECUTION_FAILED_POSTCHECK",
+        "canonical_test_bodies": 510,
+        "actual_exit_status": 1,
+        "success_seal_present": false,
+        "closure": {
+          "path": "ACTUAL_BR1_FAILED_CLOSURE",
+          "sha256": "ACTUAL_SHA256"
+        },
+        "verification": {
+          "path": "ACTUAL_BR1_FAILED_VERIFICATION",
+          "sha256": "ACTUAL_SHA256"
+        }
+      },
+      {
+        "run_id": "ceta-br23-r2",
+        "stage": "PREPARATION_REJECTED_BEFORE_CANONICAL_EXECUTION",
+        "canonical_test_bodies": 0,
+        "execution_intent_present": false,
+        "closure": {
+          "path": "ACTUAL_BR2_REJECTED_PREPARATION_CLOSURE",
+          "sha256": "ACTUAL_SHA256"
+        },
+        "verification": {
+          "path": "ACTUAL_BR2_REJECTED_PREPARATION_VERIFICATION",
+          "sha256": "ACTUAL_SHA256"
+        },
+        "review_reference": {
+          "path": "ACTUAL_BR2_REJECTED_REVIEW",
+          "sha256": "ACTUAL_SHA256"
+        }
+      }
+    ]
+  },
+  "export_kinds": [
+    "accepted_engineering",
+    "completed_candidate_source",
+    "historical_failure_evidence",
+    "accepted_review",
+    "accepted_validation_evidence"
+  ],
+  "requirements": [
+    "No wildcard discovery or automatic ignored-path exclusion; Root enumerates exact reviewed source/tool/evidence exports.",
+    "Historical failure evidence may be retained; rejected executable implementations are excluded.",
+    "Canonical560 includes exactly five immutable restoration-proof JSON source inputs. The six published PDF transport/tool/test/handoff paths are retained parent exports, conserved by exact parent blob and mode identity; they are not canonical560 members.",
+    "All parent paths/modes are conserved. Source/status/current Git/index remain unchanged during preparation.",
+    "The final input is supplied as an explicit SHA256 to assembly/preparation/freeze.",
+    "This authoring run grants no canonical Git mutations or publication. A later fresh exact17-path graph/review/gate is required.",
+    "The explicit current_broader root/control/run and closedrefs identify BR3. BR1 is failed executed evidence; BR2 is rejected preparation with zero canonical bodies and no execution intent."
+  ],
+  "required_canonical_status_assertion": {
+    "field": "rejected_broader_preparation",
+    "run_id": "ceta-br23-r2",
+    "canonical_test_bodies_executed": 0,
+    "execution_intent_present": false,
+    "current_broader_regression_run_id": "MATCH_CURRENT_BROADER_RUN_ID"
+  }
+}

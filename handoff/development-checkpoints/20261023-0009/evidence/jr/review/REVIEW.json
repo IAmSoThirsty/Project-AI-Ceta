@@ -1,0 +1,40 @@
+{
+  "decision": "rejected",
+  "reviewer": "/root/operational_review22",
+  "recorded_at": "2026-10-23T00:36:06.463150+00:00",
+  "manifest_sha256": "3f1d85ecebf50c72b17d6761284f950083db0c0963faa3927eada7e462ecec7d",
+  "tests": 23,
+  "passed": 22,
+  "failures": 1,
+  "errors": 0,
+  "skips": 0,
+  "findings": [
+    {
+      "priority": "P1",
+      "classification": "BLOCKING_CURRENT_RUNNER_EXECUTION",
+      "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr\\work\\run_canonical_journal.py",
+      "lines": [
+        185,
+        207,
+        208,
+        237,
+        246
+      ],
+      "title": "Diagnostic formatting replaces original failure before result persistence",
+      "reproduction": "Synthetic body raises exact KeyboardInterrupt with non-string key 7 in BaseException storage. diagnostic calls key.endswith and raises AttributeError while constructing report outside the reporting try.",
+      "observed": {
+        "original_preserved": false,
+        "result_exists": false,
+        "exception_context_is_original": false
+      },
+      "evidence": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr\\review\\controls\\9474d7\\observed.json",
+      "required_repair": "Contain diagnostic faults as secondary, preserve original exception triple/outcome, use bounded safe diagnostic extraction for arbitrary attribute storage and ensure report construction failures cannot bypass primary retention. Add adverse primary and secondary formatting controls in a fresh successor."
+    }
+  ],
+  "frozen_integrity_passed": true,
+  "canonical_test_bodies_executed": false,
+  "canonical_fixture_writes": false,
+  "fixture_observation_controls": "PASS including ignored names, root/nested errors and empty directories",
+  "actual_claim_controls": "PASS including all three claims, READY-only and wrong context refusals",
+  "full_product_acceptance": false
+}

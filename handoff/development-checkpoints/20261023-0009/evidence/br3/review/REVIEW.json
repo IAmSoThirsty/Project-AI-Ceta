@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-br23-r3",
+  "reviewer": "/root/independent_broader_review",
+  "decision": "approved",
+  "manifest_sha256": "2c22f24694d2c6e1706669007cda3f32642df18f92bafcee669c58cda2cb41f3",
+  "binding_sha256": "3ac5b20dd8c0ecee4943b717445812b243b708cd42fdc097d9229e3a72e18f0c",
+  "recorded_at": "2026-10-23T05:05:11.074Z",
+  "scope": "Fresh exact broader-regression preparation only; Root must perform actual gate and all eight exact execution claims before one canonical cohort",
+  "findings": [],
+  "resolved_prior_finding": {
+    "id": "BR2-CUSTODY-01",
+    "rejected_candidate_manifest_sha256": "72028d628d5ede1db9d39637910be2da47908faeb3eb0dbffbab98385bdcac6e",
+    "rejected_review_sha256": "e52eeb4714a7d433e7ddcace9aa3939385c40dcc2cdb91812c50593a34aa01da",
+    "original_rejection_unchanged": true,
+    "repair": "All three local generator boundaries are explicit context-manager objects. Existing body exceptions propagate through __exit__ returning False; raw BaseException descriptors retain exact primary and secondary triples.",
+    "direct_identity_retained": [
+      {
+        "boundary": "file_stream read plus close",
+        "retained": true,
+        "primary_frames": {
+          "observer_primary_exc_info": [
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\work\\complete_observer.py",
+              "line": 113,
+              "function": "stable"
+            },
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\review\\reproduce_primary_custody.py",
+              "line": 39,
+              "function": "read"
+            }
+          ]
+        },
+        "secondary": [
+          {
+            "type": "OSError",
+            "args": [
+              "secondary file close"
+            ],
+            "traceback": [
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\work\\complete_observer.py",
+                "line": 97,
+                "function": "__exit__"
+              },
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\review\\reproduce_primary_custody.py",
+                "line": 40,
+                "function": "close"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "boundary": "observation_port body plus hook conflict",
+        "retained": true,
+        "primary_frames": {
+          "snapshot_primary_exc_info": [
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\review\\reproduce_primary_custody.py",
+              "line": 51,
+              "function": "<module>"
+            }
+          ]
+        },
+        "secondary": [
+          {
+            "type": "RuntimeError",
+            "args": [
+              "BR_SNAPSHOT_HOOK_CHANGED; original restoration attempted"
+            ],
+            "traceback": [
+              {
+                "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\work\\bound_runtime.py",
+                "line": 142,
+                "function": "_restore"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "boundary": "reporter_observation body",
+        "retained": true,
+        "primary_frames": {
+          "reporter_primary_exc_info": [
+            {
+              "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\br3\\review\\reproduce_primary_custody.py",
+              "line": 56,
+              "function": "<module>"
+            }
+          ]
+        },
+        "secondary": []
+      }
+    ],
+    "direct_actual_exit_status": 0
+  },
+  "reviewed_surfaces": [
+    "complete_observer.py directional Windows suffix mode rule, raw API metadata, strict same-API/read/identity/type/link/native checks and complete traversal",
+    "bound_runtime.py exact run/control/root/fingerprint/eight scopes, four stock gate/review receipts checks, stock transition/capacity/overlap/self-review/receipt/event semantics, exact-port dispatch and restoration",
+    "run_broader.py canonical module/origin/ROOT/namespace checks, exact ordered cohort and actual claims, accepted JR2 reporting engine and explicit reporter restoration",
+    "prepare/freeze/verify/pin_prior complete source and fixture conservation, preserved failed/rejected predecessors, nested extended-path observation distinct from top-level support hashes",
+    "Fresh Root launcher, self-review, release and close scripts; one attempt, approved review plus actual gate/leases, actual exit0 and sealed complete post-observations required before success"
+  ],
+  "validation": {
+    "frozen_integrity": {
+      "actual_exit_status": 0,
+      "process": "FROZEN-INTEGRITY-PROCESS.json",
+      "files": 685,
+      "entries": 1298,
+      "external_pins": 240
+    },
+    "author_controls": {
+      "tests": 55,
+      "prior44retained": true,
+      "new_custody_cases": 11,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "actual_exit_status": 0
+    },
+    "independent_controls": {
+      "tests": 23,
+      "inherited_candidate_cases": 11,
+      "independently_authored_cases": 12,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "all_selected_started_stopped_exact": true,
+      "actual_exit_status": 0,
+      "process": "INDEPENDENT-CONTROLS-PROCESS.json",
+      "frozen_source_unchanged": true
+    },
+    "direct_three_boundaries": {
+      "cases": 3,
+      "passed": true,
+      "actual_exit_status": 0,
+      "evidence": "DIRECT-CUSTODY-REPRODUCTION.json"
+    },
+    "conservation": {
+      "actual_exit_status": 0,
+      "source_inputs": 562,
+      "ordered510": true,
+      "failed_BR1_JS9_preserved": true,
+      "nested_BR2": {
+        "entries": 1758,
+        "files": 932,
+        "nested_data_files": 876,
+        "long_path_files": 2,
+        "longest_path": 392,
+        "complete_observation_equal": true,
+        "top_level_external_support_pins": 56,
+        "ordinary_external_pins_are_top_level_only": true,
+        "all_nested_data_revalidated_through_extended_reader": true
+      },
+      "evidence": "CONSERVATION-AND-SCOPE.json"
+    }
+  },
+  "root_script_pins": {
+    "execute_once.py": "e9384efbf8bed7f8acdcec779de3f5a4361c542b951e3b82547907b27f0af85c",
+    "ROOT-SELF-REVIEW.py": "1d43389c7361cdfe9bf9b512d5bb71ba31589b8c01cf95156348961d1a76cff6",
+    "ROOT-RELEASE.py": "235aec89120dc149e7ff11f51b4b2791beae92041bac82034f452e3a7baab6d7",
+    "ROOT-CLOSE.py": "9c2145d7e23cbcd5b2b5410e8c60375e1c7459a6f1e9ad7874805226f8f4716e"
+  },
+  "preserved_preparation_failure": {
+    "pin_prior_first_attempt_actual_exit_status": 1,
+    "corrected_successor_actual_exit_status": 0,
+    "complete_long_path_qualification_length": 392,
+    "nested_entries_remain_complete_immutable_data": true,
+    "no_shallow_observation_substitution": true
+  },
+  "acceptance_limits": [
+    "No canonical test bodies executed by this review; approval authorizes preparation handoff only",
+    "Root must obtain actual successful gate and exact eight live claims before one attempt",
+    "Canonical cohort success requires actual exit0, exact510 started/stopped, no failures/errors/skips, complete source/fixture after-observations and valid final seal",
+    "BR1 remainsFAILED exit1/no success seal; original failed file path UNKNOWN",
+    "BR2 remainsrejected with zero canonical bodies, no intent, empty delivery and absent JS9r2",
+    "Reliable unchanged50ms admission and root cause of historical timing overrun remain NOT_ESTABLISHED; successful single timing case did not reproduce old failure",
+    "Bounded disposable Python custody subprocesses are included in the selected cohort; no native worker or live-profile qualification inferred",
+    "No installed/offline/migration/endurance/human/hardware/full application/model acceptance; no overall completion percentage"
+  ],
+  "canonical_test_bodies_executed": 0,
+  "canonical_fixture_writes": false,
+  "full_product_acceptance": false,
+  "completion_percentage": null
+}

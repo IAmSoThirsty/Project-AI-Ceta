@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe",
+    "-E",
+    "-B",
+    "-X",
+    "utf8",
+    "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/st2/review/verify_final_conservation_r2.py"
+  ],
+  "cwd": "T:/00-Active/Project-AI-CETA",
+  "actual_exit_status": 1,
+  "stdout": "{\"status\": \"PASS\", \"manifest_sha256\": \"5729a01e71127efd8d9970e8b5d1405f9b297eb12e421e94946983f125c6ff32\", \"source_native_files\": 562, \"Git\": {\"root\": \"T:\\\\00-Active\\\\Project-AI-CETA\", \"branch\": \"refs/heads/candidate/societal-reasoning-v1\", \"head\": \"d0ee29ce75f99fe974e10ec9baf38c5a516dd2df\", \"origin\": \"git@github.com:IAmSoThirsty/Project-AI-Ceta.git\", \"status_sha256\": \"b2a3e5f277d839cd93bc797f7ababbe5baf7e575fc12bbe5a0555f4bba436faf\", \"index_native\": {\"device\": 154504856318070761, \"inode\": 844424933350220, \"bytes\": 4800729, \"mtime_ns\": 1792515345869930500, \"sha256\": \"93cf1f84458ef0eb4e370de0ab85ff13a0ff4cd12613ac3d461618b48e716dd3\"}}, \"frozen_work_files\": 178, \"external_pins\": 758, \"combined_amendment_and_successor_unchanged\": true, \"review_full_file_count\": 53, \"review_policy_file_count\": 52, \"ordinary_review_snapshot_count\": 51, \"ordinary_review_snapshot_matches_complete_policy\": false, \"ordinary_missing\": [\".agents/runtime/oq23/st2/review/author-controls-replay-r1/test_long_windows_file_observed/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/abcdefghijklmno/long.txt\"], \"ordinary_extra\": [], \"review_snapshot_policy\": {\"ignored_directory_names\": [\".agents\", \".git\", \".mypy_cache\", \".pytest_cache\", \".ruff_cache\", \"__pycache__\"], \"ignored_root_relative_subtree\": \".project-ai/automation\", \"symlinks\": \"EXCLUDED_AS_STOCK; OWN_IDENTITY_RECORDED; NEVER_FOLLOWED\", \"unignored_nonsymlink_reparse\": \"REFUSE\", \"root_and_nested_enumeration\": \"FAIL_CLOSED\", \"extended_paths\": true, \"coverage\": \"ALL_ORDINARY_ENTRIES_UNDER_EXPLICIT_STOCK_POLICY; NOT_IGNORED_REPOSITORY_COMPLETENESS\"}, \"canonical_test_bodies_executed\": 0, \"canonical_fixture_writes\": false, \"canonical_or_Git_writes\": false}\r\n",
+  "stderr": "Traceback (most recent call last):\r\n  File \"T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\review\\verify_final_conservation_r2.py\", line 17, in <module>\r\n    print(json.dumps(report));assert ordinary==policy,'ordinary review completion snapshot coverage mismatch'\r\n                                     ^^^^^^^^^^^^^^^^\r\nAssertionError: ordinary review completion snapshot coverage mismatch\r\n",
+  "prior_failed_observation_preserved": "FINAL-CONSERVATION-PROCESS.json",
+  "diagnosis": "REVIEW-FULL-DIAGNOSTIC-INVENTORY.json",
+  "checks_weakened": false,
+  "canonical_test_bodies_executed": 0,
+  "canonical_fixture_writes": false,
+  "canonical_or_Git_writes": false
+}

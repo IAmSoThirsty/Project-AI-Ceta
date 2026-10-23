@@ -1,0 +1,66 @@
+{
+  "recorded_at": "2026-10-23T08:04:11.667Z",
+  "reviewer": "/root/status_packet_review",
+  "author": "/root/broader_successor_author",
+  "decision": "rejected",
+  "manifest_sha256": "736a2a3ef8639bf99acced85d0ce3950b74b01bf9f23d856148ca7a7061df2f6",
+  "graph_fingerprint": "b848fefb7c69a06d4ffc32f71bac48ac316edc03755773ec0c6103365d2b4c0b",
+  "provider_sha256": "3727f857cd6cb7324a8b93ad16d070d4a403678ac071cd94c32954edbd203bde",
+  "root_candidate_closure_sha256": "64f81f235284f4a1e6222c09c407e1ff4a25acc96412fee7b71d27bdf97703ad",
+  "root_candidate_closure_approved": false,
+  "findings": [
+    {
+      "id": "DS2-GATE-TARGET-01",
+      "severity": "P1",
+      "classification": "ROOT_ADMISSION_METADATA_DEFECT_BLOCKING_COMBINED_APPROVAL",
+      "file": "control/AGENTS.md",
+      "actual": "Declared DS2 validate command invokes ds1/work/verify_prepared.py.",
+      "required": "Fresh corrected admission graph/run/review binding the exact ds2/work/verify_prepared.py command and new Root helper, with frozen original provider/source qualification unchanged.",
+      "provider_test_body_failure": false
+    }
+  ],
+  "provider_assessment": {
+    "classification": "NO_NEW_PROVIDER_DEFECT_FOUND_IN_BOUNDED_REPAIR_REVIEW",
+    "independent_fake_provider_cases": 6,
+    "actual_exit_status": 0,
+    "DS1_CUSTODY_01_repair_reproduced": true,
+    "DS1_PROVENANCE_01_repair_reproduced": true,
+    "partial_Basic_Standard_Id_failure_capture_reproduced": true,
+    "exact_three_changed_functions": [
+      "custody",
+      "WinProvider.query",
+      "Directory.checkpoint"
+    ],
+    "all_other_module_AST_unchanged": true
+  },
+  "recorded_evidence": {
+    "frozen_files": 46,
+    "external_pins": 106,
+    "author_controls": 50,
+    "retained_ordered_prior_controls": 41,
+    "recorded_full_F_files": 14355,
+    "recorded_full_F_directories": 2859,
+    "recorded_excluded_symlinks": 1,
+    "elapsed_ns": 147478296300,
+    "elapsed_domain": "WHOLE_TREE_QUALIFICATION_NOT_CHALLENGE_OR_ADMISSION_TIMING",
+    "source562_Git_index_and_ST2_conserved": true,
+    "prior_DS1_files_preserved": 95,
+    "prior_DS1_actual_rejection_preserved": true,
+    "exact_DS2_read_only_verifier_actual_exit_status": 0
+  },
+  "limits": {
+    "no_Root_helper_or_gate_execution": true,
+    "no_real_native_provider_or_full_F_replay_by_reviewer": true,
+    "no_canonical_test_body_or_native_worker_or_AC7_execution": true,
+    "ST2_execution_amendment_approved": false,
+    "original_ST2_admission_causes": "UNKNOWN; original paths and scalars NOT_CAPTURED",
+    "successful_provider_bodies_not_relabelled_failed": true,
+    "full_product_acceptance": false
+  },
+  "next_admission": {
+    "provider_behavior_changes_required_for_this_gate_finding": false,
+    "freeze_and_current_input_conservation_required": true,
+    "fresh_corrected_graph_and_actual_author_adoption_and_independent_review_required": true,
+    "no_full_F_or_control_replay_needed_solely_for_metadata_correction_when_exact_inputs_conserved": true
+  }
+}

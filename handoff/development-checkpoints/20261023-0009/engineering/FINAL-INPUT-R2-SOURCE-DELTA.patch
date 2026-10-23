@@ -1,0 +1,73 @@
+--- before-r2/checkpoint_core.py
++++ after-r2/checkpoint_core.py
+@@ -114,8 +114,8 @@
+     else:assert item['run_id']=='ceta-br23-r1' and closure['actual_exit_status']==1 and closure['execution_success'] is False
+ 
+ def load_final(expected_sha):
+-    path=C/'FINAL-CANONICAL-INPUTS.json'
+-    if not path.is_file():raise PendingFinalInput('Root FINAL-CANONICAL-INPUTS.json is absent; assembly/preparation/freeze not authorized')
++    path=C/'FINAL-CANONICAL-INPUTS-R2.json'
++    if not path.is_file():raise PendingFinalInput('Root FINAL-CANONICAL-INPUTS-R2.json is absent; assembly/preparation/freeze not authorized')
+     raw,pin=stable(path);assert pin['sha256']==expected_sha,'Root final input hash mismatch'
+     value=validate_final_shape(json.loads(raw));pins={str(path):pin}
+     manifest=json.loads(reference(value['source_manifest'],pins));assert len(manifest['payload_hashes'])==560
+--- before-r2/assemble_checkpoint.py
++++ after-r2/assemble_checkpoint.py
+@@ -72,6 +72,7 @@
+     extras=[dict(source=str(c.F/rel),destination=rel,sha256=pin) for rel,pin in value['status_pins'].items()]+[{k:row[k] for k in ('source','destination','sha256')} for row in value['exports']]
+     engineering=('checkpoint_core.py','assemble_checkpoint.py','run_prepare.py','verify_prepared.py','verify_publication.py','freeze_preparation.py','exact_git_scope.py','publish_checkpoint.py','test_checkpoint_controls.py','run_controls.py','README.md','SELF-REVIEW.json','FINAL-INPUT-CONTRACT.json','CONTROLS-RESULT.json','CONTROLS.stdout','CONTROLS.stderr','CONTROLS-PROCESS.json','SOURCE-MANIFEST.json')
+     engineering+=('INTERPRETER-PACK-INDEPENDENT-FINDINGS.json','INTERPRETER-PACK-REVIEW-RESPONSE.json','INTERPRETER-PACK-SOURCE-DELTA.patch','INTERPRETER-PACK-PATCH-SETUP-FAILURE-R1.json','INTERPRETER-PACK-ENVIRONMENT-FAILURE-R8.json','INTERPRETER-PACK-IMPORT-ENVIRONMENT-DIAGNOSIS-R1.json','INTERPRETER-PACK-CLAIM-ENVIRONMENT-DIAGNOSIS-R1.json','INTERPRETER-PACK-POPEN-ENVIRONMENT-DIAGNOSIS-R1.json','INTERPRETER-PACK-POWERSHELL-NULL-ENVIRONMENT-DIAGNOSIS-R1.json','CONTROL-ENVIRONMENT-RELEASE-R9.json','SYNTAX-CHECK-INTERPRETER-PACK-R2.json','POST-INTERPRETER-PACK-CONTROLS-PRESERVATION.json','ROOT-INTERPRETER-INPUT-LINEAGE.json',*[f'controls-r{attempt}/{name}' for attempt in (7,8,9) for name in ('START.json','RESULT.json','TESTS.log')],*[f'CONTROLS-ATTEMPT{attempt}{suffix}' for attempt in (7,8,9) for suffix in ('-PROCESS.json','.stdout','.stderr')],*[f'root-interpreter-inputs/{name}' for name in ('ROOT-CLOSE-PREPARATION.py','ROOT-PUBLICATION.py','SETUP-PUBLICATION.py','ROOT-INTERPRETER-GUARD-AMENDMENT.json','test_root_interpreter_guards.py','ROOT-INTERPRETER-CONTROLS.json','ROOT-INTERPRETER-CONTROLS-PROCESS.json','ROOT-INTERPRETER-CONTROLS.stdout','ROOT-INTERPRETER-CONTROLS.stderr')])
++    engineering+=('FINAL-INPUT-R2-CONSUMER-RESPONSE.json','FINAL-INPUT-R2-SOURCE-DELTA.patch','ASSEMBLY-PROCESS.json','ASSEMBLY.stdout','ASSEMBLY.stderr','ASSEMBLY-FINAL-REFERENCE-FAILURE-R1.json','ROOT-INTERPRETER-INPUT-LINEAGE-R2.json','CONTROL-ENVIRONMENT-RELEASE-R10.json','SYNTAX-CHECK-FINAL-INPUT-R2.json','POST-FINAL-INPUT-R2-CONTROLS-PRESERVATION.json',*[f'controls-r10/{name}' for name in ('START.json','RESULT.json','TESTS.log')],*[f'CONTROLS-ATTEMPT10{suffix}' for suffix in ('-PROCESS.json','.stdout','.stderr')],*[f'root-interpreter-inputs-r2/{name}' for name in ('ROOT-CLOSE-PREPARATION.py','ROOT-PUBLICATION.py','SETUP-PUBLICATION.py','ROOT-FINAL-REFERENCE-AMENDMENT.json','test_root_interpreter_guards_r2.py','ROOT-INTERPRETER-CONTROLS-R2.json','ROOT-INTERPRETER-CONTROLS-R2-PROCESS.json','ROOT-INTERPRETER-CONTROLS-R2.stdout','ROOT-INTERPRETER-CONTROLS-R2.stderr','FINAL-INPUT-REFERENCE-SUCCESSOR.json','ROOT-REFERENCE-SUCCESSOR-PROCESS.json','ROOT-REFERENCE-SUCCESSOR.stdout','ROOT-REFERENCE-SUCCESSOR.stderr','FINAL-CANONICAL-INPUTS.json','FINAL-CANONICAL-INPUTS-R2.json')])
+     for name in engineering:
+         path=c.W/name;extras.append(dict(source=str(path),destination=c.PREFIX+'engineering/'+name,sha256=c.stable(path)[1]['sha256']))
+     extras.append(dict(source=str(c.UTILITY),destination=c.PREFIX+'engineering/prepare_checkpoint_engine.py',sha256=c.UTILITY_SHA))
+--- before-r2/test_checkpoint_controls.py
++++ after-r2/test_checkpoint_controls.py
+@@ -22,7 +22,7 @@
+ 
+ class InputControls(unittest.TestCase):
+     def test_final_input_absent_blocks_without_creating_it(self):
+-        path=c.C/'FINAL-CANONICAL-INPUTS.json'
++        path=c.C/'FINAL-CANONICAL-INPUTS-R2.json'
+         with patch.object(Path,'is_file',return_value=False):
+             with self.assertRaises(c.PendingFinalInput):c.load_final('0'*64)
+     def test_final_shape_accepts_exact_pending_contract(self):self.assertIs(c.validate_final_shape(final_value())['full_product_acceptance'],False)
+@@ -128,7 +128,7 @@
+                 closure=dict(run_id=item['run_id'],terminal_success=False,classification='REJECTED_PREPARATION_BEFORE_CANONICAL_EXECUTION',canonical_test_bodies_executed=0,execution_intent_present=False,all_actual_claims_closed=True);states=dict(review='FAILED',validate='BLOCKED',integrate='PENDING');item['review_reference']=reference('rejected-review',dict(decision='rejected'))
+             item['closure']=reference(item['run_id']+'-closure',closure);item['verification']=reference(item['run_id']+'-verify',dict(response=dict(run_id=item['run_id'],receipts_valid=True,terminal_success=False,states=states)))
+         expected='f'*64;raw=json.dumps(value).encode()
+-        def stable(path):return (raw,dict(sha256=expected)) if Path(path)==c.C/'FINAL-CANONICAL-INPUTS.json' else (b'controlled canonical bytes',dict(sha256=digest))
++        def stable(path):return (raw,dict(sha256=expected)) if Path(path)==c.C/'FINAL-CANONICAL-INPUTS-R2.json' else (b'controlled canonical bytes',dict(sha256=digest))
+         with patch.object(Path,'is_file',return_value=True),patch.object(Path,'exists',return_value=False),patch.object(c,'stable',side_effect=stable),patch.object(c,'reference',side_effect=lambda item,pins:documents[item['path']]):return c.load_final(expected)
+     def test_current_broader_requires_both_terminal_success_flags(self):
+         for closure,verification in ((False,True),(True,False),(False,False)):
+--- before-r2/README.md
++++ after-r2/README.md
+@@ -2,7 +2,7 @@
+ 
+ This work belongs only to T:/00-Active/Project-AI-CETA. The actual author claim is ceta-cp9-preparation-20261023 / implement / /root/status_packet_review, workspace this work directory. It grants preparation writes here, with no canonical Git effects.
+ 
+-Final input was absent while the templates and disposable controls were authored. Root has now supplied control/FINAL-CANONICAL-INPUTS.json SHA5475335bd3b891e463837285cc22f4aed3b1ac1ac26c003e57753e9a05abe0ec after actual successful ST2 application and closure of the explicitly bound BR3 successor. The failed BR1 canonical execution and rejected BR2 preparation with zero canonical bodies/no intent are preserved separately. Pass this exact SHA256 to each preparation command. Root lists explicit completed reviewed exports, including eligible ignored engineering artifacts. The code does not discover or accept arbitrary ignored contents.
++Final input was absent while the templates and disposable controls were authored. Root supplied an initial input SHA5475335bd3b891e463837285cc22f4aed3b1ac1ac26c003e57753e9a05abe0ec after successful ST2 application and closure of the explicitly bound BR3 successor. The first assembly refused four review-reference paths containing '..' before producing any outputs. That input and failed process are preserved. Root's explicit successor control/FINAL-CANONICAL-INPUTS-R2.json SHA82b2a56614caf1ea1cd4c3623a23c1cc866bb9b8dc0ce1649929b62b14cf4ba9 changes only those four path strings to normalized same-project references, retaining all666 export rows, hashes, destinations and classifications. The consumer requires this separately named file with no fallback or relaxed path rule. Pass its exact SHA256 to each preparation command. The failed BR1 canonical execution and rejected BR2 preparation with zero canonical bodies/no intent remain separate. Root lists explicit completed reviewed exports, including eligible ignored engineering artifacts; the code does not discover arbitrary ignored contents.
+ 
+ The final-input consumer independently requires both current BR3 success flags and every current BR3 stage to be SUCCEEDED. Both future publication consumers also require publication-packet commit equality with PREPARED.commit before admitting that authorization. These checks preserve failed historical attempts while refusing a failed current successor or a mismatched publication target.
+ 
+@@ -24,6 +24,6 @@
+ 
+ All ten CP9 entrypoint modules reject optimized Python with a non-assert guard before other imports or effects. Invoke child Python with -E -B -X utf8 and an explicit environment copy that removes PYTHONOPTIMIZE case-insensitively. The private engine also refuses a residual optimization key before loading the accepted utility or admitting child Git commands. JSON, command-journal and status Markdown writes execute unconditionally and explicitly refuse short writes. Pack import reads one stable byte object, hashes that object against the frozen pack hash and supplies that same object to index-pack without a second read.
+ 
+-The updated disposable cohort retains the original51 control IDs and adds10 targeted cases, including both -O and -OO refusal for all ten entrypoints, exact create-only writes, short-write refusal, child environment custody and pack substitution. The former51-pass result remains a distinct predecessor receipt. Failed controls-r8 remains failed with1failure/6errors caused by the additional environment guard observing a residual key. A fresh reproduction shows the PowerShell null-value deletion expression creates PYTHONOPTIMIZE='' on this host while sys.flags.optimize remains0; an explicit scrubbed Popen environment removes it. The original R8 value was not captured, and no historical runtime optimization is inferred. All failed setup/diagnostic records and the separately named controls-r9 result are retained and explicitly exported with source/test deltas and finding responses.
++The updated disposable cohort retains the original51 control IDs and adds10 targeted cases, including both -O and -OO refusal for all ten entrypoints, exact create-only writes, short-write refusal, child environment custody and pack substitution. The former51-pass result remains a distinct predecessor receipt. Failed controls-r8 remains failed with1failure/6errors caused by the additional environment guard observing a residual key. A fresh reproduction shows the PowerShell null-value deletion expression creates PYTHONOPTIMIZE='' on this host while sys.flags.optimize remains0; an explicit scrubbed Popen environment removes it. The original R8 value was not captured, and no historical runtime optimization is inferred. Successful61-case controls-r9 binds the first repaired tooling bytes; controls-r10 binds the explicit R2 filename successor and finite additional evidence exports. All failed setup/diagnostic/assembly records and each separately named result remain retained and explicitly exported with source/test deltas, finding responses and Root input lineage.
+ 
+ These tooling controls do not establish canonical product tests, publication, native worker or full-product acceptance. Private preparation has separate actual outcome records and requires independent review. Historical C1 integration remains FAILED. The completion assessment remains qualitative, with no defensible overall percentage.
+--- before-r2/FINAL-INPUT-CONTRACT.json
++++ after-r2/FINAL-INPUT-CONTRACT.json
+@@ -1,7 +1,7 @@
+ {
+   "schema_version": 1,
+   "purpose": "Root writes final concrete input only after applied and closed ST2success plus the explicit closed BR3 successor. BR1executionFAILED and BR2rejectedpreparation are preserved separately; this template is not an execution result.",
+-  "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/cp9/control/FINAL-CANONICAL-INPUTS.json",
++  "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/cp9/control/FINAL-CANONICAL-INPUTS-R2.json",
+   "required_example": {
+     "schema_version": 1,
+     "project": "T:\\00-Active\\Project-AI-CETA",

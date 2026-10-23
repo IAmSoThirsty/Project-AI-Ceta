@@ -1,0 +1,26 @@
+{
+  "diagnostic": "initial inline six-base read-only diagnostic",
+  "source_originally_inline": true,
+  "original_script_path": null,
+  "original_report_path": null,
+  "preserved_source_path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/br3/control/independent-admission-diagnostic-r2-20261023T052412Z/ATTEMPT-1-INLINE-SOURCE.py",
+  "source_sha256": "96c3ecc623b5edd7f3151a4f26557ade88f4eaef676e06d236065c563e421dd9",
+  "argv": [
+    "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe",
+    "-E",
+    "-B",
+    "-X",
+    "utf8",
+    "-c",
+    "from pathlib import Path\nimport hashlib,json,os,sys,time\nF=Path('T:/00-Active/Project-AI-CETA');B=F/'.agents/runtime/oq23/br3';C=B/'control';D=B/'delivery'\nos.environ.update(GIT_OPTIONAL_LOCKS='0',GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='core.fsmonitor',GIT_CONFIG_VALUE_0='false')\nsys.path.insert(0,str(B/'work'));import run_broader as b\npin='2c22f24694d2c6e1706669007cda3f32642df18f92bafcee669c58cda2cb41f3';packet,binding=b.load_prepared(pin)\nr=b.BoundRuntime(binding);g,state=r._guard('ceta-br23-r3')\nheld=('integrate','fixture_0','fixture_1');missing=('fixture_2','fixture_3','fixture_4','fixture_5','js9')\ndef actual_claims(s):\n    selected={}\n    for n in held:\n        v=s['nodes'][n];c=v['claim'];assert v['state']=='RUNNING' and c and c['executor_id']=='/root'\n        assert c['workspace']==binding['workspaces'][n] and c['effective_write_scope']==[Path(c['workspace']).relative_to(Path('T:/')).as_posix()+'/**']\n        assert c['input_hash']==r._input_hash(g,s,n)\n        selected[n]=c\n    for n in missing:assert s['nodes'][n]['state']=='READY' and s['nodes'][n]['claim'] is None\n    return selected\nclaims_before=actual_claims(state);source_before=b.source_observation(binding)\nassert not any(D.iterdir()) and not (C/'EXECUTION-INTENT.json').exists()\nfreeze=json.loads((B/'work/FREEZE-OBSERVATION.json').read_bytes());reports={};failures=[]\nfor node,text in packet['fixture_workspaces'].items():\n    if node=='js9':continue\n    started=time.time_ns()\n    try:\n        now=b.o.snapshot(Path(text));old=freeze['fixtures'][node]\n        diff=[name for name in set(old)&set(now) if old[name]!=now[name]]\n        report=dict(node=node,path=text,started_utc_ns=started,finished_utc_ns=time.time_ns(),entries=len(now),files=sum(x['kind']=='file' for x in now.values()),bytes=sum(x['bytes'] for x in now.values() if x['kind']=='file'),exact_all_entries_equal=old==now,added=sorted(set(now)-set(old)),missing=sorted(set(old)-set(now)),changed=sorted(diff),root_native=now['.'])\n        if diff:report['difference_records']={name:dict(frozen=old[name],current=now[name]) for name in diff}\n        if old!=now:failures.append(node)\n    except BaseException as error:\n        report=dict(node=node,path=text,started_utc_ns=started,finished_utc_ns=time.time_ns(),snapshot_failed=True,type=type(error).__name__,args=BaseException.__dict__['args'].__get__(error));failures.append(node)\n    reports[node]=report;print(json.dumps(dict(progress=report),allow_nan=False),flush=True)\njs9=b.o.snapshot(Path(packet['fixture_workspaces']['js9']));assert set(js9)=={'.'}\nsource_after=b.source_observation(binding);assert source_before==source_after\n_,after=r._guard('ceta-br23-r3');claims_after=actual_claims(after);assert claims_before==claims_after\nassert not any(D.iterdir()) and not (C/'EXECUTION-INTENT.json').exists()\nanswer=dict(one_readonly_six_base_diagnostic=True,all_six_exact=not failures,failures=failures,source562_Git_index_native_failedJS9_unchanged=True,partial_claims_exact_and_current=True,admitted_nodes=list(held),missing_still_READY=list(missing),partial_claims_unchanged=True,newJS9_exists_empty=True,canonical_execution_intent_absent=True,delivery_empty=True,canonical_bodies_executed=False,claims_or_gate_or_bootstrap_replayed=False,mutations_performed=False,original_admission_failure_remains_FAILED_NOT_RELABELLED=True,elapsed_measurement_scope='Read-only conservation diagnostic; no admission latency or product runtime qualification')\nprint(json.dumps(dict(final=answer),allow_nan=False),flush=True)\nraise SystemExit(0 if not failures else 1)\n"
+  ],
+  "pid": 30944,
+  "actual_process_exit_status": 1,
+  "signal": null,
+  "capture_failure": "Asynchronous primitive stdout/stderr accumulators were empty in later REPL cells after streams closed; original stream content unavailable.",
+  "stdout_original_content": "NOT_CAPTURED",
+  "stderr_original_content": "NOT_CAPTURED",
+  "fixture_drift_from_this_attempt": "UNKNOWN",
+  "canonical_test_bodies_executed": 0,
+  "admission_actions_performed": 0
+}

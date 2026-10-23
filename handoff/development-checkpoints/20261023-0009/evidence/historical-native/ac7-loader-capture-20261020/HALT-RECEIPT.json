@@ -1,0 +1,70 @@
+{
+  "recorded_at": "2026-10-20T11:37:21.269673+00:00",
+  "status": "HALTED_INCOMPLETE_FOR_CODEX_RESTART",
+  "checkpoint": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\records\\HALT-CHECKPOINT.json",
+    "bytes": 4054,
+    "sha256": "5ee3c40d044484b538719b522718e9b6f349f66dda482704be1fa1f0236896e9"
+  },
+  "candidate_files": {
+    "capture_core.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\capture_core.py",
+      "bytes": 9794,
+      "sha256": "0c346fced0336df0985e8d1395ffd70be052d3ff205f016dca853f981a104ab4",
+      "physical_lines": 215
+    },
+    "isolated_adapter.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\isolated_adapter.py",
+      "bytes": 18975,
+      "sha256": "e6f937fb0da0ad2547129b20160cb75429510f1d5235306bfc99094d3643dea6",
+      "physical_lines": 341
+    },
+    "test_loader_capture.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\test_loader_capture.py",
+      "bytes": 17936,
+      "sha256": "69f40bfdf024b1fd4e15807f39d519907e45a0a098fffea8fedc4e9f379c41df",
+      "physical_lines": 275
+    },
+    "win32_debug.py": {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\ac7-loader-capture-20261020\\win32_debug.py",
+      "bytes": 16790,
+      "sha256": "220a94da19275058f824400d4720159c8b5617c308607ce74feb7905af847218",
+      "physical_lines": 333
+    }
+  },
+  "nodes": {
+    "evidence": {
+      "state": "CANCELLED",
+      "active_claim": false,
+      "reason": "User requested safe halt for Codex restart. Partial private loader capture code and pure receipts preserved; implementation, named review and native qualification remain incomplete. No live child or debugger started."
+    },
+    "implement": {
+      "state": "CANCELLED",
+      "active_claim": false,
+      "reason": "User requested safe halt for Codex restart. Partial private loader capture code and pure receipts preserved; implementation, named review and native qualification remain incomplete. No live child or debugger started."
+    }
+  },
+  "actual_cli_cancellations": [
+    {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\control\\HALT-implement.json",
+      "bytes": 4442,
+      "sha256": "0219453a8ecfe5ca8f8dfddf738308996d7ba5657e0aa633eb1fb6a9ecd18bf6"
+    },
+    {
+      "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\control\\HALT-evidence.json",
+      "bytes": 2877,
+      "sha256": "d07e476a6accc2de0be7138ed9397fdb0d17c71113a95478805a67688db002af"
+    }
+  ],
+  "claims_after": {},
+  "latest_terminal_result": {
+    "path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\ac7-loader-capture-20261020\\records\\pure-r2\\RESULT.json",
+    "bytes": 4466,
+    "sha256": "400c120a9f6825ed4965d570e17b766fe5a5f452df47c7d2db6d1a89558e43f0"
+  },
+  "active_owned_commands_or_native_resources": [],
+  "no_more_agent_writes_to_Q_or_records": true,
+  "review_or_acceptance_claim": false,
+  "live_release_issued": false,
+  "restart_point": "After user resume, reacquire fresh exclusive Q and records scopes; read this checkpoint and the current four files. Continue incomplete input/caller/custody work. Do not rerun tests, create a profile, or launch a debugger automatically."
+}

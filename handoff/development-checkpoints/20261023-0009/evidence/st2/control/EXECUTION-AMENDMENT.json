@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-23T05:59:20.544879+00:00",
+  "recorded_by": "/root",
+  "project": "T:\\00-Active\\Project-AI-CETA",
+  "run_id": "ceta-st23-r2",
+  "prepared_manifest_sha256": "5729a01e71127efd8d9970e8b5d1405f9b297eb12e421e94946983f125c6ff32",
+  "finding": "ST2-CLOSE-METADATA-01",
+  "reason": "Independent pure-expression reproduction found duplicate descriptive metadata would refuse closure before writes. Original frozen preparation and tool retained unchanged; additive narrower successor bound by actual named review.",
+  "superseded_closer_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\ROOT-CLOSE.py",
+  "superseded_closer_sha256": "8174315abc34152ce883f9fd380735bd0688b45f2e9810895aa5ff5107a6778a",
+  "old_closer_must_not_be_executed": true,
+  "old_closer_repaired_or_approved": false,
+  "successor_closer_path": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\st2\\control\\ROOT-CLOSE-R2.py",
+  "successor_closer_sha256": "9543dcaca98f74ec2836401cbbfc263a6521771f981b664b921caa4b261e2484",
+  "changes": [
+    "metadata constructor dict(post,Root metadata...)",
+    "pre-write actual review receipt binds original manifest, amendment and successor hashes",
+    "absence of completion guards against closure replay"
+  ],
+  "all_original_source_report_seal_snapshot_preservation_and_two_completion_transitions_retained": true,
+  "canonical_application_targets_unchanged": [
+    "build/progress.json",
+    "handoff/continuity.json",
+    "build/gates.json",
+    "src/ceta/contracts/construction.py"
+  ],
+  "frozen_work_and758_external_inputs_unchanged": true,
+  "requires_independent_combined_review": true,
+  "canonical_writes": false,
+  "full_product_acceptance": false
+}

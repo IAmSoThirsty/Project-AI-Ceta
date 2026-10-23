@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-10-23T19:01:11.633906+00:00",
+  "author": "/root/status_packet_review",
+  "classification": "BLOCKED_RAW_STDERR_EXPORT_BEFORE_SUCCESSOR_ASSEMBLY",
+  "actual_exec_exit_status": 1,
+  "tool_chunk_id": "6e2408",
+  "actual_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 18, in <module>\nAssertionError: {'handoff/development-checkpoints/20261023-0009/engineering/PRIVATE-PREPARATION.stderr'}\n",
+  "original_source_relative_path": ".agents/runtime/oq23/cp9/work/PRIVATE-PREPARATION.stderr",
+  "original_source_sha256": "2926825f008a02e9c76c014ce3bc88183b1e7a1b8d9515faa2577f68825fb6dd",
+  "actual_trailing_lines": [
+    {
+      "line": 21,
+      "utf8": "ValueError: git -c failed (2): "
+    }
+  ],
+  "source_stream_unchanged": true,
+  "policy_and_seven_exception_inputs_unchanged": true,
+  "disposition": "Replace only the newly proposed raw stderr export with exact UTF8 JSON escaping and original path/hash lineage; no exception added.",
+  "successor_assembly_or_preparation_executed": false
+}

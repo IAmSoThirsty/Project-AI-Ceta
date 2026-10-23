@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe",
+    "-E",
+    "-B",
+    "-X",
+    "utf8",
+    "-c",
+    "from pathlib import Path\nimport hashlib,json,os,sys\nF=Path('T:/00-Active/Project-AI-CETA');B=F/'.agents/runtime/oq23/ds1';W=B/'work';R=B/'review';C=B/'control';RUN='ceta-ds23-r1';PIN='ad0776389aff69c36ada882028a163f25d401a918224ae8c4ab622e6653a7cad';GRAPH='4f55640d2436b8826438b572325a6b066b7d793beae7596fd27debabb01d757f'\nos.environ.update(PYTHONDONTWRITEBYTECODE='1',GIT_OPTIONAL_LOCKS='0',GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='core.fsmonitor',GIT_CONFIG_VALUE_0='false');sys.path.insert(0,'T:/01-Projects/TAAR-Agent-Taskforce/TAAR-Agent-Taskforce')\nfrom taar.orchestration_graph import compile_graph\nfrom taar.orchestration_runtime import OrchestrationRuntime\nassert hashlib.sha256((W/'MANIFEST.json').read_bytes()).hexdigest()==PIN\nassert not any(R.iterdir())\ngraph=compile_graph(Path('T:/'),C);assert graph.fingerprint==GRAPH\nrt=OrchestrationRuntime(C);before=rt.verify(RUN);assert before['allowed'] and before['receipts_valid'] and before['states']['implement']=='SUCCEEDED' and before['states']['review']=='READY'\nresponse=rt.claim(RUN,'review','/root/status_packet_review',workspace=R);assert response['allowed']\nvalue=dict(api='OrchestrationRuntime.claim',before=before,response=response,manifest_sha256=PIN,graph_fingerprint=GRAPH,reviewer='/root/status_packet_review',scope='EXACT_DS1_CANDIDATE_ONLY; NOT_ST2_EXECUTION_AMENDMENT_APPROVAL',canonical_or_Git_or_installed_mutation=False)\nwith (R/'ACTUAL-REVIEW-CLAIM.json').open('x',encoding='utf8') as stream:json.dump(value,stream,indent=2);stream.write('\\n')\nprint(json.dumps(dict(allowed=True,review_state='RUNNING',manifest_sha256=PIN,executor='/root/status_packet_review',workspace=str(R),effective_scope=response['claim']['effective_write_scope'])))\n"
+  ],
+  "cwd": "T:/00-Active/Project-AI-CETA",
+  "started_at": "2026-10-23T07:26:58.014Z",
+  "finished_at": "2026-10-23T07:26:58.770Z",
+  "actual_process_exit_status": 0,
+  "stdout": "{\"allowed\": true, \"review_state\": \"RUNNING\", \"manifest_sha256\": \"ad0776389aff69c36ada882028a163f25d401a918224ae8c4ab622e6653a7cad\", \"executor\": \"/root/status_packet_review\", \"workspace\": \"T:\\\\00-Active\\\\Project-AI-CETA\\\\.agents\\\\runtime\\\\oq23\\\\ds1\\\\review\", \"effective_scope\": [\"00-Active/Project-AI-CETA/.agents/runtime/oq23/ds1/review/**\"]}\r\n",
+  "stderr": ""
+}

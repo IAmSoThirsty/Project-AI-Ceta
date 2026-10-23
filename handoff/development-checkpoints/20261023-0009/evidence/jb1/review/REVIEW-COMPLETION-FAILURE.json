@@ -1,0 +1,14 @@
+{
+  "observed_action": "First complete_rejected_review.py invocation",
+  "actual_exec_exit_status": 1,
+  "evidence_capture": "Tool-observed exec exit1 and traceback; this record was written afterward, not a fabricated prior process capture",
+  "error_code": "MALFORMED_RECEIPT",
+  "error_message": "Reviewer receipts require decision=approved or rejected",
+  "exact_cause": "decision was present under result but missing as a required top-level reviewer receipt field",
+  "rejected_receipt_sha256": "da6f844a74ee03f4936932e27598056d7914be3c6bcf1924f3365b6478507d5c",
+  "original_review_manifest_sha256": "703f5681d57264478e983887526ecbacca7e5f8490c9814fb07fe0288d77135d",
+  "actual_review_claim_after_refusal": "RUNNING; no node completion transition occurred",
+  "finding_unchanged": "JB1-BUDGET-01",
+  "candidate_changed": false,
+  "repair": "Fresh completion helper and candidate receipt with top-level decision=rejected; successor immutable review manifest; no original artifacts overwritten"
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-ds23-r2",
+  "node_id": "implement",
+  "executor_id": "/root/broader_successor_author",
+  "started_at": "2026-10-23T07:41:49.848240+00:00",
+  "finished_at": "2026-10-23T07:54:31.446538+00:00",
+  "input_hash": "4e0d1a4b25bbeac5b8b88f4842f86b26216997bc35a2f049ebcd0eafb4f1855c",
+  "changed_files": [
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/ACCESS-TIME-OBSERVATION-POLICY.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/AUTHOR-CLAIM.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/AUTHOR-COMPLETION-RECEIPT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/AUTHOR-SELF-REVIEW.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/CONSERVATION-AFTER.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/CONTROLS-R2-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/CONTROLS-R2.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/CONTROLS-R2.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/CONTROLS-R2.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/CONTROLS-R2.unittest.log",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/DIRECTORY-HANDLE-PROBE-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/DIRECTORY-HANDLE-PROBE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FREEZE-CONSERVATION.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FREEZE-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FREEZE.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FREEZE.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FULL-F-QUALIFICATION-R2-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FULL-F-QUALIFICATION-R2.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FULL-F-QUALIFICATION-R2.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FULL-F-QUALIFICATION.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/FULL-F-SNAPSHOT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/INPUT-CONSERVATION-BEFORE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/MANIFEST.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/OFFICIAL-API-BINDING.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PREPARED-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PREPARED.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PREPARED.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PRIOR-BIND-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PRIOR-BIND.stderr",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PRIOR-BIND.stdout",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PRIOR-DS1-CLOSED.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PRIOR-DS1-CONSERVATION.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/PROBE-SECURITY-QUALIFICATION.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/QUALIFICATION-NOTES.md",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/bind_prior_closure.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/capture.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/complete_candidate.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/conservation.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/directory_snapshot.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/fixtures/CONTROLS-R2/case/ordinary.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/fixtures/CONTROLS-R2/file-mode/ordinary.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/fixtures/CONTROLS-R2/ignored/.project-ai/automation/excluded.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/fixtures/CONTROLS-R2/ignored/.pytest_cache",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/fixtures/CONTROLS-R2/ignored/ordinary.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/fixtures/CONTROLS-R2/membership/ordinary.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/fixtures/CONTROLS-R2/shape/ordinary.txt",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/freeze.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/qualify_full_F.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/run_controls.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/seed-before/directory_snapshot.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/seed_successor.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/test_directory_snapshot.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/verify_prepared.py"
+  ],
+  "result": {
+    "manifest_sha256": "736a2a3ef8639bf99acced85d0ce3950b74b01bf9f23d856148ca7a7061df2f6",
+    "controls": 50,
+    "retained_ordered_controls": 41,
+    "new_controls": 9,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "full_F_files": 14355,
+    "full_F_directories": 2859,
+    "excluded_symlinks": 1,
+    "canonical_inputs_conserved": 562,
+    "provider_sha256": "3727f857cd6cb7324a8b93ad16d070d4a403678ac071cd94c32954edbd203bde",
+    "root_candidate_closure_sha256": "64f81f235284f4a1e6222c09c407e1ff4a25acc96412fee7b71d27bdf97703ad",
+    "prior_DS1_review_remains_FAILED": true,
+    "prior_DS1_files_preserved": 95,
+    "canonical_Git_ST2_and_original_evidence_conserved": true,
+    "canonical_or_Git_or_installed_or_ST2_mutation": false,
+    "root_helper_executed": false,
+    "snapshot_hook_installed": false,
+    "native_workers": false,
+    "AC7_replay": false,
+    "independent_approval": false,
+    "full_product_acceptance": false,
+    "preserved_tool_failure": {
+      "phase": "Attempted optional prefreeze author-helper generation",
+      "tool_exit_status": 1,
+      "error": "SyntaxError: parenthesis was never closed in Python -c because shell quoting truncated the source",
+      "code_body_executed": false,
+      "file_created": false,
+      "fix": "Direct ordinary work-bound stock receipt completion; no frozen file changed"
+    }
+  },
+  "commands": [
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\bind_prior_closure.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\run_controls.py --label CONTROLS-R2",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\qualify_full_F.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\freeze.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe -B -X utf8 T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\work\\verify_prepared.py",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "All41 retained ordered controls plus9 nested and partial-query cases; new full F qualification and562-source/Git/ST2 conservation",
+      "passed": true
+    },
+    {
+      "name": "Rejected DS1 and all prior95 files, native/query boundary predicates and exact Root helper frozen; independent review still required",
+      "passed": true
+    }
+  ],
+  "exit_status": 0
+}

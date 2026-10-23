@@ -1,0 +1,1154 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-tm23-r2",
+  "work_hashes": {
+    "BINDING-PRE-CLOSURE.json": "5933e7f1b1cbd12df68f46d31242168fab93cbeb4064b762e0584203aebcccd7",
+    "BINDING.json": "8a1d93eb8c851fcff419472868b30783819887b4190d963be08d0a682d19e36e",
+    "COLLECTION.json": "b8863aea87abf4cda75a4e7d8daa932b740dd382c9e567fed7c201eb772b5053",
+    "IMPLEMENTATION-RECEIPT.json": "4a8eb1469fc3d86a3118e5e163541ff8f1a3ac46e4430ea3699a1b70ef41a201",
+    "PERSISTENCE-WITNESSES.json": "6a09f7a40ac2d8f3ab25da40c35b8ef324cb3ff3018677b4b169f0cecd3641c7",
+    "PREDECESSOR-DELTA.diff": "77c3472aae62a3158f16477191968f1b66e4cbce20cd3cb2336234bdd7d7fb3d",
+    "PREDECESSOR-DELTA.json": "49dc505ba57bc3f50b414522c80bd74069f54008e32d2322a6d3eef9309361e0",
+    "PREPARATION.json": "177a544c664641e960683203b650408be357bb3d9d72f06535cce73c4ebe5784",
+    "PROVENANCE.json": "3756fa7f7173078341a43359b6568f23c409cae4c5939c3e87031b75a553a74c",
+    "README.md": "6194c15f3b8d44ab9d06c54ce0b17588d2c2c9672d7a5ffba7bc68aa48dbf2ad",
+    "SOURCE-DELTA.json": "6a6a14fcdae5a4b6ced3a3e5130141f2b1bf3bce388c199c83e3cb9402288da8",
+    "controls.py": "de90d983959869fc54db39c9ac5ca645f290cf8fb4642929300acd609739ba6f",
+    "engine_controls.py": "d354aaad81fc4581220e79530b1f34d40c95d82b3820ca8f7decca97b3309fcd",
+    "freeze.py": "04f4a02ee0c86287bdaaf604f5155957c90d89d6491de4e5815e243c1245639b",
+    "owner_timing_observer.py": "75e595990e485ea07980f76e01f2fdebe8953fd6623d98b3240d186f050f34cc",
+    "prepare.py": "f149ae210e30147a8e2b75b74165bcdeb115a071ba0387991f1aa1f36d245c41",
+    "run_challenge.py": "20514b36cdb6ff6863deaa280b5c2db9cb9c1897520c8adf5fdcee0cea3e4dd8",
+    "verify_prepared.py": "86c8d7d2d5de1b7f945cf9d826e802100f430b8d3bf1245a446e61c077f444e0",
+    "controls-final/CONTROL-RESULT.json": "40cd01038fb9c8d9dc05bad9f2aa2088b36a4a72024a1852e9dc2b933de3e289",
+    "controls-final/CONTROLS.log": "9e76a856d7715e383787c580a098d350469d9d1fc07761f2406161aa235ce36d",
+    "engine-controls-final/RESULT.json": "df26c473f9b2f1569e19bdd8763aee787a70815ea0729fc6a6d72bcd09754221",
+    "engine-controls-final/TESTS.log": "ad994c59ae4ccc16552351fdb989830bf98810967391c6d72b3d5bca7b056772",
+    "engine-controls-final/engine_controls.py": "7409a441c7557929c78bfbc13a29b44035b311edc81b8cca76d7fcd77f0e9d5f",
+    "engine-controls-final/assertion-witness/REPORT-SEAL.json": "238e07c5e1726e0f2ea7b929597272a32bad0dac640e9da38cb2517fae353617",
+    "engine-controls-final/assertion-witness/RESULT.json": "3e61e0a1ea4e4ac13555b02d20ca336bb79f079af03684e566d1420032aa09b3",
+    "engine-controls-final/assertion-witness/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/assertion-witness/TESTS.log": "1f82d26a1bf6881c5c043912e84cd7229b9edb14b971f3f67d2b78e048f772e6",
+    "engine-controls-final/assertion-witness/events.jsonl": "40bd3d21eefb43563405fc7f88fdbf46628cdeea1289df0229b91e7a490add3a",
+    "engine-controls-final/failure/REPORT-SEAL.json": "56adcc2595f5c3ca040abc5210ec58d3d0c0fdeea283f6232f8a03072b815adc",
+    "engine-controls-final/failure/RESULT.json": "4d61c5343373790d4161737c4d6e5f207695e71da11866afd10810695b600720",
+    "engine-controls-final/failure/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/failure/TESTS.log": "11e96347706ef40298e2e49c4b7ec97290dc7ede35500ba8455363a3e77bba29",
+    "engine-controls-final/failure/events.jsonl": "c0217253fa7e984afc4906e318af4141ffada7f2dd5796ac019607703e61a931",
+    "engine-controls-final/report/REPORT-ERROR.json": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd",
+    "engine-controls-final/report/RESULT.json": "528aabab44cb19a005f036f519f789c56fcf4047a04d7aabda30da5da3e630b7",
+    "engine-controls-final/report/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/report/TESTS.log": "4af26c1632800ac30d0b628a92672ec189650214067028644e887b037a662573",
+    "engine-controls-final/report/events.jsonl": "9bfe712d04be2d419c49aaf70ae42f71d17758f7852fa1339d69c1912337d6c4",
+    "engine-controls-final/seal/REPORT-ERROR.json": "69b3e977a8e09c6e3e90f14abc1ab2edab7bd2e42f5a8474e13c6f53354f4071",
+    "engine-controls-final/seal/RESULT.json": "3a468404b0900e28d11b6d815d04dcbef02c37ec12005efd54888b2d003dcdd3",
+    "engine-controls-final/seal/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/seal/TESTS.log": "64df51f0e4186b7564b22d8b7013e4223ac46323d6395bc8710cdb739c4d262e",
+    "engine-controls-final/seal/events.jsonl": "5e32de456554db445418e9f813fae688aca139e50a7cdbf7e772fa611a535449",
+    "engine-controls-final/storage/REPORT-ERROR.json": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd",
+    "engine-controls-final/storage/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/storage/TESTS.log": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba",
+    "engine-controls-final/storage/events.jsonl": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d",
+    "engine-controls-final/subtest-witness/REPORT-SEAL.json": "84416750e4756ac4c23efc676e101c8eb66250c64dc6d8e15d8e75f4330afdff",
+    "engine-controls-final/subtest-witness/RESULT.json": "c54e9b5902708b6068a70dd53abf87500415ab6d400cc5bbf20c4f045e771a86",
+    "engine-controls-final/subtest-witness/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/subtest-witness/TESTS.log": "cf18b8e6dfbc414c78f7fff6f787be30b24c36a32c44c375ec272eda47cc6220",
+    "engine-controls-final/subtest-witness/events.jsonl": "22dbde6aa4359c0e0fc6282f86cf718bdf06b93ded1ddabfc64eba6b4d3213cf",
+    "engine-controls-final/success/REPORT-SEAL.json": "c304f6e96f58e27bb2a539860389f251868b52ab38c865a4517ea903ffdc270e",
+    "engine-controls-final/success/RESULT.json": "07432eb10150a43a7fefccb7bcffd4810d192623ec55705513584d0aa3d7cb3c",
+    "engine-controls-final/success/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/success/TESTS.log": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba",
+    "engine-controls-final/success/events.jsonl": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d",
+    "engine-controls-final/unrelated-witness/REPORT-SEAL.json": "d2d75552ef77498b05a25aabe67932931393c3569d544df2c80acebc35570897",
+    "engine-controls-final/unrelated-witness/RESULT.json": "f9ac2664eddcdcabd81e4d11f2969d99776e9381c00814255f92c77d8d3f4af3",
+    "engine-controls-final/unrelated-witness/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-final/unrelated-witness/TESTS.log": "0078ec4467b3c3e11ffd93ac2c5ee9ac588d4a06a6c510bc0d3505596c8a546d",
+    "engine-controls-final/unrelated-witness/events.jsonl": "3ada0400ce6f8a12561ae950b1a96e4a77277924699908f600a9ea1bcc8834a2",
+    "engine-controls-stable/RESULT.json": "a792c4526c36499989997656381d15d861fe7c366ffbdb0fdc06f052af84715c",
+    "engine-controls-stable/TESTS.log": "ed83673ea24c59f1545a5073b8a2f3ac99deaaa6cb197ccf6de025569656d542",
+    "engine-controls-stable/assertion-witness/REPORT-SEAL.json": "64867e1ce4e49f04b966b42f49627b9ec9ca0a03d4e97a59fd53607f763389cc",
+    "engine-controls-stable/assertion-witness/RESULT.json": "918113ba478d05af4fffaf516969d485f1f0d5be3e79a2c2a827e01747ff7421",
+    "engine-controls-stable/assertion-witness/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/assertion-witness/TESTS.log": "410faca87bc6818e70cb81ed06904f61e6b55715040772fa2aa5e6f6b341c2ef",
+    "engine-controls-stable/assertion-witness/events.jsonl": "40bd3d21eefb43563405fc7f88fdbf46628cdeea1289df0229b91e7a490add3a",
+    "engine-controls-stable/failure/REPORT-SEAL.json": "56adcc2595f5c3ca040abc5210ec58d3d0c0fdeea283f6232f8a03072b815adc",
+    "engine-controls-stable/failure/RESULT.json": "4d61c5343373790d4161737c4d6e5f207695e71da11866afd10810695b600720",
+    "engine-controls-stable/failure/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/failure/TESTS.log": "11e96347706ef40298e2e49c4b7ec97290dc7ede35500ba8455363a3e77bba29",
+    "engine-controls-stable/failure/events.jsonl": "c0217253fa7e984afc4906e318af4141ffada7f2dd5796ac019607703e61a931",
+    "engine-controls-stable/report/REPORT-ERROR.json": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd",
+    "engine-controls-stable/report/RESULT.json": "528aabab44cb19a005f036f519f789c56fcf4047a04d7aabda30da5da3e630b7",
+    "engine-controls-stable/report/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/report/TESTS.log": "4af26c1632800ac30d0b628a92672ec189650214067028644e887b037a662573",
+    "engine-controls-stable/report/events.jsonl": "9bfe712d04be2d419c49aaf70ae42f71d17758f7852fa1339d69c1912337d6c4",
+    "engine-controls-stable/seal/REPORT-ERROR.json": "69b3e977a8e09c6e3e90f14abc1ab2edab7bd2e42f5a8474e13c6f53354f4071",
+    "engine-controls-stable/seal/RESULT.json": "3a468404b0900e28d11b6d815d04dcbef02c37ec12005efd54888b2d003dcdd3",
+    "engine-controls-stable/seal/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/seal/TESTS.log": "64df51f0e4186b7564b22d8b7013e4223ac46323d6395bc8710cdb739c4d262e",
+    "engine-controls-stable/seal/events.jsonl": "5e32de456554db445418e9f813fae688aca139e50a7cdbf7e772fa611a535449",
+    "engine-controls-stable/storage/REPORT-ERROR.json": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd",
+    "engine-controls-stable/storage/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/storage/TESTS.log": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba",
+    "engine-controls-stable/storage/events.jsonl": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d",
+    "engine-controls-stable/subtest-witness/REPORT-SEAL.json": "84416750e4756ac4c23efc676e101c8eb66250c64dc6d8e15d8e75f4330afdff",
+    "engine-controls-stable/subtest-witness/RESULT.json": "c54e9b5902708b6068a70dd53abf87500415ab6d400cc5bbf20c4f045e771a86",
+    "engine-controls-stable/subtest-witness/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/subtest-witness/TESTS.log": "cf18b8e6dfbc414c78f7fff6f787be30b24c36a32c44c375ec272eda47cc6220",
+    "engine-controls-stable/subtest-witness/events.jsonl": "22dbde6aa4359c0e0fc6282f86cf718bdf06b93ded1ddabfc64eba6b4d3213cf",
+    "engine-controls-stable/success/REPORT-SEAL.json": "c304f6e96f58e27bb2a539860389f251868b52ab38c865a4517ea903ffdc270e",
+    "engine-controls-stable/success/RESULT.json": "07432eb10150a43a7fefccb7bcffd4810d192623ec55705513584d0aa3d7cb3c",
+    "engine-controls-stable/success/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/success/TESTS.log": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba",
+    "engine-controls-stable/success/events.jsonl": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d",
+    "engine-controls-stable/unrelated-witness/REPORT-SEAL.json": "d2d75552ef77498b05a25aabe67932931393c3569d544df2c80acebc35570897",
+    "engine-controls-stable/unrelated-witness/RESULT.json": "f9ac2664eddcdcabd81e4d11f2969d99776e9381c00814255f92c77d8d3f4af3",
+    "engine-controls-stable/unrelated-witness/START.json": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf",
+    "engine-controls-stable/unrelated-witness/TESTS.log": "0078ec4467b3c3e11ffd93ac2c5ee9ac588d4a06a6c510bc0d3505596c8a546d",
+    "engine-controls-stable/unrelated-witness/events.jsonl": "3ada0400ce6f8a12561ae950b1a96e4a77277924699908f600a9ea1bcc8834a2"
+  },
+  "work_observation": {
+    ".": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020767,
+      "mtime_ns": 1792718476351098700
+    },
+    "controls-final/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 3377699723838036,
+      "mtime_ns": 1792718349673248600
+    },
+    "engine-controls-final/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 562949956731479,
+      "mtime_ns": 1792718418010689200
+    },
+    "engine-controls-stable/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 1125899910152842,
+      "mtime_ns": 1792718418649179500
+    },
+    "BINDING-PRE-CLOSURE.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731588,
+      "bytes": 179435,
+      "mtime_ns": 1792718475879148800,
+      "sha256": "5933e7f1b1cbd12df68f46d31242168fab93cbeb4064b762e0584203aebcccd7"
+    },
+    "BINDING.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731580,
+      "bytes": 179778,
+      "mtime_ns": 1792718475880155200,
+      "sha256": "8a1d93eb8c851fcff419472868b30783819887b4190d963be08d0a682d19e36e"
+    },
+    "COLLECTION.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731581,
+      "bytes": 17948,
+      "mtime_ns": 1792718419925573300,
+      "sha256": "b8863aea87abf4cda75a4e7d8daa932b740dd382c9e567fed7c201eb772b5053"
+    },
+    "IMPLEMENTATION-RECEIPT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020934,
+      "bytes": 4639,
+      "mtime_ns": 1792718476351098700,
+      "sha256": "4a8eb1469fc3d86a3118e5e163541ff8f1a3ac46e4430ea3699a1b70ef41a201"
+    },
+    "PERSISTENCE-WITNESSES.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020931,
+      "bytes": 3682,
+      "mtime_ns": 1792718475353376600,
+      "sha256": "6a09f7a40ac2d8f3ab25da40c35b8ef324cb3ff3018677b4b169f0cecd3641c7"
+    },
+    "PREDECESSOR-DELTA.diff": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731585,
+      "bytes": 17694,
+      "mtime_ns": 1792718475348367100,
+      "sha256": "77c3472aae62a3158f16477191968f1b66e4cbce20cd3cb2336234bdd7d7fb3d"
+    },
+    "PREDECESSOR-DELTA.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731586,
+      "bytes": 892,
+      "mtime_ns": 1792718475350283000,
+      "sha256": "49dc505ba57bc3f50b414522c80bd74069f54008e32d2322a6d3eef9309361e0"
+    },
+    "PREPARATION.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020926,
+      "bytes": 376398,
+      "mtime_ns": 1792718420316801200,
+      "sha256": "177a544c664641e960683203b650408be357bb3d9d72f06535cce73c4ebe5784"
+    },
+    "PROVENANCE.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020810,
+      "bytes": 1890,
+      "mtime_ns": 1792718224704878600,
+      "sha256": "3756fa7f7173078341a43359b6568f23c409cae4c5939c3e87031b75a553a74c"
+    },
+    "README.md": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020809,
+      "bytes": 4998,
+      "mtime_ns": 1792718418010689200,
+      "sha256": "6194c15f3b8d44ab9d06c54ce0b17588d2c2c9672d7a5ffba7bc68aa48dbf2ad"
+    },
+    "SOURCE-DELTA.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731589,
+      "bytes": 1342,
+      "mtime_ns": 1792718476348093400,
+      "sha256": "6a6a14fcdae5a4b6ced3a3e5130141f2b1bf3bce388c199c83e3cb9402288da8"
+    },
+    "controls.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020804,
+      "bytes": 14499,
+      "mtime_ns": 1792718224696878600,
+      "sha256": "de90d983959869fc54db39c9ac5ca645f290cf8fb4642929300acd609739ba6f"
+    },
+    "engine_controls.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020805,
+      "bytes": 8931,
+      "mtime_ns": 1792718418010689200,
+      "sha256": "d354aaad81fc4581220e79530b1f34d40c95d82b3820ca8f7decca97b3309fcd"
+    },
+    "freeze.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020807,
+      "bytes": 6344,
+      "mtime_ns": 1792718418010689200,
+      "sha256": "04f4a02ee0c86287bdaaf604f5155957c90d89d6491de4e5815e243c1245639b"
+    },
+    "owner_timing_observer.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 844424933442114,
+      "bytes": 14253,
+      "mtime_ns": 1792718224692878700,
+      "sha256": "75e595990e485ea07980f76e01f2fdebe8953fd6623d98b3240d186f050f34cc"
+    },
+    "prepare.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020806,
+      "bytes": 4295,
+      "mtime_ns": 1792718285387724600,
+      "sha256": "f149ae210e30147a8e2b75b74165bcdeb115a071ba0387991f1aa1f36d245c41"
+    },
+    "run_challenge.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 844424933442115,
+      "bytes": 20557,
+      "mtime_ns": 1792718349120026900,
+      "sha256": "20514b36cdb6ff6863deaa280b5c2db9cb9c1897520c8adf5fdcee0cea3e4dd8"
+    },
+    "verify_prepared.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020808,
+      "bytes": 2658,
+      "mtime_ns": 1792718418010689200,
+      "sha256": "86c8d7d2d5de1b7f945cf9d826e802100f430b8d3bf1245a446e61c077f444e0"
+    },
+    "controls-final/CONTROL-RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731478,
+      "bytes": 294,
+      "mtime_ns": 1792718349673248600,
+      "sha256": "40cd01038fb9c8d9dc05bad9f2aa2088b36a4a72024a1852e9dc2b933de3e289"
+    },
+    "controls-final/CONTROLS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 2533274793706069,
+      "bytes": 3012,
+      "mtime_ns": 1792718349673248600,
+      "sha256": "9e76a856d7715e383787c580a098d350469d9d1fc07761f2406161aa235ce36d"
+    },
+    "engine-controls-final/assertion-witness/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020825,
+      "mtime_ns": 1792718350248477100
+    },
+    "engine-controls-final/failure/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020843,
+      "mtime_ns": 1792718350277585300
+    },
+    "engine-controls-final/report/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020849,
+      "mtime_ns": 1792718350286584900
+    },
+    "engine-controls-final/seal/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020860,
+      "mtime_ns": 1792718350303559300
+    },
+    "engine-controls-final/storage/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020855,
+      "mtime_ns": 1792718350293585100
+    },
+    "engine-controls-final/subtest-witness/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020837,
+      "mtime_ns": 1792718350267750500
+    },
+    "engine-controls-final/success/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020866,
+      "mtime_ns": 1792718350311559200
+    },
+    "engine-controls-final/unrelated-witness/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020831,
+      "mtime_ns": 1792718350257743000
+    },
+    "engine-controls-final/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020872,
+      "bytes": 580,
+      "mtime_ns": 1792718350313829900,
+      "sha256": "df26c473f9b2f1569e19bdd8763aee787a70815ea0729fc6a6d72bcd09754221"
+    },
+    "engine-controls-final/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731480,
+      "bytes": 1309,
+      "mtime_ns": 1792718350312825900,
+      "sha256": "ad994c59ae4ccc16552351fdb989830bf98810967391c6d72b3d5bca7b056772"
+    },
+    "engine-controls-final/engine_controls.py": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 1688849863574153,
+      "bytes": 8916,
+      "mtime_ns": 1792718418010689200,
+      "sha256": "7409a441c7557929c78bfbc13a29b44035b311edc81b8cca76d7fcd77f0e9d5f"
+    },
+    "engine-controls-final/assertion-witness/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020830,
+      "bytes": 459,
+      "mtime_ns": 1792718350248477100,
+      "sha256": "238e07c5e1726e0f2ea7b929597272a32bad0dac640e9da38cb2517fae353617"
+    },
+    "engine-controls-final/assertion-witness/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020829,
+      "bytes": 3238,
+      "mtime_ns": 1792718350247474800,
+      "sha256": "3e61e0a1ea4e4ac13555b02d20ca336bb79f079af03684e566d1420032aa09b3"
+    },
+    "engine-controls-final/assertion-witness/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020826,
+      "bytes": 358,
+      "mtime_ns": 1792718350241469200,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/assertion-witness/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020828,
+      "bytes": 602,
+      "mtime_ns": 1792718350246474800,
+      "sha256": "1f82d26a1bf6881c5c043912e84cd7229b9edb14b971f3f67d2b78e048f772e6"
+    },
+    "engine-controls-final/assertion-witness/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020827,
+      "bytes": 1223,
+      "mtime_ns": 1792718350245476100,
+      "sha256": "40bd3d21eefb43563405fc7f88fdbf46628cdeea1289df0229b91e7a490add3a"
+    },
+    "engine-controls-final/failure/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020848,
+      "bytes": 459,
+      "mtime_ns": 1792718350277585300,
+      "sha256": "56adcc2595f5c3ca040abc5210ec58d3d0c0fdeea283f6232f8a03072b815adc"
+    },
+    "engine-controls-final/failure/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020847,
+      "bytes": 7131,
+      "mtime_ns": 1792718350275581100,
+      "sha256": "4d61c5343373790d4161737c4d6e5f207695e71da11866afd10810695b600720"
+    },
+    "engine-controls-final/failure/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020844,
+      "bytes": 358,
+      "mtime_ns": 1792718350269750500,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/failure/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020846,
+      "bytes": 1135,
+      "mtime_ns": 1792718350274750000,
+      "sha256": "11e96347706ef40298e2e49c4b7ec97290dc7ede35500ba8455363a3e77bba29"
+    },
+    "engine-controls-final/failure/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020845,
+      "bytes": 2895,
+      "mtime_ns": 1792718350273750100,
+      "sha256": "c0217253fa7e984afc4906e318af4141ffada7f2dd5796ac019607703e61a931"
+    },
+    "engine-controls-final/report/REPORT-ERROR.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020854,
+      "bytes": 72,
+      "mtime_ns": 1792718350286584900,
+      "sha256": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd"
+    },
+    "engine-controls-final/report/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020853,
+      "bytes": 1429,
+      "mtime_ns": 1792718350285585300,
+      "sha256": "528aabab44cb19a005f036f519f789c56fcf4047a04d7aabda30da5da3e630b7"
+    },
+    "engine-controls-final/report/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020850,
+      "bytes": 358,
+      "mtime_ns": 1792718350279585800,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/report/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020852,
+      "bytes": 1306,
+      "mtime_ns": 1792718350284584700,
+      "sha256": "4af26c1632800ac30d0b628a92672ec189650214067028644e887b037a662573"
+    },
+    "engine-controls-final/report/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020851,
+      "bytes": 3027,
+      "mtime_ns": 1792718350283585200,
+      "sha256": "9bfe712d04be2d419c49aaf70ae42f71d17758f7852fa1339d69c1912337d6c4"
+    },
+    "engine-controls-final/seal/REPORT-ERROR.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020865,
+      "bytes": 98,
+      "mtime_ns": 1792718350303559300,
+      "sha256": "69b3e977a8e09c6e3e90f14abc1ab2edab7bd2e42f5a8474e13c6f53354f4071"
+    },
+    "engine-controls-final/seal/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020864,
+      "bytes": 7520,
+      "mtime_ns": 1792718350301558700,
+      "sha256": "3a468404b0900e28d11b6d815d04dcbef02c37ec12005efd54888b2d003dcdd3"
+    },
+    "engine-controls-final/seal/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020861,
+      "bytes": 358,
+      "mtime_ns": 1792718350295868400,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/seal/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020863,
+      "bytes": 1305,
+      "mtime_ns": 1792718350300559500,
+      "sha256": "64df51f0e4186b7564b22d8b7013e4223ac46323d6395bc8710cdb739c4d262e"
+    },
+    "engine-controls-final/seal/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020862,
+      "bytes": 3026,
+      "mtime_ns": 1792718350299560500,
+      "sha256": "5e32de456554db445418e9f813fae688aca139e50a7cdbf7e772fa611a535449"
+    },
+    "engine-controls-final/storage/REPORT-ERROR.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020859,
+      "bytes": 72,
+      "mtime_ns": 1792718350293585100,
+      "sha256": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd"
+    },
+    "engine-controls-final/storage/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020856,
+      "bytes": 358,
+      "mtime_ns": 1792718350288584700,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/storage/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020858,
+      "bytes": 100,
+      "mtime_ns": 1792718350292584700,
+      "sha256": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba"
+    },
+    "engine-controls-final/storage/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020857,
+      "bytes": 154,
+      "mtime_ns": 1792718350290585300,
+      "sha256": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d"
+    },
+    "engine-controls-final/subtest-witness/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020842,
+      "bytes": 459,
+      "mtime_ns": 1792718350267750500,
+      "sha256": "84416750e4756ac4c23efc676e101c8eb66250c64dc6d8e15d8e75f4330afdff"
+    },
+    "engine-controls-final/subtest-witness/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020841,
+      "bytes": 4764,
+      "mtime_ns": 1792718350265750100,
+      "sha256": "c54e9b5902708b6068a70dd53abf87500415ab6d400cc5bbf20c4f045e771a86"
+    },
+    "engine-controls-final/subtest-witness/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020838,
+      "bytes": 358,
+      "mtime_ns": 1792718350259746200,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/subtest-witness/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020840,
+      "bytes": 1020,
+      "mtime_ns": 1792718350264750600,
+      "sha256": "cf18b8e6dfbc414c78f7fff6f787be30b24c36a32c44c375ec272eda47cc6220"
+    },
+    "engine-controls-final/subtest-witness/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020839,
+      "bytes": 1834,
+      "mtime_ns": 1792718350264750600,
+      "sha256": "22dbde6aa4359c0e0fc6282f86cf718bdf06b93ded1ddabfc64eba6b4d3213cf"
+    },
+    "engine-controls-final/success/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020871,
+      "bytes": 458,
+      "mtime_ns": 1792718350311559200,
+      "sha256": "c304f6e96f58e27bb2a539860389f251868b52ab38c865a4517ea903ffdc270e"
+    },
+    "engine-controls-final/success/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020870,
+      "bytes": 928,
+      "mtime_ns": 1792718350310558800,
+      "sha256": "07432eb10150a43a7fefccb7bcffd4810d192623ec55705513584d0aa3d7cb3c"
+    },
+    "engine-controls-final/success/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020867,
+      "bytes": 358,
+      "mtime_ns": 1792718350305558800,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/success/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020869,
+      "bytes": 100,
+      "mtime_ns": 1792718350309559000,
+      "sha256": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba"
+    },
+    "engine-controls-final/success/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020868,
+      "bytes": 154,
+      "mtime_ns": 1792718350307559000,
+      "sha256": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d"
+    },
+    "engine-controls-final/unrelated-witness/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020836,
+      "bytes": 459,
+      "mtime_ns": 1792718350257743000,
+      "sha256": "d2d75552ef77498b05a25aabe67932931393c3569d544df2c80acebc35570897"
+    },
+    "engine-controls-final/unrelated-witness/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020835,
+      "bytes": 2787,
+      "mtime_ns": 1792718350256473700,
+      "sha256": "f9ac2664eddcdcabd81e4d11f2969d99776e9381c00814255f92c77d8d3f4af3"
+    },
+    "engine-controls-final/unrelated-witness/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020832,
+      "bytes": 358,
+      "mtime_ns": 1792718350251474500,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-final/unrelated-witness/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020834,
+      "bytes": 549,
+      "mtime_ns": 1792718350255473700,
+      "sha256": "0078ec4467b3c3e11ffd93ac2c5ee9ac588d4a06a6c510bc0d3505596c8a546d"
+    },
+    "engine-controls-final/unrelated-witness/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020833,
+      "bytes": 1011,
+      "mtime_ns": 1792718350254474100,
+      "sha256": "3ada0400ce6f8a12561ae950b1a96e4a77277924699908f600a9ea1bcc8834a2"
+    },
+    "engine-controls-stable/assertion-witness/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020876,
+      "mtime_ns": 1792718418585605600
+    },
+    "engine-controls-stable/failure/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020894,
+      "mtime_ns": 1792718418612206000
+    },
+    "engine-controls-stable/report/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020900,
+      "mtime_ns": 1792718418622213500
+    },
+    "engine-controls-stable/seal/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020911,
+      "mtime_ns": 1792718418638887800
+    },
+    "engine-controls-stable/storage/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020906,
+      "mtime_ns": 1792718418630024800
+    },
+    "engine-controls-stable/subtest-witness/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020888,
+      "mtime_ns": 1792718418603504600
+    },
+    "engine-controls-stable/success/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020917,
+      "mtime_ns": 1792718418646887500
+    },
+    "engine-controls-stable/unrelated-witness/": {
+      "kind": "directory",
+      "device": 154504856318070761,
+      "inode": 281474980020882,
+      "mtime_ns": 1792718418593605600
+    },
+    "engine-controls-stable/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020923,
+      "bytes": 580,
+      "mtime_ns": 1792718418649179500,
+      "sha256": "a792c4526c36499989997656381d15d861fe7c366ffbdb0fdc06f052af84715c"
+    },
+    "engine-controls-stable/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 562949956731531,
+      "bytes": 1309,
+      "mtime_ns": 1792718418648175300,
+      "sha256": "ed83673ea24c59f1545a5073b8a2f3ac99deaaa6cb197ccf6de025569656d542"
+    },
+    "engine-controls-stable/assertion-witness/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020881,
+      "bytes": 459,
+      "mtime_ns": 1792718418585605600,
+      "sha256": "64867e1ce4e49f04b966b42f49627b9ec9ca0a03d4e97a59fd53607f763389cc"
+    },
+    "engine-controls-stable/assertion-witness/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020880,
+      "bytes": 3605,
+      "mtime_ns": 1792718418584605800,
+      "sha256": "918113ba478d05af4fffaf516969d485f1f0d5be3e79a2c2a827e01747ff7421"
+    },
+    "engine-controls-stable/assertion-witness/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020877,
+      "bytes": 358,
+      "mtime_ns": 1792718418578601400,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/assertion-witness/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020879,
+      "bytes": 969,
+      "mtime_ns": 1792718418583605500,
+      "sha256": "410faca87bc6818e70cb81ed06904f61e6b55715040772fa2aa5e6f6b341c2ef"
+    },
+    "engine-controls-stable/assertion-witness/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020878,
+      "bytes": 1223,
+      "mtime_ns": 1792718418582605100,
+      "sha256": "40bd3d21eefb43563405fc7f88fdbf46628cdeea1289df0229b91e7a490add3a"
+    },
+    "engine-controls-stable/failure/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020899,
+      "bytes": 459,
+      "mtime_ns": 1792718418613210200,
+      "sha256": "56adcc2595f5c3ca040abc5210ec58d3d0c0fdeea283f6232f8a03072b815adc"
+    },
+    "engine-controls-stable/failure/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020898,
+      "bytes": 7131,
+      "mtime_ns": 1792718418611504500,
+      "sha256": "4d61c5343373790d4161737c4d6e5f207695e71da11866afd10810695b600720"
+    },
+    "engine-controls-stable/failure/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020895,
+      "bytes": 358,
+      "mtime_ns": 1792718418605503100,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/failure/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020897,
+      "bytes": 1135,
+      "mtime_ns": 1792718418610504100,
+      "sha256": "11e96347706ef40298e2e49c4b7ec97290dc7ede35500ba8455363a3e77bba29"
+    },
+    "engine-controls-stable/failure/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020896,
+      "bytes": 2895,
+      "mtime_ns": 1792718418609505500,
+      "sha256": "c0217253fa7e984afc4906e318af4141ffada7f2dd5796ac019607703e61a931"
+    },
+    "engine-controls-stable/report/REPORT-ERROR.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020905,
+      "bytes": 72,
+      "mtime_ns": 1792718418622213500,
+      "sha256": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd"
+    },
+    "engine-controls-stable/report/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020904,
+      "bytes": 1429,
+      "mtime_ns": 1792718418621213300,
+      "sha256": "528aabab44cb19a005f036f519f789c56fcf4047a04d7aabda30da5da3e630b7"
+    },
+    "engine-controls-stable/report/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020901,
+      "bytes": 358,
+      "mtime_ns": 1792718418615210200,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/report/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020903,
+      "bytes": 1306,
+      "mtime_ns": 1792718418620209800,
+      "sha256": "4af26c1632800ac30d0b628a92672ec189650214067028644e887b037a662573"
+    },
+    "engine-controls-stable/report/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020902,
+      "bytes": 3027,
+      "mtime_ns": 1792718418620209800,
+      "sha256": "9bfe712d04be2d419c49aaf70ae42f71d17758f7852fa1339d69c1912337d6c4"
+    },
+    "engine-controls-stable/seal/REPORT-ERROR.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020916,
+      "bytes": 98,
+      "mtime_ns": 1792718418638887800,
+      "sha256": "69b3e977a8e09c6e3e90f14abc1ab2edab7bd2e42f5a8474e13c6f53354f4071"
+    },
+    "engine-controls-stable/seal/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020915,
+      "bytes": 7520,
+      "mtime_ns": 1792718418636887100,
+      "sha256": "3a468404b0900e28d11b6d815d04dcbef02c37ec12005efd54888b2d003dcdd3"
+    },
+    "engine-controls-stable/seal/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020912,
+      "bytes": 358,
+      "mtime_ns": 1792718418631380800,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/seal/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020914,
+      "bytes": 1305,
+      "mtime_ns": 1792718418635887400,
+      "sha256": "64df51f0e4186b7564b22d8b7013e4223ac46323d6395bc8710cdb739c4d262e"
+    },
+    "engine-controls-stable/seal/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020913,
+      "bytes": 3026,
+      "mtime_ns": 1792718418635887400,
+      "sha256": "5e32de456554db445418e9f813fae688aca139e50a7cdbf7e772fa611a535449"
+    },
+    "engine-controls-stable/storage/REPORT-ERROR.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020910,
+      "bytes": 72,
+      "mtime_ns": 1792718418630024800,
+      "sha256": "d5d92be22a46d78c9fa05c542589763cb204a6383cefc30510117e3dbb2a90dd"
+    },
+    "engine-controls-stable/storage/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020907,
+      "bytes": 358,
+      "mtime_ns": 1792718418625213000,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/storage/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020909,
+      "bytes": 100,
+      "mtime_ns": 1792718418628422300,
+      "sha256": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba"
+    },
+    "engine-controls-stable/storage/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020908,
+      "bytes": 154,
+      "mtime_ns": 1792718418627213500,
+      "sha256": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d"
+    },
+    "engine-controls-stable/subtest-witness/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020893,
+      "bytes": 459,
+      "mtime_ns": 1792718418603504600,
+      "sha256": "84416750e4756ac4c23efc676e101c8eb66250c64dc6d8e15d8e75f4330afdff"
+    },
+    "engine-controls-stable/subtest-witness/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020892,
+      "bytes": 4764,
+      "mtime_ns": 1792718418602504000,
+      "sha256": "c54e9b5902708b6068a70dd53abf87500415ab6d400cc5bbf20c4f045e771a86"
+    },
+    "engine-controls-stable/subtest-witness/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020889,
+      "bytes": 358,
+      "mtime_ns": 1792718418595500600,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/subtest-witness/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020891,
+      "bytes": 1020,
+      "mtime_ns": 1792718418600504000,
+      "sha256": "cf18b8e6dfbc414c78f7fff6f787be30b24c36a32c44c375ec272eda47cc6220"
+    },
+    "engine-controls-stable/subtest-witness/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020890,
+      "bytes": 1834,
+      "mtime_ns": 1792718418600504000,
+      "sha256": "22dbde6aa4359c0e0fc6282f86cf718bdf06b93ded1ddabfc64eba6b4d3213cf"
+    },
+    "engine-controls-stable/success/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020922,
+      "bytes": 458,
+      "mtime_ns": 1792718418646887500,
+      "sha256": "c304f6e96f58e27bb2a539860389f251868b52ab38c865a4517ea903ffdc270e"
+    },
+    "engine-controls-stable/success/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020921,
+      "bytes": 928,
+      "mtime_ns": 1792718418645887800,
+      "sha256": "07432eb10150a43a7fefccb7bcffd4810d192623ec55705513584d0aa3d7cb3c"
+    },
+    "engine-controls-stable/success/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020918,
+      "bytes": 358,
+      "mtime_ns": 1792718418640887900,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/success/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020920,
+      "bytes": 100,
+      "mtime_ns": 1792718418644887500,
+      "sha256": "c62cdfc709dbe5ea2f2ade70466cf5b15c79fb7029592c6a1a1d6013f722cfba"
+    },
+    "engine-controls-stable/success/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020919,
+      "bytes": 154,
+      "mtime_ns": 1792718418643886900,
+      "sha256": "0877059f8c912623385e227c79445796a00b3e9d4ffd24f49c3cdf6039efde5d"
+    },
+    "engine-controls-stable/unrelated-witness/REPORT-SEAL.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020887,
+      "bytes": 459,
+      "mtime_ns": 1792718418593605600,
+      "sha256": "d2d75552ef77498b05a25aabe67932931393c3569d544df2c80acebc35570897"
+    },
+    "engine-controls-stable/unrelated-witness/RESULT.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020886,
+      "bytes": 2787,
+      "mtime_ns": 1792718418592605300,
+      "sha256": "f9ac2664eddcdcabd81e4d11f2969d99776e9381c00814255f92c77d8d3f4af3"
+    },
+    "engine-controls-stable/unrelated-witness/START.json": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020883,
+      "bytes": 358,
+      "mtime_ns": 1792718418587604900,
+      "sha256": "fb7f5d28bcf944d3d0180878b0415a89c338e36ebc7a532d62e82f95125599bf"
+    },
+    "engine-controls-stable/unrelated-witness/TESTS.log": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020885,
+      "bytes": 549,
+      "mtime_ns": 1792718418591605900,
+      "sha256": "0078ec4467b3c3e11ffd93ac2c5ee9ac588d4a06a6c510bc0d3505596c8a546d"
+    },
+    "engine-controls-stable/unrelated-witness/events.jsonl": {
+      "kind": "file",
+      "device": 154504856318070761,
+      "inode": 281474980020884,
+      "bytes": 1011,
+      "mtime_ns": 1792718418590605800,
+      "sha256": "3ada0400ce6f8a12561ae950b1a96e4a77277924699908f600a9ea1bcc8834a2"
+    }
+  },
+  "external_pins": {
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm2\\packet\\INPUTS.json": "422dd2b9fa8d31396ed1e3ce6fae3a3f77a117d8cb43ada7cf776900a0c99504",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm2\\packet\\PLAN.md": "7f77aee2cbe3686564e764bbf007bbc40edc10ea7fc9e640f9a26b6a7f774e93",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm2\\client.py": "deac0aeac2bf9c8d872f0e864df1297e993fc803d9f6b6feb0b74613bef174a1",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\operational-resume-20261022\\record-application-successor-r1\\delivery\\canonical-budget-application-r1\\SOURCE-MANIFEST.json": "d1bf22faa306ba620b6a284d037015e3041ae7319961f51951d84f3762992cf9",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\source-assembly-20261014T021300Z\\.agents\\e3\\Scripts\\python.exe": "0b471133e110cfb53a061cad528ce8e517d7b9ac41a0a396c39ad795a487fc14",
+    "T:\\00-Active\\Project-AI-CETA\\AGENTS.md": "83b35962be3dc40011be8fca6124a0b2c6972cad8221d1cab772f5557e1a0856",
+    "T:\\PROJECT_ISOLATION_RULEBOOK.md": "6d3e45494892e6b3ff9fc6c80be6c0c7af208873a87416e39849bf9da34b1e35",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\work\\MANIFEST.json": "771fa4d915c6b9d6fb2f1f042d3c313448fb4f2cea8607420fcccca65bf4df53",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\work\\run_canonical_journal.py": "37ca7bbfa361475ea42398c5d3bda42f8c1f95a0f3329154176f286a262d17ed",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\review\\REVIEW.json": "767c00835e69674ee25fcbc41c193cc8aadf60d1d5a9e1b74dbaea68c1911a40",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\review\\MANIFEST.json": "bda41c8dd184ab003902562f97f41baf8155d915507e4d13cfabc4cf5e8f70d0",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\control\\EXECUTION-INTENT.json": "e26f885d36165b2d574c2ba50b22f7665de32df06af08fd5714d8983cc93f2e6",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\control\\EXECUTION-PROCESS.json": "5e5173eacd1abc2f0366b3d15e662cb62dcf4090366bae4d07575bbe011ae5a7",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\control\\EXECUTION.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\control\\EXECUTION.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\delivery\\START.json": "42e4a6a6e8d208b8f2df25c9c96161a65ed812fdb45e85073da58beed7272018",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\delivery\\RESULT.json": "9030fef9127ed3531f0687194e2a73f2be4ceab85c2fa8762f6b31e14a8d0d11",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\delivery\\REPORT-SEAL.json": "364a3cbdf2e73bed025326aaef4eeda1ae27bea7b716427bbb35dd7c8700c61a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\delivery\\events.jsonl": "253252442b2d729f6a9bf83f7056771aaada20350bbe059444d0b920c0509fbc",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\delivery\\TESTS.log": "908bbdec6a8d2e0ff22e3b797b4a24a2fe29fcd250f45bc545cc5f8b9a58bc19",
+    "T:\\AGENTS.md": "2e2041471ae43aab926050eefde39f661053e395c6b9e4d061776545ada88d6e",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm2\\control\\AGENTS.md": "0ba42969e4c88e630c9dc1c38e65007ffe0995d46235cdedc7c53a2b09db7701",
+    "T:\\01-Projects\\TAAR-Agent-Taskforce\\TAAR-Agent-Taskforce\\taar\\__init__.py": "13a3282f8012556cfb0d3de013bb671e2a90483197dc69b27e4ee0ee8833f5e3",
+    "T:\\01-Projects\\TAAR-Agent-Taskforce\\TAAR-Agent-Taskforce\\taar\\errors.py": "cef272a2afaba6b1f0edb687be035cbe306ee43d2ef22fba884a4a6c02d880ed",
+    "T:\\01-Projects\\TAAR-Agent-Taskforce\\TAAR-Agent-Taskforce\\taar\\orchestration_runtime.py": "f59ce90370b04580931c427201777a9b4bf1484ee2dc0f54f6a4ae36f36d7b6b",
+    "T:\\01-Projects\\TAAR-Agent-Taskforce\\TAAR-Agent-Taskforce\\taar\\orchestration_graph.py": "baa24da84b70c934cdf6369bc09ea6a1c7b2f93ebdfedf397697c85ee29f78a8",
+    "T:\\01-Projects\\TAAR-Agent-Taskforce\\TAAR-Agent-Taskforce\\taar\\orchestration_persistence.py": "e73fd364c1766edace3f44fbbbf6c093adfa3739d15740e02042946dd03db13f",
+    "T:\\01-Projects\\TAAR-Agent-Taskforce\\TAAR-Agent-Taskforce\\taar\\orchestration_receipts.py": "088d0a25248c18ccfc12fce57657463cbcd9d79bf5e58ed3001ddc5004dbdbac",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\control\\verify-final-api.json": "792959145941101373ac104c4df61dcabcfe29844bd80dacf7944cf69dbf4139",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\jr2\\control\\ROOT-EXECUTION-COMPLETION.json": "9a9456d443f6d9883186ee2ecaddf8609d570aaf01d0a36b545e4005cc80fc76",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\work\\MANIFEST.json": "8c93bba448df811028e284763ed52ba6c90216e480ff8463840eb6412ddd8a42",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\review\\REVIEW.json": "c07e595ec4871c741ed62e25953c6dc96d24ff711359b7d8cd69189db71fb758",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\review\\MANIFEST.json": "437b40cf73ddeda825a8d805b2c286e57bc7a5a4d5556e15be81719a0eced31a",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\review\\UNRELATED-FAILURE-OBSERVATION.json": "45016408a8b48078d357c27b88d8d7ad2120c0042cab79df8cbd8d0efcd802ba",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\review\\TESTS.json": "1d6b4fcd3f747d1b911a2ca606e846b1c758f63e53a8ebf0db0bc03dcfeb6ecc",
+    "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\review\\TESTS.log": "f403072d40df1c05eac4d8f978d233552f4d81823bbe36ac0882cb95beb65e2e",
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_ctypes.pyd": "0e56107a891100535f2da79d85a5ae65ff1227b4765bd108f8593ac1a1110d81",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\__init__.py": "09ebb86780abd7a9c66ad952bcfcdeff3929142e11032fcb398f03c655fe70b5",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\__init__.py": "3c3f815d0e9f143ecfcf4b5b67c25778cbe7a6c0b8aa7cac05d45fb6a1d34568",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\events.py": "e58c332a9214335b93baa0ec9fef05892ef9f8e9c8f42739c18ffa35df25c6fa",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\evidence_admission.py": "ff22392ca43ae011bf0891742cf3edb39ffd46a1bb56f219e59c80e1143d0904",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\framing.py": "4a63d85fca04592276c8c9f7c0a9ad53c5b3629a5190b6042071bdb0dc48a71d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\history.py": "bea39b6fe7a9e1ece83ec491091fd55e7eaaa5689457ab3cb73cb618d7c89525",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\kernel_transactions.py": "cdc812a1ae0c545fc31b4a75466a8f942eafe63b4bf41a8576225f354f944a8c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\memory_lifecycle.py": "d666da5890a425c6e3c9e845a07f83512c8910945ac04a5d82f36c190b56e5c1",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\owner_enrollment.py": "51631374202a012b5d11fecd5f44b14304581ae0874035f60cffb7b6246465d5",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\read_sets.py": "eb4b0f0cecc48908556a5163f6ab040d60109192feb5c5b13634f269a26bba7c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\real_effect.py": "72a4d9769b162eec871a78abf772feadd12c7293f5f33e5f60d78cd751af00e3",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\resource_management.py": "88ccb6ffbd2eb58eef856a8cbec42f710648413002b19a1bf317cf2433aeb14d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\resource_reservations.py": "9d6694e39aff9d3ef49f0a4452e12e2975356dc0e276cb7ce0fc5b9b1d368529",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\store_transactions.py": "8531ead603b354ded7ce5341d28cd7d2a23a77f18198d39c74985768012b9bb1",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\temporal.py": "df3a3c2e28945bf75c998521b3d717cdf3b2218b2947052c07e5709bf0e6631d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\wire.py": "eeca384a2cb0e103fe657ea95a0bd2a6039c371b79863fd7e734b63d8b82a2b1",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\contracts\\workload_throttling.py": "910baa28c3bbf5ba1870e80dc7a46684e6fc777b532ba61727582689181ef25b",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\effects\\native_cpu_binding.py": "82c40c78ef6042f1c9e7b948dc7da3be5850e80661e736ce892aca3c43af65f3",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\__init__.py": "ed69e2c43a11331febb88fbf5dc9f02b127067918078e02681ad49ef4b3711ce",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\cpu_outcome_capacity.py": "2bdd6b4e668aa196fa91d59faaadee1de6c35d99d7de4dbe711b00a3cb986ae4",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\identity\\native_clock.py": "92981b3b62fea365f927542d795a058d035b80949248126b9cbb9d129fb5715c",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\__init__.py": "a2827036371c8f93fb6aca456cf1628c104e72ac9268f0d5356427a0bed80548",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\cpu_execution.py": "5d1b386723a45a9bd9c9e21461ed04913df10145af0fd9d2ba2f730c23736004",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\effect_transactions.py": "ffff64f1135605827ca6607c3cb494e1580dd5aeebfab41b4ec8cccc741a4fbc",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\owner_authority.py": "b9e0ea17a92181d20f8fa54711bd06821edc7624cfa62ce85449a4258d6a62ab",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\kernel\\transactions.py": "c1805cd3544c2e54a86a3721b1c484a4935cced05a00a33f3a08e69812b93892",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\__init__.py": "30bdf88cbc70b141540007cff9c735da94c9a343f258543e9f74d461722e3e4b",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\journal.py": "c0efdcd06d60e8648c9ca0733e236c3499a694b6fa8976ce7f40389718340c0d",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\outcome_capacity.py": "3856b2fe6c2c5e5ed51c72e2935dd7a9a9fa30d4bf59d6d2213cccdf15ba3bb9",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\projections.py": "f453cea4226e00dc4770b69231d717e6bf1800bc16296023075c57ba6206418f",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\sqlite_runtime.py": "e8720d9567440cc0dced5b6c84821321ae2a046e942d3f02156a3164bad7bc47",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\store\\state.py": "117172514d904dfc7ec50b46cfbf71972feecbcfafd3c1e5cf3917863604510a",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\supervisor\\__init__.py": "9303aa2127cbc0e3bce69bcf2802c8b0ad5204725fb14a2d52d498903af45f99",
+    "T:\\00-Active\\Project-AI-CETA\\src\\ceta\\supervisor\\windows_jobs.py": "3266711e69db72a479039e7160f2a37abf51e68aa6e4ff6ca3d0c0f961942eb5",
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\ctypes\\__init__.py": "8fc533f8ae18a7ca06dce88fc8dca5eae61f2a4198ceb9d4b4b5a69862aa42ee",
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\json\\__init__.py": "feb17670e443e5db2723f217727dcc5d5e155c40e4e6935b16061c88542f24e7",
+    "C:\\Users\\Quencher\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\__init__.py": "d9f5034dee11af8558c36dab6f2de6a443296a927af64a729f7ea65b87f3d4bb"
+  },
+  "python_sources": [
+    "controls.py",
+    "engine_controls.py",
+    "freeze.py",
+    "owner_timing_observer.py",
+    "prepare.py",
+    "run_challenge.py",
+    "verify_prepared.py"
+  ],
+  "current_controls_source": {
+    "owner_timing_observer.py": "75e595990e485ea07980f76e01f2fdebe8953fd6623d98b3240d186f050f34cc",
+    "controls.py": "de90d983959869fc54db39c9ac5ca645f290cf8fb4642929300acd609739ba6f"
+  },
+  "canonical_tests_collected": 1,
+  "canonical_tests_executed": 0,
+  "author_controls": 28,
+  "full_product_acceptance": false,
+  "post_freeze_outputs": [
+    "MANIFEST.json",
+    "PREPARED.stdout",
+    "PREPARED.stderr",
+    "PREPARED.json"
+  ]
+}

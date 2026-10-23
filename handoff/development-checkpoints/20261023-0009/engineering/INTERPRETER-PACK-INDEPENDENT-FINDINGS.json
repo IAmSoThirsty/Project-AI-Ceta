@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-10-23T18:03:14.168175+00:00",
+  "authority": "/root",
+  "findings": [
+    {
+      "id": "CP9-INTERPRETER-01",
+      "finding": "checkpoint_core.save assert stream.write(raw)==len(raw) loses the write entirely under optimized Python; entrypoint assert-based validation lacks a non-assert optimization guard.",
+      "requested_repair": "Unconditional writes with explicit short-write refusal; non-assert optimize guard before imports/effects for every authorized CP9 entrypoint; child interpreter -E -B and scrub inherited PYTHONOPTIMIZE; retain51 controls and add focused negatives."
+    },
+    {
+      "id": "CP9-PACK-CONSUMPTION-01",
+      "finding": "Publisher hashes one stable pack read, discards it, and supplies a later separate stable read to canonical index-pack.",
+      "requested_repair": "Read pack bytes immediately before import, compare frozen hash, consume exactly that byte object without re-read; controlled substitution must refuse before the importing Git call."
+    }
+  ],
+  "before_images": "before-interpreter-pack-safety/BEFORE-IMAGES.json",
+  "disposition": "ACCEPTED_FOR_NARROW_REPAIR_BEFORE_PREPARATION_OR_FREEZE",
+  "final_canonical_input_sha256": "5475335bd3b891e463837285cc22f4aed3b1ac1ac26c003e57753e9a05abe0ec",
+  "full_product_acceptance": false
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-23T06:47:51.710256+00:00",
+  "reviewer": "/root/broader_successor_author",
+  "independent_review": true,
+  "decision": "rejected_as_publication_prerequisite",
+  "source": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\cp9\\control\\lease_audit_r4.py",
+  "source_sha256": "894d4c8dfaa4f97d05a5eff625c71924605076c38c0b9c9046eb4228ea0b153f",
+  "finding": {
+    "id": "LEASE-AUDIT-R4-01",
+    "classification": "blocking_current_publication_prerequisite",
+    "location": "lease_audit_r4.py:43-46, stock-schema claim mirror agreement and claim iteration",
+    "problem": "A recorded RUNNING Git-scoped node with state.claim=None and claims.json={} is silently omitted because both empty mirrors agree; the audit reports clear=true despite the unresolved running state.",
+    "independent_case": {
+      "name": "recorded_running_git_writer_missing_both_claim_mirrors_denied",
+      "passed": false,
+      "expected_clear": false,
+      "actual_clear": true,
+      "summary": {
+        "coordinators": 2,
+        "synthetic_probe_records": 0,
+        "saved_observations": 0,
+        "unresolved": 0,
+        "active_claims": 1,
+        "git_scope_conflicts": 0,
+        "permitted_current_publication_claim": 1,
+        "existing_Git_lock_files": 0
+      },
+      "unresolved": []
+    },
+    "current_stock_semantics": "Installed OrchestrationRuntime.claim checks other_state.state==RUNNING plus effective_write_scope for conflicts independently of a non-null claim (orchestration_runtime.py:380-386).",
+    "repair": "For stock-schema coordinators require every RUNNING node to have the matching non-null dictionary claim in both persisted mirrors before filtering scopes. Existing claims-on-non-RUNNING rejection remains. Classify contradictions unresolved; preserve closed nodes with no claim.",
+    "no_actual_lease_conflict_asserted": true
+  },
+  "prior": {
+    "R2_review_sha256": "04095a2c9b0b6693a2986a68f5a4b5c1247394aa6514a1644a3a55ed547e9f1b",
+    "R3_review_sha256": "c5d51e54c860cc1c7447da7593db58895ecc43020949afc1724d1a9747e90040",
+    "R2_and_R3_rejections_preserved": true,
+    "all_23_prior_R3_case_ids_now_pass": true,
+    "initial_R4_before_normalized_policy_sha256": "dfd332bd2053fcf39ba8ba86df8ff12c6bd5d8592fab08bbe7a0e6d3b772e2a9"
+  },
+  "controls": {
+    "selected": 46,
+    "passed": 45,
+    "failed_expectations": 1,
+    "actual_process_exit_status": 1,
+    "result_sha256": "2f62745b60cbcc6c41ed83d5f78d85394df7e5e934819f8ebcc1d6b217cd4ee9",
+    "process_sha256": "3bee264822cbbc2569c024d6ea825a5d54b8b4d28064edefc4021b0d60ac709e",
+    "controls_sha256": "e985854ed3865e2e667b1d76845403cbd0dad8b2b78e3ef38d38a69d8c77317f",
+    "actual_exact17_packet_validator_used": true,
+    "normalized_actual_receipt_shape": true,
+    "review_empty_validations_allowed": true,
+    "gate_empty_validations_denied": true,
+    "packet_read_seam": "Synthetic bytes only; no live publication packet created or consumed"
+  },
+  "source_and_prior_conservation": true,
+  "canonical_or_coordinator_or_Git_mutation": false,
+  "real_inventory_or_native_execution": false,
+  "claims_verify_gates_invoked": false,
+  "global_clearance": false,
+  "publication_approval": false,
+  "product_acceptance": false
+}

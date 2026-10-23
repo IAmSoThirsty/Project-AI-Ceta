@@ -11,7 +11,7 @@ from .wire import ContractError, strict_loads
 
 MODEL_PROFILE = "ceta-construction-gate-assessment-v1"
 _WP_SHA = "2b573de7550336aae7c671e69bb49fa9011889513fec792967f0ed3286819017"
-_GATE_SHA = "04afba11afa8a707ac70651d2ef26efed65d75b0d6d6edde44c2399c2a36848b"
+_GATE_SHA = "ea7b9075da8374f763a8bf9c7bc28ee9317106dcc73898e555996dbc9d9bda24"
 _PACKAGE_IDS = tuple("WP-" + str(i).zfill(2) for i in range(28))
 _GATE_IDS = tuple("G-" + c for c in "ABCDEFGH")
 

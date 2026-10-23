@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "run_id": "ceta-ds23-r2",
+  "node_id": "review",
+  "executor_id": "/root/status_packet_review",
+  "started_at": "2026-10-23T07:57:42.428223+00:00",
+  "finished_at": "2026-10-23T08:04:12.499781+00:00",
+  "input_hash": "74ae2718cec8ae98edff68e1d0b57c413c321c95ceb8a3d9347a43c3809d25dd",
+  "changed_files": [
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/ACTUAL-REVIEW-CLAIM.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/CLAIM-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/EVIDENCE-READBACK-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/FROZEN-DS2-VERIFIER-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/GRAPH-ADMISSION-FINDING.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/INDEPENDENT-CONTROLS-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/INDEPENDENT-EVIDENCE-READBACK.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/INDEPENDENT-REPAIR-CONTROLS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/MANIFEST.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/REVIEW-RECEIPT.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/REVIEW.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/SOURCE-DELTA-PROCESS.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/UNCHANGED-VALIDATION-SURFACE.json",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/check_source_delta.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/finalize_rejected_review.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/inspect_recorded_evidence.py",
+    "00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/review_provider_boundaries.py"
+  ],
+  "decision": "rejected",
+  "result": {
+    "decision": "rejected",
+    "manifest_sha256": "736a2a3ef8639bf99acced85d0ce3950b74b01bf9f23d856148ca7a7061df2f6",
+    "review_sha256": "3bc07a220bdb02020f904e2ae57a8807f8e2b2f2906e0f68b4fee52aee112134",
+    "root_candidate_closure_sha256": "64f81f235284f4a1e6222c09c407e1ff4a25acc96412fee7b71d27bdf97703ad",
+    "root_candidate_closure_approved": false,
+    "review_evidence_manifest": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\ds2\\review\\MANIFEST.json",
+    "finding_ids": [
+      "DS2-GATE-TARGET-01"
+    ],
+    "provider_repair_cases_passed": 6,
+    "provider_body_failure": false,
+    "successful_author_controls_and_full_snapshot_preserved": true,
+    "canonical_test_bodies_executed": 0,
+    "ST2_execution_authorized": false,
+    "full_product_acceptance": false
+  },
+  "commands": [
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/review_provider_boundaries.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/work/verify_prepared.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/inspect_recorded_evidence.py",
+      "exit_status": 0
+    },
+    {
+      "command": "T:/00-Active/Project-AI-CETA/.agents/source-assembly-20261014T021300Z/.agents/e3/Scripts/python.exe -E -B -X utf8 T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/ds2/review/check_source_delta.py",
+      "exit_status": 0
+    }
+  ],
+  "validations": [
+    {
+      "name": "Exact frozen source, recorded evidence and canonical/Git/ST2 conservation",
+      "passed": true
+    },
+    {
+      "name": "Bounded independent repaired custody and partial native/path provenance controls",
+      "passed": true
+    },
+    {
+      "name": "Declared current graph gate targets exact current DS2 verifier",
+      "passed": false
+    }
+  ],
+  "exit_status": 0
+}

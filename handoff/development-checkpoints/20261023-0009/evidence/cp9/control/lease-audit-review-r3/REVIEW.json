@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/independent_broader_review",
+  "recorded_at": "2026-10-23T06:40:07.686Z",
+  "decision": "rejected_as_publication_prerequisite",
+  "reviewed_script": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/cp9/control/lease_audit_r3.py",
+  "reviewed_script_sha256": "d16df63e2be3c858a8c8e9ee6aa0286a281e08d178a91c43d528f463841bedb1",
+  "prior_r2_rejection": {
+    "path": "T:/00-Active/Project-AI-CETA/.agents/runtime/oq23/cp9/control/lease-audit-review/REVIEW.json",
+    "sha256": "04095a2c9b0b6693a2986a68f5a4b5c1247394aa6514a1644a3a55ed547e9f1b",
+    "finding": "LEASE-AUDIT-R2-01",
+    "status": "Preserved unchanged; all3 mirror controls now reject in R3."
+  },
+  "finding": {
+    "id": "LEASE-AUDIT-R3-01",
+    "classification": "blocking_current_own_publication_allowance",
+    "location": "audit: permitted own publication review/gate receipt checks",
+    "problem": "Own exception reads receipt content but does not bind normalized receipt hashes to payload/state or enforce stock run/node/exit/validation identity. Seven contradictory normalized receipt cases returned clear=true.",
+    "failed_cases": [
+      "normalized_gate_exit1_must_not_allow_own_exception",
+      "normalized_gate_boolean_exit_must_not_allow_own_exception",
+      "normalized_gate_failed_validation_must_not_allow_own_exception",
+      "normalized_gate_other_run_must_not_allow_own_exception",
+      "normalized_review_other_node_must_not_allow_own_exception",
+      "normalized_review_receipt_hash_drift_must_not_allow_own_exception",
+      "state_gate_receipt_hash_mismatch_must_not_allow_own_exception"
+    ],
+    "repair": "For own run only, require exact receipt refs and run/node/executor identity against state, exact integer-zero exit status, successful true validation records, stock canonical receipt_hash recomputation and equality with state receipt_hash; retain existing immutable packet/results/commands bindings. Keep Root real runtime.verify separate; do not broaden to general coordinator verification."
+  },
+  "controls": {
+    "selected": 23,
+    "passed": 16,
+    "failed_expectations": 7,
+    "actual_process_exit_status": 1,
+    "real_exact_git_scope_packet_validator_used": true,
+    "packet_read_seam": "Synthetic bytes only",
+    "result_sha256": "2adc00246f73f52ab3a29e34684a388f3beeab9c686080077f9b21b99b33a2d7",
+    "process_sha256": "87335b1dc43a0c48054230d0e94da40e4769178cae2cf8530c984f0ab03942dd",
+    "script_sha256": "216358cb9e076b6e0b2acec0f091844bc6f747cbe49f4cadcb4e2549de2e3843",
+    "qualification": "In-memory positive/negative audit controls; real exact_git_scope.packet validates synthetic bytes via patched read seam. No live publication packet or claim exists or was created by this review."
+  },
+  "canonical_or_coordinator_or_git_mutation": false,
+  "claims_verify_gates_invoked": false,
+  "no_live_publication_packet_or_claim_created": true,
+  "global_clearance": false,
+  "product_acceptance": false
+}

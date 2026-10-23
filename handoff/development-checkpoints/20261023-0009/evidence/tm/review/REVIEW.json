@@ -1,0 +1,47 @@
+{
+  "decision": "rejected",
+  "reviewer": "/root/operational_review22",
+  "recorded_at": "2026-10-23T01:17:05.014415+00:00",
+  "manifest_sha256": "8c93bba448df811028e284763ed52ba6c90216e480ff8463840eb6412ddd8a42",
+  "tested_sources": {
+    "run_challenge.py": "9d6ae90fa84953467024d183770e8767573c4715e8ba85ca11ce8eaed7b193aa",
+    "owner_timing_observer.py": "75e595990e485ea07980f76e01f2fdebe8953fd6623d98b3240d186f050f34cc",
+    "controls.py": "de90d983959869fc54db39c9ac5ca645f290cf8fb4642929300acd609739ba6f",
+    "engine_controls.py": "82c8a73feeed0808c159e1bedd0daa0ed42316d3574eb7e8dec1773b222397f7"
+  },
+  "tests": 26,
+  "passed": 25,
+  "failures": 1,
+  "errors": 0,
+  "skips": 0,
+  "findings": [
+    {
+      "priority": "P1",
+      "classification": "BLOCKING_CURRENT_RUNNER_EXECUTION",
+      "file": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\work\\run_challenge.py",
+      "lines": [
+        167,
+        188,
+        200
+      ],
+      "title": "Handled test failure reason is discarded from persisted evidence",
+      "reproduction": "A disposable ordinary test raises RuntimeError with marker INDEPENDENT_STORAGE_BOUNDARY_8f9308: database read refused. The runner returns 1 and records one error, but the marker is absent from every saved output artifact.",
+      "observed": {
+        "exit_status": 1,
+        "errors": 1,
+        "message_retained": false,
+        "primary": null,
+        "test_log": "{\"tests_run\": 1, \"failures\": 0, \"errors\": 1}"
+      },
+      "evidence": "T:\\00-Active\\Project-AI-CETA\\.agents\\runtime\\oq23\\tm\\review\\UNRELATED-FAILURE-OBSERVATION.json",
+      "required_repair": "Create a fresh successor that persists already formatted superclass failure/error/subtest evidence without new arbitrary formatter calls, with bounded safe fallback diagnostics and original exception/outcome retention. Add deterministic unrelated-error and assertion-reason persistence controls."
+    }
+  ],
+  "frozen_integrity_passed": true,
+  "launcher_sha256": "cf1cf5c9d9c7c79f1f367436f872e585d6f0270bfe50c108b023747fe14a7328",
+  "launcher_executed": false,
+  "canonical_test_bodies_executed": false,
+  "canonical_fixture_writes": false,
+  "canonical_execution_authorized": false,
+  "full_product_acceptance": false
+}

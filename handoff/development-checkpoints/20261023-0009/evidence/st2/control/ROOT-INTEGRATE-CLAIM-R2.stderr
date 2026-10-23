@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\run_status.py", line 90, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\run_status.py", line 84, in main
+    assert args.node in ('integrate','evidence');expected=F if args.node=='integrate' else D;assert Path(args.workspace)==expected;response=rt.claim(RUN,args.node,'/root',workspace=expected)
+                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\01-Projects/TAAR-Agent-Taskforce/TAAR-Agent-Taskforce\taar\orchestration_runtime.py", line 389, in claim
+    baseline = _snapshot_workspace(Path(workspace_text), Path(graph.root))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\status_core.py", line 88, in observed
+    return file_map(snapshot(F,F))
+                    ^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\status_core.py", line 66, in snapshot
+    visit(workspace)
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\status_core.py", line 63, in visit
+    if stat.S_ISDIR(item['mode']):visit(path)
+                                  ^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\status_core.py", line 63, in visit
+    if stat.S_ISDIR(item['mode']):visit(path)
+                                  ^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\status_core.py", line 63, in visit
+    if stat.S_ISDIR(item['mode']):visit(path)
+                                  ^^^^^^^^^^^
+  [Previous line repeated 2 more times]
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\status_core.py", line 44, in visit
+    info,names=listing(directory);rel=directory.relative_to(graph_root).as_posix();identity=(info['device'],info['inode'])
+               ^^^^^^^^^^^^^^^^^^
+  File "T:\00-Active\Project-AI-CETA\.agents\runtime\oq23\st2\work\status_core.py", line 40, in listing
+    assert native(directory)==before,'directory changed during enumeration'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: directory changed during enumeration

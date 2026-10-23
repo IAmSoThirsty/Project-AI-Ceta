@@ -1,0 +1,72 @@
+{
+  "classification": "INDEPENDENT_DS2_REPAIR_CONTROLS_NOT_GRAPH_OR_ST2_APPROVAL",
+  "manifest_sha256": "736a2a3ef8639bf99acced85d0ce3950b74b01bf9f23d856148ca7a7061df2f6",
+  "provider_sha256": "3727f857cd6cb7324a8b93ad16d070d4a403678ac071cd94c32954edbd203bde",
+  "frozen_files_checked": 46,
+  "external_pins_checked": 106,
+  "cases": [
+    {
+      "id": "nested_hostile_body_inner_close_and_successful_outer_close",
+      "passed": true,
+      "exact_original_identity_and_traceback": true,
+      "ordered_handles": [
+        202,
+        101
+      ],
+      "exact_all_secondary_identities": true,
+      "one_close_attempt_each": true
+    },
+    {
+      "id": "nested_hostile_body_inner_close_and_failed_outer_close",
+      "passed": true,
+      "exact_original_identity_and_traceback": true,
+      "ordered_handles": [
+        202,
+        101
+      ],
+      "exact_all_secondary_identities": true,
+      "one_close_attempt_each": true
+    },
+    {
+      "id": "successful_query_retained_before_path_failure_and_cleanup_failure",
+      "passed": true,
+      "successful_queries": 2,
+      "raw_handle_observations": 2,
+      "exact_primary_and_secondary_identity": true
+    },
+    {
+      "id": "partial_native_failure_at_class_0",
+      "passed": true,
+      "completed_classes": [],
+      "raw_row_JSON_safe": true,
+      "exact_primary_secondary_and_failed_handle_custody": true
+    },
+    {
+      "id": "partial_native_failure_at_class_1",
+      "passed": true,
+      "completed_classes": [
+        0
+      ],
+      "raw_row_JSON_safe": true,
+      "exact_primary_secondary_and_failed_handle_custody": true
+    },
+    {
+      "id": "partial_native_failure_at_class_18",
+      "passed": true,
+      "completed_classes": [
+        0,
+        1
+      ],
+      "raw_row_JSON_safe": true,
+      "exact_primary_secondary_and_failed_handle_custody": true
+    }
+  ],
+  "case_count": 6,
+  "all_passed": true,
+  "source562_Git_index_ST2_and_DS1_preserved": true,
+  "real_native_provider_or_process_fixture_or_canonical_test_execution": false,
+  "read_only_Git_subprocesses_before_and_after_fake_controls": true,
+  "declared_gate_finding": "DS2-GATE-TARGET-01",
+  "combined_graph_approval": false,
+  "full_product_acceptance": false
+}
